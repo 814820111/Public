@@ -1,0 +1,101 @@
+<admintpl file="header"/>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('add_info')}">添加风格</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal add-validate" action="{:U('add_info_next')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">风格名称:</label>
+                    <div class="controls">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">风格年份:</label>
+                    <div class="controls">
+                        <input type="text" name="year">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">选择学期:</label>
+                    <div class="controls">
+                        <select name="xueqi" id="">
+                            <option value="">请选择学期</option>
+                            <option value="1">上学期</option>
+                            <option value="2">下学期</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">选择月份:</label>
+                    <div class="controls">
+                        <select name="yue" id="">
+                            <option value="">请选择月份</option>
+                            <option value="1">1月份</option>
+                            <option value="2">2月份</option>
+                            <option value="3">3月份</option>
+                            <option value="4">4月份</option>
+                            <option value="5">5月份</option>
+                            <option value="6">6月份</option>
+                            <option value="7">7月份</option>
+                            <option value="8">8月份</option>
+                            <option value="9">9月份</option>
+                            <option value="10">10月份</option>
+                            <option value="11">11月份</option>
+                            <option value="12">12月份</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit">下一步</button>
+                <button class="btn" type="reset">清空</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script type="text/javascript">
+    //编辑器
+    editorcontent = new baidu.editor.ui.Editor();
+    editorcontent.render('content');
+
+    $('.add-validate').validate({
+        rules: {
+            name: {
+                required: true
+            },
+            appSecret: {
+                required: true
+            },
+            appKey: {
+                required: true
+            }
+        },
+        messages: {
+            name: {
+                required: '请输入账号名称'
+            },
+            appSecret: {
+                required: '请输入appSecret'
+            },
+            appKey: {
+                required: '请输入appKey'
+            }
+        }
+    });
+    function show(index) {
+        if (index == 2) {
+            $('#my-mobile').show();
+        } else {
+            $('#my-mobile').hide();
+        }
+    }
+</script>
+</body>
+</html>

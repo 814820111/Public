@@ -1,0 +1,885 @@
+<teachertpl file="header"/>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息1</title>
+    <link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet"/>
+    <script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+    <script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+    <script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <style type="text/css">
+        .col-auto {
+            overflow: auto;
+            _zoom: 1;
+            _float: left;
+        }
+
+        .col-right {
+            float: right;
+            width: 30%;
+            overflow: hidden;
+            margin-left: 6px;
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        .picList li {
+            margin-bottom: 5px;
+        }
+
+        .touchlei {
+            background-color: #eeeeee;
+        }
+
+        tr .pai,
+        tr .pai2 {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        tr .pai {
+            background-color: #e2e2e2;
+        }
+
+        tr .pai2 {
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .name {
+            margin-right: 10px;
+        }
+
+        .dbzr {
+            background-color: #61c881;
+            color: white;
+            text-align: center;
+            padding: 0px 15px;
+            float: left;
+            border-radius: 8px;
+        }
+
+        .sic {
+            width: 15px;
+            margin-left: 5px;
+            margin-top: -15px;
+            cursor: pointer;
+        }
+
+        .daiban {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .daike {
+            width: 100px;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .dailei {
+            border: 1px solid #dddddd;
+            border-bottom: none;
+            font-weight: bold;
+        }
+
+        .banji {
+            float: left;
+            width: 20%;
+            margin-bottom: 10px;
+        }
+
+        .banji input {
+            margin-top: -2px;
+            margin-right: 5px;
+        }
+
+        .subject {
+            float: left;
+            color: #03a9f4;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .peizhi {
+            color: #03a9f4;
+        }
+
+        .kecheng {
+            color: #03a9f4;
+            float: left;
+            display: none;
+            border: 1px solid #03a9f4;
+            padding-left: 3px;
+            padding-right: 3px;
+            cursor: pointer;
+        }
+
+        .subinput {
+            display: none;
+        }
+        .video_input{
+            vertical-align: -1px;
+            padding-left: 40px;
+            position: absolute;
+        }
+        .isMyChecked{
+            vertical-align: -1px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var sb = document.getElementById("tans");
+            sb.onclick = function () {
+                var tanboder = document.getElementById("tansboder");
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div class="wrap jj">
+    <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+        <li class="active">
+            <a href="{:U('index')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">老师授权</a>
+        </li>
+    </ul>
+    <!--亲属信息start-->
+    <div style=" background-color:rgba(0,0,0,0.7); width:100%; height:100%; display: none;  position:absolute;"
+         class="qinshu">
+        <div style=" width:800px; background-color:white; margin-left:auto; margin-right:auto; margin-top:5%; padding:20px; position:relative;">
+            <form action="{:U('editAuth')}" method="post" class="add-validate" onsubmit="return checkVideo()">
+                <div>
+                    <div style=" border:1px solid #dddddd; border-bottom:none; width:100px; text-align:center; line-height:30px; color:#61c881;">
+                        修改权限
+                    </div>
+                    <div style=" border-bottom:1px solid #dddddd; margin-left:100px;"></div>
+                </div>
+                <div style=" margin-top:8px;"></div>
+                <div style=" margin-top:8px; margin-bottom:13px;"></div>
+                <div style="width:100%; margin-left:auto; margin-right:auto; margin-top:20px;">
+                    <span style=" margin-left:10px; margin-right:5px;">姓名</span>
+                    <span id="edit_name"></span>
+                </div>
+                <div style="width:100%; margin-left:auto; margin-right:auto; margin-top:20px">
+                    <span style=" margin-left:0px; margin-right:5px;">手机号</span>
+                    <span id="edit_class_name"></span>
+                </div>
+
+                <div style="width:100%; margin-left:auto; margin-right:auto; margin-top:20px;margin-bottom: 50px">
+                    <div style="">摄像头</div>
+                    <div id="video_content" style="padding-left: 70px;margin-top: -30px">
+                        <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--<input class="video_input" type="checkbox">test1wwwwwww&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--<input class="video_input" type="checkbox">test1&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--<input class="video_input" type="checkbox">test1&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--<input class="video_input" type="checkbox">test1&nbsp;&nbsp;&nbsp;&nbsp;-->
+                    </div>
+                </div>
+
+                <div style=" width:60px; margin-left:auto; margin-right:auto; margin-top:50px;">
+                    <input type="hidden" id="video_id" name="mid" value="">
+                    <input type="submit" value="保&nbsp;存" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;">
+                </div>
+            </form>
+            <!--关闭start-->
+            <img src="__ROOT__/statics/images/cha.png"
+                 style=" position:absolute; top:20px; right:20px; width:15px; height:15px; cursor:pointer;"
+                 class="guan1">
+            <!--关闭end-->
+        </div>
+    </div>
+
+    <div style=" background-color:rgba(0,0,0,0.7); width:100%; height:100%; display: none;  position:absolute;"
+         class="qinshu_time">
+        <div style=" width:800px; background-color:white; margin-left:auto; margin-right:auto; margin-top:5%; padding:20px; position:relative;">
+            <form action="{:U('editTeacherTime')}" method="post" class="add-validate" onsubmit="">
+                <div>
+                    <div style=" border:1px solid #dddddd; border-bottom:none; width:100px; text-align:center; line-height:30px; color:#61c881;">
+                        修改开放时间
+                    </div>
+                    <div style=" border-bottom:1px solid #dddddd; margin-left:100px;"></div>
+                </div>
+                <div style=" margin-top:8px;"></div>
+                <div style=" margin-top:8px; margin-bottom:13px;"></div>
+                <div style="width:70%; margin-left:auto; margin-right:auto; margin-top:20px;">
+                    <span style=" margin-left:10px; margin-right:5px;">开放时间</span>
+                    <span style="padding-left: 15px">
+                        <input style="width: 100px" type="time" name="start_time" id="start_time">-<input style="width: 100px" type="time" name="end_time" id="end_time">
+                    </span>
+                </div>
+
+                <div style="width:70%; margin-left:auto; margin-right:auto; margin-top:20px;margin-bottom: 50px">
+                    <div style="margin-left:10px; margin-right:5px;">开发星期</div>
+                    <div id="days" style="padding-left: 92px;margin-top: -30px">
+
+                    </div>
+                </div>
+
+                <div style=" width:60px; margin-left:auto; margin-right:auto; margin-top:110px;">
+                    <input type="hidden" id="time_id" name="mid" value="">
+                    <input type="submit" value="保&nbsp;存" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;">
+                </div>
+            </form>
+            <!--关闭start-->
+            <img src="__ROOT__/statics/images/cha.png"
+                 style=" position:absolute; top:20px; right:20px; width:15px; height:15px; cursor:pointer;"
+                 class="guan2">
+            <!--关闭end-->
+        </div>
+    </div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background: white">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight:bold;">IC卡设置</h5>
+                </div>
+                <div class="modal-body">
+
+                    <!--卡号end-->
+                    <div>
+                        <div style=" cursor: pointer;">
+                            <ul class=" nav-tabs" style="height:30px; list-style:none;">
+                                <li class="active " id="aniu">
+                                    <a style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">学生IC卡设置</a>
+                                </li>
+                                <li class=" " id="huoqu">
+                                    <a style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">家长IC卡设置</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form class="xuesheng">
+                        <div style=" margin-top:30px; margin-bottom:15px; margin-left:30px;" class="numberic">
+                            <div class="dbzr"></div>
+                            <img src="__ROOT__/statics/images/delete.png" class="sic">
+                            <div class="clearfix"></div>
+                        </div>
+                        <div style=" margin-bottom:10px; margin-left:30px;">
+                            <span class="xiugai">新增号码：</span> <input type="text" id="newICcard" name="newICcard"
+                                                                     placeholder="卡号长度10位数" maxlength="10">
+                        </div>
+
+                        <div style=" width:60px; margin-left:auto; margin-right:auto; margin-top:20px;">
+                            <!--<input type="submit" value="保&nbsp;存" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;" '>-->
+
+                        </div>
+                    </form>
+                    <div class="jiaz" style="margin-top: 10px;cursor: pointer;">
+                        <div style=" margin-top:8px;">
+                            <div style=" float:left; width:14px; height:14px; border-radius:50%; background-color:#e84e40;  margin-right:10px;"></div>
+                            <div style=" float:left;">所有卡号均为10位数字，不足将自动在前面补0</div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div>
+                            <span>家长卡一：</span>
+                            <input type="text" class="a0"/>
+                        </div>
+                        <div>
+                            <span>家长卡二：</span>
+                            <input type="text" class="a1"/>
+                        </div>
+                        <div>
+                            <span>家长卡三：</span>
+                            <input type="text" class="a2"/>
+                        </div>
+                        <div>
+                            <span>家长卡四：</span>
+                            <input type="text" class="a3"/>
+                        </div>
+                        <div>
+                            <span>家长卡五：</span>
+                            <input type="text" class="a4"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                            style="background: white; color:black; font-weight:bold;">关闭
+                    </button>
+                    <button type="button" class="btn btn-info si" style="display: none;float: right;font-weight:bold;"
+                            onclick='sub_qrcj()'>提交更改
+                    </button>
+                    <button type="button" class="btn btn-info ci" style="display: none;float: right;font-weight:bold;">
+                        提交更改
+                    </button>
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <div id="myTabContent" class="tab-content" style=" padding-left:30px; padding-right:30px;">
+        <div class="tab-pane fade in active" id="home">
+            <br/>
+            <form class="form-horizontal J_ajaxForm" action="{:U('index')}" method="post">
+                <div class="search_type cc mb10">
+                    <div class="mb10">
+                        <select name="teacher_id" id="">
+                            <option value="">请选择老师名称</option>
+                            <?php foreach($teacher as $k=>$v){?>
+                            <option <?php if($tid == $v['id']){echo "selected";}?> value="<?php echo $v['id']?>"><?php echo $v['name']?></option>
+                            <?php }?>
+                        </select>
+                        <!--<input type="text" class="select_2" name="keyword" placeholder="-请输入-"-->
+                               <!--style="width:10%; height: 17px;border-width:1px;" value="{$keyword}">-->
+                        <input type="submit"
+                               style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;"
+                               value="搜索"/>
+                        <!--<input type="button"  value="导入" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px; cursor: pointer;" class="leading" >-->
+                        <!--<input type="button" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;"  class="derive" value="导出" />-->
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <form class="J_ajaxForm" action="" method="post">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-list">
+                        <thead>
+                        <tr style="background-color:#CCC;">
+                            <!--<th class="pai"><input type="checkbox" name="" id="checkall" onclick="checkfk()" size="10">全选-->
+                            <!--</th>-->
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;">ID</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;">姓名</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;">手机号</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;">学校</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;">开放星期</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;border-right: none">开放时间</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;border-right: none">授权摄像头</th>
+                            <th class="pai" style=" border-left: none;border-width: 0.5px;border-right: none">操作</th>
+                        </tr>
+                        </thead>
+                        <foreach name="lists" item="vo">
+                            <tr>
+                                <td class="pai2">{$vo.monitor_id}</td>
+                                <td class="pai2 stuname">{$vo.name}</td>
+                                <td class="pai2 stuname">{$vo.phone}</td>
+                                <td class="pai2">{$vo.school_name}</td>
+                                <td class="pai2 stuid" name="card">{$vo.day}</td>
+                                <td class="pai2 time">{$vo.time}</td>
+                                <td class="pai2">{$vo.monitor_nname}</td>
+                                <td class="pai2">
+                                    <a href="#" class="daibanzhuren1" style=" color:#00c1dd;" onclick="getVideo({$vo.monitor_id})">
+                                        <input type="hidden" name="monitor_id" value="{$vo.monitor_id}">
+                                        <input type="hidden" name="class_id" value="{$vo.class_id}">
+                                        更改授权
+                                    </a>
+                                    <a href="#" class="daibanzhuren2" style=" color:#00c1dd;" onclick="getTime({$vo.monitor_id})">
+                                        <input type="hidden" name="monitor_id" value="{$vo.monitor_id}">
+                                        <input type="hidden" name="class_id" value="{$vo.class_id}">
+                                        更改时间
+                                    </a>
+                                </td>
+                            </tr>
+                        </foreach>
+                    </table>
+
+
+                </div>
+            </form>
+
+
+            <input class="uisid" type="hidden"/>
+
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ios">
+
+    </div>
+    <div class="pager">{$page}</div>
+    <!--<form class="J_ajaxForm" action="{:u('delpl')}" method="post" style="display: inline;">-->
+
+
+        <!--<input type="submit" value="删除" style="    position: relative;-->
+     <!--border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px; cursor: pointer;"-->
+               <!--class="remove"></a>-->
+
+        <!--</span>-->
+    <!--</form>-->
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript">
+    //全局变量
+    var GV = {
+        DIMAUB: "/",
+        JS_ROOT: "statics/js/",
+        TOKEN: ""
+    };
+</script>
+<script>
+
+    //获取视频列表
+    function getVideo(mid) {
+        //ajax获取视频列表
+        $('#video_content').html('');
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "{:U('getVideoList')}",
+            data: {
+                monitor_id: mid
+            },
+            success: function (msg) {
+                //alert(msg);
+                $('#video_content').html(msg);
+            }
+        });
+    }
+    //获取时间
+    function getTime(mid) {
+        //ajax获取视频列表
+        $('#days').html('');
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "{:U('editTime')}",
+            data: {
+                monitor_id: mid
+            },
+            success: function (msg) {
+                $('#days').html(msg);
+            }
+        });
+    }
+    function checkVideo() {
+        var vname = $('#video_name').val();
+        if(vname == ''){
+            return false;
+        }
+    }
+    function checkfk() {
+        var allcheck = document.getElementById("checkall");  //获取 全选check 的id
+        var othercheck = document.getElementsByName("fkcheck[]"); //获取数组名称为fkcheck的 复选框
+        for (var i = 0; i < othercheck.length; i++) {
+            if (allcheck.checked) {
+                othercheck[i].checked = true;
+            } else {
+                othercheck[i].checked = false;
+            }
+        }
+    }
+
+    $(".daoru").hide()
+    $(".leading").click(
+        function (ID) {
+            $(".daoru").show()
+            l = $(this).text()
+            $(".dbzr").text(l)
+        }
+    )
+
+
+    $(".dao_close").click(
+        function () {
+            $(".daoru").hide()
+        }
+    )
+
+
+    $(".derive").click(function () {
+
+        if (confirm("确定要导出吗？")) {
+            location.href = "{:U('stuUser')}"
+
+
+        }
+    })
+
+    $("#myModal").hide();
+    var class_card = [];
+    $(".ci").click(function () {
+        var userid = $(".uisid").val();
+        $(".jiaz input").each(function () {
+            var f = $(this).val();
+            if (f != "") {
+                var lengthzhi = f.length;
+                if (lengthzhi < 10) {
+                    var ui = 10 - lengthzhi;
+                    var us = "";
+                    for (var i = 0; i < ui; i++) {
+                        var j = "0";
+                        us += j;
+                    }
+                    var f = us + f;
+                }
+                class_card.push({
+                    cardNo: f,
+                })
+            }
+
+        })
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "{:U('Teacher/StudentInfo/jiaadd')}",
+            data: {
+                class_card: class_card,
+                userid: userid
+            },
+            success: function (msg) {
+                history.go(0);
+            }
+        });
+    })
+    $("#huoqu").click(function () {
+        $(".si").hide();
+        $(".jiaz").show();
+        $(".xuesheng").hide();
+        $("#huoqu").attr("class", "active");
+        $("#aniu").attr("class", "");
+        $(".ci").css("display", "block")
+    })
+    $("#aniu").click(function () {
+        $(".jiaz").hide();
+        $(".si").show();
+        $(".xuesheng").show();
+        $("#huoqu").attr("class", "");
+        $("#aniu").attr("class", "active");
+        $(".ci").css("display", "none")
+    })
+    $(".daibanzhuren").click(function () {
+        $(".jiaz").hide();
+        $(".si").show();
+        $(".xuesheng").show();
+        $("#huoqu").attr("class", "");
+        $("#aniu").attr("class", "active");
+        $(".ci").css("display", "none")
+        var shuzhi = $(".shuzi", this).text();
+        if (shuzhi == "设置") {
+            $(".xiugai").text("新增卡号：");
+        } else {
+            $(".xiugai").text("修改卡号：");
+        }
+    })
+    $("#huoqu").click(function () {
+        var userid = $(".uisid").val();
+        $.ajax({
+            type: "post",
+            url: "{:U('Teacher/StudentInfo/chaxuan')}",
+            async: true,
+            dataType: 'json',
+            data: {
+                userid: userid
+            },
+            success: function (res) {
+                res = eval(res.data);
+                for (var i = 0; i < res.length; i++) {
+                    var cardno = res[i].cardno; //id卡号；
+                    var j = "a" + i;
+
+                    var test = document.getElementsByClassName(j);
+                    $(test).val(cardno);
+                }
+            },
+            error: function () {
+                alert('系统错误,请稍后重试');
+            }
+        });
+    })
+</script>
+<script>
+    $('#myTab a:first').tab('show');
+</script>
+<script>
+    $("#file-3").fileinput({
+        showUpload: false,
+        showCaption: false,
+        browseClass: "btn btn-default",
+        fileType: "any",
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+    });
+    $(document).ready(function () {
+        $("#test-upload").fileinput({
+            'showPreview': false,
+            'allowedFileExtensions': ['jpg', 'png', 'gif'],
+            'elErrorContainer': '#errorBlock'
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $('#myTab li:eq(0) a').tab('show');
+    });
+</script>
+<script>
+    $("#file-3").fileinput({
+        showUpload: false,
+        showCaption: false,
+        browseClass: "btn btn-default",
+        fileType: "any",
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+    });
+    $(document).ready(function () {
+        $("#test-upload").fileinput({
+            'showPreview': false,
+            'allowedFileExtensions': ['jpg', 'png', 'gif'],
+            'elErrorContainer': '#errorBlock'
+        });
+    });
+</script>
+<script>
+    $(".touch").mouseenter(
+        function () {
+            $(".touch").addClass("touchlei")
+        }
+    )
+    $(".touch").mouseleave(
+        function () {
+            $(".touch").removeClass("touchlei")
+        }
+    )
+</script>
+<script>
+    $(".banzhuren").click(
+        function () {
+            $(".bantan").show()
+        }
+    )
+    $(".banzhuren").click(
+        function () {
+            aaa = $(this).text()
+            $(".bzr").text(aaa)
+        }
+    )
+    $(".xuan").click(
+        function () {
+            k = $(this).parent().text()
+            $(".bzr").text(k)
+        }
+    )
+</script>
+<script>
+    $(".guan").click(
+        function () {
+            $(".bantan").hide()
+        }
+    )
+</script>
+
+<script>
+    $(".xiala").click(
+        function () {
+            $(".shou01").slideToggle()
+            $(".xshang").toggle()
+            $(".bianzi").toggle()
+        }
+    )
+</script>
+<script>
+    $(".daibanzhuren").click(
+        function () {
+            w = $(this).children().val()
+            $(".chuanzhi").val(w)
+            $(".uisid").val(w);
+
+        }
+    )
+
+    function sub_qrcj() {
+        var userid = w;
+        var cardNo = $("input[name='newICcard']").val();
+        var lengthzhi = cardNo.length;
+        if (lengthzhi < 10) {
+            var ui = 10 - lengthzhi;
+            var us = "";
+            for (var i = 0; i < ui; i++) {
+                var j = "0";
+                us += j;
+            }
+            var cardNo = us + cardNo;
+        }
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "{:U('Teacher/StudentInfo/updateICcard')}",
+            data: {
+                'userid': userid,
+                'cardNo': cardNo
+            },
+            success: function (msg) {
+                history.go(0);
+            }
+        });
+    }
+</script>
+<script>
+    $(".daitan").hide()
+    $(".daibanzhuren").click(
+        function (ID) {
+            $(".daitan").show()
+            l = $(this).text()
+            $(".dbzr").text(l)
+        }
+    )
+</script>
+
+<script>
+    $(".guan").click(
+        function () {
+            $(".daitan").hide()
+        }
+    )
+</script>
+<script>
+    $(".name").hide()
+    $(".xuan2").click(
+        function () {
+            o = $(this).parent().index()
+            $(".name").eq(o).toggle()
+            $(".dbzr").hide()
+        }
+    )
+</script>
+<script type="text/javascript">
+    $(".sic").click(
+        function () {
+            $(".numberic").empty()
+        }
+    )
+</script>
+<script>
+    $(".subinput").click(
+        function () {
+            var y = $(this).parents(".subbox").index()
+            $(".add_box").eq(y - 1).children(".peizhi").hide()
+            if ($(this).prop("checked")) {
+                $(this).parents(".subject").hide()
+                var x = $(this).parent().index()
+                $(".add_box").eq(y - 1).children(".kecheng").eq(x).show()
+            }
+        }
+    )
+</script>
+<script>
+    $(".kecheng").click(
+        function () {
+            var x = $(this).parents("tr").index()
+            var y = $(this).index()
+            $(this).hide()
+            $(".subbox").eq(x - 1).find(".subject").eq(y - 1).show()
+            $(".subbox").eq(x - 1).find(".subject").eq(y - 1).click()
+        }
+    )
+</script>
+<script>
+    $(".daiban").addClass("dailei")
+    $(".daike").click(
+        function () {
+            $(this).addClass("dailei")
+            $(this).siblings(".daiban").removeClass("dailei")
+            $(".daike_box").show()
+            $(".daiban_box").hide()
+        }
+    )
+    $(".daiban").click(
+        function () {
+            $(this).addClass("dailei")
+            $(this).siblings(".daike").removeClass("dailei")
+            $(".daiban_box").show()
+            $(".daike_box").hide()
+        }
+    )
+</script>
+<script>
+    $(".daibanzhuren1").click(
+        function () {
+            var vid = $(this).children().eq(0).val();
+            $("#video_id").val(vid);
+            var vname = $(this).parent().siblings(".stuname").eq(0).text();
+            var vphone = $(this).parent().siblings(".stuname").eq(1).text();
+            $("#edit_class_name").html('&nbsp;&nbsp;&nbsp;&nbsp;'+vphone);
+            $("#edit_name").html('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+vname);
+        }
+    )
+
+    $(".daibanzhuren2").click(
+        function () {
+            var vid = $(this).children().eq(0).val();
+            $("#time_id").val(vid);
+            var str = $(this).parent().siblings(".time").text();
+            var arr = str.split('-');
+            $("#start_time").val(arr[0]);
+            $("#end_time").val(arr[1]);
+        }
+    )
+
+    function sub_qinshu() {
+
+        var studentid = stud;
+        var arr1 = new Array();
+        arr1[0] = $("input[name='qinshuxingming1']").val();
+        arr1[1] = $("input[name='qinshuhaoma1']").val();
+        arr1[2] = $("select[name='qinshuguanxi1']").val();
+        var arr2 = new Array();
+        arr2[0] = $("input[name='qinshuxingming2']");
+        arr2[1] = $("input[name='qinshuhaoma2']");
+        arr2[2] = $("select[name='qinshuguanxi2']").val();
+        var arr3 = new Array();
+        arr3[0] = $("input[name='qinshuxingming3']");
+        arr3[1] = $("input[name='qinshuhaoma3']");
+        arr3[2] = $("select[name='qinshuguanxi3']").val();
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "{:U('Teacher/StudentInfo/qinshu')}",
+            data: {
+                'qinshu1[]': arr1,
+                'qinshu2[]': arr2,
+                'qinshu3[]': arr3,
+                'studentid': studentid
+            },
+            success: function (msg) {
+                history.go(0);
+            }
+        });
+    }
+</script>
+<script>
+    $(".qinshu").hide()
+    $(".daibanzhuren1").click(
+        function (ID) {
+            $(".qinshu").show()
+        }
+    )
+    $(".qinshu_time").hide()
+    $(".daibanzhuren2").click(
+        function (ID) {
+            $(".qinshu_time").show()
+        }
+    )
+</script>
+<script>
+    $(".guan1").click(
+        function () {
+            $(".qinshu").hide()
+        }
+    )
+    $(".guan2").click(
+        function () {
+            $(".qinshu_time").hide()
+        }
+    )
+</script>
+</body>
+
+</html>

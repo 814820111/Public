@@ -1,0 +1,82 @@
+<?php
+
+namespace Apps\Controller;
+use Common\Controller\AppBaseController;
+/**
+ * 首页
+ */
+class StudentController extends AppBaseController {
+	//首页
+	public function index() {
+    	die('this is Studentapi');
+    }
+    //获取宝宝好友
+    public function getfriendlist(){
+    	$studentid = Intval(I('studentid'));
+		if($studentid){
+			$User = M("Wxtuser");
+			$Ship = M("Friendship");
+			$userinfo = $User;
+			$lists=$User
+			 ->field('id,name,photo')
+			 // ->join("wxt_Wxtuser a ON f.studentid = a.id")
+			 ->where("id in(select friendid from wxt_friendship where studentid = $studentid) ")
+			 ->order("id DESC")
+			 ->select();
+			$ret = $this->format_ret(1,$lists);			
+		}
+		else
+		{
+			$ret = $this->format_ret(0,"lost params");	
+		}
+
+		echo json_encode($ret);
+		exit;
+
+    }
+    //获取待确认信息
+    public function getcollectconfirmation(){
+    	$userid = Intval(I('userid'));
+    	if($userid){
+    		$collect = M("student_delivery");
+    		$lists = $collect
+    		->field('delivery_id as id,teacherid,userid,photo,delivery_time,delivery_status')
+    		->where("userid=$userid")
+    		->order("id asc")
+    		->select();
+    		$ret = $this->format_ret(1,$lists);	
+    	}else{
+    		$ret = $this->format_ret(0,"lost params");
+    	}
+		echo json_encode($ret);
+		exit;
+    }
+    //获取作业信息
+    public function gethomeworkmessage(){
+    	$studentid = Intval(I('studentid'));
+    	if($studentid){
+    		$message = M("user_message");
+    		$lists = $message
+ 			->join("wxt_wxtuser ON wxt_user_message.send_user_id = wxt_wxtuser.id")
+            ->order("message_time DESC")
+            ->where("receive_user_id = $studentid and message_type=4 ")
+            ->field("name as receive_user_name,send_user_id,receive_user_id,message_content,message_time")
+            ->select();
+    		$ret = $this->format_ret(1,$lists);	
+    	}else{
+    		$ret = $this->format_ret(0,"lost params");
+    	}
+		echo json_encode($ret);
+		exit;    	
+    }
+  //参数获取(状态，原因)
+    function format_ret ($status, $data='') {
+            if ($status){
+				//成功
+                    return array('status'=>'success', 'data'=>$data);
+            }else{
+				//验证失败
+                    return array('status'=>'error', 'data'=>$data);
+            }
+    }   
+}

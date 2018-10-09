@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+<title>请假记录</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__ROOT__/statics/wcs/getMassage.css">
+<link rel="stylesheet" href="__ROOT__/statics/wcs/qingjiajilu.css">
+<link rel="stylesheet" href="__ROOT__/statics/wcs/top-box.css">
+<script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+<script>
+
+window.onload=function(){
+  var w;
+  w=$('.new').width();
+  $('.new').height(w);
+}
+  
+</script>
+    <style>
+        body{
+            background-color: #eff0f2;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="top_box">
+  <img src="__ROOT__/statics/wimg/img67.png"class="fanhui">
+  请假记录
+  <div class="clearfix"></div>
+</div>
+
+
+ 
+
+    <div class="bigbox" id="con">
+    	<!--<div id="coj">
+        <div class="teacher">
+            <img src="__ROOT__/statics/wimg/img01a.png">
+            <div class="left">
+                <span class="top"id="a1"></span>
+                <span class="bot"id="a2"></span>
+            </div>
+            <div class="right">
+            	<span class="top" style="color:#ffb94a;">未反馈</span>
+                <span class="bot"id="DDV"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <p class="wenzi"></p>
+        <div class="photo" >
+        	<img src="__ROOT__/statics/wimg/img07a.png">
+        </div>
+        <div class="riqi">
+        	<span class="left">受理人：张艳艳</span>
+            <span class="right">{$v.create_time}至{$v.begintime}</span>
+            <div class="clearfix">feedback{$v.feedback}</div>
+        </div>
+        
+          <div class="huifu">
+        	<img src="__ROOT__/statics/wimg/img03a.png">
+            <div class="right">
+            	<div class="top">
+                	<span class="one">张艳艳</span>
+                    <span class="two">2016-08-09&nbsp;&nbsp;08:36</span>
+                    <div class="clearfix"></div>
+                </div>
+                <span class="bot">让牛牛在家好好休息吧，让牛牛在家好好休息吧，让牛牛在家好好休息吧，让牛牛在家好好休息吧，让牛牛在家好好休息吧。</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+        </div>-->
+    </div>
+
+       
+
+<script>
+
+var   studentid=1;
+	$("document").ready(function(){
+		
+	       $.ajax({
+	       	type:"post",
+	        url: '__ROOT__/index.php/?g=apps&m=student&a=getleavelist',
+	       	async:true,
+	       	data:{
+	       		  studentid:studentid
+	       	},
+	       	dataType : 'json',
+	       	
+	       	success:function(res){
+	       		
+	       			var html="";
+	       		res = eval(res.data);
+	       		for(var i=0;i<res.length;i++){ 
+	       			html+="<div class='bigbox'>";
+	       			html+='<div class="teacher">';
+	       			 html+='<img src="__ROOT__/statics/wimg/"'+res[i].parentavatar+'>';
+	       			 html+='<div class="left">';
+	       			 html+='<span class="top"id="a1">'+res[i].parentname+'</span>';
+	       			 html+='<span class="bot"id="a2"></span>';
+	       			 html+='</div>';
+	       			 html+='<div class="right">';
+	       			if(res[i].status==1){
+	       				
+	       				html+='<span class="top">已同意</span>';
+	       			
+	       			}
+	       			 else{
+	       			 	
+	       				html+='<span class="top" style="color:#ffb94a;">未反馈</span>';
+	       				
+	       			}
+	       			 
+	       			 html+='<span class="bot"id="DDV">'+res[i].leavetype+'</span>';
+	       			html+='</div>';
+	       			html+=' <div class="clearfix"></div>';
+	       			
+	       			html+='<p class="wenzi">'+res[i].reason+'</p>';
+	       			html+='<div class="photo" >';
+	       			html+='<img src="__ROOT__/statics/wimg/"'+res[i].parentavatar+'>';
+	       			html+='</div>';
+	       			html+=' <div class="riqi">';
+	       			html+='<span class="left">受理人：'+res[i].teacherid+'</span>';
+	       			html+='<span class="right" >'+res[i].begintime+'至'+res[i].create_time+'</span>';
+	       			html+=' <div class="clearfix"></div>';
+	       			html+='</div>';
+	       			html+='  </div>';
+	       			html+=' <div class="huifu">';
+	       			html+='<img src="src="__ROOT__/statics/wimg/img03a.png">';
+	       			html+='<div class="right">';
+	       			html+='<div class="top">';
+	       			html+='<span class="one">'+res[i].teacherid+'</span>';
+	       			html+='   <span class="two">2016-08-09&nbsp;&nbsp;08:36</span>';
+	       			html+=' <div class="clearfix"></div>';
+	       			html+='   </div>';
+	       			html+='<span class="bot">'+res[i].feedback+'</span>';
+	       			html+=' </div>';
+	       			html+=' <div class="clearfix"></div>';
+	       			html+=' </div>';
+	       			
+	       		}
+	       		$("#con").append(html);
+	       		
+	       		
+	       		
+				
+		},
+		error:function(){
+				console.log('系统错误,请稍后重试');
+			}
+	       });   
+})
+	
+		$(".fanhui").click(function(){
+            location.href= "{:U('Index/index')}";
+			})
+</script>
+<script>
+</script>
+<style>
+    .bigbox .riqi .right {
+
+    }
+</style>
+</body>
+</html>

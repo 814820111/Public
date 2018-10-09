@@ -1,0 +1,206 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('AdminRole/index')}">角色管理</a></li>
+     <li class="active"><a href="{:U('AdminRole/roleadd')}">添加角色</a></li>
+  </ul>
+  <form class="form-horizontal J_ajaxForm" action="{:U('AdminRole/roleadd_post')}" method="post" id="myform">
+  <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <th width="180">所属大类</th>
+          <td>
+          <select id="category" name="categoryid">
+          <option >请选择大类</option>
+           <if condition="$role eq 1 || empty($role)">
+           <option value="1">内部管理员</option>  
+           <option value="2">代理商</option>
+               <elseif condition="$category eq 1"/>
+               <option value="1">内部管理员</option>
+               <else/>
+            <option value="2">代理商</option> 
+           </if> 
+          </select><span class="must_red">*</span>
+          </td>
+        </tr>
+          <if condition="$role eq 1 || empty($role) ">
+         <tr>
+          <th width="180">角色类型</th>
+          <td>
+          <select id="role_type" name="roletype">
+            <option value>请选择类型</option>
+          </select>
+
+          <span class="must_red">*</span></td>
+        </tr>
+          </if>
+        <if condition="$role eq 1">
+        <tr>
+          <th width="180">一级账户</th>
+          <td>
+          <select id="isonelevelrole" name="isonelevelrole">
+            <option value="1">是</option>
+            <option value="0">否</option>
+          </select>
+
+          <span class="must_red">*</span></td>
+        </tr>
+        </if>
+        <tr>
+          <th width="180">负责省份</th>
+          <td>
+            <select  class="province"  name="province" id="province" >
+              <option value="">省级选择</option>
+              <foreach name="Province" item="vo">
+              <php>$pro=$province==$vo['term_id']?"selected":"";</php> 
+                <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+              </foreach>
+            </select>
+
+
+          <span class="must_red">*</span></td>
+        </tr>
+        <tr>
+          <th width="180">负责地市</th>
+          <td>
+       <select id="citys" name="city">
+          <option>请选择地市</option>
+       </select>
+          <span class="must_red">*</span></td>
+        </tr>
+
+      <if condition="$role eq 1 || empty($role) ">
+        <tr id="tr_1">
+          <th width="180">代理商</th>
+          <td>
+
+          <select name="agentid" id="agent">
+            <option value="0">选择代理商</option>
+            <!--<foreach name="agent" item="vo">-->
+              <!--&lt;!&ndash; <php>$pro=$province==$vo['term_id']?"selected":"";</php>  &ndash;&gt;-->
+                <!--<option value="{$vo.id}">{$vo.name}</option>-->
+              <!--</foreach>-->
+          </select>
+          <span class="must_red">*</span>
+
+          </td>
+        </tr>
+      </if>
+
+        <tr>
+          <th width="180">父角色</th>
+          <td><input type="text" value="{$parent}" class="input" id="rolename" disabled="disabled"></input><input type="hidden" name="pid" value="{$role}"><span class="must_red">*</span></td>
+        </tr>
+
+        <tr>
+          <th width="180">角色名称</th>
+          <td><input type="text" name="name" value="" class="input" id="rolename" ></input><span class="must_red">*</span></td>
+        </tr>
+        <tr>
+          <th>角色描述</th>
+          <td><textarea name="remark" rows="2" cols="20" id="remark" class="inputtext" style="height:100px;width:500px;"></textarea></td>
+        </tr>
+        <tr>
+          <th>是否启用</th>
+          <td>
+          	<label class="radio inline" for="active_true">
+            		<input type="radio" name="status" value="1" checked id="active_true"/>开启
+            </label>
+            <label class="radio inline" for="active_false">
+            		<input type="radio" name="status" value="0" id="active_false">禁止
+            </label>
+          </td>
+        </tr>
+      </table>
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+    </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+
+$("#province").change(function(){
+ var category = $("#category").val();
+                   $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                    $("#citys").empty()
+                   
+                      if(data.status=="success"){
+
+                          $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                          for(var key in data.data){
+                              $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                          }
+                          if(category==2)
+                          {
+                              $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=get_agent&city="+$("#province").val(),{},function(agent_data){
+                                  $("#agent").empty()
+                                  $("#agent").append("<option value=0>选择代理商</option>");
+                                  if(agent_data.status=="success") {
+
+                                      for (var key in agent_data.data) {
+                                          $("#agent").append("<option value=" + agent_data.data[key]["term_id"] + ">" + agent_data.data[key]["name"] + "</option>");
+                                      }
+                                  }
+                              });
+                          }
+
+                      }
+                      if(data.status=="error"){
+                          $("#citys").append("<option value='0'>没有市级</option>");
+                      }
+                  });
+
+
+})
+
+$("#citys").change(function(){
+    var category = $("#category").val();
+
+    if(category==2)
+    {
+        $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=get_agent&city="+$("#citys").val(),{},function(agent_data){
+            $("#agent").empty()
+            $("#agent").append("<option value=0>选择代理商</option>");
+            if(agent_data.status=="success") {
+
+
+                for (var key in agent_data.data) {
+                    $("#agent").append("<option value=" + agent_data.data[key]["term_id"] + ">" + agent_data.data[key]["name"] + "</option>");
+                }
+            }
+        });
+    }
+
+
+})
+
+ 
+ $("#category").change(function(){
+      $("#role_type").empty();
+      var id = $(this).val();
+      
+      if(id == 1)
+      {
+       $("#role_type").append("<option value=2>"+"内部子用户"+"</option>");
+        $("#tr_1").hide();
+      }
+      if(id==2)
+      {
+       $("#role_type").append("<option value=1>"+"省级子账号"+"</option>");
+         $("#role_type").append("<option value=1>"+"地级子账号"+"</option>");
+         $("#tr_1").show();
+      }
+
+
+ }) 
+
+
+</script>

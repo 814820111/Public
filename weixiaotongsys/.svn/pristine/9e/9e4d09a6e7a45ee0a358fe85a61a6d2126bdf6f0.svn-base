@@ -1,0 +1,181 @@
+*{
+	font-family: "微软雅黑";
+	margin: 0;
+	padding: 0;
+}
+.clearfix{
+	clear: both;
+}
+.nav{
+	font-weight: 500;
+	margin-top: 3%;
+	text-align: center;
+}
+.nav .left{
+	font-size: 3.8vw;
+	padding-bottom: 2.5%;
+	border-bottom: 2.5px solid rgb(6,192,143);
+	color: rgb(6,192,143);
+	margin-left: 7.5%;
+	width: 35%;
+	float: left;
+}
+.nav .right{
+	font-size: 3.8vw;
+	width: 35%;
+	float: right;
+	margin-right: 7.5%;
+}
+
+
+.container{
+	padding: 2.5% 2.5% 15%;
+	background-color: rgb(239,240,242);
+}
+.yuanzhang{
+	padding:3% 2.5%;
+	background-color: white;
+	border-radius: 5px;
+}
+.yuanzhang .one .left{
+	margin-top: 3%;
+	width: 63%;
+	text-align: right;
+}
+.left{	
+	width: 45%;
+	float: left;
+}
+.left img{
+	display: block;
+	margin-top: 1.5%;
+	float: left;
+	width: 15%;
+}
+.left span{
+	margin-left: 1.2%;
+	font-size: 3.8vw;
+	font-weight: 600;
+}
+.right{
+	font-size: 3.6vw;
+	float: right;
+}
+.one{
+	margin-bottom: 3%;
+}
+.yuanzhang .one .right{
+	margin-top: 2.5%;
+	text-align: center;
+	width: 16%;
+	background-color: rgb(6,192,142);
+	padding: 0.6% 0;
+	border-radius: 5px;
+	color: white;
+	font-weight: 500;
+}
+.two{
+	margin-bottom: 1%;
+}
+.two span{
+	font-size: 3.5vw;
+	color: rgb(70,70,70);
+}
+.two img{
+	margin-top: 3%;
+	width: 100%;
+}
+.three{
+	margin-bottom: 2%;
+}
+.three .left span{
+	display: block;
+	margin-top: 3%;
+	font-size: 3.7vw;
+	color: rgb(151,153,150);
+	font-weight: 500;
+}
+.three .right{
+	font-size: 2.8vw;
+	margin-top: 2%;
+}
+.three .right span{
+	color: rgb(151,153,150);
+}
+.pandect{
+	color: rgb(255,184,73);
+	margin-top: 2%;
+	font-size: 3.5vw;
+}
+
+.wteacher1{
+	padding:2.6% 2%;
+	margin-top: 2.5%;
+	background-color: white;
+	border-radius: 5px;
+}
+.wteacher1 .one .left{
+	margin-top: 3%;
+	width: 63%;
+	text-align: right;
+}
+	
+.wteacher1 .one .right{
+	margin-top: 2.5%;
+	text-align: center;
+	width: 16%;
+	background-color: rgb(255,184,73);
+	padding: 0.6% 0;
+	border-radius: 5px;
+	color: white;
+	font-weight: 500;
+}
+.wteacher1 .context .three{
+	margin-bottom: 3%;
+}
+.wteacher2{
+	padding:2.6% 2%;
+	margin-top: 2.5%;
+	background-color: white;
+	border-radius: 5px;
+}
+.wteacher2 .one .left{
+	margin-top: 3%;
+	width: 63%;
+	text-align: right;
+}
+	
+.wteacher2 .one .right{
+	margin-top: 2.5%;
+	text-align: center;
+	width: 16%;
+	background-color: rgb(6,192,142);
+	padding: 0.6% 0;
+	border-radius: 5px;
+	color: white;
+	font-weight: 500;
+}
+.wteacher2 .context .three{
+	margin-bottom: 3%;
+}
+.wteacher2 .context .three .right{
+	margin-right: 4%;
+}
+.new{
+	position: fixed;
+	right: 2%;
+	top: 80%;
+	border-radius: 50%;
+	text-align: center;
+	width: 17%;
+	background-color: rgb(6,192,142);
+	font-size: 3.8vw;
+	float: right;
+}
+.new span{
+	display: block;
+	margin-top: 33%;
+	font-weight: 600;
+	color: white;
+}
+

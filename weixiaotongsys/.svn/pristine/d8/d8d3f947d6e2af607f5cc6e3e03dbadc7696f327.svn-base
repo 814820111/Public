@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/xitongtongzhi.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <style>
+        .left {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top_box">
+        <a href="javascript:history.go(-1)"><img src="__ROOT__/statics/img/img67.png"></a>
+        系统通知
+        <div class="clearfix"></div>
+    </div>
+    <div style="height:42px">
+
+    </div>
+    <div class="big">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    var userid = $("#userid").val();
+    var classid = $("#classid").val();
+    var schoolid = $("#schoolid").val();
+    $("document").ready(
+        function() {
+            $.ajax({
+                url: "__ROOT__/index.php?g=apps&m=index&a=getSystemMessages",
+                type: "GET",
+                dataType: "json",
+                data: {
+                    term_id: 3,
+                },
+                success: function(res) {
+                    //console.log(eval(res.data).length);
+                    var data = eval(res.data);
+                    //console.log(data);
+                    var html = "";
+                    var thumb = "";
+                    for (var i = 0; i < data.length; i++) {
+                        //id
+                        for (var j = 0; j < data.length; j++) {
+                            if (data[i]['thumb']) {
+                                thumb = data[i]['thumb'];
+                            } else {
+                                thumb = "__ROOT__/data/upload/578710d192c1d.jpg"
+                            }
+                        }
+                        var id = data[i]['id'];
+                        //简介
+                        var excerpt = data[i]["post_excerpt"];
+                        //标题
+                        var title = data[i]["post_title"];
+                        //发布于时间
+                        var time = data[i]["post_date"];
+                        html += '<div class="box" id=' + id + '> <img class="left" src=' + thumb + '> <div class="center"> <p class="top">' + title + '</p> <p class="bot">' + time + '</p> </div> <img class="right" src="__ROOT__/statics/img/img19a.png"> <div class="clearfix"></div> </div>';
+                    }
+                    $(".big").before(html);
+                    $(".box").click(function() {
+                        var mid = this.id;
+                        var url = "__ROOT__/index.php?g=portal&m=article&a=system&id=" + mid;
+                        location.href = url;
+                    });
+
+
+                },
+                error: function(res) {
+                    //                        console.log(res);
+                    document.write("您的网络好像出问题了,刷新一下吧");
+                }
+            });
+        }
+    );
+</script>
+
+</html>

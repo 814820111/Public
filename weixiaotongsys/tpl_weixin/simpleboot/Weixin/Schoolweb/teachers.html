@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>-->
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link href="__TMPL__public/schcss/list.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<input type="hidden" value={$schoolid} id="schoolid">
+    <div class="top_box">
+        <div class="fanhui" style="cursor: pointer;"><img src="__TMPL__public/schimg/img67.png" class="back"></div>
+        教师风采
+        <div class="clearfix"></div>
+    </div>
+    <div class="box">
+
+    </div>
+
+    <script>
+       //var schoolid = 1;
+        var schoolid = $("#schoolid").val();
+        $("document").ready(function() {
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=school&a=getteacherinfos',
+                async: true,
+                data: {
+                    schoolid: schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        var post_date = res[i].post_date; //发布时间
+                        var post_title = res[i].post_title; //标题
+                        var post_excerpt = res[i].post_excerpt; //内容
+                        var thumb = res[i].thumb; //图片
+                        var status = res[i].post_status; //状态
+                        var id = res[i].id; //信息ID
+                        if(status==1){
+                            html += '<div class="big">'
+                            html += '<a href="__ROOT__/index.php?g=portal&m=article&a=teacher&id=' + id + '" style=" " class="lianjie">'
+                            if (thumb == "") {
+                                html += '<img src="__TMPL__public/schimg/img12.png" class="tu" >'
+                            } else {
+                                html += '<img src="' + thumb + '" class="tu" >'
+                            }
+
+                            html += '<div class="right">'
+                            html += '<div class="top">'
+                            html += '<span class="one">' + post_title + '</span>'
+                            html += '<span class="two">' + post_date + '</span>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '<div class="figcaption">'
+                            html += '<p class="content">' + post_excerpt + '</p>'
+                            html += '<div class="shenglue">...</div>'
+                            html += '</div>'
+                            html += '</div>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</a>  '
+                            html += '</div>'
+                        }
+
+                    }
+                    $(".box").append(html);
+
+                    var x = $(".tu").height()
+                    $(".figcaption").height(x - 19)
+                    $(window).resize(
+                        function() {
+                            var x = $(".tu").height()
+                            $(".figcaption").height(x - 19)
+                            var y = $(".content").height()
+                            if (y > x - 19) {
+                                $(".shenglue").show()
+                            } else {
+                                $(".shenglue").hide()
+                            }
+                        }
+
+                    )
+                    var y = $(".content").height()
+                    if (y > x - 17) {
+                        $(".shenglue").show()
+                    } else {
+                        $(".shenglue").hide()
+                    }
+
+                },
+                error: function() {
+                    //		    alert('系统错误,请稍后重试');
+                }
+            });
+
+        })
+
+        $(".fanhui").click(function() {
+            //location.href = "{:U('index')}"
+            window.history.go(-1);
+        })
+    </script>
+
+</body>
+
+</html>

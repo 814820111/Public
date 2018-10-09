@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__ROOT__/statics/wcs/dai-yiwancheng.css">
+    <link rel="stylesheet" href="__ROOT__/statics/wcs/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__ROOT__/statics/wjs/new_file.js"></script>
+    <style>
+        body{
+            background-color: #eff0f2;
+        }
+    </style>
+</head>
+
+<body>
+<input type="hidden" value={$userid} id="userid">
+<input type="hidden" value={$studentid} id="studentid">
+    <div class="top_box">
+        <img src="__ROOT__/statics/wimg/img67.png" class="fanhui"> 代接确认
+        <div class="clearfix"></div>
+    </div>
+    <div class="big">
+
+        <div class="tab">
+            <a href="{:U('Answer/Untreateds')}">
+                <span class="one">未处理
+        </span>
+            </a>
+            <a href="{:U('Answer/index')}">
+                <span class="tro">
+        	待处理
+        	
+        </span>
+            </a>
+            <a href="{:U('Answer/pccept')}">
+                <span class="two">已完成
+        	<div></div>
+        </span>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="bigbox">
+            <!--<div class="teacher">
+            <img src="__ROOT__/statics/wimg/img01a.png">
+            <div class="left">
+                <p class="top">孙丽丽</p>
+                <p class="bot">任课老师</p>
+            </div>
+            <p class="right">2016-08-08&nbsp;&nbsp;18:30</p>
+            <div class="clearfix"></div>
+        </div>
+        <p class="wenzi">妞妞妈妈今天是您的同事来接她吗？这个人说是您的同事，她可以把妞妞接走吗？</p>
+        <div class="photo" >
+        	<img src="__ROOT__/statics/wimg/img05a.png">
+        </div>
+        <div class="but">
+        	<span style="color:#f47520;">未同意</span>
+            <div class="clearfix"></div>
+        </div>-->
+        </div>
+
+
+    </div>
+    <script>
+        $("document").ready(function() {
+            var studentid = $("#studentid").val();
+            //用户的ID
+            var parentid = $("#userid").val();
+            //回复信息家长的ID
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=student&a=gettransportconfirmation',
+                async: true,
+                data: {
+                    studentid: studentid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        if (res[i].delivery_status != 0) {
+                            var tmie = tmies(res[i].delivery_time);
+
+                            html += ' <div class="bigbox">';
+                            html += '<div class="teacher">';
+                            html += '<img src="__ROOT__/statics/wimg/img01a.png">';
+                            html += '<div class="left">';
+                            html += ' <p class="top">' + res[i].teachername + '</p>';
+                            html += ' <p class="bot">' + res[i].teacher_duty + '</p>';
+                            html += '</div>';
+                            html += '<p class="right">' + tmie + '</p>';
+                            html += '<div class="clearfix"></div>';
+                            html += '</div>';
+                            html += '<p class="wenzi">' + res[i].content + '</p>';
+                            html += '<div class="photo" >';
+                            html += '<img src="__ROOT__/statics/wimg/' + res[i].photo + ' ">';
+                            html += '</div>';
+                            html += '<div class="but">';
+                            if (res[i].delivery_status == 2) {
+                                html += '<span style="color:#f47520;">未同意</span>';
+                            } else {
+                                html += '<span style="color:#06c18e;">同意</span>'
+                            }
+
+                            html += '<div class="clearfix"></div>';
+                            html += ' </div>';
+                            html += '</div>';
+                        }
+                    }
+                    $(".bigbox").append(html);
+
+                },
+
+                error: function() {
+
+                    alert('系统错误,请稍后重试');
+                }
+
+            });
+        })
+
+
+        $(".fanhui").click(function() {
+            location.href= "{:U('Index/index')}";
+        })
+    </script>
+</body>
+
+</html>

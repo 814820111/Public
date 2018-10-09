@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* 首页 */
+.index-wrapper {
+    max-width: 720px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0 0 51px;
+}
+.person-info{
+    height: 130px;
+    padding-left: 90px;
+    background: #06c18e;
+    position: relative;
+}
+.person-info .avator{
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #a1a1a1;
+}
+.person-info .class-select{
+    padding-top: 38px;
+}
+.person-info .class-select select{
+    display: block;
+    min-width: 80px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+.person-info .teacher-name{
+    margin-top: 15px;
+    padding-left: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+.person-info .teacher-name a{
+    color: #fff;
+}
+.my-app{
+    padding-bottom: 10px;
+    background: #fff;
+}
+.my-app .list-item{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+.my-app .list-item a{
+    display: block;
+}
+.my-app .list-item img{
+    width: 60%;
+    margin: 10px auto 5px;
+}
+.my-app .list-item p{
+    font-size: 14px;
+}
+.my-app .list-item .operate{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    width: 15px;
+    height:15px;
+}
+.my-app .list-item .add{
+    background: url('../img/add.png') no-repeat center;
+    background-size: 100% 100%;
+}
+.my-app .list-item .remove{
+    background: url('../img/remove.png') no-repeat center;
+    background-size: 100% 100%;
+}
+.index-wrapper .check{
+    padding: 10px;
+    background: #fff;
+    font-size: 14px;
+}
+.index-wrapper .check span{
+    display: inline-block;
+    min-width: 72px;
+}
+.index-wrapper .check div:nth-child(2){
+    margin: 5px 0;
+}
+.index-common-head{
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.index-common-head .more{
+    float: right;
+}
+.class-album{
+    background: #fff;
+}
+.class-album .album-box{
+    margin-top: 10px;
+}
+.class-album .album-box .list-item{
+    float: left;
+    width: 33.333%;
+    padding: 0 10px 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.class-album .album-box .list-item .img-show-box{
+    height: 60px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.class-album .album-box .list-item .img-show-box span{
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    color: #fff;
+}
+.class-album .album-box .list-item p{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.class-album .album-box .list-item .play-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: url('../img/play.png') no-repeat center;
+    background-size: 100% 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.header-bar .manageBtn{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+}
+.app-head{
+    height: 20px;
+    margin: 10px 0;
+    line-height: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+    position: relative;
+}
+.app-head::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 5px;
+    height: 90%;
+    background: #06c18e;
+}
+/* 通讯录 */
+.bookSearch{
+    padding: 5px 10px;
+    background: #ddd;
+}
+.bookSearch input[type='text']{
+    height: 30px;
+    padding-left: 10px;
+}
+
+
+

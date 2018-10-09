@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix{
+		clear: both;
+	}
+
+.year{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+.year .left,.center,.right{
+	float: left;
+}
+.year .left{
+	margin-left: 27%;
+}
+.year .center{
+	margin-top: -0.1%;
+}
+.year img{
+	width: 3%;
+
+}
+.year span{
+	margin-left: 8%;
+	margin-right: 8%;
+	font-family: "微软雅黑";
+	font-size: 3.3vw;
+	font-weight: 500;
+	color: rgb(6,192,143);
+}
+
+
+.content{
+	padding: 4.5% 2.5%  2.5%;
+	background-color: rgb(239,240,242);
+}
+.date{
+	border-radius: 5px;
+	background-color: rgb(255,255,255);
+}
+.week{
+	padding-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+.week .num1,.num{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 5vw;
+	font-weight: 500;
+	width: 14%;
+	float: left;
+}
+.week .num1{
+	color: rgb(6,192,143);
+}
+.week .num{
+	color: rgb(103,103,103);
+}
+.day{
+	margin-top: 4%;
+	padding-right: 1.5%;
+	padding-left: 1.5%;
+	padding-bottom: 5%;
+}
+.day1,.day2,.day3,.day4,.day5{
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-top: 1%;
+	text-align: center;
+	float: left;
+	width: 13%;
+	font-family: "微软雅黑";
+	font-size: 3.3vw;
+	font-weight: 500;
+	color: rgb(255,255,255);
+}
+.day1{	
+	font-size: 4.9vw;
+	background-color: rgb(228,228,228);
+	color: rgb(179,179,179);
+}
+.day2{
+	background-color: rgb(51,207,167);
+}
+.day3{
+	background-color: rgb(254,187,98);
+}
+.day4{
+	background-color: rgb(255,134,133);
+}
+.day5{
+	font-size: 4.9vw;
+	background-color: rgb(153,216,189);
+}
+.number{
+	font-size: 4.9vw;
+	margin-top: 3%;
+	margin-bottom: -8%;
+}
+
+.content2{
+	background-color: rgb(239,240,242);
+}
+.detail{
+	background-color: rgb(255,255,255);
+	margin-bottom: 2%;
+	padding: 3% 4%;
+	font-family: "微软雅黑";
+	font-size: 3.4vw;
+	font-weight: 500;	
+}
+.detail .month{
+	margin-bottom: 1%;
+	color: rgb(5,193,143);
+}
+.detail .reason1{
+	color: rgb(255,197,123);
+}
+.detail .reason2{
+	color: rgb(252,142,141);
+}
+.detail .reason3{
+	margin-top: 3%;
+}
+.detail .reason3 span{
+	display: block;
+}
+.detail .reason3 .radio{
+	margin-top: 5%;
+}
+.rleft{
+	width: 50%;
+	float: left;
+}
+.rright{
+	width: 50%;
+	float: right;
+}
+.reason3 .radio{
+	padding: 1.5% 8% 2.2%;
+	float: left;
+	border-radius: 8px;
+	color: white;
+	background-color: rgb(51,207,167);
+}
+
+
+.bottom{
+	background-color: rgb(239,240,242);
+	width: 100%;
+	height: 70px;
+}

@@ -1,0 +1,113 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('cookbookmanage')}">食谱列表</a></li>
+        <li><a href="{:U('addcookbook')}">新增食谱</a></li>
+        <!-- <li><a href="{:U('schoolcheck')}">学校审核</a></li> -->
+    </ul>
+    <form class="well form-search" method="post" action="{:U('DailyManage/index')}">
+            <div class="search_type cc mb10">
+                <div class="mb10">
+                    <span class="mr20">学校： 
+                        <select class="select_2" name="school">
+                            <option value='0'>全部</option>{$taxonomys}
+                        </select> &nbsp;&nbsp;
+                        时间：
+                        <input type="text" name="start_time" class="J_date" value="{$formget.start_time|default=''}" style="width: 80px;" autocomplete="off">
+                        <!-- <input type="text" class="J_date" name="end_time" value="{$formget.end_time}" style="width: 80px;" autocomplete="off"> --> &nbsp; &nbsp;
+                        关键字： 
+                        <input type="text" name="keyword" style="width: 200px;" value="{$formget.keyword}" placeholder="请输入关键字...">
+                        <input type="submit" class="btn btn-primary" value="搜索" />
+                    </span>
+                </div>
+            </div>
+        </form>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">学校ID</th>
+            <th>学校名称</th>
+            <th width="200">时间</th>
+            <th>餐类</th>
+            <th>图片</th>
+            <th>食谱</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="daily" item="vo">
+            <tr>
+                <td>{$vo.schoolid}</td>
+                <td>{$vo.schoolname}</td>
+                <td><php>echo date('Y-m-d D',$vo['date']);</php></td>
+                <td>{$vo.title}</td>
+                <td>
+                                <if condition="$vo['photo'] eq '' ">
+                                    <img width="50" height="25" src="__ROOT__/xp_qian/images/PersonalCenter/user_b.png" /></td> 
+                                <else /> 
+                                    <img width="50" height="25" src="{$vo.photo}" /></td>  
+                                </if>
+                <td>{$vo.content}</td>
+                <!-- <td><php>echo date('Y-m-d h:i:s',$vo['create_time']);</php></td> -->
+                <!-- <td>{$school_statuses[$vo['school_status']]}</td> -->
+                <td>
+                        <a href='{:U("change",array("schoolid"=>$vo["schoolid"]))}'>修改资料</a> |
+                       <!--  <a class="J_ajax_del" href="{:U('user/delete',array('id'=>$vo['id']))}">删除</a> | -->
+                    <br /> <a href="{:U('classmanage',array('schoolid'=>$vo['schoolid'],'schoolname'=>$vo['school_name']))}">班级管理</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+        function refersh_window() {
+            var refersh_time = getCookie('refersh_time');
+            if (refersh_time == 1) {
+                window.location = "{:U('AdminPost/index',$formget)}";
+            }
+        }
+        setInterval(function() {
+            refersh_window();
+        }, 2000);
+        $(function() {
+            setCookie("refersh_time", 0);
+            Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+                //批量移动
+                $('.J_articles_move').click(
+                        function(e) {
+                            var str = 0;
+                            var id = tag = '';
+                            $("input[name='ids[]']").each(function() {
+                                if ($(this).attr('checked')) {
+                                    str = 1;
+                                    id += tag + $(this).val();
+                                    tag = ',';
+                                }
+                            });
+                            if (str == 0) {
+                                art.dialog.through({
+                                    id : 'error',
+                                    icon : 'error',
+                                    content : '您没有勾选信息，无法进行操作！',
+                                    cancelVal : '关闭',
+                                    cancel : true
+                                });
+                                return false;
+                            }
+                            var $this = $(this);
+                            art.dialog.open(
+                                    "__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="
+                                            + id, {
+                                        title : "批量移动",
+                                        width : "80%"
+                                    });
+                        });
+            });
+        });
+    </script>
+</body>
+</html>

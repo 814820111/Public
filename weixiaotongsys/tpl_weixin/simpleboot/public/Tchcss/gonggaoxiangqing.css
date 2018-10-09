@@ -1,0 +1,66 @@
+*{margin: 0;padding: 0;}
+.clearfix{clear: both;}
+body{
+	background-color:#eff0f2;
+}
+
+/*内容区*/
+.bigbox{ 
+	margin:7px 10px 0px;
+	background-color:white;
+	border-radius:5px;
+	font-family:"微软雅黑 Light"; 
+}
+.teacher{ 
+	border-bottom:#d2d2d2 dashed 1px; 
+	padding:10px;
+}
+.teacher img{ 
+	float:left; 
+	margin-right:7px;
+	width:46px;
+}
+.teacher .left{ 
+	float:left; 
+	font-weight: 600;
+	padding-top:4px;
+}
+.teacher .right{ 
+	float:right;color:#979995; 
+	font-size:12.5px; 
+	padding-top:4px;
+}
+.teacher .left .top{
+	color:#0d0d0d; 
+	font-size:14px;
+	float:left;
+}
+.teacher .left .bot{
+	color:#979995; 
+	font-size:13px;
+}
+/*文字*/
+h4{ 
+	text-align:center; 
+	margin-top:12px;
+	font-size: 15px;
+}
+.wenzi{ 
+	font-size:14px; 
+	color:#262626; 
+	padding:7px 10px;
+}
+/*图片*/
+.bigbox .photo{
+	padding:0px 10px 10px 10px;
+	
+}
+.bigbox .photo img{ 
+	/* width:100%; */
+}
+/*提示*/
+.tishi{ 
+	font-size:14px; 
+	color:#ffb94a; 
+	padding:10px 0 15px 10px;
+}

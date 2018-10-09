@@ -1,0 +1,245 @@
+<admintpl file="header"/>
+<style type="text/css">
+
+    .form-horizontal .imgWrapPart {
+        float: left;
+        width: 25%;
+        height: 60px;
+        box-sizing: border-box;
+    }
+
+    .imgWrapPart p {
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    .imgWrapPart > input {
+        vertical-align: -1px;
+        margin-right: 20px;
+    }
+
+    input.isMyChecked {
+        margin-left: 20px;
+        vertical-align: -1px;
+    }
+    #video{
+        width: 100%;
+        padding-left: 100px;
+        box-sizing: border-box;
+    }
+</style>
+
+<script>
+    function checkData(){
+        //判断输入的时间是否合格
+        var startTime = $('#start_time').val();
+        var endTime = $('#end_time').val();
+        var val=$('input:radio[name="time"]:checked').val();
+        var student=$('input:checkbox[name="student[]"]:checked').length;
+        console.log(student);
+       if(!$("#school").val())
+        {
+            return false;
+        }
+        if(!$("#classid").val())
+        {
+            return false;
+        }
+
+        if(student==0)
+        {
+            alert("请选择学生");
+            return false;
+        }
+
+        if(val==null){
+            alert("请选择开通时长");
+            return false;
+        }
+
+    }
+</script>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">学生授权管理</a></li>
+        <li class="active"><a href="{:U('add')}">新增学生授权</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm add-validate" action="{:U('add_post')}" onsubmit="return checkData()">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">所属学校:</label>
+                    <div class="controls">
+                        <select id="school" name="school" class="normal_select" >
+                            <OPTION value="">请选择学校</OPTION>
+                            <volist name="school" id="school">
+                                <OPTION value="{$school.schoolid}">{$school.school_name}</OPTION>
+                            </volist>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所属班级:</label>
+                    <div class="controls">
+                        <select class="normal_select class" id="classid" name="classid" >
+                            <option>请选择班级</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">学生:</label>
+                    <div class="controls" id="student">
+                        <!--<label style="float: left;margin: 5px 15px 0 0;">-->
+                            <!--<input type="checkbox" style="vertical-align: -1px;"> Check me out-->
+                        <!--</label>-->
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">开通时长:</label>
+                    <div class="controls">
+                        <div class="control-group ">
+                            <!--<input type="time" id="start_time" style="width: 100px;" name="start_time">&nbsp;&nbsp;&nbsp;&nbsp;<input id="end_time" style="width: 100px;" type="time" name="end_time">-->
+                            <p style="width: 100%;margin-top: 20px">
+                                <!--<label style="float: left;margin: 5px 15px 0 0;">-->
+                                <!--<input type="checkbox" style="vertical-align: -1px;"> Check me out-->
+                                <!--</label>-->
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                    <input style="margin-left: 0;vertical-align: -1px;" type="radio" class="isMyChecked"  name="time" value="一个月">一个月</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="radio" class="isMyChecked" name="time" value="两个月">两个月</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="radio" class="isMyChecked" name="time" value="三个月">三个月</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="radio" class="isMyChecked" name="time" value="四个月">四个月</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="radio" class="isMyChecked" name="time" value="五个月">五个月</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="radio" class="isMyChecked" name="time" value="半年">半年</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="radio" class="isMyChecked" name="time" value="一年">一年</input>
+                                </label>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="video"></div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="">确定</button>
+                <!--<button class="btn" type="reset">清空</button>-->
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+    $('.add-validate').validate({
+        rules: {
+            school: {
+                required: true
+            },
+            student: {
+                required: true
+            },
+            classid: {
+                required: true
+            },
+        },
+        messages: {
+            school: {
+                required: '请输入账号名称'
+            },
+            student: {
+                required: '请选择老师'
+            },
+            classid: {
+                required: '请选择班级'
+            },
+
+        }
+
+    });
+
+    $(function () {
+        $("#school").change(function () {
+            $(".class").empty();
+            $("#student").empty();
+            $.getJSON("__ROOT__/index.php/Admin/AdminUtils/schoolclass?schoolid=" + $("#school").val(), {}, function (data) {
+                if (data.status=="success") {
+
+                    var html = '';
+                    $(".class").append("<option value=>请选择班级</option>");
+                    for (var key in data.data) {
+                        $(".class").append("<option value="+data.data[key]['id']+">"+data.data[key]['classname']+"</option>");
+                        //html += "<label style='float: left;margin: 5px 15px 0 0;'><input type='checkbox' value='"+data[key]["id"] +"' name='teachers[]' style='vertical-align: -1px;'>"+data[key]["name"]+"</label>";
+                        //$("#class").append("<option value=" + data[key]["id"] + ">" + data[key]["name"] + "</option>");
+                    }
+                    //alert(html);
+                  //  $("#class").html(html);
+                }else{
+                    $(".class").append("<option value=>没有班级</option>");
+                }
+
+            });
+        });
+    });
+
+
+    $(function () {
+        $(".class").change(function () {
+            $("#student").empty();
+            $.getJSON("__ROOT__/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=" + $("#school").val()+"&classid="+$(".class").val(),{}, function (data) {
+                if (data) {
+                    var html = '';
+                    for (var key in data) {
+                        html += "<label style='float: left;margin: 5px 15px 0 0;'><input type='checkbox' value='"+data[key]["id"] +"' name='student[]' style='vertical-align: -1px;'>"+data[key]["name"]+"</label>";
+                        //$("#class").append("<option value=" + data[key]["id"] + ">" + data[key]["name"] + "</option>");
+                    }
+                    //alert(html);
+                    $("#student").html(html);
+                }else{
+                    $("#student").append("没有学生");
+                }
+                if (data.status == "error") {
+                    $("#student").append("没有学生");
+                }
+            });
+        });
+    });
+    $(function () {
+        $(":checkbox").change(function () {
+            $("#student").empty();
+            $.getJSON("__ROOT__/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=" + $("#school").val()+"&classid="+$(".class").val(),{}, function (data) {
+                if (data) {
+                    var html = '';
+                    for (var key in data) {
+                        html += "<label style='float: left;margin: 5px 15px 0 0;'><input type='checkbox' value='"+data[key]["id"] +"' name='student[]' style='vertical-align: -1px;'>"+data[key]["name"]+"</label>";
+                        //$("#class").append("<option value=" + data[key]["id"] + ">" + data[key]["name"] + "</option>");
+                    }
+                    //alert(html);
+                    $("#student").html(html);
+                }else{
+                    $("#student").append("没有学生");
+                }
+                if (data.status == "error") {
+                    $("#student").append("没有学生");
+                }
+
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

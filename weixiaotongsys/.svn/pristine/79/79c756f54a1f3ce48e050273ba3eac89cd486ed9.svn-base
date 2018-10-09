@@ -1,0 +1,1958 @@
+[ 2018-08-30T09:50:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_users` WHERE `user_login` = 'weixiaotong' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0190s ]
+SQL: SELECT `role_id` FROM wxt_role_user a INNER JOIN wxt_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wxt_users` SET `user_login`='weixiaotong',`user_pass`='1106b40e836cb666950a9009d08e89c2e1a013751f3b2985',`user_nicename`='admin',`user_email`='zhu@xiaocool.cn',`user_url`='',`avatar`='570ca8a83c7ac.jpg',`sex`='0',`birthday`=NULL,`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2018-08-30 09:50:00',`create_time`='2015-12-31 09:08:44',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`phone`=NULL WHERE `id` = 1 [ RunTime:0.0000s ]
+
+[ 2018-08-30T09:50:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T09:50:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/DeviceManage/index/menuid/301
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceagreementModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceOnlineModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceLogModel
+
+[ 2018-08-30T09:50:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/DeviceManage/add
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceagreementModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceOnlineModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceLogModel
+
+[ 2018-08-30T09:54:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/DeviceManage/add
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceagreementModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceOnlineModel
+NOTIC: D方法实例化没找到模型类Common\Model\DeviceLogModel
+
+[ 2018-08-30T17:08:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0130s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:08:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:08:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:08:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0070s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:08:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index?province=2&citys=3&message_type=7&schoolid=7&grade=0&classs=&tiaojian=0&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:08:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:08:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:08:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:08:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0070s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:08:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/Lexcel?schoolid=7&tiaojian=0&shuzhi=&grade=&classs=0
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:10:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:10:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addschool
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:11:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=Share&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-30T17:11:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=Share&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:11:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addschool_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+SQL: SHOW COLUMNS FROM `wxt_duty` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthAccessModel
+SQL: SHOW COLUMNS FROM `wxt_auth_access` [ RunTime:0.0160s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0190s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthAccessAppModel
+SQL: SHOW COLUMNS FROM `wxt_auth_access_app` [ RunTime:0.0220s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolAuthaccessAppModel
+SQL: SHOW COLUMNS FROM `wxt_school_authaccess_app` [ RunTime:0.0180s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolAuthaccessModel
+SQL: SHOW COLUMNS FROM `wxt_school_authaccess` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyParentModel
+SQL: SHOW COLUMNS FROM `wxt_duty_parent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyParentModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty_parent` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SwitchModel
+SQL: SHOW COLUMNS FROM `wxt_switch` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `wxt_switch_detail` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school` (`school_name`,`school_address`,`school_user`,`school_phone`,`agent_id`,`schoolgradetypeid`,`province`,`city`,`area`,`create_time`) VALUES ('灵溪三哈幼儿园','灵溪呗','这里人','13677688965','2','1','2','3','7','1535620309') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_column` [ RunTime:0.0070s ]
+SQL: INSERT INTO `wxt_school_column` (`name`,`status`,`is_micro`,`is_menu`,`is_notice`,`sortid`,`schoolid`,`icon`,`type`,`column_type`) VALUES ('我的学校','1','1','1','0','10','26','http://ow3hm6y11.bkt.clouddn.com/img01.png','1','2'),('通知公告','1','1','1','1','9','26','http://ow3hm6y11.bkt.clouddn.com/img03.png','1','1'),('教师风采','1','1','1','0','8','26','http://ow3hm6y11.bkt.clouddn.com/img02.png','1','1'),('兴趣班','1','1','1','1','7','26','http://ow3hm6y11.bkt.clouddn.com/img07.png','1','1'),('好宝宝','1','1','1','0','4','26','http://ow3hm6y11.bkt.clouddn.com/img04.png','1','1'),('校园招聘','1','1','1','0','6','26','http://ow3hm6y11.bkt.clouddn.com/img05.png','1','2'),('在线报名','1','1','1','0','5','26','http://ow3hm6y11.bkt.clouddn.com/img08.png','1','2'),('学校信箱','1','1','1','0','1','26','http://ow3hm6y11.bkt.clouddn.com/img06.png','1','2') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_school` WHERE ( schoolid=26 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_gradedictionary` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `wxt_gradedictionary` WHERE ( schooltype=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','托儿班','1535620309','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','小小班','1535620309','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','小班','1535620309','3') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','中班','1535620309','4') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','大班','1535620309','5') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','学前班','1535620309','6') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_grade` (`schoolid`,`name`,`create_time`,`gradeid`) VALUES ('26','毕业班','1535620309','7') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `wxt_agent` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_school_agent_log` [ RunTime:0.0170s ]
+SQL: INSERT INTO `wxt_school_agent_log` (`schoolid`,`handle`,`newagentid`,`newagent_name`,`handletime`) VALUES ('26','1','2','江西代理商','2018-08-30 17:11:50') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_switch`  [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_switch_detail` (`schoolid`,`identifier`,`name`,`status`,`switchid`) VALUES ('26','RadioCookManage','食谱短信下发设置','N','1'),('26','RadioMessageWeather','短信下发天气预报设置','Y','2') [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_duty`  [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_duty` (`schoolid`,`name`,`level`,`ispower`,`duty_id`) VALUES ('26','校长','1','1','1') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 1 AND `type` = 'app_url'  [ RunTime:0.0090s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','283','2','weixin/tchinformation/huoqu','app_url','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','283','2','weixin/tchnotice/index','app_url','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','283','2','weixin/tchgrowtharchives/index','app_url','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','283','2','weixin/tchcookbook/index','app_url','2') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_auth_access` WHERE `type` = 'teacher_url' AND `role_id` = 1  [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_duty` (`schoolid`,`name`,`level`,`ispower`,`duty_id`) VALUES ('26','主任','3','1','3') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 3 AND `type` = 'app_url'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access` WHERE `type` = 'teacher_url' AND `role_id` = 3  [ RunTime:0.0140s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/infotemplateset/indexwhole','teacher_url') [ RunTime:0.0180s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/inspection/index_management','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/attendanceset/not_boarders','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/attendanceselect/lists','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/classattendance/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/grow/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/mobilemessage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/classattendance/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/check/messageinfo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/notice/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/entrust/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/message/homework','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/messageinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/message/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/delivery/index','teacher_url') [ RunTime:0.0040s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/teacherattendselect/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/teacherscheduleselect/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/studentleave/index_leave','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/jobmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/babymanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/teachermanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/interestingmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/schoolinfosmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/schoolnoticemanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('284','26','teacher/schoolnewsmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_duty` (`schoolid`,`name`,`level`,`ispower`,`duty_id`) VALUES ('26','任课教师','5','1','4') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 4 AND `type` = 'app_url'  [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/111/2222','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchalbums/addphoto','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchvideo/videoindex','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchvideo/class_video','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/123/1231','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/123/123','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/1/12','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchcourse/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchalbums/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','#//','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchagency/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchhomework/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchanswer/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchcomment/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchtold/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchattendance/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/12/1212','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/session/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/usercenter/systermmessage','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchsignin/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchleave/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchcourseware/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchactivity/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchgrowtharchives/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchcookbook/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchnotice/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','285','2','weixin/tchinformation/huoqu','app_url','1') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_auth_access` WHERE `type` = 'teacher_url' AND `role_id` = 4  [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/articlemanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/wxmanage/menu_index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/apply/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/todureport/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/classalbum/add','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/schoolnotice/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/toduschedule/index_todo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/plan/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/plan/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/courseware/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/toduschedule/index_1','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/monitorvideo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/monitor/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/monitorteacher/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/growtharchives/booklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/growtharchives/checklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/physical/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/schoolmain/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/principal/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/teacherfill/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/growtharchives/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher//','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','tracher//','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/adjustclass/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/semester/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/teachergrade/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/group/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/studentinfo/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/cookmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/teachersubject/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/teacherinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/playgroup/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/classsubject/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/subjectmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/classmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/noclock/student','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/noclock/teacher','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/studentleave/index_leave','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/teacherattendselect/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/teacherscheduleselect/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/delivery/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/infotemplateset/indexwhole','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/inspection/index_management','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/attendanceset/not_boarders','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/attendanceselect/lists','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/classattendance/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/grow/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/mobilemessage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/classattendance/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/check/messageinfo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/notice/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/entrust/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/message/homework','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/messageinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('285','26','teacher/message/default','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_duty` (`schoolid`,`name`,`level`,`ispower`,`duty_id`) VALUES ('26','教师','5','1','5') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 5 AND `type` = 'app_url'  [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchnotice/addtianjia','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/111/2222','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchalbums/addphoto','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchnotice/answer','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchvideo/videoindex','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchalbums/fabu','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/3/2','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/123/1231','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/123/123','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/1/12','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchcourse/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchalbums/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchagency/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchhomework/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchcomment/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchanswer/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchtold/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchattendance/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/12/1212','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/session/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/usercenter/systermmessage','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchsignin/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchleave/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchcourseware/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchactivity/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchcookbook/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchgrowtharchives/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchnotice/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','286','0','weixin/tchinformation/huoqu','app_url','2') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access` WHERE `type` = 'teacher_url' AND `role_id` = 5  [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/plan/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/toduschedule/index_todo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/schoolnotice/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/toduschedule/index_1','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/growtharchives/booklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/growtharchives/checklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/physical/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/principal/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/schoolmain/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teacherfill/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher//','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/growtharchives/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/adjustclass/rep_study','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','tracher//','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/adjustclass/student_move','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/adjustclass/edit_class','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teachergrade/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/adjustclass/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/group/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/studentinfo/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/semester/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/studentinfo/impuser','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/cookmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/studentinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teachersubject/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/playgroup/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teacherinfo/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/classsubject/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/classmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/subjectmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/attendanceset/boarders_index_post','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/messageinfo/message','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/studentleave/index_leave','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teacherscheduleselect/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teacherattendselect/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/delivery/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/infotemplateset/indexwhole','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/inspection/index_management','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/attendanceset/not_boarders_post','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/attendanceset/not_boarders','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/attendanceselect/lists','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/classattendance/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/mobilemessage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/classattendance/default','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/exam/scoresend','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/exam/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/check/messageinfo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/notice/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/entrust/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/message/homework','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/messageinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/message/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/plan/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/courseware/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/classalbum/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/todureport/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/apply/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/jobmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/babymanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/teachermanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/interestingmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/schoolinfosmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/schoolnoticemanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/schoolnewsmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('286','26','teacher/parenstmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_duty` (`schoolid`,`name`,`level`,`ispower`,`duty_id`) VALUES ('26','班主任','4','1','6') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 6 AND `type` = 'app_url'  [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/111/2222','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchalbums/addphoto','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchnotice/answer','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchvideo/videoindex','app_url','2') [ RunTime:0.0120s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchalbums/fabu','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchnotice/addtianjia','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchexam/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/123/1231','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/123/123','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/1/12','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','#//','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchalbums/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','#//','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchcourse/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','#//','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','#//','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchagency/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchhomework/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchinformation/huoqu','app_url','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchnotice/index','app_url','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchgrowtharchives/index','app_url','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchcookbook/index','app_url','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchactivity/index','app_url','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchcourseware/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchleave/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchsignin/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/usercenter/systermmessage','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/session/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/12/1212','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchattendance/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchtold/index','app_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchanswer/index','app_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','287','0','weixin/tchcomment/index','app_url','2') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access` WHERE `type` = 'teacher_url' AND `role_id` = 6  [ RunTime:0.0030s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/parenstmanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/schoolnewsmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/schoolnoticemanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/schoolinfosmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/interestingmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teachermanage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/babymanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/wxmanage/menu_index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/jobmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/apply/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/todureport/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/classalbum/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/courseware/add','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/plan/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/plan/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/toduschedule/index_todo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/schoolnotice/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/toduschedule/index_1','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/growtharchives/booklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/growtharchives/checklist','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/schoolmain/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/physical/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/principal/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherfill/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher//','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/growtharchives/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','tracher//','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/adjustclass/rep_study','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/adjustclass/student_move','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/adjustclass/edit_class','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teachergrade/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/adjustclass/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/studentinfo/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/semester/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/group/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/studentinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/studentinfo/delete','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/studentinfo/impuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/studentinfo/expuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherinfo/impuser','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherinfo/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teachersubject/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/cookmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherinfo/expuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/subjectmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/classsubject/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/playgroup/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/classmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/messageinfo/message','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/attendanceset/boarders_index_post','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherscheduleselect/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/studentleave/index_leave','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/teacherattendselect/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/infotemplateset/indexwhole','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/delivery/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/inspection/index_management','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/attendanceset/not_boarders_post','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/attendanceset/not_boarders','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/attendanceselect/lists','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/classattendance/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/mobilemessage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/classattendance/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/exam/scoresend','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/exam/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/check/messageinfo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/notice/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/entrust/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/message/homework','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/messageinfo/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('287','26','teacher/message/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_duty` (`schoolid`,`name`,`level`,`ispower`,`duty_id`) VALUES ('26','学校管理员','2','1','7') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 7 AND `type` = 'app_url'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_auth_access` WHERE `type` = 'teacher_url' AND `role_id` = 7  [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/articlemanage/add_school','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/growtharchives/booklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/growtharchives/checklist','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/physical/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/principal/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/schoolmain/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/notice/message','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/notice/message_self','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/check/messageinfo','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/exam/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher//','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherfill/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/growtharchives/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','tracher//','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/selection/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/adjustclass/rep_study','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/adjustclass/student_move','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/adjustclass/edit_class','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/adjustclass/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teachergrade/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/group/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/semester/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/studentinfo/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/studentinfo/impuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/studentinfo/delete','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/studentinfo/expuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/studentinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teachersubject/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/cookmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/cookmanage/add_post','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherinfo/add','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherinfo/impuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherinfo/delete','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherinfo/expuser','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherinfo/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/classmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/subjectmanage/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/classsubject/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/playgroup/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/noclock/teacher','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/noclock/student','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/attendanceset/boarders_index_post','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/messageinfo/message','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherscheduleselect/index_scheudle','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherscheduleselect/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherschedule/default','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/studentleave/index_leave','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/teacherattendselect/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/delivery/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/infotemplateset/indexwhole','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/inspection/index_management','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/attendanceset/not_boarders_post','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/attendanceset/not_boarders','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/attendanceselect/lists','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/classattendance/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/grow/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/grow/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/mobilemessage/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/classattendance/default','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/dynamic/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/exam/scoresend','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/notice/index','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/message/homework_post','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/entrust/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/message/homework','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/messageinfo/message_self','teacher_url') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/messageinfo/index','teacher_url') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess` (`role_id`,`schoolid`,`rule_name`,`type`) VALUES ('288','26','teacher/message/default','teacher_url') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_duty_parent`  [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_duty_parent` (`schoolid`,`name`,`level`,`duty_id`) VALUES ('26','家长','1','2') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_auth_access_app` WHERE `role_id` = 2 AND `type` = 'parent_url'  [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/cookbook/index','parent_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/growtharchives/index','parent_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/babyfriend/index','parent_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/homework/index','parent_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/comments/index','parent_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/tell/index','parent_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/replace/handle','parent_url','2') [ RunTime:0.0010s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/signin/index','parent_url','2') [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_school_authaccess_app` (`schoolid`,`role_id`,`appcatid`,`rule_name`,`type`,`status`) VALUES ('26','140','1','weixin/message/index','parent_url','2') [ RunTime:0.0010s ]
+
+[ 2018-08-30T17:11:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addschool
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:12:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:12:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:12:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/p/2
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:12:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/p/1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:12:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/classmanage/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:12:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/p/2
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:12:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/classmanage/schoolid/7/schoolname/%E7%81%B5%E6%BA%AA%E5%93%88%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:13:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:13:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/classmanage/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:13:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school_class` (`schoolid`,`classname`,`grade`,`type`,`create_time`) VALUES ('26','中三班','4','1','1535620443') [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:14:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD/grade_type/1/grade/4/classname/%E4%B8%AD%E4%B8%89%E7%8F%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school_class` (`schoolid`,`classname`,`grade`,`type`,`create_time`) VALUES ('26','中二班','4','1','1535620451') [ RunTime:0.0010s ]
+
+[ 2018-08-30T17:14:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD/grade_type/1/grade/4/classname/%E4%B8%AD%E4%BA%8C%E7%8F%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school_class` (`schoolid`,`classname`,`grade`,`type`,`create_time`) VALUES ('26','中一班','4','1','1535620468') [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:14:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD/grade_type/1/grade/4/classname/%E4%B8%AD%E4%B8%80%E7%8F%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: INSERT INTO `wxt_school_class` (`schoolid`,`classname`,`grade`,`type`,`create_time`) VALUES ('26','小一班','3','1','1535620476') [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:14:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD/grade_type/1/grade/3/classname/%E5%B0%8F%E4%B8%80%E7%8F%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school_class` (`schoolid`,`classname`,`grade`,`type`,`create_time`) VALUES ('26','小二班','3','1','1535620483') [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:14:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD/grade_type/1/grade/3/classname/%E5%B0%8F%E4%BA%8C%E7%8F%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+SQL: SHOW COLUMNS FROM `wxt_agent` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: INSERT INTO `wxt_school_class` (`schoolid`,`classname`,`grade`,`type`,`create_time`) VALUES ('26','小三班','3','1','1535620490') [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:14:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/addclass/schoolid/26/schoolname/%E7%81%B5%E6%BA%AA%E4%B8%89%E5%93%88%E5%B9%BC%E5%84%BF%E5%9B%AD/grade_type/1/grade/3/classname/%E5%B0%8F%E4%B8%89%E7%8F%AD
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:14:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T17:15:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/Lexcel?schoolid=7&tiaojian=0&shuzhi=&grade=&classs=0
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:15:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:21:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_users` WHERE `user_login` = 'weixiaotong' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:21:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE `user_login` = 'weixiaotong' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:21:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE `user_login` = 'weixiaotong' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0080s ]
+SQL: SELECT `role_id` FROM wxt_role_user a INNER JOIN wxt_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wxt_users` SET `user_login`='weixiaotong',`user_pass`='1106b40e836cb666950a9009d08e89c2e1a013751f3b2985',`user_nicename`='admin',`user_email`='zhu@xiaocool.cn',`user_url`='',`avatar`='570ca8a83c7ac.jpg',`sex`='0',`birthday`=NULL,`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2018-08-30 17:21:27',`create_time`='2015-12-31 09:08:44',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`phone`=NULL WHERE `id` = 1 [ RunTime:0.0010s ]
+
+[ 2018-08-30T17:21:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:21:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:22:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:22:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-30T17:24:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:24:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-30T17:26:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-30T17:26:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:26:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-30T17:26:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:26:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:27:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:27:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:29:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:30:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:30:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:30:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:30:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:33:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:33:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:34:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student/successcount/41/allcount/69/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F41%E4%BA%BA,%E7%AC%AC4%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC7%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC17%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC18%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC19%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC20%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC24%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC25%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC28%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC30%E8%A1%8C%E5%AD%A6%E7%94%9F%E8%B0%83%E7%8F%AD%E6%88%90%E5%8A%9F,%E7%AC%AC32%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC35%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC36%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC38%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC39%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC43%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC44%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC47%E8%A1%8C%E5%AD%A6%E7%94%9F%E8%B0%83%E7%8F%AD%E6%88%90%E5%8A%9F,%E7%AC%AC50%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC54%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC56%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC58%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC60%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC62%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC63%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC64%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC65%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC67%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC68%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC69%E8%A1%8CIC%E5%8D%A1%E5%8F%B7%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8,%E7%AC%AC70%E8%A1%8C%E5%AD%A6%E7%94%9F%E8%B0%83%E7%8F%AD%E6%88%90%E5%8A%9F,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:37:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:38:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-30T17:38:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:38:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=26
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0060s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 26 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:38:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index?province=2&citys=3&message_type=7&schoolid=26&grade=0&classs=&tiaojian=0&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:38:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:38:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-08-30T17:38:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T17:38:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=26
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0060s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 26 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-30T17:43:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:43:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:43:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:43:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:43:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/student/successcount/69/allcount/69/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F69%E4%BA%BA,%E7%AC%AC30%E8%A1%8C%E5%AD%A6%E7%94%9F%E8%B0%83%E7%8F%AD%E6%88%90%E5%8A%9F,%E7%AC%AC47%E8%A1%8C%E5%AD%A6%E7%94%9F%E8%B0%83%E7%8F%AD%E6%88%90%E5%8A%9F,%E7%AC%AC70%E8%A1%8C%E5%AD%A6%E7%94%9F%E8%B0%83%E7%8F%AD%E6%88%90%E5%8A%9F,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T17:45:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T18:47:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Wxbindinglog/index/menuid/391
+NOTIC: D方法实例化没找到模型类Common\Model\WechatMenuModel
+NOTIC: D方法实例化没找到模型类Common\Model\WechatAutoReplyModel
+NOTIC: D方法实例化没找到模型类Common\Model\WechatMaterialModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:47:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:47:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:47:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T18:47:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-08-30T18:47:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-30T18:47:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:47:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T18:47:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T18:47:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T18:47:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/excel?schoold=7&tiaojian=&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:48:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:50:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:50:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T18:50:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/49/allcount/58/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F49%E4%BA%BA,%E7%AC%AC10%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC32%E8%A1%8C%E7%8F%AD%E7%BA%A7%E4%B8%8D%E5%AD%98%E5%9C%A8%E3%80%81%E7%AC%AC45%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC49%E8%A1%8C%E7%8F%AD%E7%BA%A7%E4%B8%8D%E5%AD%98%E5%9C%A8%E3%80%81%E7%AC%AC55%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC56%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC59%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC63%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC64%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:01:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+ERR: SQLSTATE[HY000] [1049] Unknown database 'wxt20161'
+
+[ 2018-08-30T19:01:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:01:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:02:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:02:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:02:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/53/allcount/58/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F53%E4%BA%BA,%E7%AC%AC10%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC32%E8%A1%8C%E7%8F%AD%E7%BA%A7%E4%B8%8D%E5%AD%98%E5%9C%A8%E3%80%81%E7%AC%AC45%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC55%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81%E7%AC%AC56%E8%A1%8C%E8%81%8C%E5%8A%A1%E7%BB%91%E5%AE%9A%E5%A4%B1%E8%B4%A5%E3%80%81
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:03:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:03:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-30T19:03:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=8 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T19:03:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-30T19:03:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0080s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-30T19:03:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=26&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T19:03:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-30T19:03:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T19:03:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T20:29:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T20:29:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192/p/2
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T20:29:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192/p/1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T20:49:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-30T20:49:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T20:49:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-30T20:49:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T20:49:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-30T20:49:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=11 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

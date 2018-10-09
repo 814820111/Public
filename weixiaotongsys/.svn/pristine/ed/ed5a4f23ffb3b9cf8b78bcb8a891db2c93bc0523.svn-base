@@ -1,0 +1,44 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href='{:U("parentlist",array("id"=>$studentid))}'>家长列表</a></li>
+        <li><a href="{:U('addparent',array('studentid'=>$studentid,'schoolid'=>$schoolid))}">添加家长</a></li>
+    </ul>
+    <p>学生姓名：{$stu_name}&nbsp;&nbsp;学生id：{$studentid}</p>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">关系ID</th>
+            <th>家长姓名</th>
+            <th>手机号</th>
+            <th>与学生关系</th>
+            <th>默认号码</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="userinfo" item="vo">
+            <tr>
+                <td>{$vo.rel_id}</td>
+                <td>{$vo.parent_name}</td>
+                <td>{$vo.phone}</td>
+                <td>{$vo.appellation}</td>
+                <td><if condition="$vo['type'] eq '1' ">
+                    是
+                <else /> 
+                否
+                </if></td>
+                <td>
+                    <a  href="{:U('updateparent',array('rid'=>$vo['rel_id'],'studentid'=>$studentid))}">编辑</a>|
+                    <a class="J_ajax_del" href="{:U('parent_delete',array('id'=>$vo['rel_id'],'parentid'=>$vo['parent_id']))}">删除</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

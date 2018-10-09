@@ -1,0 +1,143 @@
+<teachertpl file="header"/>
+<html>
+<head>
+<title>宿舍出入统计</title>
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+
+<style type="text/css">
+
+a{
+  color: #00c1dd
+}
+div{
+  color: black;
+}
+</style>
+</head>
+<body>
+<div class="" style="margin-left: 20px; height: 28px; margin-right: 20px;">
+    <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none; margin-left: 0;">
+        <li><a href="{:U('dormitory_count')}" style="color:#1f1f1f;text-decoration:none; padding:10px 15px;">楼栋出入统计</a></li>
+   		<li class="active"><a href="{:U('dormitory_count_room')}" style="color:#1f1f1f;text-decoration:none; padding:10px 15px;">宿舍出入统计</a></li>
+        <li><a href="{:U('check_time')}" style="color:#1f1f1f;text-decoration:none; padding:10px 15px;">宿舍考勤时间设置</a></li>
+   	</ul>
+   	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane fade in active" id="home">
+        	<br/>
+			<form class="form-horizontal J_ajaxForm" action="{:u('Dormitory/dormitory_count_room')}" method="get" style="margin:0px 0px 5px;">
+          <div class="search_type cc mb10">
+              <div class="mb10">
+                  <span class="mr20">
+                     <div style="  display: inline-block;" >
+                        楼栋名称：
+                          <input type="text" class="select_2" name="buildname"  value="{$buildname}" placeholder="-请输入楼栋-" style="width: 100px; height: 29px; border-width: 1px;color: black;">&nbsp; &nbsp;&nbsp;
+                        寝室号：
+                          <input type="text" class="select_2" name="roomname"  value="{$roomname}" placeholder="-请输入寝室-" style="width: 100px; height: 29px; border-width: 1px;color: black;">&nbsp; &nbsp;&nbsp;
+                    班级:
+                      <input type="text" class="select_2" name="classname" value="{$classname}" placeholder="-请输入班级-" style="width: 100px; height: 29px; border-width: 1px;color: black;">&nbsp; &nbsp;&nbsp;
+                      学生姓名：
+                          <input type="text" class="select_2" name="stu_name" value="{$stu_name}" placeholder="-请输入姓名-" style="width: 100px; height: 29px; border-width: 1px;color: black;">&nbsp; &nbsp;&nbsp;
+                        <span>
+                      查询时间：
+                      <input type="text" class="J_date date" name="startime" placeholder="-选择时间-" value="{$startime}" style=" width: 150px; height: 29px; border-width: 1px;color: black;">  -
+                            <input type="text" class="J_date date" name="endtime" value="{$endtime}" placeholder="-选择时间-" style="width: 150px; height: 27px; border-width: 1px; color: black;"><br>
+					     </span>
+                 <button type="submit" class="btn btn-default" style="border:none;;color:#FFF;  background-color:#26a69a; margin-right:3%; margin-top: 5px;"> 查 询 </button>
+                      <button type="button" class="btn btn-default daochu" style="border:none;;color:#FFF;  background-color:#26a69a; margin-top: 5px;"> 导 出 </button>
+					  </div>
+                  </span>
+              </div>
+          </div>
+			</form>
+      <form class="J_ajaxForm" action="" method="post">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered table-list">
+                    <thead>
+
+                    <tr style="background-color:#CCC;">
+                        <th  colspan=6 style=" text-align: center;">查询时间:{$startime}至{$endtime}</th>
+                        <th  colspan=8 style=" text-align: center;">每周（正常进出次数/异常进出次数）</th>
+                    </tr>
+                    <tr style="background-color:#CCC;">
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;"></th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">楼栋</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">宿舍</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">床位</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">学生姓名</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">学生班级</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">1 </th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">2</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">3</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">4</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">5</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">6</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">7</th>
+                        <th class="pai"  style=" text-align: center;border-left:none;border-width: 0.5px;">合计</th>
+                    </tr>
+
+                    </thead>
+                    <php>$i=1;</php>
+                    <foreach name="record" item="vo">
+                        <tr>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><php>echo $i++;</php></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;">{$vo.buildname}</td>
+                            <td style=" text-align: center;border-left: none;border-top: none;">{$vo.roomname}</td>
+                            <td style=" text-align: center;border-left: none;border-top: none;">{$vo.bedname}</td>
+                            <td style=" text-align: center;border-left: none;border-top: none;">{$vo.stu_name}</td>
+                            <td style=" text-align: center;border-left: none;border-top: none;">{$vo.classname}</td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','1');">{$vo.ok1}/{$vo.nook1}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','2');">{$vo.ok2}/{$vo.nook2}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','3');">{$vo.ok3}/{$vo.nook3}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','4');">{$vo.ok4}/{$vo.nook4}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','5');">{$vo.ok5}/{$vo.nook5}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','6');">{$vo.ok6}/{$vo.nook6}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','7');">{$vo.ok7}/{$vo.nook7}</a></td>
+                            <td style=" text-align: center;border-left: none;border-top: none;"><a onclick="SeeStudent('{$vo.stu_name}','{$vo.studentid}','{$startime}','{$endtime}','8');">{$vo.ok8}/{$vo.nook8}</a></td>
+                        </tr>
+                    </foreach>
+                    </table>
+                    <div class="pagination">{$Page}</div>
+                  </div>
+                </form>
+        </div>
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+    <script type="text/javascript" src="__ROOT__/statics/js/js/layui/layui.js"></script>
+    <script>
+        layui.use(['layer'], function(){
+            var layer = layui.layer;
+        });
+        //查看学生考勤详细
+        function SeeStudent(stuname,studentid,startime,endtinme,week) {
+            if(week == 8){
+                var weeks = "全部"
+            }else{
+                var weeks = "周"+week
+            }
+            var title = stuname+" "+startime+"至"+endtinme+" "+weeks+" 进出记录";
+            layui.use(['layer'], function() {
+                var $ = layui.jquery,
+                    layer = layui.layer;
+
+                var index = layer.open({
+                    type: 2,
+                    id	: 1,
+                    title: title,
+                    btn: [ '关闭'],
+                    area: ['600px', '500px'],
+                    offset : ['20px', '200px'],
+                    maxmin: true,
+                    content: "{:U('Dormitory/dormitory_see_student_log')}?studentid="+studentid+"&startime="+startime+"&endtime="+endtinme+"&week="+week,
+                    shade: 0.8,
+                    shadeClose: true,
+                    maxmin :true,
+                    success: function(layero, index){
+                    }
+                });
+            });
+        }
+</script>
+
+</body>
+</html>

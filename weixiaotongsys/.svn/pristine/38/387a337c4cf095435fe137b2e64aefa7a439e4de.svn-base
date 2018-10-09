@@ -1,0 +1,44 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('index')}">学期管理</a></li>
+        <li><a href="{:U('add')}">新增学期</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>学校名称</th>
+            <th>学年</th>
+            <th>开学日期</th>
+            <th>结束日期</th>
+            <th>状态</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>
+            $statuses=array("0"=>"已关闭","1"=>"已开学");
+
+        </php>
+        <foreach name="term" item="vo">
+            <tr>
+                <td>{$vo.name}</td>
+                <td>{$vo.start_date|date='Y年',###}</td>
+                <td>{$vo.start_date|date='Y-m-d',###}</td>
+                <td>{$vo.end_date|date='Y-m-d',###}</td>
+                <td>{$statuses[$vo['status']]}</td>
+                <td>
+                    <a href="{:U('change',array('id'=>$vo['id']))}">修改</a> |
+                    <a class="J_ajax_del" href="{:U('delete',array('id'=>$vo['id']))}">删除</a>
+
+                    <br />
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

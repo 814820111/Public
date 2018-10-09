@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/product presentation.css">
+<title>智校园官网产品介绍</title>
+</head>
+
+<body>
+<div class="nav">
+	<img src="img/img02.png">
+    <p><a href="">登录/注册</a></p>
+    <ul>
+    	<li><a href="home.html">首页</a></li>
+        <li><a href="product presentation.html" style=" color:#06c18e;" >产品介绍</a></li>
+        <li><a href="down.html">下载中心</a></li>
+        <li><a href="">校园门户</a></li>
+        <li><a href="join us.html">加盟合作</a></li>
+        <li><a href="about us.html">关于我们</a></li>
+    </ul>
+</div>
+<div class="banner">
+	<img src="img/img10.jpg">
+</div>
+<div class="qianse">
+    <div class="one">
+        <div class="left">
+            <img src="img/img24.png">
+        </div>
+        <div class="right">
+            <p class="big">快乐成长</p>
+            <ul>
+                <li>
+                    <img src="img/img25.png">
+                    <p>成长日记</p>
+                </li>
+                <li>
+                    <img src="img/img26.png">
+                    <p>成长档案</p>
+                </li>
+                <li>
+                    <img src="img/img27.png">
+                    <p>家长叮嘱</p>
+                </li>
+                <li>
+                    <img src="img/img28.png">
+                    <p>晨检</p>
+                </li>
+                <li>
+                    <img src="img/img29.png">
+                    <p>关注好友</p>
+                </li>
+                <li>
+                    <img src="img/img30.png">
+                    <p>班级相册</p>
+                </li>
+                <li>
+                    <img src="img/img31.png">
+                    <p>乐园</p>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+            <p>随时随地通过图片、文字等记录方式永久保存宝宝在园、在家的每一个精彩的成长瞬间，见证宝宝的每一次成长。
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="shense">
+    <div class="two">
+        <div class="left">
+            <p class="big">家校沟通</p>
+            <ul>
+                <li>
+                    <img src="img/img33.png">
+                    <p>通知公告</p>
+                </li>
+                <li>
+                    <img src="img/img34.png">
+                    <p>学生点评</p>
+                </li>
+                <li>
+                    <img src="img/img35.png">
+                    <p>待办事宜</p>
+                </li>
+                <li>
+                    <img src="img/img36.png">
+                    <p>在线聊天</p>
+                </li>
+                <li>
+                    <img src="img/img37.png">
+                    <p>信息群发</p>
+                </li>
+                <li>
+                    <img src="img/img38.png">
+                    <p>班级作业</p>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+            <p>随时随地通过图片、文字等记录方式永久保存宝宝在园、在家的每一个精彩的成长瞬间，见证宝宝的每一次成长。
+            </p>
+        </div>
+        <div class="right">
+            <img src="img/img32.png">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="qianse">
+    <div class="one">
+        <div class="left">
+            <img src="img/img39.png">
+        </div>
+        <div class="right">
+            <p class="big">安全管理</p>
+            <ul>
+                <li>
+                    <img src="img/img40.png">
+                    <p>在线请假</p>
+                </li>
+                <li>
+                    <img src="img/img41.png">
+                    <p>考勤打卡</p>
+                </li>
+                <li>
+                    <img src="img/img42.png">
+                    <p>视频监控</p>
+                </li>
+                <li>
+                    <img src="img/img43.png">
+                    <p>刷卡设置</p>
+                </li>
+                <li>
+                    <img src="img/img44.png">
+                    <p>我的家庭</p>
+                </li>
+                <li>
+                    <img src="img/img45.png">
+                    <p>代接确认</p>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+            <p>随时随地通过图片、文字等记录方式永久保存宝宝在园、在家的每一个精彩的成长瞬间，见证宝宝的每一次成长。
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="shense">
+    <div class="two">
+        <div class="left">
+            <p class="big">微网站</p>
+            <ul>
+                <li>
+                    <img src="img/img47.png">
+                    <p>入学报名</p>
+                </li>
+                <li>
+                    <img src="img/img48.png">
+                    <p>教师风采</p>
+                </li>
+                <li>
+                    <img src="img/img49.png">
+                    <p>宝宝秀场</p>
+                </li>
+                <li>
+                    <img src="img/img50.png">
+                    <p>校园招聘</p>
+                </li>
+                <li>
+                    <img src="img/img51.png">
+                    <p>园长信箱</p>
+                </li>
+                <li>
+                    <img src="img/img52.png">
+                    <p>园所介绍</p>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+            <p>随时随地通过图片、文字等记录方式永久保存宝宝在园、在家的每一个精彩的成长瞬间，见证宝宝的每一次成长。
+            </p>
+        </div>
+        <div class="right">
+            <img src="img/img46.png">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="three">
+	<img src="img/img11.jpg">
+    <p class="text-justify" style=" text-indent:2em;">42寸高清大屏互动智能机提供智能分区展示、视频监控、广告、拍照、签到、多媒体播放等一体化能力，刷卡同时拍照图像，有助园所理清接送责任， 存储刷卡数据，同时提供清晰响亮的读卡语音播报，多功能大屏机具备集成体温枪和身高体重测试等高智能设备的能力，自定义程度高，用户体验好， 在当前幼教产品中绝无仅有。
+    </p>
+</div>
+<div class="footer">
+	<p>|温州韵途科技有限公司|智校园官方网站|
+    <br>浙ICP备16026974号-1 Copyright©2016 yuntu Inc. All Rights Reserved . 
+    <br>温州韵途科技有限公司版权所有 
+    <br>加盟热线:000-000-0000</p>
+</div>
+</body>
+</html>

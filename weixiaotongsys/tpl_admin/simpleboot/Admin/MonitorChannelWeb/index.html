@@ -1,0 +1,103 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('index')}">摄像头管理</a></li>
+        <li><a href="{:U('add')}">新增摄像头</a></li>
+    </ul>
+    <form class="well form-search" method="post" action="{:U('MonitorChannel/index')}">
+        <div class="mb10">
+            <select  class="keyword"  name="keywordtype" style="width: 180px">
+                <!-- <option value="0">按名称查询</option> -->
+                <option value="1">按学校名称查询</option>
+            </select>
+            <input type="text" name="keyword" style="width: 230px;" value="{$keyword}" placeholder="请输入关键字...">
+            <input type="submit" class="btn btn-primary" value="搜索" />
+            <input type="button" class="btn btn-warning" value="重置" onclick="urls('MonitorChannel/index')" />
+        </div>
+    </form>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th><input type="checkbox" id="checkAll" name="" style="vertical-align: -2px">&nbsp;&nbsp;全选</th>
+            <th>ID</th>
+            <th>设备ID</th>
+            <th>摄像头名称</th>
+            <th>摄像头别名</th>
+            <th>摄像头介绍</th>
+           <th>节点</th>
+            <th width="180">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="info" item="vo">
+            <tr>
+                <td><input type="checkbox" class="checkList" name="delete[]" value="{$vo.id}"></td>
+                <td>{$vo.id}</td>
+                <td>{$vo.deviceserial}</td>
+                <td>{$vo.channelname}</td>
+                <td>{$vo.nname}</td>
+                <td>{$vo.content}</td>
+                <td>{$vo.school_name}</td>
+                <td>
+                    <!-- <button type="button" class="btn btn-info" onclick="goTo('Monitor/look',<?php echo $vo['id']?>)">查看</button>
+                    <button type="button" class="btn btn-success" onclick="goTo('Monitor/editMonitors',<?php echo $vo['id']?>)">修改</button>
+                   <button type="button" class="btn btn-danger" onclick="alertMsg('Monitor/deleteMonitors',<?php echo $vo['id']?>)">删除</button>  -->
+                    <a class="" href="{:U('MonitorChannelWeb/edit',array('id'=>$vo['id']))}">修改</a>
+                    <a class="J_ajax_del" href="{:U('MonitorChannelWeb/delete',array('id'=>$vo['id']))}">删除</a>
+                    <br /> 
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <button class="btn btn-warning" id="deleteClick" style="width: 100px;height: 30px;float: left;margin: 20px 20px 20px 0;">删除</button>
+    <div class="pagination" style="float: left">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    function urls(url) {
+        location.href="__ROOT__/index.php/Admin/"+url;
+    }
+    $('#checkAll').click(function () {
+        var isChecked = $(this).attr('checked');
+        if (isChecked == 'checked'){
+            $('.checkList').each(function (k, v) {
+                $(this).attr('checked', true);
+            });
+        }else{
+            $('.checkList').each(function (k, v) {
+                $(this).attr('checked', false);
+            });
+        }
+    });
+    $('#deleteClick').click(function () {
+        var ids = [];
+        $('.checkList').each(function (k,v) {
+            var isChecked = $(this).attr('checked');
+            if (isChecked){
+                ids.push($(this).val());
+            }
+        });
+        var jsonStr = JSON.stringify(ids);
+        //alert(jsonStr);
+        if (jsonStr != '[]'){
+            $.ajax({
+                type: 'post',
+                url: '{:U("deleteAll")}',
+                data: {ids: jsonStr},
+                dataType: 'json',
+                success: function (res) {
+                    if (res['status'] == 200){
+                        location.href = "{:U('index')}";
+                    }
+                },
+                error: function () {
+                    alert("错误");
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

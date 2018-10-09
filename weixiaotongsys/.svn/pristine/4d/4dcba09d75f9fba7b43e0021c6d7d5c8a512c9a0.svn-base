@@ -1,0 +1,68 @@
+﻿学生端
+    	//localhost/weixiaotong2016/index.php/weixin/Activity/index
+	//班级活动控制器
+	//http://localhost/weixiaotong2016/index.php/weixin/Replace/Handle
+	//代接控制器
+	//http://localhost/weixiaotong2016/index.php/weixin/BabyFriend/index
+	//宝宝好友
+	//localhost/weixiaotong2016/index.php/weixin/Albums/index
+	//班级相册的渲染页面
+	//	localhost/weixiaotong2016/index.php/Weixin/Comments/index
+    	//老师点评
+   	//	http://localhost/weixiaotong2016/index.php/weixin/Courseware/index
+    	//班级课件渲染控制器	
+    	//http://localhost/weixiaotong2016/index.php/weixin/Course/course
+   	 //班级课程
+    	//	localhost/weixiaotong2016/index.php/Weixin/MicroBlog/index
+	//动态
+	//  localhost/weixiaotong2016/index.php/weixin/Message/index
+    	//消息
+    	//localhost/weixiaotong2016/index.php/weixin/Leave/index
+    	//在线请假
+    	//http://   localhost/weixiaotong2016/index.php/weixin/Notice/index
+	//通知公告渲染控制器
+	//	localhost/weixiaotong2016/index.php/weixin/Homework/index
+	//作业
+	//	localhost/weixiaotong2016/index.php/weixin/Tell/index
+    //家长叮嘱
+	//	localhost/weixiaotong2016/index.php/weixin/Mobilephone/index
+	 //通讯录渲染页面
+     //http://localhost/weixiaotong2016/index.php/weixin/Cookbook/index
+	//本周食谱
+	//http://localhost/weixiaotong2016/index.php/weixin/SignIn/index
+	//考勤的渲染页面
+	
+教师端
+	//教师端代接控制器
+	//localhost/weixiaotong2016/index.php/weixin/Tchanswer/index
+	//教师端学生考勤考勤
+	//localhost/weixiaotong2016/index.php/weixin/Tchattendance/index
+	//教师端老师点评
+	//localhost/weixiaotong2016/index.php/weixin/Tchcomment/index
+	//老师消息渲染控制器
+	//localhost/weixiaotong2016/index.php/weixin/TchInformation/index
+	//教师端在线请假
+	//localhost/weixiaotong2016/index.php/weixin/Tchleave/index
+	//教师端通讯录
+	//localhost/weixiaotong2016/index.php/weixin/Tchmobilephone/index
+	//教师端通知公告
+	//localhost/weixiaotong2016/index.php/weixin/Tchnotice/index
+	//教师控制器老师叮嘱
+	//localhost/weixiaotong2016/index.php/weixin/Tchtold/index
+	
+	//localhost/weixiaotong2016/index.php/weixin/TchActivity/index
+     //教师端班级活动 
+	//localhost/weixiaotong2016/index.php/weixin/TchCourseware/index
+	//教师端课件
+	//http://localhost/weixiaotong2016/index.php/weixin/TchSignIn/index
+	//教师考勤考勤的渲染页面
+	//http://localhost/weixiaotong2016/index.php/weixin/TchCookbook/index
+	//教师端本周食谱
+	//localhost/weixiaotong2016/index.php/weixin/TchAlbums/index
+	//班级相册的渲染页面	
+    //	http://localhost/weixiaotong2016/index.php/weixin/TchCourse/course
+    //教师端班级课程
+    //	localhost/weixiaotong2016/index.php/Weixin/TchMicroBlog/index
+	//动态
+校网：
+	localhost/weixiaotong2016/index.php/Weixin/Schoolweb/index

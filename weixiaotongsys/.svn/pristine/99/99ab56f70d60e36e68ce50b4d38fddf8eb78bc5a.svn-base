@@ -1,0 +1,199 @@
+<admintpl file="header" />
+<script src="__ROOT__/statics/js/layer/layer.js" type="text/javascript"></script>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('index')}">敏感词管理</a></li>
+        <!-- <li><a href="{:U('Notice/add')}">新增班级相册</a></li> -->
+        <!-- <li><a href="{:U('schoolcheck')}">学校审核</a></li> -->
+    </ul>
+    <div class="common-form">
+
+              敏感词查询：<input type="text" placeholder="请输入敏感词" id="SensitiveWord" satyle="width:200px">
+
+         <button type="button" class="btn btn-primary" id="chaxun" style='margin-top: -10px;'>查询</button>
+        <button type="button" class="btn btn-primary button3"  style='margin-top: -10px;'>批量插入敏感词</button>
+        <if condition="$rowNo ">
+            <span>导入{$rowNo}条，去重后插入{$success}条,请点击更新按钮，更新缓存文件</span>
+        </if>
+        <if condition="$rowNos ">
+            <span>导入{$rowNos}条，删除{$successs}条,请点击更新按钮，更新缓存文件</span>
+        </if>
+        <br>
+        敏感词插入：<input type="text" placeholder="请输入敏感词" satyle="width:200px" id="addword">
+
+        <button type="button" class="btn btn-green addbtn"  style='margin-top: -10px;'>插入</button>
+        <button type="button" class="btn btn-green button2"  style='margin-top: -10px;'>批量删除敏感词</button>
+        <button type="button" class="btn btn-green button4"  style='margin-top: -10px;'>更新敏感词文件</button>
+
+    </div>
+    <div class="modal fade" id="upmeny" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; ">
+        <div class="modal-dialog" style="    margin-top: 0;">
+            <div class="modal-content">
+                <form action="{:U('Admin/SensitiveWord/addword')}" id="form1" name="form1" enctype="multipart/form-data" method="post">
+                <div class="modal-header" style="background: white">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: relative;
+    left: -12px;"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title"  style="color: black; font-weight:bold;"><span class="stuname"></span>上传新增文件</h5><br>
+                    <a href="__ROOT__/statics/excel/filterword.xlsx">模板下载</a>模板下载</a>
+
+                </div>
+                <div class="modal-body2" style="max-height: 300px; overflow-y: auto;">
+                    <div class="table-responsive main">
+                        <input id="file" class="" type="file" name="excel_file_add" id="excel_file_add"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary"  value="提交更新" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;" \>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"  aria-label="Close" style="background: white; color:black; font-weight:bold;">关闭</button>
+                 </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="demeny" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; ">
+        <div class="modal-dialog" style="    margin-top: 0;">
+            <div class="modal-content">
+                <form action="{:U('Admin/SensitiveWord/delword')}" id="form2" name="form2" enctype="multipart/form-data" method="post">
+                    <div class="modal-header" style="background: white">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: relative;
+    left: -12px;"><span aria-hidden="true">&times;</span></button>
+                        <h5 class="modal-title"  style="color: black; font-weight:bold;"><span class="stuname"></span>上传删除文件</h5><br>
+                        <a href="__ROOT__/statics/excel/filterword.xlsx">模板下载</a>模板下载</a>
+
+                    </div>
+                    <div class="modal-body2" style="max-height: 300px; overflow-y: auto;">
+                        <div class="table-responsive main">
+                            <input id="file" class="" type="file" name="excel_file_del" id="excel_file_del"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-primary"  value="提交更新" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;" \>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"  aria-label="Close" style="background: white; color:black; font-weight:bold;">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<style>
+    .swords:hover
+    {
+        color:red;
+    }
+    </style>
+
+    <table class="table table-hover table-bordered">
+
+        <thead>
+            <th colspan="5"  style="text-align:center" id="theadth">点击敏感词删除</th>
+
+        </thead>
+        <tbody>
+        <tr>
+        <php>$count=count($list);$i=0;</php>
+        <foreach name="list" item="vo">
+
+            <php>if($i%5==0){echo '</tr><tr>';}</php>
+            <td class="swords delsword" id="{$vo.id}"> {$vo.word} </td>
+            <php>$i++;</php>
+
+        </foreach>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+    <div class="pagination">{$Page}</div>
+
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    $("#chaxun").click(function () {
+
+        var SensitiveWord = $("#SensitiveWord").val();
+        window.location.href="__ROOT__/index.php/Admin/SensitiveWord/index?word="+SensitiveWord;
+
+    });
+    $(".delsword").click(function () {
+
+        var delsword = this.id;
+
+        $.ajax({
+            url:"__ROOT__/index.php/Admin/SensitiveWord/del",
+            dataType:"json",
+            type:"get",
+            data:{
+                delsword:delsword,
+            },
+            success:function (res) {
+                document.getElementById(delsword).innerHTML = res.type;
+                document.getElementById('theadth').innerHTML = "删除成功，操作完毕后请更新缓存文件";
+                document.getElementById(delsword).style.color = "red";
+            },
+            error:function (res) {
+                alert("失败");
+
+            }
+        })
+
+    });
+    $(".addbtn").click(function () {
+
+        var addword = $("#addword").val();
+
+        $.ajax({
+            url:"__ROOT__/index.php/Admin/SensitiveWord/add",
+            dataType:"json",
+            type:"get",
+            data:{
+
+                addword:addword,
+            },
+            success:function (res) {
+                alert(res.type);
+
+            },
+            error:function (res) {
+                alert("失败");
+
+            }
+        })
+
+    });
+    //批量上传敏感字
+    $(".button3").click(function() {
+        $("#upmeny").modal("show");
+    })
+    //批量删除敏感字
+    $(".button2").click(function() {
+        $("#demeny").modal("show");
+    })
+    $(".button4").click(function () {
+
+        var addword = $("#addword").val();
+
+        $.ajax({
+            url:"__ROOT__/index.php/Admin/SensitiveWord/updata",
+            dataType:"json",
+            type:"get",
+            data:{
+                updata:1,
+            },
+            success:function (res) {
+                   alert(res.type);
+            },
+            error:function (res) {
+                alert("失败");
+
+            }
+        })
+
+    });
+</script>
+</body>
+</html>

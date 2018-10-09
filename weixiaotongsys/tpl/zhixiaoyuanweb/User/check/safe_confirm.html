@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <tc_include file="Public:head" />
+</head>
+<body class="body-white">
+<tc_include file="Public:center-nav" />
+
+<div class="manage-box">
+    <div class="place">
+        <a href="index">首页</a> > <a href="new_message">家校互联</a>
+    </div>
+    <div class="main">
+        <tc_include file="Public:center_left2" />
+        <div class="confirm_content">
+            <div class="confirm_search">
+                <form method="get">
+                <div class="message-search-input">
+                    <span>发送人：</span>
+                       <input type="text" class="teacher_name" name="">
+                        <span>班级：</span>
+                        <select  class="choose_class" name="">
+                            <option>普通班级</option>
+                            <option>特殊班级</option>
+                        </select>
+                        <span>日期：</span>
+                        <input type="date" id="date-begin" class="date-input" name="">
+                        <span>至</span>
+                        <input type="date" id="date-end" class="date-input" name="">
+                        <span><br></span>
+                    </div>
+                    <div class="message-search-button">
+                        <input type="button" class="search-orther-button" name="" value="导出">
+                        <button class="search-button">查询</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="confirm_list" id="confirm_list">
+
+                        <table>
+                            <thead>
+                            <tr>
+                                <td width="65px">
+                                    <input type="checkbox" id="all-cheackbox222" class="input-cheackbox" name="">
+                                    全选
+                                </td>
+                                <td width="90px">姓名</td>
+                                <td width="105px">班级</td> 
+                                <td width="75px">发送人</td>
+                                <td width="135px">发送时间</td>
+                                <td width="205px">状态</td>
+                                <td width="145px">操作</td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="input-cheackbox" name="">
+                                    <span>1</span>
+                                </td>
+                                <td>李笑笑
+                                </td>
+                                <td>普通班级</td>
+                                <td>刘老师</td>
+                                <td>2013-06-05 7:20:45</td>
+                                <td>等待家长确认</td>
+                                <td>
+                                <a href="#">提醒</a>
+                                 <a href="#">呼叫</a>
+                                <a href="#">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="input-cheackbox" name="">
+                                    <span>2</span>
+                                </td>
+                                <td>李笑笑
+                                </td>
+                                <td>普通班级</td>
+                                <td>刘老师</td>
+                                <td>2013-06-05 7:20:45</td>
+                                <td>等待家长确认</td>
+                                <td>
+                                <a href="#">提醒</a>
+                                 <a href="#">呼叫</a>
+                                <a href="#">删除</a></td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <input type="checkbox" class="input-cheackbox" name="">
+                                    <span>3</span>
+                                </td>
+                                <td>李笑笑
+                                </td>
+                                <td>普通班级</td>
+                                <td>刘老师</td>
+                                <td>2013-06-05 7:20:45</td>
+                                <td>已完成</td>
+                                <td>
+                                <a href="#">提醒</a>
+                                 <a href="#">呼叫</a>
+                                <a href="#">删除</a></td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <input type="checkbox" class="input-cheackbox" name="">
+                                    <span>4</span>
+                                </td>
+                                <td>李笑笑
+                                </td>
+                                <td>普通班级</td>
+                                <td>刘老师</td>
+                                <td>2013-06-05 7:20:45</td>
+                                <td>已过期</td>
+                                <td>
+                                <a href="#">提醒</a>
+                                 <a href="#">呼叫</a>
+                                <a href="#">删除</a></td>
+                            </tr>
+                        </table>
+                        <div class="meaasge-page">
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                         </div>
+                          </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(function(){
+        //默认样式
+        $('#nav-confirm').attr('class','text-first active');
+        $('#nav-confirm').children('span').attr('class','glyphicon glyphicon-minus-sign');
+        $('#nav-safe-confirm').attr('class','active');
+        $('#safe_content').css('display','block');
+        $('#center-attendance').attr('class','active');
+    });
+    $('.message-info').click(function(){
+        $(this).next().css('display','block');
+    });
+    $('.off-detail').click(function(){
+        $(this).parent().parent().css('display','none');
+    });
+    $('.message-reply').click(function(){
+        $(this).next().css('display','block');
+    });
+         //点击已发消息全选时
+    $('#all-cheackbox22').click(function(){
+        if(!$(this).is(':checked')){
+            $('#dynamics_list').find("input:checkbox").prop("checked",false);
+        }else{
+            $('#dynamics_list').find("input:checkbox").prop("checked",true);
+        }
+        
+    });
+        //填充时间
+    var m_time = Date.parse(new Date());
+    function changetime(time1){
+        
+        var now_time = new Date(time1).toLocaleString().split('/');
+        now_time[2] = now_time[2].split(' ')[0];
+        now_time[1] = parseInt(now_time[1])+1<10?'0'+now_time[1]:parseInt(now_time[1])+1;
+        return now_time.join('-');
+    }
+    var now_time = changetime(m_time);
+    var week_time = changetime(parseInt(m_time)-7*24*3600*1000);
+    var month_time = changetime(parseInt(m_time)-30*24*3600*1000);
+    var threemonth_time = changetime(parseInt(m_time)-90*24*3600*1000);
+    
+    $('#datebtn-today').click(function(){
+        $('#date-begin').attr('value',now_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-week').click(function(){
+        $('#date-begin').attr('value',week_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-month').click(function(){
+        $('#date-begin').attr('value',month_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-threemonth').click(function(){
+        $('#date-begin').attr('value',threemonth_time);
+        $('#date-end').attr('value',now_time);
+    });
+</script>
+<tc_include file="Public:footer"/>
+</body>
+</html>

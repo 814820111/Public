@@ -1,0 +1,142 @@
+<teachertpl file="header"/>
+<style type="text/css">
+	.touchlei{ background-color:#eeeeee;}
+</style>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 30%; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+</style>
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+<body>
+      <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+            <li class="active"><a href="{:u('InfoTemplateSet/indexWhole')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">整体考勤短信设置</a></li>
+            <li><a href="{:u('InfoTemplateSet/index_Boarder')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">住校生考勤短信</a></li>
+             <li><a href="{:u('InfoTemplateSet/index_special')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">特殊活动考勤设置</a></li>
+      </ul>
+
+</body>
+<div style="margin-left: 25px;margin-right: 20px;">
+<form action="{:u('InfoTemplateSet/indexWhole_post')}" method="post">
+
+
+
+	<!-- 上午 -->
+        <div  class="row-fluid" style="margin-top: 20px; color: black;">
+	         <div class="span7" style="margin-left: 25px; width: 40%; ">
+	        	 上午上学：
+	        	 <div style=" margin-top: 10px; margin-bottom: 10px;">
+
+	        		<textarea name="text_1" style="width:100%;height: 200px; resize: none; border-width: 1px;">{$morn_school}</textarea>
+	             </div>
+	              <div>
+	              	恢复默认提醒模板：
+		              	<input type="radio" name="return_1" style=" margin-top: -2px;" checked="checked" value="1">否
+						<input type="radio" name="return_1" style=" margin-top: -2px;" value="2">是
+	              </div>
+
+	         </div>
+
+	         <div class="span3" style=" width: 40%; ">
+	       		上午放学：
+	        	 <div style=" margin-top: 10px; margin-bottom: 10px;">
+	        		<textarea name="text_2" style="width:100%;height: 200px; resize: none; border-width: 1px;">{$morn_leave}</textarea>
+	             </div>
+	             <div>
+	              	恢复默认提醒模板：
+		              	<input type="radio" name="return_2" checked="checked" style=" margin-top: -2px;" value="1">否
+						<input type="radio" name="return_2" style=" margin-top: -2px;" value="2">是
+	             </div>
+	         </div>
+
+
+	        <div class="span7" style="margin-left: 25px;margin-top: 50px; width: 40%; ">
+	              下午上学：
+	        	 <div style=" margin-top: 10px; margin-bottom: 10px;">
+	        		<textarea name="text_3" style="width:100%;height: 200px; resize: none; border-width: 1px;">{$after_school}</textarea>
+	             </div>
+	               <div>
+	              	恢复默认提醒模板：
+		              	<input type="radio" name="return_3" checked="checked" style=" margin-top: -2px;" value="1">否
+						<input type="radio" name="return_3" style=" margin-top: -2px;" value="2">是
+	               </div>
+	        </div>
+
+	        <div  class="span3" style="margin-top: 50px; width: 40%; ">
+	              下午放学：
+	        	 <div style=" margin-top: 10px; margin-bottom: 10px;">
+	        		<textarea name="text_4" style="width:100%;height: 200px; resize: none; border-width: 1px;">{$after_leave}</textarea>
+	             </div>
+	               <div>
+	              		恢复默认提醒模板：
+		              	<input type="radio" name="return_4" checked="checked" style=" margin-top: -2px;" value="1">否
+						<input type="radio" name="return_4" style=" margin-top: -2px;" value="2">是
+	               </div>
+	        </div>
+
+	        <div class="span7" style="margin-left: 25px;margin-top: 50px; width: 40%; ">
+	              晚上上学：
+	        	 <div style=" margin-top: 10px; margin-bottom: 10px;">
+	        		<textarea name="text_5" style="width:100%;height: 200px; resize: none; border-width: 1px;">{$night_school}</textarea>
+	             </div>
+	               <div>
+	              	恢复默认提醒模板：
+		              	<input type="radio" name="return_5" checked="checked" style=" margin-top: -2px;" value="1">否
+						<input type="radio" name="return_5" style=" margin-top: -2px;" value="2">是
+	               </div>
+	        </div>
+	         <div  class="span3" style="margin-top: 50px; width: 40%; ">
+	              晚上放学：
+	        	 <div style=" margin-top: 10px; margin-bottom: 10px;">
+	        		<textarea name="text_6" style="width:100%;height: 200px; resize: none; border-width: 1px;">{$night_leave}</textarea>
+	             </div>
+	               <div>
+	              		恢复默认提醒模板：
+		              	<input type="radio" name="return_6" checked="checked" style=" margin-top: -2px;" value="1">否
+						<input type="radio" name="return_6" style=" margin-top: -2px;" value="2">是
+	               </div>
+	        </div>
+
+        </div>
+
+        <div class="form-actions" style="margin-top: 0px;margin-bottom: 0px; background-color: white;">
+				<button class="js-ajax-submit" type="submit" style=" background-color: #26a69a; padding: 5px 10px; border-radius: 3px; border: none; color: white;">保存修改</button>
+		</div>
+
+	 <div style="margin-bottom: 50px; margin-left: 20px;">
+		 <div style=" width: 15px; height: 15px; background-color: #e84e40; border-radius: 50%; float: left; margin-right: 10px;"></div>
+		 <div style=" float: left; margin-top: -2px;">
+			1.  您可以选择短信模板中需要替换的内容，如只保留“{学生姓名}”“{时}”“{分}”：{学生姓名}家长，您的小孩{时}点{分}分安全到校刷卡，请您放心！ 
+			<br>
+			2.  “{}”里的内容是系统用来替换真实内容的，因此修改短信模板时，请不要修改“{}”里的内容，如将“{学生姓名}”修改为“{姓名}
+		 </div>
+		 <div style="clear: both;"></div>
+	</div>
+
+
+</form>    
+</div>
+		      <script>
+            $(".touch").mouseenter(
+					function(){
+						$(this).addClass("touchlei")
+						}
+			)
+			 $(".touch").mouseleave(
+					function(){
+						$(this).removeClass("touchlei")
+						}
+			)
+            </script>
+</html>

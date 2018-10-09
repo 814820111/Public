@@ -1,0 +1,54 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li ><a href='{:U("Student/index")}'>所有学生</a></li>
+        <li><a href='{:U("Student/adduser")}'>新增家长</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('addparent_post')}">
+            <fieldset>
+           <!--  <div class="control-group">
+                    <label class="control-label">学生id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="student_id" value="{$studentid}" readOnly="true">
+                    </div>
+                </div> -->
+                 <div class="control-group">
+                    <label class="control-label">家长姓名:</label>
+                    <div class="controls">
+                        <input type="input" class="input" name="user_name">
+                    </div>
+                </div>
+
+                 <div class="control-group">
+                    <label class="control-label">联系方式:</label>
+                    <div class="controls">
+                        <input type="input" class="input" name="phone">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">与学生的关系:</label>
+                    <div class="controls">
+                        <select id="school" class="input" name="appe" class="normal_select">
+                            <OPTION value="0">请选择</OPTION> 
+                            <foreach name="relation" item="vo">
+                                 <OPTION value="{$vo.id}">{$vo.appellation_name}</OPTION> 
+                            </foreach>           
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" name="studentid" value="{$studentid}" />
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit ">添加</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

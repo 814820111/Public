@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/join us.css">
+<title>智校园官网加盟合作</title>
+</head>
+
+<body>
+<div class="nav">
+	<img src="img/img02.png">
+    <p><a href="">登录/注册</a></p>
+    <ul>
+    	<li><a href="home.html">首页</a></li>
+        <li><a href="product presentation.html">产品介绍</a></li>
+        <li><a href="down.html">下载中心</a></li>
+        <li><a href="">校园门户</a></li>
+        <li><a href="join us.html" style=" color:#06c18e;">加盟合作</a></li>
+        <li><a href="about us.html">关于我们</a></li>
+    </ul>
+</div>
+<div class="banner">
+	<img src="img/img02.jpg">
+</div>
+<div class="bigbox">
+	<p class="center">欢迎加入我们</p>
+	<div class="box">
+    	<div class="left">
+        	<img src="img/img15.png">
+            <p><strong>市场前景巨大</strong><br>0-6岁幼儿约1.8亿每年人均消费上万元，市场规
+模突破千亿，空间广阔！
+			</p>
+        </div>
+        <div class="right">
+        	<img src="img/img16.png">
+            <p><strong>收益高，成本回收周期短</strong><br>自主研发产品，最大程度让利合作商家月功能费、卡费代运营费用广告收入等
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="box">
+    	<div class="left">
+        	<img src="img/img17.png">
+            <p><strong>专业化运营团队</strong><br>智校园为代理商提供日常运营保障
+硬件设备的日常维护
+从产品培训、宣传推广等方面给予全程支持与指导
+            </p>
+        </div>
+    	<div class="right">
+        	<img src="img/img18.png">
+            <p><strong>产品易推广</strong><br>园所家长易接受, 园所配备硬件设备形象高大上
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="youshi">
+	<div class="neirong">
+		<p class="center">我们的优势</p>
+        <div class="one">
+        	<img src="img/img19.png">
+            <p><strong>产品优势</strong><br>智校园ＡＰＰ是国内目前功能最全的家校沟通ＡＰＰ之一，集成了移动互联网、物联网、ＧＰＲＳ等先进技术，公司成立了30
+多人的产品研发队伍，持续做好产品的不断完善和升级。
+            </p>
+            <div class="clearfix"></div>
+        </div>
+        <div class="one">
+        	<img src="img/img20.png">
+            <p><strong>商业优势</strong><br>教育局统计，幼儿园数约28万，0-6岁幼儿约1.8亿每年人均消费上万元，市场规模突破千亿，空间广阔！新的科技产品，新的
+加盟优势，确保加盟合作商家零风险经营。
+            </p>
+            <div class="clearfix"></div>
+        </div>
+        <div class="one">
+        	<img src="img/img21.png">
+            <p><strong>智能设备连接服务</strong><br>42寸高清大屏互动智能机10寸小屏机提供智能分区展示、视频监控、广告、拍照、签到、多媒体播放等一体化能力，自定义程
+度高，用户体验号。 
+体温枪采用红外线测温，免接触、方便、安全、卫生！高清互动监控摄像头为用户提供实时查看、远程关爱、即时分享等全面
+的视频应用服务。
+            </p>
+            <div class="clearfix"></div>
+        </div>
+        <div class="one">
+        	<img src="img/img22.png">
+            <p><strong>满足不同的用户群</strong><br>家长端：家长可查看孩子在园安全和健康成长情况，和老师互动，记录孩子的每一成长瞬间！
+老师端：发布教务信息和班级信息，与家长沟通互动。园所可发布招生信息全面展示园所风貌，新闻，师资力量等，可作为对
+外的形象宣传窗口，极力提高园所知名度。
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="hezuo">
+	<p>合作加盟</p>
+    <form>
+    	<div class="one">
+            <input type="text" placeholder="请输入联系人姓名">
+            <span>联系人姓名&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="clearfix"></div>
+        </div>
+        <br>
+        <div class="one">
+            <input type="text" placeholder="请输入联系人姓名">
+            <span>联系人电话&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="clearfix"></div>
+        </div>
+        <br>
+        <div class="one">
+            <select style=" margin-left:6%;">
+                <option value="1">--请选择--</option>
+                <option value="2">烟台市</option>
+                <option value="3">济南市</option>
+                <option value="3">青岛市</option>
+            </select>
+            <select>
+                <option value="1">--请选择--</option>
+                <option value="2">山东省</option>
+                <option value="3">湖北省</option>
+            </select>
+            <span>意向代理城市&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+    <a href=""><div class="anniu">提交</div></a>
+</div>
+<div class="footer">
+	<p>|温州韵途科技有限公司|智校园官方网站|
+    <br>浙ICP备16026974号-1 Copyright©2016 yuntu Inc. All Rights Reserved . 
+    <br>温州韵途科技有限公司版权所有 
+    <br>加盟热线:000-000-0000</p>
+</div>
+</body>
+</html>

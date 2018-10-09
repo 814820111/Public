@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>家长首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/littleweb/css/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__public/littleweb/css/addressList2.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        function a() {
+            var w, w2;
+            w = $(".rightp").height();
+            // alert(w);
+            $(".rightp span").css.line - height(w);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container" style=" overflow:hidden;">
+
+        <div class="search">
+            <div class="context">
+                <img src="__TMPL__public/littleweb/img/search0.png" alt="">
+                <span>搜索</span>
+            </div>
+        </div>
+        <div class="one">
+            <div class="classify">
+                <div class="yuanzhang">园长</div>
+                <div class="teacher">老师</div>
+                <div class="parent">家长</div>
+                <div class="clearfix"></div>
+            </div>
+            <hr>
+        </div>
+
+
+        <div class="peng">
+            <div class="left">
+                <img src="__TMPL__public/littleweb/img/img02.png" alt="">
+            </div>
+            <div class="right">
+                <div class="pengxiao">彭小二（老师）
+                    <span class="phone">13573519005</span>
+                </div>
+                <img src="__TMPL__public/littleweb/img/img08.png" alt="">
+                <img class="message" src="__TMPL__public/littleweb/img/img06.png" alt="">
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="peng">
+            <div class="left">
+                <img src="__TMPL__public/littleweb/img/img02.png" alt="">
+            </div>
+            <div class="right">
+                <div class="rightp">
+                    <div class="pengxiao">彭小二（老师）
+                        <span class="phone">13573519005</span>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img08.png" alt="">
+                    <img class="message" src="__TMPL__public/littleweb/img/img06.png" alt="">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="peng">
+            <div class="left">
+                <img src="__TMPL__public/littleweb/img/img02.png" alt="">
+            </div>
+            <div class="right">
+                <div class="rightp">
+                    <div class="pengxiao">彭小二（老师）
+                        <span class="phone">13573519005</span>
+                    </div>
+                    <img src="i__TMPL__public/littleweb/mg/img08.png" alt="">
+                    <img class="message" src="__TMPL__public/littleweb/img/img06.png" alt="">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="peng">
+            <div class="left">
+                <img src="__TMPL__public/littleweb/img/img02.png" alt="">
+            </div>
+            <div class="right">
+                <div class="rightp">
+                    <div class="pengxiao">彭小二（老师）
+                        <span class="phone">13573519005</span>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img08.png" alt="">
+                    <img class="message" src="__TMPL__public/littleweb/img/img06.png" alt="">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="peng">
+            <div class="left">
+                <img src="__TMPL__public/littleweb/img/img02.png" alt="">
+            </div>
+            <div class="right">
+                <div class="rightp">
+                    <div class="pengxiao">彭小二（老师）
+                        <span class="phone">13573519005</span>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img08.png" alt="">
+                    <img class="message" src="__TMPL__public/littleweb/img/img06.png" alt="">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="peng">
+            <div class="left">
+                <img src="__TMPL__public/littleweb/img/img02.png" alt="">
+            </div>
+            <div class="right">
+                <div class="rightp">
+                    <div class="pengxiao">彭小二（老师）
+                        <span class="phone">13573519005</span>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img08.png" alt="">
+                    <img class="message" src="__TMPL__public/littleweb/img/img06.png" alt="">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+
+
+        <!--footer-start-->
+        <div class="footer">
+            <div class="fone">
+                <div class="f1">
+                    <img src="__TMPL__public/littleweb/img/img37.png">
+
+                    <div class="fword">校园</div>
+                </div>
+                <div class="f2">
+                    <img src="__TMPL__public/littleweb/img/img32.png">
+
+                    <div class="tongxun">通讯录</div>
+                </div>
+            </div>
+
+            <div class="f3">
+                <div class="circle" id="circle">
+                    <div class="hor"></div>
+                    <div class="ver"></div>
+                </div>
+
+            </div>
+            <div class="ftwo">
+                <div class="f4">
+                    <img src="__TMPL__public/littleweb/img/img33.png">
+
+                    <div class="fword">动态</div>
+                </div>
+                <div class="f5">
+                    <img src="__TMPL__public/littleweb/img/img35.png">
+
+                    <div class="fword">我的</div>
+                </div>
+            </div>
+        </div>
+        <!--footer-end-->
+    </div>
+
+    <script>
+        $(".dian").eq(0).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: 0
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+        $(".dian").eq(1).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: -g
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+
+        y = $(".container").width()
+        $(".huitiao2").width(y)
+        $(".footer").width(y)
+        b = $(".tubiao li").width()
+        $(".tubiao li img").width(b * 1.5)
+        $(".tubiao li img").height(b * 1.5)
+        $(".tubiao2 li img").width(b * 1.5)
+        $(".tubiao2 li img").height(b * 1.5)
+        c = $(".dian").width()
+        $(".dian").height(c)
+        d = $(".tixing img").width()
+        $(".tixing img").height(d)
+        e = $(".top .you").width()
+        $(".top .you").height(e)
+        f = $(".biaoti li img").width()
+        $(".biaoti li img").height(f)
+        g = $(".container").width()
+        $(".lun").width(g * 2)
+        k = $(".one ul li img").width()
+        $(".one ul li img").height(k)
+        document.title = $("body").width()
+    </script>
+</body>
+
+</html>

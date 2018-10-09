@@ -1,0 +1,40 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li ><a href='{:U("classlist",array("id"=>$studentid))}'>班级管理</a></li>
+        <li  class="active"><a href="{:U('Student/addclass')}">添加班级</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('addclass_post')}">
+            <fieldset>
+           <!--  <div class="control-group">
+                    <label class="control-label">学生id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="student_id" value="{$studentid}" readOnly="true">
+                    </div>
+                </div> -->
+                <div class="control-group">
+                    <label class="control-label">班级:</label>
+                    <div class="controls">
+                        <select class="input" name="classid">
+                        <OPTION value="0">请选择班级</OPTION> 
+                           <foreach name="class" item="vo">
+                              <option value="{$vo.id}" >{$vo.classname}</option>
+                           </foreach>    
+                        </select>
+                    </div>
+                </div> 
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" name="student_id" value="{$studentid}" />
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit ">添加</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

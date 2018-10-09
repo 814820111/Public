@@ -1,0 +1,222 @@
+<teachertpl file="header"/>
+<html>
+<head>
+<style>
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息1</title>
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/default.css">
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 30%; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+.touchlei{ background-color:#eeeeee;}
+</style>
+<script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+</script>
+<script src="__ROOT__/statics/js/ajaxForm.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/artDialog.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/jquery.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/wind.js" type="text/javascript"></script>
+
+<script src="__ROOT__/statics/js/bootstrap_message.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/iframeTools.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/index.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="">
+    <ul id="myTab" class=" nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+   		<li><a href="{:U('index')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">信息群发</a></li>
+      <li class="active"><a href="{:U('lists')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">已发信息</a></li>
+   	</ul>
+   	<div id="myTabContent" class="tab-content" style=" padding-left:30px; padding-right:30px;">
+		<div class="tab-pane fade in active" id="home">
+        	<br/>
+			<form class="form-horizontal J_ajaxForm" action="{:u('MessageInfo/lists')}" method="post">
+          <div class="search_type cc mb10">
+              <div class="mb10">
+                  <span class="mr20">发送类型： 
+                      <select class="select_2" name="school">
+                        <option value='0'>--请选择--</option>
+                        <option value='1'>全部发送</option>
+                        <option value='2'>各自发送</option>
+                      </select> &nbsp;&nbsp;
+                      时间：
+                      <input type="text" class="sang_Calender" name="begintime" placeholder="-选择时间-" style="width: 200px; height: 30px">  -  <input type="text" class="sang_Calender" name="endtime" placeholder="-选择时间-" style="width: 200px; height: 30px"> &nbsp; &nbsp;
+                      关键字： 
+                      <input type="text" class="select_2" name="search" placeholder="-请输入内容-" style="width: 200px; height: 30px">
+                      <input type="submit" class="btn btn-primary" value="搜索" />
+                  </span>
+              </div>
+          </div>
+			</form>
+      <form class="J_ajaxForm" action="" method="post">
+            <div class="table-responsive">
+                      <table class="table table-hover table-bordered table-list">
+                        <thead>
+                          <tr style="background-color:#CCC;">
+                            <th><input type="checkbox"> 全选</th>
+                            <th>信息内容</th>
+                            <!-- <th>列表</th> -->
+                            <th>发送对象</th>
+                            <th>图片</th>
+                            <!-- <th>发送类型</th>
+                            <th>状态</th> -->
+                            <th>发送时间</th>
+                            <th>操作</th>
+                          </tr>
+                        </thead>
+                        <foreach name="list" item="vo">
+                        <tr>
+                           <td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}"    title="ID:{$vo.id}"></td>
+                           <td>{$vo.message_content}</td>
+                           <td><a href="{:U('receive',array('id'=>$vo['id']))}" >{$vo.count}个人</a></td>
+                           <td>
+                              <ul>
+                                <foreach name="vo['picture_url']" item="dl">
+                                  <li>                                                                            
+                                    <php>$smeta=$dl['picture_url'];</php>
+                                    <if condition="!empty($smeta)">
+                                        <a href="{:sp_get_asset_upload_path($smeta)}" target='_blank'>查看</a>
+                                    </if>
+                                  </li>
+                                </foreach>
+                              </ul>
+                           </td>
+                           <td>{$vo.create_time|date="Y-m-d H:i:s",###}</td>
+                           <td>
+                             <a href="{:U('delete',array('id'=>$vo['id']))}"  class="J_ajax_del">删除</a>
+                             
+                           </td>
+                        </tr>
+                        </foreach>
+                    </table>
+                    <div class="pagination">{$Page}</div>
+                  </div>
+                </form>
+        </div>
+	<div class="tab-pane fade" id="ios">
+	</div>
+    
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+        function refersh_window() {
+            var refersh_time = getCookie('refersh_time');
+            if (refersh_time == 1) {
+                window.location = "/Teacher/ClassTime/index";
+            }
+        }
+        setInterval(function() {
+            refersh_window();
+        }, 2000);
+        $(function() {
+            setCookie("refersh_time", 0);
+            Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+                //批量移动
+                $('.J_articles_move').click(
+                        function(e) {
+                            var str = 0;
+                            var id = tag = '';
+                            $("input[name='ids[]']").each(function() {
+                                if ($(this).attr('checked')) {
+                                    str = 1;
+                                    id += tag + $(this).val();
+                                    tag = ',';
+                                }
+                            });
+                            if (str == 0) {
+                                art.dialog.through({
+                                    id : 'error',
+                                    icon : 'error',
+                                    content : '您没有勾选信息，无法进行操作！',
+                                    cancelVal : '关闭',
+                                    cancel : true
+                                });
+                                return false;
+                            }
+                            var $this = $(this);
+                            art.dialog.open(
+                                    "/index.php?g=portal&m=AdminPost&a=move&ids="
+                                            + id, {
+                                        title : "批量移动",
+                                        width : "80%"
+                                    });
+                        });
+            });
+        });
+    </script>
+<script>
+$('#myTab a:first').tab('show');
+</script>
+<script>
+		$("#file-3").fileinput({
+			showUpload: false,
+			showCaption: false,
+			browseClass: "btn btn-default",
+			fileType: "any",
+	        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+		});
+	    $(document).ready(function() {
+	        $("#test-upload").fileinput({
+	            'showPreview' : false,
+	            'allowedFileExtensions' : ['jpg', 'png','gif'],
+	            'elErrorContainer': '#errorBlock'
+	        });
+
+	    });
+		</script>
+    <script>
+   $(function () {
+      $('#myTab li:eq(0) a').tab('show');
+   });
+</script>
+<script>
+            $("#file-3").fileinput({
+                  showUpload: false,
+                  showCaption: false,
+                  browseClass: "btn btn-default",
+                  fileType: "any",
+              previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+            });
+          $(document).ready(function() {
+              $("#test-upload").fileinput({
+                  'showPreview' : false,
+                  'allowedFileExtensions' : ['jpg', 'png','gif'],
+                  'elErrorContainer': '#errorBlock'
+              });
+
+          });
+            </script>
+                        <script>
+            $(".touch").mouseenter(
+					function(){
+						$(".touch").addClass("touchlei")
+						}
+			)
+			 $(".touch").mouseleave(
+					function(){
+						$(".touch").removeClass("touchlei")
+						}
+			)
+            </script>
+</body>
+</html>

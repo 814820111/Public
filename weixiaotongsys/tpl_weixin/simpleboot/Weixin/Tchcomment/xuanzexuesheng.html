@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/css/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/addressList1.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+
+</head>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <div class="top_box" style="z-index: 99;">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 选择学生
+        <div class="clearfix"></div>
+    </div>
+    <div class="container" style=" overflow:hidden;margin-top: 32px;">
+
+        <div class="fenge"></div>
+
+        <div class="jiang">
+            <!--<div class="peng">
+					<div class="left">
+						<img style="height: 35px;width: 35px;border-radius: 10px;" src="__TMPL__Public/images/img60.png">
+					</div>
+					<div class="right">
+						<div class="wangxiaoniu">
+							<span>刘开畅 </span>
+							<img class="jiantou" src="__TMPL__Public/images/jiantou.png" alt="">
+							<div class="clearfix"></div>
+						</div>
+						<hr>
+						<div class="wangxiaoniu baba">
+							<span>刘开畅爸爸  
+                </span>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<hr>
+				</div>-->
+
+        </div>
+    </div>
+    <script>
+        $("document").ready(function() {
+            var teacherid = $("#userid").val();
+            var schoolid = $("#schoolid").val();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=getteacherclasslistandstudentlist',
+                async: true,
+                data: {
+                    teacherid: teacherid,
+                    schoolid: schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        var classname = res[i].classname;
+                        //学生所在的班级
+
+                        var xiala = "ui" + i;
+                        html += '<div class="peng">'
+                        html += '<div class="left">'
+                        html += '<img style="height: 30px;width: 30px;margin-left:20px;margin-top: 5%;" src="__TMPL__Public/images/img60.png">'
+                        html += '</div>'
+                        html += '<div  class="right">'
+
+                        html += '<div class="wangxiaonius">'
+                        html += '<input type="hidden" class="dianji"value="' + xiala + '" />'
+                        html += '<span style="position: relative;top:10px;font-size:15px;">' + classname + ' </span>'
+                        html += ' <img style="margin-top: 5px;" class="jiantou" src="__TMPL__Public/images/jiantou-right.png" alt="">'
+                        html += '<div class="clearfix"></div>'
+                        html += ' </div> '
+                        html += '<hr>'
+
+                        html += '<div class="aaa" style="display:none">'
+                        for (var k = 0; k < res[i].studentlist.length; k++) {
+                            var name = res[i].studentlist[k].name //班级成员的名字
+                            var id = res[i].studentlist[k].id;
+                            html += "<a style= 'text-decoration: none;color: inherit' href='{:U('Tiaoshu')}?name=" + name + "&id=" + id + "'>";
+                            html += '<div class="wangxiaoniu ' + xiala + '">'
+                            html += '<span>' + name + '</span>'
+                            html += '<div class="clearfix"></div>'
+                            html += '<hr>'
+                            html += '</div> '
+                            html += '</a>'
+                        }
+                        html += '</div>'
+                        html += '</div>'
+                        html += '<div class="clearfix"></div>'
+
+                        html += ' </div>'
+                    }
+                    $(".jiang").append(html);
+//                    $(".wangxiaoniu").hide();
+                    $(".wangxiaonius").click(function() {
+                        var yngchang = $(".dianji").val();
+                        var transportid = $('.jiantou', this).attr("src");
+                        var test = document.getElementsByClassName(yngchang);
+
+                        if (transportid == "__TMPL__Public/images/jiantou-right.png") {
+                            $(".jiantou", this).attr("src", "__TMPL__Public/images/jiantou2.png")
+//                            $(test).show();
+                            $(this).next().next().css('display','block');
+                        } else {
+                            $(".jiantou", this).attr("src", "__TMPL__Public/images/jiantou-right.png")
+//                            $(test).hide();
+                            $(this).next().next().css('display','none');
+                        }
+
+                    })
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+
+            $(".dian").eq(0).click(
+                function() {
+                    $(".lun").animate({
+                        marginLeft: 0
+                    })
+                    $(this).addClass("lei").siblings().removeClass("lei")
+                }
+            )
+            $(".dian").eq(1).click(
+                function() {
+                    $(".lun").animate({
+                        marginLeft: -g
+                    })
+                    $(this).addClass("lei").siblings().removeClass("lei")
+                }
+            )
+
+            y = $(".container").width()
+            $(".huitiao2").width(y)
+            $(".footer").width(y)
+            b = $(".tubiao li").width()
+            $(".tubiao li img").width(b * 1.5)
+            $(".tubiao li img").height(b * 1.5)
+            $(".tubiao2 li img").width(b * 1.5)
+            $(".tubiao2 li img").height(b * 1.5)
+            c = $(".dian").width()
+            $(".dian").height(c)
+            d = $(".tixing img").width()
+            $(".tixing img").height(d)
+            e = $(".top .you").width()
+            $(".top .you").height(e)
+            f = $(".biaoti li img").width()
+            $(".biaoti li img").height(f)
+            g = $(".container").width()
+            $(".lun").width(g * 2)
+            k = $(".one ul li img").width()
+            $(".one ul li img").height(k)
+        });
+
+        $(".fanhui").click(function() {
+            window.history.back();
+        })
+    </script>
+</body>
+
+</html>

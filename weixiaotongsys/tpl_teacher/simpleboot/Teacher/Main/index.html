@@ -1,0 +1,355 @@
+<teachertpl file="header"/>
+<body>
+		<div>
+        <div class="right" style=" margin-left:0; width:100%; margin-bottom:50px;">
+			<div class="content">
+				<div class="content_left">
+					<div class="left_up">
+						<ul>
+							<li ><a href="{:U('Exam/index',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615589.png"/>发送成绩</a></li>
+							<li style=" cursor:context-menu"><a href="{:U('MessageInfo/index',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615721.png"/>发送信息</a></li>
+							<li style=" cursor:context-menu"><a href="{:u('Entrust/index',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615804.png"/>家长叮嘱</a></li>
+							<li style=" cursor:context-menu"><a href="" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615805.png"/>同事留言</a></li>
+							<li style=" cursor:context-menu"><a href="" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467616014.png"/>给同事信息</a></li>
+							<li style=" cursor:context-menu"><a href="{:U('AttendanceSelect/lists',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467616115.png"/>当日考勤</a></li>
+							<li style=" cursor:context-menu"><a href="{:U('ClassActivities/add',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615589.png"/>班级活动</a></li>
+							<li style=" cursor:context-menu"><a href="{:U('ClassAlbum/add',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615721.png"/>班级相册</a></li>
+							<li style=" cursor:context-menu"><a href="{:u('StudentInfo/index',array('button_level'=>1))}" style="text-decoration: none;color: inherit;"><img src="__ROOT__/statics/images/raw_1467615805.png"/>管理学生档案</a></li>
+						</ul>
+					</div>
+					<div class="left_down">
+						<ul>
+							<li class="one" style="cursor:context-menu">
+								<div>
+									<h3>系统信息</h3>
+									<a href="{:u('SystermMessage')}">more&gt;&gt;</a>
+									<ul style=" margin-left:0px;" >
+										<if condition="$Xitong neq null">
+											<if condition="count($Xitong) eq 1">
+													<foreach name="Xitong" item="vo">
+														<li style="width: 94.5%;cursor:context-menu">
+															<h4>{$vo.post_title}sssss</h4>
+															<p class="date">{$vo.post_date}</p>
+															<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="{$vo.post_excerpt}">{$vo.post_excerpt}</p>
+														</li>
+											<li style="width: 94.5%;cursor:context-menu">
+												<h4>暂无公告</h4>
+												<p class="date">06-22 12:30</p>
+												<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无公告">暂无公告</p>
+											</li>
+													</foreach>
+												<else/>
+													<foreach name="Xitong" item="vo">
+														<li style="width: 94.5%;cursor:context-menu">
+															<h4>{$vo.post_title}sssss</h4>
+															<p class="date">{$vo.post_date}</p>
+															<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="{$vo.post_excerpt}">{$vo.post_excerpt}</p>
+														</li>
+													</foreach>
+												</if>
+											<else/>
+											<li style="width: 94.5%;cursor:context-menu">
+												<h4>暂无公告</h4>
+												<p class="date">06-22 12:30</p>
+												<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无公告">暂无公告</p>
+											</li>
+											<li style="width: 94.5%;cursor:context-menu">
+												<h4>暂无公告</h4>
+												<p class="date">06-22 12:30</p>
+												<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无公告">暂无公告</p>
+											</li>
+										</if>
+									</ul>
+								</div>
+							</li>
+							<li class="one" style="cursor:context-menu">
+								<div>
+									<h3>校园公告</h3>
+									<a href="{:u('SchoolNotice/index')}">more&gt;&gt;</a>
+									<ul style=" margin-left:0px;">
+									<if condition="$notice neq null">
+										<if condition="count($notice) eq 1">
+									  <foreach name="notice" item="vo">
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>{$vo.title}</h4>
+											<p class="date">{$vo.create_time|date="Y-m-d H:i:s",###}</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="{$vo.content}">{$vo.content}</p>
+										</li>
+										  <li style="width: 94.5%;cursor:context-menu">
+											  <h4>暂无内容</h4>
+											  <p class="date">06-22 12:30</p>
+											  <p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										  </li>
+									</foreach>
+											<else/>
+											<foreach name="notice" item="vo">
+												<li style="width: 94.5%;cursor:context-menu">
+													<h4>{$vo.title}</h4>
+													<p class="date">{$vo.create_time|date="Y-m-d H:i:s",###}</p>
+													<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="{$vo.content}">{$vo.content}</p>
+												</li>
+											</foreach>
+										</if>
+									<else/>
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>暂无内容</h4>
+											<p class="date">06-22 12:30</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										</li>
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>暂无内容</h4>
+											<p class="date">06-22 12:30</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										</li>
+									</if>
+									
+									</ul>
+								</div>
+							</li>
+							<li class="one" style="cursor:context-menu">
+								<div>
+									<h3>家长叮嘱</h3>
+									<a href="{:u('Entrust/index')}">more&gt;&gt;</a>
+									<ul style=" margin-left:0px;">
+									<if condition="$entrust neq null">
+									  <foreach name="entrust" item="vo" >
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>{$vo.name}：</h4>
+											<p class="date">{$vo.create_time|date="Y-m-d H:i:s",###}</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="{$vo.content}">{$vo.content}</p>
+										</li>
+									 </foreach>
+									 <else/>
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>暂无内容</h4>
+											<p class="date">06-22 12:30</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										</li>
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>暂无内容</h4>
+											<p class="date">06-22 12:30</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										</li>									 
+
+									</if> 
+								  </ul>
+								</div>
+							</li>
+							<li class="one" style="cursor:context-menu">
+								<div>
+									<h3>待办事宜</h3>
+									<a href="{:u('ToduSchedule/index_todo')}">more&gt;&gt;</a>
+									<ul style=" margin-left:0px;">
+									 <if condition="$schedule neq null">
+									   <foreach name = "schedule" item="vo">
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>{$vo.title}</h4>
+											<p class="date">{$vo.create_time|date="Y-m-d H:i:s",###}</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="{$vo.content}">{$vo.content}</p>
+										</li>
+										</foreach>
+									   <else/>
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>暂无内容</h4>
+											<p class="date">06-22 12:30</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										</li>
+										<li style="width: 94.5%;cursor:context-menu">
+											<h4>暂无内容</h4>
+											<p class="date">06-22 12:30</p>
+											<p style=" width: 100%; white-space: nowrap; overflow: hidden;text-overflow: ellipsis" title="暂无内容">暂无内容</p>
+										</li>									   
+									   	
+									  </if>	
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content_right">
+					<div class="img">
+						<img src="__ROOT__/statics/images/img.jpg"/>
+					</div>
+					<div class="summary2">
+						<h3 style=" font-size:14px;">家校互联月统计</h3>
+						<ul style=" margin-left:0px;">
+							<li style=" cursor:context-menu">{$name}老师，您共发送了<span>{$message_sum}</span>条信息</li>
+							<li style=" cursor:context-menu">今日已发信息（<span>{$today_info}</span>）</li>
+							<li style=" cursor:context-menu">本周已发信息（<span>{$week_info}</span>）</li>
+							<li style=" cursor:context-menu">月度已发信息（<span>{$month_info}</span>）</li>
+							<li style=" cursor:context-menu">班级相册（<span>{$microblog_info}</span>）</li>
+							<li style=" cursor:context-menu">班级活动（<span>{$activity_info}</span>）</li>
+							<li style=" cursor:context-menu">班级课件（<span>{$courseware_info}</span>）</li>
+							<li style=" cursor:context-menu">信息群发（<span>{$message_sum}</span>）</li>
+							<li style=" cursor:context-menu">动态（<span>{$Dynamic_info}</span>）</li>
+							<li style=" cursor:context-menu;display: none">第13名 继续努力哦</li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+        <div class="clearfix"></div>
+        </div>
+<script type="text/javascript" src="js/datetime.js"></script>
+<script src="js/fileinput.js" type="text/javascript"></script>
+<script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/jquery.js"></script>
+	<script src="__ROOT__/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+	//全局变量
+var GV = {
+	HOST:"{$_SERVER['HTTP_HOST']}",
+    DIMAUB: "__ROOT__/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+	var ismenumin = $("#sidebar").hasClass("menu-min");
+	$(".nav-list").on( "click",function(event) {
+		var closest_a = $(event.target).closest("a");
+		if (!closest_a || closest_a.length == 0) {
+			return
+		}
+		if (!closest_a.hasClass("dropdown-toggle")) {
+			if (ismenumin && "click" == "tap" && closest_a.get(0).parentNode.parentNode == this) {
+				var closest_a_menu_text = closest_a.find(".menu-text").get(0);
+				if (event.target != closest_a_menu_text && !$.contains(closest_a_menu_text, event.target)) {
+					return false
+				}
+			}
+			return
+		}
+		var closest_a_next = closest_a.next().get(0);
+		if (!$(closest_a_next).is(":visible")) {
+			var closest_ul = $(closest_a_next.parentNode).closest("ul");
+			if (ismenumin && closest_ul.hasClass("nav-list")) {
+				return
+			}
+			closest_ul.find("> .open > .submenu").each(function() {
+						if (this != closest_a_next && !$(this.parentNode).hasClass("active")) {
+							$(this).slideUp(150).parent().removeClass("open")
+						}
+			});
+		}
+		if (ismenumin && $(closest_a_next.parentNode.parentNode).hasClass("nav-list")) {
+			return false;
+		}
+		$(closest_a_next).slideToggle(150).parent().toggleClass("open");
+		return false;
+	});
+	</script>
+	<script src="__TMPL__assets/js/index.js"></script>
+	<script src="__ROOT__/statics/js/jquery_web.js"></script>
+
+<script>
+/*左侧栏下拉菜单*/
+
+$(".click .one li").hide();
+$(".click .first .one_click").click(
+	function(){
+		$(".click .one li").slideToggle()
+		$(".point1").toggleClass("lei")
+		$(".first  .one_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .tow li").hide();
+$(".click .first .tow_click").click(
+	function(){
+		$(".click .tow li").slideToggle()
+		$(".point2").toggleClass("lei")
+		$(".first  .tow_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .three li").hide();
+$(".click .first .three_click").click(
+	function(){
+		$(".click .three li").slideToggle()
+		$(".point3").toggleClass("lei")
+		$(".first  .three_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .four li").hide();
+$(".click .first .four_click").click(
+	function(){
+		$(".click .four li").slideToggle()
+		$(".point4").toggleClass("lei")
+		$(".first  .four_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .five li").hide();
+$(".click .first .five_click").click(
+	function(){
+		$(".click .five li").slideToggle()
+		$(".point5").toggleClass("lei")
+		$(".first  .five_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .six li").hide();
+$(".click .first .six_click").click(
+	function(){
+		$(".click .six li").slideToggle()
+		$(".point6").toggleClass("lei")
+		$(".first  .six_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .seven li").hide();
+$(".click .first .seven_click").click(
+	function(){
+		$(".click .seven li").slideToggle()
+		$(".point7").toggleClass("lei")
+		$(".first  .seven_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .eight li").hide();
+$(".click .first .eight_click").click(
+	function(){
+		$(".click .eight li").slideToggle()
+		$(".point8").toggleClass("lei")
+		$(".first  .eight_click a").toggleClass("lei2")
+		}
+)
+
+$(".click .nine li").hide();
+$(".click .first .nine_click").click(
+	function(){
+		$(".click .nine li").slideToggle()
+		$(".point9").toggleClass("lei")
+				$(".first  .nine_click a").toggleClass("lei2")
+}
+)
+
+
+</script>
+
+<script>
+   $(function () {
+      // $('#myTab li:eq(0) a').tab('show');
+   });
+</script>
+<script>
+          //   $("#file-3").fileinput({
+          //         showUpload: false,
+          //         showCaption: false,
+          //         browseClass: "btn btn-default",
+          //         fileType: "any",
+          //     previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+          //   });
+          // $(document).ready(function() {
+          //     $("#test-upload").fileinput({
+          //         'showPreview' : false,
+          //         'allowedFileExtensions' : ['jpg', 'png','gif'],
+          //         'elErrorContainer': '#errorBlock'
+          //     });
+
+          // });
+            </script>
+</body>
+</html>

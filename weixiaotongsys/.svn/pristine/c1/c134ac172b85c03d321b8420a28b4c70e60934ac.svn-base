@@ -1,0 +1,45 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('teachermanage')}">教师列表</a></li>
+        <li><a href="{:U('addteacher')}">新增教师</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">教师ID</th>
+            <th>学校</th>
+            <th>姓名</th>
+            <th>手机号</th>
+            <th>头像</th>
+            <th>创建时间</th>
+            <th>激活状态</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>$teacher_status=array("0"=>"待激活","1"=>"已激活","2"=>"已拉黑");</php>
+        <foreach name="teacher" item="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.schoolname}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.phone}</td>
+                <td><img width="30" height="30" src="__ROOT__uploads/avatar/{$vo.photo}" /></td>
+                <td>{$vo.time|date='Y-m-d',###}</td>
+                <td>{$teacher_status[$vo['status']]}</td>
+                <td>
+                    <a href='{:U("passwordReset",array("id"=>$vo["id"]))}'>密码重置</a> |
+                    <a href="{:U('delete_teacher',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要删除此用户吗？">删除</a> |
+                    <br /> <a href='{:U("bindingclass",array("id"=>$vo["id"]))}'>绑定班级</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

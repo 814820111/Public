@@ -1,0 +1,385 @@
+<teachertpl file="header"/>
+<html>
+<head>
+<style>
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息1</title>
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet" />
+<script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+    <script src="__ROOT__/statics/js/jquery.js"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <script src="__ROOT__/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 30%; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+.touchlei{ background-color:#eeeeee;}
+tr .pai,tr .pai2{ text-align:center;}
+tr .pai{ background-color:#e2e2e2;}
+tr .pai2{ background-color:#f5f5f5;}
+.clearfix{ clear:both;}
+.name{ margin-right:10px;}
+</style>
+
+</head>
+<body>
+<div class="">
+    <ul id="myTab" class=" nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+   		<li class="active"><a href="{:U('index')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">教师管理</a></li>
+      <li><a href="{:U('add')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">新增教师</a></li>
+   	</ul>
+            <!--带班主任弹窗start-->
+      <div style=" background-color:rgba(0,0,0,0.7); width:100%; height:100%; position:absolute;" class="daitan">
+            <div style=" width:1000px; background-color:white; margin-left:auto; margin-right:auto; margin-top:5%; padding:20px; position:relative;">
+                  <div style=" color:#61c881; font-weight:bold;">设置带班老师</div>
+                    <div style=" margin-top:15px; margin-bottom:15px;">
+                      <div style=" float:left; "><span style=" font-weight:bold;">年级：</span>大班</div>
+                        <div style=" float:left; margin-left:100px; "><span style=" font-weight:bold;">班级：</span>大一班</div>
+                        <div class="clearfix"></div>
+                    </div>
+                      <div><span style=" font-weight:bold;">带班主任：</span>
+                        <span class="dbzr"></span> 
+                    </div>
+                    <div style=" text-align:center;  background-color:#ebebeb; padding:8px;  cursor:pointer; margin-top:10px; margin-bottom:10px; position:relative; height: 40px;" class="xiala">
+                    <img src="__ROOT__/statics/images/xxia.png" class="xxia" style=" position:absolute;left:410px; top:11px;">
+                    <img src="__ROOT__/statics/images/xshang.png" class="xshang" style=" position:absolute; left:410px; top:12px;">
+                    <span class="bianzi" style=" position:absolute; left:435px; top:10px; display: none; ">展开成员列表</span>
+                    <span class="bianzi" style=" position:absolute; left:435px; top:10px; ">收起成员列表</span>
+                    </div>
+                    <form class="shou01" action="#" method="post">
+                    <input type="hidden" class="chuanzhi" id="main_id" name="main_id" >
+                    <foreach name="teachers" item="to">
+                          <span class="name">{$to.name}</span>
+                        </foreach>
+                      <div>
+                          <span style=" font-weight:bold;">教师姓名：</span>
+                            <input type="text" placeholder="-请输入内容-" style=" height:30px; margin-top:10px; border:1px solid #bbbbbb;">
+                            <input type="submit" value="查询" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:3px 15px 3px 15px; margin-left:10px;">
+                        </div>
+                        <div style=" border:1px solid #bbbbbb; height:200px; overflow-y:scroll; padding:10px;">
+                          <foreach name="teachers" item="to">
+                          <div style=" float:left; margin-right:20px; margin-bottom:5px;" class="xuanbox">
+                            <input type="checkbox" value="{$to.id}" name="teachers[]" class="xuan2" style=" margin-right:5px; margin-top:0px;">{$to.name}
+                          </div>
+                          </foreach>
+                          <div class="clearfix"></div>
+                        </div>
+                        <div style=" width:60px; margin-left:auto; margin-right:auto; margin-top:20px;">
+                          <input type="submit" value="保存" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;" onclick='sub_qrcj()'>
+                            
+                        </div>
+                    </form>
+                    <!--关闭start-->
+                    <img src="__ROOT__/statics/images/cha.png" style=" position:absolute; top:20px; right:20px; width:15px; height:15px; cursor:pointer;" class="guan">
+                    <!--关闭end-->
+                </div>
+        </div>
+    <!--带班主任弹窗end-->
+    <!--班主任弹窗start-->
+    	<div style=" background-color:rgba(0,0,0,0.7); width:100%; height:100%; position:absolute;" class="bantan">
+        		<div style=" width:1000px; background-color:white; margin-left:auto; margin-right:auto; margin-top:5%; padding:20px; position:relative;">
+                	<div style=" color:#61c881; font-weight:bold;">设置班主任</div>
+                    <div style=" margin-top:15px; margin-bottom:15px;">
+                    	<div style=" float:left; "><span style=" font-weight:bold;">年级：</span>大班</div>
+                        <div style=" float:left; margin-left:100px; "><span style=" font-weight:bold;">班级：</span>大一班</div>
+                        <div class="clearfix"></div>
+                    </div>
+                	<div><span style=" font-weight:bold;">班主任：</span><span class="bzr"></span></div>
+                    <div style=" text-align:center;  background-color:#ebebeb; padding:8px;  cursor:pointer; margin-top:10px; margin-bottom:10px; position:relative; height: 40px;" class="xiala">
+                    <img src="__ROOT__/statics/images/xxia.png" class="xxia" style=" position:absolute;left:410px; top:11px;">
+                    <img src="__ROOT__/statics/images/xshang.png" class="xshang" style=" position:absolute; left:410px; top:12px;">
+                    <span class="bianzi" style=" position:absolute; left:435px; top:10px; display: none; ">展开成员列表</span>
+                    <span class="bianzi" style=" position:absolute; left:435px; top:10px; ">收起成员列表</span>
+                    </div>
+                    <form class="shou01" action="{:u('teachers')}" method="post">
+                    	<div>
+                        	<span style=" font-weight:bold;">教师姓名：</span>
+                            <input type="text" placeholder="-请输入内容-" style=" height:30px; margin-top:10px; border:1px solid #bbbbbb;">
+                            <input type="submit" value="查询" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:3px 15px 3px 15px; margin-left:10px;">
+                        </div>
+                        <!--弹出框中的老师列表start-->
+                        <div style=" border:1px solid #bbbbbb; height:200px; overflow-y:scroll; padding:10px;">
+                          <foreach name="teachers" item="to">
+                          <div style=" float:left; margin-right:20px; margin-bottom:5px;" class="xuanbox">
+                            <input type="radio" value="{$to.id}" name="dan" class="xuan" style=" margin-right:5px; margin-top:0px;">{$to.name}
+                          </div>
+                          </foreach>
+                          <div class="clearfix"></div>
+                        </div>
+                        <!--弹出框中的老师列表end-->
+                        <div style=" width:60px; margin-left:auto; margin-right:auto; margin-top:20px;">
+                        	<input type="submit" value="保存" style=" border:none; background-color:#26a69a; color:white; border-radius:3px; padding:5px 15px 5px 15px;" onclick='sub_qrcj()'>
+                           
+                        </div>
+                    </form>
+                    <!--关闭start-->
+                    <img src="__ROOT__/statics/images/cha.png" style=" position:absolute; top:20px; right:20px; width:15px; height:15px; cursor:pointer;" class="guan">
+                    <!--关闭end-->
+                </div>
+        </div>
+    <!--班主任弹窗end-->
+   	<div id="myTabContent" class="tab-content" style=" padding-left:30px; padding-right:30px;">
+		<div class="tab-pane fade in active" id="home">
+        	<br/>
+			<form class="form-horizontal J_ajaxForm" action="{:u('index')}" method="post">
+          <div class="search_type cc mb10">
+              <div class="mb10">
+                  <span class="mr20">
+                      班级: 
+                      <select class="select_2" name="search_grade">
+                        <option value='0'>--请选择--</option>
+                        <foreach name="grade" item="vo">
+                           <OPTION value="{$vo.id}">{$vo.grade}</OPTION> 
+                        </foreach>
+                      </select> &nbsp;&nbsp;
+                      卡号: 
+                      <input type="text" class="select_2" name="search_class" placeholder="-请输入卡号-" style="width: 200px; height: 30px"> &nbsp;&nbsp;
+                      手机号: 
+                      <input type="text" class="select_2" name="search_class" placeholder="-请输入班级名称-" style="width: 200px; height: 30px">
+                      <input type="submit" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;" value="搜索" />
+                  </span>
+              </div>
+          </div>
+			</form>
+      <form class="J_ajaxForm" action="" method="post">
+            <div class="table-responsive">
+                      <table class="table table-hover table-bordered table-list">
+                        <thead>
+                          <tr style="background-color:#CCC;">
+                            <th class="pai">教师账号</th>
+                            <th class="pai">教师姓名</th>
+                            <th class="pai">IC卡号</th>
+                            <th class="pai">带班/带课</th>
+                            <th class="pai">联系电话</th>
+                            <th class="pai">角色</th>
+                            <th class="pai">教师组</th>
+                            <th class="pai">微信绑定</th>
+                            <th class="pai">在职状态</th>
+                            <th class="pai">操作</th>
+                          </tr>
+                        </thead>
+                        <foreach name="teacher_info" item="vo">
+                        <php>
+                          $type=array("1"=>"班主任","2"=>"带班老师");
+                          $status=array("1"=>"是","0"=>"否");
+                          $sign=empty($vo['teacher_subject'])?'':$vo['teacher_subject'];
+                          $tea=empty($vo['teacher_name'])?'-未设置-':$vo['teacher_name'];
+                        </php>
+                        <tr>
+                           <td class="pai2 cid">{$vo.id}</td>
+                           <td class="pai2">{$vo.name}</td>
+                           <td class="pai2">{$vo.card}</td>
+                           <td class="pai2 banzhuren" style=" color:#00c1dd; cursor:pointer;">
+                              <if condition="$sign eq ''">
+                                   设置
+                              <else /> 
+                                 <foreach name="vo['teacher_subject']" item="to">
+                                    {$to.classname}:{$to.subject}&nbsp;&nbsp;
+                                 </foreach>
+                              </if>
+                           </td>
+                           <td class="pai2">{$vo.phone}</td>
+                           <td class="pai2">
+                              <foreach name="vo['teacher_set']" item="so">
+                                 {$type[$so['type']]}&nbsp;&nbsp;
+                              </foreach>
+                           </td>
+                           <td class="pai2">
+                              <foreach name="vo['teacher_department']" item="so">
+                                 {$so.name}&nbsp;&nbsp;
+                              </foreach>
+                           <td class="pai2 banzhuren" style=" color:#00c1dd; cursor:pointer;"></td>
+                           <td class="pai2 daibanzhuren" style=" color:#00c1dd; cursor:pointer;"></td>
+                           <td class="pai2">
+                             <a href="{:U('delete',array('id'=>$vo['id']))}"  class="J_ajax_del" style=" color:#00c1dd;">
+                             <if condition="$vo['stu_count'] neq 0">
+                             <elseif condition="$vo['stu_count'] eq 0"/> 
+                             删除
+                             </if>
+                             </a>
+                             <a href="{:U('edit',array('id'=>$vo['id']))}" style=" color:#00c1dd;">修改</a>
+                           </td>
+                        </tr>
+                        </foreach>
+                    </table>
+                    <div class="pagination">{$Page}</div>
+                  </div>
+                </form>
+        </div>
+        </div>
+	<div class="tab-pane fade" id="ios">
+	</div>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+<script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+</script>
+<script>
+$('#myTab a:first').tab('show');
+</script>
+<script>
+		$("#file-3").fileinput({
+			showUpload: false,
+			showCaption: false,
+			browseClass: "btn btn-default",
+			fileType: "any",
+	        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+		});
+	    $(document).ready(function() {
+	        $("#test-upload").fileinput({
+	            'showPreview' : false,
+	            'allowedFileExtensions' : ['jpg', 'png','gif'],
+	            'elErrorContainer': '#errorBlock'
+	        });
+
+	    });
+		</script>
+    <script>
+   $(function () {
+      $('#myTab li:eq(0) a').tab('show');
+   });
+</script>
+<script>
+            $("#file-3").fileinput({
+                  showUpload: false,
+                  showCaption: false,
+                  browseClass: "btn btn-default",
+                  fileType: "any",
+              previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+            });
+          $(document).ready(function() {
+              $("#test-upload").fileinput({
+                  'showPreview' : false,
+                  'allowedFileExtensions' : ['jpg', 'png','gif'],
+                  'elErrorContainer': '#errorBlock'
+              });
+
+          });
+            </script>
+                        <script>
+            $(".touch").mouseenter(
+					function(){
+						$(".touch").addClass("touchlei")
+						}
+			)
+			 $(".touch").mouseleave(
+					function(){
+						$(".touch").removeClass("touchlei")
+						}
+			)
+            </script>
+ <script>
+ $(".bantan").hide()
+  $(".banzhuren").click(
+ 			function(){
+				$(".bantan").show()
+				}
+ )
+ $(".banzhuren").click(
+ 			function(){
+				w=$(this).text()
+				$(".bzr").text(w)
+				}
+ )
+$(".xuan").click(
+			function(){
+				k=$(this).parent().text()
+				$(".bzr").text(k)
+				}
+)
+ </script>
+ <script>
+ $(".guan").click(
+ 			function(){
+				$(".bantan").hide()
+				}
+ 
+ )
+ </script>
+ <script>
+ $(".xiala").click(
+ 			function(){
+				$(".shou01").slideToggle()
+        $(".xshang").toggle()
+        $(".bianzi").toggle()
+				}
+ 
+ )
+ </script>
+ <script>
+
+   $(".daibanzhuren").click(
+      function(){
+      w=$(this).parent().index()
+      $(".chuanzhi").val(w)
+      }
+    )
+
+    function sub_qrcj() {
+    var main_id =w;
+    var teachers = $("input[name='teachers']").val();
+    // var main_id = $("input[name='main_id']").val();
+    $.ajax({
+      type:"post",
+      async:false,
+      url:"{:U('Teacher/ClassManage/teachers')}",
+      data:{'teachers': teachers,'main_id':main_id},
+      success: function(msg){
+        history.go(0);
+      }
+    });
+  }
+  </script>
+  <script>
+  $(".daitan").hide()
+  $(".daibanzhuren").click(
+        function(ID){
+        $(".daitan").show()
+        l=$(this).text()
+        $(".dbzr").text(l)
+        }
+  )
+  </script>
+
+   <script>
+ $(".guan").click(
+      function(){
+        $(".daitan").hide()
+        }
+ 
+ )
+ </script>
+ <script>
+  
+  $(".name").hide()
+  $(".xuan2").click(
+        function(){
+          o=$(this).parent().index()
+          $(".name").eq(o).toggle()
+          $(".dbzr").hide()
+          }
+  )
+ </script>
+ <script type="text/javascript">
+   
+
+ </script>>
+</body>
+</html>

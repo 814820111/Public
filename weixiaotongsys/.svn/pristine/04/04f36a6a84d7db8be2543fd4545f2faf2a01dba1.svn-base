@@ -1,0 +1,148 @@
+*{
+	font-family: "微软雅黑 Light";
+	margin: 0;
+	padding: 0;
+}
+.clearfix{
+	clear: both;
+}
+.container{
+	padding: 3% 2.5% 15%;
+	background-color: rgb(239,240,242);
+}
+.monday,.tuesday,.wednesday{
+	padding:2.5% 3%;
+	background-color: white;
+	border-radius: 5px;
+	
+}
+.tuesday,.wednesday{
+	margin-top: 8px;
+}
+.weidu{
+	font-weight: bold;
+	font-size: 13.5px;
+	width: 50px;
+	text-align: center;
+	padding: 1px 0;
+	background-color: #ffb94a ;
+	color: white;
+	float: right;
+	border-radius: 5px;
+	position: absolute;
+	top: 58px;
+	right: 18px;
+}
+.yidu{
+	font-weight: bold;
+	font-size: 13.5px;
+	width: 50px;
+	text-align: center;
+	padding: 1px 0;
+	background-color: #06c18e;
+	color: white;
+	float: right;
+	border-radius: 5px;
+	position: absolute;
+	top: 219px;
+	right: 18px;
+}
+.weidu2{
+	font-weight: bold;
+	font-size: 13.5px;
+	width: 50px;
+	text-align: center;
+	padding: 1px 0;
+	background-color: #ffb94a ;
+	color: white;
+	float: right;
+	border-radius: 5px;
+
+}
+.one{
+	font-size: 14.5px;
+	font-weight: 600;
+	margin-top: 6px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.two{
+	margin-bottom: 13.5px;
+}
+.two span{
+	font-size: 13.5px;
+}
+.two .yuwen{
+	display: block;
+	margin-top: -1px;
+}
+
+.three{
+	margin-top: 6px;
+	margin-bottom: 1px;
+}
+.left{	
+	width: 45%;
+	float: left;
+}
+.left img{
+	display: block;
+	margin-top: 1px;
+	float: left;
+	width: 22px;
+
+}
+.right{
+	font-size: 13.5px;
+	float: right;
+}
+.three .left span{
+	display: block;
+	margin-left: 23px;
+	margin-top: 4px;
+	font-size: 13.5px;
+	color: rgb(151,153,150);
+	font-weight: 500;
+}
+.three .right{
+	font-size: 12.5px;
+	margin-top: 3px;
+}
+.three .right span{
+	color: rgb(151,153,150);
+}
+.pandect{
+	color: rgb(255,184,73);
+	font-size: 13.5px;
+}
+
+.divide{
+	border: none;
+	border-top: 1px dashed rgb(239,239,239);
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+.two .img{
+	text-align: center;
+}
+.img2{
+	margin-top: 6px;
+	width: 25%;
+	padding-left: 15px;
+	
+}
+.img3{
+	margin-top: 6px;
+	width: 65%;
+	padding-left: 15px;
+	
+}
+
+
+.wteacher .two .img2{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}

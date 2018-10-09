@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/addressList2.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script>
+        function a() {
+            var w, w2;
+            w = $(".rightp").height();
+            // alert(w);
+            $(".rightp span").css.line - height(w);
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui">家长进度
+        <div class="clearfix"></div>
+    </div>
+    <div class="container" style=" overflow:hidden;">
+
+        <!--<div class="one" style="position: fixed;top: 35px;background-color: white;height: 45px;width: 100%;">-->
+        <!--<div class="one" style="position: fixed;top: 35px;background-color: white;height: 45px;width: 100%;">-->
+            <!--<div class="classify">-->
+
+                <!--<div class="teacher">已完成</div>-->
+                <!--&lt;!&ndash;<a href="{:U('jiazHuang')}">&ndash;&gt;-->
+                    <!--<div class="parent">未完成</div>-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+            <!--<div class="fenge"></div>-->
+        <!--</div>-->
+        <!--<div class="jiang" style="margin-top: 85px;">-->
+        <div class="jiang" style="margin-top: 39px;">
+            <table style="width: 100%;height: 100%; text-align: center">
+                <thead>
+                    <tr style="width: 100%;height: 40px;background-color: #f2f2f2;color: #9f9f9f">
+                        <th style="text-align: center">学生姓名</th>
+                        <th style="text-align: center">家长姓名</th>
+                        <th style="text-align: center">联系方式</th>
+                        <th style="text-align: center">完成进度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <foreach name="parentlist" item="v">
+                    <tr style="height: 40px">
+                        <td>{$v.name}</td>
+                        <td>{$v.parent}</td>
+                        <td><a href="tel:{$v.phone}" style="text-decoration: none;color: #000;">{$v.phone}</a></td>
+                        <td>{$v.par_sum}</td>
+                    </tr>
+                </foreach>
+                </tbody>
+            </table>
+        </div>
+
+    <!--</div>-->
+    </div>
+
+    <script>
+        $(".fanhui").click(function() {
+            window.history.go(-1);
+        })
+    </script>
+</body>
+
+</html>

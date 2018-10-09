@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>家长首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/littleweb/css/bootstrap (2).css">
+    <link rel="stylesheet" href="__TMPL__public/littleweb/css/index.css">
+    <script src="__TMPL__public/littleweb/js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="container" style=" overflow:hidden;">
+        <div class="banner">
+            <img src="__TMPL__public/littleweb/img/img01.png" style=" width:100%;">
+            <div class="touxiang">
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img02.png" class="tu">
+                </a>
+                <div class="right touzi">
+                    <p>彭小二</p>
+                    <p>北京市第一幼儿园&nbsp;小一班</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="yaoqing"><a href="#" style=" text-decoration:none; color:inherit;">邀请家人</a></div>
+        </div>
+
+        <div class="one">
+            <ul style=" border-right:1px solid #e2e2e2;">
+                <li>
+                    <a href="#" style=" text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img03.png">
+                        <p>排行</p>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+            </ul>
+            <ul style=" border-right:1px solid #e2e2e2;">
+                <li>
+                    <a href="#" style=" text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img04.png">
+                        <p>积分</p>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#" style=" text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img05.png">
+                        <p>等级</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="huitiao"></div>
+        <div class="lun" id="animation-effect">
+            <ul class="tubiao" style="padding-top:15px;">
+                <li>
+                    <a href="Massage.html" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img06.png">
+                        <p>信息</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="tongzhigonggao.html" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img07.png">
+                        <p>通知公告</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="tongxun-laoshi.html" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img08.png">
+                        <p>通讯录</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img09.png">
+                        <p>在线请假</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="kaoqin.html" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img10.png">
+                        <p>考勤</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="jiazhangdingzhu.html" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img11.png">
+                        <p>家长叮嘱</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img12.png">
+                        <p>代接确认</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img13.png">
+                        <p>老师点评</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img14.png">
+                        <p>作业</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img15.png">
+                        <p>宝宝好友</p>
+                    </a>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+
+            <ul class="tubiao2" style="padding-top:15px;">
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img06.png">
+                        <p>信息</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img07.png">
+                        <p>通知公告</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img08.png">
+                        <p>通讯录</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img09.png">
+                        <p>在线请假</p>
+                        <a href="#" style=" color:inherit; text-decoration:none;">
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img10.png">
+                        <p>考勤</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img11.png">
+                        <p>家长叮嘱</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img12.png">
+                        <p>代接确认</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img13.png">
+                        <p>老师点评</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img14.png">
+                        <p>作业</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style=" color:inherit; text-decoration:none;">
+                        <img src="__TMPL__public/littleweb/img/img15.png">
+                        <p>宝宝好友</p>
+                    </a>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+            <div class=" clearfix"></div>
+        </div>
+        <!--dian_start-->
+        <div class="dian_box">
+            <div class="dian lei"></div>
+            <div class="dian"></div>
+            <div class="clearfix"></div>
+        </div>
+        <!--dian_end-->
+        <div class="huitiao3"></div>
+        <div class="tixing">
+            <img src="__TMPL__public/littleweb/img/img16.png">
+            <span>预防流感小贴士</span>
+        </div>
+        <div class="huitiao"></div>
+        <div class="top" style=" border-bottom:1px solid #e3e3e3;">
+            <div class="left">
+                <a href="#" style=" text-decoration:none;">
+                    <div class="zuo">
+                        <img src="__TMPL__public/littleweb/img/img17.png">
+                        <p>全面了解孩子动态</p>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img18.png" class="you">
+                    <div class="clearfix"></div>
+                </a>
+            </div>
+            <div class="right">
+                <a href="#" style=" text-decoration:none;">
+                    <div class="zuo">
+                        <img src="__TMPL__public/littleweb/img/img19.png">
+                        <p>时刻关注饮食健康</p>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img20.png" class="you">
+                    <div class="clearfix"></div>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="top">
+            <div class="left">
+                <a href="#" style=" text-decoration:none;">
+                    <div class="zuo">
+                        <img src="__TMPL__public/littleweb/img/img21.png">
+                        <p>关注孩子精彩表现</p>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img22.png" class="you">
+                    <div class="clearfix"></div>
+                </a>
+            </div>
+            <div class="right">
+                <a href="#" style=" text-decoration:none;">
+                    <div class="zuo">
+                        <img src="__TMPL__public/littleweb/img/img23.png">
+                        <p>丰富孩子的学习生活</p>
+                    </div>
+                    <img src="__TMPL__public/littleweb/img/img24.png" class="you">
+                    <div class="clearfix"></div>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="huitiao"></div>
+        <ul class="biaoti">
+            <li>
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img25.png">
+                    <span>班级活动</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img26.png">
+                    <span>班级课件</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img27.png">
+                    <span>班级课程</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img28.png">
+                    <span>视频监控</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img29.png">
+                    <span>防丢定位</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                    <a href="#">
+            </li>
+            <li style="border:none;">
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__TMPL__public/littleweb/img/img30.png">
+                    <span>车载轨迹</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+        </ul>
+        <div class="huitiao" style=" margin-bottom:50px;"></div>
+        <div class="huitiao2"></div>
+        <!--footer-start-->
+        <div class="footer" style=" margin-bottom:20px;">
+            <div class="f1">
+                <a href="#" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img38.png">
+                    </div>
+                    <span class="lei2">校园</span>
+                </a>
+            </div>
+            <div class="f2">
+                <a href="chengzhang.html" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img31.png">
+                    </div>
+                    <span>成长日记</span>
+                </a>
+            </div>
+            <div class="f3">
+                <a href="#" style=" text-decoration:none; color:black;">
+                    <div class="icon2">
+                        <div class="heng"></div>
+                        <div class="shu"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="f4">
+                <a href="dongtai.html" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img33.png">
+                    </div>
+                    <span>动态</span>
+                </a>
+            </div>
+            <div class="f5">
+                <a href="wode.html" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img35.png">
+                    </div>
+                    <span>我的</span>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--footer-end-->
+    </div>
+    <script>
+        $(".dian").eq(0).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: 0
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+        $(".dian").eq(1).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: -g
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+
+        y = $(".container").width()
+        $(".huitiao2").width(y)
+        $(".footer").width(y)
+        b = $(".tubiao li").width()
+        $(".tubiao li img").width(b * 1.5)
+        $(".tubiao li img").height(b * 1.5)
+        $(".tubiao2 li img").width(b * 1.5)
+        $(".tubiao2 li img").height(b * 1.5)
+        c = $(".dian").width()
+        $(".dian").height(c)
+        d = $(".tixing img").width()
+        $(".tixing img").height(d)
+        e = $(".top .you").width()
+        $(".top .you").height(e)
+        f = $(".biaoti li img").width()
+        $(".biaoti li img").height(f)
+        g = $(".container").width()
+        $(".lun").width(g * 2)
+        k = $(".one ul li img").width()
+        $(".one ul li img").height(k)
+        document.title = $("body").width()
+    </script>
+</body>
+
+</html>

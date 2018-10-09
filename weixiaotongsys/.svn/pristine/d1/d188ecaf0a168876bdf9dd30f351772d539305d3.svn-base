@@ -1,0 +1,72 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+	<div class="wrap J_check_wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('chat/index')}">群聊列表</a></li>
+			<li><a href="{:U('chat/chat')}">会话列表</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="50">ID</th>
+					<th>创建人</th>
+					<th>群聊名称</th>
+					<th>联系人列表</th>
+					<th>聊天内容</th>
+					<th>创建时间</th>
+					<th width="120">管理操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<php>$user_type=array("0"=>"家长","1"=>"老师","2"=>"群");</php>
+				<foreach name="lists" item="vo">
+				<tr>
+					<td>{$vo.id}</td>
+					<td>{$vo.username}</td>
+					<td>{$vo.title}</td>
+					<td>
+						<ul>
+							<foreach name="vo['linkman']" item="linkman">
+								<li>																																						
+									{$linkman.name}
+								</li>
+							</foreach>
+						</ul>
+						<!-- <a href="{:U('departmentlist',array('id'=>$vo['id']))}">编辑</a> -->
+					</td>
+					<td><ul>
+							<foreach name="vo['chatcontent']" item="content">
+								<li>																		
+									{$content.id}发送人：{$content.name}[{$user_type[$content['send_type']]}]</br>
+									内容:{$content.content}</br>
+									时间：{$content.create_time|date="Y-m-d H:i:s",###}
+								</li>
+							</foreach>
+						</ul></td>
+					<td>{$vo.create_time|date="Y-m-d H:i:s",###}</td>
+					<td>
+						<!-- <if condition="$vo['id'] eq 1">
+						<font color="#cccccc">删除</font> |
+							<if condition="$vo['user_status'] eq 1">
+								<font color="#cccccc">停用</font>
+							<else />
+								<font color="#cccccc">启用</font>
+							</if>
+						<else />
+							<a href='{:U("user/edit",array("id"=>$vo["id"]))}'>修改</a> | 
+							<if condition="$vo['user_status'] eq 1">
+								<a href="{:U('user/ban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要停用此用户吗？">停用</a>
+							<else />
+								<a href="{:U('user/cancelban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a>
+							</if>
+						</if> -->
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">{$Page}</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+[ 2018-09-14T09:28:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T09:28:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T09:28:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T09:28:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T09:28:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/AttendanceSet/getAttendance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_attendancesetting` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `wxt_attendancesetting` WHERE `gradeid` = 0 AND `week` = 1 AND `schoolid` = 7 AND `stay` = 2  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-14T09:28:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/AttendanceSet/getAttendance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_attendancesetting` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_attendancesetting` WHERE `gradeid` = 2 AND `week` = 1 AND `schoolid` = 7 AND `stay` = 2  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T09:28:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/AttendanceSet/getAttendance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_attendancesetting` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_attendancesetting` WHERE `gradeid` = 2 AND `week` = 3 AND `schoolid` = 7 AND `stay` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-14T10:10:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T10:10:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T10:10:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T10:10:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T10:10:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/316
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/edit_scheduling/id/108
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/get_edit_scheduling?groupid=108
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT attendance.scheduleid as id,schedule.name FROM wxt_teacher_schedule_attendance attendance INNER JOIN wxt_teacher_schedule schedule ON attendance.scheduleid=schedule.id  WHERE attendance.groupid = '108'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: scheduleid D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherScheduleSelectController.class.php 第 1278 行.
+SQL: SELECT * FROM `wxt_teacher_schedule_detail` WHERE `schoolid` = 7 AND `orderid` = null  [ RunTime:0.0010s ]
+NOTIC: [2] array_multisort(): Argument #1 is expected to be an array or a sort flag D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherScheduleSelectController.class.php 第 1368 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:10:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/show_scheudle_period?groupid=108
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT period_detail.scheduleid,schedule.name FROM wxt_teacher_schedule_period_detail period_detail LEFT JOIN wxt_teacher_schedule schedule ON period_detail.scheduleid = schedule.id  WHERE period_detail.groupid = '108' ORDER BY period_detail.day ASC  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-14T10:10:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/show_person?groupid=108&at_year_month=1535731200
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT person.groupid,person.personid,info.name FROM wxt_teacher_schedule_person person INNER JOIN wxt_teacher_info info ON info.id = person.personid  WHERE `groupid` = '108' AND `is_att` = 1  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:10:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/edit_scheduling/id/116
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:10:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/get_edit_scheduling?groupid=116
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT attendance.scheduleid as id,schedule.name FROM wxt_teacher_schedule_attendance attendance INNER JOIN wxt_teacher_schedule schedule ON attendance.scheduleid=schedule.id  WHERE attendance.groupid = '116'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: scheduleid D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherScheduleSelectController.class.php 第 1278 行.
+SQL: SELECT * FROM `wxt_teacher_schedule_detail` WHERE `schoolid` = 7 AND `orderid` = null  [ RunTime:0.0010s ]
+NOTIC: [2] array_multisort(): Argument #1 is expected to be an array or a sort flag D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherScheduleSelectController.class.php 第 1368 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:10:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/show_scheudle_period?groupid=116
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT period_detail.scheduleid,schedule.name FROM wxt_teacher_schedule_period_detail period_detail LEFT JOIN wxt_teacher_schedule schedule ON period_detail.scheduleid = schedule.id  WHERE period_detail.groupid = '116' ORDER BY period_detail.day ASC  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:10:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/show_person?groupid=116&at_year_month=1535731200
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT person.groupid,person.personid,info.name FROM wxt_teacher_schedule_person person INNER JOIN wxt_teacher_info info ON info.id = person.personid  WHERE `groupid` = '116' AND `is_att` = 1  [ RunTime:0.0010s ]
+SQL: SELECT person_detail.time,schedule.name,person_detail.scheduleid,attendance.scheduleid as person_type FROM wxt_teacher_schedule_person_detail person_detail LEFT JOIN wxt_teacher_schedule schedule ON person_detail.scheduleid=schedule.id LEFT JOIN wxt_teacher_schedule_attendance attendance ON person_detail.scheduleid=attendance.scheduleid  WHERE ( person_detail.year_month = 1535731200 and person_detail.groupid = 116 and person_detail.period_personid = 144 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:12:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/edit_scheduling/id/116
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-14T10:12:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/get_edit_scheduling?groupid=116
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT attendance.scheduleid as id,schedule.name FROM wxt_teacher_schedule_attendance attendance INNER JOIN wxt_teacher_schedule schedule ON attendance.scheduleid=schedule.id  WHERE attendance.groupid = '116'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: scheduleid D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherScheduleSelectController.class.php 第 1278 行.
+SQL: SELECT * FROM `wxt_teacher_schedule_detail` WHERE `schoolid` = 7 AND `orderid` = null  [ RunTime:0.0000s ]
+NOTIC: [2] array_multisort(): Argument #1 is expected to be an array or a sort flag D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherScheduleSelectController.class.php 第 1368 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:12:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/show_scheudle_period?groupid=116
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0060s ]
+SQL: SELECT period_detail.scheduleid,schedule.name FROM wxt_teacher_schedule_period_detail period_detail LEFT JOIN wxt_teacher_schedule schedule ON period_detail.scheduleid = schedule.id  WHERE period_detail.groupid = '116' ORDER BY period_detail.day ASC  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-14T10:12:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/show_person?groupid=116&at_year_month=1535731200
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_attendance` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_fixation` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_group` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_period_detail` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_schedule_person_detail` [ RunTime:0.0050s ]
+SQL: SELECT person.groupid,person.personid,info.name FROM wxt_teacher_schedule_person person INNER JOIN wxt_teacher_info info ON info.id = person.personid  WHERE `groupid` = '116' AND `is_att` = 1  [ RunTime:0.0010s ]
+SQL: SELECT person_detail.time,schedule.name,person_detail.scheduleid,attendance.scheduleid as person_type FROM wxt_teacher_schedule_person_detail person_detail LEFT JOIN wxt_teacher_schedule schedule ON person_detail.scheduleid=schedule.id LEFT JOIN wxt_teacher_schedule_attendance attendance ON person_detail.scheduleid=attendance.scheduleid  WHERE ( person_detail.year_month = 1535731200 and person_detail.groupid = 116 and person_detail.period_personid = 144 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-14T10:21:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/AttendanceSet/getAttendance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_attendancesetting` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_attendancesetting` WHERE `gradeid` = 0 AND `week` = 1 AND `schoolid` = 7 AND `stay` = 2  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T10:26:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/StudentInfo/index/menuid/317
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+
+[ 2018-09-14T10:26:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0010s ]
+
+[ 2018-09-14T10:34:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/StudentInfo/bindingkey
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+SQL: SHOW COLUMNS FROM `wxt_appellation` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0050s ]
+SQL: SELECT `bindingkey` FROM `wxt_student_info` WHERE ( userid=2398 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T11:35:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/StudentInfo/bindingkey
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+SQL: SHOW COLUMNS FROM `wxt_appellation` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0150s ]
+SQL: SELECT `bindingkey` FROM `wxt_student_info` WHERE ( userid=13167 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T11:35:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/StudentInfo/bindingkey
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+SQL: SHOW COLUMNS FROM `wxt_appellation` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0140s ]
+SQL: SELECT `bindingkey` FROM `wxt_student_info` WHERE ( userid=13161 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T11:35:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/StudentInfo/bindingkey
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+SQL: SHOW COLUMNS FROM `wxt_appellation` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0150s ]
+SQL: SELECT `bindingkey` FROM `wxt_student_info` WHERE ( userid=13162 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T11:35:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/StudentInfo/bindingkey
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+SQL: SHOW COLUMNS FROM `wxt_appellation` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0140s ]
+SQL: SELECT `bindingkey` FROM `wxt_student_info` WHERE ( userid=13141 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-14T16:19:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T16:19:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T16:19:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-14T16:19:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+

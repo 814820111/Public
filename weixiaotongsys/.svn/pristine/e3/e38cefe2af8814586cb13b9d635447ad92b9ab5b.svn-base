@@ -1,0 +1,825 @@
+<admintpl file="header"/>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 210px; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle; color: black;}
+.picList li{margin-bottom: 5px;}
+ div {overflow:auto;}
+
+ tr{color: black;} 
+ td select{color: black;}
+ html{overflow-y:auto;overflow-x:auto;}
+ .normal_select{
+  width: 100px;
+ }
+
+
+select{
+    color: black;
+}
+
+
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap" style=" margin-top: 20px;margin-left: 30px; margin-right: 30px;     margin-bottom: 30px;">
+  <ul class="nav nav-tabs">
+     <li style="color: #000;">班级课程表</li>
+  </ul>
+  <form name="myform" id="myform1" action="{:u('index')}" method="post" class="form-horizontal J_ajaxForms" enctype="multipart/form-data">
+  <div class="col-auto">
+    <div class="table_full">
+      <table class="table table-bordered" style=" border:none;">
+                <!-- <div class="control-group">
+                    <div class="mb10">
+                       <span class="mr20">学校：
+                          <select id="school" name="school"  class="normal_select" style="max-height: 100px;">
+                              <OPTION value="0">请选择学校</OPTION> 
+                              <foreach name="school_name" item="vo">
+                                   <OPTION value="{$vo.schoolid}">{$vo.school_name}</OPTION> 
+                              </foreach>           
+                          </select>
+                       </span>
+                    </div>
+                </div> --> 
+                <div class="">
+                    <div class="">
+                       <span class="mr20">班级：
+                          <select id="class" name="classid"  class="normal_select" style="max-height: 100px;" onchange="check(this.form)">
+                              <OPTION value="0">请选择班级</OPTION> 
+                              <foreach name="class" item="vo">
+                               <php>$class_se=$class_id==$vo['id']?"selected":"";</php>
+                                   <OPTION value="{$vo.id}" {$class_se}>{$vo.classname}</OPTION>
+                              </foreach>
+                          </select><button  onclick="sub_qrcj()"  type="button" style=" background-color:#26a79b; border-color:#26a79b; border-style:none; color: white; border-radius: 5px; padding: 5px 15px; font-size: 17px; margin-left: 10px;">保存课表</button>
+                       </span>
+               <!--         <button class="  btn_submit J_ajax_submit_btn"type="submit" style=" background-color:#26a79b; border-color:#26a79b; border-style:none; color: white; border-radius: 5px; padding: 5px 12px;  margin-left: 10px;">查询</button> -->
+                    </div>
+                </div> 
+              </table>
+             
+            </div>
+          </div>
+          <div class="" style=" background-color: white; width: 70px; margin-left: auto; margin-right: auto;">
+  <input type="hidden" class="input" name="class_id" value="{$class_id}"  readOnly="true">
+ 
+       
+  </div>
+        </form>  
+  <form name="myform" id="myform" action="{:u('add')}" method="post" class="form-horizontal J_ajaxForms" enctype="multipart/form-data">
+  
+  <input type="hidden" class="input" name="class_id" value="{$class_id}" >
+
+  <div class="" style="margin-top: -35px;">
+    <div class="table_full" style="    margin-bottom: 10px;">
+      <table class="table table-bordered" style="width: 1050px;
+     margin: auto;">
+                <!-- <div class="control-group">
+                    <div class="mb10">
+                       <span class="mr20">学校：
+                          <select id="school" name="school"  class="normal_select" style="max-height: 100px;">
+                              <OPTION value="0">请选择学校</OPTION> 
+                              <foreach name="school_name" item="vo">
+                                   <OPTION value="{$vo.schoolid}">{$vo.school_name}</OPTION> 
+                              </foreach>           
+                          </select>
+                       </span>
+                    </div>
+                </div> --> 
+                <!-- <div class="control-group">
+                    <div class="mb10">
+                       <span class="mr20">班级：
+                          <select id="class" name="classid"  class="normal_select" style="max-height: 100px;">
+                              <OPTION value="0">请选择班级</OPTION> 
+                              <foreach name="class" item="vo">
+                                   <OPTION value="{$vo.id}">{$vo.classname}</OPTION> 
+                              </foreach>           
+                          </select>
+                       </span>
+                    </div>
+                </div>  -->
+                <thead>
+    <div style=" font-size: 17px; text-align: center;
+    margin-bottom: 10px;"><span style=" font-weight: bold; margin-right: 5px;"><&nbsp;{$classname}&nbsp;></span><span sty>课程表</span></div>
+                	
+        <tr width="110">
+            <th style=" text-align: center;">节次</th>
+            <th style=" text-align: center;">星期一</th>
+            <th style=" text-align: center;">星期二</th>
+            <th style=" text-align: center;">星期三</th>
+            <th style=" text-align: center;">星期四</th>
+            <th style=" text-align: center;">星期五</th>
+            <th style=" text-align: center;">星期六</th>
+            <th style=" text-align: center;">星期天</th>
+        </tr>
+        </thead> 
+        <colgroup><col/><col /></colgroup>
+        <tr>
+           <td style=" text-align: center;">第一节</td>
+           <td width="110">
+           	<select id="school" name="mon_fir"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <php>$mondayone=$monday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_fir"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <php>$tuesdayone=$tuesday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_fir"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdayone=$wednesday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_fir"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdayone=$thursday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_fir"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridayone=$friday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_fir"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdayone=$saturday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_fir"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundayone=$sunday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundayone}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第二节</td>
+           <td width="110">
+           	<select id="school" name="mon_se"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondaytwo=$monday_two['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondaytwo}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_se"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdaytwo=$tuesday_two['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdaytwo}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_se"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdaytwo=$wednesday_two['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdaytwo}>{$vo.subject}</OPTION> 
+                </foreach>          
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_se"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdaytwo=$thursday_two['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdaytwo}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_se"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridaytwo=$friday_two['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridaytwo}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_se"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdaytwo=$sunday_one['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdaytwo}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_se"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundaytwo=$sunday_two['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundaytwo}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第三节</td>
+           <td width="110">
+           	<select id="school" name="mon_th"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondaythree=$monday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_th"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdaythree=$tuesday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_th"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdaythree=$wednesday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_th"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdaythree=$thursday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_th"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridaythree=$friday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_th"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdaythree=$saturday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_th"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundaythree=$sunday_three['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundaythree}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第四节</td>
+           <td width="110">
+           	<select id="school" name="mon_fo"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondayfour=$monday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_fo"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdayfour=$tuesday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_fo"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdayfour=$wednesday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_fo"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdayfour=$thursday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_fo"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridayfour=$friday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_fo"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdayfour=$saturday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_fo"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundayfour=$sunday_four['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundayfour}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第五节</td>
+           <td width="110">
+           	<select id="school" name="mon_fi"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondayfive=$monday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondayfive}>{$vo.subject}</OPTION> 
+                </foreach>          
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_fi"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdayfive=$tuesday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdayfive}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_fi"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdayfive=$wednesday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdayfive}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_fi"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+               <foreach name="lesson_name" item="vo">
+                <php>$thursdayfive=$thursday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdayfive}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_fi"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridayfive=$friday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridayfive}>{$vo.subject}</OPTION> 
+                </foreach>          
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_fi"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdayfive=$saturday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdayfive}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_fi"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundayfive=$sunday_five['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundayfive}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第六节</td>
+           <td width="110">
+           	<select id="school" name="mon_si"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondaysix=$monday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondaysix}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_si"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdaysix=$tuesday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdaysix}>{$vo.subject}</OPTION> 
+                </foreach>          
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_si"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdaysix=$wednesday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdaysix}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_si"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdaysix=$thursday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdaysix}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_si"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridaysix=$friday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridaysix}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_si"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdaysix=$saturday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdaysix}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_si"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundaysix=$sunday_six['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundaysix}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第七节</td>
+           <td width="110">
+           	<select id="school" name="mon_seve"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondayseven=$monday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondayseven}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_seve"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdayseven=$tuesday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdayseven}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_seve"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdayseven=$wednesday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdayseven}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_seve"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdayseven=$thursday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdayseven}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_seve"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridayseven=$friday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridayseven}>{$vo.subject}</OPTION>
+                </foreach>
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_seve"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdayseven=$saturday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdayseven}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_seve"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundayseven=$sunday_seven['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundayseven}>{$vo.subject}</OPTION> 
+                </foreach>            
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td style=" text-align: center;">第八节</td>
+           <td width="110">
+           	<select id="school" name="mon_ei"  class="normal_select" style="max-height: 50px;">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$mondayeight=$monday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$mondayeight}>{$vo.subject}</OPTION> 
+                </foreach>          
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_ei"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$tuesdayeight=$tuesday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$tuesdayeight}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_ei"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$wednesdayeight=$wednesday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$wednesdayeight}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_ei"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$thursdayeight=$thursday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$thursdayeight}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_ei"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$fridayeight=$friday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$fridayeight}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_ei"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$saturdayeight=$saturday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$saturdayeight}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_ei"  class="normal_select" style="max-height: 50px;">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                <php>$sundayeight=$sunday_eight['id']==$vo['id']?"selected":"";</php>
+                     <OPTION value="{$vo.id}" {$sundayeight}>{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <!-- </foreach> -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+    <div  style="margin: auto 0px;">
+     
+    </div>
+
+
+ </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script>
+
+function check(form)
+{
+    alert("11");
+  $("#class").val();
+
+  if($("#class").val()!=='0')
+  {
+    form.submit();
+  }
+  
+
+
+}
+
+ // document.myform.submit();
+
+    function sub_qrcj() {
+    var classid = $("input[name='class_id']").val();
+
+    $.ajax({
+      type:"post",
+      async:false,
+      url:"{:U('Teacher/ClassSubject/add')}",
+      data:$('#myform').serialize(),
+      success: function(msg){
+        history.go(0);
+      }
+    });
+  }
+</script>
+<script type="text/javascript"> 
+$(function () {
+	$(".J_ajax_close_btn").on('click', function (e) {
+	    e.preventDefault();
+	    Wind.use("artDialog", function () {
+	        art.dialog({
+	            id: "question",
+	            icon: "question",
+	            fixed: true,
+	            lock: true,
+	            background: "#CCCCCC",
+	            opacity: 0,
+	            content: "您确定需要关闭当前页面嘛？",
+	            ok:function(){
+					setCookie("refersh_time",1);
+					window.close();
+					return true;
+				}
+	        });
+	    });
+	});
+	/////---------------------
+	 Wind.use('validate', 'ajaxForm', 'artDialog', function () {
+			//javascript
+	        
+	            //编辑器
+	            editorcontent = new baidu.editor.ui.Editor();
+	            editorcontent.render( 'content' );
+	            try{editorcontent.sync();}catch(err){};
+	            //增加编辑器验证规则
+	            jQuery.validator.addMethod('editorcontent',function(){
+	                try{editorcontent.sync();}catch(err){};
+	                return editorcontent.hasContents();
+	            });
+	            var form = $('form.J_ajaxForms');
+	        //ie处理placeholder提交问题
+	        if ($.browser.msie) {
+	            form.find('[placeholder]').each(function () {
+	                var input = $(this);
+	                if (input.val() == input.attr('placeholder')) {
+	                    input.val('');
+	                }
+	            });
+	        }
+	        //表单验证开始
+	        form.validate({
+				//是否在获取焦点时验证
+				onfocusout:false,
+				//是否在敲击键盘时验证
+				onkeyup:false,
+				//当鼠标掉级时验证
+				onclick: false,
+	            //验证错误
+	            showErrors: function (errorMap, errorArr) {
+					//errorMap {'name':'错误信息'}
+					//errorArr [{'message':'错误信息',element:({})}]
+					try{
+						$(errorArr[0].element).focus();
+						art.dialog({
+							id:'error',
+							icon: 'error',
+							lock: true,
+							fixed: true,
+							background:"#CCCCCC",
+							opacity:0,
+							content: errorArr[0].message,
+							cancelVal: '确定',
+							cancel: function(){
+								$(errorArr[0].element).focus();
+							}
+						});
+					}catch(err){
+					}
+	            },
+	            //验证规则
+	            rules: {'post[post_title]':{required:1},'post[post_content]':{editorcontent:true}},
+	            //验证未通过提示消息
+	            messages: {'post[post_title]':{required:'请输入标题'},'post[post_content]':{editorcontent:'内容不能为空'}},
+	            //给未通过验证的元素加效果,闪烁等
+	            highlight: false,
+	            //是否在获取焦点时验证
+	            onfocusout: false,
+	            //验证通过，提交表单
+	            submitHandler: function (forms) {
+	                $(forms).ajaxSubmit({
+	                    url: form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+	                    dataType: 'json',
+	                    beforeSubmit: function (arr, $form, options) {
+	                        
+	                    },
+	                    success: function (data, statusText, xhr, $form) {
+	                        if(data.status){
+								setCookie("refersh_time",1);
+								//添加成功
+								Wind.use("artDialog", function () {
+								    art.dialog({
+								        id: "succeed",
+								        icon: "succeed",
+								        fixed: true,
+								        lock: true,
+								        background: "#CCCCCC",
+								        opacity: 0,
+								        content: data.info,
+										button:[
+											{
+												name: '继续添加？',
+												callback:function(){
+													reloadPage(window);
+													return true;
+												},
+												focus: true
+											},{
+												name: '返回列表页',
+												callback:function(){
+													location='{:U('BabyClass/index')}';
+													return true;
+												}
+											}
+										]
+								    });
+								});
+							}else{
+								isalert(data.info);
+							}
+	                    }
+	                });
+	            }
+	        });
+	    });
+	////-------------------------
+});
+</script>
+</body>
+</html>

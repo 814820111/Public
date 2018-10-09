@@ -1,0 +1,50 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('subject')}">学科列表</a></li>
+        <li class="active"><a href="{:U('addsubject')}">新增学科</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('add_subject')}">
+            <fieldset>
+               <div class="control-group">
+                    <label class="control-label">科目类型:</label>
+                    <div class="controls">
+                         <select class="input" name="grade">
+                                <option value="0">学校通用科目</option>
+                                <foreach name="class" item="vo">
+                             
+                                <option value="{$vo.id}"{$class_se}>{$vo.name}</option>
+                                </foreach>
+                            </select>
+                    </div>
+                </div>
+                
+
+                <div class="control-group">
+                    <label class="control-label">学科名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="subject" value="">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

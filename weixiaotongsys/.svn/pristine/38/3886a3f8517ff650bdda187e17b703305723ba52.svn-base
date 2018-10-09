@@ -1,0 +1,50 @@
+<div id="left-list" class="left-list">
+			<div id="nav-check" class="text-first">
+			<span class="glyphicon glyphicon-plus-sign"></span>
+				考勤
+			</div>
+			<div id="check-list-content" class="text-second">
+				<ul>
+					<a href="teacher_check"><li id="nav-teacher_check">教师考勤</li></a>
+					<a href="class_check"><li id="nav-class_check">班级考勤</li></a>
+				</ul>
+			</div>
+			 <div id="nav-online" class="text-first">
+			<span class="glyphicon glyphicon-plus-sign"></span>
+				请假管理
+			</div>
+			<div id="online-content" class="text-second">
+				<ul>
+					<a href="online"><li id="online-leave">在线请假</li></a>
+				</ul>
+			</div> 
+			 <div id="nav-confirm" class="text-first">
+			<span class="glyphicon glyphicon-plus-sign"></span>
+				安全
+			</div>
+			<div id="safe_content" class="text-second">
+				<ul>
+					<a href="safe_confirm"><li id="nav-safe-confirm">接待管理</li></a>
+				</ul>
+			</div> 
+</div>
+<script>
+	$('.text-first').click(function(){
+			$(this).next().toggle("slow",
+				function(){
+					if($(this).css('display')=='block'){
+				$(this).prev().css('background','#31d057');
+				$(this).prev().css('color','#fff');
+				$(this).prev().children('span').attr('class','glyphicon glyphicon-minus-sign');
+				$(this).prev().children('span').css('color','#fff');
+			}else{
+				$(this).prev().css('background','#cfeed7');
+				$(this).prev().css('color','#434343');
+				$(this).prev().children('span').attr('class','glyphicon glyphicon-plus-sign');
+				$(this).prev().children('span').css('color','#434343');
+			}
+				}
+				);
+	});
+
+</script>

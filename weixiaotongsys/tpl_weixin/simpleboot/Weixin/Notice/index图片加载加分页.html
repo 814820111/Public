@@ -1,0 +1,543 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="__TMPL__Public/css/danceCompetition.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__Public/js/new_file.js"></script>
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/commes.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/css/photoswipe.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/default-skin/default-skin.css">
+    <script src="__TMPL__Public/js/photoswipe.min.js"></script>
+    <script src="__TMPL__Public/js/photoswipe-ui-default.min.js"></script>
+    <!--图片延迟加载-->
+    <script src="__TMPL__Public/js/jquery.lazyload.js"></script>
+    <!--分页-->
+    <script src="__TMPL__Public/js/dropload.js"></script>
+    <link rel="stylesheet" href="__TMPL__Public/css/dropload.css">
+    <style>
+
+        a:hover{
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent;
+
+        }
+
+        body {
+            background-color: #eff0f2;
+        }
+        .yuanzhang .one .left {
+            margin-top: 3%;
+            width: 100%;
+            text-align: center;
+        }
+        .yuanzhang .one .right{
+            position: absolute;
+            right: 0;
+        }
+        .one {
+            margin-bottom: 3%;
+            position: relative;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="top_box" style="z-index: 99">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 通知公告
+        <div class="clearfix"></div>
+    </div>
+    <input type="hidden" value={$userid} id="userid">
+    <!--公告内容-->
+
+    <div class="container" style=" overflow:hidden;" id="codn">
+        <div class="Part" style="margin-top: 40px;">
+
+        </div>
+
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+<script>
+    function getLocalTime(nS) {
+        return new Date(parseInt(nS) * 1000).toLocaleString().substr(0,17)}
+    $("document").ready(function() {
+        var page = 0;
+        var z=0;
+        $('.Part').dropload({
+
+            scrollArea: window,
+            loadDownFn: function (me) {
+                page++;
+                var receiverid = $("#userid").val();
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=school&a=get_receive_notice&paging='+ page,
+                    async: true,
+                    data: {
+                        receiverid: receiverid
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        var html = "";
+                        var res=data.data;
+                       // var z = 0;
+                        //console.log(res);
+                        for (var i = 0; i < res.length; i++) {
+                            if (res[i].notice_info.length != 0) {
+                                var vm= res[i].notice_info;
+                                for(var j=0;j<vm.length;j++){
+                                    //发布的标题
+                                    var title = vm[j].title;
+                                    //发布的内容
+                                    var content =vm[j].content;
+                                    //发布让的名字
+                                    var name = vm[j].name;
+                                    //发布人的头像照片
+                                    var photo = vm[j].photo;
+                                    var noticeid = res[i].noticeid;
+                                    //获取有没有读的时间
+                                    var create_time = res[i].create_time;
+
+                                    //把时间戳解析成正常时间
+                                    var mc =tmies(vm[j]["create_time"]);
+                                }
+
+
+                                var shuliang = res[i].receiv_list.length;
+                                //总共有多少个家长接收该消息
+                                var zongshu = shuliang
+
+                                h = 0;
+                                for (var k = 0; k < shuliang; k++) {
+                                    var read = res[i].receiv_list[k].create_time;
+
+                                    if (read == 0) {
+                                        //已读
+                                        h++
+                                    }
+                                }
+                                if (create_time == 0) {
+                                    h + 1
+                                }
+                                //已读
+                                yushu = zongshu - h;
+                                html += ' <div class="yuanzhang" style="margin-top: -15px;">';
+                                html += '<div class="one">';
+                                html += '<div class="left">';
+                                html += '<span id="Ai">' + title + '</span>';
+                                html += '</div>';
+                                if (res[i].create_time == 0) {
+                                    html += '<div class="right">   未 读 </div>';
+                                } else {
+                                    html += '<div class="right" style="background-color: lightblue;">已 读 </div>'
+                                }
+                                html += '<div class="clearfix"></div>';
+                                html += '</div>';
+                                html += '<div class="two">';
+                                html += '<span style="font-size: 14px;"><pre>' + content + '</pre></span>';
+                                html += "<br>"
+                                html += '<div class="demo" style="float:left;">'
+                                var num=res[i].pic.length;
+                                if(num==1){
+//                            html += '<div style="width:100%;max-height:300px;" class="my">'
+                                    html += '<div style="width:100%;max-height:300px;" class="my" id="my-gallery-'+z+'">'
+                                    for (var k = 0; k < res[i].pic.length; k++) {
+                                        var zhaopian = res[i].pic[k].photo; //内容照片
+                                        var height = res[i].pic[k].pictureheight;//图片高度
+                                        if(height>0){
+                                            height = height;
+                                        }else{
+                                            height = 1142;
+                                        }
+                                        var width = res[i].pic[k].picturewidth;//图片宽度
+                                        if(width>0){
+                                            width = width;
+                                        }else{
+                                            width = 800;
+                                        }
+                                        html += '<figure>'
+                                        //html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        //html += '<img  style="max-width:250px;max-height:250px;" src="{$Think.const.SR}' + zhaopian + '"/>'
+                                        html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        html += '<img  class="lazy" style="max-width:250px;max-height:250px;" src="__TMPL__Public/img/grey.gif" data-original="{$Think.const.SR}' + zhaopian + '"/>'
+                                        html += '</a>'
+                                        html += '</figure>'
+                                    }
+                                    html += '</div>'
+                                }else{
+//                            html += '<div class="my-gallery">'
+                                    html += '<div class="my-gallery" id="my-gallery-'+z+'">'
+                                    for (var k = 0; k < res[i].pic.length; k++) {
+                                        var zhaopian = res[i].pic[k].photo //内容照片
+                                        var height = res[i].pic[k].pictureheight;//图片高度
+                                        if(height>0){
+                                            height = height;
+                                        }else{
+                                            height = 1142;
+                                        }
+                                        var width = res[i].pic[k].picturewidth;//图片宽度
+                                        if(width>0){
+                                            width = width;
+                                        }else{
+                                            width = 800;
+                                        }
+                                        html += '<figure>'
+                                        //html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        //html += '<img src="{$Think.const.SR}' + zhaopian + '" />'
+                                        html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        html += '<img class="lazy" src="__TMPL__Public/img/grey.gif" data-original="{$Think.const.SR}' + zhaopian + '"/>'
+                                        html += '</a>'
+                                        html += '</figure>'
+                                    }
+                                    html += '</div>'
+                                }
+
+                                html += '</div>'
+                                html += '</div>';
+                                html += '<div class="three">';
+                                html += '<div class="left" style="width:100%;height: 26px; font-weight: inherit; ">';
+                                html += '<img src="__TMPL__Public/images/feiji.png" alt="">';
+                                html += '<span class="jiangping" style="  width:40%;float: left;  display: inline-block;font-weight: inherit;  ">' + name + '</span>';
+                                html += '<span style="width: 45%;float: right;font-size:12.5px;color: rgb(151,153,150);display: inline-block;text-align: right;">' + mc + '</span>'
+                                html += '</div>';
+                                html += '<div class="clearfix"></div>';
+                                html += '</div>';
+                                html += '<hr>';
+                                html += '<div class="pandect">总发' + zongshu + '，已读' + yushu + '，未读' + h + '</div>';
+                                html += '<input type="hidden" class="aeg" value="' + noticeid + '" />'
+                                html += '<input type="hidden" class="aec" value="' + receiverid + '" />'
+                                html += '</div>';
+                                html += '</div>';
+                                html += '<br>'
+                                z = z+1;
+                            }
+
+                        }
+                        setTimeout(function(){
+                            $(".Part").append(html);
+                            me.resetload();
+                            var img_width = $(".my-gallery img").width()
+                            $(".my-gallery img").height(img_width)
+                            for(var k = 0; k <z ; k++ ){
+                                var obj = $("#my-gallery-"+k+" img");
+                                var w = obj.width();
+                                var l = obj.length;
+                                if(w == 0){
+                                    $("#my-gallery-" + k).parent().css('width',"10");
+//                                console.log($("#my-gallery-" + k).parent());
+                                }else{
+                                    if (w != null){
+                                        if (l > 3){
+                                            var divW = w * 3 + 4 * (l-1);
+                                            $("#my-gallery-"+k).parent().css({float: 'none'});
+                                            //$(".my-gallery").css('float', 'none');
+                                        }else{
+                                            var divW = w * l + 4 * (l-1);
+                                            $("#my-gallery-"+k).parent().css('width', divW);
+                                            //$("#my-gallery-"+k).children().css('width', img_width);
+                                            //$("#my-gallery-"+k).children().css('width', img_width);
+                                        }
+
+                                        //var divW = w * l;
+                                        //$("#my-gallery-"+k).parent().css('width', divW);
+                                        $(".my-gallery").css('float', 'none');
+                                        $("#my-gallery-"+k).children().css('width', img_width);
+
+                                    }
+                                }
+
+                            }
+                            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                                // parse slide data (url, title, size ...) from DOM elements
+                                // (children of gallerySelector)
+                                var parseThumbnailElements = function(el) {
+                                    var thumbElements = el.childNodes,
+                                        numNodes = thumbElements.length,
+                                        items = [],
+                                        figureEl,
+                                        linkEl,
+                                        size,
+                                        item;
+
+                                    for (var i = 0; i < numNodes; i++) {
+
+                                        figureEl = thumbElements[i]; // <figure> element
+
+                                        // include only element nodes
+                                        if (figureEl.nodeType !== 1) {
+                                            continue;
+                                        }
+
+                                        linkEl = figureEl.children[0]; // <a> element
+
+                                        size = linkEl.getAttribute('data-size').split('x');
+
+                                        // create slide object
+                                        item = {
+                                            src: linkEl.getAttribute('href'),
+                                            w: parseInt(size[0], 10),
+                                            h: parseInt(size[1], 10)
+                                        };
+
+
+
+                                        if (figureEl.children.length > 1) {
+                                            // <figcaption> content
+                                            item.title = figureEl.children[1].innerHTML;
+                                        }
+
+                                        if (linkEl.children.length > 0) {
+                                            // <img> thumbnail element, retrieving thumbnail url
+                                            item.msrc = linkEl.children[0].getAttribute('src');
+                                        }
+
+                                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                                        items.push(item);
+                                    }
+
+                                    return items;
+                                };
+
+                                // find nearest parent element
+                                var closest = function closest(el, fn) {
+                                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                                };
+
+                                // triggers when user clicks on thumbnail
+                                var onThumbnailsClick = function(e) {
+                                    e = e || window.event;
+                                    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                                    var eTarget = e.target || e.srcElement;
+
+                                    // find root element of slide
+                                    var clickedListItem = closest(eTarget, function(el) {
+                                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                                    });
+
+                                    if (!clickedListItem) {
+                                        return;
+                                    }
+
+                                    // find index of clicked item by looping through all child nodes
+                                    // alternatively, you may define index via data- attribute
+                                    var clickedGallery = clickedListItem.parentNode,
+                                        childNodes = clickedListItem.parentNode.childNodes,
+                                        numChildNodes = childNodes.length,
+                                        nodeIndex = 0,
+                                        index;
+
+                                    for (var i = 0; i < numChildNodes; i++) {
+                                        if (childNodes[i].nodeType !== 1) {
+                                            continue;
+                                        }
+
+                                        if (childNodes[i] === clickedListItem) {
+                                            index = nodeIndex;
+                                            break;
+                                        }
+                                        nodeIndex++;
+                                    }
+
+
+
+                                    if (index >= 0) {
+                                        // open PhotoSwipe if valid index found
+                                        openPhotoSwipe(index, clickedGallery);
+                                    }
+                                    return false;
+                                };
+
+                                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                                var photoswipeParseHash = function() {
+                                    var hash = window.location.hash.substring(1),
+                                        params = {};
+
+                                    if (hash.length < 5) {
+                                        return params;
+                                    }
+
+                                    var vars = hash.split('&');
+                                    for (var i = 0; i < vars.length; i++) {
+                                        if (!vars[i]) {
+                                            continue;
+                                        }
+                                        var pair = vars[i].split('=');
+                                        if (pair.length < 2) {
+                                            continue;
+                                        }
+                                        params[pair[0]] = pair[1];
+                                    }
+
+                                    if (params.gid) {
+                                        params.gid = parseInt(params.gid, 10);
+                                    }
+
+                                    return params;
+                                };
+
+                                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                                        gallery,
+                                        options,
+                                        items;
+
+                                    items = parseThumbnailElements(galleryElement);
+
+                                    // define options (if needed)
+                                    options = {
+                                        fullscreenEl : false,
+                                        //点击图片关闭
+                                        tapToClose: true,
+                                        // define gallery index (for URL)
+                                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                                        getThumbBoundsFn: function(index) {
+                                            // See Options -> getThumbBoundsFn section of documentation for more info
+                                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                                rect = thumbnail.getBoundingClientRect();
+
+                                            return {
+                                                x: rect.left,
+                                                y: rect.top + pageYScroll,
+                                                w: rect.width
+                                            };
+                                        }
+
+                                    };
+
+                                    // PhotoSwipe opened from URL
+                                    if (fromURL) {
+                                        if (options.galleryPIDs) {
+                                            // parse real index when custom PIDs are used
+                                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                                            for (var j = 0; j < items.length; j++) {
+                                                if (items[j].pid == index) {
+                                                    options.index = j;
+                                                    break;
+                                                }
+                                            }
+                                        } else {
+                                            // in URL indexes start from 1
+                                            options.index = parseInt(index, 10) - 1;
+                                        }
+                                    } else {
+                                        options.index = parseInt(index, 10);
+                                    }
+
+                                    // exit if index not found
+                                    if (isNaN(options.index)) {
+                                        return;
+                                    }
+
+                                    if (disableAnimation) {
+                                        options.showAnimationDuration = 0;
+                                    }
+
+                                    // Pass data to PhotoSwipe and initialize it
+                                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                                    gallery.init();
+                                };
+
+                                // loop through all gallery elements and bind events
+                                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                                    galleryElements[i].onclick = onThumbnailsClick;
+                                }
+
+                                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                                var hashData = photoswipeParseHash();
+                                if (hashData.pid && hashData.gid) {
+                                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                                }
+                            };
+
+                            // execute above function
+                            initPhotoSwipeFromDOM('.my-gallery');
+                            initPhotoSwipeFromDOM('.my');
+                            $('img.lazy').lazyload({
+                                effect:"fadeIn",
+                                appear: function(num,setting){
+                                    //console.log("一开始还剩"+num+"张未加载")
+                                },
+                                load: function(num,setting){
+                                    // console.log("接着还剩"+num+"张未加载")
+                                }
+
+                            });
+                            $(".yuanzhang").click(function() {
+
+                                var noticeid = $('.aeg', this).val(); //通知ID
+                                var receiverid = $('.aec', this).val();//接收人ID
+                                location.href = "{:U('details')}?noticeid=" + noticeid + "&receiverid=" + receiverid + "";
+
+                            })
+                            $(".demo").click(function(event) {
+
+                                event.stopPropagation();
+
+                            });
+                        });
+
+                    },
+                    error: function() {
+                        me.resetload();
+                        alert('系统错误,请稍后重试');
+                    }
+
+
+                });
+            }
+        });
+
+    })
+    $(".fanhui").click(function() {
+        location.href = "{:U('Index/index')}";
+    })
+</script>

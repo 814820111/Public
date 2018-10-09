@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+/*top*/
+body{ padding:0; margin:0;}
+.clearfix{ clear:both;}
+.top_box{ background-color:#06c18e; font-size:14px; line-height:30px; color:white; text-align:center;}
+.top_box img{ width:10px; display:block; float:left; margin-top:5px; margin-left:10px;}
+.date_box{ color:#06c18e}
+

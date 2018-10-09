@@ -1,0 +1,57 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('schoolmanage')}">学校列表</a></li>
+        <li><a href="{:U('addschool')}">新增学校</a></li>
+        <li><a href="{:U('schoolcheck')}">学校审核</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">学校ID</th>
+            <th>学校名称</th>
+            <th>学校地址</th>
+            <th>联系人</th>
+            <th>联系电话</th>
+            <th>负责代理商</th>
+            <th>创建时间</th>
+            <th>状态</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>$school_statuses=array("0"=>"停用","1"=>"欠费","2"=>"正常");</php>
+        <foreach name="school" item="vo">
+            <tr>
+                <td>{$vo.schoolid}</td>
+                <td>{$vo.school_name}</td>
+                <td>{$vo.school_address}</td>
+                <td>{$vo.school_user}</td>
+                <td>{$vo.school_phone}</td>
+                <td>代理商1</td>
+                <td><php>echo date('Y-m-d h:i:s',$vo['create_time']);</php></td>
+                <td>{$school_statuses[$vo['school_status']]}</td>
+                <td>
+                        <a href='{:U("change",array("schoolid"=>$vo["schoolid"]))}'>修改资料</a> |
+                        <!--<a class="J_ajax_del" href="{:U('user/delete',array('id'=>$vo['id']))}">删除</a> |-->
+                        <if condition="$vo['school_status'] eq 0">
+                            <a href="{:U('run',array('schoolid'=>$vo['schoolid']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此学校吗？">启用</a>
+                            <elseif  condition="$vo['school_status'] eq 1"/>
+                            <a href="{:U('pay',array('schoolid'=>$vo['schoolid']))}">充值</a>
+                            <else />
+                            <a href="{:U('stop',array('schoolid'=>$vo['schoolid']))}" class="J_ajax_dialog_btn" data-msg="您确定要停用此学校吗？">停用</a>
+                        </if>
+                    <br /> <a href="{:U('classmanage',array('schoolid'=>$vo['schoolid'],'schoolname'=>$vo['school_name']))}">班级管理</a>
+                    <a href="{:U('departmentmanage',array('schoolid'=>$vo['schoolid'],'schoolname'=>$vo['school_name']))}">科室管理</a>
+
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

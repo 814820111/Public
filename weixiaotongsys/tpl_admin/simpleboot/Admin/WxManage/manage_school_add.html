@@ -1,0 +1,184 @@
+<admintpl file="header" />
+<style>
+	.radio{
+		float: left;
+		padding-top: 5px;
+		margin-right: 20px;
+	}
+</style>
+<body class="J_scroll_fixed">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('manage_school_list')}">学校公众号列表</a></li>
+			<li class="active"><a href="{:U('manage_school_add')}">添加学校公众号关系</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal J_ajaxForm add-validate" action="{:U('manage_post')}">
+				<fieldset>
+					<div class="control-group">
+						<label class="control-label">绑定学校:</label>
+						<div class="controls">
+							<select name="schoolid" id="">
+								<option value="">请选择学校</option>
+								<php>foreach($schools as $k=>$v){</php>
+								<option value="<php> echo $v['schoolid'] </php>"><?php echo $v['school_name']?></option>
+								<php>}</php>
+							</select>
+							<span class="must_red">*</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">是否使用系统公众号:</label>
+						<div class="controls">
+							<div class="radio">
+								<label>
+									<input type="radio" checked name="wx_is_use" value="2"> 否
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="wx_is_use" value="1"> 是
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">选择公众号:</label>
+						<div class="controls">
+							<select name="manage_id" id="manage_id">
+								<!--<option value="0">请选择公众号</option>-->
+							</select>
+							<span class="must_red">*</span>
+						</div>
+					</div>
+
+				</fieldset>
+				<div class="form-actions">
+					<!--<button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">添加</button>-->
+					<button type="submit" class="btn btn-primary btn_submit">添加</button>
+					<a class="btn" href="__URL__">返回</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript">
+        $("document").ready(function() {
+            var is_public=$('input:radio[name="wx_is_use"]:checked').val();
+            $.ajax({
+                type: "post",
+                url: "{:U('manage_list')}",
+                async: true,
+                data: {
+                    is_public: is_public,
+
+                },
+                dataType: 'json',
+                success : function(res){
+                    var html = "";
+                    for (var i = 0; i < res.length; i++) {
+                        id = res[i].id;
+                        name = res[i].wx_name;
+                        html+="<option value='"+id+"'>"+name+"</option>"
+
+                    }
+                    $("#manage_id").html(html);
+                },
+                error: function(res){
+
+                }
+            });
+		})
+        $(".radio").click(function() {
+            var is_public=$('input:radio[name="wx_is_use"]:checked').val();
+            $.ajax({
+                type: "post",
+                url: "{:U('manage_list')}",
+                async: true,
+                data: {
+                    is_public: is_public,
+
+                },
+                dataType: 'json',
+				success : function(res){
+                    var html = "";
+                    for (var i = 0; i < res.length; i++) {
+						id = res[i].id;
+						name = res[i].wx_name;
+						html+="<option value='"+id+"'>"+name+"</option>"
+
+					}
+                    $("#manage_id").html(html);
+				},
+				error: function(res){
+
+				}
+            });
+		});
+
+
+        $('.add-validate').validate({
+            rules: {
+                wx_name: {
+                    required: true
+                },
+                schoolid: {
+                    required: true
+                },
+                wx_id: {
+                    required: true
+                },
+                wx_appid: {
+                    required: true
+                },
+                wx_appsecret: {
+                    required: true
+                },
+                manage_id: {
+                    required: true
+                },
+                name: {
+                    required: true
+                },
+                url: {
+                    required: true,
+                    url: true
+                },
+                token: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 32,
+                    isMobile: true
+                },
+                EncodingAESKey: {
+                    required: true,
+                    minlength: 43,
+                    maxlength: 43,
+                    isMobile: true
+                },
+                mobile:{
+                    required: true,
+                }
+            },
+            messages: {
+                school: {
+                    required: '请选择学校'
+                },
+                usermanage_id: {
+                    required: '请选择账号'
+                },
+                token: {
+                    minlength: "请输入3到32个字母或数字",
+                    maxlength: "请输入3到32个字母或数字"
+                },
+                EncodingAESKey: {
+                    minlength: "请输入43个字母或数字",
+                    maxlength: "请输入43个字母或数字"
+                },
+            }
+        });
+        //检测手机号是否正确
+
+	</script>
+</body>
+</html>

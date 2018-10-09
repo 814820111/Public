@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/banjixiangce.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__public/js/new_file.js"></script>
+    <script>
+        window.onload = function() {
+            var w;
+            w = $('.new').width();
+            $('.new').height(w * 1);
+        }
+    </script>
+    <style>
+        body {
+            background-color: #eff0f2;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <input type="hidden" value={$classid} id="classid">
+    <input type="hidden" value={$studentid} id="studentid">
+    <div class="fenge"></div>
+    <div class="bigbox">
+        <div class="jiang" style="margin-top: 55px;">
+
+            <!--内容部分-->
+
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="top_box">
+        <img src="__TMPL__public/images/img674.png" class="fanhui"> 相册
+        <div class="clearfix"></div>
+    </div>
+    <div class="classify" style="position: fixed;top: 32px;width: 100%;background-color: white;">
+        <div class="teacher" style="margin-top:5px; ">班级相册</div>
+        <div class="parent" style="margin-top:5px;">宝宝相册</div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="new" style=" background-color: #06c18e;color: white;position: fixed;width: 60px;text-align: center;line-height: 60px;border-radius: 50%;font-size: 14px;bottom: 50px;right: 10px;">
+        <a style=" text-decoration: none;color: inherit;">发布相册</a>
+    </div>
+
+    <script>
+        //用户ID
+        $("document").ready(function() {
+            var userid = $("#userid").val();
+            var schoolid = $("#schoolid").val();
+            //学校ID
+            var classid = $("#classid").val();
+            var studentid = $("#studentid").val();
+            var type = 2;
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=index&a=GetMicroblog',
+                async: true,
+                data: {
+                    schoolid: schoolid,
+                    classid: classid,
+                    type: type
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        //发布的时间
+                        var write_time = tmies(res[i].write_time);
+                        //照片的数量
+                        var zhao = res[i].pic.length;
+                        //发布人的ID
+                        var userid = res[i].userid;
+                        // 发布该信息的序列ID
+                        var mid = res[i].mid;
+                        //var zhaopian = res[i].pic[0].pictureurl;//图片地址//没照片就会报错不显示
+                        if(res[i].pic.length>0){
+                            var zhaopian = res[i].pic[0].pictureurl;
+                        }else{
+                            zhaopian = "weixiaotong.png";
+                        }
+                        var title = res[i].title;//标题
+                        if (title.length > 7){
+                            title = title .substring(0,7)+"..."
+                        }
+                        html += '<div class="yes">';
+                        html += "<a href='{:U('detail')}?userid=" + userid + "&mid=" + mid +"&type=" + type + "'>";
+
+                        html += '<div class="main">'
+                        html += '<div class="viwe" style="margin-left:5%;margin-top: 5%;">'
+//                        html += '<div class="hover"> <h4>'+title+'</h4>'
+//                        html += '<p>' + zhao + '张图片</p></div>'
+                        html += '<div style="position: absolute;width:100%;top: 30px;"> <p style="text-align: center;width:100%;">'+title+'</p>'
+                        html += '<p style="margin-top:35px;">' + zhao + '张图片</p></div>'
+                        html += '<img width="100%" height="100%" src="{$Think.const.SR}' + zhaopian + '" >'//没照片就会报错不显示
+                        html += '</div>'
+                        html += '</div>'
+
+                        html += '</a>'
+
+                    }
+                    $(".jiang").append(html);
+
+                    var img_width = $(".my-gallery img").width()
+                    $(".my-gallery img").height(img_width)
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+
+            });
+        })
+        $(".fanhui").click(function() {
+            location.href = "{:U('Index/index')}";
+        })
+        $(".parent").click(function() {
+            location.href = "{:U('indexbaobao')}"
+        })
+        $(".new").click(function() {
+            var type = 3;
+            location.href = "{:U('fabu')}?type=" + type + ""
+        })
+    </script>
+</body>
+
+</html>

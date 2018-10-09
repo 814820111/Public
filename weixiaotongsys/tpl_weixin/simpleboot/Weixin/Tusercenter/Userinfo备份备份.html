@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/gerenxinxi.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <style>
+        #previewImage div img {
+            width: 100%;
+            background: #1a1a1a;
+            height: calc(height);
+        }
+        select {
+            /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+            border: solid 1px #000;
+            /*很关键：将默认的select选择框样式清除*/
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            /*将背景改为红色*/
+            /*background:red;*/
+            /*加padding防止文字覆盖*/
+            padding-right: 14px;
+        }
+        /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+        select::-ms-expand { display: none; }
+    </style>
+</head>
+
+<body>
+<div class="top_box">
+    <a href="__ROOT__/index.php/weixin/Tusercenter"><img src="__ROOT__/statics/img/img67.png"></a>
+    个人信息
+    <div class="clearfix"></div>
+    <input type="hidden" value=$studentid id="studentid">
+</div>
+<div class="bigbox" style="padding:38px 0 0 0">
+    <form action="{:U('Usercenter/upload')}" method="post" enctype="multipart/form-data"  name="upload_form">
+        <div class="boxone">
+            <span>头像</span>
+            <img class="two" style="overflow: hidden;border-radius:50%;width:85px;height:85px;" src="{$headimg}">
+            <!--<input type="file" style="float: right;width: 50px;height: 50px;margin:auto;position: absolute;right: 10px;top: 55px;background: url('__TMPL__public/img/z_add.png') no-repeat center center;opacity: 0.0;" name="file[]" value="">-->
+            <input type="file" style="float: right;width: 80px;height: 80px;margin:auto;position: absolute;right: 10px;top: 55px;background: url('__TMPL__public/img/z_add.png') no-repeat center center;opacity: 0.0;" name="file" value="">
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">姓名</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+            <input type="text" name="name"  style="text-align: right;width: 100%;height: 50px;border: none;" id="name" value={$name}>
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">性别</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+            <select name="sex" id="sex" style="width: 150%;background: transparent;height: 100%;border: none;">
+                <option value="1" <?php if($sex==1){ echo  'selected';} ?> >男</option>
+                <!--<option value="{$sex}" selected >{$vo.name}</option>-->
+                <option value="0" <?php if($sex==0){ echo  'selected';} ?> >女</option>
+            </select>
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">手机号</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right"><input type="tel" name="tel"  style="text-align: right;width:100%;height: 50px;border: none;"id="tel" value={$phone}></span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box" id="repass">
+            <span class="left">修改密码</span>
+            <a href="{:U('resetPwd')}" >
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box" id="save">
+            <center>
+                <input  id="sub" type="submit" value="保存更改" style="color:white;font-size: 15px;border:0;background: #06c18e;width: 40%;height: 40px;border-radius: 10px;margin: auto;text-align: center">
+            </center>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+</div>
+</body>
+</html></html>

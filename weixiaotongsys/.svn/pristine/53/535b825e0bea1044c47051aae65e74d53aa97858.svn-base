@@ -1,0 +1,44 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('ClassActivity/index')}">所有活动列表</a></li>
+        <li class="active"><a href='{:U("entrylist"),array("id"=>$id)}'>报名列表</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>家长姓名</th>
+            <th>联系电话</th>
+            <th>时间</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="entrylist" item="vo">
+            <tr>
+                <td>{$vo.entryuser}</td>
+                <td><if condition="$vo['sex'] eq 1">
+                                    男
+                                <elseif condition="$vo['from'] eq 0"/> 
+                                    女
+                                </if></td>
+                <td>{$vo.age}</td>
+                <td>{$vo.fathername}</td>
+                <td>{$vo.contactphone}</td>
+                <td>{$vo.begintime|date="Y-m-d H:i:s",###}</td>
+                <td>
+                    <a class="J_ajax_del" href="{:U('delete_entry',array('id'=>$vo['id']))}">删除</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

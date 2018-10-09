@@ -1,0 +1,51 @@
+<admintpl file="header" />
+<head />
+<body>
+	<div class="wrap J_check_wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('TeacherUser/index')}">用户管理</a></li>
+			<li><a href="{:U('TeacherUser/add')}">添加用户</a></li>
+		</ul>
+		<form name="myform" action="{:U('TeacherUser/listorders')}" method="post">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="30">ID</th>
+						<th align="left">用户名称</th>
+						<th align="left">邮箱</th>
+						<th align="left">所属角色</th>
+						<th width="40" align="left">状态</th>
+						<th width="120">管理操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="user" item="vo">
+					<tr>
+						<td>{$vo.uid}</td>
+						<td>{$vo.user_login}</td>
+						<td>{$vo.user_email}</td>
+						<td>{$vo.name}</td>
+						<td>
+							<if condition="$vo['status'] eq 1">
+								<font color="red">√</font>
+							<else /> 
+								<font color="red">╳</font>
+							</if>
+						</td>
+						<td>
+							<if condition="$vo['uid'] eq 1">
+								<font color="#cccccc">修改</font> | <font color="#cccccc">删除</font>
+								<else />
+								<a href="{:U('TeacherUser/edit',array('uid'=>$vo['uid'], 'rid'=>$vo['rid']))}">修改</a>|
+								<a class="J_ajax_del" href="{:U('TeacherUser/delete_user',array('uid'=>$vo['uid'], 'rid'=>$vo['rid']))}">删除</a>
+							</if>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

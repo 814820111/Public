@@ -1,0 +1,58 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:"微软雅黑"
+}
+.clearfix{
+	clear: both;
+}
+.one{
+	margin: 20px;
+}
+.one .date .day{	
+	font-size: 10vw;
+	float: left;
+	margin-right: 2%;
+}
+.one .date .week{
+	float: left;
+	font-size: 4vw;
+	margin-top: 2%;
+}
+.one img{
+	width: 100%;
+}
+.one .wenzi{
+	width: 100%;
+	text-align: right;
+}
+.two .select{
+	margin-top: 6%;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+	width: 21%;
+	float: left;
+}
+.two .select img{
+	width: 73.5%;
+}
+.two .select span{
+	color: rgb(130,130,130);
+	font-size: 13px;
+}
+.two .select a{
+	text-decoration: none;
+	color: inherit;
+}
+.three{
+	margin-top: 11%;
+	width: 100%;
+	position: relative;
+}
+.three  img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 14%;
+}

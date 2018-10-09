@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+.clearfix{clear: both;}
+body{ background-color:#eff0f2;}
+
+
+/*内容*/
+.bigbox{ background-color:#FFF; font-family:"微软雅黑";margin-bottom:15px; color:#636363;}
+.bigbox .box{ padding-left:15px; padding-right:15px;border-bottom:#d2d2d2 solid 1px;}
+.bigbox .boxno{padding-left:15px; padding-right:15px;}
+.bigbox img{ width:10px; float:right; padding:25px 0 0 20px;}
+.bigbox span{ line-height:70px; font-size:16px;}
+.bigbox .neirong{padding:0 15px 50px 15px;border-bottom:#d2d2d2 solid 1px;}
+.bigbox .tianjia{border:1px dashed #979995;border-radius:5px; width:50px; padding:15px;margin:15px; display:block; float:left;}
+/*发布*/
+.queren{ width:80%; height:40px; background-color:#06c18e; color:#FFF; font-family:"微软雅黑 Light"; font-weight:600; border-radius:5px; margin:30px auto 0 auto; line-height:40px; text-align:center;}  

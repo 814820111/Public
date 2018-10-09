@@ -1,0 +1,3458 @@
+[ 2018-08-28T15:55:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/storage/setting_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_options` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `wxt_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: UPDATE `wxt_options` SET `option_name`='cmf_settings',`option_value`='{\"banned_usernames\":\"\",\"storage\":{\"type\":\"Local\",\"Qiniu\":{\"accessKey\":\"4BECgWGmccmpG0_SavRbpcTW0hDH_dTu4UnTpFTC\",\"secrectKey\":\"TYwWAlIdpCkAgv6To1KwdL0XKlAoQSfSFWJhpvBQ\",\"domain\":\"ow3hm6y11.bkt.clouddn.com\",\"bucket\":\"zhixiaoyuan2017\"}}}' WHERE ( option_name='cmf_settings' ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: Local D:\phpStudy\WWW\weixiaotong2016\application\Admin\Controller\StorageController.class.php 第 22 行.
+
+[ 2018-08-28T15:55:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T15:55:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:55:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:56:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:56:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:57:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:57:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-28T15:57:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/1/allcount/1/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F1%E4%BA%BA,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:57:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:57:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:57:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-28T15:57:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0040s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:57:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:57:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T15:57:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:57:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:58:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T15:58:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:58:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:58:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T15:58:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:13:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:13:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:13:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-28T16:13:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0080s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:13:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index?province=2&citys=3&message_type=7&schoolid=7&grade=0&classs=&tiaojian=0&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:13:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0070s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:13:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index?province=2&citys=3&message_type=7&schoolid=7&grade=0&classs=&tiaojian=0&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:13:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0070s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:13:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:13:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:13:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '1'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0080s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:13:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index?province=2&citys=3&message_type=7&schoolid=7&grade=0&classs=&tiaojian=0&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:13:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:13:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0070s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:33:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index?province=2&citys=3&message_type=7&schoolid=7&grade=0&classs=&tiaojian=0&shuzhi=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:33:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0070s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:33:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/province/2/citys/3/message_type/7/schoolid/7/grade/0/tiaojian/0/p/4
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:33:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=showgrade&schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_grade` [ RunTime:0.0080s ]
+SQL: SELECT `name`,`gradeid` FROM `wxt_school_grade` WHERE ( schoolid = 7 ) ORDER BY gradeid  [ RunTime:0.0000s ]
+
+[ 2018-08-28T16:33:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:33:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:33:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:33:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T16:35:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Wxbindinglog/index/menuid/391
+NOTIC: D方法实例化没找到模型类Common\Model\WechatMenuModel
+NOTIC: D方法实例化没找到模型类Common\Model\WechatAutoReplyModel
+NOTIC: D方法实例化没找到模型类Common\Model\WechatMaterialModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-28T16:35:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/1/allcount/1/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F1%E4%BA%BA,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:35:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T16:35:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T16:35:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:35:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-28T16:35:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:35:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:36:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T16:36:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:36:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T16:36:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:25:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:25:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T17:25:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/delete/id/13204/schoolid/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_teacher_class` WHERE `schoolid` = 7 AND `teacherid` = 13204 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0050s ]
+SQL: UPDATE `wxt_student_card` SET `handletype`='0',`handletime`='2018-08-28 17:25:29',`handletimeint`='1535448329' WHERE `personId` = 13204 AND `handletype` = 1 AND `schoolid` = 7 AND `cardType` = 1 [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_duty_teacher` WHERE `schoolid` = 7 AND `teacher_id` = 13204 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0050s ]
+SQL: DELETE FROM `wxt_teacher_info` WHERE `schoolid` = 7 AND `teacherid` = 13204 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_relation_stu_user` WHERE `userid` = 13204 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `wxt_wxmanage` [ RunTime:0.0060s ]
+SQL: SELECT wm.wx_appid FROM wxt_wxmanage wm INNER JOIN wxt_wxmanage_school ws on wm.id=ws.manage_id   WHERE ( ws.schoolid = '7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_xctuserwechat` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_xctuserwechat` WHERE `userid` = 13204 AND `appid` = 'wx7325155f62456567' [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_teacher_info` WHERE `teacherid` = 13204 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_wxtuser` WHERE `id` = 13204 [ RunTime:0.0000s ]
+
+[ 2018-08-28T17:25:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:25:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:25:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:26:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:26:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:26:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:26:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:26:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:27:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Wxbindinglog/index/menuid/391
+NOTIC: D方法实例化没找到模型类Common\Model\WechatMenuModel
+NOTIC: D方法实例化没找到模型类Common\Model\WechatAutoReplyModel
+NOTIC: D方法实例化没找到模型类Common\Model\WechatMaterialModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:27:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Student/index/menuid/246
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\StudentInfoModel
+
+[ 2018-08-28T17:27:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolTransfer/index/menuid/377
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:27:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdjustClass/index/menuid/327
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\AppellationModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+
+[ 2018-08-28T17:27:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:27:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index/menuid/194
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:27:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/SchoolManage/index/menuid/192
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\RelationStuUserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:29:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:30:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:30:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-28T17:30:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/1/allcount/1/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F1%E4%BA%BA,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:30:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:30:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:30:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:30:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0120s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-08-28T17:30:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:30:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-28T17:30:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:30:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:30:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:30:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:30:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:30:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:31:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/updateICcard
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '6559623145' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '935' AND `cardType` = 1 AND `handletype` = 1  [ RunTime:0.0030s ]
+SQL: INSERT INTO `wxt_student_card` (`personId`,`cardNo`,`schoolid`,`create_time`,`handletime`,`handletimeint`,`handletype`,`cardType`) VALUES ('935','6559623145','7','1535448667','2018-08-28 17:31:07','1535448667','1','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `wxt_teacher_info` WHERE ( id = 935 and schoolid = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '935' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_student_card` SET `handletime`='2018-08-28 17:31:07',`handletimeint`='1535448667',`handletype`='0' WHERE `personId` = '935' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 [ RunTime:0.0220s ]
+SQL: INSERT INTO `wxt_student_card` (`name`,`schoolid`,`personId`,`cardType`,`handletype`,`handletime`,`handletimeint`,`cardNo`,`create_time`) VALUES ('大小进','7','935','1','1','2018-08-28 17:31:07','1535448667','6559623145','1535448667') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:31:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:31:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:31:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/delete/id/13205/schoolid/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0050s ]
+SQL: DELETE FROM `wxt_teacher_class` WHERE `schoolid` = 7 AND `teacherid` = 13205 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0060s ]
+SQL: UPDATE `wxt_student_card` SET `handletype`='0',`handletime`='2018-08-28 17:31:34',`handletimeint`='1535448694' WHERE `personId` = 13205 AND `handletype` = 1 AND `schoolid` = 7 AND `cardType` = 1 [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_duty_teacher` WHERE `schoolid` = 7 AND `teacher_id` = 13205 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0050s ]
+SQL: DELETE FROM `wxt_teacher_info` WHERE `schoolid` = 7 AND `teacherid` = 13205 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_relation_stu_user` WHERE `userid` = 13205 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wxt_wxmanage` [ RunTime:0.0060s ]
+SQL: SELECT wm.wx_appid FROM wxt_wxmanage wm INNER JOIN wxt_wxmanage_school ws on wm.id=ws.manage_id   WHERE ( ws.schoolid = '7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_xctuserwechat` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_xctuserwechat` WHERE `userid` = 13205 AND `appid` = 'wx7325155f62456567' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_teacher_info` WHERE `teacherid` = 13205 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_wxtuser` WHERE `id` = 13205 [ RunTime:0.0000s ]
+
+[ 2018-08-28T17:31:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:31:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:31:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-28T17:31:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:32:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:32:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:32:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:32:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:32:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:32:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:32:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:34:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:34:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0080s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:34:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:34:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0040s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:36:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:36:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:36:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:36:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0080s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:36:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:36:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:36:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-28T17:36:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/1/allcount/1/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F1%E4%BA%BA,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:36:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:36:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:36:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:36:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:36:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:36:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:36:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:36:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:37:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/updateICcard
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '8008203695' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2018-08-28T17:37:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:37:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:37:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:37:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:37:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/updateICcard
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '0000122221' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2018-08-28T17:38:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/delete/id/13206/schoolid/7/info_id/936
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0040s ]
+SQL: DELETE FROM `wxt_teacher_class` WHERE `schoolid` = 7 AND `teacherid` = 13206 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0050s ]
+SQL: UPDATE `wxt_student_card` SET `handletype`='0',`handletime`='2018-08-28 17:38:06',`handletimeint`='1535449086' WHERE `personId` = 13206 AND `handletype` = 1 AND `schoolid` = 7 AND `cardType` = 1 [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0040s ]
+SQL: DELETE FROM `wxt_duty_teacher` WHERE `schoolid` = 7 AND `teacher_id` = 13206 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0040s ]
+SQL: DELETE FROM `wxt_teacher_info` WHERE `schoolid` = 7 AND `teacherid` = 13206 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_relation_stu_user` WHERE `userid` = 13206 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `wxt_wxmanage` [ RunTime:0.0040s ]
+SQL: SELECT wm.wx_appid FROM wxt_wxmanage wm INNER JOIN wxt_wxmanage_school ws on wm.id=ws.manage_id   WHERE ( ws.schoolid = '7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_xctuserwechat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `wxt_xctuserwechat` WHERE `userid` = 13206 AND `appid` = 'wx7325155f62456567' [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_teacher_info` WHERE `teacherid` = 13206 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_wxtuser` WHERE `id` = 13206 [ RunTime:0.0000s ]
+
+[ 2018-08-28T17:38:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:38:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0040s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:38:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:38:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-28T17:38:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/1/allcount/1/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F1%E4%BA%BA,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:38:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:38:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:38:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:38:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/updateICcard
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '1233123123' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2018-08-28T17:41:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:41:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:41:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:41:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:41:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/updateICcard
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0040s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '3211222111' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '937' AND `cardType` = 1 AND `handletype` = 1  [ RunTime:0.0030s ]
+SQL: INSERT INTO `wxt_student_card` (`personId`,`cardNo`,`schoolid`,`create_time`,`handletime`,`handletimeint`,`handletype`,`cardType`) VALUES ('937','3211222111','7','1535449268','2018-08-28 17:41:08','1535449268','1','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM `wxt_teacher_info` WHERE ( id = 937 and schoolid = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '937' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_student_card` SET `handletime`='2018-08-28 17:41:08',`handletimeint`='1535449268',`handletype`='0' WHERE `personId` = '937' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 [ RunTime:0.0230s ]
+SQL: INSERT INTO `wxt_student_card` (`name`,`schoolid`,`personId`,`cardType`,`handletype`,`handletime`,`handletimeint`,`cardNo`,`create_time`) VALUES ('大小进','7','937','1','1','2018-08-28 17:41:08','1535449268','3211222111','1535449268') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-08-28T17:41:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:41:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0040s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:41:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:41:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:42:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:42:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T17:42:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T17:42:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:42:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/delete/id/13207/schoolid/7/info_id/937
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_teacher_class` WHERE `schoolid` = 7 AND `teacherid` = 13207 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0060s ]
+SQL: UPDATE `wxt_student_card` SET `handletype`='0',`handletime`='2018-08-28 17:42:13',`handletimeint`='1535449333' WHERE `personId` = 13207 AND `handletype` = 1 AND `schoolid` = 7 AND `cardType` = 1 [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_duty_teacher` WHERE `schoolid` = 7 AND `teacher_id` = 13207 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_teacher_info` WHERE `schoolid` = 7 AND `teacherid` = 13207 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_relation_stu_user` WHERE `userid` = 13207 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wxt_wxmanage` [ RunTime:0.0060s ]
+SQL: SELECT wm.wx_appid FROM wxt_wxmanage wm INNER JOIN wxt_wxmanage_school ws on wm.id=ws.manage_id   WHERE ( ws.schoolid = '7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_xctuserwechat` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_xctuserwechat` WHERE `userid` = 13207 AND `appid` = 'wx7325155f62456567' [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_teacher_info` WHERE `teacherid` = 13207 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_wxtuser` WHERE `id` = 13207 [ RunTime:0.0000s ]
+
+[ 2018-08-28T17:42:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:42:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:42:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:42:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0050s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:42:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:42:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:42:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:42:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:42:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:42:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:42:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:42:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:42:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:42:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher_post
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:43:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/__TMPL__assets/css/mychangestyle.css
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/tpl_admin/simpleboot/.html
+
+[ 2018-08-28T17:43:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/teacher/successcount/1/allcount/1/info/ok::::%E5%85%B6%E4%B8%AD%E6%88%90%E5%8A%9F1%E4%BA%BA,
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:43:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:43:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0070s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:43:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0040s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0080s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/updateICcard
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '3123123132' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '938' AND `cardType` = 1 AND `handletype` = 1  [ RunTime:0.0030s ]
+SQL: INSERT INTO `wxt_student_card` (`personId`,`cardNo`,`schoolid`,`create_time`,`handletime`,`handletimeint`,`handletype`,`cardType`) VALUES ('938','3123123132','7','1535449396','2018-08-28 17:43:16','1535449396','1','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `wxt_teacher_info` WHERE ( id = 938 and schoolid = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '938' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_student_card` SET `handletime`='2018-08-28 17:43:17',`handletimeint`='1535449397',`handletype`='0' WHERE `personId` = '938' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 [ RunTime:0.0230s ]
+SQL: INSERT INTO `wxt_student_card` (`name`,`schoolid`,`personId`,`cardType`,`handletype`,`handletime`,`handletimeint`,`cardNo`,`create_time`) VALUES ('大小进','7','938','1','1','2018-08-28 17:43:17','1535449397','3123123132','1535449397') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:43:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0050s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-08-28T17:43:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/delete/id/13208/schoolid/7/info_id/938
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_teacher_class` WHERE `schoolid` = 7 AND `teacherid` = 13208 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0060s ]
+SQL: UPDATE `wxt_student_card` SET `handletype`='0',`handletime`='2018-08-28 17:43:22',`handletimeint`='1535449402' WHERE `personId` = 938 AND `handletype` = 1 AND `schoolid` = 7 AND `cardType` = 1 [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_duty_teacher` WHERE `schoolid` = 7 AND `teacher_id` = 13208 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_teacher_info` WHERE `schoolid` = 7 AND `teacherid` = 13208 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_relation_stu_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_relation_stu_user` WHERE `userid` = 13208 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wxt_wxmanage` [ RunTime:0.0070s ]
+SQL: SELECT wm.wx_appid FROM wxt_wxmanage wm INNER JOIN wxt_wxmanage_school ws on wm.id=ws.manage_id   WHERE ( ws.schoolid = '7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_xctuserwechat` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_xctuserwechat` WHERE `userid` = 13208 AND `appid` = 'wx7325155f62456567' [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_teacher_info` WHERE `teacherid` = 13208 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_wxtuser` WHERE `id` = 13208 [ RunTime:0.0010s ]
+
+[ 2018-08-28T17:43:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Teacher/index?province=2&citys=3&message_type=7&schoolid=7&keywordtype=&keyword=
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherInfoModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolDutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-08-28T17:43:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=role_type&Province=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0040s ]
+SQL: SELECT r.city FROM wxt_role_user ru INNER JOIN wxt_role r ON r.id=ru.role_id  WHERE ru.user_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_city` WHERE `parent` = '2'  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-28T17:43:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=Admin&m=AdminUtils&a=Provinces&Province=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_city` WHERE ( parent=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-28T17:43:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Admin&m=AdminUtils&a=lookup
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RoleSchoolModel
+SQL: SHOW COLUMNS FROM `wxt_role_school` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `wxt_role_user` WHERE ( user_id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name`,`schoolid`,`schoolgradetypeid` FROM `wxt_school` WHERE ( area=7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

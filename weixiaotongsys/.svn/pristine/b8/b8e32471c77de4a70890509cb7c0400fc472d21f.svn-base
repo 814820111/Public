@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/css/banjixiangce.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__Public/js/new_file.js"></script>
+    <script>
+        window.onload = function() {
+            var w;
+            w = $('.new').width();
+            $('.new').height(w * 1);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <input type="hidden" value={$classid} id="classid">
+    <input type="hidden" value={$userid} id="userid">
+    <div class="fenge"></div>
+    <div class="bigbox">
+        <div class="jiang" style="margin-top: 35px;">
+
+            <!--内容部分-->
+
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 班级相册
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="new" style=" background-color: #06c18e;color: white;position: fixed;width: 80px;text-align: center;line-height: 70px;border-radius: 50%;font-size: 20px;bottom: 50px;right: 10px;">
+        <a style=" text-decoration: none;color: inherit;">发布相册</a>
+    </div>
+
+    <script>
+        $("document").ready(function() {
+            //用户ID
+            var userid = $("#userid").val();
+            //alert(userid);
+            var schoolid = $("#schoolid").val();
+            //alert(schoolid);
+            //学校ID
+            var classid = $("#classid").val();
+            //alert(classid);
+            var type = 2;
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=index&a=GetMicroblog',
+                async: true,
+                data: {
+                    schoolid: schoolid,
+                    classid: classid,
+                    type: type
+                },
+                dataType: 'json',
+                success: function(res) {
+                    console.log(res);
+
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+
+                        //发布的时间
+                        var write_time = tmies(res[i].write_time);
+                        //alert(write_time);
+                        //照片的数量
+                        var zhao = res[i].pic.length;
+                        //alert(zhao);
+                        //发布人的ID
+                        var userid = res[i].userid;
+                        //alert(userid);
+                        // 发布该信息的序列ID
+                        var mid = res[i].mid;
+                        //alert(mid);
+                        var zhaopian = res[i].pic[0].pictureurl;
+                        //alert(haopian);
+
+                        html += '<div class="yes">';
+                        html += "<a href='{:U('detail')}?userid=" + userid + "&mid=" + mid + "&write_time=" + write_time + "&type=" + type + "'>";
+
+                        html += '<div class="main">'
+                        html += '<div class="viwe" style="float:left">'
+                        html += '<div class="hover"> <h4>清华幼儿园春游</h4>'
+                        html += '<p>' + zhao + '张图片</p></div>'
+                        html += '<img src="__ROOT__/uploads/microblog/' + zhaopian + '" >'
+                        html += '</div>'
+                        html += '</div>'
+
+                        html += '</a>'
+
+                    }
+                    $(".jiang").append(html);
+
+                    var img_width = $(".my-gallery img").width()
+                    $(".my-gallery img").height(img_width)
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+
+            });
+        })
+        $(".fanhui").click(function() {
+            location.href = "__ROOT__/index.php/weixin/Tindex";
+        })
+        $(".parent").click(function() {
+            location.href = "{:U('indexbaobao')}"
+        })
+        $(".new").click(function() {
+            var type = 2;
+            location.href = "{:U('fabu')}?type=" + type + ""
+        })
+    </script>
+</body>
+
+</html>

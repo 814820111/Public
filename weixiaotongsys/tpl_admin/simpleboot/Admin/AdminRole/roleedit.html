@@ -1,0 +1,185 @@
+<admintpl file="header"/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('AdminRole/index')}">角色管理</a></li>
+     <li class="active"><a href="">修改角色</a></li>
+  </ul>
+  <form class="form-horizontal J_ajaxForm" action="{:U('AdminRole/roleedit_post')}" method="post" id="myform">
+    <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+      
+
+
+
+        <tr>
+          <th width="180">角色名称</th>
+          <td><input type="text" name="name" value="{$data.name}" class="input" id="rolename"><span class="must_red">*</span></td>
+        </tr>
+
+        <tr>
+          <th width="180">所属大类</th>
+          <td>
+        <if condition="$id eq 1">
+          <select id="category" name="categoryid">
+          <else/>
+          <select id="category" name="categoryid" disabled="disabled">
+        </if>  
+          <option >请选择大类</option>
+          
+           <option value="1" <?php if($categoryid==1) echo("selected");?>>内部管理员</option>  
+           <option value="2" <?php if($categoryid==2) echo("selected");?>>代理商</option> 
+       
+           
+          </select><span class="must_red">*</span>
+          </td>
+        </tr>
+      <tr>
+          <th width="180">负责省份</th>
+          <td>
+          <if condition="$id eq 1">
+            <select  class="province"  name="Province" id="province" >
+            <else/>
+            <select  class="province"  name="Province" id="province" disabled="disabled">
+            </if>
+              <option value="">省级选择</option>
+              <foreach name="Province" item="vo">
+              <php>$pro=$Proce==$vo['term_id']?"selected":"";</php> 
+                <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+              </foreach>
+            </select>
+
+
+          <span class="must_red">*</span></td>
+        </tr>
+       <tr>
+          <th width="180">负责地市</th>
+          <td>
+       <select id="citys" name="city"></select>
+          <span class="must_red">*</span></td>
+          <input type="hidden" class="citys" value="{$citys}">
+        </tr>
+
+          <tr>
+          <th width="180">父角色</th>
+          <td><input type="text" value="{$parent}" class="input" id="rolename" disabled="disabled"></input><input type="hidden" name="pid" value="{$role}"><span class="must_red">*</span></td>
+        </tr>
+
+
+
+      <tr>
+          <th width="180">角色类型</th>
+          <td>
+          <select id="role_type" name="roletype">
+            <if condition="$categoryid eq 1 && $roletype">
+            <option value="3" <?php if($roletype==3) echo("selected");?>>内部子用户</option>
+            <else/>
+            <option value="2" <?php if($roletype==2) echo("selected");?>>省级子账号</option>
+            <option value="1" <?php if($roletype==1) echo("selected");?>>市级子账号</option>
+           </if>
+          </select>
+
+          <span class="must_red">*</span></td>
+        </tr>
+
+
+          <th>角色描述</th>
+          <td><textarea name="remark" rows="2" cols="20" id="remark" class="inputtext" style="height:100px;width:500px;">{$data.remark}</textarea></td>
+        </tr>
+        <tr>
+          <th>是否启用</th>
+          <td>
+          	<php>$active_true_checked=($data['status'] ==1)?"checked":"";</php>
+              <label class="radio inline" for="active_true">
+            		<input type="radio" name="status" value="1" {$active_true_checked} id="active_true"/>开启
+            </label>
+            <php>$active_false_checked=($data['status'] ==0)?"checked":"";</php>
+            <label class="radio inline" for="active_false">
+            		<input type="radio" name="status" value="0" id="active_false" {$active_false_checked}>禁止
+            </label>
+          </td>
+        </tr>
+      </table>
+      <input type="hidden" name="id" value="{$data.id}" />
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+    </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+if($("#province").val()){
+
+
+                   $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                    $("#citys").empty()
+                   
+                      if(data.status=="success"){
+                      
+                          $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                          for(var key in data.data){
+                            if(data.data[key]["term_id"]==$(".citys").val())
+                            {
+                              $("#citys").append("<option value="+data.data[key]["term_id"]+" selected>"+data.data[key]["name"]+"</option>");
+                            }else{
+                               $("#citys").append("<option value="+data.data[key]["term_id"]+" >"+data.data[key]["name"]+"</option>");
+                            }
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#citys").append("<option value='0'>没有市级</option>");
+                      }
+                  });
+
+}
+
+
+
+
+
+
+$("#province").change(function(){
+
+                   $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                    $("#citys").empty()
+                   
+                      if(data.status=="success"){
+                      
+                          $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                          for(var key in data.data){
+                              $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#citys").append("<option value='0'>没有市级</option>");
+                      }
+                  });
+
+
+})
+ 
+ $("#category").change(function(){
+$("#role_type").empty();
+var id = $(this).val();
+
+if(id == 1)
+{
+ $("#role_type").append("<option value=2>"+"内部子用户"+"</option>");
+}
+if(id==2)
+{
+ $("#role_type").append("<option value=1>"+"省级子账号"+"</option>");
+   $("#role_type").append("<option value=1>"+"地级子账号"+"</option>");
+}
+
+
+
+ }) 
+
+
+</script>

@@ -1,0 +1,176 @@
+<teachertpl file="header"/>
+<style type="text/css">
+	.touchlei{ background-color:#eeeeee;}
+</style>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 30%; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+</style>
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+
+<body>
+      <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+            <li class="active"><a href="{:U('index_management')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">晨检管理</a></li>
+            <li><a href="{:U('index_statistics')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">晨检统计</a></li>
+      </ul>
+<div style="margin-left: 25px;margin-right: 20px;">
+       <form class="well form-search" method="post" action="{:U('Inspection/index_management')}">
+      年级： 
+      <select class="select_2" name="grade" style=" width: 7%;">
+        <option value='0'>请选择</option>
+        <foreach name="grade" item="vo">
+        <option value="{$vo.gradeid}">{$vo.name}</option>
+        </foreach>
+      </select> &nbsp;&nbsp;
+       班级： 
+      <select class="select_2" name="class" style=" width: 7%;">
+        <option value='0'></option>
+        <foreach name="class" item="vo">
+        <option value="{$vo.id}">{$vo.classname}</option>
+        </foreach>
+      </select> &nbsp;&nbsp;
+      学生姓名：
+      <input type="text" name="name" value="" style="width:7%; height: 30px; border-width: 1px;" autocomplete="off"  placeholder="请输入姓名...">&nbsp;&nbsp;
+      
+	   晨检时间：
+	        <input type="text" class="sang_Calender" name="begintime" placeholder="-选择时间-" style="width: 7%; height: 30px; border-width: 1px;">  至  <input type="text" class="sang_Calender" name="endtime" placeholder="-选择时间-" style="width: 7%; height: 30px; border-width: 1px;"> &nbsp; &nbsp;
+
+      <input type="submit" class="btn btn-primary" style="border:none;;color:#FFF; background-color:#26a69a;" value="查询" />
+      <input type="submit" class="btn btn-primary" style="border:none;;color:#FFF; background-color:#26a69a;" value="导入" />
+      <input type="submit" class="btn btn-primary" style="border:none;;color:#FFF; background-color:#26a69a;"  onclick="derive()"  value="导出" />
+    </form>
+     
+    <form class="js-ajax-form"  method="post" action="{:U('Inspection/index_management')}">
+      <table class="table table-hover table-bordered table-list">
+        <thead>
+          <tr>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;"><input type='checkbox' id='checkAll' name="checkAll">全选</th>
+            <!-- <th width="200">{:L('TITLE')}</th> -->
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">年级</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">班级</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">学生姓名</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">是否在校</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">学籍号</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">IC卡号</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">考勤时间</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;">体温</th>
+            <th style=" text-align: center; background-color: #e2e2e2;border-left: none;border-width:0.5px;border-right: none">晨检结果</th>
+
+          </tr>
+        </thead>
+
+        <foreach name="list" item="vo">
+          <tr>
+             <td style=" text-align: center;border-left: none;border-top: none;"><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids" value="{$vo.id}"    title="ID:{$vo.id}"></td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.grade}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.classname}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.student_name}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.boarder}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.school_num}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.ic_num}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.attendance_time}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;">{$vo.temperature}</td>
+             <td style=" text-align: center;border-left: none;border-top: none;border-right: none;">
+             <!-- 0无，1红卡，2黄卡，3绿卡 -->
+               <if condition="$vo['results'] eq 1">
+                  红卡
+                 <elseif condition="$vo['results'] eq 2"/>
+                  黄卡
+                 <elseif condition="$vo['results'] eq 3"/>
+                  绿卡
+                 <elseif condition="$vo['results'] eq 0"/>
+                  无
+               </if>
+             </td>
+          </tr>
+        </foreach>
+
+
+
+      </table>
+      <div class="pagination">{$Page}</div>
+        <div style="margin-bottom: 20px;" >
+         <span> 全部：</span><span style="color:#ff0000">{$count_all}</span><span>人&nbsp;&nbsp;&nbsp;</span>
+         <span> 绿卡：</span><span style="color:#ff0000">{$count_green}</span><span>人&nbsp;&nbsp;&nbsp;</span>
+         <span> 黄卡：</span><span style="color:#ff0000">{$count_yellow}</span><span>人&nbsp;&nbsp;&nbsp;</span>
+         <span> 红卡：</span><span style="color:#ff0000">{$count_red}</span><span>人&nbsp;&nbsp;&nbsp;</span>
+       </div>
+    </form>
+
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="js/fileinput.js" type="text/javascript"></script>
+<script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
+   <script>
+
+       $(function() {
+            $("#checkAll").click(function() {
+                $('input[class="J_check"]').prop("checked", $(this).prop("checked"));
+            });
+            var $J_check = $("input[class='J_check']");
+            $J_check.click(function(){
+                $("#checkAll").prop("checked",$J_check.length == $("input[class='J_check']:checked").length ? true : false);
+            });
+        });
+
+
+      function derive(){
+           var id = document.getElementsByName('ids');
+             var ids = new Array();
+               if (confirm("确定要导出吗？")) {
+
+                //将所有选中复选框的默认值写入到id数组中
+                for (var i = 0; i < id.length; i++) {
+                    if (id[i].checked){
+                        ids.push(id[i].value);
+                        //console.log($(this).find('.tt').remove());
+                    }
+                    // $(this).closest('tr').remove();
+
+                }
+                  console.log(ids)
+                   if(ids == ''){
+                    alert('请选择要导出的文件!')
+                    return;
+                   }
+
+                location.href="{:U('expUser')}"+'?id='+ids; 
+            
+
+          }
+
+     }
+
+
+
+
+
+
+
+            $(".touch").mouseenter(
+					function(){
+						$(".touch").addClass("touchlei")
+						}
+			)
+			 $(".touch").mouseleave(
+					function(){
+						$(".touch").removeClass("touchlei")
+						}
+			)
+            </script>
+
+</body>
+</html>
+

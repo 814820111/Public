@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>{$schoolname}</title>
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+
+    <link rel="stylesheet" href="__ROOT__/statics/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="__ROOT__/statics/bootstrap/js/bootstrap.min.js"></script>
+    <link href="__TMPL__Public/Tchcss/laoshidianping.css" rel="stylesheet" type="text/css">
+    <link href="__TMPL__Public/Tchcss/top-box.css" rel="stylesheet" type="text/css">
+    <style>
+        .dianji {
+            width: 35%;
+            height: 35px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            margin-top: 25px;
+            margin-left: 30%;
+            background-color: #06c18e;
+        }
+
+        .tijiao {
+            width: 50%;
+            margin-right: 25%;
+            background-color: #06c18e;
+            border-radius: 8px;
+            border: none;
+            height: 35px;
+            color: white;
+        }
+
+        .xingxi {
+            width: 100%;
+            overflow: auto;
+        }
+
+        .xuanzediv {
+            width: 15px;
+            height: 15px;
+            /*background-color: cornflowerblue;*/
+            float: right;
+            margin-top: 15px;
+            border: 1px solid gray;
+            position: relative;
+            right: 15px;
+        }
+
+        .gou {
+            position: relative;
+            bottom: 3px;
+            color: cornflowerblue;
+        }
+
+        .qingqiu {
+            width: 100%;
+            height: 20px;
+            border: none;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            background-color: white;
+        }
+
+        .img1 {
+            width: 14px;
+            float: right;
+            margin-right: 5px;
+            bottom: 10px;
+        }
+
+        .xuanqu {
+            /*position: relative;*/
+            /*left: 40%;*/
+            /*float: left;*/
+            float: right;
+            margin-right: 10px;
+            left: inherit;
+        }
+
+        .xuanze {
+            font-size: 14px;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .jiu {
+            background-color: white;
+            padding: 15px 10px;
+            height: 40px;
+        }
+
+        .kemu {
+            width: 100%;
+            background-color: white;
+            border: none;
+            margin-top: 5px;
+        }
+
+        .kemuxuan {
+            float: left;
+        }
+
+        .xuanq {
+            position: relative;
+            left: 55%;
+            float: left;
+        }
+
+        .textnei {
+            width: 100%;
+            position: relative;
+            bottom: 2px;
+            border: none;
+        }
+
+        .dianjidiv {
+            height: 50px;
+            width: 100%;
+            background-color: whitesmoke;
+            border-bottom: 4px white solid;
+            border-top: 4px white solid;
+        ;
+        }
+
+        .ziy {
+            font-size: 18px;
+            position: relative;
+            top: 9px;
+            left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="zhezhao" style="z-index:99;width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.6);display: none;"></div>
+    <input type="hidden" value={$userid} id="userid">
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 老师点评
+        <div class="clearfix"></div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 25px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#06c18e">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">✖</button>
+                    <h5 class="modal-title biaotou" id="myModalLabel" style="color: white;"></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="cans" style="background-color: white;height: 400px;overflow: auto;">
+                    </div>
+                    <div class="Append" style="width: 100%;height: 400px;overflow: auto;">
+                    </div>
+
+                </div>
+                <div class="modal-footer huis" style="">
+                    <button class="tijiao" type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="data" style="margin-top: 40px;">
+        <div class="xuAnz" style=" background-color:white;height: 40px;">
+
+            <!--<span style="float: left;margin-top: 10px;color: black;margin-left: 15px;">请选择接受人:</span>-->
+            <!--<span style="margin-left: 10px;position: relative;top: 8px;">{$name}</span>-->
+            <!--<span><img style="margin-top: 10px;float: right;margin-right: 10px;" class="jiantou" src="__TMPL__Public/images/58.png" alt=""></span>-->
+            <!--<div class="clearfix"></div>-->
+            <button class="qingqiu" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                <div class="xuanze"  ><i>选择学生</i></div>
+                <img class="img1" src="__TMPL__Public/images/img69.png" >
+                <i class="xuanqu" ></i>
+            </button>
+        </div>
+        <div class="contant_box">
+            <div class="content">
+
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    学习
+                    <div class="jiang" style=" float:right; margin-right:10px;">
+                        <img class="ping" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang" style=" float:right; margin-right:6.5%;">
+                        <img class="ping" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang" style=" float:right; margin-right:6.5%;">
+                        <img class="ping" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    动手能力
+                    <div class="jiang1" style=" float:right; margin-right:10px;">
+                        <img class="ping1" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng1" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang1" style=" float:right; margin-right:6.5%;">
+                        <img class="ping1" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng1" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang1" style=" float:right; margin-right:6.5%;">
+                        <img class="ping1" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng1" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    唱歌
+                    <div class="jiang2" style=" float:right; margin-right:10px;">
+                        <img class="ping2" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng2" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang2" style=" float:right; margin-right:6.5%;">
+                        <img class="ping2" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng2" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang2" style=" float:right; margin-right:6.5%;">
+                        <img class="ping2" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng2" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    劳动
+                    <div class="jiang3" style=" float:right; margin-right:10px;">
+                        <img class="ping3" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng3" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang3" style=" float:right; margin-right:6.5%;">
+                        <img class="ping3" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng3" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang3" style=" float:right; margin-right:6.5%;">
+                        <img class="ping3" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng3" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px solid #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    应变能力
+                    <div class="jiang4" style=" float:right; margin-right:10px;">
+                        <img class="ping4" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng4" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang4" style=" float:right; margin-right:6.5%;">
+                        <img class="ping4" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng4" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang4" style=" float:right; margin-right:6.5%;">
+                        <img class="ping4" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng4" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" line-height:40px; padding-left:10px;font-size:14px;">
+
+                    <div class="pingyu">
+                        <textarea class="neirong" style="width: 100%;border: none;" placeholder="孩子在学校的表现"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div style="width: 100%;height: 50px;">
+
+                <!--<button class="dianji" style="width: 30%;margin-top: 25px;height: 35px;border-radius: 10px;background-color: orangered;color: white;margin-left: 32%;">点评</button>-->
+                <button class="dianji" style="width: 35%;height: 35px;border-radius: 10px;border: none;background-color: #06c18e;color: white;margin-top: 25px;margin-left: 30%;">点评</button>
+            </div>
+
+            <input type="hidden" class="learn" value="1" />
+            <!--学习能力-->
+            <input type="hidden" class="work" value="1" />
+            <!--动手能力-->
+            <input type="hidden" class="sing" value="1" />
+            <!--唱歌-->
+            <input type="hidden" class="labour" value="1" />
+            <!--劳动-->
+            <input type="hidden" class="strain" value="1" />
+            <!--劳动-->
+            <input type="hidden" class="studentid" value="{$id}" />
+            <input type="hidden" class="mingzi" value="" />
+            <!--名字-->
+            <input type="hidden" class="uisid" value="" />
+            <!--用户id-->
+        </div>
+    </div>
+    <script>
+        //学习能力的点击事件
+        $(".jiang").click(function() {
+                $(".ping").attr("src", "__TMPL__Public/images/71.png");
+                $(".ping", this).attr("src", "__TMPL__Public/images/70.png");
+                var zhi = $(".cheng", this).val();
+                var shsd = $(".learn").val(zhi);
+
+            })
+            //动手能力的点击事件
+        $(".jiang1").click(function() {
+                $(".ping1").attr("src", "__TMPL__Public/images/71.png");
+                $(".ping1", this).attr("src", "__TMPL__Public/images/70.png");
+                var zhi = $(".cheng1", this).val();
+                var shsd = $(".work").val(zhi);
+
+            })
+            //唱歌点击事件
+        $(".jiang2").click(function() {
+                $(".ping2").attr("src", "__TMPL__Public/images/71.png");
+                $(".ping2", this).attr("src", "__TMPL__Public/images/70.png");
+                var zhi = $(".cheng2", this).val();
+                var shsd = $(".sing").val(zhi);
+
+            })
+            //劳动点击事件
+        $(".jiang3").click(function() {
+            $(".ping3").attr("src", "__TMPL__Public/images/71.png");
+            $(".ping3", this).attr("src", "__TMPL__Public/images/70.png");
+            var zhi = $(".cheng3", this).val();
+            var shsd = $(".labour").val(zhi);
+
+        })
+        $(".jiang4").click(function() {
+            $(".ping4").attr("src", "__TMPL__Public/images/71.png");
+            $(".ping4", this).attr("src", "__TMPL__Public/images/70.png");
+            var zhi = $(".cheng4", this).val();
+            var shsd = $(".strain").val(zhi);
+
+        })
+        function school_notice(content,userid,uisid,schoolid){
+            $.ajax({
+                url: "__ROOT__/index.php/Apps/SendTpl/school_notice",
+                type: "post",
+                async: true,
+                dataType: "json",
+                data: {
+                    content: content,
+                    userid:userid,
+                    uisid:uisid,
+                    type:8,
+                    schoolid:schoolid
+
+                },
+                success: function(res){
+
+                },
+                error: function(res) {
+
+                }
+            });
+            return true;
+        }
+        //点击提交的点击事件
+        $(".dianji").click(function() {
+
+            var learn = $(".learn").val();
+            var work = $(".work").val();
+            var sing = $(".sing").val();
+            var labour = $(".labour").val();
+            var strain = $(".strain").val();
+//            var studentid = $(".studentid").val(); //学生id
+            var studentid = $(".uisid").val(); //学生id
+            var wenben = $(".neirong").val(); //多行文本框的值
+            var teacherid = $("#userid").val();
+            var schoolid = $("#schoolid").val();
+            if (studentid == "") {
+                alert("选择学生");
+            } else if (wenben == "") {
+                alert("点评的内容不为空");
+            } else {
+                $('#zhezhao').show();
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=teacher&a=AddTeacherComment',
+                    async: true,
+                    data: {
+                        teacherid: teacherid,
+                        studentid: studentid,
+                        content: wenben,
+                        learn: learn,
+                        work: work,
+                        sing: sing,
+                        labour: labour,
+                        strain: strain,
+                        schoolid:schoolid
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+
+                        if(res.status=="success"){
+
+                            school_notice(wenben,teacherid,studentid,schoolid);
+                            $('#zhezhao').hide();
+                            alert("点评成功");
+                            location.href = "{:U('index')}"
+                        }else {
+                            $('#zhezhao').hide();
+                            alert("点评失败")
+                        }
+                        //location.href = "{:U('index')}"
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+
+                });
+            }
+
+        });
+        $(".qingqiu").click(function() {
+            var teacherid = $("#userid").val();
+            var schoolid = $("#schoolid").val();
+            $(".Append").css("height", "300");
+            $(".cans").css("height", "0");
+            $(".cans").text("");
+            $("#ck").prop("checked", false);
+            $(".xuanqu").text("");
+            $(".mingzi").val("");
+            $(".uisid").val("");
+            $(".Append").text("");
+
+            $(".biaotou").text("选取接收人")
+            $(".huis").show();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=getteacherclasslistandstudentlist',
+                async: true,
+                data: {
+                    teacherid: teacherid,
+                    schoolid: schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data);
+
+                    for (var i = 0; i < res.length; i++) {
+                        var classname = res[i].classname; //班级的名字
+                        var iu = "ui" + i;
+                        var quanxuanid = "si" + i;
+                        var names = "";
+                        var ids = "";
+                        for (var g = 0; g < res[i].studentlist.length; g++) {
+                            names += res[i].studentlist[g].name + "," + "="; //学生的名字
+                            ids += res[i].studentlist[g].id + "," + "="; //学生ID
+                        }
+
+                        html += '<div id="jiang">'
+                        html += ' <div class="xixi" style="width: 100%;height: 50px;">'
+                        html += '<span class="biaoti" style="position: relative;top: 10px;">' + classname + '</span>'
+                        html += '<button class="tupian" style="background-color: white;border: none;">'
+                        html += '<img class="xiala"src="__TMPL__Public/images/jiantou-right.png" alt="" style="position: relative;top: 10px;">'
+                        html += '<input type="hidden" class="zhiclass" value="' + iu + '" />'
+                        html += '</button>'
+                        html += '<div class="quanxuan" style="position: relative;bottom: 25px;right: 5px;">'
+                        html += '<input id="ck" type="checkbox" style="float: right;margin-top: 15px;width:20px;height:20px;margin-right:5px;" />'
+                        html += '<input type="hidden" class="koiu" value="' + names + '" />';
+                        html += '<input type="hidden" class="koius" value="' + quanxuanid + '" />';
+                        html += '<input type="hidden" class="uisids" value="' + ids + '" />';
+                        html += '</div>'
+                        html += '<hr />'
+                        html += '</div>'
+//                        html += '<div class="' + iu + '" id="yic">'
+                        html += '<div style="display:none" class="' + iu + '" id="yic">'
+                        for (var g = 0; g < res[i].studentlist.length; g++) {
+                            var name = res[i].studentlist[g].name; //学生的名字
+                            var id = res[i].studentlist[g].id; //学生ID
+                            var photo = res[i].studentlist[g].photo; //学生的照片
+                            html += '<div class="xingxi">'
+                            html += '<div class="ping">'
+                            html += '<div style="width: 100%;height: 50px;">'
+                            html += '<span><img src="{$Think.const.SR}' + photo + '"style="width: 40px;height: 40px;margin-top: 5px;border-radius: 20px;" /></span>'
+                            html += '<span style="margin-left: 3%;" >'+ name + '</span>'
+                            html += '<div class="xuanzediv" >'
+                            html += '<input type="hidden" class="niu" value="' + name + '"/>'
+                            html += '<input type="hidden" class="idsd" value="' + id + '"/>'
+                            html += '<span class="gou ' + quanxuanid + '" ></span>'
+                            html += '</div>'
+                            html += '</div>'
+                            html += '</div>'
+
+                            html += '</div>'
+                            // 新增了一个DIV
+                        }
+                        html += '</div>'
+                        html += '</div>'
+                        html += '</div>'
+                    }
+                    $(".Append").append(html);
+                    // $("#yic").hide();
+
+                    //									 发布教师下拉框
+                    // $(".tupian").click(function() {
+                    $(".xixi").click(function() {
+                        var iuy = $(".zhiclass", this).val();
+                        var tie = document.getElementsByClassName(iuy);
+                        var transportid = $('.xiala', this).attr("src");
+                        if (transportid == "__TMPL__Public/images/jiantou-right.png") {
+                            $(".xiala", this).attr("src", "__TMPL__Public/images/jiantou2.png")
+                            $(tie).show();
+                        } else {
+                            $(".xiala", this).attr("src", "__TMPL__Public/images/jiantou-right.png")
+                            $(tie).hide();
+                        }
+                    })
+                    //单选
+//                    $(".xuanzediv").click(function() {
+                    $(".xingxi").click(function() {
+                        var zhi = $(".gou", this).text();
+                        var hai = $(".niu", this).val() + ",";
+                        var uid = $(".idsd", this).val() + ",";
+                        var shurukuang = $(".mingzi").val(); //名字输入框的值
+                        var uisid = $(".uisid").val() //uisid的输入框的值
+
+                        if (zhi == '') {
+                            $(".gou", this).text("✔");
+                            var jia = shurukuang + hai;
+                            var jiaid = uisid + uid;
+                            $(".mingzi").val(jia);
+                            $(".uisid").val(jiaid);
+                        } else {
+                            $(".gou", this).text("");
+                            var str = shurukuang.replace(hai, "");
+                            var strt = uisid.replace(uid, "");
+                            $(".mingzi").val(str);
+                            $(".uisid").val(strt);
+                        }
+                    })
+                    //全选
+                    $(".quanxuan").click(function() {
+                        var checkboxdanxuan = $("input[type='checkbox']", this).is(':checked');
+                        var tieid = $(".koius", this).val(); //全选对应选择框class;
+                        var tie = document.getElementsByClassName(tieid);
+                        var uisids = $(".uisids", this).val(); //点击全选获取对应的人的id；
+                        var uisidindx = $(".uisid").val();
+
+                        var names = $(".koiu", this).val();
+                        var qunmingzi = $(".mingzi").val(); //输入框中对应选择人的名字;
+                        var strs = names.split("="); //名字字符分割
+                        var strsid = uisids.split("="); //id字符分割
+                        if (checkboxdanxuan == false) {
+                            for (var l = 0; l < strs.length - 1; l++) {
+
+                                var qunmingzi = qunmingzi.replace(strs[l], "");
+                                var uisidindx = uisidindx.replace(strsid[l], "");
+                            }
+                            $(".mingzi").val(qunmingzi);
+                            $(".uisid").val(uisidindx);
+                            $(tie).text("");
+                        } else {
+                            var zifuming = "";
+                            var zifuid = "";
+                            for (var l = 0; l < strs.length - 1; l++) {
+                                var indesr = qunmingzi.indexOf(strs[l]); //名字的判断
+                                if (indesr == -1) {
+                                    zifuming += strs[l]
+                                    zifuid += strsid[l]
+                                }
+                            }
+                            $(tie).text("✔");
+                            var jieguo = zifuming + qunmingzi;
+                            var jieguoid = zifuid + uisidindx;
+                            $(".mingzi").val(jieguo);
+                            $(".uisid").val(jieguoid);
+
+
+                        }
+                    });
+                    //模态框的确定按钮
+                    $(".tijiao").click(function() {
+                        var mingfuzhi = $(".mingzi").val();
+                        var lengths = mingfuzhi.length;
+
+                        var arr = mingfuzhi.split(',').length - 1; //报名的人数
+                        if (lengths < 10) {
+                            var Strp = mingfuzhi;
+                        } else {
+                            var Strp = mingfuzhi.substring(0, 7) + "......";
+                        }
+
+                        $(".xuanze").text(Strp);
+                        $(".xuanqu").text(""  + " 共选" + arr + "人")
+
+                    })
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+        });
+
+//        $(".xuAnz").click(function() {
+//            location.href = "{:U('xuAnz')}"
+//        })
+        $(".fanhui").click(function() {
+            //location.href = "__ROOT__/index.php/weixin/Tindex";
+            location.href = "{:U('index')}";
+        })
+    </script>
+</body>
+
+</html>

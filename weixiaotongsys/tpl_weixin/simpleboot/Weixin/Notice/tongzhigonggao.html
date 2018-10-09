@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="__ROOT__/statics/wcs/danceCompetition.css">
+    <link rel="stylesheet" href="__ROOT__/statics/wcs/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__ROOT__/statics/wjs/new_file.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+</head>
+
+<body>
+    <div class="top_box">
+        <img src="__ROOT__/statics/img/img67.png" class="fanhui"> 通知公告
+        <div class="clearfix"></div>
+    </div>
+
+    <!--公告内容-->
+
+    <div class="container" style=" overflow:hidden;" id="codn">
+        <div class="Part">
+            <!--<div id="ing">
+<a  href="">
+  <div class="yuanzhang">
+      <div class="one">
+       <div class="left">
+          <span >舞蹈大赛公告</span>
+        </div>
+        
+       
+        <div class="clearfix"></div>
+      </div>
+      <div class="two">
+        <span>妞妞今天有点咳嗽，嗓子不舒服，王老师帮忙多照看一下，看着妞妞多喝水，出去玩的时候别着凉，谢谢。舞蹈大赛舞蹈大赛舞蹈大赛舞蹈大赛</span>
+        <img src="__ROOT__/statics/img/img23a.png" alt="">
+        	
+      </div>
+      <div class="three">
+        <div class="left">
+          <img src="__ROOT__/statics/img/feiji.png" alt="">
+          <span>园长</span>
+        </div>
+        <div class="right">
+          <span>2016-08-08&nbsp;&nbsp;&nbsp;18：30</span>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <hr>
+      <div class="pandect">总发45，已读30，未读15</div>
+  </div>
+</a>
+</div>-->
+        </div>
+
+    </div>
+    <script>
+        var receiverid = 597;
+        $("document").ready(function() {
+            $("#ing").hide();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=school&a=get_receive_notice',
+                async: true,
+                data: {
+                    receiverid: receiverid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+
+                    res = eval(res.data);
+
+
+                    for (var i = 0; i < res.length; i++) {
+                        //把时间戳解析成正常时间
+                        var mc = tmies(res[i].notice_info[0].create_time);
+
+                        var diees = "";
+                        for (var g = 0; g < res[i].pic.length; g++) {
+
+                            //用于把多张照片数组发送到我的控制器进行数组解析
+                            var cvbn = res[i].pic[g].photo;
+
+                            diees += 1163317574 + cvbn;
+
+                        }
+                        //发布的标题
+                        var title = res[i].notice_info[0].title
+                            //发布的内容
+                        var content = res[i].notice_info[0].content
+                            //发布让的名字
+                        var name = res[i].notice_info[0].name
+                            //发布人的头像照片
+                        var photo = res[i].notice_info[0].photo
+                            //公告ID
+                        var noticeid = res[i].noticeid;
+                        //获取有没有读的时间
+                        var create_time = res[i].create_time;
+
+
+                        var shuliang = res[i].receiv_list.length;
+                        //总共有多少个家长接收该消息
+                        var zongshu = shuliang + 1
+
+                        h = 0;
+                        for (var k = 0; k < shuliang; k++) {
+                            var read = res[i].receiv_list[k].create_time;
+
+                            if (read == 0) {
+                                //已读
+                                h++
+
+                            }
+                        }
+                        if (create_time == 0) {
+                            h + 1
+                        }
+                        //已读
+                        yushu = zongshu - h;
+                        html += "<a  href='{:U('details')}?title=" + title + "&content=" + content + "&name=" + name + "&cmg=" + diees + "&time=" + mc + "&photo=" + photo + "&user=" + res[i].receiverid + "&noticeid=" + noticeid + "&create_time=" + create_time + "'>";
+
+                        html += ' <div class="yuanzhang">';
+                        html += '<div class="one">';
+                        html += '<div class="left">';
+                        html += '<span id="Ai">' + res[i].notice_info[0].title + '</span>';
+                        html += '</div>';
+                        if (res[i].create_time == 0) {
+                            html += '<div class="right">   未 读 </div>';
+                        } else {
+                            html += '<div class="right" style="background-color: lightblue;">已 读 </div>'
+                        }
+                        html += '<div class="clearfix"></div>';
+                        html += '</div>';
+                        html += '<div class="two">';
+                        html += '<span >' + res[i].notice_info[0].content + '</span>';
+                        html += "<br>"
+
+                        for (var g = 0; g < res[i].pic.length; g++) {
+                            var cvbn = res[i].pic[g].photo;
+                            var dais = res[i].pic.length;
+                            if (cvbn != "" && cvbn != "null") {
+                                if (dais == 1) {
+                                    html += '<img class="pinch" src="__ROOT__/statics/img/img23a.png" alt="">';
+                                } else {
+                                    html += '<img class="pinc" src="__ROOT__/statics/img/img23a.png" alt="">';
+                                }
+
+                            }
+                            //					
+                        }
+                        html += '</div>';
+                        html += '<div class="three">';
+                        html += '<div class="left">';
+                        html += '<img src="__ROOT__/statics/img/feiji.png" alt="">';
+                        html += '<span class="jiangping">' + res[i].notice_info[0].name + '</span>';
+                        html += '</div>';
+                        html += '<div class="right">';
+                        html += '<span>' + mc + '</span>';
+                        html += '</div>';
+                        html += '<div class="clearfix"></div>';
+                        html += '</div>';
+                        html += '<hr>';
+                        html += '<div class="pandect">总发' + zongshu + '，已读' + yushu + '，未读' + h + '</div>';
+                        html += '</div>';
+                        html += '</a>';
+                        html += '</div>';
+                        html += '<br>'
+
+                    }
+                    $(".Part").append(html);
+
+                },
+                error: function() {
+
+                    alert('系统错误,请稍后重试');
+                }
+
+
+            });
+        })
+        $(".fanhui").click(function() {
+            location.href = "{:U('Index/index')}";
+        })
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>

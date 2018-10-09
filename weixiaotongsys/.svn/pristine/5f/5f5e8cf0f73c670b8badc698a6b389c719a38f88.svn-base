@@ -1,0 +1,137 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('nav/index')}">前台菜单</a></li>
+			<li class="active"><a href="{:U('nav/add')}">添加菜单</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal J_ajaxForm" action="{:U('nav/add_post')}">
+				<fieldset>
+					<div class="control-group">
+						<label class="control-label">菜单分类:</label>
+						<div class="controls">
+							<select name="cid" id="navcid_select" class="normal_select">
+							<foreach name="navcats" item="vo">
+								<php>$navcid_selected=$navcid==$vo['navcid']?"selected":"";</php>
+								<option value="{$vo.navcid}" {$navcid_selected}>{$vo.name}</option>
+							</foreach>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">上级:</label>
+						<div class="controls">
+							<select name="parentid" class="normal_select">
+								<option value="0">/</option>
+								{$nav_trees}
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">名称:</label>
+						<div class="controls">
+							<input type="text" class="input" name="name" value="">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">应用:</label>
+						<div class="controls">
+							<input type="text" class="input" name="app" value="Teacher">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">模块:</label>
+						<div class="controls">
+							<input type="text" class="input" name="model" value="">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">方法:</label>
+						<div class="controls">
+							<input type="text" class="input" name="action" value="">
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label">图标:</label>
+						<div class="controls">
+							<input type="text" class="input" name="icon" value="">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">显示:</label>
+						<div class="controls">
+							<select name="status"><option value="1">显示</option>
+								<option value="0">隐藏</option></select>
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label">类型:</label>
+						<div class="controls">
+							<select name="type" class="normal_select">
+								<option value="1" selected>权限认证+菜单</option>
+								<option value="0">只作为菜单</option>
+							</select>
+							注意：“权限认证+菜单”表示加入后台权限管理，纯碎是菜单项请不要选择此项。
+						</div>
+					</div>
+				</fieldset>
+				<div class="form-actions">
+					<button type="submit"
+						class="btn btn-primary btn_submit J_ajax_submit_btn">添加</button>
+					<a class="btn" href="__URL__">返回</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script>
+		$(function() {
+
+			
+			$("#navcid_select").change(function() {
+				if(location.search.indexOf("?")>=0){
+					location.href = location.href + "&cid=" + $(this).val();
+				}else{
+					location.href = location.href + "?cid=" + $(this).val();
+				}
+				
+				
+			});
+
+			$("#selecthref").click(function() {
+				$('#outlink_input').removeAttr('name');
+				$('#selecturl').attr({
+					'checked' : 'checked',
+					'name' : 'href'
+				});
+			});
+			$("input[name='href']").click(function() {
+				$('#selecthref').removeAttr('name');
+				$('#outlink').attr({
+					'checked' : 'checked',
+					'name' : 'href'
+				});
+			});
+			/*
+			Wind.use('ajaxForm','artDialog','iframeTools', function () {
+			 	$("#href_input").click(function(){
+			 		art.dialog.open("{:u('nav/select')}", {
+			            title: "选择链接地址",
+			            close: function () {
+			    			var checked_v = art.dialog.data('checked_v');
+			    			if (checked_v !== undefined) $('#href_input').val(checked_v);
+			    			var checked_u = art.dialog.data('checked_u');
+			    			if (checked_u !== undefined) $('#u_input').val(checked_u);
+			    		}
+			        },false);
+				});
+			});
+			 */
+		});
+	</script>
+
+</body>
+</html>

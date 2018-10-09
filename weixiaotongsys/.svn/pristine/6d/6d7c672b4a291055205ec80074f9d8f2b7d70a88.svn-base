@@ -1,0 +1,108 @@
+<admintpl file="header"/>
+<style>
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+    }
+</style>
+<body class="J_scroll_fixed">
+<div class="tab-content">
+    <ul class="nav-tabs" style=" margin-top:30px; height:28px; list-style:none; margin-left: 0;">
+        <li class="active"><a href="javascript:history.go(-1);">返回</a></li>
+        <!--<li><a href="{:U('JobManage_add')}"  target="_self">新增招聘</a></li>-->
+    </ul>
+
+    <form class="J_ajaxForm" action="" method="post">
+        <div class="table-responsive" style="margin-top: 20px;overflow:auto;">
+            <table class="table table-hover table-bordered table-list">
+                <thead>
+                <tr style="background-color:#e2e2e2;">
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>学历</th>
+                    <th>手机号码</th>
+                    <!--<th>工作性质</th>-->
+                    <!--<th>职位月薪</th>-->
+                    <!--<th>联系方式</th>-->
+                    <th>时间</th>
+                    <!--<th>操作</th>-->
+                </tr>
+                </thead>
+                <php>
+                    $experience=array("1"=>"半年","2"=>"1年","3"=>"1年以上");
+                    $sex=array("1"=>"男","2"=>"女");
+                    $education_type=array("1"=>"小学学历","2"=>"高中学历","3"=>"大专学历","4"=>"本科学历","5"=>"研究生学历");
+                    $type=array("1"=>"主职","2"=>"兼职");
+                    $salary=array("1"=>"3k-5k","2"=>"5k-1w","3"=>"1w以上")
+                </php>
+                <foreach name="jobmanage" item="vo">
+                    <tr>
+                        <td>{$vo.name}</td>
+                        <td>{$sex[$vo[sex]]}</td>
+                        <td>{$education_type[$vo[education_type]]}</td>
+                        <td>{$vo.phone}</td>
+                        <td>{$vo.create_date}</td>
+                        <!--<td>-->
+                            <!--&lt;!&ndash;<a href="{:U('edit',array('id'=>$vo['id']))}">修改</a> |&ndash;&gt;-->
+                            <!--<a href="{:U('job_delete',array('id'=>$vo['id']))}" class="J_ajax_del">删除</a>-->
+                            <!--<a href="{:U('jobmanage_enroll_list',array('id'=>$vo['id']))}" class="J_ajax_del">|查看应聘</a>-->
+                        <!--</td>-->
+                    </tr>
+                </foreach>
+            </table>
+        </div>
+
+
+        <div class="pagination">{$Page}</div>
+
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    function refersh_window() {
+        var refersh_time = getCookie('refersh_time');
+        if (refersh_time == 1) {
+            window.location = "{:U('SchoolNoticeManage/index',$formget)}";
+        }
+    }
+    setInterval(function () {
+        refersh_window();
+    }, 2000);
+    $(function () {
+        setCookie("refersh_time", 0);
+        Wind.use('ajaxForm', 'artDialog', 'iframeTools', function () {
+            //批量移动
+            $('.J_articles_move').click(
+                function (e) {
+                    var str = 0;
+                    var id = tag = '';
+                    $("input[name='ids[]']").each(function () {
+                        if ($(this).attr('checked')) {
+                            str = 1;
+                            id += tag + $(this).val();
+                            tag = ',';
+                        }
+                    });
+                    if (str == 0) {
+                        art.dialog.through({
+                            id: 'error',
+                            icon: 'error',
+                            content: '您没有勾选信息，无法进行操作！',
+                            cancelVal: '关闭',
+                            cancel: true
+                        });
+                        return false;
+                    }
+                    var $this = $(this);
+                    art.dialog.open(
+                        "__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="
+                        + id, {
+                            title: "批量移动",
+                            width: "80%"
+                        });
+                });
+        });
+    });
+</script>
+</body>
+</html>

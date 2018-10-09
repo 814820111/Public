@@ -1,0 +1,42 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">开通学校列表</a></li>
+
+    </ul>
+    <form class="well form-search" method="post" action="{:U('MonitorAdmin/index')}">
+        <div class="mb10">
+此处搜索暂空
+        </div>
+    </form>
+    <php>
+        $status=array("1"=>"已开通","0"=>"未开通");
+    </php>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>学校名称</th>
+            <th>是否开通摄像头</th>
+            <th>是否开通直播摄像头</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="info" item="vo">
+            <tr>
+                <td>{$vo.school}</td>
+                <td>{$status[$vo['video']]}</td>
+                <td>{$status[$vo['live']]}</td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination" style="float: left">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/css/xiaoyuanshipu.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__Public/js/new_file.js"></script>
+</head>
+
+<body>
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <input type="hidden" value={$grade} id="grade">
+    <div class="big" style="margin-top: 40px;">
+        <div class="box">
+            <div class="center">
+                <div class="haoba "><img class="left" src="__TMPL__Public/images/img09a.png"></div>
+                <div class="shijian"> </div>
+                <div class="jia" style="position: relative;top: -39px;"><img class="right" id="hou" src="__TMPL__Public/images/img08a.png">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="jiang">
+            <!--<span class="wenzi">星期一&nbsp;&nbsp;&nbsp;(2016-09-01)</span>
+			<div class="neirongbox">
+				<div class="neirong">
+					<span class="left">早餐</span>
+					<div class="right">
+						<p>鸡蛋、牛奶、小米粥</p>
+						<img src="__TMPL__Public/images/img10a.png">
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			
+			</div>-->
+        </div>
+    </div>
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 校园食谱
+        <div class="clearfix"></div>
+    </div>
+    <div class="new" style=" background-color: #06c18e;color: white;position: fixed;width: 60px;text-align: center;line-height: 60px;border-radius: 50%;font-size: 14px;bottom: 50px;right: 10px;">
+        <a href="{:U('addcook')}" style=" text-decoration: none;color: inherit;">发布</a>
+    </div>
+    <script>
+        (function($) {
+            $.extend({
+                myTime: {
+                    /**
+                     * 当前时间戳
+                     * @return <int>        unix时间戳(秒)
+                     */
+                    CurTime: function(){
+                        return Date.parse(new Date())/1000;
+                    },
+                    /**
+                     * 日期 转换为 Unix时间戳
+                     * @param <string> 2014-01-01 20:20:20  日期格式
+                     * @return <int>        unix时间戳(秒)
+                     */
+                    DateToUnix: function(string) {
+                        var f = string.split(' ', 2);
+                        var d = (f[0] ? f[0] : '').split('-', 3);
+                        var t = (f[1] ? f[1] : '').split(':', 3);
+                        return (new Date(
+                                        parseInt(d[0], 10) || null,
+                                        (parseInt(d[1], 10) || 1) - 1,
+                                        parseInt(d[2], 10) || null,
+                                        parseInt(t[0], 10) || null,
+                                        parseInt(t[1], 10) || null,
+                                        parseInt(t[2], 10) || null
+                                )).getTime() / 1000;
+                    },
+                    /**
+                     * 时间戳转换日期
+                     * @param <int> unixTime    待时间戳(秒)
+                     * @param <bool> isFull    返回完整时间(Y-m-d 或者 Y-m-d H:i:s)
+                     * @param <int>  timeZone   时区
+                     */
+                    UnixToDate: function(unixTime, isFull, timeZone) {
+                        if (typeof (timeZone) == 'number')
+                        {
+                            unixTime = parseInt(unixTime) + parseInt(timeZone) * 60 * 60;
+                        }
+                        var time = new Date(unixTime * 1000);
+                        var ymdhis = "";
+                        ymdhis += time.getUTCFullYear() + "-";
+                        ymdhis += (time.getUTCMonth()+1) + "-";
+                        ymdhis += time.getUTCDate();
+                        if (isFull === true)
+                        {
+                            ymdhis += " " + time.getUTCHours() + ":";
+                            ymdhis += time.getUTCMinutes() + ":";
+                            ymdhis += time.getUTCSeconds();
+                        }
+                        return ymdhis;
+                    }
+                }
+            });
+        })(jQuery);
+        $("document").ready(function() {
+            var schoolid = $("#schoolid").val();//学校ID
+            var grade = $("#grade").val();//年级
+            var myDate = new Date(); //实例一个时间对象；
+            var nian = myDate.getFullYear(); //获取当前的年
+            var yue = myDate.getMonth() + 1; //获取当前的月份
+            var dangqian = String(myDate.getDate()); //获取当前的日
+            //付给时间选择器的当前时间的时间
+            var xuanze = nian + "-" + yue + "-" + dangqian;
+            var date = new Date();
+            $(".shijian").text(xuanze);
+            var dangqian = $(".shijian").text();
+            var dang = getMyDay(new Date(dangqian));
+            if (dang == 2) {
+                var xinji = 1;
+            } else if (dang == 3) {
+                var xinji = 2;
+            } else if (dang == 4) {
+                var xinji = 3;
+            } else if (dang == 5) {
+                var xinji = 4
+            } else if (dang == 6) {
+                var xinji = 5
+            } else if (dang == 7) {
+                var xinji = 6
+            } else {
+                var xinji = 0;
+            }
+            var yi = cc(xuanze, xinji); //开始的时间
+
+            var yessu = sd(yi, 7); //结束的时间
+
+            var begindate = transdate(yi);
+
+            var enddate = transdate(yessu);
+
+            alert($.myTime.UnixToDate(begindate));
+            alert($.myTime.UnixToDate(enddate));
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=school&a=getCookbookContent',
+                async: true,
+                data: {
+                    schoolid: schoolid,
+                    begindate: begindate,
+                    grade:grade,
+                    enddate: enddate
+                },
+                dataType: 'json',
+                success: function(res) {
+                    console.log(res);
+
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        var title = res[i].title //食谱的标题
+                        var content = res[i].content //吃什么
+                        var pic = res[i].photo //食物的照片
+                        var date = $.myTime.UnixToDate(res[i].date);
+                        week = res[i].week;
+                        html += '<span class="wenzi">'+'星期'+week+'&nbsp;&nbsp;'+date+'</span>'
+//                        html += '<span class="wenzi">星期一&nbsp;&nbsp;&nbsp;(2016-09-01)</span>'
+                        html += '<div class="neirongbox">'
+                        html += '<div class="neirong">'
+                        html += '<span class="left">' + title + '</span>'
+                        html += '<br>'
+                        html += '<div class="right">'
+                        html += '<p>' + content + '</p>'
+//                        html += '<img src="__ROOT__/uploads/microblog/' + pic + '">'
+                        html += '</div>'
+                        html += '<div class="clearfix"></div>'
+                        html += '<br>'
+                        html += '</div>'
+
+                        html += '</div>'
+                    }
+                    $(".jiang").append(html);
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+
+            $(".haoba").click(function() {
+                var jiazhi = $(".shijian").text();
+                var reg = /-/g;
+                var jiazhis = jiazhi.replace(reg, '/');
+
+                if (xuanze != jiazhi) {
+                    xin = 7
+                } else {
+
+                    xin = 7 + xinji
+                }
+                var yi = cc(jiazhis, xin);
+                //alert(yi);
+                yi = yi.replace("010","10");
+                yi = yi.replace("011","11");
+                yi = yi.replace("012","12");
+                $(".shijian").text(yi);
+            })
+
+            $(".jia").click(function() {
+                    var jiazhi = $(".shijian").text();
+               // alert(jiazhi);
+                    var reg = /-/g;
+                    var jiazhis = jiazhi.replace(reg, '/');
+                    if (jiazhi == xuanze) {
+                        si = 7 - xinji;
+                    } else {
+                        si = 7;
+                    }
+                    var ye = sd(jiazhis, si);
+                    ye = ye.replace("010","10");
+                    ye = ye.replace("011","11");
+                    ye = ye.replace("012","12");
+                    $(".shijian").text(ye);
+
+                })
+                //div的监听事件
+            $(".shijian").bind('DOMNodeInserted', function(e) {
+                $(".jiang").text("");
+                var jianting = $(".shijian").text();
+                var reg = /-/g;
+                var jiazhis = jianting.replace(reg, '/');
+                var kais = sd(jiazhis, 7);
+                var enddate = transdate(kais);
+                //开始的时间
+                var begindate = transdate(jiazhis);
+                //结束的时间
+                alert($.myTime.UnixToDate(begindate));
+                alert($.myTime.UnixToDate(enddate));
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=school&a=getCookbookContent',
+                    async: true,
+                    data: {
+                        schoolid: schoolid,
+                        enddate: enddate,
+                        grade:grade,
+                        begindate: begindate
+                    },
+                    dataType: 'json',
+
+                    success: function(res) {
+                        var htmls = "";
+                        res = eval(res.data);
+                        for (var i = 0; i < res.length; i++) {
+                            var title = res[i].title //食谱的标题
+                            var content = res[i].content //吃什么
+                            var pic = res[i].photo //食物的照片
+                            var date = $.myTime.UnixToDate(res[i].date);
+                            week = res[i].week;
+                            htmls += '<span class="wenzi">'+'星期'+week+'&nbsp;&nbsp;'+date+'</span>'
+//                            htmls += '<span class="wenzi">星期一&nbsp;&nbsp;&nbsp;</span>'
+                            htmls += '<div class="neirongbox">'
+                            htmls += '<div class="neirong">'
+                            htmls += '<span class="left">' + title + '</span>'
+                            htmls += '<br>'
+                            htmls += '<div class="right">'
+                            htmls += '<p>' + content + '</p>'
+//                            htmls += '<img src="__ROOT__/uploads/microblog/' + pic + '">'
+                            htmls += '</div>'
+                            htmls += '<div class="clearfix"></div>'
+                            htmls += '<br>'
+                            htmls += '</div>'
+
+                            htmls += '</div>'
+
+                        }
+                        $(".jiang").append(htmls);
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+
+                });
+            });
+
+        });
+
+        $(".fanhui").click(function() {
+            window.history.go(-1);
+            //location.href = "__ROOT__/index.php/weixin/Tindex";
+        })
+    </script>
+</body>
+
+</html>

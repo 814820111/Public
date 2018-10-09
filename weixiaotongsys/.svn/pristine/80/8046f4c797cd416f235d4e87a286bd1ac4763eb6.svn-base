@@ -1,0 +1,362 @@
+<teachertpl file="header"/>
+ <script src="__ROOT__/statics/js/layer/layer.js" type="text/javascript"></script>
+<style type="text/css">
+	.touchlei{ background-color:#eeeeee;}
+</style>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="js/fileinput.js" type="text/javascript"></script>
+<script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="js/fileinput.js" type="text/javascript"></script>
+<script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
+
+<link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+<script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+<script src="__ROOT__/statics/js/common.js"></script>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 30%; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+.main td{    text-align: center;}
+          .modal.fade.in {
+      top: 0%;
+          }
+            tr .pai {
+        background-color: #e2e2e2;
+         text-align: center;
+      }
+            tr .pai2 {
+        text-align: center;
+        font-size: 14px;
+        color: black;
+      }
+
+
+</style>
+
+<body>
+      <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+            <li class="active"><a href="{:U('index_todo')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">待办工作</a></li>
+            <li><a href="{:U('index_done')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">已办工作</a></li>
+            <li><a href="{:U('index_find')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">工作查询</a></li>
+            <li><a href="{:U('add')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">新建工作</a></li>
+      </ul>
+
+ <div style="margin-left: 25px;margin-right: 20px;">
+
+    <!-- 办理流程图 -->
+
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; ">
+                      <div class="modal-dialog" style="    margin-top: 0;">
+                        <div class="modal-content">
+                          <div class="modal-header" style="background: white">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: relative;
+    left: -12px;"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight:bold;"><span class="stuname"></span>班学生信息</h5>
+                            <hr>
+                          </div>
+                          <div class="modal-body2" style="max-height: 300px; overflow-y: auto;">
+                             <div class="table-responsive main">
+             
+                   
+                
+        
+                  </div>
+    
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="background: white; color:black; font-weight:bold;">关闭</button>
+                           
+                          </div>
+                       
+                        </div>
+                      </div>
+         </div>          
+<!-- //办理 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; ">
+              <form action="{:U('work_post')}" " method="get">
+                      <div class="modal-dialog" style="    margin-top: 0;">
+                        <div class="modal-content">
+                          <div class="modal-header" style="background: white">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: relative;
+    left: -12px;"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight:bold;"><span class="stuname"></span>办理</h5>
+                            <hr>
+                          </div>
+                          <div class="modal-body2"  style="max-height: 300px;     overflow-y: auto;">
+                             <div class="table-responsive hu" >
+                             <h5 style="margin-left: 14px">申请人:<em style="font-style:normal;"></em></h5>
+                             <hr>
+                             <h5 style="margin-left: 14px">申请内容:<em style="font-style:normal; "></em></h5>
+                             <hr>
+                             <h5 style="margin-left: 14px">上一步处理意见:<em style="font-style:normal; "></em></h5>
+                             <hr>
+                             <h5 style="margin-left: 14px">我的处理意见:</h5>
+                             <textarea row cols name="content" style="width: 500px; height: 100px; margin-left: 14px"></textarea>
+                             <br>
+                              <input type="hidden" class="schedule" name="schedule">
+                              <input type="hidden" class="next_id" name="next_id">
+                             <input type="radio" class="next_work" name="todo" style="margin-left: 14px;" value="1">选择下一步&nbsp;&nbsp;<input class="done" value="2" type="radio" name="todo">选择办结(结束工作)
+                             <br>
+                             <select  class="teachers" name="teachers" style="margin-left: 14px; margin-top: 10px;display: none; color: black; ">
+                          
+                               <option>请选择老师</option>
+                               <foreach name="teachers" item="vo">
+                               <option value="{$vo.id}">{$vo.name}</option>
+                                </foreach>
+                             </select>
+                          
+        
+                         </div>
+    
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="background: white; color:black; font-weight:bold;">关闭</button>
+                            <input  type="submit" class="btn btn-info stu_dao" style="font-weight:bold;" >
+                          </div>
+                       </form>
+                        </div>
+                      </div>
+         </div>     
+
+
+
+
+    <form class="js-ajax-form" action="" method="post" action="{:U('ToduSchedule/index_todo')}">
+      <table class="table table-hover table-bordered table-list">
+        <thead>
+          <tr style="background-color:#CCC;">
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">待办工作id</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">待办工作</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">发起人</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">待办内容</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">当前步骤</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">上一步经办人</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">流程开始时间</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">状态</th>
+            <th class="pai" style=" border-left: none;border-width: 0.5px;">操作</th>
+          </tr>
+        </thead>
+        <foreach name="lists" item="vo">
+        <tr>
+          <td class="pai2">{$vo.scheduleid}</td>
+          <td class="pai2">{$vo.title}</td>
+          <td class="pai2">{$vo.s_name}</td>
+          <td class="pai2">{$vo.content}</td>
+          <td class="pai2">{$vo.step}</td>
+          <td class="pai2">{$vo.next_name}</td>
+          <td class="pai2">{$vo.create_time|date="Y-m-d H:i:s",###}</td>
+          <td class="pai2"><if condition="$vo['read_time'] == null">未接收<else/>办理中</if></td>
+          <td class="pai2">
+            <input type="hidden" value="{$vo.feedback}">
+            <a class="handle" style="cursor: pointer; background-color: transparent;color: #00c1dd;" data-toggle="modal" data-target="#myModal2" data-id={$vo.id}>办理</a>  <a  class="show_t" style="cursor: pointer;background-color: transparent;color: #00c1dd;" data-toggle="modal"  data-id={$vo.scheduleid}>办理流程图</a>
+          </td>
+
+
+        </tr>
+        </foreach>
+      </table>
+      <div class="pagination">{$Page}</div>
+    </form>
+  </div>
+
+
+
+
+</body>
+</html>
+<script>
+
+
+
+
+$('.next_work').click(function(){
+    $('body').find('.teachers').css("display","block")
+
+});
+
+$('.done').click(function(){
+
+ $('body').find('.teachers').css("display","none")
+
+})
+
+
+$('.handle').click(function(){
+
+  id = $(this).attr('data-id');
+
+ var sum = screen.width+screen.height;
+
+    if(sum<'2240')
+   {
+    $(".hu").css("height",'200px');
+
+   }
+
+
+   
+ $('.schedule').val(id);
+  
+  work_id = $(this).parent().parent().find("td:eq(0)").text();
+
+  $('.next_id').val(work_id);
+
+  one_name = $(this).parent().parent().find("td:eq(2)").text();
+
+  content = $(this).parent().parent().find("td:eq(3)").text();
+
+  next_contnet = $(this).prev().val();
+
+   var obj = $(this).parent().prev();
+ 
+
+  $('.hu').find("em:eq(0)").text(one_name);
+  $('.hu').find("em:eq(1)").text(content);
+   $('.hu').find("em:eq(2)").text(next_contnet);
+
+  var aa =  $(this).parent().prev().text();
+  
+  if(aa=='未接收')
+  {
+    banli(id,obj);
+  }
+
+})
+
+
+//办理
+function banli(id,obj)
+{
+  
+     $.ajax({
+                type:'get',
+                url: "{:U('Teacher/ToduSchedule/banli')}",
+                dataType:'json',
+                data: {
+                  'id': id,           
+               },
+                success:function(data){
+                      //console.log(data);
+                     // console.log(cbj);
+                    // console.log(data.msg.length);
+                    if(data.status){
+                        obj.text('办理中'); 
+                    }else{
+                        alert('数据有误');
+                    }
+                },
+                //请求失败
+                error:function(){
+                   alert('请求失败')
+                }
+            })
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.show_t').click(function(){
+
+   var  id = $(this).attr('data-id');
+  console.log(id);
+  
+layer.load();
+
+  var obj =$('body').find('.main');
+   var sum = screen.width+screen.height;
+
+    if(sum<'2240')
+   {
+    $(".main").css("height",'200px');
+
+   }
+
+  var ss = $('body').find('.ss');
+  show_tAjax(id,obj,ss);
+
+  //var ss = $('body').find('.ss');
+ //console.log(ss);
+   // ss.remove()
+})
+
+function show_tAjax(id,obj,ss)
+{
+  
+     $.ajax({
+                type:'get',
+                url: "{:U('Teacher/ToduSchedule/show_t')}",
+                dataType:'json',
+                data: {
+                  'id': id,           
+               },
+                success:function(data){
+                       setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                         $("#myModal1").modal("show")  
+                      //console.log(data);
+                     // console.log(cbj);
+                    // console.log(data.msg.length);
+                    if(data.status){
+                    ss.remove()
+                     for(var i = 0; i < data['msg'].length; i++){
+                      // if(data['msg'][i]['arrivetime']== undefined )
+                      // {
+                      //   data['msg'][i]['arrivetime']='';
+                      // }
+                      // if(data['msg'][i]['card']==null)
+                      // {
+                      //   data['msg'][i]['card']='';
+                      // }
+                        if(data['msg'][i]["step"]=='第1步')
+                        {
+                          obj.append("<table class='table ss'  table-hover table-bordered table-list border=1  style='margin: 0 auto;width: 500px; margin-bottom:10px;'> <thead><tr style=margin-bottom:10px;><td colspan=4>"+data['msg'][i]['step']+"<em style='font-style:normal; color:red'>["+data['msg'][i]['status']+"]<em></td><tr><tr><td width=20%>办理者</td><td>"+data['msg'][i]["name"]+"</td></tr><tr> <td width=20%>工作内容</td><td colspan=3>"+data['msg'][i]["feedback"]+"</td></tr><tr> <td >创建时间</td><td>"+data['msg'][i]["create_time"]+"</td></tr> </thead></table>")
+                        }else{
+
+                        obj.append("<table class='table ss' table-hover table-bordered table-list border=1 style='margin: 0 auto;width: 500px; margin-bottom:10px;'> <thead><tr style=margin-bottom:10px;><td colspan=4>"+data['msg'][i]['step']+"<em style='font-style:normal; color:red'>["+data['msg'][i]['status']+"]<em></td><tr><tr><td width=20%>办理者</td><td colspan=3>"+data['msg'][i]["name"]+"</td></tr><tr> <td width=20%>办理意见</td><td colspan=3>"+data['msg'][i]["feedback"]+"</td></tr><tr> <td >接收时间</td><td>"+data['msg'][i]["read_time"]+"</td><td>完成时间</td><td>"+data['msg'][i]['do_time']+"</td></tr> </thead></table>")
+                          }
+                     }
+                    }else{
+                        alert('数据有误');
+                    }
+                },
+                //请求失败
+                error:function(){
+                   alert('请求失败')
+                }
+            })
+
+
+}
+
+
+</script>

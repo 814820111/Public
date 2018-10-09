@@ -1,0 +1,671 @@
+<admintpl file="header" />
+<link type="text/css" rel="stylesheet" href="__ROOT__/xp_qian/css/tjcg.css" />
+<style>
+/*公共样式*/\
+*{ margin:0; padding:0;}
+ul{ margin:0; padding:0;}
+body{ font-family:微软雅黑;}
+.main{ width:990px; height:auto; overflow:hidden; margin:0 auto;}
+a{ text-decoration:none;}
+li{ list-style:none;}
+img{ max-height:100%; max-width:100%;}
+
+.qrcj{
+	background:none;
+    border:none;
+    outline:medium;
+	alpha:0;
+	appearance:none;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-modify:read-write-plaintext-only;
+	
+}
+.join_nav{ width:700px; height:auto; overflow:hidden; border:1px solid #979797;  position:fixed; left:0;top:0; background: #fff; z-index: 3; display:none; }
+.as_top{ width:100%; height:61px; overflow:hidden;}
+.as_close{ width:61px; height:61px; overflow:hidden; float:right; background:url(/xp_qian/images/close.png) center center no-repeat;}
+.yhq_nav{ width:auto; height:auto; margin:0 20px;}
+.cj_yhq{ width:80%; height:auto; line-height:30px; font-size:20px; padding-bottom:10px; border-bottom:1px solid #f2f2f2;}
+.fill_nav{ width:auto; height:auto; margin:20px 0 0 20px;  }
+.tong{width:auto; height:auto; line-height:40px; float:left; margin-bottom:11px; float:left;}
+.left_nav{ width:95px; text-align:right; }
+.right_nav{ width:105px; margin:0 0 0 20px;}
+.divselect{width:105px; height:40px; padding-left:30px;background:#f2f2f2 url(xp_qian/images/xjt.png) no-repeat right center;}
+.div_text{height:40px; padding-left:10px;background:#f2f2f2;}
+.qrcj{ width:auto; height:42px; line-height:42px; overflow:hidden; text-align:center; color:#fff; background:red; margin:0px 300px; display:block; font-size:20px; border-radius:5px; }
+.payS span {
+    width: 70px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #999;
+    margin-right: 15px;
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+span.active {
+    border: 1px solid #e36367;
+    background: url("__ROOT__/xp_qian/images/foot_imgs/choose.png") no-repeat right bottom;
+}
+
+.fffloadingBox{position:fixed; left:0; top:0; display: none; z-index:100; background-color: #E2E2E2; padding-bottom: 20px; border: 1px solid #B7B7B7;}
+.fffshdaw{width:100%; height:100%;  background: #fff; opacity:0.9;  z-index:99;position:fixed; left:0; top:0;  display:none;}  
+
+</style>
+<script type="text/javascript" >
+function getid(_sId){
+ return document.getElementById(_sId);
+ }
+function hide(_sId)
+ {
+	 getid(_sId).style.display = getid(_sId).style.display == "none" ? "" : "none";
+	 getid(_sId).css = getid(_sId).css("z-index","999999");
+	 }
+ 
+function pick(v) {
+ document.getElementById('divselect').value=v;
+hide('input1')
+
+}
+function pick1(v) {
+ document.getElementById('divselect1').value=v;
+hide('input2')
+
+}
+
+function bgcolor(id){
+ document.getElementById(id).style.background="#e63736";
+ document.getElementById(id).style.color="#fff";
+}
+function nocolor(id){
+ document.getElementById(id).style.background="";
+ document.getElementById(id).style.color="#000";
+}
+
+</script>
+<body class="J_scroll_fixed">
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a>定制管理</a></li>
+		</ul>
+		
+		
+		
+		<form class="well form-search" id='search' method="post" action="{:U('orders')}">
+			<div class="search_type cc mb10">
+			定制总数: <span style="color:red">{$num.all_num}</span>&emsp;&emsp;
+			<!-- 预订订单总数: <span style="color:red">{$num.yd_num}</span>&emsp;&emsp;
+			取消订单总数: <span style="color:red">{$num.qx_num}</span>&emsp;&emsp; -->
+			<!-- 总数: <span style="color:red">{$num.zf_num}</span>&emsp;&emsp; -->
+			<br><br>
+			<div class="search_type cc mb10">
+				<div class="city pr">
+						<div style="width:auto; height:auto; float:left;">
+							定制时间：
+							<input type="text" id='xd_start_time' onblur='xd_check_start();' name="xd_start_time" class="J_date" value="{$xd_start_time|default=''}" style="width: 86px;" autocomplete="off"> - 
+							<input type="text" id='xd_end_time' onblur='xd_check_end();' class="J_date" name="xd_end_time" value="{$xd_end_time|default=''}" style="width: 86px;" autocomplete="off"> &nbsp; &nbsp;
+
+						</div>
+					&emsp;&emsp;&nbsp;&emsp;&nbsp;&nbsp;
+				</div>	
+			</div>
+				<br>
+				<div class="mb10">
+					<span class="mr20">
+						<input type="text" name="keyword" id='keyword' style="width: 200px;" value="{$keyword}" placeholder="用户名\手机号">
+					</span>
+				</div>
+				<br>
+				<div class="mb10">
+					<span class="mr20">
+						
+						<span onclick='clear_condition();'>清除条件</span>&nbsp; 
+						<input type="submit" class="btn btn-primary" value="查询" />
+						
+					</span>
+				</div>
+			</div>
+		</form>
+		<form method="post" class="J_ajaxForm" action="#">
+			<div class="table_list">
+				<table class="table table-hover table-bordered" id="tableFixed">
+					<thead>
+						<tr>
+							<th align='center' class='Column1' >序号　</th>
+							<th align='center' class='Column2' >订单号　</th>
+							<th class='Column3' >学校</th>
+							<th class='Column3' >班级</th>
+							<th class='Column3' >缴费人</th>
+							<th class='Column3' >学生姓名</th>
+							<th class='Column4' >手机号码</th>
+							<th class='Column5' >套餐名称</th>
+							<th class='Column6' >生效时间</th>
+							<th class='Column7' >截止时间</th>
+							<th class='Column10' >下单时间</th>
+							<th class='Column12' >金额</th>
+							<th class='Column13' >支付方式</th>
+							<th class='Column13' >订单状态　</th>
+							<th class='Column14' >备注　</th>
+							<?php if (session('ADMIN_ID') == 26 || session('ADMIN_ID') == 1) { ?>
+							<th align='center'>操作</th>
+							<?php } ?>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 状态：-1已取消，1:未付款，2未发货，3未确认，4买家未评价，5卖家未评价，10订单完成 -->
+						<php>$order_statuses=array("-1"=>"已取消","1"=>"未付款","2"=>"已付款","10"=>"订单完成");</php>
+						<php>$pay_statuses=array("alipay_notify"=>"支付宝","alipay"=>"支付宝","weixin_notify"=>"微信","weixin"=>"微信");</php>
+						<foreach name="orders_data" item="val">
+						<tr>
+							<td id='showid{$val.id}' class='Column1'>{$val.showid}</td>
+							<input type='hidden' id='id{$val.id}' value='{$val.id}' />
+							<td id='order_num{$val.id}' class='Column2'>{$val.order_num}</td>
+							<input type='hidden' id='order_state{$val.id}' value='{$val.state}' />
+							<td id='schoolname{$val.id}' class='Column3'>{$val.schoolname|default='未填写'}</td>
+							<td id='classname{$val.id}' class='Column3'>{$val.classname|default='未填写'}</td>
+							<td id='parentname{$val.id}' class='Column4'>{$val.parentname}</td>
+							<td id='studentname{$val.id}' class='Column9'>{$val.studentname}</td>
+							<td id='phone{$val.id}' class='Column9'>{$val.phone}</td>
+							<td id='mealname{$val.id}' class='Column7'>{$val.mealname}</td>
+							<td class='Column10'>{$val.begintime|date="Y/m/d",###}<br />{$val.begintime|date="H:i:s",###}</td>
+							<td class='Column11'>{$val.endtime|date="Y/m/d",###}<br />{$val.endtime|date="H:i:s",###}</td>
+							<td class='Column12'>{$val.createtime|date="Y/m/d",###}<br />{$val.createtime|date="H:i:s",###}</td>
+							<td class='Column12'>{$pay_statuses[$val['money']]}</td>
+							<td class='Column12'>{$pay_statuses[$val['paytype']]}</td>
+							<td class='Column12'>{$val.delivery}</td>
+							<td class='Column13'>{$order_statuses[$val['state']]}
+								<if  condition="$val['state'] egt 4">
+								<br/>{$val.completetime|date="Y/m/d ",###}<br />{$val.completetime|date="H:i:s",###}
+								</if>
+								{$val.comment}
+							</td>
+							<td id='remarks{$val.id}' class='Column14'>{$val.remarks}</td>
+							<?php if (session('ADMIN_ID') == 26 || session('ADMIN_ID') == 1) { ?>
+							<td>
+							<button onclick="send({$val.phone})">发送短信</button></td>
+							<?php } ?>
+						</tr>
+						</foreach>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">{$Page}</div>
+		</form>
+	</div>
+	<!--弹出框 start-->
+	<div class="join_nav" id="envon" >
+		 <div class="as_top"><a href="javascript:EV_closeAlert()" class="as_close"  ></a></div>
+		 <form method="post" class="J_ajaxForm" action="#">
+		 <div class="yhq_nav">
+				<div class="cj_yhq">编辑订单信息</div>
+				<div class="fill_nav">
+					<div class="tong left_nav">用户姓名：</div> 
+					<div class="tong right_nav"><input type="text" name='o_user'  value=""  class="div_text" style='width: 120px;' /></div>
+					<div class="tong left_nav" style='margin-left: 40px;'>用户手机号：</div> 
+					<div class="tong right_nav"> <input type="text" name='o_phone'  value=""  class="div_text" /></div>
+					<div style=" width:100%; height:1px; overflow:hidden;"></div>
+					<div class="tong left_nav">接送城市：</div> 
+					<div class="tong right_nav">
+					<input type="text" readonly="readonly"  value="{$city|default='全部'}" id="inputTest_js" name='js_city'  style="width:110px; height:22px; background:#f2f2f2; padding-left:33px;background:#f2f2f2 url(__ROOT__xp_qian/images/xjt.png) no-repeat right center;"/>
+					</div>
+					<div class="tong left_nav" style='margin-left: 40px'>接送地址：</div> 
+					<div class="tong right_nav"><textarea name='js_address'></textarea></div>
+					<div style=" width:100%; height:1px; overflow:hidden;"></div>
+					<div class="tong left_nav">配送城市：</div> 
+					<div class="tong right_nav">
+					<input type="text" readonly="readonly"  value="{$city|default='全部'}" id="inputTest_ps" name='ps_city'  style="width:110px; height:22px; background:#f2f2f2; padding-left:33px;background:#f2f2f2 url(__ROOT__xp_qian/images/xjt.png) no-repeat right center;"/>
+					</div>
+					<div class="tong left_nav" style='margin-left: 40px'>配送地址：</div> 
+					<div class="tong right_nav"><textarea name='ps_address'></textarea></div>
+					<div style=" width:100%; height:1px; overflow:hidden;"></div>
+
+
+					<div class="tong left_nav">入住时间：</div> 
+					<div class="tong right_nav">
+					<input type="text" class="J_date" id='xg_ps_time' name='o_pstime' style='width: 135px;' autocomplete="off" value=''>
+					</div>
+					<div class="tong left_nav" style='margin-left: 40px'>订单状态：</div> 
+					<div class="tong right_nav payS"><span class="pr" id="active" name="active" value='2'>已付尾款</span></div>
+					<div style=" width:100%; height:1px; overflow:hidden;"></div>
+
+					<div class="tong left_nav">邮编：</div> 
+					<div class="tong right_nav"> <input type="text" name='youbian'  value=""  class="div_text" /></div>
+					<div style=" width:100%; height:1px; overflow:hidden;"></div>
+
+					<div class="tong left_nav">备注：</div> 
+					<div class="tong right_nav"><textarea name='remarks'></textarea></div>
+					<div style=" width:100%; height:1px; overflow:hidden;"></div>
+				</div>
+				<input type='hidden' id='oid' name='oid' value='' />
+
+				<input type='button' class="qrcj" onclick='qrcj()' value='确认修改'>
+
+		 </div>	
+		 </form>
+	</div>
+<div class="fffshdaw" id='fffshdaw'></div>
+	<div class="fffloadingBox" id='fffloadingBox'>
+		<div class="as_top"><a href="javascript:;" class="as_close" onclick='close_psd()'></a></div>
+		<div class="yhq_nav">
+			<div class="cj_yhq">修改订单状态</div>
+			<div class="fill_nav">
+				<div class="tong left_nav">管理员密码：</div> 
+				<div class="tong right_nav"><input type="password" name='admin_pwd'  value=""  class="div_text" style='width: 120px;' /></div>
+				<div style=" width:100%; height:1px; overflow:hidden;"></div>
+			</div>
+			<input type='button' class="qrcj" onclick='sub_qrcj()' value='确认'>
+		</div>
+	</div>
+</div>
+	<!--弹出框 start-->
+
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript" src="__ROOT__xp_qian/js/lazyload-min.js"></script><!--选择城市-->
+    
+    <script>
+	function open_psd(){
+		var EV_MsgBox_ID = 'fffloadingBox';
+		var msgObj   = document.getElementById(EV_MsgBox_ID);
+		var EV_MsgBox_ID1 = 'fffshdaw';
+		var msgObj1   = document.getElementById(EV_MsgBox_ID1);  
+		msgObj.style.display  = "block";  
+		var msgWidth = msgObj.scrollWidth;  
+		var msgHeight= msgObj.scrollHeight;  
+		var bgTop=EV_myScrollTop();  
+		var bgLeft=EV_myScrollLeft();  
+		var bgWidth=EV_myClientWidth();  
+		var bgHeight=EV_myClientHeight();  
+		var msgTop=bgTop+Math.round((bgHeight-msgHeight)/2);  
+		var msgLeft=bgLeft+Math.round((bgWidth-msgWidth)/2);  
+		msgObj.style.position = "absolute";  
+		msgObj.style.top      = msgTop+"px";  
+		msgObj.style.left     = msgLeft+"px";  
+		msgObj.style.zIndex   = "10003";  
+		msgObj1.style.zIndex   = "10002";  
+      $(".fffloadingBox,.fffshdaw").show();
+    }
+	function close_psd() {
+		history.go(0);
+	}
+	function qrcj() {
+		var payw = $(".payS .pr").val();
+		if (payw == 1){
+			open_psd();
+		} else {
+			sub_qrcj();
+		}
+	};
+function send(phone){
+			var truthBeTold = window.prompt('请输入'); 
+			if (truthBeTold) {
+				if(phone){
+					$.ajax({
+						type:"post",
+						async:false,
+						url:"{:U('Orders/admin/send')}",
+						data:{'phone': phone, 'text': truthBeTold},
+						success: function(msg){
+							alert('成功');
+						}
+					});
+				}
+			}
+		}
+	state = '';
+	function sub_qrcj() {
+		var oid = $('#oid').val();
+		var o_user = $("input[name='o_user']").val();
+		var o_phone = $("input[name='o_phone']").val();
+		var js_city = $("input[name='js_city']").val();
+		var js_address = $("textarea[name='js_address']").val();
+		var ps_city = $("input[name='ps_city']").val();
+		var ps_address = $("textarea[name='ps_address']").val();
+		var o_pstime = $("input[name='o_pstime']").val();
+		var youbian = $("input[name='youbian']").val();
+		var remarks = $("textarea[name='remarks']").val();
+		var payw = $("select[name='orderstatus']").val();
+		if (payw == 1){
+			var admin_pwd = $("input[name='admin_pwd']").val();
+			$.ajax({
+				type:"post",
+				async:false,
+				url:"{:U('Product/Product/check_pwd')}",
+				data:{'pwd': admin_pwd},
+				success: function(msg){
+					if(msg == 2){
+						state = 1;
+					}else{
+						state = 2;
+					}
+				}
+			});
+			
+			if(state==1){
+				alert('管理员密码错误');
+				return false;
+			}
+		}
+		$.ajax({
+			type:"post",
+			url:"{:U('Orders/admin/editor')}",
+			data:{'payw': payw, 'oid': oid, 'o_user': o_user, 'o_phone': o_phone, 'js_city': js_city, 'js_address': js_address, 'youbian': youbian, 'remarks': remarks, 'ps_city': ps_city, 'ps_address': ps_address, 'o_pstime': o_pstime},
+			success: function(msg){
+				history.go(0);
+			}
+		})
+	
+	}
+
+
+
+	$('#xg_ps_time').click(function() {
+		$('#calroot').css('z-index', 99999);
+	});
+	//用来记录要显示的DIV的ID值  
+	var EV_MsgBox_ID=""; //重要  
+	  
+	//弹出对话窗口(msgID-要显示的div的id)  
+	function EV_modeAlert(msgID, ID){  
+		$('#oid').val(ID);
+		var uname = $('#uname'+ID).html();
+		var phone = $('#phone'+ID).html();
+		var address_city = $('#address_city'+ID).val();
+		var address = $('#address'+ID).val();
+		var delivery_city = $('#delivery_city'+ID).val();
+		var delivery = $('#delivery_add'+ID).val();
+		var youbian = $('#youbian'+ID).html();
+		var shoot_time = $('#shoot_time'+ID).html();
+		var remarks = $('#remarks'+ID).html();
+		var state = $('#order_state'+ID).val();
+		if (state > 4) {
+			$('.payS').html('已付尾款');
+		}
+		$("input[name='o_user']").val(uname);
+		$("input[name='o_phone']").val(phone);
+		$("input[name='js_city']").val(address_city);
+		$("textarea[name='js_address']").val(address);
+		$("input[name='ps_city']").val(delivery_city);
+		$("textarea[name='ps_address']").val(delivery);
+		$('#xg_ps_time').val(shoot_time.replace(/\s/g, ""));
+		$("input[name='youbian']").val(youbian);
+		$("textarea[name='remarks']").val(remarks);
+		//创建大大的背景框  
+		var bgObj=document.createElement("div");  
+		bgObj.setAttribute('id','EV_bgModeAlertDiv');  
+		document.body.appendChild(bgObj);  
+		//背景框满窗口显示  
+		EV_Show_bgDiv();  
+		//把要显示的div居中显示  
+		EV_MsgBox_ID=msgID;  
+		EV_Show_msgDiv();  
+	}
+
+	//关闭对话窗口  
+	function EV_closeAlert(){  
+		var msgObj=document.getElementById(EV_MsgBox_ID);  
+		var bgObj=document.getElementById("EV_bgModeAlertDiv");  
+		msgObj.style.display="none";  
+		document.body.removeChild(bgObj);  
+		EV_MsgBox_ID="";  
+	}  
+	  
+	//窗口大小改变时更正显示大小和位置  
+	window.onresize=function(){  
+		if (EV_MsgBox_ID.length>0){  
+			EV_Show_bgDiv();  
+			EV_Show_msgDiv();  
+		}  
+	}  
+	  
+	//窗口滚动条拖动时更正显示大小和位置  
+	/*
+	window.onscroll=function(){  
+		if (EV_MsgBox_ID.length>0){  
+			EV_Show_bgDiv();  
+			EV_Show_msgDiv();  
+		}  
+	}  
+	*/
+	  
+	//把要显示的div居中显示  
+	function EV_Show_msgDiv(){  
+		var msgObj   = document.getElementById(EV_MsgBox_ID);  
+		msgObj.style.display  = "block";  
+		var msgWidth = msgObj.scrollWidth;  
+		var msgHeight= msgObj.scrollHeight;  
+		var bgTop=EV_myScrollTop();  
+		var bgLeft=EV_myScrollLeft();  
+		var bgWidth=EV_myClientWidth();  
+		var bgHeight=EV_myClientHeight();  
+		var msgTop=bgTop+Math.round((bgHeight-msgHeight)/2);  
+		var msgLeft=bgLeft+Math.round((bgWidth-msgWidth)/2);  
+		msgObj.style.position = "absolute";  
+		msgObj.style.top      = msgTop+"px";  
+		msgObj.style.left     = msgLeft+"px";  
+		msgObj.style.zIndex   = "8000";  
+		  
+	}  
+	//背景框满窗口显示  
+	function EV_Show_bgDiv(){  
+		var bgObj=document.getElementById("EV_bgModeAlertDiv");  
+		var bgWidth=EV_myClientWidth();  
+		var bgHeight=EV_myClientHeight();  
+		var bgTop=EV_myScrollTop();  
+		var bgLeft=EV_myScrollLeft();  
+		bgObj.style.position   = "absolute";  
+		bgObj.style.top        = bgTop+"px";  
+		bgObj.style.left       = bgLeft+"px";  
+		bgObj.style.width      = bgWidth + "px";  
+		bgObj.style.height     = bgHeight + "px";  
+		bgObj.style.zIndex     = "7999";  
+		bgObj.style.background = "#777";  
+		bgObj.style.filter     = "progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60,finishOpacity=60);";  
+		bgObj.style.opacity    = "0.6";  
+	}  
+	//网页被卷去的上高度  
+	function EV_myScrollTop(){  
+		var n=window.pageYOffset   
+		|| document.documentElement.scrollTop   
+		|| document.body.scrollTop || 0;  
+		return n;  
+	}  
+	//网页被卷去的左宽度  
+	function EV_myScrollLeft(){  
+		var n=window.pageXOffset   
+		|| document.documentElement.scrollLeft   
+		|| document.body.scrollLeft || 0;  
+		return n;  
+	}  
+	//网页可见区域宽  
+	function EV_myClientWidth(){  
+		var n=document.documentElement.clientWidth   
+		|| document.body.clientWidth || 0;  
+		return n;  
+	}  
+	//网页可见区域高  
+	function EV_myClientHeight(){  
+		var n=document.documentElement.clientHeight   
+		|| document.body.clientHeight || 0;  
+		return n;  
+	} 
+
+	</script>	
+	
+	<!--选择城市-->
+	<script type="text/javascript">
+		LazyLoad.css(["__ROOT__xp_qian/css/cityStyleadmin.css"], function () {
+			LazyLoad.js(["__ROOT__xp_qian/js/cityScript1.js"], function () {
+				new citySelector.cityInit("inputTest");
+			});
+		});
+		LazyLoad.css(["__ROOT__xp_qian/css/cityStyledddd.css"], function () {
+			LazyLoad.js(["__ROOT__xp_qian/js/cityScript2.js"], function () {
+				new citySelector.cityInit("inputTest_js");
+				new citySelector.cityInit("inputTest_ps");
+			});
+		});
+	</script>
+	<script>
+		
+		$(function() {
+           $("#checkAll").click(function() {
+                $('input[class="J_check"]').attr("checked",this.checked); 
+			});
+            var $J_check = $("input[class='J_check']");
+            $J_check.click(function(){
+                $("#checkAll").attr("checked",$J_check.length == $("input[class='J_check']:checked").length ? true : false);
+            });
+        });
+		
+		
+		function xd_check_start()
+		{
+			var start = $('#xd_start_time').val();
+			var end = $('#xd_end_time').val();
+			if(end){
+				if(start > end){
+					$('#xd_end_time').val(start);
+				}
+			}else{
+				$('#xd_end_time').val(start);
+			}
+		}
+		
+		function xd_check_end()
+		{
+			var start = $('#xd_start_time').val();
+			var end = $('#xd_end_time').val();
+			if(start){
+				if(end < start){
+					$("#xd_end_time").val(start)
+				}
+			}else{
+				$("#xd_start_time").val(end);
+			}
+			
+		}
+
+		function ps_check_start()
+		{
+			var start = $('#ps_start_time').val();
+			var end = $('#ps_end_time').val();
+			if(end){
+				if(start > end){
+					$('#ps_end_time').val(start);
+				}
+			}else{
+				$('#ps_end_time').val(start);
+			}
+		}
+		
+		function ps_check_end()
+		{
+			var start = $('#ps_start_time').val();
+			var end = $('#ps_end_time').val();
+			if(start){
+				if(end < start){
+					$("#ps_end_time").val(start)
+				}
+			}else{
+				$("#ps_start_time").val(end);
+			}
+			
+		}
+
+		function fdj_check_start()
+		{
+			var start = $('#fdj_start_time').val();
+			var end = $('#fdj_end_time').val();
+			if(end){
+				if(start > end){
+					$('#fdj_end_time').val(start);
+				}
+			}else{
+				$('#fdj_end_time').val(start);
+			}
+		}
+		
+		function fdj_check_end()
+		{
+			var start = $('#fdj_start_time').val();
+			var end = $('#fdj_end_time').val();
+			if(start){
+				if(end < start){
+					$("#fdj_end_time").val(start)
+				}
+			}else{
+				$("#fdj_start_time").val(end);
+			}
+			
+		}
+
+
+		function fwk_check_start()
+		{
+			var start = $('#fwk_start_time').val();
+			var end = $('#fwk_end_time').val();
+			if(end){
+				if(start > end){
+					$('#fwk_end_time').val(start);
+				}
+			}else{
+				$('#fwk_end_time').val(start);
+			}
+		}
+		
+		function fwk_check_end()
+		{
+			var start = $('#fwk_start_time').val();
+			var end = $('#fwk_end_time').val();
+			if(start){
+				if(end < start){
+					$("#fwk_end_time").val(start)
+				}
+			}else{
+				$("#fwk_start_time").val(end);
+			}
+		}
+
+
+		function clear_condition(){
+			// $("#inputTest").val('全部');
+			// $("#divselect").val('全部');
+			$("#xd_start_time").val('');
+			$("#xd_end_time").val('');
+			// $("#ps_start_time").val('');
+			// $("#ps_end_time").val('');
+			$("#keyword").val('');
+			// $("#fwk_start_time").val('');
+			// $("#fdj_start_time").val(''); 
+			// $("#divselect1").val('全部');
+			$("#search").submit();
+		}
+
+$('.payS').delegate('span', 'click', function(){
+	if ($(this).hasClass('active')) {
+		$(this).removeClass("active");
+		$(this).val('2');
+	} else {
+		$(this).addClass("active");
+		$(this).val('1');
+	}
+});
+
+	function rm_col(i) {
+		if (confirm('确定隐藏这一列吗？')) {
+			$(".Column"+i).remove();  
+		}
+	}
+	var Column_14 = $("td.Column14");
+        Column_14.each(function(index, val) {
+            if ($(this).html().length > 50) {
+                var Column_14_str = $(this).html().replace(/[\s\S]{50}/, '$&<br>');
+                $(this).html(Column_14_str);
+            };
+        });
+	</script>
+</body>
+</html>

@@ -1,0 +1,1375 @@
+[ 2018-09-05T09:26:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T09:26:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T09:26:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T09:26:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T09:26:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/316
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:26:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:26:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:26:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/316
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:26:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:26:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index/menuid/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:36:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherScheduleSelect&a=add_group
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:36:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/index
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:36:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T09:36:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherScheduleSelect/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleAttendanceModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleFixationModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherScheduleGroupModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePeriodDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherSchedulePersonDetailModel
+
+[ 2018-09-05T10:20:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T10:20:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T10:20:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T10:20:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:30:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:30:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:30:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:30:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:35:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:35:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:35:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:35:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-05T18:58:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-05T18:59:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T18:59:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T18:59:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=363&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 363 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:00:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=361&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-05T19:00:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:01:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:02:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=361&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-05T19:03:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-05T19:03:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=340&plantimming=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: SELECT `plantimeint` FROM `wxt_plantimming` WHERE ( contentId = 340 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 340 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:04:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-09-05T19:04:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:11:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:11:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=363&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 363 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:12:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=340&plantimming=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: SELECT `plantimeint` FROM `wxt_plantimming` WHERE ( contentId = 340 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 340 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:12:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=366&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 366 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-05T19:12:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=361&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:12:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:12:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=367&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 367 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:12:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=362&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 362 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:13:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=340&plantimming=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0080s ]
+SQL: SELECT `plantimeint` FROM `wxt_plantimming` WHERE ( contentId = 340 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 340 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:13:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=361&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:13:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: time D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 723 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:14:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:14:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=340&plantimming=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: SELECT `plantimeint` FROM `wxt_plantimming` WHERE ( contentId = 340 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 340 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-05T19:14:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=341&plantimming=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: SELECT `plantimeint` FROM `wxt_plantimming` WHERE ( contentId = 341 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 341 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:15:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=361&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-05T19:17:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:18:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:22:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-05T19:22:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post?cookbookid=365&cook_title=%E5%8D%97%E9%9D%9E%E7%9A%84%E7%9C%BC&cook_time=2018-11-22&monday=%E6%B5%AE%E7%8E%B0&cookpic%5B%5D=&tuesday=%E5%95%8A%E5%95%8A&cookpic%5B%5D=&wednesday=23&cookpic%5B%5D=&thursday=%E5%95%8A%E5%95%8A&cookpic%5B%5D=&friday=+%E4%B8%BA3+&cookpic%5B%5D=&saturday=22AAS&cookpic%5B%5D=&sunday=2+&cookpic%5B%5D=&timing=09%3A00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0070s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536146572') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536146572') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536146572') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536146572') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536146572') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536146572') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 799 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536146572') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:22:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:23:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:24:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:24:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post?cookbookid=365&cook_title=%E5%8D%97%E9%9D%9E%E7%9A%84%E7%9C%BC&cook_time=2018-11-22&monday=%E6%B5%AE%E7%8E%B0&cookpic%5B%5D=&tuesday=%E5%95%8A%E5%95%8A&cookpic%5B%5D=&wednesday=23&cookpic%5B%5D=&thursday=%E5%95%8A%E5%95%8A&cookpic%5B%5D=&friday=+%E4%B8%BA3+&cookpic%5B%5D=&saturday=22AAS&cookpic%5B%5D=&sunday=2+&cookpic%5B%5D=&teachertype=1&timing=09%3A00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-09-05T19:26:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:26:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0060s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0050s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0050s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536146806') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536146806') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536146806') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536146806') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536146806') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536146806') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536146806') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:26:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:26:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=361&plantimming=0&teachertype=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:26:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0080s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 361 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 361 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 361 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','1','1542556800','','浮现','1536146813') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','2','1542643200','','啊啊','1536146813') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','3','1542729600','','23','1536146813') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','4','1542816000','','啊啊','1536146813') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','5','1542902400','',' 为3 ','1536146813') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','6','1542988800','','22AAS','1536146813') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('361','7','1543075200','','2 ','1536146813') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-05T19:26:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-05T19:27:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:27:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0070s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536146845') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536146845') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536146845') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536146845') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536146845') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536146845') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536146845') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:27:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:28:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0080s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536146882') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536146882') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536146882') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536146882') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536146882') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536146882') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 806 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536146882') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:31:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:31:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:32:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:32:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0080s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147142') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147142') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147142') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147142') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147142') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147142') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147142') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:32:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-05T19:32:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0080s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147161') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147161') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147161') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147161') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147161') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147161') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 805 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147161') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:33:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:33:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0070s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147182') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147182') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147182') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147182') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147182') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147182') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147182') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:33:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:33:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0080s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147199') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147199') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147199') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147199') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147199') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147199') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 807 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147199') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0050s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0060s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147243') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147243') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147243') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147243') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147243') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147243') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147243') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0060s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='1' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147255') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147255') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147255') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147255') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147255') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147255') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147255') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0070s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='0' WHERE ( id = 365 ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147282') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147282') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147282') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147282') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147282') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147282') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147282') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:34:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:35:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:35:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/CookManage/edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `wxt_wxtuser` WHERE ( id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook` [ RunTime:0.0080s ]
+SQL: UPDATE `wxt_cookbook` SET `timingtype`='0',`title`='南非的眼',`teachertype`='1' WHERE ( id = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: DELETE FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_plantimming` [ RunTime:0.0070s ]
+SQL: DELETE FROM `wxt_plantimming` WHERE ( contentId = 365 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','1','1542556800','','浮现','1536147316') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','2','1542643200','','啊啊','1536147316') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','3','1542729600','','23','1536147316') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','4','1542816000','','啊啊','1536147316') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','5','1542902400','',' 为3 ','1536147316') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','6','1542988800','','22AAS','1536147316') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: daytime D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\CookManageController.class.php 第 808 行.
+SQL: INSERT INTO `wxt_cookbook_detail` (`cookbookid`,`week`,`date`,`photo`,`content`,`create_time`) VALUES ('365','7','1543075200','','2 ','1536147316') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-05T19:35:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/?g=Teacher&m=CookManage&a=edit&cookbookid=365&plantimming=0&teachertype=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_cookbook_detail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_cookbook_detail` WHERE ( cookbookid = 365 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -1,0 +1,636 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__public/css/huodongxiangqing.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__TMPL__public/css/commes.css" />
+    <link rel="stylesheet" href="__TMPL__public/css/photoswipe.css">
+    <link rel="stylesheet" href="__TMPL__public/css/default-skin/default-skin.css">
+    <script src="__TMPL__public/js/photoswipe.min.js"></script>
+    <script src="__TMPL__public/js/photoswipe-ui-default.min.js"></script>
+    <link rel="stylesheet" href="__TMPL__public/css/bootstrap-dongtai.css">
+    <script type="text/javascript" src="__ROOT__/statics/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style>
+    
+    body{
+
+        background-color: rgb(239,240,242);
+    }
+    pre {
+        white-space: pre-wrap ;
+        word-wrap: break-word;
+        display: inline-block;
+        font-size: 14px;
+        color: rgb(70,70,70);
+        font-family: "微软雅黑 Light";
+
+    }
+    .fabu {
+        color: black;
+        font-size: 16px;
+        border: none;
+        background-color: white;
+        margin-left: 50px;
+    }
+
+    .quxiao {
+        border: none;
+        background-color: white;
+        color:black;
+        font-size: 16.5px;
+        margin-left: 30%;
+
+    }
+
+    .neirong {
+        font-size: 14px;
+        width: 100%;
+        border: none;
+    }
+</style>
+
+<body>
+<input class="ftime" type="hidden" value="{$ftime}" />
+<input class="stime" type="hidden" value="{$stime}" />
+<input class="activityid" type="hidden" value="{$receiverid}" />
+<input class="userid" type="hidden" value="{$userid}" />
+<div style="width: 100%;top:250px;" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body" style="border-bottom: 1px solid #e5e5e5;">
+                <textarea class="neirong" placeholder="我也说一句......"></textarea>
+            </div>
+            <div style="padding: 15px;">
+                <span><button class="quxiao" data-dismiss="modal">取消</button></span>
+                <span><button class="fabu" data-dismiss="modal">发表</button></span>
+
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+    <div class="top_box">
+        <img src="__TMPL__public/images/img674.png" class="fanhui"> 活动详情
+        <div class="clearfix"></div>
+    </div>
+    <div class="bigbox" style="margin-top: 42px;">
+        <div class="teacher">
+            <img src="{$Think.const.SR}{$zhaopian4}" style="width: 55px;height: 55px;border-radius: 55px;">
+
+            <div class="left" style="padding-top: 0;height: 50px;width: 100%;padding-left: 60px;box-sizing: border-box;margin-top: -50px">
+                <p class="top" style="height: 50px;line-height: 50px;font-weight: bold">{$shuzhu4}</p>
+                <p class="right" style="height: 50px;line-height: 50px;padding: 0;margin-top: -60px">{$shijian}</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="wenzi">
+            <p class="one">{$title}</p>
+            <p class="two"> <pre style="margin-left:15px">{$content}</pre></p>
+        </div>
+        <div class="two">
+
+            <br>
+            <div class="img">
+                <if condition="$sub eq 0">
+                    <if condition="count($subContent) eq 1">
+                        <div style="width:100%;max-height:300px;" class="my">
+
+                            <foreach name="subContent" item="value">
+                                <figure>
+                                    <!--<a href="{$Think.const.SRHB}{$value}" data-size="800x800">-->
+                                        <!--<img src="{$Think.const.SR}{$value}" />-->
+                                    <!--</a>-->
+                                    <a href="{$Think.const.SRHB}{$value.picture_url}" data-size="{$value.picturewidth}x{$value.pictureheight}">
+                                        <img style="max-width:250px;max-height:250px;" src="{$Think.const.SR}{$value.picture_url}" />
+                                    </a>
+                                </figure>
+
+
+                            </foreach>
+
+                        </div>
+                        <else />
+                        <div class="my-gallery">
+
+                            <foreach name="subContent" item="value">
+                                <figure>
+                                    <!--<a href="{$Think.const.SRHB}{$value}" data-size="800x800">-->
+                                        <!--<img src="{$Think.const.SR}{$value}" />-->
+                                    <!--</a>-->
+                                    <a href="{$Think.const.SRHB}{$value.picture_url}" data-size="{$value.picturewidth}x{$value.pictureheight}">
+                                        <img src="{$Think.const.SR}{$value.picture_url}" />
+                                    </a>
+                                </figure>
+
+                            </foreach>
+
+                        </div>
+
+                    </if>
+                    <!--<div class="my-gallery">-->
+
+                    <!--<foreach name="subContent" item="value">-->
+                    <!--<figure>-->
+                    <!--<a href="{$Think.const.SRHB}{$value}" data-size="800x1142">-->
+                    <!--<img src="{$Think.const.SR}{$value}" />-->
+                    <!--</a>-->
+                    <!--</figure>-->
+
+
+                    <!--</foreach>-->
+
+                    <!--</div>-->
+                </if>
+                <!--<if condition="$sub eq 0">-->
+                    <!--<div class="my-gallery">-->
+                        <!--<foreach name="subContent" item="value">-->
+
+                            <!--<figure>-->
+                                <!--<a href="{$Think.const.SRHB}{$value}" data-size="800x1142">-->
+                                    <!--<img src="{$Think.const.SR}{$value}" />-->
+                                <!--</a>-->
+                            <!--</figure>-->
+                        <!--</foreach>-->
+                    <!--</div>-->
+                <!--</if>-->
+            </div>
+            <div class="but">
+                <span class="left">已报名{$nuMber}人</span>
+                <if condition="$isapply neq -1">
+                    <span class="right">已报名</span>
+                    <span class="cancel" style="font-size: 13.5px;float: right;margin-right: 5px;color: red;">取消报名</span>
+                </if>
+                <if condition="$isapply eq -1">
+                    <span class="right" id="aa" style="color: coral;">未报名</span>
+                </if>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="big">
+            <div class="box">
+                <span class="left">活动开始时间</span>
+                <span class="right">{$begintime}</span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="boxno">
+                <span class="left">活动结束时间</span>
+                <span class="right">{$endtime}</span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="big">
+            <div class="box">
+                <span class="left">联系人</span>
+                <span class="right">{$shuzhu4}</span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="boxno">
+                <span class="left">联系方式</span>
+                <span class="right">{$contactphone}</span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="big">
+            <div class="box">
+                <span class="left">报名开始时间</span>
+                <span class="right">{$starttime}</span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="boxno">
+                <span class="left">报名结束时间</span>
+                <span class="right">{$finishtime}</span>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <!--<div class="big" style="border-bottom: #d2d2d2 solid 1px;">-->
+            <!--<textarea class="content" style="width: 95%;border: none;margin-left: 10px;" placeholder="留言"></textarea>-->
+        <!--</div>-->
+        <div>
+            <if condition="$isapply neq -1">
+                <!--<button id="zhuangtai" style="background-color: darkkhaki;width: 30%;height: 35px;border-radius: 20px;margin-left: 30%;">以报名</button>-->
+                <button id="zhuangtai" style="width: 40%;height: 35px;border-radius: 10px;border: none;background-color: #06c18e;color: white;margin-top: 25px;margin-left: 30%;margin-bottom: 20px;'">报名成功</button>
+                <input class="wai" type="hidden" value="{$isapply}" />
+                <input class="si3" type="hidden" value="{$receiverid}" />
+                <input class="si4" type="hidden" value="{$userid}" />
+            </if>
+            <if condition="$isapply eq -1">
+                <!--<button id="zhuangtai" style="background-color: yellowgreen;width:30%;height: 35px;border-radius: 20px;margin-left: 30%;cursor: pointer;">未报名</button>-->
+                <button id="zhuangtai" data-toggle="modal" data-target="#myModal" style="width: 40%;height: 35px;border-radius: 10px;border: none;background-color: #06c18e;color: white;margin-top: 25px;margin-left: 30%;margin-bottom: 20px;">报名</button>
+                <input class="wai" type="hidden" value="{$isapply}" />
+                <input class="si1" type="hidden" value="{$receiverid}" />
+                <input class="si2" type="hidden" value="{$userid}" />
+            </if>
+            <input class="starttime" type="hidden" value="{$starttime}" />
+            <input class="finishtime" type="hidden" value="{$finishtime}" />
+        </div>
+
+        <!--下面的内容不要管-->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            var isapply = $(".wai").val();
+            var ftime = $(".ftime").val();
+            var stime = $(".stime").val();
+            var timestamp = (new Date()).valueOf();
+            var s = timestamp.toString();
+            var time=s.substring(0,10);
+            if(isapply == -1){
+                if(time<stime || time>ftime){
+                    $("#zhuangtai").attr('disabled',true);
+                    $("#zhuangtai").css('background',"#ccc");
+                    $('#zhuangtai').text("不在活动报名时间内");
+                }
+            }
+
+            if (isapply != -1) {
+//                alert("111");
+                $("#zhuangtai").attr('disabled',true);
+                $("#zhuangtai").css('background',"#ccc");
+
+            } else {
+                var userid = $(".si2").val();
+                var activityid = $(".si1").val();
+                var starttime = $(".starttime").val();
+                var content = $(".content").val();
+                $("#zhuangtai").click(function() {
+
+                    $.ajax({
+                        type: "post",
+                        url: '__ROOT__/index.php/?g=apps&m=teacher&a=ApplyActivity',
+                        async: true,
+                        data: {
+                            content:content,
+                            userid: userid,
+                            activityid: activityid
+                        },
+                        dataType: 'json',
+                        success: function(res) {
+                            console.log(res);
+                            if(res.status=="success"){
+                                $('#zhuangtai').text("报名成功");
+                                $('#aa').text("报名成功");
+                                $("#zhuangtai").attr('disabled',true);
+                                $("#zhuangtai").css('background',"rgb(204, 204, 204)");
+                            }else{
+                                alert(res.data);
+                            }
+//                            $('#zhuangtai').attr('disabled', "true");
+//                            $('#zhuangtai').css('background-color', ' #06c18e');
+//                            $('#zhuangtai').text("报名成功");
+//                            $('#aa').text("报名成功");
+//                            $("#zhuangtai").attr('disabled',true);
+//                            $("#zhuangtai").css('background',"#ccc");
+                        },
+                        error: function() {
+                            console.log('系统错误,请稍后重试');
+                        }
+
+                    });
+                })
+            }
+            $(".fanhui").click(function() {
+                location.href = "{:U('index')}"
+
+            })
+            var userids = $(".si4").val();
+            var activityids = $(".si3").val();
+
+            //取消报名
+            $(".cancel").click(function() {
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=teacher&a=CancelActivity',
+                    async: true,
+                    data: {
+                        userid: userids,
+                        activityid: activityids
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        console.log(res);
+                        if(res.status=="success"){
+                            alert("取消成功");
+                            $('#zhuangtai').text("报名");
+                            $("#zhuangtai").attr('disabled',false);
+                            $("#zhuangtai").css('background',"#06c18e");
+                            location.href = "{:U('index')}"
+
+                        }else{
+                            alert(res.data);
+                        }
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+
+                });
+            })
+
+            $(".fabu").click(function() {
+                var  activityid = $(".activityid").val();
+                var  userid = $(".userid").val();
+                var  content = $(".neirong").val();
+                if (!content){
+                    alert("留言不能为空");
+                    return;
+                }
+                if (content.length>10){
+                    alert("不能大于10位数");
+                    return;
+                }
+                if(activityid){
+                    $.ajax({
+                        type: "post",
+                        url: '__ROOT__/index.php/?g=apps&m=teacher&a=updateActivity',
+                        async: true,
+                        data: {
+                            activityid: activityid,
+                            userid: userid,
+                            content: content
+                        },
+                        dataType: 'json',
+                        success: function(res) {
+                            console.log(res);
+                            if(res.status=="success"){
+                                alert("留言成功");
+                            }else{
+                                alert(res.data);
+                            }
+                        },
+                        error: function() {
+                            console.log('系统错误,请稍后重试');
+                        }
+
+                    });
+                }
+
+            });
+
+            var img_width = $(".my-gallery img").width()
+            $(".my-gallery img").height(img_width)
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements 
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = el.childNodes,
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes 
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+
+                        size = linkEl.getAttribute('data-size').split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: parseInt(size[0], 10),
+                            h: parseInt(size[1], 10)
+                        };
+
+
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+                    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = clickedListItem.parentNode,
+                        childNodes = clickedListItem.parentNode.childNodes,
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+                        fullscreenEl : false,
+                        //点击图片关闭
+                        tapToClose: true,
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used 
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM('.my-gallery');
+            initPhotoSwipeFromDOM('.my');
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+.clearfix{
+		clear: both;
+	}
+
+.nav{
+	font-size: 3.8vw;
+	font-weight: 500;
+	margin-top: 3%;
+	text-align: center;
+}
+.nav .left{
+	padding-bottom: 2.5%;
+	border-bottom: 2.5px solid rgb(6,192,143);
+	color: rgb(6,192,143);
+	margin-left: 10%;
+	width: 30%;
+	float: left;
+}
+.nav .right{
+	width: 30%;
+	float: right;
+	margin-right: 10%;
+}
+.content{
+	padding: 4.5% 2.5%  25%;
+	background-color: rgb(239,240,242);
+}
+.date{
+	border-radius: 5px;
+	background-color: rgb(255,255,255);
+}
+.result{	
+	font-weight: 500;
+	padding-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+.result .left{
+	font-size: 3.7vw;
+	color: rgb(6,192,143);
+	width: 48%;
+	float: left;
+}
+.result .left img{
+	margin-left: 3%;
+	float: left;
+	width: 5.5%;
+}
+.result .left div{
+	margin-top: -1%;
+	margin-left: 6%;
+	margin-right: 3%;
+	float: left;
+}
+.result .right{
+	font-size: 3.5vw;
+	text-align: center;
+	width: 45%;
+	float: right;
+	color: rgb(255,191,103);
+}
+.people{
+	margin-top: 2%;
+	padding-right: 1.5%;
+	padding-left: 1.5%;
+	padding-bottom: 5%;
+}
+.headimg{	
+	margin-left: 1%;
+	margin-top: 1%;
+	text-align: center;
+	float: left;
+	width: 19%;
+	font-size: 3.3vw;
+	font-weight: 500;
+	color: rgb(255,255,255);
+}
+.headimg span{
+	font-size: 3.6vw;
+	font-weight: 500;
+	color: black;
+}
+.headimg .img{	
+	margin-bottom: 8%;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	border-radius: 50%;
+	width: 82%;
+	background-color: rgb(239,241,243);
+}
+.headimg .img .record,.record1,.record2{
+	padding: 1%;
+	font-size: 2.6vw;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	width: 35%;
+	background-color: rgb(50,209,167);
+	line-height: 170%;
+	vertical-align: middle;
+	color:white;
+}
+.headimg .img .record1{
+	background-color: rgb(255,191,103);
+}
+.headimg .img .record2{
+	background-color: rgb(255,137,137);
+}
+.footer{
+	font-size: 3.8vw;
+	margin-top: 3.5%;
+	position: fixed;
+	bottom: 0;padding-top: 20px; padding-bottom: 20px;width: 100%;background-color: white;
+}
+.footer .left{
+	width: 40%;
+	margin-left: 4%;
+	float: left;
+	color: rgb(119,119,120);
+}
+.footer .right{
+	color: white;
+	font-weight: 500;
+	padding: 0 3.5% 0.5%;
+	margin-right: 4%;
+	border-radius: 5px;
+	background-color: rgb(50,209,167);
+	float: right;
+}
+.footer .left .quanxuan{
+	border-radius: 5px;
+	margin-top: 2%;
+	margin-right: 65%;
+	width: 8%;
+	float: right;
+	border: 2px solid grey;
+	line-height: 90%;
+	text-align: center;
+}

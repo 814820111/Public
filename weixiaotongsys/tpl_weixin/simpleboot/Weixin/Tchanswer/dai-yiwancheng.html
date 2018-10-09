@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/dai-yiwancheng.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__Public/js/new_file.js"></script>
+    <script src="__TMPL__Public/js/photoswipe.min.js"></script>
+    <script src="__TMPL__Public/js/photoswipe-ui-default.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/commes.css" />
+    <link rel="stylesheet" href="__TMPL__Public/css/photoswipe.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/default-skin/default-skin.css">
+    <!--图片加载-->
+    <script src="__TMPL__public/js/jquery.lazyload.js"></script>
+</head>
+<style>
+    .tab {
+        background-color: #FFF;
+        font-family: "微软雅黑 Light";
+        font-weight: normal;
+        height: 40px;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+        position: fixed;
+        top: 38px;
+    }
+    
+    .big .tab .one {
+        color: #676767;
+        width: 50%;
+        font-size: 14.5px;
+        line-height: 32px;
+        float: left;
+        text-align: center;
+    }
+    
+    .big .tab .two {
+        color: #06c18e;
+        width: 50%;
+        font-size: 14.5px;
+        line-height: 32px;
+        float: right;
+        text-align: center;
+    }
+    
+    .big .tab .two div {
+        border-bottom: 2px #06c18e solid;
+        width: 56%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .but span {
+        margin-right: 20px;
+    }
+    a{
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+    pre {
+        white-space: pre-wrap ;
+        word-wrap: break-word;
+        display: inline-block;
+        font-size: 14px;
+        color: rgb(70,70,70);
+        font-family: "微软雅黑 Light";
+
+    }
+</style>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <div class="top_box" style="z-index: 99;">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 代接确认
+        <div class="clearfix"></div>
+    </div>
+    <div class="big">
+        <div class="tab">
+            <a href="{:U('index')}"><span class="one">待处理 </span></a>
+
+
+            <a href="">
+                <span class="two">已完成
+					<div></div>
+					</span>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+        <div style="width: 100%;height: 78px;"></div>
+
+    </div>
+    <div style="  background-color: #06c18e;color: white;position: fixed;width: 60px;text-align: center;line-height: 60px;border-radius: 50%;font-size: 14px;bottom: 50px;right: 10px;">
+        <a href="{:U('Submit')}" style=" text-decoration: none;color: inherit;font-size:14px;">发布代接</a>
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function trimSpace(array) {
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == "" || typeof(array[i]) == "undefined") {
+                    array.splice(i, 1);
+                    i = i - 1;
+
+                }
+            }
+            return array;
+        }
+        $("document").ready(function() {
+            var teacherid = $("#userid").val();
+            var schoolid = {$schoolid};
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=gettransportconfirmation',
+                async: true,
+                data: {
+                    teacherid: teacherid,
+                    schoolid : schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        var studentname = res[i].studentname;
+                        //代学生的名字
+                        var classname = res[i].classname;
+                        //代接学生的班级
+                        var content = res[i].content;
+                        //代接的内容
+                        var delivery_time = tmies(res[i].delivery_time);
+                        //代接的时间
+                        var studentavatar = res[i].studentavatar;
+                        //学生的照片
+                        var photo = res[i].photo;
+                        //内容图片
+                        var parentphone = res[i].parentphone;
+                        //家长的号码
+                        var delivery_status = res[i].delivery_status;
+                        //是否处理的状态
+                        if (delivery_status > 0) {
+
+                            html += '<div class="bigbox" style="height: auto">'
+                            html += '<div class="teacher">'
+                            html += '<img src="{$Think.const.SR}' + studentavatar + '" style="width: 45px;height: 45px;border-radius: 30px;">'
+                            html += '<div class="left">'
+                            html += '<p class="top" style="font-weight: bold">' + studentname + '</p>'
+                            html += '<p class="bot" style="font-size: 12px">' + classname + '</p>'
+                            html += '</div>'
+                            html += '<p class="right">' + delivery_time + '</p>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '<p class="wenzi"></p><pre style="margin-left: 10px;margin-bottom: 10px;">' + content + '</pre>'+'<br>'
+
+                            photos = photo.split(",");
+                            photos = trimSpace(photos);
+
+                            html += '<div class="aaaa">'
+                            var num=photos.length;
+                            if(num==1){
+                                html += '<div style="margin-left:5px;width:100%;max-height:300px;" class="my">'
+                                for (var g = 0; g < photos.length; g++) {
+                                    image = photos[g].split(":");
+                                    image = trimSpace(image);
+                                    var zhaopian = image[0]; //内容照片
+                                    var width = image[1];
+                                    if(width){
+                                        width = width;
+                                    }else{
+                                        width = 800;
+                                    }
+                                    var  height = image[2];
+                                    if(height){
+                                        height =height;
+                                    }else{
+                                        height = 800;
+                                    }
+
+
+                                    html += '<figure>'
+                                   //html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                   // html += '<img  style="max-width:250px;max-height:250px;" src="{$Think.const.SR}' + zhaopian + '"/>'
+                                    html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                    html += '<img  class="lazy" style="max-width:250px;max-height:250px;" src="__TMPL__public/img/grey.gif" data-original="{$Think.const.SR}' + zhaopian + '"/>'
+                                    html += '</a>'
+                                    html += '</figure>'
+                                }
+                                html += '</div>'
+                            }else{
+                                html += '<div  style="margin-left:5px;" class="my-gallery">'
+                                for (var g = 0; g < photos.length; g++) {
+                                    image = photos[g].split(":");
+                                    image = trimSpace(image);
+                                    var zhaopian = image[0]; //内容照片
+                                    var width = image[1];
+                                    if(width){
+                                        width = width;
+                                    }else{
+                                        width = 800;
+                                    }
+                                    var  height = image[2];
+                                    if(height){
+                                        height =height;
+                                    }else{
+                                        height = 800;
+                                    }
+
+                                    html += '<figure>'
+                                    //html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                   // html += '<img src="{$Think.const.SR}' + zhaopian + '" />'
+                                    html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                    html += '<img class="lazy" src="__TMPL__public/img/grey.gif" data-original="{$Think.const.SR}' + zhaopian + '"/>'
+                                    html += '</a>'
+                                    html += '</figure>'
+                                }
+                                html += '</div>'
+                            }
+                            html += '</div>'
+                            html += '<div class="but">'
+                            if (delivery_status == 2) {
+                                html += '<span style="color:#f47520; float: right;">未同意</span>';
+                            } else {
+                                html += '<span style="color:#06c18e; float: right;">已同意</span>';
+                            }
+
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '</div>'
+                        }
+
+                    }
+                    $(".big").append(html);
+                    var img_width = $(".my-gallery img").width()
+                    $(".my-gallery img").height(img_width)
+                    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                        // parse slide data (url, title, size ...) from DOM elements
+                        // (children of gallerySelector)
+                        var parseThumbnailElements = function(el) {
+                            var thumbElements = el.childNodes,
+                                numNodes = thumbElements.length,
+                                items = [],
+                                figureEl,
+                                linkEl,
+                                size,
+                                item;
+
+                            for (var i = 0; i < numNodes; i++) {
+
+                                figureEl = thumbElements[i]; // <figure> element
+
+                                // include only element nodes
+                                if (figureEl.nodeType !== 1) {
+                                    continue;
+                                }
+
+                                linkEl = figureEl.children[0]; // <a> element
+
+                                size = linkEl.getAttribute('data-size').split('x');
+
+                                // create slide object
+                                item = {
+                                    src: linkEl.getAttribute('href'),
+                                    w: parseInt(size[0], 10),
+                                    h: parseInt(size[1], 10)
+                                };
+
+
+
+                                if (figureEl.children.length > 1) {
+                                    // <figcaption> content
+                                    item.title = figureEl.children[1].innerHTML;
+                                }
+
+                                if (linkEl.children.length > 0) {
+                                    // <img> thumbnail element, retrieving thumbnail url
+                                    item.msrc = linkEl.children[0].getAttribute('src');
+                                }
+
+                                item.el = figureEl; // save link to element for getThumbBoundsFn
+                                items.push(item);
+                            }
+
+                            return items;
+                        };
+
+                        // find nearest parent element
+                        var closest = function closest(el, fn) {
+                            return el && (fn(el) ? el : closest(el.parentNode, fn));
+                        };
+
+                        // triggers when user clicks on thumbnail
+                        var onThumbnailsClick = function(e) {
+                            e = e || window.event;
+                            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                            var eTarget = e.target || e.srcElement;
+
+                            // find root element of slide
+                            var clickedListItem = closest(eTarget, function(el) {
+                                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                            });
+
+                            if (!clickedListItem) {
+                                return;
+                            }
+
+                            // find index of clicked item by looping through all child nodes
+                            // alternatively, you may define index via data- attribute
+                            var clickedGallery = clickedListItem.parentNode,
+                                childNodes = clickedListItem.parentNode.childNodes,
+                                numChildNodes = childNodes.length,
+                                nodeIndex = 0,
+                                index;
+
+                            for (var i = 0; i < numChildNodes; i++) {
+                                if (childNodes[i].nodeType !== 1) {
+                                    continue;
+                                }
+
+                                if (childNodes[i] === clickedListItem) {
+                                    index = nodeIndex;
+                                    break;
+                                }
+                                nodeIndex++;
+                            }
+
+
+
+                            if (index >= 0) {
+                                // open PhotoSwipe if valid index found
+                                openPhotoSwipe(index, clickedGallery);
+                            }
+                            return false;
+                        };
+
+                        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                        var photoswipeParseHash = function() {
+                            var hash = window.location.hash.substring(1),
+                                params = {};
+
+                            if (hash.length < 5) {
+                                return params;
+                            }
+
+                            var vars = hash.split('&');
+                            for (var i = 0; i < vars.length; i++) {
+                                if (!vars[i]) {
+                                    continue;
+                                }
+                                var pair = vars[i].split('=');
+                                if (pair.length < 2) {
+                                    continue;
+                                }
+                                params[pair[0]] = pair[1];
+                            }
+
+                            if (params.gid) {
+                                params.gid = parseInt(params.gid, 10);
+                            }
+
+                            return params;
+                        };
+
+                        var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                            var pswpElement = document.querySelectorAll('.pswp')[0],
+                                gallery,
+                                options,
+                                items;
+
+                            items = parseThumbnailElements(galleryElement);
+
+                            // define options (if needed)
+                            options = {
+                                fullscreenEl : false,
+                                //点击图片关闭
+                                tapToClose: true,
+                                // define gallery index (for URL)
+                                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                                getThumbBoundsFn: function(index) {
+                                    // See Options -> getThumbBoundsFn section of documentation for more info
+                                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                        pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                        rect = thumbnail.getBoundingClientRect();
+
+                                    return {
+                                        x: rect.left,
+                                        y: rect.top + pageYScroll,
+                                        w: rect.width
+                                    };
+                                }
+
+                            };
+
+                            // PhotoSwipe opened from URL
+                            if (fromURL) {
+                                if (options.galleryPIDs) {
+                                    // parse real index when custom PIDs are used
+                                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                                    for (var j = 0; j < items.length; j++) {
+                                        if (items[j].pid == index) {
+                                            options.index = j;
+                                            break;
+                                        }
+                                    }
+                                } else {
+                                    // in URL indexes start from 1
+                                    options.index = parseInt(index, 10) - 1;
+                                }
+                            } else {
+                                options.index = parseInt(index, 10);
+                            }
+
+                            // exit if index not found
+                            if (isNaN(options.index)) {
+                                return;
+                            }
+
+                            if (disableAnimation) {
+                                options.showAnimationDuration = 0;
+                            }
+
+                            // Pass data to PhotoSwipe and initialize it
+                            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                            gallery.init();
+                        };
+
+                        // loop through all gallery elements and bind events
+                        var galleryElements = document.querySelectorAll(gallerySelector);
+
+                        for (var i = 0, l = galleryElements.length; i < l; i++) {
+                            galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                            galleryElements[i].onclick = onThumbnailsClick;
+                        }
+
+                        // Parse URL and open gallery if it contains #&pid=3&gid=1
+                        var hashData = photoswipeParseHash();
+                        if (hashData.pid && hashData.gid) {
+                            openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                        }
+                    };
+
+                    // execute above function
+                    initPhotoSwipeFromDOM('.my-gallery');
+                    initPhotoSwipeFromDOM('.my');
+                    //图片延迟加载
+                    $('img.lazy').lazyload({
+                        effect:"fadeIn",
+                        appear: function(num,setting){
+                            //console.log("一开始还剩"+num+"张未加载")
+                        },
+                        load: function(num,setting){
+                            // console.log("接着还剩"+num+"张未加载")
+                        }
+
+                    });
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+
+        });
+        $(".fanhui").click(function() {
+            location.href = "__ROOT__/index.php/weixin/Tindex";
+        })
+    </script>
+</body>
+
+</html>

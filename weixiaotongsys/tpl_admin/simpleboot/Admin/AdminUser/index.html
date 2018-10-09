@@ -1,0 +1,174 @@
+<admintpl file="header" />
+<head />
+<body>
+	<div class="wrap J_check_wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('adminUser/index')}">用户管理</a></li>
+			<li><a href="{:U('adminUser/add')}">添加用户</a></li>
+		</ul>
+		<form name="myform" action="{:U('adminUser/index')}" method="get">
+			<div class="search_type cc mb10">
+				<div class="mb10">
+					<span class="mr20">
+						所属大类：
+						<select  class="provinc"  name="categoryid" >
+							<option value="">请选择</option>
+
+								<if condition="$categoryid eq 0">
+									<option value="1" <?php if($categoryid==1){ echo  'selected';} ?>>内部管理员</option>
+									<option value="2" <?php if($categoryid==2){ echo  'selected';} ?>>代理商</option>
+									<!--<option value="0" <?php if($categoryid==0){ echo  'selected';} ?>>超级管理员</option>-->
+									<elseif condition="$categoryid eq 1"/>
+									<option value="{$categoryid}" <?php if($categoryid==1){ echo  'selected';} ?>>内部管理员</option>
+								<else />
+									<option value="{$categoryid}" <?php if($categoryid==2){ echo  'selected';} ?>>代理商</option>
+						   		</if>
+
+						</select>
+							<!--所属省份：-->
+						      <!--<select  class="province"  name="province" id="province" >-->
+					              <!--<option value="">省级选择</option>-->
+					              <!--<foreach name="Province" item="vo">-->
+					              <!--<php>$pro=$pp==$vo['term_id']?"selected":"";</php>-->
+					                <!--<option value="{$vo.term_id}"{$pro}>{$vo.name}</option>-->
+					              <!--</foreach>-->
+					            <!--</select>-->
+					    <!--负责地市:-->
+					       <!--<input  class="citys" type="hidden" value="{$citys}">-->
+					          <!--<select id="citys" name="city">-->
+					          	 <!--<option>请选择市级</option>-->
+					          <!--</select>-->
+						<!--所属地区：-->
+						<!--<select name="city" class="citys" id="citys" >-->
+							<!--<option value="">请选择</option>-->
+						<!--</select>-->
+						<select  class="keyword"  name="keywordtype" style="width: 100px">
+							<option value="">查询类型</option>
+							<option value="user_login" <?php if($keywordtype==1){ echo  'selected';} ?>>用户账号</option>`
+							<!--<option value="phone">电话</option>-->
+						</select>
+						<input type="text" name="keyword" style="width: 200px;" value="{$keyword}" placeholder="请输入关键字...">
+						<!--手机号码：-->
+						<!--<input type="text" name="phoneNumber" style="width: 200px;" value="{$formget.keyword}" placeholder="请输入手机号...">-->
+						<input type="submit" class="btn btn-primary" value="搜索" style="margin-left: 10px;margin-bottom: 10px;" />
+					</span>
+				</div>
+			</div>
+		</form>
+		<form name="myform" action="" method="post">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="30">ID</th>
+						<th align="left">用户账号</th>
+						<th align="left">邮箱</th>
+						<th align="left">所属角色</th>
+						<th align="left">所属大类</th>
+						<th align="left">所属地区</th>
+						<th align="left">最后登录ID</th>
+						<th align="left">最后登录时间</th>
+						<th width="40" align="left">状态</th>
+						<th width="120">管理操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="user" item="vo">
+					<tr>
+						<td>{$vo.uid}</td>
+						<td>{$vo.user_login}</td>
+						<td>{$vo.user_email}</td>
+						<td>{$vo.name}</td>
+						<td><if condition="$vo['categoryid'] eq 1">
+							内部管理员
+							<elseif condition="$vo['categoryid'] eq 2"/>
+							代理商
+							<else />
+							超级管理员
+						    </if>
+						</td>
+						<td>{$vo.city_name}</td>
+						<td>{$vo.last_login_ip}</td>
+						<td>{$vo.last_login_time}</td>
+						<td>
+							<if condition="$vo['user_status'] eq 1">
+								<font color="red">√</font>
+							<else />
+								<font color="red">╳</font>
+							</if>
+						</td>
+						<td>
+
+							<if condition="$vo['pid'] eq $pid">
+								<font color="#cccccc">子用户| </font><font color="#cccccc">修改</font> | <font color="#cccccc">删除</font>
+								<elseif condition="$vo['uid'] eq 1"/>
+								<font color="#cccccc">子用户| <font color="#cccccc">修改</font> | <font color="#cccccc">删除</font>
+								<else />
+								<a href="{:U('adminUser/index',array('uid'=>$vo['uid'], 'rid'=>$vo['rid']))}">子用户</a>|
+								<a href="{:U('adminUser/edit',array('uid'=>$vo['uid'], 'rid'=>$vo['rid']))}">修改</a>|
+								<a class="J_ajax_del" href="{:U('adminUser/delete_user',array('uid'=>$vo['uid'], 'rid'=>$vo['rid']))}">删除</a>
+							</if>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$Page}</div>
+		</form>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+
+//    $("#province").change(function(){
+//
+//
+//        $.getJSON("__ROOT__/index.php?g=Admin&m=Share&a=role_type&Province="+$("#province").val(),{},function(data){
+//
+//            $("#citys").empty();
+//
+//            if(data.status=="success"){
+//
+//                $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+//                for(var key in data.data){
+//                    $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+//                }
+//            }
+//            if(data.status=="error"){
+//                $("#citys").append("<option value='0'>没有市级</option>");
+//            }
+//        });
+//
+//
+//    })
+//
+//    if($("#province").val())
+//    {
+//
+//        var city = $("body").find(".citys").val();
+//
+//        $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+//            $("#citys").empty()
+//
+//            if(data.status=="success"){
+//
+//                $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+//                for(var key in data.data){
+//                    if(city == data.data[key]["term_id"])
+//                    {
+//                        $("#citys").append("<option value="+data.data[key]["term_id"]+" selected >"+data.data[key]["name"]+"</option>");
+//                    }else{
+//                        $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+//                    }
+//                }
+//            }
+//            if(data.status=="error"){
+//                $("#citys").append("<option value='0'>没有市级</option>");
+//            }
+//        });
+//    }
+
+
+
+</script>

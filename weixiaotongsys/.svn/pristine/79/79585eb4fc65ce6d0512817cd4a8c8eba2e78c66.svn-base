@@ -1,0 +1,51 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('agentauthorization')}">代理商列表</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>地址</th>
+            <th>联系人</th>
+            <th>联系电话</th>
+            <th>负责人</th>
+            <th>代理区域</th>
+            <!--<th>套餐列表</th>-->
+            <!--<th>状态</th>-->
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>$statuses=array("1"=>"开通","2"=>"暂停","3"=>"取消");</php>
+        <foreach name="agent" item="vo">
+            <tr>
+                <td>{$vo.name}</td>
+                <td>{$vo.address}</td>
+                <td>{$vo.legalperson}</td>
+                <td>{$vo.phone}</td>
+                <td>{$vo.legalperson}</td>
+                <td>{$vo.cityname}</td>
+                <!--<td>{$vo.combo}</td>-->
+                <!--<td>{$statuses[$vo['status']]}</td>-->
+                <!--<td>{$statuses[$vo['state']]}</td>-->
+                <td>
+                    <!--<a href='{:U("edit_status",array("state"=>$vo["state"],"agentid"=>$vo["id"]))}'>-->
+                    <!--&lt;!&ndash;状态&ndash;&gt;-->
+                    <!--<if condition="$vo.state eq 1 ">暂停-->
+                        <!--<else /> 开通-->
+                    <!--</if>-->
+                <!--</a>|-->
+                    <a href='{:U("editagentmeal",array("agentid"=>$vo["id"]))}'>分配套餐</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

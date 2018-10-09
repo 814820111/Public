@@ -1,0 +1,37 @@
+1.批量签到
+index/resign
+参数  schoolid 学校ID userid 学生ID(格式 例如8,9,) classid 班级ID sign_date(新增 考勤日期 时间戳格式) type(考勤渠道 1为APP 2为微信 如果不传 默认为2)
+接口 http://localhost/weixiaotong2016/index.php?g=apps&m=index&a=resign&schoolid=4&userid=6,&classid=27&sign_date=1505869678
+返回 {"status":"success","data":"成功"} {"status":"error","data":"参数不足"} {"status":"error","data":"失败"}
+
+2.批量签退
+index/LeaveTime
+参数  schoolid 学校ID userid 学生ID(格式 例如8,9,) classid 班级ID sign_date(新增 考勤日期 时间戳格式)  type(考勤渠道 1为APP 2为微信 如果不传 默认为2)
+接口 http://localhost/weixiaotong2016/index.php?g=apps&m=index&a=LeaveTime&schoolid=4&userid=6,&classid=27&sign_date=1505869678
+返回 {"status":"success","data":"成功"} {"status":"error","data":"参数不足"} {"status":"error","data":"失败"}
+
+3.家长端获取学生考勤记录
+index/GetTeacherAttendancesList
+入参不变
+
+ 返回的字段 arrivedate arrivetime arrivevideo attendancetype create_time id leavepicture name photo  schoolid userid leavetime
+                arrivedate(格式为:2017-09-20) 表示签到或者签到日期
+ 现在的逻辑是   1. attendancetype=1 表示为签到记录 arrivetime为签到时间  没有返回leavetime字段
+                2.attendancetype=4 为签退记录 arrivetime签退时间  没有返回leavetime字段
+                3. 如果有返回leavetime字段 表示当天既有签退和签到 arrivetime签退时间 leavetime 为签退时间
+4.老师端获取自己考勤记录
+ index/GetTeacherAttendancesList  与上面接口一样
+
+5.添加学校公告
+ school/publishnotice
+参数 :加了一个接受参数  shoolid
+返回:返回值不变
+
+6.获取食谱
+school/getCookbookContent
+参数:增加一个年级ID参数 (grade)
+返回:返回值不变
+
+7. 获取宝宝相册列表 新增 逻辑(根据userid(实际上是学生ID)) 拉取数据
+   index/GetbaobaoMicroblog  原来的接口拉取的数据不对 拉取全部的宝宝
+   现在只要在发布宝宝相册的时候 把 userid 这个参数(原来是存入用户ID  现在存学生ID的值) 其他都不用变

@@ -1,0 +1,76 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('ParentManage/index')}">教师列表</a></li>
+        <li><a href="{:U('ParentManage/add')}">添加教师</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('edit_post')}">
+            <fieldset>
+                <!-- <div class="control-group">
+                    <label class="control-label">学校id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_id" value="{$school['schoolid']}" readOnly="true">
+                    </div>
+                </div> -->
+                <div class="control-group">
+                    <label class="control-label">姓名:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="name" value="{$teacher['name']}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">性别:</label>
+                    <div class="controls" >
+                        <input type="radio" class="input" name="sex" value="0" checked><span>女</span>
+                        <input type="radio" class="input" name="sex" value="1"><span>男</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">手机号码:</label>
+                    <div class="controls">
+                        <input type="hidden" class="input" name="teacher_id" value="{$teacher['id']}"  readOnly="true">
+                        <input type="text" class="input" name="phone" value="{$teacher['phone']}">
+                    </div>
+                </div>
+               <!--  <div class="control-group">
+                    <label class="control-label">科室:</label>
+                    <div class="controls">
+                        <select class="input" name="department_id">
+                           <foreach name="departmentlist" item="vo">
+                              <option value="{$vo.id}" >{$vo.name}</option>
+                           </foreach>    
+                        </select>
+                    </div>
+                </div> 
+                <div class="control-group">
+                    <label class="control-label">职务:</label>
+                    <div class="controls">
+                        <select class="input"  name="duty_id">
+                           <foreach name="dutylist" item="vo">
+                              <option value="{$vo.id}">{$vo.name}</option>
+                           </foreach>    
+                        </select>
+                    </div>
+                </div>    -->
+                <div class="control-group">
+                    <label class="control-label">头像:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="pic" accept="image/png,image/jpeg,image/jpg">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" name="teacherdutyid" value="{$teacherduty.id}" />
+                <input type="hidden" name="teacherdepartmentid" value="{$teacherdepartment.id}" />
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/gerenxinxi.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.js"></script>-->
+    <!--<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>-->
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <link href="__TMPL__Public/css/mobiscroll.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <script src="__TMPL__Public/js/mobiscrolsddslren.js" type="text/javascript"></script>
+    <style>
+        #previewImage div img {
+            width: 100%;
+            background: #1a1a1a;
+            height: calc(height);
+        }
+        select {
+            /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+            border: solid 1px #000;
+            /*很关键：将默认的select选择框样式清除*/
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            /*将背景改为红色*/
+            /*background:red;*/
+            /*加padding防止文字覆盖*/
+
+        }
+        #previewImage {
+            width: 100%;
+        }
+
+        #previewImage div {
+            float: left;
+            width: 20%;
+            margin-left: 4%;
+        }
+
+        #previewImage div img {
+            width: 100%;
+            /*margin-top: 10px;*/
+            height: calc(height);
+        }
+        .right{
+            width: 70%;
+        }
+
+
+        #chooseImage {
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+        select::-ms-expand { display: none; }
+
+    </style>
+</head>
+
+<body>
+<div class="top_box">
+    <a href="__ROOT__/index.php/weixin/Tchmobilephone/jiazHuang"><img src="__ROOT__/statics/img/img67.png"></a>
+    添加学生
+    <div class="clearfix"></div>
+    <input type="hidden" value=$studentid id="studentid">
+</div>
+<div class="bigbox" style="padding:38px 0 0 0">
+    <form  method="post"  name="upload_form" >
+        <div class="box">
+            <!--<span class="left">头像</span>-->
+            <!--<img class="two" style="overflow: hidden;border-radius:50%;width:85px;height:85px;" src="{$headimg}">-->
+            <!--&lt;!&ndash;<input type="file" style="float: right;width: 50px;height: 50px;margin:auto;position: absolute;right: 10px;top: 55px;background: url('__TMPL__public/img/z_add.png') no-repeat center center;opacity: 0.0;" name="file[]" value="">&ndash;&gt;-->
+            <!--<input type="file" style="float: right;width: 80px;height: 80px;margin:auto;position: absolute;right: 10px;top: 55px;background: url('__TMPL__public/img/z_add.png') no-repeat center center;opacity: 0.0;" name="file" value="">-->
+            <!--<div id="previewImage"><div style="position: relative;left: 50%;margin-left: -10%;"><img src="{$headimg}" style="height: 78.7969px;border-radius: 50%;" alt=""></div></div>-->
+            <!--<a href="javascript:;" class="a-upload">-->
+            <!--<input type="button" id="chooseImage" value="上传">-->
+            <!--</a>-->
+            <div class="clearfix"></div>
+        </div>
+        <input type="hidden" name="photo"  id="photo" value="">
+
+        <div class="box">
+            <span class="left">姓名</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+            <input type="text" name="name"  style="text-align: right;width: 100%;height: 50px;border: none;" id="name" value={$name}>
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">头像</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right"style="width: 42px;  ">
+            <div id="previewImage" ><div><img src="__TMPL__Public/images/piliang.png" style="height: 40px; width:40px; border-radius: 50%;     margin-bottom: -13px;     margin-left: 7px;" alt=""></div></div>
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">性别</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+            <select name="sex" id="sex" style="width: 100%;background: transparent;height: 100%;border: none;" dir="rtl" style="padding-right: 0px;">
+                <option value="1" <?php if($sex==1){ echo  'selected';} ?> >男</option>
+                <!--<option value="{$sex}" selected >{$vo.name}</option>-->
+                <option value="0" <?php if($sex==0){ echo  'selected';} ?> >女</option>
+            </select>
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">出生年月</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+                 <input class="kaishi" value="" class="jiang" dir="rtl" readonly name="appDates" id="appDates" type="text" dir="rtl" placeholder="未选择" style="text-align: right;width:100%;height: 50px;border: none;">
+
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">联系方式</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right"><input type="tel" name="tel" placeholder="请输入联系方式"  style="text-align: right;width:100%;height: 50px;border: none;"id="tel" ></span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">联系人</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+            <input type="text" name="parent" placeholder="请输入联系人" style="text-align: right;width: 100%;height: 50px;border: none;" id="parent" >
+            </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">关系</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+                <select style="width: 100%;background: transparent;height: 100%;border: none;" dir="rtl" id="relation" style="padding-right: 0px;">
+                    <option>关系</option>
+                    <option value="妈妈">妈妈</option>
+                    <option value="爸爸">爸爸</option>
+                </select>
+            </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">IC卡号</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+
+               <input type="tel" name="ICcard" placeholder="请输入10位数的IC卡号" style="text-align: right;width:100%;height: 50px;border: none;" id="ICcard" >
+        </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">就读年级</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+                <select style="width: 100%;background: transparent;height: 100%;border: none; " dir="rtl" id="school_grade"  style="padding-right: 0px;">
+                    <option value="0">年级</option>
+                  <foreach name="grade" item="vo">
+
+                    <option value="{$vo.gradeid}">{$vo.name}</option>
+                  </foreach>
+                </select>
+            </span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="box">
+            <span class="left">就读班级</span>
+            <img class="one" src="__ROOT__/statics/img/img19a.png">
+            <span class="right">
+                <select id="school_class" style="width: 100%;  background: transparent;height: 100%;border: none;" dir="rtl"  style="padding-right: 0px;">
+                    <option value="0">班级</option>
+
+                </select>
+            </span>
+            <div class="clearfix"></div>
+        </div>
+
+
+    </form>
+    <div class="box" id="save">
+
+        <button id="dianji" style="width: 35%;
+                    height: 35px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #06c18e;
+                    color: white;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                    margin-left: 30%">确认添加</button>
+        <!--<input  id="sub" type="submit" value="保存更改" style="color:white;font-size: 15px;border:0;background: #06c18e;width: 40%;height: 40px;border-radius: 10px;margin: auto;text-align: center">-->
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(function () {
+        $("#school_grade").change(function () {
+            $("#school_class").empty();
+
+            $.getJSON("__ROOT__/index.php?g=Weixin&m=Tchmobilephone&a=showclass&grade="+ $("#school_grade").val(), {}, function (data) {
+                if (data.status == "success") {
+                    $("#school_class").append("<option value=0>" + "请选择班级" + "</option>");
+                    for (var key in data.data) {
+                        $("#school_class").append("<option value=" + data.data[key]["id"] + ">" + data.data[key]["classname"] + "</option>");
+                    }
+                }
+                if (data.status == "error") {
+                    $("#school_class").append("<option value='0'>没有班级</option>");
+                }
+            });
+        });
+    });
+
+
+
+
+    $('#previewImage div img').css('height', $('#previewImage div img').css('width'));
+
+    wx.config({
+        debug: false,
+        appId: '{$signPackage.appId}',
+        timestamp: '{$signPackage.timestamp}',
+        nonceStr: '{$signPackage.nonceStr}',
+        signature: '{$signPackage.signature}',
+        jsApiList: [
+            //这里要写调用的api列表
+            'checkJsApi', 'onMenuShareTimeline', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage'
+        ]
+    });
+
+    wx.ready(function() {
+
+        //分享给朋友圈子
+        wx.onMenuShareTimeline({
+            title: '智校园!',
+            desc: '智校园,连接学生家长校园的神器! 你值得拥有',
+            link: 'www.zhixiaoyuan.net',
+            imgUrl: 'https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=ca5abb5b7bf0f736ccf344536b3cd87c/29381f30e924b899c83ff41c6d061d950a7bf697.jpg',
+            trigger: function(res) {
+                // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+
+            },
+            success: function(res) {
+                alert('已分享');
+            },
+            cancel: function(res) {
+                alert('已取消');
+            },
+            fail: function(res) {
+                alert(JSON.stringify(res));
+            }
+        });
+
+    });
+
+    var localId = [];
+    var serverId = [];
+    //    $("#chooseImage").click(function() {
+    $("#previewImage").click(function() {
+        //这里是定义一个css的排序
+//        $('#previewImage').empty();
+
+        var imgs = "";
+        var html = "";
+        wx.chooseImage({
+            count:1,
+            // 默认9
+            sizeType: ['original', 'compressed'],
+            // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'],
+            // 可以指定来源是相册还是相机，默认二者都有
+            success: function(res) {
+                localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                //alert(JSON.stringify(localId));
+                for (var i = 0; i < localId.length; i++) {
+                    imgs = localId[i];
+//                    html = "<div style='position: relative;left: 50%;margin-left: -10%;'><img style='border-radius: 50%;' src='" + imgs + "' /></div>";
+
+//                    $("#previewImage").html(html);
+                    $('#previewImage div img').attr("src",imgs);
+                }
+//                var imgObj = $('#previewImage div img');
+//                var imgsurl = [];
+//                var imgSrc = "";
+//                for (var j = 0; j < imgObj.length; j++) {
+//                    imgsurl[j] = imgObj[j].src;
+//                    imgSrc += imgObj[j].src + ",";
+//                    (function(j) {
+//                        imgObj.eq(j).click(function() {
+//                            wx.previewImage({
+//                                current: imgObj[j].src,
+//                                // 当前显示图片的http链接
+//                                urls: imgsurl // 需要预览的图片http链接列表
+//                            });
+//                        });
+//                    })(j)
+//                }
+
+            },
+            fail: function(res4) {
+
+            }
+        });
+
+    });
+
+
+    $("#dianji").click(function() {
+        var picurl = "";
+        var i = 0,
+            length = localId.length;
+
+        var name = $("#name").val();
+
+        var sex = $("#sex").val();
+
+        var phone = $("#tel").val();
+
+        var classid = $("#school_class").val();
+
+        var ICcard = $("#ICcard").val();
+
+        var kaishi = $(".kaishi").val()
+
+        var relation = $("#relation").val();
+
+        var parent = $("#parent").val();
+
+        if(!name)
+        {
+            alert("姓名不能为空!");
+            return false;
+        }
+        if(!phone)
+        {
+            alert("联系方式不能为空!");
+            return false;
+        }
+        if(ICcard)
+        {
+           if(ICcard.length<10 || ICcard.length > 10)
+           {
+               alert("请输入正确的10位IC卡号");
+           }
+        }
+        if(classid==0)
+        {
+            alert("班级不能为空!");
+            return false;
+        }
+
+        function upload() {
+            wx.uploadImage({
+                localId: localId[i],
+                success: function(res1) {
+                    i++;
+                    serverId.push(res1.serverId);
+                    $.ajax({
+                        url: "__ROOT__/index.php/Apps/Index/download",
+                        type: "post",
+                        async:false,
+                        dataType: "json",
+                        data: {
+                            serverId: res1.serverId,
+                        },
+                        success: function(res) {
+//                            var randj = res.data;
+//                            console.log(randj);
+//                            //                            randj = parseFloat(randj);
+//                            randj += ".jpg,";
+//                            picurl += randj;
+
+                            if(res.status=="error"){
+                                alert("图片上传失败");
+                                return false;
+                            }
+                            var img = res.data.filename;
+                            picurl += img;
+
+
+                            if(picurl){
+                                //picurl=picurl.substring(0,picurl.length-1);
+                                $('#photo').attr("value",picurl);
+                                var photo = $("#photo").val();
+
+                                $.ajax({
+                                    url: "__ROOT__/index.php/Weixin/Tchmobilephone/studentadd_post",
+                                    type: "post",
+                                    //async:false,
+                                    dataType: "json",
+                                    data: {
+                                        photo:photo,
+                                        name:name,
+                                        sex:sex,
+                                        phone:phone,
+                                        classid:classid,
+                                        ICcard:ICcard,
+                                        relation:relation,
+                                        kaishi:kaishi,
+                                        parent:parent,
+
+
+
+                                    },
+                                    success:function(){
+                                        alert('添加成功')
+                                        location.href = "{:U('index')}";
+                                    },
+                                    error:function(){
+                                        alert('添加失败');
+                                    }
+                                })
+                            }
+                        },
+                        error: function(res3) {
+                        }
+                    });
+                },
+                fail: function(res4) {
+                    $.ajax({
+                        url: "__ROOT__/index.php/Weixin/Tchmobilephone/studentadd_post",
+                        type: "post",
+                        //async:false,
+                        dataType: "json",
+                        data: {
+                            name:name,
+                            sex:sex,
+                            phone:phone,
+                            classid:classid,
+                            ICcard:ICcard,
+                            relation:relation,
+                            kaishi:kaishi,
+                            parent:parent,
+                        },
+                        success:function(){
+                            location.href = "{:U('index')}";
+                            alert('添加成功')
+                        },
+                        error:function(){
+                            alert('添加失败')
+                        }
+                    })
+                }
+            });
+        }
+        upload();
+
+    })
+
+</script>
+<script>
+    $(function() {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = {
+            preset: 'date'
+        };
+        opt.datetime = {
+            preset: 'datetime'
+        };
+        opt.time = {
+            preset: 'time'
+        };
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今日",
+            startYear: currYear - 2, //开始年份
+            endYear: currYear + 0 //结束年份
+        };
+
+        $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#appDates").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#appDatet").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#appDatesh").mobiscroll($.extend(opt['date'], opt['default']));
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+
+    });
+    $("#appDate").change(function() {
+        var zhi = $("#appDate").val();
+        //alert(zhi);
+        $("#shijian1").text(zhi);
+    })
+    $("#appDates").change(function() {
+        var zhi = $("#appDates").val();
+        $("#shijian2").text(zhi);
+    })
+    $("#appDatet").change(function() {
+        var zhi = $("#appDatet").val();
+        $("#shijian3").text(zhi);
+    })
+    $("#appDatesh").change(function() {
+        var zhi = $("#appDatesh").val();
+        $("#shijian4").text(zhi);
+    })
+
+</script>

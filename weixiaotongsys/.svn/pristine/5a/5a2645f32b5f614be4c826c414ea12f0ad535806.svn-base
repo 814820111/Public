@@ -1,0 +1,95 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+	<ul class="nav nav-tabs">
+		<li><a href="{:U('index')}">评语内容</a></li>
+		<li class="active"><a href="{:U('add')}">添加评语</a></li>
+	</ul>
+	<div class="common-form">
+		<form method="post" class="form-horizontal" action="{:U('add_post')}">
+			<!-- J_ajaxForm -->
+			<fieldset>
+
+				<div class="control-group">
+					<label class="control-label">上级:</label>
+					<div class="controls">
+						<select name="parentid" class="normal_select">
+
+							{$select_categorys}
+						</select>
+					</div>
+				</div>
+				<!--<div class="control-group">-->
+				<!--<label class="control-label">名称:</label>-->
+				<!--<div class="controls">-->
+				<!--<input type="text" class="input" name="name" value="{$data.name}">-->
+				<!--<span class="must_red">*</span>-->
+				<!--</div>-->
+				<!--</div>-->
+
+
+
+
+				<div class="control-group">
+					<label class="control-label">内容:</label>
+					<div class="controls">
+						<textarea name="contents" rows="5" cols="57"></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+			<div class="form-actions">
+
+				<button type="submit"
+						class="btn btn-primary btn_submit  J_ajax_submit_btn">添加</button>
+				<a class="btn" href="__URL__">返回</a>
+			</div>
+		</form>
+	</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    $(function() {
+        $("#navcid_select").change(function() {
+            location.href = location.href + "&cid=" + $(this).val();
+        });
+
+        $("#selecthref").click(function() {
+            checkChange(2);
+        });
+        $("input[name='href']").click(function() {
+            checkChange(1);
+        });
+
+        var opt = $("#selecthref option[value='" + '{$hrefold}' + "']");
+        if (opt.length > 0) {
+            opt.attr('selected', 'selected');
+            checkChange(2);
+        } else {
+            checkChange(1);
+            $('#outlink_input').val('{$hrefold}');
+        }
+
+        function checkChange(i) {
+            if (i == 1) {
+                //自动输入url
+                $('#outlink_input').attr('name', 'href');
+                $('#selecthref').removeAttr('name');
+                $('#outlink').attr({
+                    'checked' : 'checked',
+                    'name' : 'nav'
+                });
+            } else {
+                //选择链接url
+                $('#selecthref').attr('name', 'href');
+                $('#outlink_input').removeAttr('name');
+                $('#selecturl').attr({
+                    'checked' : 'checked',
+                    'name' : 'nav'
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>

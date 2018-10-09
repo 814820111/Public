@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/addressList2.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <style>
+        .pen .right{
+            margin-left: 2.5%;
+            margin-top: 2.4%;
+            width: 100%;
+            float: right;
+            border-bottom: 1px solid rgb(230,230,230);
+            padding-bottom: 3%;
+        }
+        .right .pengxiao {
+            margin-left: 5%;
+            margin-top: 3%;
+
+        }
+    </style>
+    <script>
+        function a() {
+            var w, w2;
+            w = $(".rightp").height();
+            // alert(w);
+            $(".rightp span").css.line - height(w);
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="hidden" value={$teacherid} id="teacherid">
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 成长档案
+        <div class="clearfix"></div>
+    </div>
+
+        <div class="jiang" style="margin-top: 50px;">
+
+        </div>
+
+    <script>
+
+        $("document").ready(function() {
+            var teacherid = $("#teacherid").val();
+
+            $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=teacher&a=getteacherclasslistandstudentlist',
+                    async: true,
+                    data: {
+                        teacherid: teacherid
+                    },
+                    dataType: 'json',
+                success: function(res) {
+                      console.log(res);
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+//                        phone = res[i].phone;
+//                        //老师的名字
+                       // name = res[i].studentlist;
+                        //alert(name);
+                        for (var g = 0; g < res[i].studentlist.length; g++) {
+                            name = res[i].studentlist[g].name; //学生的名字
+                            //alert(names);
+                            id = res[i].studentlist[g].id; //学生ID
+                            //alert(id);
+
+                        html += '<div class="pen">'
+                        html += '<div class="right">'
+                        html += '<div class="pengxiao" >' + name + ''
+                        html += '</div>'
+                        html += "<a href='{:U('GrowthDiary')}?sid=" + id + "'>";
+                        //html += '<a href="__ROOT__/index.php/weixin/Tindex/GrowthDiary">'
+                            html +='<img src="__TMPL__Public/images/img31.png" alt=""></a>'
+                        html += '<div class="clearfix"></div>'
+                        html += '</div>'
+                        html += '<div class="clearfix"></div>'
+                        html += '</div>'
+                        }
+
+
+                    }
+                    $(".jiang").append(html);
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+
+                });
+
+        })
+
+        $(".fanhui").click(function() {
+            location.href = "{:U('Tindex/index')}"
+        })
+    </script>
+</body>
+
+</html>

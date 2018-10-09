@@ -1,0 +1,191 @@
+<teachertpl file="header"/>
+<style type="text/css">
+  .touchlei{ background-color:#eeeeee;}
+    select{
+    color: black;
+  }
+  *{
+  
+  }
+      img{
+    margin-right: 10px;
+        margin-bottom: 5px;
+  }
+</style>
+
+<body>
+      <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+            <li class="active"><a href="{:U('add')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">发布课件</a></li>
+            <li ><a href="{:U('index')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">课件列表</a></li>
+      </ul>
+
+<div style="margin-left: 25px;">
+<form action="{:U('Courseware/add_post')}" method="post" class="form-horizontal js-ajax-forms" >
+    <fieldset>
+        <div class="control-group" style=" margin-bottom:10px;margin-top: 30px">
+            <label class="control-label" >共享班级:</label>
+            <div class="controls">
+                <input type='checkbox' id='checkAll' name="class_share" value="0" style="margin: 5px"/>全选&nbsp;&nbsp;&nbsp;&nbsp;
+                <foreach name="class" item="vo">
+                    <input name="class_share" class="J_check" type="checkbox" value="{$vo.id}"  style="margin: 5px"/>{$vo.classname}&nbsp;&nbsp;
+                </foreach>
+                <input type="hidden" class="J_check" name="class_share_all" id="class_share_all" value="0" />
+            </div>
+        </div>
+
+        <div class="control-group" style=" margin-bottom:10px;">
+            <label class="control-label" >学科:</label>
+            <div class="controls">
+                <select name='subject_re' class="form-control" style="width: 216px;">
+                    <option value='0'>请选择科目</option>
+                    <foreach name="subject" item="vo">
+                        <option value="{$vo.id}">{$vo.subject}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group" style=" margin-bottom:10px;">
+            <label class="control-label" >标题:</label>
+            <div class="controls">
+                <input type="text" style="width: 200px; color: black;" name="title" value="" placeholder="请输入标题"/ >
+                <span class="form-required">*</span>
+            </div>
+        </div>
+
+        <div class="control-group" style=" margin-bottom:10px;">
+            <label class="control-label" >内容:</label>
+            <div class="controls">
+                <input type="text" style="width: 500px;height: 200px; color: black;" name="content" value="" placeholder="请输入内容"/>
+                <span class="form-required">*</span>
+            </div>
+        </div>
+
+        <div class="control-group" style=" margin-bottom:10px;">
+            <label class="control-label" >上传附件:</label>
+           <div  style=" width: 543px; margin-left: 161px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+                       <div style=" width: 300px; margin-left: 10px;">
+                        <a id="pic" style="  " href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','&max_count=0','');return false;">
+
+                            <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb2_preview' width='80' height='60' style='cursor:hand' />
+                            </a>
+                        <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                          <input type="button" class="btn" onclick="$('#thumb2_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#pic').find('img').remove(); $('#pic').append('<img src=__ROOT__/statics/images/icon/upload-pic.png id=thumb2_preview width=80 height=60 style=cursor:hand />'); $('#thumb2').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                         </div>
+                       
+                    </div>
+        </div>
+
+        <div class="control-group" style=" margin-bottom:10px;">
+            <div class="controls">
+            <button type="reset" class="btn btn-default" style="border:none;;color:#111; background-color:#adadad"> &nbsp;清 &nbsp;空&nbsp; </button>
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn" style="border:none;;color:#FFF; background-color:#26a69a; margin-left:10%;"> &nbsp;发  &nbsp;送&nbsp; </button>
+             
+            </div>
+        </div>
+
+        <div style=" height: 100px"></div>
+    </fieldset>
+      <!--<div class="row-fluid">-->
+        <!--<div class="span9">-->
+          <!--<table class="table table-bordered">-->
+         	<!--<tr>-->
+          	    <!--<th width="80">共享班级</th>-->
+	            <!--<td>-->
+	                <!--<div class="col-sm-1">-->
+		                <!--<input type='checkbox' id='checkAll' name="class_share" value="0"/>全选&nbsp;&nbsp;&nbsp;&nbsp;-->
+		                <!--<foreach name="class" item="vo">-->
+	                      	<!--<input name="class_share" class="J_check" type="checkbox" value="{$vo.id}" />{$vo.classname}&nbsp;&nbsp;-->
+	                    <!--</foreach>-->
+	                <!--</div>-->
+	                <!--<input type="hidden" class="J_check" name="class_share_all" id="class_share_all" value="0" />-->
+	            <!--</td>-->
+         	<!--</tr>-->
+            <!--<tr>-->
+              <!--<th width="80">学科</th>-->
+              <!--<td>-->
+                  <!--<div class="col-sm-1">-->
+                     <!--<select name='subject_re' class="form-control" >-->
+                         <!--<option value='0'></option>-->
+                          <!--<foreach name="subject" item="vo">-->
+                          <!--<option value="{$vo.id}">{$vo.subject}</option>-->
+                          <!--</foreach>-->
+                    <!--</select>-->
+                  <!--</div>-->
+              <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+              <!--<th>标题</th>-->
+                <!--<td>-->
+                  <!--<input type="text" style="width: 200px;" name="title" value="" placeholder="请输入标题"/>-->
+                  <!--<span class="form-required">*</span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<th>内容</th>-->
+              <!--<td>-->
+                <!--<input type="text" style="width: 500px;height: 200px;" name="content" value="" placeholder="请输入内容"/>-->
+                <!--<span class="form-required">*</span>-->
+              <!--</td>-->
+            <!--</tr>-->
+          <!--</table>-->
+
+          <!--<div  class="control-group">-->
+             <!---->
+              <!--<div class="form-group" style=" margin-bottom:10px; margin-top:20px; margin-left:0px;">-->
+                    <!--<label class="col-sm-2" style=" margin-top:3px; padding-left:8%;padding-right:0; width:160px">上传附件：</label>-->
+                    <!--<div  style="text-align: center; width: 400px;">-->
+                    <!--<input type='hidden' name='smeta[thumb]' id='thumb' value=''>-->
+                    <!--<a href='javascript:void(0);' onclick="flashupload('thumb_ima', '附件上传','thumb',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','','');return false;">-->
+                    <!--<img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb_preview' width='135' height='113' style='cursor:hand' /></a>-->
+                 <!--&lt;!&ndash; <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  &ndash;&gt;-->
+                    <!--<input type="button"  class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片">-->
+                    <!--</div>-->
+              <!--</div>-->
+                  <!---->
+             <!---->
+
+              <!--<div class="form-actions">-->
+                <!--<div class="col-sm-offset-2 col-sm-10">-->
+                    <!--<button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn" style="border:none;;color:#FFF; background-color:#26a69a; margin-right:10%;"> &nbsp;发  &nbsp;送&nbsp; </button>-->
+                    <!--<button type="reset" class="btn btn-default" style="border:none;;color:#111; background-color:#adadad"> &nbsp;重 &nbsp;置&nbsp; </button>-->
+                <!--</div>-->
+              <!--</div>-->
+
+          <!--</div>-->
+          <!---->
+       <!---->
+      <!--</div>-->
+        <!--</div>-->
+      
+    </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+
+<script>
+	  $('input:checkbox[name=class_share]').change(function(){
+	    $('#class_share_all').val($('input:checkbox[name=class_share]:checked').map(function(){return this.value}).get().join(','))
+	  })
+</script>
+
+
+
+<!--
+把 attr("checked",this.checked); 换成
+prop("checked", $(this).prop("checked")); 
+可以解决：全选只能执行一次的问题
+ -->
+<script >
+      $(function() {
+        $("#checkAll").click(function() {
+          $('input[class="J_check"]').prop("checked", $(this).prop("checked")); 
+        });
+        var $J_check = $("input[class='J_check']");
+        $J_check.click(function(){
+          $("#checkAll").prop("checked",$J_check.length == $("input[class='J_check']:checked").length ? true : false);
+        });
+      });
+</script>
+
+</body>
+</html>

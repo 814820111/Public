@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <tc_include file="Public:head" />
+</head>
+<body class="body-white">
+<tc_include file="Public:center-nav" />
+
+<div class="message-box">
+    <div class="place">
+        <a href="index">首页</a> > <a href="new_message">家校互联</a>
+    </div>
+    <div class="main">
+        <tc_include file="Public:center-left" />
+        <div class="teacher_message">
+            <div class="message-search">
+                <form method="get">
+                    <div class="message-search-input">
+                        <span>发送时间：</span>
+                        <input type="date" id="date-begin" class="date-input" name="">
+                        <span>至</span>
+                        <input type="date" id="date-end" class="date-input" name="">
+                        <input type="button" class="input-button" id="datebtn-today" name="" value="今天">
+                        <input type="button" name="" class="input-button" id="datebtn-week" value="一周内">
+                        <input type="button" name="" class="input-button" id="datebtn-month" value="一个月内">
+                        <input type="button" name="" class="input-button" id="datebtn-threemonth" value="三个月内">
+                        <span><br></span>
+                        <span>群名称：</span>
+                        <select class="te_name">
+                            <option>哈哈哈</option>
+                            <option>美女群</option>
+                        </select>
+                        <span>发送人：</span>
+                        <select class="send_name">
+                            <option>哈哈哈</option>
+                            <option>美女群</option>
+                        </select>
+                    </div>
+                    <div class="message-search-button">
+                        <input type="button" class="search-orther-button" name="" value="导出">
+                        <input type="button" class="search-orther-button" name="" value="删除">
+                        <button class="search-button">查询</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="message_list" id="message_list">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#home" data-toggle="tab">
+                            已收消息
+                        </a>
+                    </li>
+                    <li><a href="#ios" data-toggle="tab">消息回复</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="home">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td width="90px">群名称</td>
+                                <td width="295px">消息内容</td>
+                                <td width="90px">发送人</td>
+
+                                <td width="160px">发送时间</td>
+                                <td width="185px">操作</td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>哈哈哈</td>
+
+                                <td>
+                                    <a class="message-info" href="#">如果你无法简洁的表达你的想法，那只...</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>消息详细内容</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <p>如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够1
+                                            </p>
+
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <td>李小一</td>
+
+                                <td>2010-04-13 12:30</td>
+                                <td><a class="message-receive"  href="#">群成员12</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>回复消息</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+                                    </div>
+
+                                    <a class="message-reply" href="#">回复</a>
+
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>消息回复</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="reply-message">
+                                                <p>还可以输入120个字</p>
+                                                <textarea></textarea>
+                                                <span class="icon-span glyphicon glyphicon-picture"></span>
+                                                <span class="icon-span fa fa-meh-o"></span>
+                                                <input type="button" class="submit-message" value="发送" name="">
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>哈哈哈</td>
+
+                                <td>
+                                    <a class="message-info" href="#">如果你无法简洁的表达你的想法，那只...</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>消息详细内容</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <p>如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够1
+                                            </p>
+
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <td>李小一</td>
+
+                                <td>2010-04-13 12:30</td>
+                                <td><a class="message-receive"  href="#">群成员12</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>回复消息</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+                                    </div>
+
+                                    <a class="message-reply" href="#">再次回复</a>
+
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>消息回复</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="reply-message">
+                                                <p>还可以输入120个字</p>
+                                                <textarea></textarea>
+                                                <span class="icon-span glyphicon glyphicon-picture"></span>
+                                                <span class="icon-span fa fa-meh-o"></span>
+                                                <input type="button" class="submit-message" value="发送" name="">
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="meaasge-page">
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ios">
+                        <table>
+                            <thead>
+                            <tr>
+
+                                <td width="550px">回复内容</td>
+
+
+                                <td width="165px">发送时间</td>
+                                <td width="110px">操作</td>
+                            </tr>
+                            </thead>
+                            <tr>
+
+                                <td>
+                                    <a class="message-info" href="#">如果你无法简洁的表达你的想法，那只...</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>消息详细内容</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <p>如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够1
+                                            </p>
+
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+
+                                <td>2010-04-13 12:30</td>
+                                <td><a class="message-receive"  href="#">接收人（29）</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>接收人</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <a class="message-info" href="#">如果你无法简洁的表达你的想法，那只...</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>消息详细内容</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <p>如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够1
+                                            </p>
+
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+
+                                <td>2010-04-13 12:30</td>
+                                <td><a class="message-receive"  href="#">接收人（29）</a>
+                                    <div class="message-detail">
+                                        <div class="top">
+                                            <h3>接收人</h3>
+                                            <div class="off-detail">
+                                                <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="glyphicon glyphicon-envelope">张志烨</span>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="meaasge-page">
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(function(){
+        //默认样式
+        $('#nav-message').attr('class','text-first active');
+        $('#nav-message').children('span').attr('class','glyphicon glyphicon-minus-sign');
+        $('#teacher_message').attr('class','active');
+        $('#center-message').attr('class','active');
+    });
+
+    //点击消息内容时
+    $('.message-info').click(function(){
+        $(this).next().css('display','block');
+        $(this).parent().prev().children('span').attr('class','message-icon glyphicon glyphicon-ok');
+    });
+    $('.off-detail').click(function(){
+        $(this).parent().parent().css('display','none');
+    });
+
+    //填充时间
+    var m_time = Date.parse(new Date());
+    function changetime(time1){
+
+        var now_time = new Date(time1).toLocaleString().split('/');
+        now_time[2] = now_time[2].split(' ')[0];
+        now_time[1] = parseInt(now_time[1])+1<10?'0'+now_time[1]:parseInt(now_time[1])+1;
+        return now_time.join('-');
+    }
+    var now_time = changetime(m_time);
+    var week_time = changetime(parseInt(m_time)-7*24*3600*1000);
+    var month_time = changetime(parseInt(m_time)-30*24*3600*1000);
+    var threemonth_time = changetime(parseInt(m_time)-90*24*3600*1000);
+
+    $('#datebtn-today').click(function(){
+        $('#date-begin').attr('value',now_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-week').click(function(){
+        $('#date-begin').attr('value',week_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-month').click(function(){
+        $('#date-begin').attr('value',month_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-threemonth').click(function(){
+        $('#date-begin').attr('value',threemonth_time);
+        $('#date-end').attr('value',now_time);
+    });
+    //点击回复时
+    $('.message-reply').click(function(){
+        $(this).next().css('display','block');
+    });
+    //点击全选时
+    $('#all-cheackboxs').click(function(){
+        $('#warn-list').find("input:checkbox").attr("checked",'checked');
+    });
+    $('.message-receive').click(function(){
+        $(this).next().css('display','block');
+    });
+
+</script>
+
+<tc_include file="Public:footer"/>
+</body>
+</html>

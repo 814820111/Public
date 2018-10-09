@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>{$schoolname}</title>
+    <link rel="stylesheet" href="__TMPL__public/css/banjiKejian.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__public/js/new_file.js"></script>
+
+</head>
+
+<body>
+<div class="cue" style="display:none; position: fixed;width: 100%;background-color: rgba(0,0,0,0.5);z-index: 2">
+    <div style="background-color: white;width: 200px;text-align: center; margin-left: auto; margin-right: auto;line-height: 100px;font-weight: 600;border-radius: 10px;margin-top: 50px;">您还没有成绩</div>
+</div>
+<input type="hidden" value={$schoolid} id="schoolid">
+<input type="hidden" value={$classid} id="classid">
+<div class="container">
+    <div class="top_box">
+        <img src="__TMPL__public/images/img674.png" class="fanhui"> 考试成绩
+        <div class="clearfix"></div>
+    </div>
+    <div class="jiang" style="margin-top: 40px;">
+        <foreach name="score" item="v">
+        <a href="" >
+            <div class="last">
+                <div class="word">
+                    <span class="kejian" style="color: #000000;">{$v.subject}</span>
+                </div>
+                <div class="numimg" style="width:157px; ">
+                    <img class="jiantou" src="__TMPL__public/images/img53.png" alt="">
+                    <span class="num" style="float: right">{$v.score}</span>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <hr class="divide">
+         </a>
+        </foreach>
+        <if condition="$totalscore gt 0  ">
+        <div class="last">
+            <div class="word">
+                <span class="kejian" style="color: #000000;">总分:{$totalscore}</span>
+            </div>
+            <div class="numimg" style="width: 157px; ">
+                <img class="jiantou" src="__TMPL__public/images/img53.png" alt="">
+                <span class="num" style="float: right">平均分:{$kscore}</span>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <hr class="divide">
+        </if>
+        <!--<div></div>-->
+        <if condition="$comment | count   gt 0">
+        <div class="last">
+            <div class="word">
+                <span class="kejian" style="color: #000000;">评语:</span><br>
+                <span class="kejian" style="color: #000000;margin-left: 60px;">{$comment.content}</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <hr class="divide">
+        </if>
+    </div>
+
+</div>
+
+</body>
+
+</html>
+<script>
+    $("document").ready(function() {
+        res = {$totalscore};
+//        alert(res.length);
+        if(res==0){
+            $(".cue").css("display","block");
+            var window_height = $(window).height()
+            $(".cue").height(window_height)
+            setTimeout(
+                function() {
+                    $(".cue").hide()
+                }, 1000
+            )
+        }
+    })
+//    $(".fanhui").click(function() {
+//        window.history.go(-1);
+//    })
+    $(".fanhui").click(function() {
+        location.href="__ROOT__/index.php/weixin/Exam/index";
+    })
+</script>

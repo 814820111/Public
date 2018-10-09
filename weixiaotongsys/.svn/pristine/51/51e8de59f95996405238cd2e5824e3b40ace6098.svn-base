@@ -1,0 +1,49 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+	<ul class="nav nav-tabs">
+		<li><a href="{:U('indexadmin/patriarch')}">家长用户</a></li>
+		<li class="active"><a href="{:U('indexadmin/addnewuser')}">添加用户</a></li>
+	</ul>
+	<div class="common-form">
+		<form method="post" class="form-horizontal J_ajaxForm" action="{:U('indexadmin/addnewuser_post')}">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">手机号:</label>
+					<div class="controls">
+						<input type="text" class="input" name="phone" value="">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">学校ID:</label>
+					<div class="controls">
+						<input type="password" class="input" name="schoolid" value="">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">班级ID:</label>
+					<div class="controls">
+						<input type="text" class="input" name="classid" value="">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">用户类型:</label>
+					<div class="controls">
+						<select class="checkbox inline" name="user_type">
+							<option value="2">家长</option>
+							<option value="1">教师</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit"
+						class="btn btn-primary btn_submit J_ajax_submit_btn">添加</button>
+				<a class="btn" href="__URL__/patriarch">返回</a>
+			</div>
+		</form>
+	</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

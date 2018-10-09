@@ -1,0 +1,180 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">园长寄语</a></li>
+        <li class="active"><a href="{:U('add')}">添加寄语</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('add_post')}">
+            <fieldset>
+
+                <div class="control-group">
+                    <label class="control-label">所属省份:</label>
+                    <div class="controls">
+                        <select  class="province"  name="province" id="province" >
+                            <OPTION value="0">请选择省份</OPTION> 
+                            <foreach name="Province" item="vo">
+                                <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                   <div class="control-group">
+                    <label class="control-label">所属城市:</label>
+                    <div class="controls">
+                        <select name="citys" class="citys"  id="citys" >
+                            <option value="0">请先选择省份</option>
+                        </select>&nbsp;&nbsp;
+                    </div>
+                </div>
+            <div class="control-group">
+                    <label class="control-label">所属区域:</label>
+                    <div class="controls">
+                     <select name="city_next" class="select_3" id="message_type" >
+                            <option value="0">请选择你的区域</option>
+                        </select>&nbsp;&nbsp;     
+                    </div>
+                </div>
+                  <div class="control-group">
+                    <label class="control-label">所属学校:</label>
+                    <div class="controls">
+<select id="school" style="">
+                    <option value="0" >请选择学校</option>
+                   </select><br>
+                    </div>
+                </div>
+        
+       
+            
+               
+                <div class="control-group">
+                    <label class="control-label">寄语内容:</label>
+                    <div class="controls">
+                        <textarea name="content" style=" width: 500px; height: 200px; resize: none;" class="muban2" placeholder="-请输入内容-"></textarea>
+                    </div>
+                </div>
+                 <div class="form-group" style=" margin-bottom:10px;">
+                    <label class="col-sm-2 control-label" style=" margin-top:3px;">上传图片：</label>
+                    <div  style="text-align: center; width: 340px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+                           <a id="pic" style="  " href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','&max_count=1','');return false;">
+
+                            <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb2_preview' width='80' height='60' style='cursor:hand' />
+                            </a>
+                        <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                        <input type="button"  class="btn" onclick="$('#thumb2_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+                <!--<a class="btn" href="__URL__/schoollist">清除</a>-->
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+
+<SCRIPT type=text/javascript>
+
+     $(function() {
+      $("#province").change(function(){
+
+
+                   $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                    $("#citys").empty()
+                   
+                      if(data.status=="success"){
+                      
+                          $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                          for(var key in data.data){
+                              $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#citys").append("<option value='0'>没有市级</option>");
+                      }
+                  });
+
+
+              })
+          });
+
+                 $(function() {
+              $("#citys").change(function() {
+                console.log($("#citys").val())
+                 $("#message_type").empty();
+                 // $("#student").empty();
+              
+                  $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                  $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                    console.log(data);
+                      if(data.status=="success"){
+                      
+                          // $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                          for(var key in data.data){
+                              $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#message_type").append("<option value='0'>暂无区域</option>");
+                      }
+                  });
+              });
+          });
+          
+$(".select_3").change(function() {
+      var type = $(".select_3  option:selected").val();
+    $("#school").empty(); 
+      $.ajax({
+        type: "post",
+        url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+        async: true,
+        data: {
+          type: type
+        },
+        dataType: 'json',
+        success: function(res) {
+          $(".Sio").text("")
+          var html = "";
+          res = eval(res.data);
+          for(var i = 0; i < res.length; i++) {
+            var school_name = res[i].school_name; //学校的名字
+            var schoolid = res[i].schoolid; //学校的ID
+            html += '<option class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+          }
+          $("#school").append("<option value='0'>请选择学校</option>");
+          $("#school").append(html)
+          $("#viewOLanguage").chosen();
+          $("#viewOLanguage").trigger("liszt:updated");
+        },
+        error: function() {
+          console.log('系统错误,请稍后重试');
+        }
+      });
+    }) 
+
+
+        // $(function() {
+        // $("#school").change(function() {
+        //     $("#dep").empty();
+        //     console.log($("#school").val());
+        //     $.getJSON("__ROOT__/index.php?g=admin&m=Teacher&a=department&schoolid="+$("#school").val(),{},function(data){
+        //         if(data.status=="success"){
+        //         for(var key in data.data){
+        //             $("#dep").append("<option value="+data.data[key]["id"]+">"+data.data[key]["name"]+"</option>");
+        //         }
+        //         }
+        //         if(data.status=="error"){
+        //             $("#dep").append("<option value='0'>没有分组</option>");
+        //         }
+        //     }); 
+        //     });
+        // });
+</script>
+</body>
+</html>

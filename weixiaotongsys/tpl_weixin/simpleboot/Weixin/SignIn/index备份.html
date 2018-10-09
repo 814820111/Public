@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="__TMPL__public/css/checkWork1.css">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__TMPL__public/js/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__public/js/new_file.js"></script>
+    <link href="__TMPL__public/css/mobiscroll.css" rel="stylesheet" type="text/css">
+    <script src="__TMPL__public/js/mobiscroll.js" type="text/javascript"></script>
+
+</head>
+<style>
+    .jiang {
+        font-size: 15px;
+        right: 30%;
+        text-align: center;
+        border: none;
+        color: #2E6DA4;
+    }
+</style>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <input type="hidden" value={$b_time} id="b_time">
+    <input type="hidden" value={$e_time} id="e_time">
+    <div class="top_box">
+        <img src="__TMPL__public/images/img674.png" class="fanhui"> 考勤
+        <div class="clearfix"></div>
+    </div>
+    <div class="container" style=" overflow:hidden;margin-top:38px ;">
+
+        <div class="year">
+
+            <span class="center"></span>
+            <img src="__TMPL__public/images/57.png" style="position: relative;left: 20%;top: 5px;height: 20px;">
+            <input value="" class="jiang" readonly name="appDate" id="appDate" type="text">
+            <img src="__TMPL__public/images/58.png" style="position: relative;right: 20%;top: 5px;height: 20px;">
+            <div class="clearfix"></div>
+        </div>
+        <div class="content">
+            <div class="date">
+                <div class="week">
+
+                    <div class="num">一</div>
+                    <div class="num">二</div>
+                    <div class="num">三</div>
+                    <div class="num">四</div>
+                    <div class="num">五</div>
+                    <div class="num1">六</div>
+                    <div class="num1">日</div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr class="onehr">
+                <div class="day" style="height: 280px;">
+                    <div id="uio" class="day1">28</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content2">
+
+        </div>
+
+    </div>
+
+    <script>
+        $("document").ready(function() {
+            var userid = $("#userid").val();
+            var begintime = {$b_time}; //开始的时间
+            var endtime = {$e_time}; //结束的时间
+            $("#uio").hide()
+            var myDate = new Date(); //实例一个时间对象；
+            var nian = myDate.getFullYear(); //获取当前的年
+            var yue = myDate.getMonth() + 1; //获取当前的月份
+            var dangqian = myDate.getDate() //当前的日
+            var heji = nian + "-" + yue; //将年月和起来以
+            var nian = parseFloat(getWeek(nian, yue) - 1); //获取这个月一号是星级几
+            $(".jiang").val(heji); //将时间给时间插件的输入框
+            var nangqian = String(new Date(nian, yue, 0));
+            //获取当月有多少天
+            var tems = parseFloat(nangqian.substring(8, 10)) + nian; //循环的总次数
+            //alert(tems);
+            var gezi = dangqian + nian;
+           // alert(gezi);
+
+            var j = 0;
+//            alert(begintime);
+//            alert(endtime);
+            $.ajax({
+                type: "post",
+                //url: '__ROOT__/index.php/?g=apps&m=index&a=GetTeacherAttendanceList',
+                url: '__ROOT__/index.php/?g=apps&m=index&a=GetTeacherAttendancesList',
+                async: true,
+                data: {
+                    begintime: begintime,
+                    endtime: endtime,
+                    userid: userid
+                },
+                dataType: 'json',
+                success: function(res) {
+                            console.log(res);
+                    if (res.data == "no data") {
+                        var zhi = "mei";
+                    } else {
+                        res = eval(res.data);
+                        var qiandaos = "";
+                        zhi = "";
+                        for (var s = 0; s < res.length; s++) {
+                            //var write_time = tmies(res[s].arrivetime);
+//                            if(res[s].attendancetype==1){
+//                                var write_time = tmies(res[s].arrivetime); //签到的时间
+//                            }
+//                            if(res[s].attendancetype==1){
+//                                var write_time = tmies(res[s].arrivetime); //签到的时间
+//                            }
+//                            if(res[s].attendancetype==4){
+//                                var leavetime = tmies(res[s].arrivetime); //签退的时间
+//                            }
+                            if( typeof(res[s].leavetime)!="undefined"){
+                                var write_time = tmies(res[s].arrivetime);
+                                var leavetime = tmies(res[s].leavetime);
+                                var date= res[s].arrivedate;
+
+                            }else{
+                                if(res[s].attendancetype==1){
+                                    var write_time = tmies(res[s].arrivetime);
+                                    var leavetime = "";
+                                    var date= res[s].arrivedate;
+                                }else if(res[s].attendancetype==4){
+                                    var write_time = "";
+                                    var leavetime = tmies(res[s].arrivetime);
+                                    var date= res[s].arrivedate;
+                                }
+
+                            }
+                            //alert(write_time);
+                            if(res[s].attendancetype==1){
+                                //var timeid = write_time.substring(8, 10);
+                                var timeid = date.substring(8);
+                               // alert(timeid);
+                                zhi += timeid + "丶";
+                            }
+                            //var timeid = write_time.substring(8, 10);
+                            //zhi += timeid + "丶";
+//                            if(write_time){
+//                                var write = write_time.substring(0, 10);
+//                            }else{
+//                                var write = leavetime.substring(0, 10);
+//                            }
+                            if(date){
+                               var write=date;
+                            }else{
+                                var write=date;
+                            }
+                            //获取信息的年月
+                            var timeit = write_time.substring(8, 16);
+
+//                            if (res[s].leavevideo == "" || res[s].leavevideo == 0) {
+//                                var write_tims = "未签退"
+//                            } else {
+//                                var write_tims = tmies(res[s].leavevideo);
+//                            }
+//                           if (res[s].arrivevideo == "" || res[s].arrivevideo == 0 || res[s].arrivevideo == null) {
+//                                var write_tims = "未签退"
+//                            } else {
+//                                var write_tims = tmies(res[s].arrivevideo);
+//                            }
+
+                            if (leavetime == "" || leavetime == 0 || leavetime == null) {
+                                var write_tims = "未签退"
+                            } else {
+                                var write_tims = leavetime;
+                            }
+                            if (write_time == "" || write_time == 0 || write_time == null) {
+                                var write_time = "未签到"
+                            } else {
+                                var write_time = write_time;
+                            }
+                            //签退的时间
+                            qiandaos += '<div class="detail">'
+                            qiandaos += '<div class="month">' + write + '</div>'
+                            qiandaos += '<div class="reason3">'
+                            qiandaos += '<div class="rleft">'
+                            qiandaos += '<span>签到：' + write_time + '</span>'
+                            qiandaos += '<div class="radio">图片</div>'
+                            qiandaos += '<div class="clearfix"></div>'
+                            qiandaos += '</div>'
+                            qiandaos += '<hr>'
+                            qiandaos += '<div class="rright">'
+                            qiandaos += '<sapn>签退：' + write_tims + '</sapn>'
+                            qiandaos += '<div class="radio">视频</div>'
+                            qiandaos += '<div class="clearfix"></div>'
+                            qiandaos += '</div>'
+                            qiandaos += '</div>'
+                            qiandaos += '</div>'
+                        }
+                        $(".content2").append(qiandaos)
+                    }
+//                    alert(zhi);
+                    var html = "";
+                    for (var i = 0; i < tems; i++) {
+                        if (i < nian) {
+                            html += ' <div  class="day1" ></div>'
+                        } else {
+                            j++;
+                            if (i < gezi) {
+                                if (j < 10) {
+                                    var nulis = "0" + j + "丶";
+                                } else {
+                                    var nulis = j + "丶"
+                                }
+                                //alert(nulis);
+                                var indesr = zhi.indexOf(nulis);
+                                //alert(indesr);
+                                if (indesr >=0) {
+                                //if (indesr =0) {
+                                    html += '<div class="day2" >'
+                                    html += '<div class="number">' + j + '</div>'
+                                    html += '<div style=" font-size: 3.5vw;">签到</div>'
+                                    html += '</div>'
+                                } else {
+                                    html += '<div class="day4" >'
+                                    html += '<div class="number">' + j + '</div>'
+                                    html += '<div style=" font-size: 3.5vw;">缺勤</div>'
+                                    html += '</div>'
+                                }
+
+                            } else {
+                                html += ' <div class="day5" >' + j + '</div>'
+                            }
+
+                        }
+
+                    }
+                    $(".day").append(html);
+
+                    var w;
+                    w = $(".day1").width();
+                    $(".day1,.day2,.day3,.day4,.day5").height(w * 1);
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+
+            //输入框改变时
+            $(".jiang").change(function() {
+                $(".day").text("");
+                $(".content2").text("");
+                var shijinn = $(".jiang").val();
+                var jis = shijinn.substring(0, 4);
+                var id = shijinn.substring(5, 8);
+                var sh = String(new Date(jis, id, 0));
+                var pi = sh.substring(8, 10);
+                var begin = shijinn + "-1"
+                    //开始的时间
+                var end = shijinn + "-" + pi;
+                var begintime = transdate(begin);
+                //传给后台开始的时间戳；
+                var endtime = transdate(end);
+                var nia = parseFloat(getWeek(jis, id)) - 1;
+                var jiangs = String(new Date(jis, id, 0)); //2009年6月的第0天，也就是2009年5月的最后一天
+                //当月的天数
+                var ids = parseFloat(jiangs.substring(8, 10)) + nia;
+                var shijiandang = shijianzhuansd();
+                var bijiao1 = nia + dangqian;
+                $.ajax({
+                    type: "post",
+                    //url: '__ROOT__/index.php/?g=apps&m=index&a=GetTeacherAttendanceList',
+                    url: '__ROOT__/index.php/?g=apps&m=index&a=GetTeacherAttendancesList',
+                    async: true,
+                    data: {
+                        begintime: begintime,
+                        endtime: endtime,
+                        userid: userid
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.data == "no data") {
+                            var ih = "mei";
+
+                        } else {
+                            var ih = "";
+                            var qiandao = "";
+                            res = eval(res.data);
+                            for (var s = 0; s < res.length; s++) {
+                                //var write_time = tmies(res[s].arrivetime);
+//                                if(res[s].attendancetype==1){
+//                                    var write_time = tmies(res[s].arrivetime); //签到的时间
+//                                }
+//                                if(res[s].attendancetype==4){
+//                                    var leavetime = tmies(res[s].arrivetime); //签退的时间
+//                                }
+
+                                if( typeof(res[s].leavetime)!="undefined"){
+                                    var write_time = tmies(res[s].arrivetime);
+                                    var leavetime = tmies(res[s].leavetime);
+                                    var date= res[s].arrivedate;
+
+                                }else{
+                                    if(res[s].attendancetype==1){
+                                        var write_time = tmies(res[s].arrivetime);
+                                        var leavetime = "";
+                                        var date= res[s].arrivedate;
+                                    }else if(res[s].attendancetype==4){
+                                        var write_time = "";
+                                        var leavetime = tmies(res[s].arrivetime);
+                                        var date= res[s].arrivedate;
+                                    }
+
+                                }
+                                if(res[s].attendancetype==1){
+                                    //var timeid = write_time.substring(8, 10);
+                                    var timeid = date.substring(8);
+                                    ih += timeid + "丶";
+                                }
+                                //var timeid = write_time.substring(8, 10);
+                                //ih += timeid + "丶";
+//                                if(write_time){
+//                                    var write = write_time.substring(0, 10);
+//                                }else{
+//                                    var write = leavetime.substring(0, 10);
+//                                }
+                                if(date){
+                                    var write=date;
+                                }else{
+                                    var write=date;
+                                }
+                                var timeit = write_time.substring(8, 16);
+//                                if (res[s].leavevideo == "") {
+//                                    var write_tims = "未签退"
+//                                } else {
+//                                    var write_tims = tmies(res[s].leavevideo);
+//                                }
+
+                                if (leavetime == "" || leavetime == 0 || leavetime == null) {
+                                    var write_tims = "未签退"
+                                } else {
+                                    var write_tims = leavetime;//签退的时间
+                                }
+
+                                if (write_time == "" || write_time == 0 || write_time == null) {
+                                    var write_time = "未签到"
+                                } else {
+                                    var write_time = write_time;
+                                }
+
+                                qiandao += '<div class="detail">'
+                                qiandao += '<div class="month">' + write + '</div>'
+                                qiandao += '<div class="reason3">'
+                                qiandao += '<div class="rleft">'
+                                qiandao += '<span>签到：' + write_time + '</span>'
+                                qiandao += '<div class="radio">视频</div>'
+                                qiandao += '<div class="clearfix"></div>'
+                                qiandao += '</div>'
+                                qiandao += '<hr>'
+                                qiandao += '<div class="rright">'
+                                qiandao += '<span>签退：' + write_tims + '</span>'
+                                qiandao += '<div class="radio">视频</div>'
+                                qiandao += '<div class="clearfix"></div>'
+                                qiandao += '</div>'
+                                qiandao += '</div>'
+                                qiandao += '</div>'
+
+                            }
+                            $(".content2").append(qiandao)
+                        }
+
+                        var htmlip = "";
+                        var p = 0;
+                        for (var i = 0; i < ids; i++) {
+
+                            if (begintime < shijiandang) {
+                                if (i < nia) {
+                                    htmlip += '<div  class="day1" ></div>'
+                                } else {
+                                    p++;
+                                    if (endtime == shijiandang) {
+                                        if (i < bijiao1) {
+                                            if (p < 10) {
+                                                var mnk = "0" + p + "丶"
+                                            } else {
+                                                var mnk = p + "丶"
+                                            }
+                                            var indesr = ih.indexOf(mnk);
+                                            if (indesr == -1) {
+                                                htmlip += '<div class="day4" >'
+                                                htmlip += '<div class="number">' + p + '</div>'
+                                                htmlip += '<div style=" font-size: 3.5vw;">缺勤</div>'
+                                                htmlip += '</div>'
+                                            } else {
+                                                htmlip += '<div class="day2" >'
+                                                htmlip += '<div class="number">' + p + '</div>'
+                                                htmlip += '<div style=" font-size: 3.5vw;">签到</div>'
+                                                htmlip += '</div>'
+                                            }
+
+                                        } else {
+                                            htmlip += '<div  class="day5" ></div>'
+                                        }
+
+                                    } else {
+                                        if (p < 10) {
+                                            var mnk = "0" + p + "丶"
+                                        } else {
+                                            var mnk = p + "丶"
+                                        }
+                                        var indesr = ih.indexOf(mnk);
+                                        if (indesr == -1) {
+                                            htmlip += '<div class="day4" >'
+                                            htmlip += '<div class="number">' + p + '</div>'
+                                            htmlip += '<div style=" font-size: 3.5vw;">缺勤</div>'
+                                            htmlip += '</div>'
+                                        } else {
+                                            htmlip += '<div class="day2" >'
+                                            htmlip += '<div class="number">' + p + '</div>'
+                                            htmlip += '<div style=" font-size: 3.5vw;">签到</div>'
+                                            htmlip += '</div>'
+                                        }
+
+                                    }
+
+                                }
+
+                            } else {
+                                alert("该时间段还没考勤");
+                                history.go(0);
+                                return;
+                                htmlip += '<div  class="day1"style="background-color: rgb(153,216,189);" ></div>'
+
+                            }
+
+                        }
+                        $(".day").append(htmlip);
+
+                        var w;
+                        w = $(".day1").width();
+                        $(".day1,.day2,.day3,.day4,.day5").height(w * 1);
+
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+
+                });
+
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            var currYear = (new Date()).getFullYear();
+            var opt = {};
+            opt.date = {
+                preset: 'date'
+            };
+            opt.datetime = {
+                preset: 'datetime'
+            };
+            opt.time = {
+                preset: 'time'
+            };
+            opt.default = {
+                theme: 'android-ics light', //皮肤样式
+
+                mode: 'scroller', //日期选择模式
+                dateFormat: 'yyyy-mm',
+                lang: 'zh',
+                showNow: true,
+                nowText: "今月",
+                startYear: currYear - 2, //开始年份
+                endYear: currYear + 0 //结束年份
+            };
+
+            $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+
+            var optDateTime = $.extend(opt['datetime'], opt['default']);
+            var optTime = $.extend(opt['time'], opt['default']);
+
+        });
+        $(".fanhui").click(function() {
+            location.href = "{:U('Index/index')}";
+        })
+    </script>
+</body>
+
+</html>

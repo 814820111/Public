@@ -1,0 +1,48 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('teachermanage')}">教师列表</a></li>
+        <li><a href="{:U('addteacher')}">新增教师</a></li>
+        <li><a href="{:U('bindingclass',array('id'=>$teacherinfo['id']))}">当前绑定</a></li>
+        <li class="active"><a href="{:U('addbinding',array('id'=>$teacherinfo['id']))}">新增绑定</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('addbinding_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">教师姓名:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="teacher_name" value="{$teacherinfo['name']}" readonly="readonly">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所属学校:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_name" value="{$teacherinfo['schoolname']}" readonly="readonly">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">班级名称:</label>
+                    <div class="controls">
+                        <select class="input" name="schoolid">
+                            <option value="1">班级1</option>
+                            <option value="2">班级2</option>
+                            <option value="3">班级3</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+                <!--<a class="btn" href="__URL__/schoollist">清除</a>-->
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

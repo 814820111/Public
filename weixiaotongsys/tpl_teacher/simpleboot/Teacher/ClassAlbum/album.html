@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ZOOM - jQuery Photo Gallery Plugin</title>
+    <style type="text/css">
+
+        body{overflow-y:scroll;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;background:#f4f4f4;padding:0;margin:0;}
+        h1{font-size:31px;line-height:32px;font-weight:normal;margin-bottom:25px;}
+        a,a:hover{border:none;text-decoration:none;}
+        img,a img{border:none;}
+        pre{overflow-x:scroll;background:#ffffff;border:1px solid #cecece;padding:10px;}
+        .clear{clear:both;}
+        .container{width:505px;margin:0 auto;}
+        .gallery{list-style-type:none;float:left;background:#ffffff;padding:20px 20px 10px 20px;margin:0;-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+
+        .gallery li{float:left;padding:0 10px 10px 0;}
+
+        .gallery li:nth-child(6n){padding-right:0;}
+
+        .gallery li a,.gallery li img{float:left;}
+
+    </style>
+
+    <link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/album/zoom.css" media="all" />
+</head>
+<body>
+<div class="container">
+    <h1>ZOOM - jQuery photo gallery plugin</h1>
+    <ul class="gallery">
+        <foreach name="lists" item="vo">
+
+                <li><a href="__ROOT__/uploads/microblog/{$vo.pictureurl}"><img src="__ROOT__/uploads/microblog/{$vo.pictureurl}"  width="230" height="144"/></a></li>
+
+            <!--<li class="album-carousel-thumb"><a href="__ROOT__/uploads/microblog/{$vo.pictureurl}"><img src="__ROOT__/uploads/microblog/{$vo.pictureurl}" alt="相册图片-示例图片（2）" width="230" height="144" /></a></li>-->
+        </foreach>
+
+
+    </ul>
+
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/album/jquery.js"></script>
+<script src="__ROOT__/statics/js/album/zoom.min.js"></script>
+</body>
+</html>

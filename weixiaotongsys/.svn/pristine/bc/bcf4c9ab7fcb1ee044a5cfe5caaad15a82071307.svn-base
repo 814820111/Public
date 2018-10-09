@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/about us.css">
+<title>智校园官网关于我们</title>
+</head>
+
+<body>
+<div class="nav">
+	<img src="img/img02.png">
+    <p><a href="">登录/注册</a></p>
+    <ul>
+    	<li><a href="home.html">首页</a></li>
+        <li><a href="product presentation.html">产品介绍</a></li>
+        <li><a href="down.html">下载中心</a></li>
+        <li><a href="">校园门户</a></li>
+        <li><a href="join us.html">加盟合作</a></li>
+        <li><a href="about us.html" style="color:#06c18e;">关于我们</a></li>
+    </ul>
+</div>
+<div class="banner">
+	<img src="img/img01.jpg">
+</div>
+<div class="qianse">
+    <div class="one">
+        <p class="no">公司历程</p>
+        <div class="tupian"><img src="img/img53.png"></div>
+        <div class="left">
+        	<p class="text-justify">
+            <br>
+            <b>温州韵途科技有限公司坐落在浙江省温州市。</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司致力于数字校园、智慧校园、校园信息化平台的研发，是国内教育信息化开发企业之一。公司拥有50多位人员，开发的领域覆盖网站、APP、嵌入式系统、硬件等方面，可以为教育行业开发软硬件结合的系统平台。 公司与国内多个教育主管部门、教育研究团队、大型教育集团和著名高校 ，建立了长期的合作关系，不断参与和研发新一代的教育软硬件产品。 公司开发的教育软件已经在全国上千个学校使用，获得了教育主管部门、 学校和家长的好评。
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="shense">
+    <div class="two">
+    	<p class="no">公司文化</p>
+        <div class="tupian"><img src="img/img08.png"></div>
+        <div class="right">
+        	<p class="text-justify">
+        	<br>
+            <b>产品秉承简洁、灵活、易用的研发理念，让客户能简单快速的上手使用！</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;快速给校园提供功能强大的校园管理及家校互动能力，包括校园新闻、班级通知,即时消息、讨论组、班级圈子、考勤签到、安全接送、规范化晨检、健康档案、移动办公 视频监控、校园分区广播图书借阅管理、问卷调查、流程审批、在线交费诸多功能模块。 所有开放的功能真正完全免费，无使用限制，无隐性收费，是学校提升信息化水平、 增强竞争力、降低运营成本的理想选择。
+            <br>
+            <b>
+            用心去做校园有价值的产品聆听用户，
+            </b>
+            <br>
+            我们不敢怠慢，我们对自己要求的更高。
+        	</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="qianse">
+	<div class="three">
+    	<p class="no">公司文化</p>
+        <div class="tupian"><img src="img/img09.png"></div>
+        <div class="left">
+        	<p class="text-justify">
+        	<br>
+            <b>为推动教育信息化变革而不断创新</b>
+            <br>
+            <b>——公司使命</b>
+            <br>
+            担负这智慧教育的社会责任和使命，是企业不断发展或前 进的动力之源。致力于通过科技创新打造中国幼教生态圈
+            <br>
+            <b>助力孩子快乐成长</b>
+            <br>
+            <b>——产品理念</b>
+            <br>
+            让家长更安心，让孩子更开心，留下孩子成长的印迹。
+            <br>
+            <b>打造中国最大的智慧教育云服务平台</b>
+            <br>
+            <b>——经营理念</b>
+            <br>
+            注重长远发展，不因商业利益而伤害用户价值，立足创新 开拓进取，专注，专业，服务于教育行业
+        	</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="shense">
+	<div class="four">
+    	<p class="no">用户心声</p>
+        <div class="tupian"><img src="img/img10.png"></div>
+        <div class="right">
+        	<p class="text-justify">
+            <br>
+            <b>烟台某幼儿园小班家长 妞妞妈妈</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过手机可以了解宝贝在园的表现确实很方便，再也不用担心为了解这些信息而麻烦老师了，因为在外地工作，都是爷爷奶奶在接送，每天都可以收到刷卡接送的信息，还配上了接送人抓拍的照片，让我们非常放心；并且可以收到接宝宝时的现场照片，这下放心了。
+            <br>
+            <b>温州某幼儿园大班老师 海滨老师</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智校园APP提供的家校互动功能，平时有什么问题都可以通过APP与家长交流，包括班级通知、即时消息、班级作业、家长叮嘱，都是非常实用的。
+            <br>
+            <b>上海某私立幼儿园 孙园长</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;感谢“智校园APP”为我们幼儿园提供的这些服务，确实是在为咱们从事幼教工作的人群作考虑，考勤签到、安全接送、视频监控、在线交费等诸多功能模块，是学校提升信息化水平、增强竞争力、降低运营成本的理想选择。
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="qianse">
+	<div class="five">
+    	<p class="no">愿&nbsp;&nbsp;&nbsp;&nbsp;景</p>
+        <div class="tupian"><img src="img/img11.png"></div>
+        <div class="left">
+        	<p class="text-justify">
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;温州韵途科技有限公司以“为推动教育信息化变革而不断创新”为使命，立志于打造中国具有高度社会价值的移动互联网产品，目前公司旗下包含教育产品研发，儿童产业联盟等多个事业群。公司在产品运营的过程中，将秉承社会责任，尽最大努力在薄弱地区教育信息化提升、留守儿童关怀、贫困生帮扶等方面提供支持，为社会和谐发展做出自己应有的贡献！
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="botnav">
+	<div class="box">
+        <div class="left">
+            <p>加入我们</p>
+            <img src="img/img12.png">
+            <span>诚邀经营加入我们团队，有意者请发送简历至6364736473@qq.com</span>
+        </div>
+        <div class="center">
+            <p>客户至上</p>
+            <img src="img/img13.png">
+            <span>拥有专业的服务团队，能快速高效的帮助客户解决遇到的问题，让您没有后顾之忧。</span>
+        </div>
+        <div class="right">
+            <p>加盟合作</p>
+            <img src="img/img14.png">
+            <span>有意向或向加盟合作的客户，留下您的联系方式，我们会第一时间与您取得联系。</span>
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<p>|温州韵途科技有限公司|智校园官方网站|
+    <br>浙ICP备16026974号-1 Copyright©2016 yuntu Inc. All Rights Reserved . 
+    <br>温州韵途科技有限公司版权所有 
+    <br>加盟热线:000-000-0000</p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

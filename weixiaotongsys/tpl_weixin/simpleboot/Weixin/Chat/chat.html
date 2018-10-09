@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>消息列表</title>
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/base.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/iconfont.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/index.css">
+
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+    <div class="chat-wrapper">
+        <!-- header -->
+        <div class="header-bar">
+            <a href="index.html" class="back">
+                <img src="img/back.png" alt="">
+            </a>
+            <p>{$receive_name}</p>
+        </div>
+
+        <!-- 消息box -->
+        <div class="message-box">
+            <!-- 接收消息 -->
+            <foreach name="chat_record" item="vo">
+                <if condition="$vo.send_uid neq $send_uid ">
+                    <div class="get-message">
+                        <div class="time">{$vo.create_time|date="Y/m/d H:i:s",###}</div>
+                        <div class="msg clearfix">
+                            <img src="http://ow3hm6y11.bkt.clouddn.com/microblog/15313858973320.jpg" alt="">
+                            <span>{$vo.content}</span>
+                        </div>
+                    </div>
+                    <else/>
+                <!-- 发送消息 -->
+                    <div class="send-message">
+                        <div class="time">{$vo.create_time|date="Y/m/d H:i:s",###}</div>
+                        <div class="msg clearfix">
+                            <img src="http://ow3hm6y11.bkt.clouddn.com/microblog/15313858973320.jpg" alt="">
+                            <span>{$vo.content}</span>
+                        </div>
+                    </div>
+                </if>
+            </foreach>
+        </div>
+        </div>
+        <!-- 底部输入框 -->
+        <div class="input-bar">
+            <div>
+                <input type="text" class="type-message">
+                <span class="send-btn">发送</span>
+            </div>
+        </div>
+    </div>
+    <input id="huanxinid" type="hidden" value="{$huanxin}">
+   <input id="send_uid" type="hidden" value="{$send_uid}">
+   <input id="receive_uid" type="hidden" value="{$receive_uid}">
+   <input id="receive_type" type="hidden" value="{$receive_type}">
+   <input id="send_type" type="hidden" value="{$send_type}">
+   <input id="type" type="hidden" value="{$type}">
+    <input id="studentid" type="hidden" value="{$studentid}">
+</body>
+
+</html>
+<script src="__ROOT__/statics/wjs/huanxin_config/webim.config.js"></script>
+<script src="__ROOT__/statics/wjs/huanxin_config/strophe-1.2.8.min.js"></script>
+
+<script src='http://downloads.easemob.com/downloads/cdn/websdk-1.4.12.js'></script>
+<script src="__ROOT__/statics/wjs/huanxin_config/webim.chat.js"></script>
+<script>
+    function secondToDate(result) {
+        var time=new Date();
+        var month = time.getMonth()+1;
+        var newMonth = month>9?month:"0"+month;  //月
+        var houers=time.getHours();
+        var minutes=time.getMinutes()>9?time.getMinutes() :"0"+time.getMinutes();
+        var seconds=time.getSeconds()>9?time.getSeconds() :"0"+time.getSeconds();
+        var viptime=houers+":"+minutes+":"+seconds;
+        return viptime;
+    }
+
+    //发送消息
+$(".send-btn").click(function(){
+    //接收者状态 todo 此时的聊天对象已发生该表,接收者发送时,成为发送者,发送者为接收者
+    var content  = $(".type-message").val();
+    var send_uid = $("#send_uid").val();
+    var receive_uid = $("#receive_uid").val();
+    var send_type = $("#receive_type").val();
+    var type = $("#type").val();
+
+    var receive_type = $("#send_type").val();
+
+    var time = secondToDate();
+
+    var html = "";
+    html+="<div class='send-message'>";
+    html+="<div class='time'>"+time+"</div>";
+    html+="<div class='msg clearfix'><img src=http://ow3hm6y11.bkt.clouddn.com/microblog/15313858973320.jpg alt=> <span>"+content+"</span></div>";
+    html+="</div>";
+    $(".message-box").append(html);
+    $(".type-message").val("");
+
+    //插入数据库
+
+    //调用发送消息接口
+    $.ajax({
+        type: "post",
+        url: "{:U('send_message')}",
+        async: true,
+        dataType: 'json',
+        data: {
+            send_uid:send_uid,
+            receive_uid:receive_uid,
+            send_type:send_type,
+            receive_type:receive_type,
+            type:type,
+            content:content,
+        },
+        success: function(res) {
+           if(res.status)
+           {
+               alert("发送成功");
+           }else{
+               alert("发送失败");
+           }
+        },
+        error: function() {
+            alert('系统错误,请稍后重试');
+        }
+    });
+
+})
+
+
+</script>

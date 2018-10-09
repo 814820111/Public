@@ -1,0 +1,621 @@
+  <!doctype html>
+  <html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>信息1</title>
+  <link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+  <link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="__ROOT__/statics/js/jquery-3.1.0.min (1).js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+  <script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+  <script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+  <style type="text/css">
+  *{ font-size:14px;}
+  .col-auto { overflow: auto; _zoom: 1;_float: left;}
+  .col-right { float: right; width: 30%; overflow: hidden;}
+  .table th, .table td {vertical-align: middle;}
+  .picList li{margin-bottom: 5px;}
+  .clearfix{ clear:both;}
+  .xuan02,.xuan02a{ display:none;}
+  .xuan03,.xuan03a{ display:none;}
+  .quanlei{ display:block;}
+  .tan{ display:none;}
+  </style>
+  <link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet" />
+    <link href="__ROOT__/statics/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+    <!-- <link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="__TMPL__assets/css/mychangestyle.css" rel="stylesheet" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="__ROOT__/statics/simpleboot/css/index.css"/> -->
+    <style>
+    .length_3{width: 180px;}
+    form .input-order{margin-bottom: 0px;padding:3px;width:40px;}
+    .table-actions{margin-top: 5px; margin-bottom: 5px;padding:0px;}
+    .table-list{margin-bottom: 0px;}
+  </style>
+  </head>
+  <body>
+  <div>
+      <ul id="myTab" class="nav nav-tabs" style=" margin-left:30px; margin-top:20px;">
+          <li class="active"><a href="{:U('index')}" style="color:#1f1f1f">信息群发</a></li>
+          <li><a href="{:U('lists')}" style="color:#1f1f1f">已发信息</a></li>
+      </ul>
+      <!--弹窗start-->
+      <div style="  background-color:rgba(0,0,0,0.70); width:100%; height:730px;position:absolute; z-index:2;" class="tan">
+                  <div id="myTabContent" class="tab-content" style=" background-color:white;width:1200px; margin-left:auto; margin-right:auto; margin-top:40px; margin-bottom:40px;">
+          <div class="tab-pane fade in active" id="home" style="width:1150px; margin-left:4%; ">
+          
+              <br/>
+              <form class="form-horizontal J_ajaxForm" action="{:u('MessageInfo/message_self')}" method="post" style=" ">
+                  <div class="form-group" style=" width:650px; float:left;">
+                      <!--<label class="col-sm-2 control-label" for="name">接收人：</label>-->
+                      <div class="col-sm-6" style=" width:650px;  padding-left:30px; ">
+                              <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                                   <li class="active"><a href="#messages" data-toggle="tab"  style="color:#1f1f1f; ">统一填写内容</a></li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade in active" id="messages" style=" border:1px solid #e8e8e8; ">
+                                      <textarea name="message_content" rows="3" cols="" style="width: 100%; height: auto;resize:none; border:none; padding:0;" class="muban2"></textarea>
+                                      <div style="border:none;color:#FFF; background-color:#26a69a; float:right; margin-top:5px; padding:2px 10px 2px 10px; border-radius:4px; cursor:pointer; font-size:12px;" class="tianjia"> &nbsp;添&nbsp;加&nbsp; </div>
+                                  </div>
+                                  <div class="clearfix"></div>
+                              </div> 
+                              <div class="clearfix"></div>
+                      </div>
+                      <div class="clearfix"></div>
+                  <!--发送人start-->
+                  <div style=" margin-top:10px; padding-left:30px; height:200px; overflow-y:scroll;">
+                     <div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center; line-height:20px; display:none;">是否发送</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:150px; text-align:center; line-height:20px;">发送对象</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:450px; text-align:center; line-height:20px;">发送内容</div>
+                          <div class="clearfix"></div>
+                     </div>
+                     <foreach name="stu" item="vo">
+                     <div>
+                     		
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center;height:64px; padding-top:32; display:none;">
+                              <input type="checkbox" name="user[]" value="{$vo.id}" checked>
+                          </div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:150px; text-align:center; line-height:62px;">{$vo.name}</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:450px; text-align:center; height: 64px;">
+                              <textarea name="self[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang" value="{$vo.id}"></textarea>
+                          </div>
+                          <div class="clearfix"></div>
+                     </div>
+                     </foreach>
+                      <!-- <div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center;height:64px; padding-top:32">
+                              <input type="checkbox" checked>
+                          </div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center; line-height:62px;">张小二</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:400px; text-align:center; line-height:20px;">
+                              <textarea rows="3" style=" width:100%; resize:none; outline:none; " class="kuang"></textarea>
+                          </div>
+                          <div class="clearfix"></div>
+                     </div>
+                      <div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center;height:64px; padding-top:32">
+                              <input type="checkbox" checked>
+                          </div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center; line-height:62px;">张小二</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:400px; text-align:center; line-height:20px;">
+                              <textarea rows="3" style=" width:100%; resize:none; outline:none;" class="kuang"></textarea>
+                          </div>
+                          <div class="clearfix"></div>
+                     </div> -->
+                  </div>
+                  <!--发送人end-->
+                  <!--上传start-->
+                  <div class="form-group" style=" margin-bottom:10px;">
+                    <label class="col-sm-2 control-label" for="inputfile" style=" margin-top:3px;">上传附件：</label>
+						        <div  style="text-align: center; width: 340px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+                    <a href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','','');return false;">
+                    <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb2_preview' width='80' height='60' style='cursor:hand' /></a>
+                 <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                    <input type="button"  class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                    </div>
+                  </div>
+                  
+                 <!--上传end-->
+                                  <!--发送模式start-->
+                <div>
+                      <label class="col-sm-2 control-label" for="name" style="display:block;">发送模式：</label>
+                      <div class="col-sm-8" style="width:500px; margin-bottom:20px;">
+                          <div class="row visible-on">
+                              <label class="checkbox-inline" style=" font-size:12px;">
+                                  <input type="checkbox" name="optionsRadiosinline" id="optionsRadios2">&nbsp;&nbsp;定时发送
+                                  <input type="text" class="sang_Calender" placeholder="-输入时间-" style="width:140px;">
+                              </label>
+                          </div>
+                          <div class="row visible-on">
+                              <label class="checkbox-inline" style=" font-size:12px;">
+                                  <input type="checkbox" name="" value="">&nbsp;&nbsp;同时发送给自己
+                              </label>
+                              <label class="checkbox-inline" style=" font-size:12px;">
+                                  <input type="checkbox" name="" value="">&nbsp;&nbsp;消息前增加家长称呼
+                              </label>
+                              <label class="checkbox-inline" style=" font-size:12px;">
+                                  <input type="checkbox" name="" value="">&nbsp;&nbsp;消息内容后加老师名
+                                  <input type="text" placeholder="-输入姓名-" style="width:74px;">
+                              </label>
+                          </div>
+                          <div class="row visible-on">
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="" value="" style=" font-size:12px;">&nbsp;&nbsp;微信推送<a href="https://hao.360.cn/" style="color:#ff9800;"> 如何绑定？ </a>
+                              </label>
+                          </div>
+                      </div>	
+                  </div>
+                  <!--发送模式end-->
+                  <div class="form-group" style=" margin-top:-55px;">
+                      <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-default" style="border:none;;color:#FFF; background-color:#26a69a; margin-right:10%;"> &nbsp;发  &nbsp;送&nbsp; </button>
+                          <button type="reset" class="btn btn-default" style="border:none;;color:#FFF; background-color:#adadad"> &nbsp;重 &nbsp;置&nbsp; </button>
+                      </div>
+                  </div>   
+              </div>
+                  
+          <div class="" style=" width:400px; float:left; margin-left:50px;">
+            <div class="table_full" style=" ">
+              <table class="table table-bordered" >
+                <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                     <li class="active"><a href="#teachers" data-toggle="tab"  style="color:#1f1f1f">信息模板啊</a></li>
+                     <!-- <li><a href="#class_id" data-toggle="tab"  style="color:#1f1f1f">保存为模板</a></li> -->
+                </ul>
+                  <tr>
+                    <td>
+                      <div class="tab-content" id="myTabContent">
+                      <!--个人-->
+                          <div class="tab-pane fade in active" id="teachers">
+                          <!-- <label class="" for="name" style=" float:left; margin-top:8px;">评论类型：</label>
+                               <select name='cl_else' class="form-control"  style=" width:110px; float:left;">
+                                   <option value='0'>选择类型</option>
+                                   <foreach name="class" item="vo">
+                                        <OPTION value="{$vo.id}">{$vo.classname}</OPTION> 
+                                   </foreach>
+                               </select>
+                               <button type="submit" class="btn btn-primary" style="border:none;;color:#FFF; background-color:#26a69a; margin-left:10%; margin-bottom:10px;"> &nbsp;搜  &nbsp;索&nbsp; </button> -->
+                               <div class="clearfix"></div>
+                               <div style=" height:400px; overflow-y:scroll;">
+                                  <foreach name="note" item="no">
+                                      <div class="muban" style="  border:2px solid #d7ebfa; float:left; width:90%; padding-left:5px; margin-bottom:5px; margin-left:2%; cursor:pointer;">{$no.content}</div>
+                                  </foreach>
+                               </div>
+                               <div class="clearfix"></div>
+                          </div>
+                          <!--班级-->
+                          <!-- <div class="tab-pane fade" id="class_id">
+                                  <textarea cols="45" rows="10" name="model" style=" resize:none; margin:0;"></textarea>
+                                 <button type="submit" class="btn btn-primary" style="border:none;color:#FFF; background-color:#26a69a; margin-left:80%; margin-top:10px;"> &nbsp;保&nbsp;存&nbsp; </button>
+                          </div> -->
+                      </div>
+                     </td>
+                  </tr> 
+        </table>
+      </div>
+    </div>
+    <!--关闭按钮start-->
+    <div style=" width:25px; height:25px; float:right; margin-right:10px; background-image:url(__ROOT__/statics/images/cha.png); background-size:contain; background-repeat:no-repeat; cursor:pointer;" class="cha"></div>
+    <div class="clearfix"></div>
+      <!--关闭按钮end-->
+              </form>
+              <div class="clearfix"></div>
+          </div>
+          
+      <div class="tab-pane fade" id="ios">
+          <p>更换</p>
+      </div>
+     </div>
+  </div>
+       <!--弹窗end-->
+      <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="home" style="width:90%; margin-left:4%; min-width:1200px; margin-top:2%;">
+              <br/>
+              <form class="form-horizontal J_ajaxForm" action="{:u('MessageInfo/message')}" method="post" style=" margin-bottom:100px; float:left; width:60%;">
+                  <div class="form-group">
+                  <!--                      <label class="col-sm-2 " for="name" style=" margin-left:20px;">接收人：</label>
+                          <div style=" border:1px solid #dddddd; min-height:30px; padding-left:10px; padding-right:10px; background-color:#F2F2F2; width:500px; margin-left:-30px;float:left;">
+                          
+                          <div>
+                              <foreach name="userid" item="cl" >
+                                  <div class="shan" style="  float:left; padding-right:5px; margin-bottom:5px; margin-left:2%; color:#676767; cursor:pointer;" onClick=this.children[0].click();>
+                                      <input class="" type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x" name="cla[]" value="{$cl.id}" style=" margin-right:5px; display:none;" checked>{$cl.a}<span style=" margin-left:5px; margin-right:5px; float:left; border:1px solid #bbbbbb; width:14px; line-height:12px; text-align:center; margin-top:3px; color:#bbbbbb; padding-bottom:2px;">-</span>
+                                      <div class="clearfix"></div>
+                                  </div>
+                               </foreach>
+                            </div>
+                          </div>
+                          <a href="#" onClick="javascript :history.go(-1);" style="text-decoration:none; background-color:#26a59a; color:white; padding:5px 10px 5px 10px; border-radius:3px; font-size:14px; float:left; margin-left:10px;">重&nbsp;选</a>-->
+
+                      <div class="col-sm-6 " style=" width:90%; margin-bottom:0; padding-left:8%;">
+                        <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                          <li class="active"><a href="#messages" data-toggle="tab"  style="color:#1f1f1f; ">统一发送消息</a></li>
+                          <li><a href="#settings"   style="color:#1f1f1f;" class="gezi">各自发送消息</a></li>
+                        </ul>
+                      <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade in active" id="messages" style=" border:1px solid #e8e8e8;">
+                             <textarea name="content" rows="8" cols="" placeholder="请填写内容,不超过256个字。" style="width: 100%; height: auto;resize:none; border:none; padding:5px;" maxlength="256" class="kuang"></textarea>
+                          </div>
+                      </div> 
+                    </div>
+                    <div class="clearfix"></div>
+                    <foreach name="stu" item="vo">
+                     <div>
+                        
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center;height:64px; padding-top:32; display:none;">
+                              <input type="checkbox" name="user[]" value="{$vo.id}" checked>
+                          </div>
+                     </div>
+                     </foreach>
+                  <!--上传start-->
+                  <div class="form-group" style=" margin-bottom:10px; margin-top:20px; margin-left:0px;">
+                    <label class="col-sm-2" style=" margin-top:3px; padding-left:8%;padding-right:0;">上传附件：</label>
+						        <div  style="text-align: center; width: 400px;">
+                    <input type='hidden' name='smeta[thumb]' id='thumb' value=''>
+                    <a href='javascript:void(0);' onclick="flashupload('thumb_ima', '附件上传','thumb',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','','');return false;">
+                    <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb_preview' width='135' height='113' style='cursor:hand' /></a>
+                 <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                    <input type="button"  class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片">
+                    </div>
+                  </div>
+                  
+                 <!--上传end-->
+                 <!--发送模式start-->
+                <div>
+                      <label class="col-sm-2" for="name" style="display:block; padding-left:8%;padding-right:0;">发送模式：</label>
+                      <div class="col-sm-8" style="width:580px; margin-bottom:20px; ">
+                          <div class="row visible-on">
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="optionsRadiosinline" id="optionsRadios2">&nbsp;&nbsp;定时发送
+                                  <input type="text" class="sang_Calender" placeholder="-输入时间-" style="width:140px;">
+                              </label>
+                          </div>
+                          <div class="row visible-on">
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="sned_self" value="1">&nbsp;&nbsp;同时发送给自己
+                              </label>
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="" value="">&nbsp;&nbsp;消息前增加家长称呼
+                              </label>
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="user_name" >&nbsp;&nbsp;消息内容后加老师名
+                                  <input type="text" placeholder="-输入姓名-" style="width:74px;">
+                              </label>
+                          </div>
+                          <div class="row visible-on">
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="" value="">&nbsp;&nbsp;微信推送<a href="https://hao.360.cn/" style="color:#ff9800;"> 如何绑定？ </a>
+                              </label>
+                          </div>
+                      </div>	
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <!--发送模式end-->
+                  <div class="form-group" style="float:left;margin-left:60%;">
+                      <div class="col-sm-offset-2 col-sm-10" style="  padding:0; width:400px; margin-left:auto; margin-right:auto;">
+                      <a href="#" onClick="self.location=document.referrer;" style=" text-decoration:none; color:white; background-color:#26a69a; padding:6px 5px; border-radius:5px; float:left; margin-right:70px;">&nbsp;上&nbsp;一&nbsp;步&nbsp;</a>
+                          <button type="submit" class="btn btn-default" style="border:none;color:#FFF; background-color:#26a69a; float:left; margin-right:70px;"> &nbsp;发  &nbsp;送&nbsp; </button>
+                          <button type="reset" class="btn btn-default" style="border:none;color:#FFF; background-color:#adadad; float:left;"> &nbsp;重 &nbsp;置&nbsp; </button>
+                      </div>
+                  </div> 
+                  <div class="clearfix"></div>  
+                  </div>
+                  <div class="clearfix"></div>
+                  </form>
+                  
+           <div class="col-right" style=" width:35%;  float:left;">
+            <div class="table_full" style=" ">
+              <table class="table table-bordered" >
+                <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                     <li class="active"><a href="#teachers2" data-toggle="tab"  style="color:#1f1f1f">信息模板</a></li>
+                     <!--<li><a href="#class_id2" data-toggle="tab"  style="color:#1f1f1f">保存为模板</a></li>-->
+                     
+                </ul>
+                  <tr>
+                    <td>
+                      <div class="tab-content" id="myTabContent">
+                      <!--个人-->
+                          <div class="tab-pane fade in active" id="teachers2">
+                          <!-- <label class="" for="name" style=" float:left; margin-top:8px;">评论类型：</label>
+                                  <select name='cl_else' class="form-control"  style=" width:110px; float:left;">
+                                      <option value='0'>选择类型</option>
+                                      <foreach name="class" item="vo">
+                                        <OPTION value="{$vo.id}">{$vo.classname}</OPTION> 
+                                      </foreach>
+                                  </select>
+                                 <button type="submit" class="btn btn-primary" style="border:none;;color:#FFF; background-color:#26a69a; margin-left:10%; margin-bottom:10px;"> &nbsp;搜  &nbsp;索&nbsp; </button> -->
+                                 <div class="clearfix"></div>
+                                
+                             <div style=" height:200px; overflow-y:scroll;">
+                                  <foreach name="note" item="no">
+                                      <div class="muban" style="  border:2px solid #d7ebfa; float:left; width:90%; padding-left:5px; margin-bottom:5px; margin-left:2%; cursor:pointer;">{$no.content}</div>
+                                  </foreach>
+                             </div>
+                             <div class="clearfix"></div>
+                             <div>
+                              <div>保存为模板：</div>
+                              <textarea rows="5" name="hope" style=" resize:none; margin:0; width:100%; margin-top:10px;"></textarea>
+                              <input type='button' class="qrcj" onclick='sub_qrcj()' style="border:none;color:#FFF; background-color:#26a69a;margin-top:10px;padding:6px 5px; border-radius:5px; margin-right:5px; float:right;" value='&nbsp;保&nbsp;存&nbsp;'>
+                              <!-- <button type="submit" class="btn btn-primary" style="border:none;color:#FFF; background-color:#26a69a; margin-left:80%; margin-top:10px;"> &nbsp;保&nbsp;存&nbsp; </button> -->
+                             <div class="clearfix"></div>
+                             </div>
+                              <div class="clearfix"></div>
+                          </div>
+                          <!--班级-->
+                          <!--                    <div class="tab-pane fade " id="class_id2">
+                              <textarea rows="10" name="hope" style=" resize:none; margin:0; width:100%;"></textarea>
+                              <input type='button' class="qrcj" onclick='sub_qrcj()' style="border:none;color:#FFF; background-color:#26a69a; margin-left:80%; margin-top:10px;padding:6px 5px; border-radius:5px;" value='&nbsp;保&nbsp;存&nbsp;'>
+                              
+                              <div class="clearfix"></div>
+                          </div>-->
+      
+                      </div>
+                     </td>
+                  </tr> 
+        </table>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+       <!-- </form> -->
+          
+      <div class="tab-pane fade" id="ios">
+          <p>更换</p>
+      </div>
+      </div>
+  </div>
+  
+  <script type="text/javascript" src="js/datetime.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+  <script>
+    function sub_qrcj() {
+    // var oid = $('#oid').val();
+    // var o_user = $("input[name='o_user']").val();
+    // var o_phone = $("input[name='o_phone']").val();
+    // var o_pstime = $("input[name='o_pstime']").val();
+    var hope = $("textarea[name='hope']").val();
+    // var payw = $("select[name='orderstatus']").val();
+    $.ajax({
+      type:"post",
+      async:false,
+      url:"{:U('Teacher/MessageInfo/model_message')}",
+      data:{'hope': hope},
+      success: function(msg){
+        // alert('成功');
+        history.go(0);
+      }
+      
+
+    });
+  // history.go(0);
+  }
+  </script>
+    
+     <script>
+         $(".shan").click(
+              function(){
+                  $(this).hide()
+                  }
+              )
+     </script>
+    <script>
+    $(".muban").click(
+          function(){
+              s=$(this).text()
+              $(".kuang").text(s)
+              }
+    )
+    $(".tianjia").click(
+          function(){
+              v=$(".muban2").val()
+              $(".kuang").text(v)
+              }
+    )
+    $(".cha").click(
+              function(){
+                  $(".tan").css("display","none")
+                  }
+    )
+    $(".gezi").click(
+              function(){
+                  $(".tan").show()
+                  }
+    )
+    </script>
+    <script>
+    
+   /*
+    $(".xuan01").click(
+              function(){
+                  x=$(this).index()
+                  $(".xuan02").eq(x).show()
+                  $(".xuan03").eq(x).show()
+                  
+                  
+                  }
+    )
+    $(".xuan02 .xuan04").click(
+              function(){
+                  y=$(this).parent().index()
+                  $(".xuan01").eq(y).children(".xuan05").click()
+                  }
+    )
+    $(".xuan02").click(
+              function(){
+                  y=$(this).index()
+                  $(this).hide()
+                  $(".xuan03").eq(y).hide()
+                  
+                  }
+    )
+     $(".xuan03 .xuan06").click(
+              function(){
+                  Z=$(this).parent().index()
+                  $(".xuan01").eq(Z).children(".xuan05").click()
+                  }
+    )
+     $(".xuan03").click(
+              function(){
+                  y=$(this).index()
+                  $(this).hide()
+                  $(".xuan02").eq(y).hide()
+                  
+                  }
+    )
+  $(".quan03").click(
+              function(){
+                  
+                  $(".xuan02").show()
+                  $(".xuan03").show()
+                  $("input").prop("checked",true)
+                  
+                  }
+   )
+   $(".quan02").click(
+              function(){
+                  $(".xuan02").hide()
+                  $(".xuan03").hide()
+                  $(".xuan02").click()
+                  $(".xuan02 .xuan04").click()
+                  $(".xuan03").click()
+                  $(".xuan03 .xuan06").click()
+                  }
+   )*/
+  /*$(".quan01").click(
+              function(){
+                  $(".xuan01").click()
+                  }
+   )
+     */
+    </script>
+    <script>
+    
+   
+  /*  $(".xuan01a").click(
+              function(){
+                  c=$(this).index()
+                  $(".xuan02a").eq(c).show()
+                  $(".xuan03a").eq(c).show()
+                  
+                  
+                  }
+    )
+    $(".xuan02a .xuan04a").click(
+              function(){
+                  d=$(this).parent().index()
+                  $(".xuan01a").eq(d).children(".xuan05a").click()
+                  }
+    )
+    $(".xuan02a").click(
+              function(){
+                  d=$(this).index()
+                  $(this).hide()
+                  $(".xuan03a").eq(d).hide()
+                  
+                  }
+    )
+     $(".xuan03a .xuan06a").click(
+              function(){
+                  e=$(this).parent().index()
+                  $(".xuan01a").eq(e).children(".xuan05a").click()
+                  }
+    )
+     $(".xuan03a").click(
+              function(){
+                  f=$(this).index()
+                  $(this).hide()
+                  $(".xuan02a").eq(f).hide()
+                  
+                  }
+    )
+  $(".quan03a").click(
+              function(){
+                  
+                  $(".xuan02a").show()
+                  $(".xuan03a").show()
+                  $("input").prop("checked",true)
+                  
+                  }
+   )
+   $(".quan02a").click(
+              function(){
+                  $(".xuan02a").hide()
+                  $(".xuan03a").hide()
+                  $(".xuan02a").click()
+                  $(".xuan02a .xuan04a").click()
+                  $(".xuan03a").click()
+                  $(".xuan03a .xuan06a").click()
+                  }
+   )*/
+  /*$(".quan01").click(
+              function(){
+                  $(".xuan01").click()
+                  }
+   )
+     */
+    </script>
+  <script>
+  $('#myTab a:first').tab('show');
+  </script>
+  <script>
+          $("#file-3").fileinput({
+              showUpload: false,
+              showCaption: false,
+              browseClass: "btn btn-default",
+              fileType: "any",
+              previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+          });
+          $(document).ready(function() {
+              $("#test-upload").fileinput({
+                  'showPreview' : false,
+                  'allowedFileExtensions' : ['jpg', 'png','gif'],
+                  'elErrorContainer': '#errorBlock'
+              });
+  
+          });
+          </script>
+          <!--全选start-->                  
+  <script type="text/javascript">
+  var change = function (chkArray, val) 
+  {
+   for (var i = 0 ; i < chkArray.length ; i ++) 
+  //遍历指定组中的所有项
+       chkArray[i].checked = val;              
+  //设置项为指定的值-是否选中
+  }
+  </script>
+  <!--全选end-->
+  
+  <script>
+  $('#myTab a:first').tab('show');
+  </script>
+  <script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "__ROOT__/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+</script>
+<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="__ROOT__/statics/js/jquery.js"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <script src="__ROOT__/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+<if condition="APP_DEBUG">
+  <style>
+    #think_page_trace_open{
+      z-index:9999;
+    }
+  </style>
+
+</if>
+
+  </body>
+  </html>

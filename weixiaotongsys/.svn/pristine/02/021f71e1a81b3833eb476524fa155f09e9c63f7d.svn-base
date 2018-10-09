@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <tc_include file="Public:head" />
+</head>
+<body class="body-white">
+<tc_include file="Public:center-nav" />
+
+<div class="message-box">
+    <div class="place">
+        <a href="index">首页</a> > <a href="new_message">家校互联</a>
+    </div>
+    <div class="main">
+        <tc_include file="Public:center-left" />
+        <div class="backlog-content">
+        <div class="message-search">
+            <form method="get">
+                <div class="message-search-input">
+                    <span>发送时间：</span>
+                    <input type="date" id="date-begin" class="date-input" name="">
+                    <span>至</span>
+                    <input type="date" id="date-end" class="date-input" name="">
+                    <input type="button" class="input-button" id="datebtn-today" name="" value="今天">
+                    <input type="button" name="" class="input-button" id="datebtn-week" value="一周内">
+                    <input type="button" name="" class="input-button" id="datebtn-month" value="一个月内">
+                    <input type="button" name="" class="input-button" id="datebtn-threemonth" value="三个月内">
+                    <span class="type_backlog">类型：</span>
+                    <select class="backlog_type">
+                        <option>全部</option>
+                        <option>1</option>
+                    </select>
+
+                </div>
+                <div class="message-search-button">
+
+                    <button class="search-button">查询</button>
+                </div>
+            </form>
+        </div>
+            <div class="message_btn">
+                <input type="button" class="search-orther-button" name="" value="删除">
+                <a href="{:U('new_backlog')}"> <input type="button" class="search-orther-btn" name="" value="新建工作"></a>
+            </div>
+
+            <div class="message-list" id="message-list">
+
+            <table>
+                <thead>
+                <tr>
+                    <td width="215px">
+
+                        工作内容
+                    </td>
+                    <td width="95px">发起人</td>
+
+                    <td width="160px">提醒时间</td>
+                    <td width="135px">起止时间</td>
+                    <td width="100px">状态</td>
+                    <td width=100px">操作</td>
+                </tr>
+                </thead>
+                <tr>
+
+                    <td>
+                        <a class="message-info" href="#">如果你无法简洁的表达你...</a>
+                        <div class="message-detail">
+                            <div class="top">
+                                <h3>消息详细内容</h3>
+                                <div class="off-detail">
+                                    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <p>如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够1
+                                </p>
+
+                                <div style="clear:both;"></div>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>啦啦啦</td>
+
+
+                    <td>2010-04-13 12:30</td>
+                    <td>2010-04-13 12:30</td>
+
+
+                    <td>进行中</td>
+
+
+                    <td><a class="message-reply" href="#">办理</a>
+                        <div class="message-detail">
+                            <div class="top">
+                                <h3>办理工作</h3>
+                                <div class="off-detail">
+                                    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <table>
+                                    <tr><td width="500px"><p  class="input1">申请人：<input type="text"  class="input2"></p></td></tr>
+                                    <tr><td  width="500px"><p  class="input1">申请内容：<input type="text" class="input2"></p></td></tr>
+                                    <tr><td  width="500px"><p  class="input1">上一步处理意见：<input type="text" class="input2"></p></td></tr>
+                                    <tr><td  width="500px"><p  class="input1">我的处理意见：<input type="text" class="input2"></p></td></tr>
+                                </table>
+                               <p class="next_step"><input type="radio" value="radio1">选择下一步&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="radio1">办结</p>
+                                <hr>
+                                <h3>指定办理人</h3>
+                                <hr>
+                                <p class="choose">选择分组:</p>
+                                <p class="choose1">全部&nbsp;&nbsp;&nbsp;&nbsp;学校管理员&nbsp;&nbsp;&nbsp;&nbsp;班主任&nbsp;&nbsp;&nbsp;&nbsp;任课老师&nbsp;&nbsp;&nbsp;&nbsp;自己</p>
+                                <table><tr><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td></tr></table>
+                                <table class="t1"><tr><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td></tr></table>
+                                <table class="t1"><tr><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td></tr></table>
+                                <input type="button" class="notice1" name="" value="转交下一步">
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                        <a class="message-reply" href="#">流程图</a>
+                        <div class="message-detail">
+                            <div class="top">
+                                <h3>流程图</h3>
+                                <div class="off-detail">
+                                    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <table width="480px">
+                                    <tr><td ><p align="center">第一步&nbsp;已办结</p></td></tr>
+                                     <tr>
+                                         <td><p align="left">办理者：王小明</p></td>
+
+                                     </tr>
+                                    <tr>
+                                        <td><p align="left">时间：2016-5-23</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">工作时间：周一~周五</p></td>
+
+                                    </tr>
+                                </table>
+                                <table width="480px">
+                                    <tr><td><p align="center">第一步&nbsp;已办结</p></td></tr>
+                                    <tr>
+                                        <td><p align="left">办理者：王小明</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">时间：2016-5-23</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">工作时间：周一~周五</p></td>
+
+                                    </tr>
+                                </table>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="message-info" href="#">如果你无法简洁的表达你...</a>
+                        <div class="message-detail">
+                            <div class="top">
+                                <h3>消息详细内容</h3>
+                                <div class="off-detail">
+                                    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <p>如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够如果你无法简洁的表达你的想法，那只说明你还不够1
+                                </p>
+
+                                <div style="clear:both;"></div>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>啦啦啦</td>
+
+
+                    <td>2010-04-13 12:30</td>
+                    <td>2010-04-13 12:30</td>
+
+
+                    <td>进行中</td>
+
+
+                    <td><a class="message-reply" href="#">办理</a>
+                        <div class="message-detail">
+                            <div class="top">
+                                <h3>办理工作</h3>
+                                <div class="off-detail">
+                                    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <table>
+                                    <tr><td width="500px"><p  class="input1">申请人：<input type="text"  class="input2"></p></td></tr>
+                                    <tr><td  width="500px"><p  class="input1">申请内容：<input type="text" class="input2"></p></td></tr>
+                                    <tr><td  width="500px"><p  class="input1">上一步处理意见：<input type="text" class="input2"></p></td></tr>
+                                    <tr><td  width="500px"><p  class="input1">我的处理意见：<input type="text" class="input2"></p></td></tr>
+                                </table>
+                                <p class="next_step"><input type="radio" value="radio1">选择下一步&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="radio1">办结</p>
+                                <hr>
+                               <h3>指定办理人</h3>
+                                <hr>
+                                <p class="choose">选择分组:</p>
+                                <p class="choose1">全部&nbsp;&nbsp;&nbsp;&nbsp;学校管理员&nbsp;&nbsp;&nbsp;&nbsp;班主任&nbsp;&nbsp;&nbsp;&nbsp;任课老师&nbsp;&nbsp;&nbsp;&nbsp;自己</p>
+                                <table><tr><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td></tr></table>
+                                <table class="t1"><tr><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td></tr></table>
+                                <table class="t1"><tr><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td><td><input type="radio">孙水位</td></tr></table>
+                                <input type="button" class="notice1" name="" value="转交下一步">
+                                <div style="clear:both;"></div>
+                            </div>
+
+                        </div>
+                        <a class="message-reply" href="#">流程图</a>
+                        <div class="message-detail">
+                            <div class="top">
+                                <h3>流程图</h3>
+                                <div class="off-detail">
+                                    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <table width="480px">
+                                    <tr><td ><p align="center">第一步&nbsp;已办结</p></td></tr>
+                                    <tr>
+                                        <td><p align="left">办理者：王小明</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">时间：2016-5-23</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">工作时间：周一~周五</p></td>
+
+                                    </tr>
+                                </table>
+                                <table width="480px">
+                                    <tr><td><p align="center">第一步&nbsp;已办结</p></td></tr>
+                                    <tr>
+                                        <td><p align="left">办理者：王小明</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">时间：2016-5-23</p></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><p align="left">工作时间：周一~周五</p></td>
+
+                                    </tr>
+                                </table>
+
+                                <div style="clear:both;"></div>
+                            </div>
+
+                        </div>
+
+
+
+                    </td>
+                </tr>
+            </table>
+            <div class="meaasge-page">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(function(){
+        //默认样式
+        $('#nav-message').attr('class','text-first active');
+        $('#nav-message').children('span').attr('class','glyphicon glyphicon-minus-sign');
+        $('#backlog_message').attr('class','active');
+        $('#center-message').attr('class','active');
+    });
+    //点击消息内容时
+    $('.message-info').click(function(){
+        $(this).next().css('display','block');
+    });
+    $('.off-detail').click(function(){
+        $(this).parent().parent().css('display','none');
+    });
+    //填充时间
+    var m_time = Date.parse(new Date());
+    function changetime(time1){
+
+        var now_time = new Date(time1).toLocaleString().split('/');
+        now_time[2] = now_time[2].split(' ')[0];
+        now_time[1] = parseInt(now_time[1])+1<10?'0'+now_time[1]:parseInt(now_time[1])+1;
+        return now_time.join('-');
+    }
+    var now_time = changetime(m_time);
+    var week_time = changetime(parseInt(m_time)-7*24*3600*1000);
+    var month_time = changetime(parseInt(m_time)-30*24*3600*1000);
+    var threemonth_time = changetime(parseInt(m_time)-90*24*3600*1000);
+
+    $('#datebtn-today').click(function(){
+        $('#date-begin').attr('value',now_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-week').click(function(){
+        $('#date-begin').attr('value',week_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-month').click(function(){
+        $('#date-begin').attr('value',month_time);
+        $('#date-end').attr('value',now_time);
+    });
+    $('#datebtn-threemonth').click(function(){
+        $('#date-begin').attr('value',threemonth_time);
+        $('#date-end').attr('value',now_time);
+    });
+
+    //点击回复时
+    $('.message-reply').click(function(){
+        $(this).next().css('display','block');
+    });
+
+</script>
+<tc_include file="Public:footer"/>
+</body>
+</html>

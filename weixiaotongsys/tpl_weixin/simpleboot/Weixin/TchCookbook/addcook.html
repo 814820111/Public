@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="__ROOT__/statics/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="__ROOT__/statics/bootstrap/js/bootstrap.min.js"></script>
+    <link href="__TMPL__Public/css/mobiscroll.css" rel="stylesheet" type="text/css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="__TMPL__Public/js/mobiscrolsddslren.js" type="text/javascript"></script>
+    <!--<link rel="stylesheet" href="__TMPL__Tpublic/css/bootstrap-datetimepicker.min.css" />-->
+    <!--<script src="__TMPL__Tpublic/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>-->
+
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        #previewImage {
+            width: 100%;
+        }
+        
+        #previewImage div {
+            float: left;
+            width: 20%;
+            margin-left: 4%;
+        }
+        
+        #previewImage div img {
+            width: 100%;
+            margin-top: 20px;
+            height: calc(height);
+        }
+
+        .lianxi {
+            width: 25%;
+            height: 35px;
+            float: left;
+        }
+        
+        .lianxi span {
+            margin-top: 5px;
+        }
+        
+        .lianshu {
+            width: 75%;
+            height: 35px;
+            float: right;
+        }
+        
+        .lianshu input {
+            border-radius: 4px;
+            background-color: whitesmoke;
+            border: none;
+            width: 75%;
+            margin-left: 20.5%;
+            height: 25px;
+        }
+        
+        .clearfix {
+            clear: both
+        }
+        
+        .dianji {
+            margin-bottom: 20px;
+            width: 35%;
+            height: 35px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            margin-top: 25px;
+            margin-left: 30%;
+            background-color: #06c18e;
+        }
+
+        .xingxi {
+            width: 100%;
+            overflow: auto;
+        }
+        
+        .xuanzediv {
+            width: 15px;
+            height: 15px;
+            /*background-color: cornflowerblue;*/
+            float: right;
+            margin-top: 15px;
+            border: 1px solid gray;
+            position: relative;
+            right: 15px;
+        }
+        
+        .gou {
+            position: relative;
+            bottom: 3px;
+            color: cornflowerblue;
+        }
+        
+        .biao {
+            border: none;
+            color: grey width: 100%;
+            height: 30px;
+        }
+        
+        .kaishi {
+            width: 100%;
+            text-align: center;
+            border: none;
+            position: relative;
+            bottom: 25px;
+            opacity: 0;
+        }
+        
+        .shi1 {
+            font-size: 15px;
+            margin-left: 40%;
+        }
+
+        
+        .img1 {
+            width: 14px;
+            float: right;
+            margin-right: 5px;
+            bottom: 10px;
+        }
+        
+        .xuanqu {
+            position: relative;
+            left: 40%;
+            float: left;
+        }
+        
+        .xuanze {
+            font-size: 15px;
+            float: left;
+            margin-left: 5px;
+        }
+        
+        .jiu {
+            background-color: white;
+            padding: 15px 10px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #eff0f2;">
+    <input type="hidden" value={$userid} id="userid">
+    <input type="hidden" value={$schoolid} id=schoolid">
+    <div style="margin-top: 40px;">
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <select name="search_grade" id="grade" style="width:100%;background: transparent;height:100%;border: none;">
+                <option value="">请选择年级</option>
+                <option value="0">全校</option>
+                <foreach name="grade" item="v">
+                <option value="{$v.gradeid}">{$v.name}</option>
+                </foreach>
+            </select>
+            <!--<input class="biao" type="text" placeholder="食谱标题" />-->
+        </div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <input class="biao" style="width:100%;" name="title" type="text" placeholder="食谱标题:例如第一周食谱" />
+        </div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <div style="width: 100%;height: 20px;">
+                <img style="float: right;position: relative;" src="__TMPL__Public/images/jiantou-right.png" />
+                <span style="font-size: 14px;">时间</span>
+                <span class="shi1" id="shijian1" style="font-size: 14px;"></span>
+                <input class="kaishi" style="" value="" class="jiang" readonly name="appDate" id="appDate" type="text">
+
+            </div>
+
+        </div>
+       <div style="margin: 10px;">星期一</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="monday" name="monday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 \n 水果:苹果 点心:排骨面" ></textarea>
+        </div>
+        <div style="margin: 10px;">星期二</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="tuesday" name="tuesday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 水果:苹果 点心:排骨面"></textarea>
+        </div>
+        <div style="margin: 10px;">星期三</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="wednesday" name="wednesday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 水果:苹果 点心:排骨面""></textarea>
+        </div>
+        <div style="margin: 10px;">星期四</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="thursday" name="thursday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 水果:苹果 点心:排骨面""></textarea>
+        </div>
+        <div style="margin: 10px;">星期五</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="friday" name="friday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 水果:苹果 点心:排骨面""></textarea>
+        </div>
+        <div style="margin: 10px;">星期六</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="saturday" name="saturday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 水果:苹果 点心:排骨面""></textarea>
+        </div>
+        <div style="margin: 10px;">星期日</div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <textarea class="xiaoxi" id="sunday" name="sunday" style=" width: 100%; height: 70px; resize: none;border: none;outline: none;" placeholder="例如 中餐:米饭 水果:苹果 点心:排骨面""></textarea>
+        </div>
+        <div style="padding: 10px;background-color: white;margin-top: 5px;">
+            <!--<input size="16" type="text" value="" class="form_datetime">-->
+            <div>定时发送:
+                <input type="checkbox" name="optionsRadiosinline" value="1" id="optionsRadiosinline">
+                <input type="time" name="timing" value="09:00" id="timing" style=" border-width: 1px;width: 95px; height: 28px;">
+            </div>
+
+        </div>
+        <div>
+            <button class="dianji">发布</button>
+        </div>
+        <div class="top_box">
+            <img src="__TMPL__Public/images/img674.png" class="fanhui">校园食谱
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <script>
+
+        wx.config({
+            debug: false,
+            appId: '{$signPackage.appId}',
+            timestamp: '{$signPackage.timestamp}',
+            nonceStr: '{$signPackage.nonceStr}',
+            signature: '{$signPackage.signature}',
+            jsApiList: [
+                //这里要写调用的api列表
+                'checkJsApi', 'onMenuShareTimeline', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage'
+            ]
+        });
+
+
+        function getMyDay(date){
+            var week;
+            if(date.getDay()==0) week="7"
+            if(date.getDay()==1) week="1"
+            if(date.getDay()==2) week="2"
+            if(date.getDay()==3) week="3"
+            if(date.getDay()==4) week="4"
+            if(date.getDay()==5) week="5"
+            if(date.getDay()==6) week="6"
+            return week;
+        }
+
+
+        $(".dianji").click(function() {
+            var teacherid = $("#userid").val();
+            var schoolid = {$schoolid};
+            var grade = $("#grade").val(); //年级；
+            //var grade =4; //年级；
+
+
+            var title = $(".biao").val(); //食谱标题；
+            var begintime = $("#shijian1").text(); //开始的时间
+            var timing = $("#timing").val(); //定时时间
+
+            isChecked = $('#optionsRadiosinline').is(":checked");//是否定时
+            if(isChecked){
+                optionsRadiosinline=1;
+            }else{
+                optionsRadiosinline=0;
+            }
+
+            var monday = $("#monday").val(); //星期一；
+            if(monday){
+                my = "星期一:"+monday+",";
+            }else{
+                my="";
+            }
+            var tuesday = $("#tuesday").val(); //星期二；
+            if(tuesday){
+                ty = "星期二:"+tuesday+",";
+            }else{
+                ty="";
+            }
+            var wednesday = $("#wednesday").val(); //星期三；
+            if(wednesday){
+                wy = "星期三:"+wednesday+",";
+            }else{
+                wy="";
+            }
+            var thursday = $("#thursday").val(); //星期四；
+            if(thursday){
+                tdy = "星期四:"+thursday+",";
+            }else{
+                tdy="";
+            }
+            var friday = $("#friday").val(); //星期五；
+            if(friday){
+                fy = "星期五:"+friday+",";
+            }else{
+                fy="";
+            }
+            var saturday = $("#saturday").val(); //星期六；
+            if(saturday){
+                sy = "星期六:"+saturday+",";
+            }else{
+                sy="";
+            }
+            var sunday = $("#sunday").val(); //星期日；
+            if(sunday){
+                sdy = "星期天:"+sunday+",";
+            }else{
+                sdy="";
+            }
+            var content = title +":"+my+ty+wy+tdy+fy+sy+sdy;
+            if(grade==""){
+                alert("请选择年级");
+                return;
+            }
+            if(title==""){
+                alert("请输入食谱标题");
+                return;
+            }else if(title.length>15){
+                alert("标题字数不能大于15位");
+                return;
+            }
+
+                $.ajax({
+                    type: "post",
+                    url: "{:U('Weixin/TchCookbook/add_post')}",
+                    async: true,
+                    data: {
+                        search_grade:grade,
+                        title: title,
+                        //begin: begintime,
+                        cook_time: begintime,
+                        monday:monday,
+                        tuesday:tuesday,
+                        wednesday:wednesday,
+                        thursday:thursday,
+                        friday:friday,
+                        saturday:saturday,
+                        sunday:sunday,
+                        optionsRadiosinline:optionsRadiosinline,
+                        timing:timing
+
+                    },
+                    dataType: 'json',
+                    success: function(res){
+                        console.log(res);
+
+                        if(res.type==1){
+                            alert(res.message);
+                        }
+                        if(res.type==2){
+                            if(res.data==0){
+                                alert(res.message);
+                            }
+                            if(res.data>0){
+                                $.ajax({
+                                    url: "__ROOT__/index.php/Apps/SendTpl/school_cook",
+                                    type: "post",
+                                    async: true,
+                                    dataType: "json",
+                                    data: {
+                                        content: content,
+                                        userid:teacherid,
+                                        grade: grade,
+                                        schoolid: schoolid,
+                                        date: begintime
+                                    },
+                                    success: function (res) {
+
+                                    },
+                                    error: function (res) {
+                                    }
+                                });
+                                alert("发送成功");
+                                //window.history.back();
+//                            alert("发布成功");
+//                            location.href = "{:U('index')}";
+                            }else{
+                                alert(res.message);
+                            }
+                        }
+
+
+                    },
+                    error: function() {
+                        alert("网络错误,请稍后再试");
+                    }
+
+                })
+        });
+
+        $(".fanhui").click(function() {
+//            window.history.go(-1);
+            location.href = "{:U('index')}";
+        })
+    </script>
+    <script>
+        $(function() {
+            var currYear = (new Date()).getFullYear();
+            var opt = {};
+            opt.date = {
+                preset: 'date'
+            };
+            opt.datetime = {
+                preset: 'datetime'
+            };
+            opt.time = {
+                preset: 'time'
+            };
+            opt.default = {
+                theme: 'android-ics light', //皮肤样式 
+
+                mode: 'scroller', //日期选择模式
+                dateFormat: 'yyyy-mm-dd',
+                lang: 'zh',
+                showNow: true,
+                nowText: "今日",
+                startYear: currYear - 2, //开始年份
+                endYear: currYear + 0 //结束年份
+            };
+
+            $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+            $("#appDates").mobiscroll($.extend(opt['date'], opt['default']));
+            $("#appDatet").mobiscroll($.extend(opt['date'], opt['default']));
+            $("#appDatesh").mobiscroll($.extend(opt['date'], opt['default']));
+            var optDateTime = $.extend(opt['datetime'], opt['default']);
+            var optTime = $.extend(opt['time'], opt['default']);
+
+        });
+        $("#appDate").change(function() {
+            var zhi = $("#appDate").val();
+            //alert(zhi);
+            $("#shijian1").text(zhi);
+        })
+        $("#appDates").change(function() {
+            var zhi = $("#appDates").val();
+            $("#shijian2").text(zhi);
+        })
+        $("#appDatet").change(function() {
+            var zhi = $("#appDatet").val();
+            $("#shijian3").text(zhi);
+        })
+        $("#appDatesh").change(function() {
+            var zhi = $("#appDatesh").val();
+            $("#shijian4").text(zhi);
+        })
+        $(".fanhui").click(function() {
+            location.href = "{:U('TchCookbook/index')}";
+        })
+
+        var placeholder = '中餐:米饭 \n水果:苹果 \n点心:排骨面';
+            $('textarea').attr('placeholder', placeholder);
+    </script>
+
+</body>
+
+</html>

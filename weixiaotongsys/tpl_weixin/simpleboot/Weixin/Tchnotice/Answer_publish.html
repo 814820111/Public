@@ -1,0 +1,666 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="__ROOT__/statics/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="__ROOT__/statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .clearfix {
+            clear: both
+        }
+        
+        .dianji {
+            width: 35%;
+            height: 35px;
+            border-radius: 10px;
+            border: none;
+            background-color: #06c18e;
+            color: white;
+            margin-top: 25px;
+            margin-left: 30%;
+        }
+        
+        .tijiao {
+            width: 50%;
+            margin-right: 25%;
+            background-color: #06c18e;
+            border-radius: 8px;
+            border: none;
+            height: 35px;
+            color: white;
+        }
+        
+        .xingxi {
+            width: 100%;
+            height: 300px;
+            overflow: auto;
+        }
+        
+        .xuanzediv {
+            width: 15px;
+            height: 15px;
+            /*background-color: cornflowerblue;*/
+            float: right;
+            margin-top: 15px;
+            border: 1px solid gray;
+            position: relative;
+            right: 15px;
+        }
+        
+        .gou {
+            position: relative;
+            bottom: 3px;
+            color: cornflowerblue;
+        }
+        
+        .qingqiu {
+            width: 100%;
+            height: 20px;
+            background-color: blue;
+            border: none;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            background-color: white;
+        }
+        
+        .img1 {
+            width: 14px;
+            float: right;
+            margin-right: 5px;
+            bottom: 10px;
+        }
+        #previewImage {
+            width: 100%;
+            cursor :pointer;
+        }
+
+        #previewImage div {
+            float: left;
+            width: 20%;
+            margin-left: 4%;
+        }
+
+        #previewImage div img {
+            width: 100%;
+            margin-top: 20px;
+            height: calc(height);
+            float: right;
+        }
+
+        .a-upload {
+            height: 72px;
+            width: 72px;
+            float: left;
+            position: relative;
+            cursor: pointer;
+            background: url(__TMPL__public/img/z_add.png) no-repeat center center;
+            border: 1px solid #adadad;
+            margin-top: 20px;
+            margin-left: 17px;
+            margin-bottom: 10px;
+        }
+
+        .a-upload input {
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        #chooseImage {
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .xuanqu {
+            /*position: relative;*/
+            /*left: 35%;*/
+            /*float: left;*/
+            float: right;
+            margin-right: 10px;
+            left: inherit;
+        }
+        
+        .xuanze {
+            font-size: 15px;
+            float: left;
+            margin-left: 5px;
+        }
+        
+        .jiu {
+            background-color: white;
+            padding: 15px 10px;
+            height: 40px;
+        }
+
+        .delss {
+            margin-top: 20px;
+            color: #babfc7;
+            background: rgba(0, 0, 0, 0.5);
+            height: 35px;
+            width: 19%;
+            position: absolute;
+            cursor :pointer;
+        }
+        .vx{
+            float: right;
+            font-size: 28px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: #eff0f2;">
+<div id="zhezhao" style="z-index:99;width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.6);display:none;"></div>
+    <input type="hidden" value={$teacherid} id="teacherid">
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <input type="hidden" value={$check} id="check">
+    <div class="top_box" style="z-index: 11;">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 公告群发
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="jiang" style="margin-top: 40px;">
+        <div class="jiu">
+
+            <button class="qingqiu" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+				<div class="xuanze"  >选择老师</div>
+				<!--<span class="xuanqu" ></span>-->
+				<img class="img1" src="__TMPL__Public/images/img69.png" >
+                <span class="xuanqu" ></span>
+			</button>
+        </div>
+        <div style="padding: 10px;background-color: white;margin-top: 10px;">
+            <input class="texts" type="text" style="width: 100%;border: none;" placeholder="请输入你的公告标题" />
+        </div>
+        <div style="padding: 10px;background-color: white;margin-top: 10px;">
+            <textarea class="xiaoxi" style=" width: 100%; height: 80px; resize: none;border: none;outline: none;border-bottom: 1px solid #ebebeb" placeholder="说明"></textarea>
+
+            <!--上传照片的DIV放这里-->
+            <div id="previewImage"></div>
+            <a href="javascript:;" class="a-upload">
+                <input type="button" id="chooseImage" value="上传">
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div>
+            <button class="dianji">发送</button>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 25px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#06c18e">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:black;">✖</button>
+                    <h5 class="modal-title" id="myModalLabel" style="color: white;">接受人</h5>
+                </div>
+                <div class="modal-body">
+                    <!--模态内容部分-->
+                    <div style="width: 100%;height: 350px;">
+                        <div id="jiang">
+                            <div class="xixi" style="width: 100%;height: 50px;">
+                                <span class="biaoti" style="position: relative;top: 10px;"></span>
+                                <img class="tupian" src="__TMPL__Public/images/jiantou-right.png" alt="" style="position: relative;top: 10px;">
+                                <div class="quanxuan" style="position: relative;bottom: 25px;right: 5px;">
+                                    <input id="ck" type="checkbox" style="float: right;margin-top: 15px;width:20px;height:20px;margin-right:5px;" />
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="xingxi">
+                                <div class="ping">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="tijiao" type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <input type="hidden" class="mingzi" value="" />
+    <!--名字-->
+    <input type="hidden" class="uisid" value="" />
+    <!--用户id-->
+
+    <script>
+        wx.config({
+            debug: false,
+            appId: '{$signPackage.appId}',
+            timestamp: '{$signPackage.timestamp}',
+            nonceStr: '{$signPackage.nonceStr}',
+            signature: '{$signPackage.signature}',
+            jsApiList: [
+                //这里要写调用的api列表
+                'checkJsApi', 'onMenuShareTimeline', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage','hideMenuItems','hideAllNonBaseMenuItem',
+            ]
+        });
+        wx.ready(function(){
+            //批量隐藏功能
+            wx.hideMenuItems({
+                menuList: ['menuItem:share:qq',
+                    'menuItem:share:weiboApp',
+                    'menuItem:favorite',
+                    'menuItem:share:facebook',
+                    'menuItem:share:QZone',
+                    'menuItem:share:timeline',
+                    'menuItem:share:appMessage',
+                    'menuItem:copyUrl',
+                    'menuItem:share:email',
+                    'menuItem:openWithQQBrowser',
+                    'menuItem:exposeArticle',
+                    'menuItem:setFont'
+
+                ] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            });
+            wx.hideAllNonBaseMenuItem();
+        });
+        var localId = [];
+        var serverId = [];
+        var newId=[];
+        $("#chooseImage").click(function() {
+            //这里是定义一个css的排序
+            var imgs = "";
+            var html = "";
+            wx.chooseImage({
+                count: 9,
+                // 默认9
+                sizeType: ['original', 'compressed'],
+                // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'],
+                // 可以指定来源是相册还是相机，默认二者都有
+                success: function(res) {
+                    localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                    for (var i = 0; i < localId.length; i++) {
+                        imgs = localId[i];
+                        html = "<div><img src='" + imgs + "' /><a class='delss' value="+imgs+"><p class='vx'>×</p></a></div>";
+                        $("#previewImage").append(html);
+                        setTimeout(function() {
+                                $('#previewImage div img').css('height', $('#previewImage div img').css('width'));
+                            },
+                            100);
+                    }
+                    for (var z = 0; z < localId.length; z++) {
+                        newId.push(localId[z]);
+                    }
+                }
+
+            });
+
+        });
+        $(document).on('click','#previewImage',function(){
+            var imgObj = $('#previewImage div img');
+            var imgsurl = [];
+            var imgSrc = "";
+            for (var j = 0; j < imgObj.length; j++) {
+                imgsurl[j] = imgObj[j].src;
+                imgSrc += imgObj[j].src + ",";
+                (function(j) {
+                    imgObj.eq(j).click(function() {
+                        wx.previewImage({
+                            current: imgObj[j].src,
+                            // 当前显示图片的http链接
+                            urls: imgsurl // 需要预览的图片http链接列表
+                        });
+                    });
+                })(j)
+            }
+        });
+        $(function(){
+            var ua = navigator.userAgent.toLowerCase();
+            if (/iphone|ipad|ipod/.test(ua)) {
+                $(document).on('touchend','.delss',function(){
+                    $(this).parent().remove();
+                    var image = $(this).attr("value");
+                    newId.splice($.inArray(image,newId),1);
+                });
+            } else {
+                $(document).on('click','.delss',function(){
+                    $(this).parent().remove();
+                    var image = $(this).attr("value");
+                    newId.splice($.inArray(image,newId),1);
+                });
+            }
+        });
+
+        //苹果去掉alert 网址
+        window.alert = function(name){
+            var iframe = document.createElement("IFRAME");
+            iframe.style.display="none";
+            iframe.setAttribute("src", 'data:text/plain,');
+            document.documentElement.appendChild(iframe);
+            window.frames[0].window.alert(name);
+            iframe.parentNode.removeChild(iframe);
+        };
+        $(".xingxi").hide();
+
+        $(".qingqiu").click(function() {
+                var teacherid = $("#teacherid").val();
+                var schoolid = $("#schoolid").val();
+                $(".xingxi").text("");
+                $(".xuanqu").text("");
+                $(".mingzi").val("");
+                $(".uisid").val("");
+                $("#ck").prop("checked", false);
+
+                $(".xuanze").text("请选择你要群发的的老师");
+                $(".biaoti").text("老师")
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=school&a=getteacherinfo',
+                    async: true,
+                    data: {
+                        schoolid: schoolid
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        console.log(res);
+                        var html = "";
+                        var mingjihe = "";
+                        var idoiu = "";
+                        res = eval(res.data);
+                        for (var i = 0; i < res.length; i++) {
+                            var name = res[i].name; //老师名字
+                            var photo = res[i].photo; //老师的头像
+                            var id = res[i].id; //老师ID
+                            mingjihe += name + ",";
+                            idoiu += id + ",";
+                            html += '<div class="teacher" style="width: 100%;height: 50px;">'
+                            html += '<span><img src="{$Think.const.SR}' + photo + '"style="width: 40px;height: 40px;margin-top: 5px;border-radius: 30px;" /></span>'
+                            html += '<span style="margin-left:3%;">' + name + '</span>'
+                            html += '<div class="xuanzediv" >'
+                            html += '<input type="hidden" class="niu" value="' + name + '"/>'
+                            html += '<input type="hidden" class="idsd" value="' + id + '"/>'
+                            html += '<span class="gou" style="cursor: pointer;">'
+                            html += '</span>'
+                            html += '</div>'
+                            html += '</div>'
+                        }
+                        $(".xingxi").append(html);
+
+                        //单选框
+//                        $(".xuanzediv").click(function() {
+                        $(".teacher").click(function() {
+                                var zhi = $(".gou", this).text();
+                                var hai = $(".niu", this).val() + ",";
+                                var uid = $(".idsd", this).val() + ",";
+                                var shurukuang = $(".mingzi").val(); //名字输入框的值
+                                var uisid = $(".uisid").val() //uisid的输入框的值
+
+                                if (zhi == '') {
+                                    $(".gou", this).text("✔");
+                                    var jia = shurukuang + hai;
+                                    var jiaid = uisid + uid;
+
+                                    $(".mingzi").val(jia);
+                                    $(".uisid").val(jiaid);
+                                } else {
+                                    $(".gou", this).text("");
+                                    var str = shurukuang.replace(hai, "");
+                                    var strt = uisid.replace(uid, "");
+
+                                    $(".mingzi").val(str);
+                                    $(".uisid").val(strt);
+                                }
+                            })
+                            //全选框
+                        $(".quanxuan").click(function(){
+                            var checkboxdanxuan = $("input[type='checkbox']").is(':checked');
+                            if (checkboxdanxuan == false) {
+                                $(".gou").text("");
+                                $(".mingzi").val("");
+                                $(".uisid").val("");
+
+                            } else {
+                                $(".gou").text("✔");
+                                $(".mingzi").val(mingjihe);
+                                $(".uisid").val(idoiu)
+                            }
+                        })
+
+
+                        //模态框确定按钮
+                        $(".tijiao").click(function() {
+                            var mingfuzhi = $(".mingzi").val();
+
+                            var arr = mingfuzhi.split(',').length - 1; //报名的人数
+                            var lengthk = mingfuzhi.length;
+                            if (lengthk > 10) {
+                                var Strp = mingfuzhi.substring(0, 7) + "......";
+                            } else {
+                                var Strp = mingfuzhi;
+                            }
+                            var eyrut = $(".uisid").val();
+
+                            if (eyrut != "") {
+                                $(".xuanze").text(Strp);
+                                $(".xuanqu").text("共选" + arr + "人")
+                            }
+
+
+                        })
+
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+                });
+
+            })
+            // 发布教师下拉框
+       // $(".tupian").click(function() {
+        $(".xixi").click(function() {
+
+            var transportid = $('.tupian').attr("src");
+            if (transportid == "__TMPL__Public/images/jiantou-right.png") {
+                $(".tupian").attr("src", "__TMPL__Public/images/jiantou2.png")
+                $(".xingxi").show();
+            } else {
+                $(".tupian").attr("src", "__TMPL__Public/images/jiantou-right.png")
+                $(".xingxi").hide();
+            }
+        })
+        $(".dianji").click(function() {
+            var check = $("#check").val();
+            if (check == 2) {
+                alert("您没有权限");
+                return;
+            }
+            var schoolid = $("#schoolid").val();
+            var content = $(".xiaoxi").val();
+            var receiverid = $(".uisid").val();
+            var title = $(".texts").val();
+            var userid = $("#teacherid").val();
+            if (receiverid == "") {
+                alert("请选择老师");
+                return;
+            }
+            if (title == "") {
+                alert("标题不能为空");
+                return;
+            }
+//            else if(title.length>10){
+//                alert("标题不能超过10位个字数");
+//                return;
+//            }
+
+//            if(content == ""){
+//                alert("消息的内容不能为空");
+//                return;
+//            }
+//            else if(content.length>50){
+//                alert("内容字数不能超过50个字数");
+//                return;
+//            }
+            else {
+                localId = newId;
+                if (localId.length == 0) {
+                    $('#zhezhao').show();
+                    $.ajax({
+                        type: "post",
+                        url: '__ROOT__/index.php/?g=apps&m=school&a=publishnotice',
+                        async: true,
+                        data: {
+                            content: content,
+                            receiverid: receiverid,
+                            schoolid:schoolid,
+                            title: title,
+                            userid: userid,
+                            type:1
+
+                        },
+                        dataType: 'json',
+                        success: function (res) {
+                            var message_id = res.id;
+                            $.ajax({
+                                url: "__ROOT__/index.php/Apps/SendTpl/t_notice",
+                                type: "post",
+                                dataType: "json",
+                                data: {
+                                    content: content,
+                                    userid: userid,
+                                    message_id:message_id,
+                                    type: 3,
+                                    uisid: receiverid,
+                                    schoolid:schoolid
+                                },
+                                success: function (res) {
+                                },
+                                error: function (res) {
+                                }
+                            });
+                            $('#zhezhao').hide();
+                            alert("发送成功");
+                            window.history.back();
+                        },
+                        error: function () {
+                            alert('系统错误,请稍后重试');
+                        }
+                    });
+                    return;
+                }
+                $('#zhezhao').show();
+                var picurl = "";
+                var i = 0;
+                serverId = [];
+                length = localId.length;
+                function upload() {
+                    wx.uploadImage({
+                        localId: localId[i],
+                        success: function(res1) {
+                            i++;
+                            serverId.push(res1.serverId);
+                            $.ajax({
+                                url: "__ROOT__/index.php/Apps/Index/download",
+                                type: "post",
+                                dataType: "json",
+                                data: {
+                                    serverId: res1.serverId,
+                                },
+                                success: function(res) {
+//
+                                    if(res.status=="error"){
+                                        alert("图片上传失败");
+                                        return;
+                                    }
+                                    var img = res.data.filename+":"+res.data.width+":"+res.data.height+",";
+                                    picurl += img;
+                                    if (i < length) {
+                                        upload();
+                                    } else {
+                                        $.ajax({
+                                            type: "post",
+                                            url: '__ROOT__/index.php/?g=apps&m=school&a=publishnotice',
+                                            async: true,
+                                            data: {
+                                                content: content,
+                                                receiverid: receiverid,
+                                                schoolid: schoolid,
+                                                title: title,
+                                                userid: userid,
+                                                photo: picurl,
+                                                type:1
+
+                                            },
+                                            dataType: 'json',
+                                            success: function (res) {
+                                                var message_id = res.id;
+                                                $.ajax({
+                                                    url: "__ROOT__/index.php/Apps/SendTpl/t_notice",
+                                                    type: "post",
+                                                    dataType: "json",
+                                                    data: {
+                                                        content: content,
+                                                        userid: userid,
+                                                        message_id:message_id,
+                                                        type: 3,
+                                                        uisid: receiverid,
+                                                        schoolid:schoolid
+                                                    },
+                                                    success: function (res) {
+
+                                                    },
+                                                    error: function (res) {
+
+                                                    }
+                                                });
+                                                $('#zhezhao').hide();
+                                                alert("发送成功");
+//
+                                                window.history.back();
+                                            },
+                                            error: function () {
+                                                alert('系统错误,请稍后重试');
+                                            }
+                                        });
+                                    }
+                                },
+                                error: function(res3) {
+                                    //console.log(3);
+                                }
+                            });
+                        },
+                        fail: function(res4) {
+                            alert("图片上传失败 请稍后再试");
+                            //alert(JSON.stringify(res4));
+                        }
+                    });
+                }
+                upload();
+            }
+
+
+
+        })
+        $(".fanhui").click(function() {
+            window.history.go(-1);
+        })
+    </script>
+</body>
+
+</html>

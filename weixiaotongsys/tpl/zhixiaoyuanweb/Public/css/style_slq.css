@@ -1,0 +1,3566 @@
+body{
+    background: white;
+}
+.center_index_box{
+     width: 1000px;
+     height: 630px;
+      border: 0px;
+    margin: 0 auto;
+    margin-top:20px;
+    min-width: 769px;
+}
+.center_index_box .center_index_left{
+    width: 140px;
+    float: left;
+    margin-top: -20px;
+}
+.center_index_box .center_index_left .teacher_login_photo{
+    width: 140px;
+    height: 300px;
+     margin-top: 20px;
+   border: 1px solid #f2f2f2;
+}
+.center_index_box .center_index_left .teacher_login_photo img{
+    margin-top: 20px;
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_1{
+    background: url("../images/ic_yonghuming.png") no-repeat;
+    width: 100px;
+    height: 21px;
+    margin-left: 16px;
+    margin-top: 15px;
+
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_1 p{
+    margin-left: 20px;
+    font-size: 13px;
+    color: #000000;
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_2{
+    background: url("../images/ic_shouji.png") no-repeat;
+    width: 100px;
+    height: 21px;
+    margin-left: 16px;
+    margin-top: 15px;
+
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_2 p{
+    margin-left: 20px;
+    font-size: 13px;
+    color: #000000;
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_3{
+    background: url("../images/teacher_index_13.png") no-repeat;
+    width: 100px;
+    height: 21px;
+    margin-left: 16px;
+    margin-top: 15px;
+
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_3 p{
+    margin-left: 20px;
+    font-size: 13px;
+    color: #000000;
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_4{
+    background: url("../images/teacher_index_18.png") no-repeat;
+    width: 100px;
+    height: 21px;
+    margin-left: 16px;
+    margin-top: 15px;
+}
+.center_index_box .center_index_left .teacher_login_photo .teacher_login_modify_4 p{
+    margin-left: 20px;
+    font-size: 13px;
+   color: #000000;
+
+}
+.center_index_box .center_index_left .teacher_login_notice_5{
+      width: 140px;
+ margin-top: 20px;
+    border: 1px solid #f2f2f2;
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact p{
+    margin-left: 10px;
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact{
+    width: 140px;
+    height:35px;
+padding-left: 10px;
+    padding-top: 10px;
+    background: #f2f2f2;
+
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact img{
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact p{
+    width: 90px;
+    height: 18px;
+    margin-left: 35px;
+    margin-top: -25px;
+    font-size: 18px;
+    color: #000000;
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact_1{
+padding-left: 15px;
+    padding-top: 20px;
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact_1 img{
+    width: 46px;
+    height: 46px;
+}
+.center_index_box .center_index_left .teacher_login_notice_5 .teacher_login_contact_1 span{
+    padding-left: 15px;
+    font-size: 18px;
+    color: #000000;
+}
+.center_index_box .center_center{
+    width: 620px;
+    float: left;
+    margin-left: 20px;
+}
+.center_index_box .center_center .teacher_login_info_pro{
+    width: 620px;
+    height: 345px;
+    border: 1px solid #f2f2f2;
+}
+.center_index_box .teacher_login_info_pro1{
+    width: 620px;
+    height: 152px;
+    padding: 0px;
+    float: left;
+}
+.center_index_box .teacher_login_info_pro1 p{
+    padding-top: 10px;
+    color: #000000;
+}
+.center_index_box .teacher_login_info_pro1 li{
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+.center_index_box .teacher_login_info_pro1 li a{
+    text-decoration: none;
+}
+.center_index_box .teacher_login_info_pro2{
+    width: 620px;
+    height: 152px;
+    float: left;
+    margin-top: 10px;
+    padding: 0px;
+}
+.center_index_box .teacher_login_info_pro2 p{
+    margin-top: 10px;
+    color: #000000;
+}
+.center_index_box .teacher_login_info_pro2 li{
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.center_index_box .teacher_login_info_pro2 li a{
+    text-decoration: none;
+}
+.center_index_box .teacher_login_info_pro .teacher_login_info_1{
+    width:620px;
+   height: 35px;
+    background: #f2f2f2;
+}
+.center_index_box .teacher_login_info_pro .teacher_login_info_1 img{
+    padding-top: 10px;
+    padding-left: 15px;
+
+}
+.center_index_box .teacher_login_info_pro .teacher_login_info_1 p{
+    width: 80px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: -18px;
+    margin-left: 40px;
+    color: #000000;
+}
+.center_index_box .center_center .center_two{
+    width: 620px;
+    margin-top:20px;
+    border:none;
+}
+.center_index_box .center_center .center_two .tabbable ul{
+   border: 0;
+   margin-left: -20px;
+    width: 300px;
+}
+.center_index_box .center_center .center_two .tabbable ul li{
+    background: #e6e6e6;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.center_index_box .center_center .center_two .tabbable ul li a{
+     background: none;
+    padding: 0;
+     line-height: 30px;
+     font-size: 16px;
+     color: #000;
+     border: none;
+}
+.center_index_box .center_center .center_two .tabbable ul .active{
+background: #25c04a;
+color: #fff;
+}
+.center_index_box .center_center .center_two .tabbable ul .activ a{
+    color: #fff;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content{
+    width: 620px;
+    margin-left: -20px;
+    border: 1px solid #f2f2f2;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .content1{
+     width: 260px;
+     height: 16px;
+      margin-left: 30px;
+    margin-top: 20px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .content1 .leiji{
+    width: 110px;
+    height: 20px;
+    size: 16px;
+    color: red;
+   
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .content1 .change{
+    width: 110px;
+    height: 20px;
+    size: 16px;
+    color: #81d590;
+    margin-left: 20px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .content2{
+     width: 260px;
+     height: 16px;
+      margin-left: 30px;
+    margin-top: 10px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .content2 .shouru{
+    width: 110px;
+    height: 20px;
+    color: red;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .content2 .zhichu{
+     width: 110px;
+    height: 20px;
+    color: #81d590;
+    margin-left: 20px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .serch_shouru{
+    size: 12px;
+    color: #000000;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .serch_zhichu{
+    size: 12px;
+    color: #000000;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .tab-pane table{
+ border: #efefef 1px solid;
+ margin-left: 20px;
+ margin-top: 10px;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .tab-pane table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.center_index_box .center_center .center_two .tabbable .tab-content .tab-pane table tr td{
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.center_index_box .center_right{
+     width: 200px;
+     float: left;
+     margin-left: 20px;
+     border: none;
+}
+.center_index_box .center_right .teacher_login_pic{
+     width: 200px;
+    height: 340px;
+    float: right;
+}
+.center_index_box .center_right .teacher_login_pic img{
+    width: 200px;
+    height: 200px;
+   }
+.center_index_box .center_right .teacher_login_pic .teacher_login_info_notice{
+    width: 200px;
+    height: 120px;
+    border: 1px solid #f2f2f2;
+    margin-top: 20px;
+}
+.center_index_box .center_right .teacher_login_pic .teacher_login_info_notice .notice_top{
+width: 200px;
+height: 30px;
+  background: #f2f2f2;
+}
+.center_index_box .center_right .teacher_login_pic .teacher_login_info_notice .notice_top p{
+    padding-top: 5px;
+    padding-left: 60px;
+}
+.center_index_box .center_right .teacher_login_pic .teacher_login_info_notice table{
+    width: 200px;
+    height: 90px;
+}
+.center_index_box .center_right .teacher_login_pic .teacher_login_info_notice tr{
+    border-top: 1px solid #f2f2f2;
+}
+.blogs{
+    width: 1000px;
+    height: 670px;
+    margin: 0 auto;
+    min-width: 769px;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+}
+.blogs .user_info_left{
+    width: 190px;
+    height: 670px;
+    border-right: 1px solid #f2f2f2;
+}
+.blogs .user_info_left .user_info_photo{
+    width: 100px;
+    height: 200px;
+    margin: 0 auto;
+
+}
+.blogs .user_info_left .user_info_photo img{
+    width: 100px;
+    height: 100px;
+  margin-top: 20px;
+}
+.blogs .user_info_left .user_info_photo p{
+    margin: 0 auto;
+    margin-top: 25px;
+    color: #000000;
+    font-size: 17px;
+}
+.blogs .user_info_left .user_info_count{
+    width: 120px;
+    height: 55px;
+
+    margin:  0 auto;
+    margin-top: 40px;
+
+}
+.blogs .user_info_left .user_info_count img{
+    width: 25px;
+    height: 25px;
+}
+.blogs .user_info_left .user_info_count p{
+
+
+    float: left;
+    margin-left: 30px;
+    margin-top: -20px;
+    color: #000000;
+    width: 100px;
+    height: 20px;
+}
+.blogs .blogs_right{
+    width: 790px;
+    height: 670px;
+    margin-left: 210px;
+    margin-top: -650px;
+    border-left: 1px solid #f2f2f2;
+}
+.blogs .blogs_right .blogs_right_top{
+    width: 790px;
+    height: 98px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+
+.blogs .blogs_right .blogs_right_top .blogs_right_top_icon_cam{
+    width: 90px;
+    height: 115px;
+    border: 1px solid #f2f2f2;
+    margin-left: 600px;
+    margin-top: -120px;
+}
+.blogs .blogs_right .blogs_right_top .blogs_right_top_icon_cam img{
+    width: 90px;
+    height: 115px;
+}
+.blogs .blogs_right .blogs_right_top .blogs_right_top_icon_cam2{
+    width: 90px;
+    height: 115px;
+    border: 1px solid #f2f2f2;
+    margin-top: -115px;
+    margin-left: 690px;
+}
+.blogs .blogs_right .blogs_right_top .blogs_right_top_icon_cam2 img{
+    width: 90px;
+    height: 115px;
+}
+.blogs .blogs_right .blogs_right_top .blogs_right_top_icon_input {
+    width: 490px;
+    height: 85px;
+    border: none;
+    padding-left: 20px;
+    padding-top: 15px;
+
+
+}
+.blogs .blogs_right .blogs_right_top .blogs_right_top_icon_input textarea{
+    width: 490px;
+    height:60px;
+    border: none;
+    margin-left: 30px;
+    padding-top: 15px;
+
+
+}
+.blogs .blogs_right .blogs_right_middle{
+    width: 789px;
+    height: 30px;
+    background-color: #f5f5f5;
+    border-right: 0.5px solid #f2f2f2;
+    margin-top: 10px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+.blogs .blogs_right .blogs_right_middle .all_blogs p{
+    width: 89px;
+    height: 30px;
+    margin:  0 auto;
+    margin-top: 5px;
+    color: #000000;
+}
+.blogs .blogs_right .blogs_right_middle .all_blogs .all_blogs_refresh img{
+    width: 20px;
+    height: 15px;
+    float: right;
+    margin-right: 30px;
+    margin-top: -165px;
+}
+.blogs .blogs_right .blogs_right_middle .all_blogs .all_blogs_refresh p{
+    width: 70px;
+    height: 30px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -165px;
+}
+.blogs .blogs_right .blogs_right_bottom {
+    width: 789px;
+    height: 530px;
+
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_left{
+    width: 115px;
+    height: 530px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_left img{
+    width: 80px;
+    height: 80px;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_left p{
+    margin-top: 20px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right{
+    width: 674px;
+    height: 530px;
+    margin-left: 115px;
+    margin-top: -530px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_1{
+    margin-left: 20px;
+    padding-top: 30px;
+    line-height: 2em;
+    font-size: 17px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_2 img{
+    width: 430px;
+    height: 235px;
+    margin-left: 20px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3{
+    width: 674px;
+    height: 30px;
+
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 12px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3 .blogs_right_bottom_right_4{
+    width: 75px;
+    height: 30px;
+
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3 .blogs_right_bottom_right_4 img{
+    width: 25px;
+    height: 20px;
+    margin-left: 500px;
+    margin-top: -60px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3 .blogs_right_bottom_right_4 p{
+    width: 35px;
+    height: 30px;
+    font-size: 12px;
+    margin-left: 530px;
+    margin-top: -50px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3 .blogs_right_bottom_right_5{
+    width: 75px;
+    height: 30px;
+    float: right;
+
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3 .blogs_right_bottom_right_5 img{
+    width: 25px;
+    height:20px;
+
+    margin-left: -30px;
+    margin-top: -120px;
+}
+.blogs .blogs_right .blogs_right_bottom .blogs_right_bottom_right .blogs_right_bottom_right_3 .blogs_right_bottom_right_5 p{
+    width: 35px;
+    height: 30px;
+    font-size: 12px;
+
+    margin-top: -80px;
+}
+.relation_box{
+    width: 1000px;
+    height: 1470px;
+    margin: 0 auto;
+}
+.relation_box a{
+    text-decoration: none;
+}
+.relation_box .relation_left{
+    width: 170px;
+    height: 580px;
+    margin-top: 15px;
+    border: 1px solid #F2F2F2;
+    float: left;
+}
+.relation_box .relation_left .relation_left_1{
+    width: 106px;
+    height: 257px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.relation_box .relation_left .relation_left_1 img{
+    width: 97px;
+    height: 97px;
+
+}
+.relation_box .relation_left .relation_left_1 .relation_left_11{
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+    background: url("../images/ic_yonghuming.png") no-repeat ;
+
+}
+
+.relation_box .relation_left .relation_left_1 .relation_left_11 p{
+    font-size: 15px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #000000;
+}
+.relation_box .relation_left .relation_left_1 .relation_left_12{
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+    background: url("../images/ic_shouji.png") no-repeat ;
+
+}
+
+.relation_box .relation_left .relation_left_1 .relation_left_12 p{
+    font-size: 15px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #000000;
+}
+.relation_box .relation_left .relation_left_1 .relation_left_13{
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+    background: url("../images/ic_bianjiziliao.png") no-repeat ;
+
+}
+
+.relation_box .relation_left .relation_left_1 .relation_left_13 p{
+    font-size: 15px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #000000;
+}
+.relation_box .relation_left .relation_left_1 .relation_left_14{
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+    background: url("../images/ic_xiugaimima.png") no-repeat ;
+
+}
+
+.relation_box .relation_left .relation_left_1 .relation_left_14 p{
+    font-size: 15px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+.relation_box .relation_center{
+    width: 620px;
+    height: 1470px;
+    margin-left: 20px;
+    float: left;
+    color: #000000;
+}
+.relation_box .relation_left .relation_left_contact{
+    width: 170px;
+    height: 40px;
+    background: #F2F2F2;
+    margin-top: 35px;
+
+}
+.relation_box .relation_left .relation_left_contact span{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.relation_box .relation_left .relation_left_contact .sp1{
+    width: 90px;
+    height: 20px;
+    float: left;
+    color: #000000;
+    font-size: 17px;
+}
+.relation_box .relation_left .relation_left_contact .p2{
+    width:60px;
+    height: 20px;
+    float: right;
+    color: #2acf51;
+    font-size: 15px;
+}
+.relation_box .relation_left .relation_left_contact1{
+    width: 170px;
+    height: 40px;
+    background: #F2F2F2;
+    margin-top: 35px;
+}
+.relation_box .relation_left .relation_left_contact1 p{
+    font-size: 17px;
+    color: #000000;
+    padding-left:50px;
+    margin-top: -25px;
+}
+.relation_box .relation_left .relation_left_contact1 img{
+    width: 29px;
+    height: 29px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.relation_box .relation_left .relation_left_contact2{
+    width: 170px;
+    height: 112px;
+}
+.relation_box .relation_left .relation_left_contact2 img{
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.relation_box .relation_left .relation_left_contact2 p{
+    padding-left: 90px;
+    margin-top: -40px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_top{
+    width: 620px;
+    height: 65px;
+    border-bottom: 5px solid #2acf51;
+
+}
+.relation_box .relation_center .relation_center_top p{
+    font-size: 18px;
+    color: #2acf51;
+    padding-left: 135px;
+    padding-top: 30px;
+
+}
+.relation_box .relation_center .relation_center_assitant{
+    width: 600px;
+    height: 200px;
+    border: 1px solid #F2F2F2;
+    margin: 0 auto;
+    margin-top: 10px;
+
+}
+.relation_box .relation_center .relation_center_assitant_bot{
+    width: 600px;
+    height: 155px;
+
+}
+.relation_box .relation_center .relation_center_assitant_bot li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.relation_box .relation_center .relation_center_assitant_bot li p{
+    color: #000000;
+    font-size: 15px;
+    padding-top: 18px;
+}
+.relation_box .relation_center .relation_center_assitant_bot li a{
+    text-decoration: none;
+}
+.relation_box .relation_center .relation_center_assitant .relation_center_assitant_top{
+    width: 600px;
+    height: 35px;
+    background: #F2F2F2;
+
+}
+.relation_box .relation_center .relation_center_assitant .relation_center_assitant_top img{
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+.relation_box .relation_center .relation_center_assitant .relation_center_assitant_top p{
+    width: 70px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_message{
+    width: 600px;
+    height: 190px;
+    border: 1px solid #F2F2F2;
+    margin: 0 auto;
+    margin-top: 18px;
+
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_top{
+    width: 600px;
+    height: 35px;
+    background: #F2F2F2;
+
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_top img{
+    width: 22px;
+    height: 22px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_top .message1{
+    width: 100px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_top .message2{
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin-top: -40px;
+    font-size: 14px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_bottom{
+    width: 600px;
+    height: 154px;
+
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_bottom .relation_center_message_bottom1{
+    width: 600px;
+    height: 77px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_bottom .relation_center_message_bottom1 .p1{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_bottom .relation_center_message_bottom1 .p2{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_message .relation_center_message_bottom .relation_center_message_bottom1 .relation_center_message_bottom2{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -20px;
+}
+.relation_box .relation_center .relation_center_parents{
+    width: 600px;
+    height: 190px;
+    border: 1px solid #F2F2F2;
+
+    margin: 0 auto;
+    margin-top: 18px;
+
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_top{
+    width: 600px;
+    height: 35px;
+    background: #F2F2F2;
+
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_top img{
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_top .parents1{
+    width: 100px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_top .parents2{
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin-top: -40px;
+    font-size: 14px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_bottom{
+    width: 600px;
+    height: 154px;
+
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_bottom .relation_center_parents_bottom1{
+    width: 600px;
+    height: 77px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_bottom .relation_center_parents_bottom1 .p1{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_bottom .relation_center_parents_bottom1 .p2{
+    width: 400px;
+    height: 20px;
+   margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_parents .relation_center_parents_bottom .relation_center_parents_bottom1 .relation_center_parents_bottom2{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -20px;
+}
+.relation_box .relation_center .relation_center_notice{
+    width: 600px;
+    height: 219px;
+    border: 1px solid #F2F2F2;
+    margin: 0 auto;
+    margin-top: 18px;
+
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_top{
+    width: 600px;
+    height: 35px;
+    background: #F2F2F2;
+
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_top img{
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_top .notice1{
+    width: 70px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_top .notice2{
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin-top: -40px;
+    font-size: 14px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom{
+    width: 600px;
+    height: 182px;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1{
+    width: 600px;
+    height: 91px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0{
+    width: 470px;
+    height: 90px;
+    margin-left: 120px;
+    margin-top: -70px;
+
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p1{
+    width: 350px;
+    height: 20px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p2{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -20px;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p3{
+    width: 350px;
+    height: 20px;
+
+
+    font-size: 15px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p4{
+    width: 350px;
+    height: 20px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #000000;
+    background: url("../images/ic_fasong.png")no-repeat left;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p5{
+
+    height: 20px;
+    float: right;
+    margin-top: -30px;
+
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p5 p{
+    font-size: 12px;
+    color: #ffba8e;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p3 p{
+    font-size: 14px;
+    padding-top: 5px;
+}
+.relation_box .relation_center .relation_center_notice .relation_center_notice_bottom .relation_center_notice_bottom1 .p0 .p4 p{
+    padding-left: 25px;
+}
+.relation_box .relation_center .relation_center_thing{
+    width: 600px;
+    height: 190px;
+    border: 1px solid #F2F2F2;
+    margin: 0 auto;
+    margin-top: 18px;
+
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_top{
+    width: 600px;
+    height: 35px;
+    background: #F2F2F2;
+
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_top img{
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_top .thing1{
+    width: 70px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_top .thing2{
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin-top: -40px;
+    font-size: 14px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom{
+    width: 600px;
+    height: 154px;
+
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom .relation_center_thing_bottom1{
+    width: 600px;
+    height: 77px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom .relation_center_thing_bottom1 .p1{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom .relation_center_thing_bottom1 .p2{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom .relation_center_thing_bottom1 .relation_center_thing_bottom2{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -20px;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom .relation_center_thing_bottom1 .relation_center_thing_bottom3{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -20px;
+    background: url("../images/ic_fasong.png")no-repeat left;
+}
+.relation_box .relation_center .relation_center_thing .relation_center_thing_bottom .relation_center_thing_bottom1 .relation_center_thing_bottom3 p{
+    font-size: 14px;
+    margin-left: 25px;
+}
+.relation_box .relation_center .relation_center_relation{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 18px;
+
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_top{
+    width: 600px;
+    height: 35px;
+    background: #F2F2F2;
+
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_top img{
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+   margin-top: 5px;
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_top .relation1{
+    width: 70px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_top .relation2{
+    width: 60px;
+    height: 30px;
+    float: right;
+    margin-top: -40px;
+    font-size: 14px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_bottom{
+    width: 600px;
+    height: 154px;
+
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_bottom .relation_center_relation_bottom1{
+    width: 600px;
+    height: 77px;
+    border: 1px solid #F2F2F2;
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_bottom .relation_center_relation_bottom1 .p1{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_bottom .relation_center_relation_bottom1 .p2{
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #000000;
+}
+.relation_box .relation_center .relation_center_relation .relation_center_relation_bottom .relation_center_relation_bottom1 .relation_center_relation_bottom2{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -20px;
+}
+.relation_box .relation_right{
+    width: 170px;
+    border: 1px solid #F2F2F2;
+    border-bottom: none;
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.relation_box .relation_right .relation_right_top{
+    width: 170px;
+    height:36px;
+    background: #F2F2F2;
+}
+.relation_box .relation_right .relation_right_top p{
+
+    padding-top: 8px;
+    font-size: 17px;
+}
+.relation_box .relation_right .relation_right_body table{
+    height:470px;
+    width: 170px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.relation_box .relation_right .relation_right_body tr{
+
+    border-top: 1px solid #F2F2F2;
+}
+.relation_box .relation_right .relation_right_body td:nth-child(1){
+    color:#27c94e;
+    padding-left: 10px;
+}
+.relation_box .relation_right .relation_right_body td:nth-child(2){
+    color: #000000;
+    padding-left:15px;
+}
+.relation_box .relation_right .relation_right_body td:nth-child(3){
+    color: #cacaca;
+    padding-left: 15px;
+}
+
+.message-box .main .parents_warn .warn-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.message-box .main .parents_warn .warn-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.message-box .main .parents_warn .warn-search .message-search-input input{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input .date-input{
+    width: 130px;
+}
+.message-box .main .sparents_warn .warn-search .message-search-input .person-input{
+    width: 251px;
+
+}
+
+.message-box .main .parents_warn .warn-search .message-search-input .class-input{
+    background: #f4f4f4;
+    width: 125px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input .send-input{
+    background: #f4f4f4;
+    width: 185px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input .status-input{
+    background: #f4f4f4;
+    width: 70px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input .biaoji-input{
+    background: #f4f4f4;
+    width: 70px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .parents_warn .warn-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.message-box .main .parents_warn .warn-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.message-box .main .parents_warn .warn-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 17px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.message-box .main .parents_warn .warn-search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 5px;
+}
+.message-box .main .parents_warn .warn-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+}
+.message-box .main .parents_warn .warn-list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.message-box .main .parents_warn .warn-list table{
+    border: #efefef 1px solid;
+}
+.message-box .main .parents_warn .warn-list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.message-box .main .parents_warn .warn-list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.message-box .main .parents_warn .warn-list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.message-box .main .parents_warn .warn-list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.message-box .main .parents_warn .warn-list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.message-box .main .parents_warn .warn-list .meaasge-page ul{
+    float: right;
+}
+.message-box .main .system_message_content .message-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.message-box .main .system_message_content .message-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.message-box .main .system_message_content .message-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.message-box .main .system_message_content .message-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.message-box .main .system_message_content .message-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.message-box .main .system_message_content .message-search .message-search-input input{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .system_message_content .message-search .message-search-input .date-input{
+    width: 130px;
+}
+.message-box .main .system_message_content .message-search .message-search-input .person-input{
+    width: 251px;
+}
+.message-box .main .system_message_content .message-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.message-box .main .system_message_content .message-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.message-box .main .system_message_content .message-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.message-box .main .system_message_content .message-search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 5px;
+}
+.message-box .main .system_message_content .message-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+}
+.message-box .main .system_message_content .message-search .message-search-input select{
+    background: #f4f4f4;
+    width: 75px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .system_message_content .system_message_list{
+
+    padding: 15px;
+    background: #fff;
+    float: right
+}
+.message-box .main .system_message_content .system_message_list table{
+    border: #efefef 1px solid;
+}
+.message-box .main .system_message_content .system_message_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.message-box .main .system_message_content .system_message_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.message-box .main .system_message_content .system_message_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.message-box .main .system_message_content .system_message_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.message-box .main .system_message_content .system_message_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.message-box .main .system_message_content .system_message_list .meaasge-page ul{
+    float: right;
+}
+.message-box .main .notice-content .message-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.message-box .main .notice-content .message-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.message-box .main .notice-content .message-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.message-box .main .notice-content .message-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.message-box .main .notice-content .message-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.message-box .main .notice-content .message-search .message-search-input input{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .notice-content .message-search .message-search-input .date-input{
+    width: 130px;
+}
+.message-box .main .notice-content .message-search .message-search-input .person-input{
+    width: 251px;
+}
+.message-box .main .notice-content .message-search .message-search-input .class-input{
+    background: #f4f4f4;
+    width: 125px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .notice-content .message-search .message-search-input .send-input{
+    background: #f4f4f4;
+    width: 185px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .notice-content .message-search .message-search-input .status-input{
+    background: #f4f4f4;
+    width: 70px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .notice-content .message-search .message-search-input .biaoji-input{
+    background: #f4f4f4;
+    width: 70px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .notice-content .message-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.message-box .main .notice-content .message-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.message-box .main .notice-content .message-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.message-box .main .notice-content .message-search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 5px;
+}
+.message-box .main .notice-content .message-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.message-box .main .notice-content .teacher-message-list{
+
+    padding: 15px;
+    background: #fff;
+    float: right
+}
+.message-box .main .notice-content .teacher-message-list .new_notice1{
+    width: 90px;
+    line-height: 35px;
+    background:#3bc459;
+    border-radius: 5px;
+    border: none;
+    float: right;
+}
+.message-box .main .notice-content .teacher-message-list table{
+    border: #efefef 1px solid;
+}
+.message-box .main .notice-content .teacher-message-list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.message-box .main .notice-content .teacher-message-list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.message-box .main .notice-content .teacher-message-list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.message-box .main .notice-content .teacher-message-list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.message-box .main .notice-content .teacher-message-list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.message-box .main .notice-content .teacher-message-list .meaasge-page ul {
+    float: right;
+}
+.message-box .main1 .new_notice{
+    background: #fff;
+    float: left;
+    margin-left: 10px;
+}
+.message-box .main1 .new_notice .grade-list{
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+}
+.message-box .main1 .new_notice .grade-list .grade-list-list{
+    width: 610px;
+    overflow: auto;
+}
+.message-box .main1 .new_notice .grade-list .grade-list-list table tr td{
+    word-break: keep-all;
+    min-width: 150px;
+    padding: 5px 15px;
+    font-size: 18px;
+    border: 1px solid #98cfd9;
+}
+.message-box .main1 .new_notice .all-cheak{
+    float: right;
+    padding-top: 10px;
+}
+.message-box .main1 .new_notice .all-cheak .all-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.message-box .main1 .new_notice .all-cheak .all-button-cancel{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.message-box .main1 .new_notice .class-list{
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+    padding: 20px;
+}
+.message-box .main1 .new_notice .class-list .class-list-list{
+    width: 610px;
+    overflow: auto;
+}
+.message-box .main1 .new_notice .class-list .class-list-list table tr td{
+    word-break: keep-all;
+    min-width: 150px;
+    padding: 5px 15px;
+    font-size: 18px;
+    border: 1px solid #98cfd9;
+}
+.message-box .main1 .new_notice .student-list{
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+    padding: 20px;
+    padding-top: 0;
+}
+.message-box .main1 .new_notice .student-list .letter-list{
+    width: 610px;
+    height: 60px;
+}
+.message-box .main1 .new_notice .student-list .letter-list .letter{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #98cfd9;
+    margin: 5px;
+    float: left;
+}
+.message-box .main1 .new_notice .student-list .letter-list span{
+    font-size: 12px;
+    line-height: 40px;
+    color: #f00;
+}
+.message-box .main1 .new_notice .student-list .student-list-list{
+    width: 610px;
+    height: 200px;
+    overflow-y: auto;
+    padding-left: 1px;
+}
+.message-box .main1 .new_notice .student-list .student-list-list .student{
+    min-width: 100px;
+    line-height: 20px;
+    border: 1px solid #98cfd9;
+    font-size: 16px;
+    float: left;
+    margin-left: -1px;
+    padding: 8px 3px;
+    margin-top: 5px;
+    text-align: center;
+}
+.message-box .main1 .new_notice .student-list .student-list-list .student input{
+    padding: 0;
+    margin: 0;
+}
+.message-box .main1 .new_notice .checked-student{
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+    padding: 20px;
+}
+.message-box .main1 .new_notice .checked-student h4{
+    color: #ff5722;
+}
+.message-box .main1 .new_notice .checked-student .checked-list {
+    width: 610px;
+    margin: 0;
+}
+
+.message-box .main1 .new_notice .checked-student .checked-list li{
+    float: left;
+    padding: 3px 5px;
+    font-size: 12px;
+    color: blue;
+    list-style:none;
+}
+.message-box .main1 .new_notice .checked-student .input-prompt{
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+}
+
+.message-box .main1 .new_notice .checked-student .input-prompt span{
+    font-size: 20px;
+    color: #ff5722;
+}
+.message-box .main1 .new_notice .checked-student .notice_title{
+    width: 522px;
+    height: 40px;
+    border: 1px dashed #e2e2e2;
+}
+.message-box .main1 .new_notice .checked-student .input-textarea textarea{
+    width: 522px;
+    height: 140px;
+    border: 1px dashed #e2e2e2;
+    float: left;
+    margin-top: 10px;
+}
+.message-box .main1 .new_notice .checked-student .input-textarea input{
+    padding: 5px 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    margin: 10px;
+    float: left;
+}
+.message-box .main1 .new_notice .checked-student .input-textarea .sub-textarea{
+    background: #9ccc65;
+    border: 1px solid#7cb342;
+    color: #fff;
+}
+.message-box .main1 .new_notice .checked-student .input-textarea .save-textarea{
+    background: #d4d4d4;
+    border: 1px solid #adadad;
+    color: #666666;
+}
+.message-box .main1 .new_notice .checked-student .input-options{
+    width: 610px;
+    line-height: 31px;
+}
+.message-box .main1 .new_notice .checked-student .input-options .option-list{
+    width: 190px;
+    float: left;
+    font-size: 14px;
+}
+.message-box .main1 .new_notice .checked-student .input-options .option-list .option-checkbox{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+.message-box .main1 .new_notice .checked-student .input-options .stress{
+    color: #ff5722;
+}
+.message-box .main1 .new_notice .checked-student .input-options .option-list .teacher-input{
+    height: 30px;
+    width: 70px;
+    margin: -2px 0 0;
+}
+.message-box .main .backlog-content .message-search{
+    width: 850px;
+    height: 55px;
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+}
+.message-box .main .backlog-content .message-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.message-box .main .backlog-content .message-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.message-box .main .backlog-content .message-search .message-search-input .type_backlog{
+    font-size: 14px;
+    color: #000;
+    margin-left: 10px;
+    line-height: 19px;
+}
+.message-box .main .backlog-content .message-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.message-box .main .backlog-content .message-search .message-search-input input{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .backlog-content .message-search .message-search-input .date-input{
+    width: 130px;
+}
+.message-box .main .backlog-content .message-search .message-search-input .person-input{
+    width: 251px;
+}
+.message-box .main .backlog-content .message-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.message-box .main .backlog-content .message-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.message-box .main .backlog-content .message-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.message-box .main .backlog-content .message-search .message-search-input .backlog_type{
+    background: #f4f4f4;
+    width: 75px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+margin-left: 670px;
+    margin-top: -45px;
+    font-size: 12px;
+}
+.message-box .main .backlog-content .message-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 24px;
+    font-size: 14px;
+}
+.message-box .main .backlog-content .message-list{
+    padding: 15px;
+    background: #fff;
+    float: right
+}
+.message-box .main .backlog-content .message_btn{
+    width: 220px;
+    height: 38px;
+    float: right;
+margin-top: 10px;
+}
+.message-box .main .backlog-content .message_btn .search-orther-button{
+   width: 80px;
+    background: white;
+    border: 1px #b6b6b6 solid;
+    border-radius: 6px;
+ margin-left: 10px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #000;
+}
+.message-box .main .backlog-content .message_btn .search-orther-btn{
+    width: 110px;
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 6px;
+    color: #fff;
+    margin-left: 10px;
+    line-height: 30px;
+    font-size: 17px;
+}
+.message-box .main .backlog-content .message-list table{
+    border: #efefef 1px solid;
+}
+.message-box .main .backlog-content .message-list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.message-box .main .backlog-content .message-list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.message-box .main .backlog-content .message-list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.message-box .main .backlog-content .message-list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.message-box .main .backlog-content .message-list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.message-box .main .backlog-content .message-list .meaasge-page ul {
+    float: right;
+}
+.message-box .main1 .new_backlog{
+    background: #fff;
+    float: left;
+    margin-left: 10px;
+}
+.message-box .main1 .new_backlog .grade-list{
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+}
+.message-box .main1 .new_backlog .grade-list .grade-list-list{
+    width: 610px;
+    overflow: auto;
+}
+.message-box .main1 .new_backlog .grade-list .grade-list-list table tr td{
+    word-break: keep-all;
+    min-width: 150px;
+    padding: 5px 15px;
+    font-size: 18px;
+    border: 1px solid #98cfd9;
+}
+.message-box .main1 .new_backlog .all-cheak{
+    float: right;
+    padding-top: 10px;
+}
+.message-box .main1 .new_backlog .all-cheak .all-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.message-box .main1 .new_backlog .all-cheak .all-button-cancel{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.message-box .main1 .new_backlog .class-list{
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+    padding: 20px;
+}
+.message-box .main1 .new_backlog .class-list .class-list-list{
+    width: 610px;
+    overflow: auto;
+}
+.message-box .main1 .new_backlog .class-list .class-list-list table tr td{
+    word-break: keep-all;
+    min-width: 150px;
+    padding: 5px 15px;
+    font-size: 18px;
+    border: 1px solid #98cfd9;
+}
+.message-box .main1 .new_backlog .student-list{
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+    padding: 20px;
+    padding-top: 0;
+}
+.message-box .main1 .new_backlog .student-list .letter-list{
+    width: 610px;
+    height: 60px;
+}
+.message-box .main1 .new_backlog .student-list .letter-list .letter{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #98cfd9;
+    margin: 5px;
+    float: left;
+}
+.message-box .main1 .new_backlog .student-list .letter-list span{
+    font-size: 12px;
+    line-height: 40px;
+    color: #f00;
+}
+.message-box .main1 .new_backlog .student-list .student-list-list{
+    width: 610px;
+    height: 200px;
+    overflow-y: auto;
+    padding-left: 1px;
+}
+.message-box .main1 .new_backlog .student-list .student-list-list .student{
+    min-width: 100px;
+    line-height: 20px;
+    border: 1px solid #98cfd9;
+    font-size: 16px;
+    float: left;
+    margin-left: -1px;
+    padding: 8px 3px;
+    margin-top: 5px;
+    text-align: center;
+}
+.message-box .main1 .new_backlog .student-list .student-list-list .student input{
+    padding: 0;
+    margin: 0;
+}
+.message-box .main1 .new_backlog .checked-student{
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+    padding: 20px;
+}
+.message-box .main1 .new_backlog .checked-student h4{
+    color: #ff5722;
+}
+.message-box .main1 .new_backlog .checked-student .checked-list {
+    width: 610px;
+    margin: 0;
+}
+
+.message-box .main1 .new_backlog .checked-student .checked-list li{
+    float: left;
+    padding: 3px 5px;
+    font-size: 12px;
+    color: blue;
+    list-style:none;
+}
+.message-box .main1 .new_backlog .checked-student .input-prompt{
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+}
+
+.message-box .main1 .new_backlog .checked-student .input-prompt span{
+    font-size: 20px;
+    color: #ff5722;
+}
+.message-box .main1 .new_backlog .checked-student .notice_title{
+    width: 522px;
+    height: 40px;
+    border: 1px dashed #e2e2e2;
+}
+.message-box .main1 .new_backlog .checked-student .input-textarea textarea{
+    width: 522px;
+    height: 140px;
+    border: 1px dashed #e2e2e2;
+    float: left;
+    margin-top: 10px;
+}
+.message-box .main1 .new_backlog .checked-student .input-textarea input{
+    padding: 5px 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    margin: 10px;
+    float: left;
+}
+.message-box .main1 .new_backlog .checked-student .input-textarea .sub-textarea{
+    background: #9ccc65;
+    border: 1px solid#7cb342;
+    color: #fff;
+}
+.message-box .main1 .new_backlog .checked-student .input-textarea .save-textarea{
+    background: #d4d4d4;
+    border: 1px solid #adadad;
+    color: #666666;
+}
+.message-box .main1 .new_backlog .checked-student .input-options{
+    width: 610px;
+    line-height: 31px;
+}
+.message-box .main1 .new_backlog .checked-student .input-options .option-list{
+    width: 190px;
+    float: left;
+    font-size: 14px;
+}
+.message-box .main1 .new_backlog .checked-student .input-options .option-list .option-checkbox{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+.message-box .main1 .new_backlog .checked-student .input-options .stress{
+    color: #ff5722;
+}
+.message-box .main1 .new_backlog .checked-student .input-options .option-list .teacher-input{
+    height: 30px;
+    width: 70px;
+    margin: -2px 0 0;
+}
+.message-box .main .teacher_message .message-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.message-box .main .teacher_message .message-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.message-box .main .teacher_message .message-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.message-box .main .teacher_message .message-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.message-box .main .teacher_message .message-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.message-box .main .teacher_message .message-search .message-search-input input{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .teacher_message .message-search .message-search-input .date-input{
+    width: 130px;
+}
+.message-box .main .teacher_message .message-search .message-search-input .person-input{
+    width: 251px;
+}
+.message-box .main .teacher_message .message-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.message-box .main .teacher_message .message-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.message-box .main .teacher_message .message-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.message-box .main .teacher_message .message-search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 5px;
+}
+.message-box .main .teacher_message .message-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+}
+.message-box .main .teacher_message .message-search .message-search-input .te_name{
+    background: #f4f4f4;
+    width: 130px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .teacher_message .message-search .message-search-input .send_name{
+    background: #f4f4f4;
+    width: 200px;
+    height:24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.message-box .main .teacher_message .message_list{
+
+    padding: 15px;
+    background: #fff;
+    float: right
+}
+.message-box .main .teacher_message .message_list table{
+    border: #efefef 1px solid;
+}
+.message-box .main .teacher_message .message_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.message-box .main .teacher_message .message_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.message-box .main .teacher_message .message_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.message-box .main .teacher_message .message_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.message-box .main .teacher_message .message_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.message-box .main .teacher_message .message_list .meaasge-page ul{
+    float: right;
+}
+.message-detail{
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -250px;
+    display: none;
+    background: #fff;
+    border: 3px solid #3bc459;
+    z-index: 500px;
+    text-align: left;
+}
+.message-detail .top{
+    height: 50px;
+    width: 494px;
+    margin-top: -20px;
+    background: #f2f2f2;
+}
+.message-detail .top .off-detail{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.message-detail .top h3{
+    padding-left: 10px;
+    color: #009688;
+    font-size: 24px;
+    line-height: 50px;
+}
+.message-detail .bottom{
+    width: 494px;
+    height: 242px;
+    overflow-y:auto;
+}
+.message-detail .bottom td{
+    width: 494px;
+    height: 30px;
+    text-align: left;
+    border-bottom: 1px solid #cecece;
+}
+.message-detail .bottom .input1{
+    float: left;
+}
+.message-detail .bottom .input1 .input2{
+    border: none;
+}
+.message-detail .bottom .next_step{
+    color: #24c049;
+}
+.message-detail .bottom .choose{
+    color: red;
+}
+.message-detail .bottom .choose1{
+    color: #387aba;
+}
+.message-detail .bottom .t1{
+    margin-top: 10px;
+}
+.message-detail .bottom .notice1{
+    width: 90px;
+    height: 35px;
+    background:#3bc459;
+    border-radius: 5px;
+    float: left;
+    margin-left: 30px;
+}
+.message-detail .bottom p{
+    padding: 10px;
+    font-size: 16px;
+    text-indent: 30px;
+    line-height: 20px;
+}
+.message-detail .bottom img{
+    width: 100px; 
+    height: 70px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.message-detail .bottom .person-list{
+    line-height: 20px;
+    font-size: 14px;
+    color: blue;
+}
+.message-detail .bottom .person-list ul li{
+    width: 80px;
+    text-align: center;
+    float: left;
+    list-style: none;
+}
+.message-detail .bottom .person-list ul li span{
+    line-height: 20px;
+}
+.message-detail .bottom .reply-message{
+    padding: 10px;
+}
+.message-detail .bottom .reply-message p{
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0;
+    text-indent: 5px
+}
+.message-detail .bottom .reply-message textarea{
+    width: 470px;
+    height: 100px;
+    display: block;
+    border: 1px dashed #555;
+    line-height: 20px;
+    font-size: 14px;
+}
+.message-detail .bottom .reply-message .icon-span{
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 6px;
+    color: #3bc495;
+}
+.message-detail .bottom .reply-message .submit-message{
+    padding: 5px 20px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #fff;
+    background: #9ccc65;
+    border: 1px solid #7cb342;
+    border-radius: 6px;
+    position: relative;
+    top:6px;
+    right: -280px;
+}
+.manage-box{
+    width: 100%;
+    background: #fafafa;
+    padding: 0 0 15px;
+}
+.manage-box .place{
+    width: 1000px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 30px;
+    color: #434343;
+}
+.manage-box .main{
+    width: 1030px;
+    margin: auto;
+}
+.manage-box .main .left-list{
+    float: left;
+    background: #fff;
+}
+.manage-box .main .left-list .text-first{
+    width: 140px;
+    text-align: left;
+    text-indent: 30px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #434343;
+    background: #cfeed7;
+}
+.manage-box .main .left-list span{
+    display: inline;
+    color: #434343;
+    font-size: 14px;
+}
+.manage-box .main .left-list .active{
+    background: #31d057;
+    color: #fff;
+}
+.manage-box .main .left-list .text-first:hover{
+    background: #31d057;
+    color: #fff;
+}
+.manage-box .main .left-list .active span{
+    display: inline;
+    color: #fff;
+    font-size: 14px;
+}
+.manage-box .main .left-list .text-second{
+    display: none;
+}
+.manage-box .main .left-list .text-second ul{
+    margin: 0;
+}
+.manage-box .main .left-list .text-second a{
+    text-decoration: none;
+}
+.manage-box .main .left-list .text-second ul li{
+    list-style: none;
+    margin: 0;
+    width: 140px;
+    text-align: left;
+    text-indent: 40px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #434343;
+    border-bottom: 1px dashed #cccccc;
+}
+.manage-box .main .left-list .text-second ul .active{
+    color: #fff;
+    background-color: #3bc459;
+}
+.manage-box .main .left-list .text-second ul li:hover{
+    color: #fff;
+    background-color: #3bc459;
+}
+.manage-box .main .teacher_check_content .check-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input .check_time{
+     background: #f4f4f4;
+     width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input .choose_class{
+     background: #f4f4f4;
+     width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input input{
+    background: #f4f4f4;
+    width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input .date-input{
+    width: 130px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input .person-input{
+    width: 251px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.manage-box .main .teacher_check_content .check-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 17px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 75px;
+}
+.manage-box .main .teacher_check_content .check-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+.manage-box .main .teacher_check_content .teacher_check_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.manage-box .main .teacher_check_content .teacher_check_list table{
+    border: #efefef 1px solid;
+}
+.manage-box .main .teacher_check_content .teacher_check_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.manage-box .main .teacher_check_content .teacher_check_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.manage-box .main .teacher_check_content .teacher_check_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.manage-box .main .teacher_check_content .teacher_check_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.manage-box .main .teacher_check_content .teacher_check_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.manage-box .main .teacher_check_content .teacher_check_list .meaasge-page ul{
+    float: right;
+}
+.manage-box .main .class_check_content .class-check-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input .check_time{
+     background: #f4f4f4;
+     width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input .choose_class{
+     background: #f4f4f4;
+     width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input input{
+    background: #f4f4f4;
+    width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input .date-input{
+    width: 130px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input .person-input{
+    width: 251px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+
+.manage-box .main .class_check_content .class-check-search .message-search-input .input-button{
+    background: #f4f4f4;
+    height: 17px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 75px;
+}
+.manage-box .main .class_check_content .class-check-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+.manage-box .main .class_check_content .teacher_check_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.manage-box .main .class_check_content .teacher_check_list table{
+    border: #efefef 1px solid;
+}
+.manage-box .main .class_check_content .teacher_check_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.manage-box .main .class_check_content .teacher_check_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.manage-box .main .class_check_content .teacher_check_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.manage-box .main .class_check_content .teacher_check_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.manage-box .main .class_check_content .teacher_check_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.manage-box .main .class_check_content .teacher_check_list .meaasge-page ul{
+    float: right;
+}
+.manage-box .main .online_content .online-search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.manage-box .main .online_content .online-search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.manage-box .main .online_content .online-search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.manage-box .main .online_content .online-search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.manage-box .main .online_content .online-search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.manage-box .main .online_content .online-search .message-search-input input{
+    background: #f4f4f4;
+    width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .online_content .online-search .message-search-input .date-input{
+    width: 130px;
+}
+.manage-box .main .online_content .online-search .message-search-input .person-input{
+    width: 251px;
+}
+.manage-box .main .online_content .online-search .message-search-button{
+    width: 116px;
+    float: right;
+}
+.manage-box .main .online_content .online-search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+.manage-box .main .online_content .online_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.manage-box .main .online_content .online_list table{
+    border: #efefef 1px solid;
+}
+.manage-box .main .online_content .online_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.manage-box .main .online_content .online_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.manage-box .main .online_content .online_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.manage-box .main .online_content .online_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.manage-box .main .online_content .online_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.manage-box .main .online_content .online_list .meaasge-page ul{
+    float: right;
+}
+.manage-box .main .confirm_content .confirm_search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input .choose_class{
+     background: #f4f4f4;
+     width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input input{
+    background: #f4f4f4;
+    width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-input .date-input{
+    width: 130px;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-button{
+    width: 116px;
+    float: right;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+}
+.manage-box .main .confirm_content .confirm_search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 20px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+}
+.manage-box .main .confirm_content .confirm_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.manage-box .main .confirm_content .confirm_list table{
+    border: #efefef 1px solid;
+}
+.manage-box .main .confirm_content .confirm_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.manage-box .main .confirm_content .confirm_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.manage-box .main .confirm_content .confirm_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.manage-box .main .confirm_content .confirm_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.manage-box .main .confirm_content .confirm_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.manage-box .main .confirm_content .confirm_list .meaasge-page ul{
+    float: right;
+}
+.zone-box{
+    width: 100%;
+    background: #fafafa;
+    padding: 0 0 15px;
+}
+.zone-box .place{
+    width: 1000px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 30px;
+    color: #434343;
+}
+.zone-box .main{
+    width: 1030px;
+    margin: auto;
+}
+.zone-box .main .left-list{
+    float: left;
+    background: #fff;
+}
+.zone-box .main .left-list .text-first{
+    width: 140px;
+    text-align: left;
+    text-indent: 30px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #434343;
+    background: #cfeed7;
+}
+.zone-box .main .left-list span{
+    display: inline;
+    color: #434343;
+    font-size: 14px;
+}
+.zone-box .main .left-list .active{
+    background: #31d057;
+    color: #fff;
+}
+.zone-box .main .left-list .text-first:hover{
+    background: #31d057;
+    color: #fff;
+}
+.zone-box .main .left-list .active span{
+    display: inline;
+    color: #fff;
+    font-size: 14px;
+}
+.zone-box .main .left-list .text-second{
+    display: none;
+}
+.zone-box .main .left-list .text-second ul{
+    margin: 0;
+}
+.zone-box .main .left-list .text-second a{
+    text-decoration: none;
+}
+.zone-box .main .left-list .text-second ul li{
+    list-style: none;
+    margin: 0;
+    width: 140px;
+    text-align: left;
+    text-indent: 40px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #434343;
+    border-bottom: 1px dashed #cccccc;
+}
+.zone-box .main .left-list .text-second ul .active{
+    color: #fff;
+    background-color: #3bc459;
+}
+.zone-box .main .left-list .text-second ul li:hover{
+    color: #fff;
+    background-color: #3bc459;
+}
+.zone-box .main .zone_content .zone_search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+}
+.zone-box .main .zone_content .zone_search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.zone-box .main .zone_content .zone_search .message-search-input .choose_class{
+     background: #f4f4f4;
+     width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.zone-box .main .zone_content .zone_search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.zone-box .main .zone_content .zone_search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.zone-box .main .zone_content .zone_search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.zone-box .main .zone_content .zone_search .message-search-input input{
+    background: #f4f4f4;
+    width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.zone-box .main .zone_content .zone_search .message-search-input .date-input{
+    width: 130px;
+}
+.zone-box .main .zone_content .zone_search .message-search-button{
+    width: 116px;
+    float: right;
+}
+.zone-box .main .zone_content .zone_search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+}
+.zone-box .main .zone_content .zone_search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 20px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+}
+.zone-box .main .zone_content .dynamics_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.zone-box .main .zone_content .dynamics_list table{
+    border: #efefef 1px solid;
+}
+.zone-box .main .zone_content .dynamics_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.zone-box .main .zone_content .dynamics_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.zone-box .main .zone_content .dynamics_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.zone-box .main .zone_content .dynamics_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.zone-box .main .zone_content .dynamics_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.zone-box .main .zone_content .dynamics_list .meaasge-page ul{
+    float: right;
+}
+.work-box{
+    width: 100%;
+    background: #fafafa;
+    padding: 0 0 15px;
+}
+.work-box .place{
+    width: 1000px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 30px;
+    color: #434343;
+}
+.work-box .main{
+    width: 1030px;
+    margin: auto;
+}
+.work-box .main .left-list4{
+    float: left;
+    background: #fff;
+}
+.work-box .main .left-list4 .text-first{
+    width: 140px;
+    text-align: left;
+    text-indent: 30px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #434343;
+    background: #cfeed7;
+}
+.work-box .main .left-list4 span{
+    display: inline;
+    color: #434343;
+    font-size: 14px;
+}
+.work-box .main .left-list4 .active{
+    background: #31d057;
+    color: #fff;
+}
+.work-box .main .left-list4 .text-first:hover{
+    background: #31d057;
+    color: #fff;
+}
+.work-box .main .left-list4 .active span{
+    display: inline;
+    color: #fff;
+    font-size: 14px;
+}
+.work-box .main .left-list4 .text-second{
+    display: none;
+}
+.work-box .main .left-list4 .text-second ul{
+    margin: 0;
+}
+.work-box .main .left-list4 .text-second a{
+    text-decoration: none;
+}
+.work-box .main .left-list4 .text-second ul li{
+    list-style: none;
+    margin: 0;
+    width: 140px;
+    text-align: left;
+    text-indent: 40px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #434343;
+    border-bottom: 1px dashed #cccccc;
+}
+.work-box .main .left-list4 .text-second ul .active{
+    color: #fff;
+    background-color: #3bc459;
+}
+.work-box .main .left-list4 .text-second ul li:hover{
+    color: #fff;
+    background-color: #3bc459;
+}
+.work-box .main .teacher_content .teacher_search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+    height: 85px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input{
+    width: 855px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input .number{
+background: #f4f4f4;
+     width: 100px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input .email{
+background: #f4f4f4;
+     width: 100px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input .teacher_name{
+background: #f4f4f4;
+     width: 100px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input .subject{
+background: #f4f4f4;
+     width: 80px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input .choose_class{
+     background: #f4f4f4;
+     width: 100px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+    margin-left: 15px;
+}
+.work-box .main .teacher_content .teacher_search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.work-box .main .teacher_content .teacher_search .send_message{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+      margin-top: -20px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+   float: right;
+     margin-right: 10px;
+}
+.work-box .main .teacher_content .teacher_search .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    float: right;
+      margin-right: 10px;
+      margin-top: -20px;
+}
+.work-box .main .teacher_content .teacher_search .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 20px;
+     margin-top: -20px;
+    line-height: 17px;
+    font-size: 14px;
+     float: right;
+     margin-right: 30px;
+}
+.work-box .main .teacher_content .teacher_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.work-box .main .teacher_content .teacher_list table{
+    border: #efefef 1px solid;
+}
+.work-box .main .teacher_content .teacher_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.work-box .main .teacher_content .teacher_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.work-box .main .teacher_content .teacher_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.work-box .main .teacher_content .teacher_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.work-box .main .teacher_content .teacher_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.work-box .main .teacher_content .teacher_list .meaasge-page ul{
+    float: right;
+}
+.work-box .main .parents_content .parents_search{
+    padding: 15px;
+    background: #f4f4f4;
+    float: right;
+    line-height: 30px;
+    height: 80px;
+}
+.work-box .main .parents_content .parents_search .message-search-input{
+    width: 704px;
+    float: left;
+}
+.work-box .main .parents_content .parents_search .message-search-input .choose_class{
+     background: #f4f4f4;
+     width: 100px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .parents_content .parents_search .message-search-input img{
+    width: 22px;
+    height: 22px;
+}
+.work-box .main .parents_content .parents_search .message-search-input span{
+    font-size: 14px;
+    color: #000;
+    line-height: 19px;
+}
+.work-box .main .parents_content .parents_search .message-search-input p{
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    float: left;
+}
+.work-box .main .parents_content .parents_search .message-search-input input{
+    background: #f4f4f4;
+    width: 110px;
+    height: 24px;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+}
+.work-box .main .parents_content .parents_search .message-search-input button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin: 0 6px;
+}
+.work-box .main .parents_content .parents_search .message-search-button{
+    width: 116px;
+    float: right;
+}
+.work-box .main .parents_content .parents_search .message-search-button .search-orther-button{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: -15px;
+}
+.work-box .main .parents_content .parents_search .message-search-button .search-orther-button2{
+    background: #e5e5e5;
+    border: 1px #b6b6b6 solid;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #000;
+    margin-left: 5px;
+}
+.work-box .main .parents_content .parents_search .message-search-button .search-button{
+    background: #3bc459;
+    border: 1px #34b667 solid;
+    border-radius: 3px;
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 0 10px;
+    line-height: 17px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.work-box .main .parents_content .parents_list{
+    padding: 15px;
+    background: #fff;
+    float: right;
+}
+.work-box .main .parents_content .parents_list table{
+    border: #efefef 1px solid;
+}
+.work-box .main .parents_content .parents_list table .input-cheackbox{
+    border: #efefef 1px solid;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    margin:0;
+    background: #fff;
+}
+.work-box .main .parents_content .parents_list table thead tr td{
+    line-height: 28px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+.work-box .main .parents_content .parents_list table tr td{
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: #efefef 1px solid;
+}
+.work-box .main .parents_content .parents_list table tr td .message-icon{
+    font-size: 14px;
+    color: #959595;
+}
+.work-box .main .parents_content .parents_list .meaasge-page{
+    width: 820px;
+    height: 130px;
+}
+.work-box .main .parents_content .parents_list .meaasge-page ul{
+    float: right;
+}

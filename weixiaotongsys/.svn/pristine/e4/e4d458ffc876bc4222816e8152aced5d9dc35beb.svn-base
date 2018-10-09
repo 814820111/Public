@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/addressList1.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <style>
+        html{
+            background-color: #eff0f2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <div class="container" style="  background-color: #eff0f2;overflow:hidden;">
+
+        <div class="jiang" style="margin-top:40px;">
+
+        <div class="peng">
+            <foreach name="class" item="v">
+            <a  style="text-decoration: none;" href="{:U('exam_index',array('classid'=>$v['classid']))}">
+            <div class="xiala" style="background-color:white;width: 100%;height: 50px;border-width: 0 0 1px 0;border-style: solid;border-color: #eff0f2;">
+               <div style="position: relative;top: 15px;font-size: 16px;color:rgb(6,193,143);left:20px;font-weight:bold">{$v.classname}</div>
+                <img class="jiandian"  style="margin-left: 88%;width: 30px;height: 30px;position: relative;bottom: 11px;" class="jiantou" src="__TMPL__Public/images/jiantou-right.png" alt="">
+            </div>
+            </a>
+            </foreach>
+
+        </div>
+
+    </div>
+
+
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui">考试成绩
+        <div class="clearfix"></div>
+    </div>
+    </div>
+    <script>
+
+        $(".fanhui").click(function() {
+            location.href="__ROOT__/index.php/weixin/Tindex";
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<admintpl file="header" xmlns:c="http://www.w3.org/1999/XSL/Transform"/>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">广告管理</a></li>
+        <li><a href="{:U('add')}">新增广告</a></li>
+        <li class="active"><a href="{:U('change')}">修改广告</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <form  method="post" class="form-horizontal J_ajaxForm" action="{:U('change_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">广告类型</label>
+                    <div class="controls">
+                        <select name="type">
+                            <php>$type=array("0"=>"动态","1"=>"乐园","2"=>"好友足迹");</php>
+                            <if condition="$advertisement.type eq 0">
+                                <option value="0" selected="selected">{$type.0}</option>
+                                <else/>
+                                <option value="0">{$type.0}</option>
+                            </if>
+
+                            <if  condition="$advertisement.type eq 1">
+                                <option value="1" selected="selected">{$type.1}</option>
+                                <else/>
+                                <option value="1">{$type.1}</option>
+                            </if>
+
+                            <if  condition="$advertisement.type eq 2">
+                                <option value="2" selected="selected">{$type.2}</option>
+                                <else/>
+                                <option value="2">{$type.2}</option>
+                            </if>
+
+
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">排序:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="sortid" value="{$advertisement.sortid}">
+                        <span style="font-size: 10px;color: red">*越大越靠前</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">简介:</label>
+                    <div class="controls">
+                        <input type="hidden" class="input" name="id" value="{$advertisement.id}"  readOnly="true">
+                        <input type="text" class="input" name="title" value="{$advertisement.message_title}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">链接:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="url" value="{$advertisement.message_url}">
+                    </div>
+                </div>
+                <div style=""><input type='hidden' name='smeta[thumb]' id='thumb' value="{$smeta.thumb|default=''}">
+                    <label class="control-label" >图片</label>
+                    <a href='javascript:void(0);'
+                       onclick="flashupload('thumb_images', '附件上传','thumb',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','','','');return false;"
+                       style="margin-left: 20px;">
+
+                        <if condition="empty($advertisement.message_pic)">
+                            <img src="__ROOT__/statics/images/icon/upload-pic.png" id='thumb_preview' width='135'
+                                 height='113' style='cursor:hand'/>
+                            <else/>
+                            <php>$photourl=sp_get_asset_upload_path($advertisement["message_pic"]);</php>
+                            <img src="{$photourl}" id='thumb_preview' width='135' height='113'
+                                 style='cursor:hand'/>
+                        </if>
+
+                    </a>
+                    <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                    <input type="button" class="btn"
+                           onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;"
+                           value="取消图片">
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+</body>
+</html>

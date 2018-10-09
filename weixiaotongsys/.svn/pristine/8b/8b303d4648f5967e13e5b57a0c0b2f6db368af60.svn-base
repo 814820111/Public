@@ -1,0 +1,70 @@
+<teachertpl file="header"/>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 210px; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+.table  tr th{
+
+    text-align:right;
+    font-weight: normal;
+    font-size: 14px;
+
+}
+</style>
+</head>
+<body class="J_scroll_fixed">
+
+<div class="wrap J_check_wrap">
+  <ul class="nav-tabs" style=" margin-top:30px; height:28px; list-style:none; margin-left: 0;">
+     <li><a href="{:U('SlideSetting')}">幻灯片设置</a></li>
+     <li class="active"><a href="#"  target="_self">新增背景音乐</a></li>
+  </ul>
+    <form name="myform" id="myform" action="{:u('add_Slide_post')}" method="post" class="form-horizontal J_ajaxForms"
+          enctype="multipart/form-data">
+
+        <input type="hidden" id="count" name ="maxcount" value="{$count}">
+        <div class="col-auto">
+            <div class="table_full">
+                <table class="table table-bordered">
+
+
+                    <!--上传start-->
+                    <div class="form-group" style=" margin-bottom:10px; margin-top:20px; margin-left:0px;">
+                        <lable> <span style="margin-left: 100px;color: red;">还可以添加{$count}张幻灯片</span></lable>
+                        <label class="col-sm-2" style=" margin-top:3px; padding-left:8%;padding-right:0; width:125px; margin-left: 37px"><div style="width: 100px; display: inline-block;"><span>上传幻灯片：</span></div> </label>
+                        <div  style=" width: 543px; margin-left: 175px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+                            <div style=" width: 300px;">
+                                <a id="pic" style="  " href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'mp3|mp4,4,,,4','','&max_count=3','');return false;">
+
+                                    <img src='__ROOT__/statics/images/icon/upload-pic.png'  id='thumb2_preview' width='80' height='60' style='cursor:hand' />
+                                </a>
+                                <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                                <input type="button" class="btn" onclick="$('#thumb2_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#pic').find('img').remove(); $('#pic').append('<img src=__ROOT__/statics/images/icon/upload-pic.png id=thumb2_preview width=80 height=60 style=cursor:hand />'); $('#thumb2').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--上传end-->
+                    <!--发送模式start-->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary btn_submit J_ajax_submit_btn" type="submit">提交</button>
+            <a class="btn" href="{:U('index')}">返回</a>
+        </div>
+        <div style="height: 100px"></div>
+    </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<!--<script type="text/javascript" src="__ROOT__/statics/js/content_addtop_self.js"></script>-->
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

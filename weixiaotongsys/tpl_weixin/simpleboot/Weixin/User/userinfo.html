@@ -1,0 +1,73 @@
+<admintpl file="header"/>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('User/userinfo')}">修改信息</a></li>
+     <li><a href="{:U('User/password')}">修改密码</a></li>
+  </ul>
+  <div class="common-form">
+    <form class="form-horizontal J_ajaxForm" method="post" action="{:U('User/userinfo_post')}">
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="input01">昵称:</label>
+            <div class="controls">
+              <input type="hidden" class="input" name="id" value="{$id}">
+              <input type="text" name="nickname" value="{$nickname}">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="input01">性别:</label>
+            <div class="controls">
+              <select name="sex">
+              	<php>$sexs=array("0"=>"女","1"=>"男");</php>
+              	<foreach name="sexs" item="vo">
+					<php>$sexselected=$key==$sex?"selected":"";</php>
+					<option value="{$key}" {$sexselected}>{$vo}</option>
+				</foreach>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+				<label class="control-label" for="input-birthday">生日</label>
+				<div class="controls">
+					<input class="J_date" type="text" id="input-birthday" placeholder="2013-01-04" name="birthday" value="{$birthday|date="Y-m-d",###}">
+				</div>
+			</div>
+			<!-- <div class="control-group">
+				<label class="control-label" for="input-user_url">个人网址</label>
+				<div class="controls">
+					<input type="text" id="input-user_url" placeholder="http://thinkcmf.com" name="user_url" value="{$user_url}">
+				</div>
+			</div> -->
+			<div class="control-group">
+				<label class="control-label" for="input-signature">个性签名</label>
+				<div class="controls">
+					<textarea id="input-signature" placeholder="个性签名" name="signature" style="resize: none;">{$signature}</textarea>
+				</div>
+			</div>
+      <div  style=""><input type='hidden' name='smeta[thumb]' id='thumb' value="{$smeta.thumb|default=''}">
+      <label class="control-label" for="input-signature">头像</label>
+      <a href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','','','');return false;" style="margin-left: 20px;">
+      
+      <if condition="empty($photo)">
+        <img src="__ROOT__/statics/images/icon/upload-pic.png" id='thumb_preview' width='135' height='113' style='cursor:hand' />
+      <else/>
+        <img src="{:sp_get_asset_upload_path($photo)}" id='thumb_preview' width='135' height='113' style='cursor:hand' />
+      </if>
+      
+      </a>
+      <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+            <input type="button"  class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片">
+            </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">更新</button>
+          </div>
+        </fieldset>
+      </form>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<admintpl file="footer"/>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">教师信息管理</a></li>
+        <li class="active"><a href="{:U('add')}">添加教师</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('add_post')}">
+            <fieldset>
+               <div class="control-group">
+                    <label class="control-label">所属学校:</label>
+                    <div class="controls">
+                        <select id="school" name="school" class="normal_select">
+                            <OPTION value="0">请选择学校</OPTION> 
+                            <volist name="schools" id="school">
+                            <OPTION value="{$school.schoolid}">{$school.school_name}</OPTION> 
+                            </volist>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所属班级:</label>
+                    <div class="controls">
+                        <select id="school" name="cl" class="normal_select">
+                            <OPTION value="0">请选择班级</OPTION> 
+                            <foreach name="class" item="vo">
+                                 <OPTION value="{$vo.id}">{$vo.classname}</OPTION> 
+                            </foreach>    
+                        </select>
+                    </div>
+                </div>
+               <div class="control-group">
+                    <label class="control-label">所属科室:</label>
+                    <div class="controls">
+                        <select id="school" name="dep" class="normal_select">
+                            <OPTION value="0">请选择科室</OPTION> 
+                            <foreach name="department" item="vo">
+                                 <OPTION value="{$vo.id}">{$vo.name}</OPTION> 
+                            </foreach>    
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">职务:</label>
+                    <div class="controls">
+                        <select id="school" name="du" class="normal_select">
+                            <OPTION value="0">请选择职务</OPTION> 
+                            <foreach name="duty" item="vo">
+                                 <OPTION value="{$vo.id}">{$vo.name}</OPTION> 
+                            </foreach>  
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">姓名:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="student_name" name="teacher_name" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系方式:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="student_name" name="teacher_phone" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">性别:</label>
+                    <div class="controls">
+                        <input type="radio" class="input" name="sex" value="0" checked><span>女</span>
+                        <input type="radio" class="input" name="sex" value="1"><span>男</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">用户类型:</label>
+                    <div class="controls">
+                        <input type="radio" name="user_type" value="0" checked="checked"><span>教师</span>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+                <!--<a class="btn" href="__URL__/schoollist">清除</a>-->
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+        $(function() {
+        $("#school").change(function() {
+            $("#class").empty();
+            $.getJSON("__ROOT__/index.php?g=apps&m=school&a=getclasslist&schoolid="+$("#school").val(),{},function(data){
+                if(data.status=="success"){
+                for(var key in data.data){
+                    $("#class").append("<option value="+data.data[key]["id"]+">"+data.data[key]["name"]+"</option>");
+                }
+                }
+                if(data.status=="error"){
+                    $("#class").append("<option value='0'>没有班级</option>");
+                }
+            }); 
+            });
+        });
+</script>
+</body>
+</html>

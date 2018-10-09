@@ -1,0 +1,568 @@
+<admintpl file="header"/>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 210px; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+.table  tr th{
+
+    text-align:right;
+    font-weight: normal;
+    font-size: 14px;
+
+}
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav-tabs" style=" margin-top:30px; height:28px; list-style:none; margin-left: 0;">
+     <li><a href="{:U('index')}">文章列表</a></li>
+     <li class="active"><a href="{:U('add')}"  target="_self">添加文章</a></li>
+  </ul>
+    <form name="myform" id="myform" action="{:u('add_post')}" method="POST" class="form-horizontal J_ajaxForms" enctype="multipart/form-data">
+
+
+
+        <!--<div class="col-right">-->
+            <!--<div class="table_full">-->
+                <!--<table class="table table-bordered">-->
+                    <!--<tr>-->
+                        <!--<td><b>缩略图</b></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<div style="text-align: center;"><input type='hidden' name='smeta[thumb]' id='thumb' value="{$smeta['thumb']|default=''}">-->
+                                <!--<a href='javascript:void(0);'-->
+                                   <!--onclick="flashupload('thumb_images', '附件上传','thumb',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','','','');return false;">-->
+                                    <!--<img src="__ROOT__/statics/images/icon/upload-pic.png" id='thumb_preview'-->
+                                             <!--width='135' height='113' style='cursor:hand'/>-->
+
+                                <!--</a>-->
+                                <!--&lt;!&ndash; <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  &ndash;&gt;-->
+                                <!--<input type="button" class="btn"-->
+                                       <!--onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;"-->
+                                       <!--value="取消图片">-->
+                            <!--</div>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td><b>发布时间</b></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td><input type="text" name="post[post_modified]" id="updatetime"-->
+                                   <!--value="{$notice['post']['post_date']}" size="21" class="input length_3 J_datetime"-->
+                                   <!--style="width: 160px;"></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td><b>状态</b></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<span class="switch_list cc">-->
+                            <!--<label class="radio"><input type="radio" name="post[post_status]" value="1" checked><span>审核通过</span></label>-->
+                            <!--<label class="radio"><input type="radio" name="post[post_status]" value="0" ><span>待审核</span></label>-->
+                            <!--</span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="col-auto">
+            <div class="table_full">
+                <table class="table table-bordered">
+
+                    <tr>
+                        <th width="80">栏目</th>
+                        <td>
+                            省份:
+                            <select  class="province"  name="province" id="province" style="width: 105px;">
+                                <option value="">
+
+                                    省级选择&nbsp;
+                                    &nbsp;
+                                </option>
+                                <foreach name="Province" item="vo">
+                                    <php>$pro=$province==$vo['term_id']?"selected":"";</php>
+                                    <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+                                </foreach>
+                            </select>
+                            <input type="hidden" class="new_citys" value="{$new_citys}">
+                            市级:
+                            <select class="select_1" name="citys" id="citys" style="width: 105px;">
+                                <option value="">选择市级</option>
+                            </select>
+                            <input type="hidden" class="new_message_type" value="{$new_message_type}">
+                            区级:
+                            <select class="select_3" name="message_type" id="message_type" style="width: 105px;">
+                                <option value="0">选择区域</option>
+                            </select>
+                            学校：
+                            <select data-placeholder="输入关键字。。。" name="schoolid" id="viewOLanguage" class="chzn-select"  tabindex="2" >
+                                <option value="">请选择学校</option>
+                            </select>
+                            <input type="hidden" class="type_school" value="{$schoolid}">
+                            栏目:
+                            <select  class="column" required name="columnid" style="width: 105px;">
+                                <option value="0">全部</option>
+                            </select>
+                            <input type="hidden" class="columnid" value="{$columnid}">
+                            <!--<select id="school" name="column" class="normal_select" style="max-height: 100px;">-->
+                                <!--<OPTION value="">请选择</OPTION>-->
+                                <!--<foreach name="column" item="vo">-->
+                                    <!--<OPTION value="{$vo.id}">{$vo.name}</OPTION>-->
+                                <!--</foreach>-->
+                            <!--</select>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="80">标题</th>
+                        <td>
+                            <input type="hidden" name="notice_id" value="">
+                            <input type="text" style="width:400px;" name="post[post_title]" id="title" required
+                                   value="" class="input input_hd J_title_color" placeholder="请输入标题"
+                                   onkeyup="strlen_verify(this, 'title_len', 160)"/>
+                            <span class="must_red">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th width="80">摘要</th>
+                        <td><textarea name='post[post_excerpt]' id='description' required style='width:98%;height:50px;'
+                                      placeholder='请填写摘要'></textarea><span
+                                class="must_red">*</span></td>
+                    </tr>
+                    <tr>
+                        <th width="80">缩略图</th>
+                        <td>
+                            <div style="text-align: left;"><input type='hidden' name='smeta[thumb]' id='thumb' value="{$smeta['thumb']|default=''}">
+                                <a href='javascript:void(0);'
+                                   onclick="flashupload_self('thumb_images', '附件上传','thumb',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','','','');return false;">
+                                    <img src="__ROOT__/statics/images/icon/upload-pic.png" id='thumb_preview'
+                                         width='135' height='113' style='cursor:hand'/>
+
+                                </a>
+                                <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                                <input type="button" class="btn"
+                                       onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;"
+                                       value="取消图片">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="80">状态</th>
+                        <td>
+                            <label class="radio"><input type="radio" name="post[post_status]" value="1" checked><span>审核通过</span></label>
+                            <label class="radio"><input type="radio" name="post[post_status]" value="0" ><span>待审核</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="80">内容</th>
+                        <td>
+                            <div id='content_tip'></div>
+                            <script type="text/plain" id="content" name="post[post_content]">
+                            </script>
+                            <script type="text/javascript">
+                                //编辑器路径定义
+                                var editorURL = GV.DIMAUB;
+                            </script>
+                            <script type="text/javascript" src="__ROOT__/statics/js/ueditor/ueditor.config.js"></script>
+                            <script type="text/javascript"
+                                    src="__ROOT__/statics/js/ueditor/ueditor.all.min.js"></script>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-actions" style="margin-bottom: 100px;">
+            <button class="btn btn-primary btn_submit J_ajax_submit_btn" type="submit">提交</button>
+            <a class="btn" href="{:U('index')}">返回</a>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop_self.js"></script>
+<script type="text/javascript">
+    if($("#province").val())
+    {
+        var new_citys = $('body').find(".new_citys").val();
+
+        var new_message_type = $('body').find('.new_message_type').val();
+
+
+        // console.log(type);
+
+        var type_school = $('body').find(".type_school").val();
+
+        if(new_citys)
+        {
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+                    $("#citys").empty();
+                    $("#citys").append("<option value=>"+"请选择市级"+"</option>");
+                    for(var key in data.data){
+
+                        if(new_citys==data.data[key]["term_id"]){
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+ " selected >"+data.data[key]["name"]+"</option>");
+
+                        }else{
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                        }
+                    }
+                    $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                        // console.log(data);
+                        if(data.status=="success"){
+                            $("#message_type").empty();
+
+                            for(var key in data.data){
+                                if(new_message_type == data.data[key]["term_id"]){
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" selected >"+data.data[key]["name"]+"</option>");
+                                }else{
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" >"+data.data[key]["name"]+"</option>");
+                                }
+
+                            }
+                            var type = $(".select_3  option:selected").val();
+
+                            $.ajax({
+                                type: "post",
+                                url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+                                async: true,
+                                data: {
+                                    type: type
+                                },
+                                dataType: 'json',
+                                success: function(res) {
+                                    // $(".Sio").text("")
+                                    $("#viewOLanguage").empty();
+                                    var html = "";
+                                    res = eval(res.data);
+
+                                    console.log(res);
+                                    for(var i = 0; i < res.length; i++) {
+                                        var school_name = res[i].school_name; //学校的名字
+                                        var schoolid = res[i].schoolid; //学校的ID
+
+                                        // alert('aa');
+                                        // alert(type_school);
+                                        if(schoolid == type_school){
+                                            // html += '<option class="Sio" value="' + schoolid + ' " selected>' + school_name + ' </option> '
+                                            $("#viewOLanguage").append("<option value="+schoolid+" selected >"+school_name+"</option>");
+                                        }else{
+                                            $("#viewOLanguage").append("<option value="+schoolid+" >"+school_name+"</option>");
+                                        }
+                                    }
+                                    $(".chzn-select").append(html)
+                                    $("#viewOLanguage").chosen();
+                                    $("#viewOLanguage").trigger("liszt:updated");
+                                },
+                                error: function() {
+                                    console.log('系统错误,请稍后重试');
+                                }
+                            });
+
+
+
+                        }
+                        if(data.status=="error"){
+                            $("#message_type").append("<option value='0'>没有区域</option>");
+                        }
+                    });
+
+
+
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+        }
+
+
+    }
+
+
+
+
+    //选择市级的下拉的ajax
+    $(function() {
+        $("#province").change(function(){
+
+
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                $("#citys").empty()
+                $("#message_type").html("<option value=0>"+"请选择区域"+"</option>");
+                $(".chzn-select").html("<option value=0>"+"请选择学校"+"</option>");
+                if(data.status=="success"){
+
+                    $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                    for(var key in data.data){
+                        $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+
+        })
+    });
+
+    $(function() {
+        $("#citys").change(function() {
+            console.log($("#citys").val())
+            $("#message_type").empty();
+            // $("#student").empty();
+
+            $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+
+                    // $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                    for(var key in data.data){
+                        $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#message_type").append("<option value='0'>暂无区域</option>");
+                }
+            });
+        });
+    });
+    $(".select_3").change(function() {
+        var type = $(".select_3  option:selected").val();
+
+        $.ajax({
+            type: "post",
+            url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+            async: true,
+            data: {
+                type: type
+            },
+            dataType: 'json',
+            success: function(res) {
+                $(".chzn-select").html("")
+                var html = "";
+                html += '<option  value="">请选择学校</option> '
+                res = eval(res.data);
+                for(var i = 0; i < res.length; i++) {
+                    var school_name = res[i].school_name; //学校的名字
+                    var schoolid = res[i].schoolid; //学校的ID
+                    html += '<option class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+                }
+                $(".chzn-select").html(html)
+                $("#viewOLanguage").chosen();
+                $("#viewOLanguage").trigger("liszt:updated");
+            },
+            error: function() {
+                console.log('系统错误,请稍后重试');
+            }
+        });
+    })
+    $("document").ready(function() {
+        var schoolid = $(".type_school").val();
+        var columnid = $(".columnid").val();
+        //alert(schoolid);
+        if(schoolid>0){
+            $.ajax({
+                type:"post",
+                url: '{:U("get_column")}',
+                async:true,
+                data:{
+                    schoolid:schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    html+='<option  value="0">请选择</option> ';
+                    console.log(res);
+                    res = eval(res.data);
+                    for(var i = 0; i < res.length; i++) {
+                        var name=res[i].name;//栏目
+                        var id=res[i].id;//栏目的ID
+                        if(id==columnid){
+                            html+='<option selected value="'+id+'">'+name+' </option> '
+                        }else{
+                            html+='<option value="'+id+'">'+name+' </option> '
+                        }
+
+                    }
+                    $(".column").html(html);
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+        }
+    })
+    $(".chzn-select").change(function(){
+        var schoolid = $(".chzn-select  option:selected").val();
+        if(schoolid>0){
+            $.ajax({
+                type:"post",
+                url: '{:U("get_column")}',
+                async:true,
+                data:{
+                    schoolid:schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    html+='<option  value="0">请选择</option> ';
+                    console.log(res);
+                    res = eval(res.data);
+                    for(var i = 0; i < res.length; i++) {
+                        var name=res[i].name;//栏目
+                        var id=res[i].id;//栏目的ID
+                        html+='<option value="'+id+'">'+name+' </option> '
+                    }
+                    $(".column").html(html);
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+        }
+
+    })
+$(function () {
+	//setInterval(function(){public_lock_renewal();}, 10000);
+	$(".J_ajax_close_btn").on('click', function (e) {
+	    e.preventDefault();
+	    Wind.use("artDialog", function () {
+	        art.dialog({
+	            id: "question",
+	            icon: "question",
+	            fixed: true,
+	            lock: true,
+	            background: "#CCCCCC",
+	            opacity: 0,
+	            content: "您确定需要关闭当前页面嘛？",
+	            ok:function(){
+					setCookie("refersh_time",1);
+					window.close();
+					return true;
+				}
+	        });
+	    });
+	});
+	/////---------------------
+	 Wind.use('validate', 'ajaxForm', 'artDialog', function () {
+			//javascript
+	        
+	            //编辑器
+	            editorcontent = new baidu.editor.ui.Editor();
+	            editorcontent.render( 'content' );
+	            try{editorcontent.sync();}catch(err){};
+	            //增加编辑器验证规则
+	            jQuery.validator.addMethod('editorcontent',function(){
+	                try{editorcontent.sync();}catch(err){};
+	                return editorcontent.hasContents();
+	            });
+	            var form = $('form.J_ajaxForms');
+	        //ie处理placeholder提交问题
+	        if ($.browser.msie) {
+	            form.find('[placeholder]').each(function () {
+	                var input = $(this);
+	                if (input.val() == input.attr('placeholder')) {
+	                    input.val('');
+	                }
+	            });
+	        }
+	        //表单验证开始
+	        form.validate({
+				//是否在获取焦点时验证
+				onfocusout:false,
+				//是否在敲击键盘时验证
+				onkeyup:false,
+				//当鼠标掉级时验证
+				onclick: false,
+	            //验证错误
+	            showErrors: function (errorMap, errorArr) {
+					//errorMap {'name':'错误信息'}
+					//errorArr [{'message':'错误信息',element:({})}]
+					try{
+						$(errorArr[0].element).focus();
+						art.dialog({
+							id:'error',
+							icon: 'error',
+							lock: true,
+							fixed: true,
+							background:"#CCCCCC",
+							opacity:0,
+							content: errorArr[0].message,
+							cancelVal: '确定',
+							cancel: function(){
+								$(errorArr[0].element).focus();
+							}
+						});
+					}catch(err){
+					}
+	            },
+	            //验证规则
+	            rules: {'post[post_title]':{required:1},'post[post_content]':{editorcontent:true}},
+	            //验证未通过提示消息
+	            messages: {'post[post_title]':{required:'请输入标题'},'post[post_content]':{editorcontent:'内容不能为空'}},
+	            //给未通过验证的元素加效果,闪烁等
+	            highlight: false,
+	            //是否在获取焦点时验证
+	            onfocusout: false,
+	            //验证通过，提交表单
+	            submitHandler: function (forms) {
+	                $(forms).ajaxSubmit({
+	                    url: form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+	                    dataType: 'json',
+	                    beforeSubmit: function (arr, $form, options) {
+	                        
+	                    },
+	                    success: function (data, statusText, xhr, $form) {
+	                        if(data.status){
+								setCookie("refersh_time",1);
+								//添加成功
+								Wind.use("artDialog", function () {
+								    art.dialog({
+								        id: "succeed",
+								        icon: "succeed",
+								        fixed: true,
+								        lock: true,
+								        background: "#CCCCCC",
+								        opacity: 0,
+								        content: data.info,
+										button:[
+											{
+												name: '继续添加？',
+												callback:function(){
+													reloadPage(window);
+													return true;
+												},
+												focus: true
+											},{
+												name: '返回列表页',
+												callback:function(){
+													location="{:U('index')}";
+													return true;
+												}
+											}
+										]
+								    });
+								});
+							}else{
+								isalert(data.info);
+							}
+	                    }
+	                });
+	            }
+	        });
+	    });
+	////-------------------------
+});
+</script>
+</body>
+</html>

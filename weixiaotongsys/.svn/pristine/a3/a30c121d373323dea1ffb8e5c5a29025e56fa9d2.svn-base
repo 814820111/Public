@@ -1,0 +1,729 @@
+[ 2018-09-18T10:11:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:11:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:11:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:11:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:11:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:11:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:11:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/card_save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0070s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+SQL: SHOW COLUMNS FROM `wxt_duty` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0080s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `cardNo` = '1022352368' AND `schoolid` = 7 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '150' AND `cardType` = 1 AND `handletype` = 1  [ RunTime:0.0030s ]
+SQL: INSERT INTO `wxt_student_card` (`personId`,`cardNo`,`schoolid`,`create_time`,`handletime`,`handletimeint`,`handletype`,`cardType`) VALUES ('150','1022352368','7','1537236713','2018-09-18 10:11:53','1537236713','1','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `wxt_teacher_info` WHERE ( id = 150 and schoolid = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '150' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_student_card` SET `handletime`='2018-09-18 10:11:53',`handletimeint`='1537236713',`handletype`='0' WHERE `personId` = '150' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 [ RunTime:0.0270s ]
+SQL: INSERT INTO `wxt_student_card` (`name`,`schoolid`,`personId`,`cardType`,`handletype`,`handletime`,`handletimeint`,`cardNo`,`create_time`) VALUES ('林大大','7','150','1','1','2018-09-18 10:11:53','1537236713','1022352368','1537236713') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-18T10:11:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:11:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:15:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/edit?teacherid=2433&rel=13022682231&newcardNo=1022352362&oldcardNo=1022352368&name=%E6%9E%97%E5%A4%A7%E5%A4%A7&email=&state=1&duty%5B0%5D%5Bdutyid%5D=80
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0160s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+SQL: SHOW COLUMNS FROM `wxt_duty` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0140s ]
+SQL: SELECT `id` FROM `wxt_teacher_info` WHERE `teacherid` = 2433 AND `schoolid` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `wxt_teacher_info` SET `name`='林大大' WHERE ( teacherid=2433 ) [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_wxtuser` SET `phone`='13022682231' WHERE ( id=2433 ) [ RunTime:0.0000s ]
+SQL: UPDATE `wxt_teacher_info` SET `email`='',`state`='1' WHERE ( teacherid = 2433 ) [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0140s ]
+SQL: DELETE FROM `wxt_department_teacher` WHERE `teacher_id` = 150 AND `school_id` = 7 [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherInfoController.class.php 第 1133 行.
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0130s ]
+SQL: DELETE FROM `wxt_duty_teacher` WHERE `schoolid` = 7 AND `teacher_id` = 2433 [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_duty_teacher` (`schoolid`,`duty_id`,`teacher_id`) VALUES ('7','80','2433') [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `wxt_teacher_info` WHERE ( teacherid = 2433 and schoolid = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_card` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '150' AND `cardType` = 1 AND `handletype` = 1  [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_student_card` SET `handletype`='0',`handletimeint`='1537236917' WHERE `personId` = '150' AND `cardType` = 1 AND `handletype` = 1 [ RunTime:0.0270s ]
+SQL: INSERT INTO `wxt_student_card` (`personId`,`cardNo`,`schoolid`,`handletimeint`,`handletype`,`cardType`) VALUES ('150','1022352362','7','1537236917','1','1') [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `wxt_teacher_info` WHERE ( id = 150 and schoolid = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_student_card` WHERE `personId` = '150' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `wxt_student_card` SET `handletime`='2018-09-18 10:15:17',`handletimeint`='1537236917',`handletype`='0' WHERE `personId` = '150' AND `schoolid` = 7 AND `cardType` = 1 AND `handletype` = 1 [ RunTime:0.0270s ]
+SQL: INSERT INTO `wxt_student_card` (`name`,`schoolid`,`personId`,`cardType`,`handletype`,`handletime`,`handletimeint`,`cardNo`,`create_time`) VALUES ('林大大','7','150','1','1','2018-09-18 10:15:17','1537236917','1022352362','1537236917') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-18T10:15:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:15:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:15:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:15:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0010s ]
+
+[ 2018-09-18T10:18:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:18:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:20:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:20:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0010s ]
+
+[ 2018-09-18T10:24:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:24:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:24:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:24:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:24:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:24:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:24:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:24:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0170s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0010s ]
+
+[ 2018-09-18T10:24:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:24:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0010s ]
+
+[ 2018-09-18T10:25:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:25:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:25:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:25:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0120s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:26:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:26:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0120s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:26:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0140s ]
+SQL: SELECT a.rule_name FROM wxt_school_duty d INNER JOIN wxt_duty_teacher as dt on d.id=dt.duty_id INNER JOIN wxt_school_authaccess as a on d.id=a.role_id  WHERE dt.schoolid = '13' AND dt.teacher_id = '2433' AND a.type = 'teacher_url' ORDER BY d.level ASC  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+SQL: SHOW COLUMNS FROM `wxt_duty` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: rstss D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherInfoController.class.php 第 1051 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-18T10:26:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:26:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T10:26:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_duty` [ RunTime:0.0140s ]
+SQL: SELECT a.rule_name FROM wxt_school_duty d INNER JOIN wxt_duty_teacher as dt on d.id=dt.duty_id INNER JOIN wxt_school_authaccess as a on d.id=a.role_id  WHERE dt.schoolid = '13' AND dt.teacher_id = '2433' AND a.type = 'teacher_url' ORDER BY d.level ASC  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `wxt_wxtuser` WHERE `id` = 2433 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+SQL: SHOW COLUMNS FROM `wxt_class_relationship` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+SQL: SHOW COLUMNS FROM `wxt_teacher_class` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+SQL: SHOW COLUMNS FROM `wxt_department` [ RunTime:0.0090s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+SQL: SHOW COLUMNS FROM `wxt_duty` [ RunTime:0.0160s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0140s ]
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+SQL: SHOW COLUMNS FROM `wxt_department_teacher` [ RunTime:0.0130s ]
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+SQL: SHOW COLUMNS FROM `wxt_city` [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: rstss D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherInfoController.class.php 第 1051 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-09-18T10:26:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:26:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:27:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:27:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:27:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/delete?teacherid=2433&info_id=709&button_level=1
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:27:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:27:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+SQL: SELECT class.id,class.classname FROM wxt_school_class class INNER JOIN wxt_teacher_class teacher ON class.id=teacher.classid  WHERE class.schoolid = '13' AND class.grade = '0' AND teacher.schoolid = '13' AND teacher.teacherid = '2433'  [ RunTime:0.0010s ]
+
+[ 2018-09-18T10:28:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:28:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:28:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:28:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T10:28:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:28:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0010s ]
+
+[ 2018-09-18T10:28:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T10:28:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+
+[ 2018-09-18T15:51:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/index
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T15:51:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/datetime.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T15:51:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T15:51:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/Main/js/fileinput_locale_zh.js
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ScheduleModel
+NOTIC: D方法实例化没找到模型类Common\Model\EntrustModel
+NOTIC: D方法实例化没找到模型类Common\Model\NoticeModel
+NOTIC: D方法实例化没找到模型类Common\Model\UserMessageModel
+NOTIC: D方法实例化没找到模型类Common\Model\ActivityModel
+NOTIC: D方法实例化没找到模型类Common\Model\MicroblogMainModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolCoursewareModel
+
+[ 2018-09-18T15:51:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Teacher/TeacherInfo/index/menuid/310
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\ClassRelationshipModel
+NOTIC: D方法实例化没找到模型类Common\Model\TeacherClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyModel
+NOTIC: D方法实例化没找到模型类Common\Model\DutyTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\DepartmentTeacherModel
+NOTIC: D方法实例化没找到模型类Common\Model\CityModel
+
+[ 2018-09-18T15:51:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: join D:\phpStudy\WWW\weixiaotong2016\application\Teacher\Controller\TeacherUtilsController.class.php 第 42 行.
+SQL: SELECT class.id,class.classname FROM wxt_school_class class WHERE class.schoolid = '7' AND class.grade = '0'  [ RunTime:0.0000s ]
+

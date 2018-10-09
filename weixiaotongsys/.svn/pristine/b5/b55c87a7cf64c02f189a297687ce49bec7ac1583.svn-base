@@ -1,0 +1,63 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+	<div class="wrap J_check_wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('index')}">评语内容</a></li>
+			<li><a href="{:U('add',array('rid'=>$remarksid))}">添加评语内容</a></li>
+			<li><a href="{:U('export')}">导入评语内容</a></li>
+			<li><a href="{:U('remarks_list')}">栏目内容</a></li>
+		</ul>
+
+		<form class="well form-search" id="mainform"
+			action="{:U('index')}" method="post">
+			<select id="navcid_select" name="rid" class="normal_select">
+				{$remark}
+			</select>
+		</form>
+		<form class="J_ajaxForm" action="{:U('nav/listorders')}" method="post">
+			<div class="table-actions">
+				<button type="submit" class="btn btn-primary btn-small btn_submit J_ajax_submit_btn">排序</button>
+			</div>
+			<table class="table table-hover table-bordered table-list" id="menus-table">
+				<thead>
+
+						<th width="50">ID</th>
+
+						<th>评语内容</th>
+						<th width="80">是否为自建</th>
+						<th width="80">创建时间</th>
+						<th width="150">管理操作</th>
+					</tr>
+				</thead>
+				<foreach name="remarks_detail" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.contents}</td>
+						<td>
+							<if condition="$vo['isdefault'] eq 0">
+								不是
+								<else/>
+								是
+							</if>
+						</td>
+						<td><php>echo date('Y-m-d H:i:s',$vo['create_time']);</php></td>
+						<td><a  href="{:U('edit',array('id'=>$vo['id'],'rid'=>$vo['rid']))}">修改</a> | <a class="J_ajax_del" href="{:U('delete',array('id'=>$vo['id'],'rid'=>$vo['rid']))}">删除</a></td>
+					</tr>
+				</foreach>
+
+			</table>
+
+		</form>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script>
+		$(function() {
+
+			$("#navcid_select").change(function() {
+				$("#mainform").submit();
+			});
+
+		});
+	</script>
+</body>
+</html>

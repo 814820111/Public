@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; font-family:"微软雅黑";}
+a:hover{ text-decoration:none;}
+li{ list-style:none;}
+clearfix{ clear:both;}
+/*导航*/
+.nav{ width:65%;; margin-left:auto; margin-right:auto;height:65px;position:relative; overflow:hidden;min-width:1000px;}
+/*.nav ul{ position:absolute; right:80px;}*/
+.nav img{ margin-top:3px;float:left; margin-right:15%;}
+.nav p{ position:absolute; right:0; top:0; color:#929292;}
+.nav ul li{ float:left; padding:0 2%; line-height:65px;font-size:18px;}
+.nav ul a{ color:#000; padding-bottom:12px;}
+.nav ul li:hover a{border-bottom:#06c18e 10px solid;}
+/*背景图1*/
+.bannerone{ border-top:3px solid #06c18e;min-width:1000px;}
+.bannerone img{  width:100%;min-width:1000px;}
+/*列表*/
+.liebiao{ width:55%; margin:0 auto; min-width:1000px;}
+.liebiao ul{ display:inline-block; margin:40px 0px; width:33%;}
+.liebiao ul li{ line-height:35px;} 
+.liebiao li a{ color:#000;}
+/*背景图2*/
+.bannertwo{ min-width:1000px;}
+.bannertwo img{ width:100%; min-width:1000px;}
+.bannertwo .one{ color:#06c18e; font-size:24px; text-align:center; padding-top:20px;}
+.bannertwo .two{ color:#06c18e; font-size:16px; text-align:center;}
+/*图片3*/
+.bannerthree{ min-width:1000px; position:relative;}
+.bannerthree img{ width:100%; min-width:1000px;}
+.bannerthree .wenzi{ background-color:#FFF; width:400px; font-size:16px; border-radius:20px; line-height:30px; position:absolute; top:20%; left:50%; margin-left:-200px;}
+@media (min-width:200px) and (max-width:1300px) {.bannerthree .wenzi{font-size:12px; line-height:20px;}}
+@media (min-width:1301px) and (max-width:1920px){.bannerthree .wenzi{font-size:16px;}}
+.bannerthree .center{ width:90%; margin:0 auto;}
+.center h4{ text-align:center; font-weight:bold; color:#06c18e; padding-top:15px;}
+/*页脚*/
+.footer{ background-color:#000000; text-align:center; line-height:18px;min-width:1000px;}
+.footer p{ font-size:12px; padding:5px 0; color:#666;}

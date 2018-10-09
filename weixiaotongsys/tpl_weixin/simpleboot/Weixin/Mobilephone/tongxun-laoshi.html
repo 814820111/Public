@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__public/css/addressList2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery.js"></script>
+    <script>
+        function a() {
+            var w, w2;
+            w = $(".rightp").height();
+            // alert(w);
+            $(".rightp span").css.line - height(w);
+        }
+    </script>
+    <style>
+        .right .pengxiao {
+            font-weight: normal;
+            margin-left: 10px;
+        }
+        .classify{
+            margin-top: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top_box">
+        <img src="__TMPL__public/images/img674.png" class="fanhui" style="cursor: pointer;"> 通讯录
+        <div class="clearfix"></div>
+    </div>
+    <div class="container" style=" overflow:hidden;margin-top: 40px;">
+
+        <div class="one">
+            <div class="classify">
+                <div class="teacher" style="font-weight: normal;">老师</div>
+                <a href="{:U('Mobilephone/Parent')}">
+                    <div class="parent" style="font-weight: normal;">家长</div>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="fenge"></div>
+        </div>
+        <input type="hidden" value={$studentid} id="studentid">
+        <input type="hidden" value={$schoolid} id="schoolid">
+        <!--<div class="peng">
+				<div class="left">
+					<img src="__TMPL__public/images/img01a.png" alt="">
+				</div>
+				<div class="right">
+					<div class="pengxiao">彭老师
+						<span class="phone">13573519005</span>
+					</div>
+					<a href="tel:18875891395"><img src="__TMPL__public/images/dianhua.png" alt=""></a>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>-->
+
+    </div>
+
+    <script>
+        $("document").ready(function() {
+            var studentid = $("#studentid").val();
+            var schoolid = $("#schoolid").val();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=getstudentclasslistandteacherlist',
+                async: true,
+                data: {
+                    studentid: studentid,
+                    schoolid: schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data)[0].teacherlist;
+                    for (var i = 0; i < res.length; i++) {
+                        //老师的号码
+                        phone = res[i].phone;
+                        //老师的名字
+                        name = res[i].name;
+                        //老师的头像照片
+                        photo = res[i].photo;
+                        if (phone) {
+                            html += '<div class="peng">'
+                            html += '<div class="left">'
+                            html += '<img src="{$Think.const.SR}' + photo + '" alt="" style="width: 50px;height: 50px;border-radius: 30px;">'
+                            html += '</div>'
+                            html += '<div class="right">'
+                            html += '<div class="pengxiao">'+ name +''
+                            html += '<span class="phone">' + phone + '</span>'
+                            html += '</div>'
+                            html += '<a href="tel:' + phone + '"><img src="__TMPL__public/images/dianhua.png" alt=""></a>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                        }
+
+                    }
+                    $(".container").append(html);
+                },
+                error: function() {
+
+                    alert('系统错误,请稍后重试');
+                }
+            });
+
+        })
+        $(".dian").eq(0).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: 0
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+        $(".dian").eq(1).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: -g
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+
+        y = $(".container").width()
+        $(".huitiao2").width(y)
+        $(".footer").width(y)
+        b = $(".tubiao li").width()
+        $(".tubiao li img").width(b * 1.5)
+        $(".tubiao li img").height(b * 1.5)
+        $(".tubiao2 li img").width(b * 1.5)
+        $(".tubiao2 li img").height(b * 1.5)
+        c = $(".dian").width()
+        $(".dian").height(c)
+        d = $(".tixing img").width()
+        $(".tixing img").height(d)
+        e = $(".top .you").width()
+        $(".top .you").height(e)
+        f = $(".biaoti li img").width()
+        $(".biaoti li img").height(f)
+        g = $(".container").width()
+        $(".lun").width(g * 2)
+        k = $(".one ul li img").width()
+        $(".one ul li img").height(k)
+
+        $(".fanhui").click(function() {
+            location.href = "{:U('Index/index')}";
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<style>
+.content{line-height:24px; font-size:16px;font-family:"微软雅黑";}
+.header{width:100%; height:60px; position:fixed;top:0; background-color:#9ce6b5;}
+.header .tubiao{ position:absolute; left:20px; top:10px;}
+.header p{ position:absolute; font-family:"微软雅黑"; left:70px; top:8px;}
+.hui{ background-color:#f2f2f2; height:80px;}
+</style>-->
+<title>APP下载</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="__TMPL__Public/css/bootstrap.min_down.css">
+<link rel="stylesheet" href="__TMPL__Public/css/css_down.css">
+<script src="__TMPL__Public/js/jquery.min.js"></script>
+<script src="__TMPL__Public/css/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <img src="__TMPL__Public/img/img01.png" class="tubiao">
+    <p style=" font-size:16px; color:#686866; font-family:'微软雅黑'"><strong style="font-size:18px; color:#080000;">智校园</strong><br>专业校园信息化安全平台</p>
+</div>
+<div class="container">
+  	<div class="content">
+    	<br>
+        <br>
+        <br>
+    	<span style=" border-bottom:5px solid #ff8f0b; color:#ff8f0b; font-size:20px;">产品介绍</span>
+        <br>
+        <br>
+		<p class="text-justify" style=" text-indent:2em">
+        “智校园”为校园行业精心打造的一款基于移动互联网家园共育平台，打造家长放心、校方省心的智慧平台。
+        </p>
+        <p class="text-justify" style=" text-indent:2em; border-bottom:1px solid #efefef; padding-bottom:15px;">
+        智校园是连接家长和校园的桥梁。校园可以随时发送最新信息；老师和家长一对一私聊互动了解孩子在校情况；老师可以群组交流信息；考勤功能和待接确认保证孩子的在校安全；校园的简易办公OA让老师更方便处理工作；智慧班级功能向家长展示全方位的班级信息和动态；学校的微网站可以更好的展示学校软实力；家长可以用丰富的形式记录孩子的成长足迹，建立一个以孩子为中心的家庭圈。
+		</p> 
+	</div>
+   
+    <div style=" margin-top:10px; border-bottom:1px solid #efefef; padding-bottom:10px;">
+        <div style=" float:left; margin-top:15px; margin-left:15px;">
+            <img src="__TMPL__Public/img/img10.png" style=" width:55px;float:left;">
+            <p style=" float:left; margin-top:5px; margin-left:10px; font-size:16px; font-family:'微软雅黑'"><strong style=" font-size:18px;">教师端</strong><br>V3.1</p>
+            <div class="clearfix"></div>
+        </div>
+        <div style=" background-color: #6ad891;color: white; border-radius: 15px;text-align: center; font-weight: bold; line-height: 30px; width: 45%; float:right; margin-top: 25px;" class="down01">下载</div>
+
+<!--
+        <div style=" float:right; margin-right:15px;">
+        	<img style=" display:block; width:120px; margin-bottom:20px;"src="__TMPL__Public/img/android.png">
+            <img style=" display:block; width:120px;"src="__TMPL__Public/img/iphone.png">
+        </div>
+-->
+        <div class="clearfix"></div>
+	</div>
+   
+    <div>
+        <div style=" float:left; margin-top:15px; margin-left:15px;">
+            <img src="__TMPL__Public/img/img01 (2).png" style=" width:55px;float:left;">
+            <p style=" float:left; margin-top:5px; margin-left:10px; font-size:16px; font-family:'微软雅黑'"><strong style=" font-size:18px;">家长端</strong><br>V3.1</p>
+            <div class="clearfix"></div>
+        </div>
+        
+			<div style=" background-color: #6ad891;color: white; border-radius: 15px;text-align: center; font-weight: bold; line-height: 30px; width: 45%; float:right; margin-top: 25px;" class="down02">下载</div>
+<!--
+        	<a href="http://a.app.qq.com/o/simple.jsp?pkgname=cn.xiaocool.wxtparent" target="_blank">
+           		<img style=" display:block; width:120px; margin-bottom:20px;"src="__TMPL__Public/img/android.png">
+           </a>
+            <img style=" display:block; width:120px;"src="__TMPL__Public/img/iphone.png">
+-->
+       
+        <div class="clearfix"></div>
+        <br>
+        <p style=" color:#646464; font-size:20px; margin-left:15px;">支持ios7.0&nbsp;&nbsp;&nbsp;Android4.0以上版本</p>
+        <br>
+	</div>
+    <div style=" background-color:#f2f2f2;">
+    	<div>
+        	<div style=" float:left; margin-top:30px;">
+            	<img src="__TMPL__Public/img/img11.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#f79cc8;">家校互动</strong><br>即时 便捷沟通</p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div style=" float:right; margin-top:30px;">
+            	<img src="__TMPL__Public/img/img12.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#6ad891;">教学办公</strong><br>老师的教学助手&nbsp;<span style=" color:#f2f2f2;">我</span></p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div class="clearfix"></div>
+        </div>
+    	<div>
+        	<div style=" float:left; margin-top:25px;">
+            	<img src="__TMPL__Public/img/img13.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#ee8a70;">教务管理</strong><br>辅助老师管理</p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div style=" float:right; margin-top:25px;">
+            	<img src="__TMPL__Public/img/img14.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#afd753;">校园安全</strong><br>到校&nbsp;在校安全监控</p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div class="clearfix"></div>
+        </div>
+        <div>
+        	<div style=" float:left; margin-top:25px;">
+            	<img src="__TMPL__Public/img/img15.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#ffbc51;">宝宝乐园</strong><br>知识拓展 视野开拓</p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div style=" float:right; margin-top:25px;">
+            	<img src="__TMPL__Public/img/img16.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#59c6ef;">幼儿园网站</strong><br>智能网站管理&nbsp;<span style=" color:#f2f2f2;">我们</span></p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div class="clearfix"></div>
+        </div>
+        <div>
+        	<div style=" float:left; margin-top:25px;margin-bottom:30px;">
+            	<img src="__TMPL__Public/img/img17.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#f79cc8;">成长档案</strong><br>记录成长的一本书</p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div style=" float:right; margin-top:25px; margin-bottom:30px;">
+            	<img src="__TMPL__Public/img/img18.png" style=" width:45px;float:left;">
+            	<p style=" float:left; margin-top:5px; margin-left:5px; font-size:10px; font-family:'微软雅黑'"><strong style=" font-size:16px; color:#6ad891;">成长足迹</strong><br>记录宝宝成长点滴&nbsp;</p>
+            	<div class="clearfix"></div>
+        	</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <p style=" color:#646464; font-size:24px; margin-top:20px;">客服电话：400-4583-2445</p>
+    
+    
+</div>
+<script type="text/javascript">
+	$(".down01").click(
+			function(){
+				
+						var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+ 
+            alert(isAndroid);
+            alert(isiOS);
+
+			if(isAndroid==true){
+				window.open('http://t.cn/RtD2dlb');
+			}
+			if(isiOS==true){
+				window.open('https://itunes.apple.com/cn/app/zhi-xiao-yuan-jiao-shi/id1152283318?mt=8');
+			}
+		}
+	)
+	$(".down02").click(
+			function(){
+				
+						var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+                        alert(isAndroid);
+            alert(isiOS);
+			if(isAndroid==true){
+				window.open('http://t.cn/RtD7IJB');
+			}
+			if(isiOS==true){
+				window.open('https://itunes.apple.com/cn/app/zhi-xiao-yuan-jia-zhang/id1149767138?mt=8');
+			}
+		}
+	)
+</script>
+
+</body>
+</html>

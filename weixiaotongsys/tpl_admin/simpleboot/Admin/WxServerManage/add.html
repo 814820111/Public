@@ -1,0 +1,124 @@
+<admintpl file="header" />
+<style>
+	.radio{
+		float: left;
+		padding-top: 5px;
+		margin-right: 20px;
+	}
+	input{
+		width: 400px;
+	}
+</style>
+<body class="J_scroll_fixed">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('index')}">服务器地址管理</a></li>
+			<li class="active"><a href="{:U('add')}">添加服务器地址</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal J_ajaxForm add-validate" action="{:U('add_post')}">
+				<fieldset>
+					<div class="control-group">
+						<label class="control-label">服务器地址名称:</label>
+						<div class="controls">
+							<input type="text" class="input" name="name" value="">
+							<span class="must_red">*</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">服务器地址:</label>
+						<div class="controls">
+							<input type="text" class="input" name="url" value="">
+							<span class="must_red">*</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"></label>
+						<div class="controls">
+							<span class="must_red" style="color: red">必须以http://或https://开头，分别支持80端口和443端口。</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Token:</label>
+						<div class="controls">
+							<input type="text" class="input" name="token" value="">
+							<span class="must_red">*</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"></label>
+						<div class="controls">
+							<span class="must_red" style="color: red">必须为英文或数字，长度为3-32字符。</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">消息加解密密钥:</label>
+						<div class="controls">
+							<input type="text" class="input" name="EncodingAESKey" value="">
+							<span class="must_red">*</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"></label>
+						<div class="controls">
+							<span class="must_red" style="color: red">消息加密密钥由43位字符组成，可随机修改，字符范围为A-Z，a-z，0-9。</span>
+						</div>
+					</div>
+
+					<!--<input type="text" class="input" name="mobile" value="">-->
+				</fieldset>
+				<div class="form-actions">
+					<!--<button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">添加</button>-->
+					<button type="submit" class="btn btn-primary btn_submit">添加</button>
+					<a class="btn" href="__URL__">返回</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript">
+        $('.add-validate').validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                url: {
+                    required: true,
+					url: true
+                },
+                token: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 32,
+                    isMobile: true
+                },
+                EncodingAESKey: {
+                    required: true,
+                    minlength: 43,
+					maxlength: 43,
+                    isMobile: true
+                },
+				mobile:{
+                    required: true,
+				}
+            },
+            messages: {
+                token: {
+                    minlength: "请输入3到32个字母或数字",
+                    maxlength: "请输入3到32个字母或数字"
+                },
+                EncodingAESKey: {
+                    minlength: "请输入43个字母或数字",
+                    maxlength: "请输入43个字母或数字"
+                },
+            }
+        });
+
+        //检测手机号是否正确
+        jQuery.validator.addMethod("isMobile", function(value, element) {
+            var regPhone = /[0-9a-zA-Z]/;
+            return this.optional(element) || (regPhone.test( value ) );
+        }, "请按要求填写");
+	</script>
+</body>
+</html>

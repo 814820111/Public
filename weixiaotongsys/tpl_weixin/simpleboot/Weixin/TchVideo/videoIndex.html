@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/banjixiangce.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__public/js/new_file.js"></script>
+    <script>
+        window.onload = function() {
+            var w;
+            w = $('.new').width();
+            $('.new').height(w * 1);
+        }
+    </script>
+    <style>
+        body {
+            background-color: #eff0f2;
+        }
+        .viwes {
+            height: 200px;
+            /*height: 120px;*/
+            border: 5px #fff solid;
+            float: left;
+            margin: 11px;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<div class="fenge"></div>
+
+<div class="bigbox">
+
+    <div class="jiang" style="margin-top: 45px;">
+
+        <foreach name="videolist" item="v">
+        <div class="yes">
+            <div class="main">
+                <div class="viwes" style="margin-top: 5%;">
+                    <!--<video  poster="http://ow3hm6y11.bkt.clouddn.com/microblog/15120419334935.jpg" src="__ROOT__/uploads/video/{$v.videoname}" class="video-source" width="100%"  height="100%"-->
+                    <video  poster="{$Think.const.SRHB}{$v.videoname}?vframe/jpg/offset/1/w/480/h/360" src="{$Think.const.SRHB}{$v.videoname}" class="video-source" width="100%"  height="200px"
+                            controls style="object-fit:fill" webkit-playsinline="true" x-webkit-airplay="true"
+                            x5-video-orientation="h5" x5-video-player-fullscreen="true" preload="auto">
+                    </video>
+                </div>
+                <span style="margin: 11px;font-size: 14px;color: #616161;">{$v.title}</span>
+            </div>
+        </div>
+       </foreach>
+     <div class="clearfix"></div>
+   </div>
+</div>
+
+<div class="top_box" style="position: absolute;z-index:99">
+    <img src="__TMPL__public/images/img674.png" class="fanhui"> 精彩瞬间
+    <div class="clearfix"></div>
+</div>
+<div class="cue" style="display:none; position: fixed;width: 100%;background-color: rgba(0,0,0,0.5);z-index: 2">
+    <div style="background-color: white;width: 200px;text-align: center; margin-left: auto; margin-right: auto;line-height: 100px;font-weight: 600;border-radius: 10px;margin-top: 50px;">暂时还没有上传视频</div>
+</div>
+<div class="new" style=" background-color: #06c18e;color: white;position: fixed;width: 60px;text-align: center;line-height: 60px;border-radius: 50%;font-size: 14px;bottom: 50px;right: 10px;">
+    <a style=" text-decoration: none;color: inherit;" href="{:U('addVideo',array('classid'=>$classid))}">发布视频</a>
+</div>
+</body>
+</html>
+
+<script>
+    $(".fanhui").click(function(){
+        location.href="__ROOT__/index.php/weixin/Tindex/index";
+    });
+    $("document").ready(function(){
+        var res={$count};
+        if(res==0){
+            $(".cue").css("display","block");
+            var window_height = $(window).height();
+            $(".cue").height(window_height);
+            setTimeout(
+                function() {
+                    $(".cue").hide()
+                }, 1000
+            )
+        }
+
+    });
+</script>

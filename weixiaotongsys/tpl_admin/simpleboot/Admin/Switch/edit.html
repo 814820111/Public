@@ -1,0 +1,67 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('index')}">通用开关</a></li>
+        <li class="active"><a href="{:U('edit')}">修改通用开关</a></li>
+        <li><a href="{:U('addsubject')}">学校开关设置</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('edit_post')}">
+            <input type="hidden" name="id" value="{$id}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">开关名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="name" value="{$switch['name']}">
+                    </div>
+                </div>
+                
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">开关标识:</label>-->
+                    <!--<div class="controls">-->
+                        <input type="hidden" class="input" name="identifier" value="{$switch['identifier']}">
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div class="control-group">
+                    <label class="control-label">开关默认状态:</label>
+                    <php>$Y="Y"==$switch['status']?"checked":"";</php>
+                    <php>$N="N"==$switch['status']?"checked":"";</php>
+                    <div class="controls">
+                        <input type="radio" class="input" name="status" value="Y" style="vertical-align: -3px;" {$Y}>
+                         开
+                        <input type="radio" class="input" name="status" value="N" style="vertical-align: -3px;" {$N}>
+                         关
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">同步到所有学校:</label>
+                    <div class="controls">
+                        <input type="radio" class="input" name="is_all" value="1" style="vertical-align: -3px;">
+                        是
+                        <input type="radio" class="input" name="is_all" value="2" style="vertical-align: -3px;">
+                        否
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

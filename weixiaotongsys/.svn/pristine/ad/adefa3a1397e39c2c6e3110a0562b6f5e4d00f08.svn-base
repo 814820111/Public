@@ -1,0 +1,1 @@
+a:2:{s:16:"banned_usernames";s:0:"";s:7:"storage";a:2:{s:4:"type";s:5:"Local";s:5:"Qiniu";a:4:{s:9:"accessKey";s:40:"4BECgWGmccmpG0_SavRbpcTW0hDH_dTu4UnTpFTC";s:10:"secrectKey";s:40:"TYwWAlIdpCkAgv6To1KwdL0XKlAoQSfSFWJhpvBQ";s:6:"domain";s:25:"ow3hm6y11.bkt.clouddn.com";s:6:"bucket";s:15:"zhixiaoyuan2017";}}}

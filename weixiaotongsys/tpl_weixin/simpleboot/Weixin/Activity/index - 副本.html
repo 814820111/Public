@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>班级活动</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="__TMPL__public/css/banjiHuodong.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__public/js/new_file.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="__TMPL__public/css/commes.css" />
+
+</head>
+
+<body>
+
+    <body>
+        <div class="top_box">
+            <img src="__TMPL__public/images/img67.png" class="fanhui"> 班级活动
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="container" style=" overflow:hidden;">
+
+            <div class="dic" style="margin-top: 38px;">
+                <!--<a href="huodongxiangqing.html" style="display: block;">
+  <div class="climb">
+      <div class="one">
+        <span>周末爬香山活动</span>
+      </div>
+      <div class="two">
+        <div class="img">
+          
+           <span>本周周末有爬山活动，此次活动是自费活动，想去的家长可以为孩子报名。</span>
+           <br/>
+                 
+               
+                <div class="my-gallery">
+                    <figure>
+                        <a href="img/s1_m.jpg" data-size="800x1142">
+                            <img src="img/s1_m.jpg" />
+                        </a>
+                    </figure>
+               
+                </div>
+          
+         
+        </div>
+      </div>
+      <div class="three">
+        <div class="left">
+        	
+          <img src="__ROOT__/statics/wimg/feiji.png" alt="">
+          <span>张艳艳</span>
+        </div>
+        <div class="right">
+          <span>2016-08-08&nbsp;&nbsp;18:30</span>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <hr class="divide">
+      <div class="pandect">
+        <span class="renshu">已报名18人</span>
+        <span class="baoming"style="color: red;">已报名</span>
+        <div class="clearfix"></div>
+      </div>
+  </div>
+</a>-->
+            </div>
+
+        </div>
+
+
+
+
+        <script>
+            $("document").ready(function() {
+                var receiverid = 665
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=student&a=getactivitylist',
+                    async: true,
+                    data: {
+                        receiverid: receiverid
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        var html = "";
+                        res = eval(res.data);
+
+                        for (var i = 0; i < res.length; i++) {
+                            //将时间戳转换成当前时间
+                            var shijian = tmies(res[i].activity_list[0].create_time);
+                            //这是获取发布活动人的名字
+                            var shuzhu1 = res[i].activity_list[0]
+                            var shuzhu2 = shuzhu1["user_info"]
+                            if (shuzhu2 != "") {
+                                var shuzhu3 = shuzhu2[0];
+                                var shuzhu4 = shuzhu3["name"];
+                            } else {
+                                shuzhu4 = "";
+                            }
+                            //这是获取发布人的头像照片
+                            if (shuzhu2 != "") {
+                                var zhaopian3 = shuzhu2[0];
+                                var zhaopian4 = shuzhu3["photo"];
+                            } else {
+                                zhaopian4 = "";
+                            }
+                            //发给我控制的的照片组
+                            var diees = "";
+                            for (var g = 0; g < res[i].pic.length; g++) {
+                                var cvbn = res[i].pic[g].picture_url;
+                                diees += 1163317574 + cvbn;
+
+                            }
+                            //获取报名的人数
+
+                            var ci = "";
+                            for (var l = 0; l < res[i].apply_count.length; l++) {
+                                var bao = res[i].apply_count[l].userid
+                                ci += "." + bao
+
+                            }
+
+                            var duan = ci.indexOf("." + receiverid);
+
+                            //活动开始的时间
+                            var begintime = tmies(res[i].activity_list[0].begintime);
+
+                            //活动结束的时间
+                            var endtime = tmies(res[i].activity_list[0].endtime);
+                            //活动报名的时间
+                            var starttime = tmies(res[i].activity_list[0].starttime);
+                            //活动报名结束的时间；
+                            var finishtime = tmies(res[i].activity_list[0].finishtime);
+                            //发起活动的标题
+                            var title = res[i].activity_list[0].title
+                                //发起活动的内容
+                            var content = res[i].activity_list[0].content
+
+
+                            //发起活动让的联系号码
+                            var contactphone = res[i].activity_list[0].contactphone
+                                //创建活动的id
+                            var receiverids = res[i].activity_id;
+                            //该活动的ID
+                            var rshu = res[i].apply_count.length;
+
+                            html += "<a  href='{:U('details')}?id=" + begintime + "&endtime=" + endtime + "&starttime=" + starttime + "&finishtime=" + finishtime + "&diees=" + diees + "&title=" + title + "&content=" + content + "&shuzhu4=" + shuzhu4 + "&zhaopian4=" + zhaopian4 + "&isapply=" + duan + "&shijian=" + shijian + "&contactphone=" + contactphone + "&receiverid=" + receiverids + "&userid=" + receiverid + "&rshu=" + rshu + " '>";
+                            html += '<div class="climb">'
+                            html += '<div class="one">'
+                            html += '<span >' + title + '</span>'
+                            html += '</div>'
+                            html += '<div class="two">'
+                            html += '<div class="img">'
+                            html += '<span>' + res[i].activity_list[0].content + '</span>'
+                            html += '<br/>'
+                            html += '<div class="my-gallery">'
+                            for (var g = 0; g < res[i].pic.length; g++) {
+                                var cvbn = res[i].pic[g].picture_url;
+
+                                var dais = res[i].pic.length;
+
+
+                                if (cvbn != "" && cvbn != "null") {
+                                    html += '<figure>'
+
+                                    html += '<img src="__ROOT__/uploads/microblog/' + cvbn + '" />'
+
+                                    html += '</figure>'
+
+                                }
+
+                            }
+
+                            html += '</div>'
+                            html += '</div>'
+                            html += '</div>'
+                            html += '<div class="three">'
+                            html += '<div class="left">'
+                            html += '<img src="__TMPL__public/images/feiji.png" alt="">'
+                            html += '<span>' + shuzhu4 + '</span>'
+                            html += '</div>'
+                            html += '<div class="right">'
+                            html += '<span>' + shijian + '</span>'
+                            html += '</div>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '<hr class="divide">'
+                            html += '<div class="pandect">'
+                            html += '<span class="renshu" >已报名' + rshu + '人</span>'
+                            if (duan != -1) {
+                                html += '<span class="baoming">已报名</span>'
+                            } else {
+                                html += '<span class="baoming"style="color: red;">未报名</span>'
+                            }
+
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '</div>'
+                            html += '</a>'
+                        }
+                        $(".dic").append(html);
+
+                        var img_width = $(".my-gallery img").width()
+                        $(".my-gallery img").height(img_width)
+
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+                });
+            })
+
+            $(".fanhui").click(function() {
+                window.history.back();
+            })
+        </script>
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,9 @@
+<html>
+<!-- <form method="post" action="http://up.qiniu.com" enctype="multipart/form-data"> -->
+<form method="post" action="./admin_test.php" enctype="multipart/form-data">
+    <!-- <input name="token" type="hidden" value="<?php echo $token;?>"> -->
+    <input name="token" type="hidden" value="3pdTl4yZ7pw2qQ30S45WKMRqI3AZDwoyOjIbw7xb:4rs7pyRaXz-nYhVyFpZtD1TFJ9s=:eyJzYXZlS2V5IjoiMTUxMDEwNjM0Ny5qcGciLCJjYWxsYmFja1VybCI6Imh0dHA6XC9cL1dXVy5zaW5hYXBwLmNvbVwvcWluaXVcL2NhbGxiYWNrLnBocCIsImNhbGxiYWNrQm9keSI6Im5hbWU9JChmbmFtZSkmbmV3bmFtZT0xNTEwMTA2MzQ3LmpwZyZ0b2lkPTEyIiwic2NvcGUiOiJpbWFnZXMiLCJkZWFkbGluZSI6MTUxMDEwOTk0N30=">
+    <input name="file" type="file" />
+    <input type="submit" value="上传"/>
+</form>
+</html>

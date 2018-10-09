@@ -1,0 +1,175 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">代理商列表</a></li>
+        <li class="active"><a href="{:U('add')}">新增代理商</a></li>
+        <li><a href="{:U('check')}">代理商审核</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <p class="update_know">* 图片上传须知：仅支持jpg、jpeg、png的图片格式，图片大小不超过2M</p>
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('add_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">代理商名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="name" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">代理商地址:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="address" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系人:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="legalperson" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系电话:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="phone" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">上级推荐人:</label>
+                    <div class="controls">
+                        <select name="parent" id="parent">
+                            <foreach name="tree" item="vo">
+                                <option value={$vo.id}>{$vo.legalperson}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">合同复印件:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="contract_pic" accept="image/png,image/jpeg,image/jpg">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">法人身份证:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="corporation_idcard" accept="image/png,image/jpeg,image/jpg">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">组织机构代码证:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="organization_code" accept="image/png,image/jpeg,image/jpg">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">代理区域</label>
+                    <div class="controls">
+                        <select name="city" id="city">
+                            <option value="0">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">是否有客服</label>
+                    <div class="controls">
+                        <input type="radio" name="type" class="radio"><span>是</span>
+                        <input type="radio" name="type" class="radio2"><span>否</span>
+                    </div>
+                </div>
+                <div class="control-group" id="group" style="display:none">
+                    <label class="control-label">客服电话</label>
+                    <div class="controls">
+                        <input type="text" class="xx" name="servicephone" value="">
+                    </div>
+                </div>
+                <div class="control-group" id="system" style="display:none">
+                    <span style="margin-left: 180px">默认号码为系统的客服号码</span>
+                </div>
+            </fieldset>
+            <input type="hidden" name="create_time" id="time">
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script>
+    $(".radio").click(function () {
+        $("#group").css('display','block');
+        $("#system").css('display','none');
+        $(".xx").attr('value','');
+        $(".xx").attr("disabled",false);
+    })
+    $(".radio2").click(function () {
+        $("#group").css('display','none');
+        $("#system").css('display','block');
+        $(".xx").attr('value','13757706979');
+    })
+
+    $(".btn btn-primary btn_submit J_ajax_submit_btn").click(function () {
+        var timestamp =Date.parse(new Date());
+        timestamp = timestamp/1000;
+        $("#time").attr("value",timestamp);
+    });
+    $("document").ready(function () {
+        $.ajax({
+            url:"{:U('getCity')}",
+            type:"post",
+            dataType:"json",
+            data:{},
+            success:function (res) {
+             var data = eval(res.data);
+                for (var i=0;i<data.length;i++){
+                    var html = "<option id='"+data[i]['term_id']+"'>"+data[i]["name"]+"</option>";
+                    $("#city").append(html);
+                }
+                $("#city").change(function () {
+                    var term_id = $("#city option:selected").attr("id");
+                    $.ajax({
+                        url:"{:U('getPri')}",
+                        type:"post",
+                        dataType:"json",
+                        data:{
+                            term_id:term_id
+                        },
+                        success:function (res) {
+                            $("select:eq(2)").remove();
+                            var html = '<select name="city" id="term"></select>';
+                            var html1 = "";
+                            $("select:eq(1)").after(html);
+                            var data = eval(res.data);
+                            html1+="<option id="+term_id+" name='city' value="+term_id+">省级代理商</option>"
+                            for (var i=0;i<data.length;i++){
+                                html1 += "<option id='"+data[i]["term_id"]+"' name='city' value='"+data[i]["term_id"]+"'>"+data[i]["name"]+"</option>";
+
+                            }
+                            $("#term").append(html1);
+                        },
+                        error:function (res) {
+                            console.log(res);
+                        }
+                    });
+                });
+            },
+            error:function (res) {
+                var data = eval(res.data);
+                console.log(data);
+            }
+        });
+    });
+</script>
+</html>

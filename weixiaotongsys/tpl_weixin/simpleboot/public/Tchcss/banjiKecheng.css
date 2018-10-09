@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑 Light";
+}
+.clearfix{
+	clear: both;
+}
+body{
+	background-color: rgb(239,240,242);
+}
+.monday,.tuesday,.wednesday{
+	background-color: white;
+	border-radius: 0px;
+	margin:6px 7px;
+	font-size: 13.5px;
+	padding-bottom: 2px;
+	border-radius: 5px;
+	 
+}
+.monday{
+	margin-top: 12px;
+}
+.wednesday{
+	margin-bottom: 20px;
+}
+.time{
+	font-size: 13.5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	padding: 0px 10px 0px;
+	line-height: 33px;
+	background-color: #06c18e;
+	color: #FFFFFF;
+}
+.time2{
+	font-size: 12.5px;
+}
+.timetable span{
+	line-height: 30px;
+	font-weight: 600;
+	margin-left: 10px;
+	display: block;
+}
+.timetable .shangwu{
+	line-height: 30px;
+	color: rgb(178,178,178);
+	font-size: 13.5px;
+}
+.divide{
+	border: none;
+	border-top: 1px solid rgb(239,239,239);
+}
+.divide1{
+	border: none;
+	border-top: 1px solid rgb(249,249,249);
+}

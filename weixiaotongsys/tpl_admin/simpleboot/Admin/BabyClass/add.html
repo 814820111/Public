@@ -1,0 +1,725 @@
+<admintpl file="header"/>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 210px; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+.chzn-container-single .chzn-single {
+		position: relative;
+		top: 12px;
+		height: 29px;
+	}
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('BabyClass/index')}">所有课程表列表</a></li>
+     <li class="active"><a href="{:U('BabyClass/add',array('syllabus'=>empty($syllabus['schoolid'])?'':$syllabus['schoolid']))}"  target="_self">添加课程表</a></li>
+  </ul>
+  <form name="myform" id="myform" action="{:u('BabyClass/add_post')}" method="post" class="form-horizontal J_ajaxForms" enctype="multipart/form-data">
+  <div class="col-auto">
+    <div class="table_full">
+      <table class="table table-bordered">
+                <div class="control-group">
+                    <div class="mb10">
+                       <span class="mr20">
+                    	学校选择：
+                    	<select data-placeholder="输入关键字。。。" name="schoold" id="viewOLanguage" class="chzn-select"  tabindex="2" >
+                    		
+                    <option value=""></option>
+                    <foreach name="school_name" item="vo">
+                    	<option value="{$vo.schoolid}">{$vo.school_name}</option>
+                    </foreach>
+                   </select>
+                        <span class="mr20">班级：
+                          <select id="class" name="class"  class="normal_select" style="max-height: 100px;">
+                              <OPTION value="">请选择班级</OPTION> 
+                                        
+                          </select>
+                       </span>
+                       </span>
+                    </div>
+                </div> 
+                
+                <thead>
+        <tr width="110">
+            <th>节次</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+            <th>星期天</th>
+        </tr>
+        </thead> 
+        <colgroup><col/><col /></colgroup>
+        <tr>
+           <td>第一节</td>
+           <td width="110">
+           	<select id="school" name="mon_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_fir"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第二节</td>
+           <td width="110">
+           	<select id="school" name="mon_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_se"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第三节</td>
+           <td width="110">
+           	<select id="school" name="mon_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_th"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第四节</td>
+           <td width="110">
+           	<select id="school" name="mon_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_fo"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第五节</td>
+           <td width="110">
+           	<select id="school" name="mon_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_fi"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第六节</td>
+           <td width="110">
+           	<select id="school" name="mon_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_si"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第七节</td>
+           <td width="110">
+           	<select id="school" name="mon_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_seve"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        <tr>
+           <td>第八节</td>
+           <td width="110">
+           	<select id="school" name="mon_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+           	    <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="tu_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="we_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="th_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="fri_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sat_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+           <td width="110">
+           	<select id="school" name="sun_ei"  class="normal_select" style="max-height: 50px;width: 200px; ">
+                <OPTION value="0">未设置</OPTION>
+                <foreach name="lesson_name" item="vo">
+                     <OPTION value="{$vo.id}">{$vo.subject}</OPTION> 
+                </foreach>           
+            </select>
+           </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="form-actions">
+  <input type="hidden" class="input" name="plan_id" value="{$id}"  readOnly="true">
+        <button class="btn btn-primary btn_submit J_ajax_submit_btn"type="submit" id="Tijiao">提交</button>
+        <a class="btn" href="{:U('BabyClass/index')}">返回</a>
+  </div>
+ </form>
+</div>
+<script src="__ROOT__/statics/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script type="text/javascript"> 
+		$("#viewOLanguage").chosen();
+		$("#viewOLanguage").trigger("liszt:updated");
+		//学校文本框改变触发的的事件
+		$("#Tijiao").click(function(){
+			var typeschool = $(".chzn-select  option:selected").val();
+			var classname=$(".normal_select option:selected").val();
+			var isSuccess = 1;
+			if(typeschool==""){
+				var isSuccess=0;
+				alert("请选择学校");
+			}
+			if(classname==""){
+				var isSuccess=0;
+				alert("请选择你的班级")
+			}
+			if(isSuccess==0){
+				return false;
+			}
+		})
+		$(".chzn-select").chosen().on("change", function (evt, params) {
+			var typeschool = $(".chzn-select  option:selected").val();
+			$(".hideclass").hide();
+			if(typeschool!=""){
+				$.ajax({
+				type:"post",
+				url: '__ROOT__/index.php/?g=Admin&m=BabyClass&a=Schoolclass',
+				async:true,
+				data:{
+					schoolid:typeschool
+				},
+				dataType: 'json',
+				success: function(res) {
+					var html = "";
+					res = eval(res.data);
+					for(var i = 0; i < res.length; i++) {
+					   var classid=res[i].id;//班级ID
+					   var classname=res[i].name;//班级名字
+					   html += '<option class="hideclass" value="' + classid + '">' + classname + ' </option> ';					   
+					}
+					$(".normal_select").append(html);
+				},
+				error: function() {
+					console.log('系统错误,请稍后重试');
+				}
+				});
+			}
+			
+			});	
+$(function () {
+	$(".J_ajax_close_btn").on('click', function (e) {
+	    e.preventDefault();
+	    Wind.use("artDialog", function () {
+	        art.dialog({
+	            id: "question",
+	            icon: "question",
+	            fixed: true,
+	            lock: true,
+	            background: "#CCCCCC",
+	            opacity: 0,
+	            content: "您确定需要关闭当前页面嘛？",
+	            ok:function(){
+					setCookie("refersh_time",1);
+					window.close();
+					return true;
+				}
+	        });
+	    });
+	});
+	/////---------------------
+	 Wind.use('validate', 'ajaxForm', 'artDialog', function () {
+			//javascript
+	        
+	            //编辑器
+	            editorcontent = new baidu.editor.ui.Editor();
+	            editorcontent.render( 'content' );
+	            try{editorcontent.sync();}catch(err){};
+	            //增加编辑器验证规则
+	            jQuery.validator.addMethod('editorcontent',function(){
+	                try{editorcontent.sync();}catch(err){};
+	                return editorcontent.hasContents();
+	            });
+	            var form = $('form.J_ajaxForms');
+	        //ie处理placeholder提交问题
+	        if ($.browser.msie) {
+	            form.find('[placeholder]').each(function () {
+	                var input = $(this);
+	                if (input.val() == input.attr('placeholder')) {
+	                    input.val('');
+	                }
+	            });
+	        }
+	        //表单验证开始
+	        form.validate({
+				//是否在获取焦点时验证
+				onfocusout:false,
+				//是否在敲击键盘时验证
+				onkeyup:false,
+				//当鼠标掉级时验证
+				onclick: false,
+	            //验证错误
+	            showErrors: function (errorMap, errorArr) {
+					//errorMap {'name':'错误信息'}
+					//errorArr [{'message':'错误信息',element:({})}]
+					try{
+						$(errorArr[0].element).focus();
+						art.dialog({
+							id:'error',
+							icon: 'error',
+							lock: true,
+							fixed: true,
+							background:"#CCCCCC",
+							opacity:0,
+							content: errorArr[0].message,
+							cancelVal: '确定',
+							cancel: function(){
+								$(errorArr[0].element).focus();
+							}
+						});
+					}catch(err){
+					}
+	            },
+	            //验证规则
+	            rules: {'post[post_title]':{required:1},'post[post_content]':{editorcontent:true}},
+	            //验证未通过提示消息
+	            messages: {'post[post_title]':{required:'请输入标题'},'post[post_content]':{editorcontent:'内容不能为空'}},
+	            //给未通过验证的元素加效果,闪烁等
+	            highlight: false,
+	            //是否在获取焦点时验证
+	            onfocusout: false,
+	            //验证通过，提交表单
+	            submitHandler: function (forms) {
+	                $(forms).ajaxSubmit({
+	                    url: form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+	                    dataType: 'json',
+	                    beforeSubmit: function (arr, $form, options) {
+	                        
+	                    },
+	                    success: function (data, statusText, xhr, $form) {
+	                        if(data.status){
+								setCookie("refersh_time",1);
+								//添加成功
+								Wind.use("artDialog", function () {
+								    art.dialog({
+								        id: "succeed",
+								        icon: "succeed",
+								        fixed: true,
+								        lock: true,
+								        background: "#CCCCCC",
+								        opacity: 0,
+								        content: data.info,
+										button:[
+											{
+												name: '继续添加？',
+												callback:function(){
+													reloadPage(window);
+													return true;
+												},
+												focus: true
+											},{
+												name: '返回列表页',
+												callback:function(){
+													location='{:U('BabyClass/index')}';
+													return true;
+												}
+											}
+										]
+								    });
+								});
+							}else{
+								isalert(data.info);
+							}
+	                    }
+	                });
+	            }
+	        });
+	    });
+	////-------------------------
+});
+</script>
+</body>
+</html>

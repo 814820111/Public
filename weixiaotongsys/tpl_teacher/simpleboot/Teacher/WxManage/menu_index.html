@@ -1,0 +1,79 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+	<div class="wrap J_check_wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('menu_index')}">菜单列表</a></li>
+			<li><a href="{:U('custommenu')}">生成自定义菜单</a></li>
+		</ul>
+		<form name="myform" action="{:U('WxManage/menu_index')}" method="get">
+			<div class="search_type cc mb10">
+				<div class="mb10">
+					<span class="mr20" style="margin-left:5px ">
+						菜单名称：
+					     <input type="text" name="menu_name" value="{$name}">
+						 <input type="submit" class="btn btn-primary" value="搜索" style="margin-bottom:10px;margin-left: 10px" />
+					</span>
+				</div>
+			</div>
+		</form>
+		<div class="common-form">
+			<form method="post" class="J_ajaxForm" action="#">
+				<table width="100%" class="table table-hover table-bordered table-list">
+					<thead>
+						<tr>
+							<!--<th width="16"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>-->
+							<th width="50">ID</th>
+							<th>公众号名称</th>
+							<th>菜单名称</th>
+							<th>菜单类型</th>
+							<th>菜单等级</th>
+							<th>菜单排序</th>
+							<th>菜单数值</th>
+							<th width="120">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<foreach name="menulist" item="vo">
+						<tr>
+							<!--<td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.ad_id}"></td>-->
+							<td>{$vo.id}</td>
+							<td>{$vo.wx_name}</td>
+							<td>{$vo.name}</td>
+							<td>
+								<if condition="$vo.typeid eq 2 "> url链接菜单
+									<elseif condition="$vo.typeid eq 6 "/>网页授权登录
+									<else /> 拓展菜单
+								</if>
+								<!--<php>if($vo[typeid] == 2){</php>-->
+								<!--url链接菜单-->
+								<!--<php>}else{</php>-->
+								<!--网页授权登录-->
+								<!--<php>}</php>-->
+							</td>
+							<td>
+								<if condition="$vo.menulevel eq 1 "> 一级菜单
+									<elseif condition="$vo.menulevel eq 2 "/>二级菜单
+									<else /> 拓展菜单
+								</if>
+							</td>
+							<td>{$vo.orderby}</td>
+							<td><if condition="$vo.typeid eq 2 "> {$vo.url}
+								<elseif condition="$vo.typeid eq 6 "/>{$vo.url}
+								<else /> {$vo.event}
+							</if></td>
+							<td width="170">
+								<a href="{:U('custommenu_edit',array('id'=>$vo['id'],'manage_id'=>$vo['manage_id'],'parentid'=>$vo['parentid']))}">修改</a>|
+								<a href="{:U('menu_delete',array('id'=>$vo['id'],'manage_id'=>$vo['manage_id']))}" class="J_ajax_del">删除</a>
+							</td>
+						</tr>
+						</foreach>
+					</tbody>
+
+				</table>
+				<div class="pagination" style="float: left">{$Page}</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js?"></script>
+</body>
+</html>

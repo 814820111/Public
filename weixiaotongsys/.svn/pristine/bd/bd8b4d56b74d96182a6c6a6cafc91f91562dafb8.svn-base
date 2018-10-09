@@ -1,0 +1,54 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('index')}">广告管理</a></li>
+        <li><a href="{:U('add')}">新增广告</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>排序</th>
+            <th width="100">广告类型</th>
+            <th>广告简介</th>
+            <th>广告链接</th>
+            <th>广告图片</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--0（动态），1（乐园），2（好友足迹）'?-->
+        <php>$type=array("0"=>"动态","1"=>"乐园","2"=>"好友足迹");</php>
+        <foreach name="advertisement" item="vo">
+            <tr>
+                <td>{$vo.sortid}</td>
+                <td>
+                    <switch name="vo.type">
+                        <case value="0">{$type.0}</case>
+                        <case value="1">{$type.1}</case>
+                        <case value="2">{$type.2}</case>
+                        <default />default
+                    </switch>
+                </td>
+                <td>{$vo.message_title}</td>
+                <td>{$vo.message_url}</td>
+                <td>
+                    <php>$photo=sp_get_asset_upload_path($vo["message_pic"]);</php>
+                    <img width="50" height="25" src="{$photo}" />
+                    <a href="{$photo}" target="_blank">查看大图</a>
+                </td>
+                <td>
+                    <a href="{:U('AppPosterManage/change',array('id'=>$vo['id']))}">修改</a> |
+                    <a class="J_ajax_del" href="{:U('AppPosterManage/delete',array('id'=>$vo['id']))}">删除</a>
+
+                    <br /> 
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

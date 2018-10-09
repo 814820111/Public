@@ -1,0 +1,59 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('blogCheck')}">家校圈审核</a></li>
+        <li class="active"><a href="">家校圈详情</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('deleteblog',array('id'=>$blog['mid']))}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">家校圈id:</label>
+                    <div class="controls">
+                        <p>{$blog['mid']}</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所属学校:</label>
+                    <div class="controls">
+                        <p>{$blog['schoolname']}</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所属班级:</label>
+                    <div class="controls">
+                        <p>{$blog['classname']}</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">发布人:</label>
+                    <div class="controls">
+                        <p>{$blog['username']}</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">内容:</label>
+                    <div class="controls">
+                        <p>{$blog['content']}</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">图片:</label>
+                    <div class="controls">
+                        <foreach name="blogpic" item="vo">
+                            <img src="__ROOT__uploads/microblog/{$vo.pictureurl}" width="150px" style="margin-left: 3px">
+                        </foreach>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">删除</button>
+                <a class="btn" href="{:U('blogCheck')}">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

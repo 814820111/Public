@@ -1,0 +1,70 @@
+<teachertpl file="header"/>
+<body>
+      <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+            <li ><a href="{:U('index')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">报名列表</a></li>
+            <li ><a href="{:U('add')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">新建报名信息</a></li>
+            <li ><a href="{:U('list1')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">报名人员列表</a></li>
+            <li class="active"><a href="" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">修改报名文章</a></li>
+
+            
+      </ul>
+
+<div style="margin-left: 25px;">
+<form action="{:U('edit_post')}" method="post" class="form-horizontal js-ajax-forms" >
+
+     <input type="hidden" value="{$id}" name="id">
+    <div style=" margin-top: 20px;">
+        <div style="width: 100px; float: left; text-align: right; margin-right: 10px;">学校：</div>
+        <input type="text" class="" readonly="true"  name="begintime" value="{$school}">
+    </div>
+
+      
+    <div style=" margin-top: 20px;">
+        <div style="width: 100px; float: left; text-align: right; margin-right: 10px;">文章标题：</div>
+         <input type="text" name="title" value="{$title}">
+        <div class="clearfix"></div>
+    </div>
+
+    <div style=" margin-top: 20px;">
+        <div style="width: 100px; float: left; text-align: right; margin-right: 10px;">文章内容：</div>
+        <input type="text" style="width: 500px;height: 200px;" name="content" value="{$content}" placeholder="请输入内容"/>
+        <span class="form-required">*</span>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="form-actions">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn" style="border:none;;color:#FFF; background-color:#26a69a; margin-right:10%;"> &nbsp;发  &nbsp;布&nbsp; </button>
+            <button type="reset" class="btn btn-default" style="border:none;;color:#111; background-color:#adadad"> &nbsp;重 &nbsp;置&nbsp; </button>
+        </div>
+    </div>
+
+
+
+      <div style="height: 50px"></div>
+  </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop_self.js"></script>
+      <script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+
+      <script>
+          $(function() {
+              $("#school_grade").change(function() {
+                  $("#school_class").empty();
+                  $.getJSON("__ROOT__/index.php?g=teacher&m=Plan&a=class_json&grade="+$("#school_grade").val(),{},function(data){
+                      if(data.status=="success"){
+                          $("#school_class").append("<option value=0>"+"请选择班级"+"</option>");
+                          for(var key in data.data){
+                              $("#school_class").append("<option value="+data.data[key]["id"]+">"+data.data[key]["classname"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#school_class").append("<option value='0'>没有班级</option>");
+                      }
+                  });
+              });
+          });
+      </script>
+</body>
+</html>

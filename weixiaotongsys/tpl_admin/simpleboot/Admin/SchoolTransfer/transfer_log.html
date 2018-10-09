@@ -1,0 +1,479 @@
+<admintpl file="header" />
+<script src="__ROOT__/statics/js/layer/layer.js" type="text/javascript"></script>
+
+<style>
+.chzn-container-single .chzn-single {
+  position: relative;
+  top: 12px;
+  height: 29px; 
+}
+
+table td{
+  color: black;
+}
+</style>
+<body class="J_scroll_fixed">
+
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('index')}">学校列表</a></li>
+        <li class="active"><a href="{:U('transfer_log')}">划拨日志</a></li>
+ 
+    </ul>
+    <div class="well form-search">
+        省份选择：
+
+        <select  class="province" id="province" style="width: auto;">
+           
+            <option value="">省级选择</option>
+            <foreach name="Province" item="vo">
+            <php>$pro=$province==$vo['term_id']?"selected":"";</php> 
+                <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+            </foreach>
+        </select>
+        市级选择：
+       <input type="hidden" class="new_citys" value="{$new_citys}">
+        <select name="" class="citys"  id="citys" style="width: auto;">
+
+            <option value="">市级选择</option>
+        </select>
+
+        县级选择:&nbsp;
+        <input type="hidden" class="new_message_type" value="{$new_message_type}" >
+        <select name="city_next" class="select_3" id="message_type"  style="width: auto;">
+            <option value="">请选择区域</option>
+
+        </select>
+        学校名称：
+        <select data-placeholder="输入关键字。。。" id="viewOLanguage" class="chzn-select"  tabindex="2" name="school_id">
+            <option value=""></option>
+        </select>
+        <input type="hidden" class="type_school" value="{$schoolid}">
+   
+
+  
+  <!--              <select name="" class="school_status" >
+                <option value='' <?php if($status=='') echo("selected");?>>学校使用状态</option>
+                <option value="0" <?php if($status==0) echo("selected");?>>停用</option>
+                <option value="1" <?php if($status==1) echo("selected");?>>试用期</option>
+                <option value="2" <?php if($status==2) echo("selected");?>>收费期</option>
+            </select> -->
+           <span style="   ">
+            <input type="submit" class="btn btn-primary ss" value="搜索" />&nbsp;&nbsp;
+            <input type="submit" class="btn btn-primary" value="导出" />&nbsp;&nbsp;
+            <a class="btn btn-danger" href="{:U('SchoolTransfer/transfer_log')}">清空</a>
+            </span>
+        
+    </div>
+
+
+
+</div>
+</div>
+
+
+
+
+<table class="table table-hover table-bordered">
+    <thead>
+    <tr>
+        <th width="50">学校ID</th>
+         <th>区域</th>
+        <th>学校名称</th>      
+        <th>加入时间</th>
+        <th>操作</th>
+        <th>原代理商</th>
+        <th>现代理商</th>
+        <th>调整时间</th>
+    </tr>
+    </thead>
+    <tbody>
+    <php>$school_statuses=array("0"=>"停用","1"=>"试用期","2"=>"收费期");</php>
+    <php>$handle_type=array("1"=>"添加","2"=>"删除");</php>
+    <foreach name="transfer_log" item="vo">
+        <tr>
+            <td>{$vo.schoolid}</td>
+            <td>{$vo.area}</td>
+            <td>{$vo.school_name}</td>
+            
+            <td><php>echo date('Y-m-d h:i:s',$vo['create_time']);</php></td>
+            <td>{$handle_type[$vo['handle']]}</td>
+            <td>{$vo.oldagent_name}</td>
+            <td>{$vo.newagent_name}</td>
+            <td>{$vo.handletime}</td>
+          
+   
+        </tr>
+    </foreach>
+    </tbody>
+</table>
+
+<div class="pagination">{$page}</div>
+</div>
+
+<script src="__ROOT__/statics/js/common.js"></script>
+<script src="__ROOT__/statics/chosen/chosen.jquery.js"></script>
+
+
+<script>    
+
+$("#agent").change(function(){
+
+$(".agent_newname").val($("#agent").find("option:selected").text());
+
+})
+$(".agtj").click(function(){
+
+   var  agent_name = $("#agent").find("option:selected").text();
+
+   var new_agentid = $("#agent").val();
+   var old_agentid = $(".old_agentid").val();
+
+	  if(new_agentid==old_agentid)
+	  {
+	  	alert("请勿选择同样的代理商!");
+	  	return false;
+	  }
+
+                 $.ajax({
+		               type: "get",
+		                            url: '__ROOT__/index.php/?g=Admin&m=SchoolTransfer&a=transfer',
+		                            async: true,
+		                            data: $('#myform').serialize(),                          
+		                            dataType: 'json',
+		                            success: function(data) {
+		                              
+		                            if(data.status){
+		                          layer.msg('划拨成功', {
+                                     icon: 1
+                                        ,shade: 0.01,
+                                       });
+                                    agent_obj.text(data.name);
+                                    apentid_obj.attr("data-ag",data.agent_id);
+			                         $("#myModal5").modal("hide");
+			                    }else{
+			                          alert(data.info);
+			                      }
+			                              
+		                            },
+		                            error: function() {
+		                              console.log('系统错误,请稍后重试');
+		                            }
+		                          });
+
+
+  return false;
+
+})
+
+
+$(".transfer").click(function(){
+
+	  agent_obj = $(this).parent().parent().find("td:eq(7)");
+	  apentid_obj = $(this);
+	  var school = $(this).parent().parent().find("td:eq(1)").text();
+	  $(".school_name").val(school);
+	  var schoolid = $(this).parent().parent().find("td:eq(0)").text();
+	  $(".ag_schoolid").val(schoolid);
+      var agent = $(this).attr("data-ag");
+      $(".old_agentid").val(agent);
+
+      var oldname = $(this).parent().parent().find("td:eq(7)").text();
+      $(".agent_oldname").val(oldname);
+	  $("#agent").find("option[value = '"+agent+"']").attr("selected","selected");
+	  $("#myModal5").modal("show");
+})
+
+    $(".ss").click(function(){
+        var type = $(".select_3  option:selected").val();
+        var schooiid=$(".chzn-select  option:selected").val();
+        var classname=$(".classname option:selected").val();
+        var school_status=$(".school_status option:selected").val();
+
+
+        location.href="{:U('SchoolTransfer/transfer_log')}?type="+type+"&schooiid="+schooiid+"&classname="+classname+"&school_status="+school_status+"&province="+$("#province option:selected").val()+"&citys="+$("#citys option:selected").val()+"&school_id="+$('body').find("select[name='school_id']").val()+"";     	
+
+    })
+
+
+
+
+if($("#province").val())
+{
+
+  // console.log($("#province").val());
+
+ var new_citys = $('body').find(".new_citys").val();
+
+
+ var new_message_type = $('body').find('.new_message_type').val();
+
+ 
+
+
+ var type_school = $('body').find(".type_school").val();
+
+
+    if(new_citys)
+    {
+        $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                      // console.log(data);
+                        if(data.status=="success"){
+                        $("#citys").empty();  
+                            $("#citys").append("<option value=>"+"请选择市级"+"</option>");
+                            for(var key in data.data){
+                              
+                                 if(new_citys==data.data[key]["term_id"]){
+                                $("#citys").append("<option value="+data.data[key]["term_id"]+ " selected>"+data.data[key]["name"]+"</option>");
+
+                                    }else{
+                                       $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                                    }
+                              }
+                                           $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                                // console.log(data);
+                                  if(data.status=="success"){
+                                    $("#message_type").empty();
+                                    
+                                      for(var key in data.data){
+                                                    if(new_message_type == data.data[key]["term_id"]){ 
+                                          $("#message_type").append("<option value="+data.data[key]["term_id"]+" selected >"+data.data[key]["name"]+"</option>");
+                                         }else{
+                                          $("#message_type").append("<option value="+data.data[key]["term_id"]+" >"+data.data[key]["name"]+"</option>");
+                                         }
+
+                                      }
+                                      var type = $(".select_3  option:selected").val();
+                                   
+                                   $.ajax({
+		                            type: "post",
+		                            url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+		                            async: true,
+		                            data: {
+		                              type: type
+		                            },
+		                            dataType: 'json',
+		                            success: function(res) {
+		                              $(".Sio").text("")
+		                              var html = "";
+		                              res = eval(res.data);
+		                              for(var i = 0; i < res.length; i++) {
+		                                var school_name = res[i].school_name; //学校的名字
+		                                var schoolid = res[i].schoolid; //学校的ID
+		                                if(schoolid== type_school){
+		                                $("#viewOLanguage").append("<option value="+schoolid+" selected>"+school_name+"</option>");
+		                                 }else{
+		                                   $("#viewOLanguage").append("<option value="+schoolid+" >"+school_name+"</option>");
+		                                 }
+		                              }
+		                              $(".chzn-select").append(html)
+		                              $("#viewOLanguage").chosen();
+		                              $("#viewOLanguage").trigger("liszt:updated");
+		                            },
+		                            error: function() {
+		                              console.log('系统错误,请稍后重试');
+		                            }
+		                          });
+
+
+
+                                  }
+                                  if(data.status=="error"){
+                                      $("#message_type").append("<option value='0'>没有区域</option>");
+                                  }
+                              });   
+                                
+                               
+
+                        }
+                        if(data.status=="error"){
+                            $("#citys").append("<option value='0'>没有市级</option>");
+                        }
+                    });
+
+      }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+          $(function() {
+              $("#province").change(function() {
+              
+                 $("#citys").empty();
+                 $("#message_type").empty();
+                 // $("#student").empty();
+                  $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                  
+                      if(data.status=="success"){
+                      
+                          $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                          for(var key in data.data){
+                              $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#citys").append("<option value='0'>没有市级</option>");
+                      }
+                  });
+              });
+          });
+
+             $(function() {
+              $("#citys").change(function() {
+            
+                 $("#message_type").empty();
+                 // $("#student").empty();
+                  $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                    // console.log(data);
+                      if(data.status=="success"){
+                      
+                          $("#message_type").append("<option value=0>"+"请选择区域"+"</option>");
+                          for(var key in data.data){
+                              $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#message_type").append("<option value='0'>没有市级</option>");
+                      }
+                  });
+              });
+          });
+
+          //      $(function() {
+          //     $("#message_type").change(function() {
+               
+          //        // $("#student").empty();
+          //         $.getJSON("__ROOT__/index.php?g=Admin&m=SchoolManage&a=lookup&type="+$("#message_type").val(),{},function(data){
+          //           console.log(data);
+          //             if(data.status=="success"){
+                      
+          //                 $("#message_type").append("<option value=0>"+"请选择区域"+"</option>");
+          //                 for(var key in data.data){
+          //                     $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+          //                 }
+          //             }
+          //             if(data.status=="error"){
+          //                 $("#message_type").append("<option value='0'>没有市级</option>");
+          //             }
+          //         });
+          //     });
+          // });
+  
+
+
+
+
+    //选择市级的下拉的ajax
+
+    // $(".citys").click(function(){
+    //     $(".jiu").hide();
+    //     var Province =$(".province option:selected").val();
+    //     console.log(Province);
+    //     if(Province==""){
+    //         alert("请选择你要搜索的省")
+    //     }else{
+    //         $.ajax({
+    //             type:"post",
+    //             url: '__ROOT__/index.php/?g=Admin&m=SchoolManage&a=Provinces',
+    //             async:true,
+    //             data:{
+    //                 Province:Province
+    //             },
+    //             dataType: 'json',
+    //             success: function(res) {
+    //                 var html = "";
+    //                 res = eval(res.data);
+    //                 for(var i = 0; i < res.length; i++) {
+    //                     var name=res[i].name;//地区的名字；
+    //                     var term_id=res[i].term_id;//地区的ID
+    //                     html+='<option class="jiu"value="'+term_id+'">'+name+' </option> '
+    //                 }
+    //                 $(".citys").append(html);
+    //             },
+    //             error: function() {
+    //                 console.log('系统错误,请稍后重试');
+    //             }
+    //         });
+    //     }
+
+
+    
+    //选择市级的下拉的ajax
+//    $(".citys").click(function(){
+//        $(".jiu").hide();
+//        var Province =$(".province option:selected").val();
+//        if(Province==""){
+//            alert("请选择你要搜索的省")
+//        }else{
+//            $.ajax({
+//                type:"post",
+//                url: '__ROOT__/index.php/?g=Admin&m=SchoolManage&a=Provinces',
+//                async:true,
+//                data:{
+//                    Province:Province
+//                },
+//                dataType: 'json',
+//                success: function(res) {
+//                    var html = "";
+//                    res = eval(res.data);
+//                    for(var i = 0; i < res.length; i++) {
+//                        var name=res[i].name;//地区的名字；
+//                        var term_id=res[i].term_id;//地区的ID
+//                        html+='<option class="jiu"value="'+term_id+'">'+name+' </option> '
+//                    }
+//                    $(".citys").append(html);
+//                },
+//                error: function() {
+//                    console.log('系统错误,请稍后重试');
+//                }
+//            });
+//        }
+//
+//    })
+
+
+
+    $("#viewOLanguage").chosen();
+    $("#viewOLanguage").trigger("liszt:updated");
+
+    $(".select_3").change(function(){
+        var type = $(".select_3  option:selected").val();
+        $.ajax({
+            type:"post",
+            url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+            async:true,
+            data:{
+                type:type
+            },
+            dataType: 'json',
+            success: function(res) {
+                $(".Sio").text("")
+                var html = "";
+                res = eval(res.data);
+                for(var i = 0; i < res.length; i++) {
+                    var school_name=res[i].school_name;//学校的名字
+                    var schoolid=res[i].schoolid;//学校的ID
+                    html+='<option class="Sio" value="'+schoolid+'">'+school_name+' </option> '
+                }
+                $(".chzn-select").append(html)
+                $("#viewOLanguage").chosen();
+                $("#viewOLanguage").trigger("liszt:updated");
+            },
+            error: function() {
+                console.log('系统错误,请稍后重试');
+            }
+        });
+    })
+</script>
+</body>
+</html>

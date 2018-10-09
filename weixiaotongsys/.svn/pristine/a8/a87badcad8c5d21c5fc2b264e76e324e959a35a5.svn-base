@@ -1,0 +1,71 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('Admin/Teacher/index')}">所有老师</a></li>
+        <li><a href="{:U('Admin/Teacher/duty_manage',array('id'=>$teacherid))}">职务管理</a></li>
+        <li class="active"><a href="{:U('Admin/Teacher/add_duty',array('id'=>$teacherid))}">添加职务</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('add_duty_post')}">
+            <fieldset>
+              <div class="control-group">
+                    <label class="control-label">教师id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="teacherid" value="{$teacherid}" readOnly="true">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">学校:</label>
+                    <div class="controls">
+                        <select id="school"  class="input"  name="school_id">
+                          <option>请选择学校</option>
+                           <foreach name="schoollist" item="vo">
+                              <option value="{$vo.schoolid}">{$vo.school_name}</option>
+                           </foreach>    
+                        </select>
+                    </div>
+                    <div style="height:30px;"></div>
+                    <label class="control-label">职务:</label>
+                    <div class="controls">
+                        <select class="input"  name="duty_id" id="duty">
+                         <option>请选择</option>
+                        </select>
+                    </div>
+                </div> 
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" name="teacher_id" value="{$teacherid}" />
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit">更新</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
+<SCRIPT type=text/javascript>
+        $(function() {
+        $("#school").change(function() {
+     
+
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=teacher_duty&schoolid="+$("#school").val(),{},function(data){
+            	$("#duty").empty();
+   
+                if(data.status=="success"){
+                	
+                   $("#duty").append("<option value='0'>请选择</option>");
+                for(var key in data.data){
+                    $("#duty").append("<option value="+data.data[key]["id"]+">"+data.data[key]["name"]+"</option>");
+                }
+                }
+                if(data.status=="error"){
+                    $("#duty").append("<option value='0'>没有职务</option>");
+                }
+            }); 
+
+           });
+        });
+</script>

@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑 Light";
+}
+.clearfix{
+	clear: both;
+}
+body{
+	background-color: rgb(239,240,242);
+}
+.divide{
+	border: none;
+	border-top: 1px dashed rgb(230,230,230);
+}
+.advise{
+	background-color: white;
+	height: 160px;
+	width: 100%;
+	resize:none;
+	border: none;
+	padding-top: 7px;
+	padding-left: 10px;
+}
+/*.advise span{
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: 10px;
+	font-size: 14.2px;
+	color: rgb(113,113,113);
+}*/
+.submit{
+	background-color: rgb(6,193,142);
+	font-size: 15px;
+	color: white;
+	font-weight: 600;
+	margin: 12px 27px;
+	text-align: center;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 5px;
+}
+.history{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.history .hist{
+	display: inline-block;
+	margin-top: 4px;
+	margin-bottom: 2.5px;
+	font-size: 14.5px;
+	color: rgb(113,113,113);
+}
+.history .massage{
+	margin-top: 7.5px;
+	font-size: 13.5px;
+	border-radius: 5px;
+	background-color: white;
+	padding-right: 5px;
+}
+.history .massage .question{
+	padding-top: 10px;
+}
+.history .massage .left{
+	float: left;
+	width: 20px;
+}
+.history .massage .right{
+	margin-left: 40px;
+	margin-top: 1px;
+	font-weight: 600;
+}
+.history .massage .time{
+	font-size: 12.5px;
+	color: rgb(113,113,113); 
+	width: 100%;
+	text-align: right;
+	margin-top: 1px;
+	margin-bottom: 1.5px;
+}
+.history .massage .reply{
+	color: rgb(113,113,113);
+	padding-top: 10px;
+	padding-bottom: 13px;
+}
+.history .massage img{
+	width: 19px;
+	margin-bottom: -4px;
+	margin-left: 10px;
+}

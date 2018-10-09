@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="__TMPL__public/css/zhanghaobangding.css">
+    <!--<link rel="stylesheet" href="__TMPL__public/css/zhanghaobangding2.css">-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <title>账号绑定</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <style>
+        .okBtn {
+            width: 70%;
+            height: 40px;
+            margin: 35px auto;
+            border-radius: 20px;
+            background-color: rgb(51, 189, 97);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            font-size: 15px;
+        }
+        
+        #stu_name.focus {
+            border: none;
+        }
+        
+        .show_msg {
+            width: 100%;
+            height: 35px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            z-index: 999;
+        }
+        
+        .show_span {
+            display: inline-block;
+            height: 35px;
+            padding: 0 15px;
+            line-height: 40px;
+            background: #08B984;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+<div id="zhezhao" style="z-index:99;width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.6);display: none;"></div>
+    <div class="top_box" style="z-index: 5;">
+        <a href="#"><img src="__TMPL__public/img/img67.png"></a>
+        账号绑定
+        <div class="clearfix"></div>
+    </div>
+    <div class="woshi" style="margin-top: 50px;border-bottom: none">
+        <div class="jiazhang">
+            <a href="build.html" style="text-decoration: none"></a>我是家长</div>
+        <div class="laoshi" style="color:black;">我是老师</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="fenge"></div>
+    <div class="touxiang">
+        <div class="left">
+            <img src={$headimg} alt="">
+            <span>{$nickname}</span>
+        </div>
+        <div class="center">
+            <img src="__TMPL__public/img/p01.png" alt="">
+        </div>
+        <div class="right">
+            <img src="__TMPL__public/img/img02.png" alt="">
+            <span>我的孩子</span>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="fenge"></div>
+    <form action="">
+        <div class="input">
+            <div class="word">孩子姓名 ：</div>
+            <input type="text" id="stu_name" style="border-color: #aaaaaa;border-style: solid;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px">
+        </div>
+        <div class="input">
+            <div class="word">绑 &nbsp;定&nbsp; 码 ：</div>
+            <input type="text" id="number" style="border-color: #aaaaaa;border-style: solid;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 1.5px;border-left-width: 0px"></div>
+        <div class="input">
+            <div class="word">家长姓名 ：</div>
+            <input type="text" id="parent_name" style="border-color: #aaaaaa;border-style: solid;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px"></div>
+        <div class="input">
+            <div class="word">关&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系 ： </div>
+            <select name="" id="selec" style="border-color: #aaaaaa;border-style: solid;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px">
+            <option value="">请选择</option>
+            <option value="爸爸">爸爸</option>
+            <option value="妈妈">妈妈</option>
+            <option value="姑姑">姑姑</option>
+            <option value="奶奶">奶奶</option>
+        </select>
+        </div>
+        <div class="input">
+            <div class="word">手机号码 ：</div>
+            <input type="text" id="phone" style="border-color: #aaaaaa;border-style: solid;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px"></div>
+
+        <div class="lianxi">
+            <img src="__TMPL__public/img/p2.png" alt="">
+            <span>
+				<b>请联系学校管理员获取，一次绑定一个孩子</b>
+			</span>
+        </div>
+        <div id="okBtn" class="okBtn">确认绑定</div>
+        <div class="clearfix"></div>
+    </form>
+    <script>
+        function showMsg(text, position) {
+            var show = $('.show_msg').length
+            if (show > 0) {
+
+            } else {
+                var div = $('<div></div>');
+                div.addClass('show_msg');
+                var span = $('<span></span>');
+                span.addClass('show_span');
+                span.appendTo(div);
+                span.text(text);
+                $('body').append(div);
+            }
+            $(".show_span").text(text);
+
+            $(".show_msg").css('bottom', '70%');
+
+            $('.show_msg').hide();
+            $('.show_msg').fadeIn(1200);
+            $('.show_msg').fadeOut(1200);
+        }
+
+        //
+        $(".laoshi").click(function() {
+            var schoolid = {$schoolid};
+            window.location.href = "__ROOT__/index.php/Weixin/Index/Tbuild?schoolid="+schoolid+"";
+        })
+
+        $(".okBtn").click(function() {
+            var schoolid = {$schoolid};
+           // alert(schoolid);
+            var stu_name = $("#stu_name").val();
+            var phone = $("#phone").val();
+            var relation = $("#selec").val();
+            var name = $("#parent_name").val();
+            var number = $("#number").val();
+            var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+            if (stu_name == "" || phone == "" || relation == "" || name == "" || number == "" || stu_name == "") {
+                showMsg('信息填写不完整', 'top');
+            }else if(!myreg.test(phone)){
+                showMsg('请输入有效的手机号码！', 'top');
+            } else {
+                $.ajax({
+                    url: "__ROOT__/index.php/weixin/index/buildings",
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        stu_name: stu_name,
+                        name: name,
+                        relation: relation,
+                        phone: phone,
+                        number: number,
+                        schoolid:schoolid
+                    },
+                    success: function(res) {
+                        if (res.status == 'success') {
+                            $('#zhezhao').show();
+                            showMsg(res.data, 'top');
+                            location.href = "__ROOT__/index.php/Weixin/Accredit/accept?schoolid="+schoolid+"";
+                        } else {
+                            showMsg(res.data, 'top');
+                        }
+                    },
+                    error: function(res) {
+                        showMsg(res.data, 'top');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

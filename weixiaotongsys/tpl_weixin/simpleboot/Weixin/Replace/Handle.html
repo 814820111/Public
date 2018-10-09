@@ -1,0 +1,633 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="__TMPL__public/css/dai-daichuli.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__public/js/new_file.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__public/css/commes.css" />
+    <link rel="stylesheet" href="__TMPL__public/css/photoswipe.css">
+    <link rel="stylesheet" href="__TMPL__public/css/default-skin/default-skin.css">
+    <script src="__TMPL__public/js/photoswipe.min.js"></script>
+    <script src="__TMPL__public/js/photoswipe-ui-default.min.js"></script>
+    <!--图片延迟加载-->
+    <script src="__TMPL__public/js/jquery.lazyload.js"></script>
+    <style>
+        a:hover{
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent;
+
+        }
+        .wenzig{
+            font-size: 13.5px;
+            color: #262626;
+            padding: 5px 5px;
+        }
+        pre {
+            white-space: pre-wrap ;
+            word-wrap: break-word;
+            display: inline-block;
+            font-size: 14px;
+            color: rgb(70,70,70);
+            font-family: "微软雅黑 Light";
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <input type="hidden" value={$studentid} id="studentid">
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <div class="top_box" style="z-index: 99">
+        <img src="__TMPL__public/images/img674.png" class="fanhui"> 代接确认
+        <div class="clearfix"></div>
+    </div>
+    <div class="big" style="margin-top: 40px;">
+        <!--<div class="hided">-->
+            <!--<img src="__TMPL__public/images/图片默认加载.png" style="width: 20%;position: absolute;top: 20%;left: 35%;" />-->
+            <!--<p style="width: 20%;position: absolute;top: 65%;left: 38%;">今日暂时没更多代接送信息</p>-->
+        <!--</div>-->
+
+        <div class="tab" style="font-weight: normal;z-index: 2">
+            <a href="{:U('Overdue')}">
+                <span class="one">未处理
+        </span>
+            </a>
+            <a href="{:U('Handle')}">
+                <span class="tro">
+        	待处理
+        	<div></div>
+        </span>
+            </a>
+            <a href="{:U('Finish')}">
+                <span class="two">已完成
+        	
+        </span>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="bi" >
+
+    </div>
+
+
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function trimSpace(array) {
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == "" || typeof(array[i]) == "undefined") {
+                    array.splice(i, 1);
+                    i = i - 1;
+
+                }
+            }
+            return array;
+        }
+        function Replace_Reply(teacherid,teachername,parentid,content,schoolid,studentid){
+            $.ajax({
+                url: "__ROOT__/index.php/Apps/SendTpl/Replace_Reply",
+                type: "post",
+                async: true,
+                dataType: "json",
+                data: {
+                    content: content,
+                    schoolid: schoolid,
+                    teacherid:teacherid,
+                    teachername:teachername,
+                    parentid:parentid,
+                    studentid:studentid
+
+                },
+                success: function(res){
+
+                },
+                error: function(res) {
+
+                }
+            });
+            return true;
+        }
+        $("document").ready(function() {
+            var studentid = $("#studentid").val();
+            var schoolid = {$schoolid};
+            var timestamp = Date.parse(new Date());
+            timestamp = timestamp / 1000;
+            //获取当前的时间戳	  
+            $("#jiangs").hide();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=student&a=gettransportconfirmation',
+                async: true,
+                data: {
+                    studentid: studentid,
+                    schoolid:schoolid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    var g = 0;
+                    res = eval(res.data);
+                    console.log(res);
+                    var z = 0;
+                    //处理发来的JOS数据
+                    for (var i = 0; i < res.length; i++) {
+                        //循环遍历数组
+                        if (res[i].delivery_status == 0) {
+                            //判断代接的信息状态
+                            var cf = tmiess(res[i].delivery_time);
+                            //把从后台传的时间戳转换成当前的时间格式2017-2- 2：15
+                            var current = tmiess(timestamp);
+                            //把当前的时间戳转换成当前时间去掉时间中的下划线 格式20172215
+                            if (cf == current) {
+                                //把当前的时间和发送的时间进行对比
+                                g++;
+                                //i是个全局变量 没进来一次让i加一次从而判断今天又没有消息
+
+                                var mc = tmies(res[i].delivery_time);
+                                //把老师发的代接送的时间戳解析成当前的时间
+                                var teacheravatar = res[i].photo;
+                                //老师发布的待接人的图片
+                                var photo = res[i].teacheravatar;
+                                //老师的头像
+                                var teachername = res[i].teachername;//老师名字
+
+                                var teacherid = res[i].teacherid;//老师ID
+
+
+                                html += '<div class="bigbox">';
+                                html += '<div class="teacher">';
+                                html += '<img src="{$Think.const.SR}' + photo + '"style="width: 50px;height: 50px;border-radius: 25px;">'; //发布人的头像
+
+                                html += '<div class="left">';
+                                html += '<p class="top">' + res[i].teachername + '</p>';
+                                html += '<p class="bot">' + res[i].teacher_duty + '</p>';
+                                html += '</div>';
+                                html += '<p class="right">' + mc + '</p>';
+                                html += '<div class="clearfix"></div>';
+                                html += '</div>';
+                                html += '<p class="wenzig"></p><pre style="margin-left: 10px;margin-bottom: 10px">' + res[i].content + '</pre>'+'<br>';
+//                                html += ' <div class="photo" >';
+                                html += ' <div class="demo" style="margin-bottom: 15px;float:left;" >';
+                                photos = teacheravatar.split(",");
+                                photos = trimSpace(photos);
+
+                                var num=photos.length;
+                                if(num==1){
+//                                    html += '<div style="margin-left:5px;width:100%;max-height:300px;" class="my">'
+                                    html += '<div style="margin-left: 10px;width:100%;max-height:300px;" class="my" id="my-gallery-'+z+'">'
+                                    for (var g = 0; g < photos.length; g++) {
+                                        image = photos[g].split(":");
+                                        image = trimSpace(image);
+                                        var zhaopian = image[0]; //内容照片
+                                        var width = image[1];
+                                        if(width){
+                                            width = width;
+                                        }else{
+                                            width = 800;
+                                        }
+                                        var  height = image[2];
+                                        if(height){
+                                            height =height;
+                                        }else{
+                                            height = 800;
+                                        }
+
+
+                                        html += '<figure>'
+                                       // html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        //html += '<img  style="max-width:250px;max-height:250px;" src="{$Think.const.SR}' + zhaopian + '"/>'
+                                        html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        html += '<img  class="lazy" style="max-width:250px;max-height:250px;" src="__TMPL__public/img/grey.gif" data-original="{$Think.const.SR}' + zhaopian + '"/>'
+
+                                        html += '</a>'
+                                        html += '</figure>'
+                                    }
+                                    html += '</div>'
+                                }else{
+//                                    html += '<div style="margin-left:5px;" class="my-gallery">'
+                                    html += '<div style="margin-left: 5px;" class="my-gallery" id="my-gallery-'+z+'">'
+                                    for (var g = 0; g < photos.length; g++) {
+                                        image = photos[g].split(":");
+                                        image = trimSpace(image);
+                                        var zhaopian = image[0]; //内容照片
+                                        var width = image[1];
+                                        if(width){
+                                            width = width;
+                                        }else{
+                                            width = 800;
+                                        }
+                                        var  height = image[2];
+                                        if(height){
+                                            height =height;
+                                        }else{
+                                            height = 800;
+                                        }
+
+
+                                        html += '<figure>'
+                                       // html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                       //html += '<img src="{$Think.const.SR}' + zhaopian + '" />'
+                                        html += ' <a href="{$Think.const.SRHB}' + zhaopian + '" data-size="'+width+'x'+height+'">'
+                                        html += '<img class="lazy" src="__TMPL__public/img/grey.gif" data-original="{$Think.const.SR}' + zhaopian + '"/>'
+                                        html += '</a>'
+                                        html += '</figure>'
+                                    }
+                                    html += '</div>'
+                                }
+                                html += '</div>';
+                                html +='<hr style="width: 100%;border: none;padding-top: .5px;border-top: .5px dashed;color: #d2d2d2 ;">';
+                                html += '<div class="but">';
+                                html += '<div class="no"><span style="font-size: 13.5px;">不同意</span>';
+                                html +='<input class="cong" type="hidden" value="' + res[i].id + '"> ';
+                                html += '<input class="teacherid" type="hidden" value="' + teacherid + '">';
+                                html += '<input class="teachername" type="hidden" value="' + teachername + '">';
+                                html +='</div>'
+                                html += '<div class="yes"><span style="font-size: 13.5px;">同&nbsp;&nbsp;&nbsp;意   </span> ';
+                                html +='<input class="sequence" type="hidden"value="' + res[i].id + '">';
+                                html += '<input class="teacherid" type="hidden" value="' + teacherid + '">';
+                                html += '<input class="teachername" type="hidden" value="' + teachername + '">';
+                                html+='</div>';
+                                html += '<div class="clearfix"></div>';
+                                html += '</div>';
+                                html += '</div>'
+                            }
+                        }
+                        z = z+1;
+                    }
+                    $(".bi").append(html);
+                    var img_width = $(".my-gallery img").width()
+                    $(".my-gallery img").height(img_width)
+                    for(var k = 0; k <z ; k++ ){
+                        var obj = $("#my-gallery-"+k+" img");
+                        var w = obj.width();
+                        var l = obj.length;
+                        if (w){
+                            if (l > 3){
+                                var divW = w * 3 + 4 * (l-1);
+                                $("#my-gallery-"+k).parent().css({float: 'none'});
+                                //$(".my-gallery").css('float', 'none');
+                            }else{
+                                var divW = w * l + 4 * (l-1);
+                                $("#my-gallery-"+k).parent().css('width', divW);
+
+                            }
+
+                            $(".my-gallery").css('float', 'none');
+                            $("#my-gallery-"+k).children().css('width', img_width);
+
+                        }
+                    }
+                    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                        // parse slide data (url, title, size ...) from DOM elements
+                        // (children of gallerySelector)
+                        var parseThumbnailElements = function(el) {
+                            var thumbElements = el.childNodes,
+                                numNodes = thumbElements.length,
+                                items = [],
+                                figureEl,
+                                linkEl,
+                                size,
+                                item;
+
+                            for (var i = 0; i < numNodes; i++) {
+
+                                figureEl = thumbElements[i]; // <figure> element
+
+                                // include only element nodes
+                                if (figureEl.nodeType !== 1) {
+                                    continue;
+                                }
+
+                                linkEl = figureEl.children[0]; // <a> element
+
+                                size = linkEl.getAttribute('data-size').split('x');
+
+                                // create slide object
+                                item = {
+                                    src: linkEl.getAttribute('href'),
+                                    w: parseInt(size[0], 10),
+                                    h: parseInt(size[1], 10)
+                                };
+
+
+
+                                if (figureEl.children.length > 1) {
+                                    // <figcaption> content
+                                    item.title = figureEl.children[1].innerHTML;
+                                }
+
+                                if (linkEl.children.length > 0) {
+                                    // <img> thumbnail element, retrieving thumbnail url
+                                    item.msrc = linkEl.children[0].getAttribute('src');
+                                }
+
+                                item.el = figureEl; // save link to element for getThumbBoundsFn
+                                items.push(item);
+                            }
+
+                            return items;
+                        };
+
+                        // find nearest parent element
+                        var closest = function closest(el, fn) {
+                            return el && (fn(el) ? el : closest(el.parentNode, fn));
+                        };
+
+                        // triggers when user clicks on thumbnail
+                        var onThumbnailsClick = function(e) {
+                            e = e || window.event;
+                            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                            var eTarget = e.target || e.srcElement;
+
+                            // find root element of slide
+                            var clickedListItem = closest(eTarget, function(el) {
+                                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                            });
+
+                            if (!clickedListItem) {
+                                return;
+                            }
+
+                            // find index of clicked item by looping through all child nodes
+                            // alternatively, you may define index via data- attribute
+                            var clickedGallery = clickedListItem.parentNode,
+                                childNodes = clickedListItem.parentNode.childNodes,
+                                numChildNodes = childNodes.length,
+                                nodeIndex = 0,
+                                index;
+
+                            for (var i = 0; i < numChildNodes; i++) {
+                                if (childNodes[i].nodeType !== 1) {
+                                    continue;
+                                }
+
+                                if (childNodes[i] === clickedListItem) {
+                                    index = nodeIndex;
+                                    break;
+                                }
+                                nodeIndex++;
+                            }
+
+
+
+                            if (index >= 0) {
+                                // open PhotoSwipe if valid index found
+                                openPhotoSwipe(index, clickedGallery);
+                            }
+                            return false;
+                        };
+
+                        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                        var photoswipeParseHash = function() {
+                            var hash = window.location.hash.substring(1),
+                                params = {};
+
+                            if (hash.length < 5) {
+                                return params;
+                            }
+
+                            var vars = hash.split('&');
+                            for (var i = 0; i < vars.length; i++) {
+                                if (!vars[i]) {
+                                    continue;
+                                }
+                                var pair = vars[i].split('=');
+                                if (pair.length < 2) {
+                                    continue;
+                                }
+                                params[pair[0]] = pair[1];
+                            }
+
+                            if (params.gid) {
+                                params.gid = parseInt(params.gid, 10);
+                            }
+
+                            return params;
+                        };
+
+                        var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                            var pswpElement = document.querySelectorAll('.pswp')[0],
+                                gallery,
+                                options,
+                                items;
+
+                            items = parseThumbnailElements(galleryElement);
+
+                            // define options (if needed)
+                            options = {
+                                fullscreenEl : false,
+                                //点击图片关闭
+                                tapToClose: true,
+                                // define gallery index (for URL)
+                                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                                getThumbBoundsFn: function(index) {
+                                    // See Options -> getThumbBoundsFn section of documentation for more info
+                                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                        pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                        rect = thumbnail.getBoundingClientRect();
+
+                                    return {
+                                        x: rect.left,
+                                        y: rect.top + pageYScroll,
+                                        w: rect.width
+                                    };
+                                }
+
+                            };
+
+                            // PhotoSwipe opened from URL
+                            if (fromURL) {
+                                if (options.galleryPIDs) {
+                                    // parse real index when custom PIDs are used
+                                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                                    for (var j = 0; j < items.length; j++) {
+                                        if (items[j].pid == index) {
+                                            options.index = j;
+                                            break;
+                                        }
+                                    }
+                                } else {
+                                    // in URL indexes start from 1
+                                    options.index = parseInt(index, 10) - 1;
+                                }
+                            } else {
+                                options.index = parseInt(index, 10);
+                            }
+
+                            // exit if index not found
+                            if (isNaN(options.index)) {
+                                return;
+                            }
+
+                            if (disableAnimation) {
+                                options.showAnimationDuration = 0;
+                            }
+
+                            // Pass data to PhotoSwipe and initialize it
+                            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                            gallery.init();
+                        };
+
+                        // loop through all gallery elements and bind events
+                        var galleryElements = document.querySelectorAll(gallerySelector);
+
+                        for (var i = 0, l = galleryElements.length; i < l; i++) {
+                            galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                            galleryElements[i].onclick = onThumbnailsClick;
+                        }
+
+                        // Parse URL and open gallery if it contains #&pid=3&gid=1
+                        var hashData = photoswipeParseHash();
+                        if (hashData.pid && hashData.gid) {
+                            openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                        }
+                    };
+
+                    // execute above function
+                    initPhotoSwipeFromDOM('.my-gallery');
+                    initPhotoSwipeFromDOM('.my');
+                    $('img.lazy').lazyload({
+                        effect:"fadeIn",
+                        appear: function(num,setting){
+                            //console.log("一开始还剩"+num+"张未加载")
+                        },
+                        load: function(num,setting){
+                            // console.log("接着还剩"+num+"张未加载")
+                        }
+
+                    });
+                    //点击不同意触发的事件
+                    $(".no").click(function() {
+                            //用户的ID
+                            var parentid = $("#userid").val();
+                            var transportid = $('.cong', this).val();
+                            var teacherid = $('.teacherid', this).val();
+                            var teachername = $('.teachername', this).val();
+                            var schoolid = $("#schoolid").val();
+                            var studentid = $("#studentid").val();
+                            //代接的主键ID
+                            var status = 2;
+                            var content = "不同意";
+                            //2为不同意接送的状态
+                            $.ajax({
+                                type: "post",
+                                url: '__ROOT__/index.php/?g=apps&m=student&a=confirmtransport',
+                                async: true,
+                                data: {
+                                    parentid: parentid,
+                                    status: status,
+                                    transportid: transportid
+                                },
+                                success: function(data){
+                                    Replace_Reply(teacherid,teachername,parentid,content,schoolid,studentid);
+                                    location.href = "{:U('Finish')}";
+                                },
+
+                                error: function() {
+
+                                    alert('系统错误,请稍后重试');
+                                }
+
+                            });
+                        });
+                        //判断页面目前有没代接送的信息	
+                    if (g == 0) {
+                        $(".hided").show();
+                    }
+                    //点击同意的触发事件
+                    $(".yes").click(function() {
+                        var parentid = $("#userid").val();
+                        var transportid = $('.sequence', this).val();
+                        var teacherid = $('.teacherid', this).val();
+                        var teachername = $('.teachername', this).val();
+                        var schoolid = $("#schoolid").val();
+                        var studentid = $("#studentid").val();
+                        //代接的主键ID
+                        var status = 1;
+                        var content = "同意";
+                        //2为不同意接送的状态
+                        $.ajax({
+                            type: "post",
+                            url: '__ROOT__/index.php/?g=apps&m=student&a=confirmtransport',
+                            async: true,
+                            data: {
+                                parentid: parentid,
+                                status: status,
+                                transportid: transportid
+                            },
+                            success: function(data) {
+                                Replace_Reply(teacherid,teachername,parentid,content,schoolid,studentid);
+                                location.href = "{:U('Finish')}";
+                            },
+
+                            error: function() {
+
+                                alert('系统错误,请稍后重试');
+                            }
+                        });
+
+                    })
+
+
+                },
+                error: function() {
+
+                    alert('系统错误,请稍后重试');
+                }
+
+
+            });
+
+        })
+
+        $(".fanhui").click(function() {
+            location.href = "__ROOT__/index.php/weixin/index";
+        })
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<div class="footer_box">
+    <div class="footer">
+        <div class="content_piece">
+            <a href="#">
+                <div class="content_weibo">
+                    <p>关注新浪微博</p>
+                    <p>了解实时动态</p>
+                </div>
+            </a>
+        </div>
+        <div class="content_piece">
+            <a href="#">
+                <div class="content_wechat">
+                    <p>关注官方微信</p>
+                    <p>百万优惠放送</p>
+                </div>
+            </a>
+        </div>
+        <div class="content_piece">
+            <a href="#">
+                <div class="content_call">
+                    <p>联系客服</p>
+                    <p>Bug实时反馈</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

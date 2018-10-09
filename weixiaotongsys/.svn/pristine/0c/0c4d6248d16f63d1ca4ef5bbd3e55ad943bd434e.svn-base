@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <tc_include file="public:head" />
+
+</head>
+
+<body class="body-white">
+    <tc_include file="public:center-nav" />
+    <div class="message-box">
+        <div class="main">
+            <div class="left-list">
+                <div id="message-list" class="text-first">
+                    消息
+                </div>
+                <div id="massage-list-content" class="text-second">
+                    <ul>
+                        <a href="#">
+                            <li>最新消息</li>
+                        </a>
+                        <a href="#">
+                            <li>发消息</li>
+                        </a>
+                        <a href="#">
+                            <li>家长叮嘱</li>
+                        </a>
+                        <a href="#">
+                            <li>通知公告</li>
+                        </a>
+                        <a href="#">
+                            <li>待办事宜</li>
+                        </a>
+                        <a href="#">
+                            <li>园丁沟通</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="text-first">
+                    通讯录
+                </div>
+                <div class="text-second">
+                    <ul>
+                        <a href="#">
+                            <li>家长</li>
+                        </a>
+                        <a href="#">
+                            <li>园丁</li>
+                        </a>
+                        <a href="#">
+                            <li>群聊</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="text-first">
+                    老师点名
+                </div>
+                <div class="text-second">
+                    <ul>
+                        <a href="#">
+                            <li>老师点名</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="message-list">
+                    <h3>最新消息</h3>
+                    <table>
+                        <tr>
+                            <td>刘萌萌家长：如果你无法简洁的表达你的想法，那说明你还不够了解它。如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>王刚同事：如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>刘萌萌家长：如果你无法简洁的表达你的想法，那说明你还不够了解它。如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>王刚同事：如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>刘萌萌家长：如果你无法简洁的表达你的想法，那说明你还不够了解它。如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>王刚同事：如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>刘萌萌家长：如果你无法简洁的表达你的想法，那说明你还不够了解它。如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>王刚同事：如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>刘萌萌家长：如果你无法简洁的表达你的想法，那说明你还不够了解它。如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>王刚同事：如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>刘萌萌家长：如果你无法简洁的表达你的想法，那说明你还不够了解它。如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+                        <tr>
+                            <td>王刚同事：如果你无法简洁的表达你的想法，那说明你还不够了解它。</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+
+    <tc_include file="public:footer" />
+</body>
+
+</html>

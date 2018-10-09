@@ -1,0 +1,50 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('parentsuser')}">家长列表</a></li>
+        <li><a href="{:U('addparentsuser')}">新增用户</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">用户ID</th>
+            <th>姓名</th>
+            <th>手机号</th>
+            <!--<th>学校</th>-->
+            <!--<th>班级</th>-->
+            <th>头像</th>
+            <th>创建时间</th>
+            <th>状态</th>
+            <th>绑定学生</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>$user_status=array("0"=>"待激活","1"=>"已激活","2"=>"已拉黑");</php>
+        <foreach name="parentsuser" item="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.name|default="未填写"}</td>
+                <td>{$vo.phone}</td>
+                <!--<td>{$vo.schoolname|default="未填写"}</td>-->
+                <!--<td>{$vo.classname|default="未填写"}</td>-->
+                <td><img width="30" height="30" src="__ROOT__uploads/avatar/{$vo.photo}" /></td>
+                <td><php>echo date('Y-m-d',$vo['time']);</php></td>
+                <td>{$user_status[$vo['status']]}</td>
+                <td><a href='{:U("bindingstu",array("id"=>$vo["id"]))}'>绑定管理</a></td>
+                <td>
+                    <a href='{:U("passwordReset",array("id"=>$vo["id"]))}'>密码重置</a> |
+                    <a href="{:U('delete_teacher',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要删除此用户吗？">删除</a> |
+                    <br /> <a href='{:U("ch_userinfo",array("id"=>$vo["id"]))}'>修改资料</a> |
+                    <a href='{:U("sendmassage",array("id"=>$vo["id"]))}'>发送短信</a> |
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

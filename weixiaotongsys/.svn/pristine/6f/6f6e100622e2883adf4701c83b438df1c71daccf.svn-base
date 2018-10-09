@@ -1,0 +1,541 @@
+<admintpl file="header"/>
+<style>
+
+    .chzn-container-single .chzn-single {
+        position: relative;
+        top: 12px;
+        height: 29px;
+    }
+
+</style>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('DeviceManage/index')}">所有设备</a></li>
+        <!--<li><a href="{:U('DeviceManage/add')}">添加设备</a></li>-->
+    </ul>
+    <div class="common-form">
+        <form class="well form-search" method="post" action="{:U('DeviceManage/device_online')}" r>
+            <div class="search_type cc mb10">
+                <div class="mb10">
+					<span class="mr20">
+							省份：
+						<select class="province" name="province" id="province" style="width: 105px;">
+							<option value="">省级选择</option>
+							<foreach name="Province" item="vo">
+                                <php>$pro=$province==$vo['term_id']?"selected":"";</php>
+								<option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+							</foreach>
+						</select>
+                        <input type="hidden" class="new_citys" value="{$new_citys}" >
+						市级：
+						<select name="city" class="citys" id="citys" style="width: 105px;">
+							<option value="0" class="">市级选择</option>
+						</select>
+                         <input type="hidden" class="new_message_type" value="{$new_message_type}">
+						县级:&nbsp;
+						<select  class="select_3" id="message_type" name = "message_type" style="width: 105px;">
+							<option value="" class="">请选择区域</option>
+
+						</select>
+
+						学校:
+							<select data-placeholder="输入关键字。。。" id="viewOLanguage" class="chzn-select"  tabindex="2" name="school_id">
+								<option value=""></option>
+							</select>
+						</span>
+                    <input type="hidden" class="type_school" value="{$schoolid}">
+                </div>
+            </div>
+            <br>
+            <div class="mb10">
+                <!--<span class="mr20">-->
+                <!--公话号码：-->
+                <!--<input type="text" name="keyword" id='keyword' style="width: 200px;" value="{$keyword}">-->
+                <!--</span>-->
+                <!--<span class="mr20">-->
+                <!--公话编号：-->
+                <!--<input type="text" name="keyword" id='keyword' style="width: 200px;" value="{$keyword}">-->
+
+                <!--</span>-->
+                <!--<span class="mr20">-->
+                <!--IMEI：-->
+                <!--<input type="text" name="keyword" id='keyword' style="width: 200px;" value="{$keyword}">-->
+                <!---->
+                <!--</span>-->
+                查询：
+                <select  class="tiaojian" name="keywordtype" style="width: 100px">
+                    <php>$keyro=$tiaojian=='phone'?"selected":"";</php>
+                    <php>$keyros=$tiaojian=='number'?"selected":"";</php>
+                    <option value="0">查询类型</option>
+                    <option value="phone" {$keyro}>公话号码</option>
+                    <option value="number" {$keyros}>设备编号</option>
+                </select>
+                <input type="text" name="keyword" class="zhi" style="width: 200px;" value="{$shuzhi}"
+                       placeholder="请输入关键字...">
+                <input type="submit" class="btn btn-primary ss" value="搜索"/>
+                <input type="button" class="btn btn-primary" value="导出"/>
+                <a class="btn btn-danger" href="{:U('device_online')}">清空</a>
+
+            </div>
+        </form>
+
+        <form method="post" class="J_ajaxForm" action="#">
+            <php> $status=array("1"=>"显示","0"=>"隐藏");
+                $types=array("1"=>"大屏机","2"=>"电话","3"=>"通道闸");
+                $controls=array("1"=>"监控","0"=>"不监控");
+                $voices=array("1"=>"是","0"=>"否");
+                $updates=array("-1"=>"正在下发","0"=>"开始下发","1"=>"等待下发");
+            </php>
+            <table width="100%" class="table table-hover table-bordered table-list ">
+                <thead>
+                <tr>
+                    <th width="16"><label><input type="checkbox" class="J_check_all" data-direction="x"
+                                                 data-checklist="J_check_x"></label></th>
+                    <th style="min-width:50px">ID</th>
+                    <th style="min-width:50px">所属SA</th>
+                    <th style="min-width:50px">市/镇区</th>
+                    <th style="min-width:50px">学校名称</th>
+                    <th style="min-width:50px">设备编号</th>
+                    <th style="min-width:50px">设备类型</th>
+                    <th style="min-width:80px">SN</th>
+                    <th style="min-width:80px">设备连通状态</th>
+                    <th style="min-width:50px">最后正常连接时间</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <foreach name="ads" item="vo">
+                    <tr>
+
+                        <td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x"
+                                   name="ids[]" value="{$vo.deviceId}"></td>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.agentname}</td>
+                        <td>{$vo.cityname}</td>
+                        <td>{$vo.schoolname}</td>
+                        <td>{$vo.deviceid}</td>
+                        <td>{$types[$vo['type']]}</td>
+                        <td>{$vo.sn}</td>
+                        <td>{$vo.connected_status}</td>
+                        <td>{$vo.lasttime}</td>
+
+
+
+                </foreach>
+                </tbody>
+            </table>
+        </form>
+
+        <!--<div class="search_type cc mb10" align="center">-->
+        <!--<div class="mb10">-->
+        <!--<span class="mr20">-->
+        <!--<a class="btn btn-primary" href="{:U('DeviceManage/add')}">添加设备</a>&nbsp;&nbsp;-->
+        <!--<input type="button" class="btn btn-primary" value="批量导入" />&nbsp;&nbsp;-->
+        <!--<input type="button" class="btn btn-primary" value="修改公话" />&nbsp;&nbsp;-->
+        <!--<input type="button" class="btn btn-primary" value="修改公话" />&nbsp;&nbsp;-->
+        <!--</span>-->
+        <!---->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js?"></script>
+<script src="__ROOT__/statics/chosen/chosen.jquery.js"></script>
+<script>
+
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+
+    if($("#province").val())
+    {
+        var new_citys = $('body').find(".new_citys").val();
+
+        var new_message_type = $('body').find('.new_message_type').val();
+
+
+        // console.log(type);
+
+        var type_school = $('body').find(".type_school").val();
+
+        if(new_citys)
+        {
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+                    $("#citys").empty();
+                    $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                    for(var key in data.data){
+
+                        if(new_citys==data.data[key]["term_id"]){
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+ " selected >"+data.data[key]["name"]+"</option>");
+
+                        }else{
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                        }
+                    }
+                    $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                        // console.log(data);
+                        if(data.status=="success"){
+                            $("#message_type").empty();
+
+                            for(var key in data.data){
+                                if(new_message_type == data.data[key]["term_id"]){
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" selected >"+data.data[key]["name"]+"</option>");
+                                }else{
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" >"+data.data[key]["name"]+"</option>");
+                                }
+
+                            }
+                            var type = $(".select_3  option:selected").val();
+
+                            $.ajax({
+                                type: "post",
+                                url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+                                async: true,
+                                data: {
+                                    type: type
+                                },
+                                dataType: 'json',
+                                success: function(res) {
+                                    // $(".Sio").text("")
+                                    $("#viewOLanguage").empty();
+                                    var html = "";
+                                    res = eval(res.data);
+                                    $("#viewOLanguage").append("<option value='0' >请选择学校</option>");
+                                    console.log(res);
+                                    for(var i = 0; i < res.length; i++) {
+                                        var school_name = res[i].school_name; //学校的名字
+                                        var schoolid = res[i].schoolid; //学校的ID
+
+                                        // alert('aa');
+                                        // alert(type_school);
+                                        if(schoolid == type_school){
+                                            // html += '<option class="Sio" value="' + schoolid + ' " selected>' + school_name + ' </option> '
+                                            $("#viewOLanguage").append("<option value="+schoolid+" selected >"+school_name+"</option>");
+                                        }else{
+                                            $("#viewOLanguage").append("<option value="+schoolid+" >"+school_name+"</option>");
+                                        }
+                                    }
+                                    $(".chzn-select").append(html)
+                                    $("#viewOLanguage").chosen();
+                                    $("#viewOLanguage").trigger("liszt:updated");
+                                },
+                                error: function() {
+                                    console.log('系统错误,请稍后重试');
+                                }
+                            });
+
+
+
+                        }
+                        if(data.status=="error"){
+                            $("#message_type").append("<option value='0'>没有区域</option>");
+                        }
+                    });
+
+
+
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+        }
+
+
+    }
+
+
+
+    //选择市级的下拉的ajax
+    $(function() {
+        $("#province").change(function(){
+
+            $("#citys").empty();
+            $("#message_type").empty();
+            $(".Sio").text("")
+
+            $("#viewOLanguage").empty();
+            $("#viewOLanguage").chosen();
+            $("#viewOLanguage").trigger("liszt:updated");
+
+            // $("#student").empty();
+
+            $("#message_type").append("<option value=>"+"选择区域"+"</option>");
+            $("#citys").append("<option value=0>"+"选择市级"+"</option>");
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                $("#citys").empty();
+
+                if(data.status=="success"){
+
+                    $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                    for(var key in data.data){
+                        $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+
+        })
+    });
+    $(function() {
+        $("#citys").change(function() {
+            console.log($("#citys").val())
+            $("#message_type").empty();
+            $(".Sio").text("")
+            $("#viewOLanguage").empty();
+            $("#viewOLanguage").chosen();
+            $("#viewOLanguage").trigger("liszt:updated");
+            $("#message_type").append("<option value=>"+"选择区域"+"</option>");
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+
+                    // $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                    for(var key in data.data){
+                        $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#message_type").append("<option value='0'>暂无区域</option>");
+                }
+            });
+        });
+    });
+
+    $(".select_3").change(function() {
+        var type = $(".select_3  option:selected").val();
+        $.ajax({
+            type: "post",
+            url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+            async: true,
+            data: {
+                type: type
+            },
+            dataType: 'json',
+            success: function(res) {
+                $(".Sio").text("")
+                var html = "";
+                res = eval(res.data);
+                for(var i = 0; i < res.length; i++) {
+                    var school_name = res[i].school_name; //学校的名字
+                    var schoolid = res[i].schoolid; //学校的ID
+                    html += '<option class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+                }
+                $(".chzn-select").append(html)
+                $("#viewOLanguage").chosen();
+                $("#viewOLanguage").trigger("liszt:updated");
+            },
+            error: function() {
+                console.log('系统错误,请稍后重试');
+            }
+        });
+    });
+    $(".ss").click(function() {
+
+        var xuan = $(".tiaojian option:selected").val();
+        var zhi = $(".zhi").val();
+        var type = $(".select_3  option:selected").val();
+
+        var typeschool = $(".chzn-select  option:selected").val();
+
+        var isSuccess = 1;
+        if(zhi == "") {
+            if(xuan != 0) {
+                alert(xuan);
+                var isSuccess = 0;
+                alert("在选好条件在输入框中输入你要找的数据类型");
+
+            }
+        }
+        if(xuan == 0) {
+            if(zhi != "") {
+                var isSuccess = 0;
+                alert("请选择你要搜索的查询类型")
+            }
+        }
+        if(zhi == "" && xuan == 0) {
+            if(type == 0) {
+                alert("请选择地区");
+                var isSuccess = 0;
+            }
+//            if(typeschool == "") {
+//                var isSuccess = 0;
+//                alert("请选择学校");
+//            }
+        }
+        if(isSuccess == 0) {
+            return false;
+        }
+    })
+
+
+    //    function getCitys(Province) {
+//        $(".jiu").hide();
+////        var Province = $(".province option:selected").val();
+//        if (Province == "") {
+//            alert("请选择你要搜索的省")
+//        } else {
+//            $.ajax({
+//                type: "post",
+//                url: '__ROOT__/index.php/?g=Admin&m=Teacher&a=Provinces',
+//                async: true,
+//                data: {
+//                    Province: Province
+//                },
+//                dataType: 'json',
+//                success: function (res) {
+//                    var html = "";
+//                    res = eval(res.data);
+//                    for (var i = 0; i < res.length; i++) {
+//                        var name = res[i].name;//地区的名字；
+//                        var term_id = res[i].term_id;//地区的ID
+//                        html += '<option class="jiu"value="' + term_id + '">' + name + ' </option> '
+//                    }
+//                    $(".citys").append(html);
+//                },
+//                error: function () {
+//                    console.log('系统错误,请稍后重试');
+//                }
+//            });
+//        }
+//    }
+//
+//    function getQu(zhi) {
+//        $(".jius").hide()
+////        var zhi = $(".citys option:selected").val();
+//        if (zhi == "") {
+//            alert("请选你要搜索的市")
+//        } else {
+//            $.ajax({
+//                type: "post",
+//                url: '__ROOT__/index.php/?g=Admin&m=Teacher&a=Provinces',
+//                async: true,
+//                data: {
+//                    Province: zhi
+//                },
+//                dataType: 'json',
+//                success: function (res) {
+//                    var html = "";
+//                    res = eval(res.data);
+//                    for (var i = 0; i < res.length; i++) {
+//                        var name = res[i].name;//地区的名字；
+//                        var term_id = res[i].term_id;//地区的ID
+//                        html += '<option class="jius"value="' + term_id + '">' + name + ' </option> '
+//                    }
+//                    $(".message_type").append(html)
+//                },
+//                error: function () {
+//                    console.log('系统错误,请稍后重试');
+//                }
+//            });
+//        }
+//    }
+
+    //选择市级的下拉的ajax
+    //        $(".citys").click(function(){
+    //            $(".jiu").hide();
+    //            var Province =$(".province option:selected").val();
+    //            if(Province==""){
+    //                alert("请选择你要搜索的省")
+    //            }else{
+    //                $.ajax({
+    //                    type:"post",
+    //                    url: '__ROOT__/index.php/?g=Admin&m=Teacher&a=Provinces',
+    //                    async:true,
+    //                    data:{
+    //                        Province:Province
+    //                    },
+    //                    dataType: 'json',
+    //                    success: function(res) {
+    //                        var html = "";
+    //                        res = eval(res.data);
+    //                        for(var i = 0; i < res.length; i++) {
+    //                            var name=res[i].name;//地区的名字；
+    //                            var term_id=res[i].term_id;//地区的ID
+    //                            html+='<option class="jiu"value="'+term_id+'">'+name+' </option> '
+    //                        }
+    //                        alert(html);
+    //                        $(".citys").append(html);
+    //                    },
+    //                    error: function() {
+    //                        console.log('系统错误,请稍后重试');
+    //                    }
+    //                });
+    //            }
+    //
+    //        })
+    //选择县级市
+//    $(".message_type").click(function () {
+//        $(".jius").hide()
+//        var zhi = $(".citys option:selected").val();
+//        if (zhi == "") {
+//            alert("请选你要搜索的市")
+//        } else {
+//            $.ajax({
+//                type: "post",
+//                url: '__ROOT__/index.php/?g=Admin&m=Teacher&a=Provinces',
+//                async: true,
+//                data: {
+//                    Province: zhi
+//                },
+//                dataType: 'json',
+//                success: function (res) {
+//                    var html = "";
+//                    res = eval(res.data);
+//                    for (var i = 0; i < res.length; i++) {
+//                        var name = res[i].name;//地区的名字；
+//                        var term_id = res[i].term_id;//地区的ID
+//                        html += '<option class="jius"value="' + term_id + '">' + name + ' </option> '
+//                    }
+//                    $(".message_type").append(html)
+//                },
+//                error: function () {
+//                    console.log('系统错误,请稍后重试');
+//                }
+//            });
+//        }
+//
+//    })
+    $("#viewOLanguage").chosen();
+    $("#viewOLanguage").trigger("liszt:updated");
+//
+//    $(".message_type").change(function () {
+//
+//        var type = $(".message_type  option:selected").val();
+//        $.ajax({
+//            type: "post",
+//            url: '__ROOT__/index.php/?g=Admin&m=Teacher&a=lookup',
+//            async: true,
+//            data: {
+//                type: type
+//            },
+//            dataType: 'json',
+//            success: function (res) {
+//                $(".Sio").text("")
+//                var html = "";
+//                res = eval(res.data);
+//                for (var i = 0; i < res.length; i++) {
+//                    var school_name = res[i].school_name;//学校的名字
+//                    var schoolid = res[i].schoolid;//学校的ID
+//                    html += '<option name="school" class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+//                }
+//                $(".chzn-select").append(html)
+//                $("#viewOLanguage").chosen();
+//                $("#viewOLanguage").trigger("liszt:updated");
+//            },
+//            error: function () {
+//                console.log('系统错误,请稍后重试');
+//            }
+//        });
+//    })
+
+</script>
+</body>
+</html>

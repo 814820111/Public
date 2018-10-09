@@ -1,0 +1,91 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a class="active" href="{:U('infoRegister')}">学校信息登记</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <p class="update_know">*图片上传须知：仅支持jpg、jpeg、bmp的图片格式，图片大小不超过2M</p>
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('infoRegister_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">学校名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_name" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">学校地址:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_address" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系人:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_user" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系电话:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_phone" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">负责代理商:</label>
+                    <div class="controls">
+                        <select class="input" name="agent_id">
+                            <option value="1">代理商1</option>
+                            <option value="2">代理商2</option>
+                            <option value="3">代理商3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">合同复印件:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="contract_pic">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">法人身份证:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="corporation_idcard">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">办学许可证:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="school_licence">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">组织机构代码证:</label>
+                    <div class="controls">
+                        <input type="file" class="input" name="organization_code">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+                <!--<a class="btn" href="__URL__/schoollist">清除</a>-->
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

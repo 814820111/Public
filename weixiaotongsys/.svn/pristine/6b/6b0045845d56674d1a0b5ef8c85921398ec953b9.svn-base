@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>{$schoolname}</title>
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <link href="__TMPL__Public/Tchcss/laoshidianping.css" rel="stylesheet" type="text/css">
+    <link href="__TMPL__Public/Tchcss/top-box.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 老师点评
+        <div class="clearfix"></div>
+    </div>
+    <div class="data" style="margin-top: 40px;">
+        <div class="xuAnz" style=" background-color:white;height: 40px;">
+
+            <span style="float: left;margin-top: 10px;color: black;margin-left: 15px;">请选择接受人:</span>
+            <span style="margin-left: 10px;position: relative;top: 8px;">{$name}</span>
+            <span><img style="margin-top: 10px;float: right;margin-right: 10px;" class="jiantou" src="__TMPL__Public/images/58.png" alt=""></span>
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="contant_box">
+            <div class="content">
+
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    学习
+                    <div class="jiang" style=" float:right; margin-right:10px;">
+                        <img class="ping" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang" style=" float:right; margin-right:6.5%;">
+                        <img class="ping" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang" style=" float:right; margin-right:6.5%;">
+                        <img class="ping" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    动手能力
+                    <div class="jiang1" style=" float:right; margin-right:10px;">
+                        <img class="ping1" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng1" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang1" style=" float:right; margin-right:6.5%;">
+                        <img class="ping1" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng1" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang1" style=" float:right; margin-right:6.5%;">
+                        <img class="ping1" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng1" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    唱歌
+                    <div class="jiang2" style=" float:right; margin-right:10px;">
+                        <img class="ping2" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng2" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang2" style=" float:right; margin-right:6.5%;">
+                        <img class="ping2" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng2" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang2" style=" float:right; margin-right:6.5%;">
+                        <img class="ping2" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng2" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px dashed #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    劳动
+                    <div class="jiang3" style=" float:right; margin-right:10px;">
+                        <img class="ping3" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng3" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang3" style=" float:right; margin-right:6.5%;">
+                        <img class="ping3" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng3" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang3" style=" float:right; margin-right:6.5%;">
+                        <img class="ping3" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng3" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" border-bottom:1px solid #eff0f2; line-height:40px; padding-left:10px;font-size:14px;">
+                    应变能力
+                    <div class="jiang4" style=" float:right; margin-right:10px;">
+                        <img class="ping4" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">一般</div>
+                        <input type="hidden" class="cheng4" value="3" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang4" style=" float:right; margin-right:6.5%;">
+                        <img class="ping4" src="__TMPL__Public/images/71.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">良好</div>
+                        <input type="hidden" class="cheng4" value="2" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="jiang4" style=" float:right; margin-right:6.5%;">
+                        <img class="ping4" src="__TMPL__Public/images/70.png" style=" width:20px; float:left; margin-top:10px; margin-right:10px;">
+                        <div style=" float:left; line-height:40px;">优秀</div>
+                        <input type="hidden" class="cheng4" value="1" />
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div style=" line-height:40px; padding-left:10px;font-size:14px;">
+
+                    <div class="pingyu">
+                        <textarea class="neirong" style="width: 100%;border: none;" placeholder="孩子在学校的表现"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div style="width: 100%;height: 50px;">
+
+                <!--<button class="dianji" style="width: 30%;margin-top: 25px;height: 35px;border-radius: 10px;background-color: orangered;color: white;margin-left: 32%;">点评</button>-->
+                <button class="dianji" style="width: 35%;height: 35px;border-radius: 10px;border: none;background-color: #06c18e;color: white;margin-top: 25px;margin-left: 30%;">点评</button>
+            </div>
+
+            <input type="hidden" class="learn" value="1" />
+            <!--学习能力-->
+            <input type="hidden" class="work" value="1" />
+            <!--动手能力-->
+            <input type="hidden" class="sing" value="1" />
+            <!--唱歌-->
+            <input type="hidden" class="labour" value="1" />
+            <!--劳动-->
+            <input type="hidden" class="strain" value="1" />
+            <!--劳动-->
+            <input type="hidden" class="studentid" value="{$id}" />
+        </div>
+    </div>
+    <script>
+        //学习能力的点击事件
+        $(".jiang").click(function() {
+                $(".ping").attr("src", "__TMPL__Public/images/71.png");
+                $(".ping", this).attr("src", "__TMPL__Public/images/70.png");
+                var zhi = $(".cheng", this).val();
+                var shsd = $(".learn").val(zhi);
+
+            })
+            //动手能力的点击事件
+        $(".jiang1").click(function() {
+                $(".ping1").attr("src", "__TMPL__Public/images/71.png");
+                $(".ping1", this).attr("src", "__TMPL__Public/images/70.png");
+                var zhi = $(".cheng1", this).val();
+                var shsd = $(".work").val(zhi);
+
+            })
+            //唱歌点击事件
+        $(".jiang2").click(function() {
+                $(".ping2").attr("src", "__TMPL__Public/images/71.png");
+                $(".ping2", this).attr("src", "__TMPL__Public/images/70.png");
+                var zhi = $(".cheng2", this).val();
+                var shsd = $(".sing").val(zhi);
+
+            })
+            //劳动点击事件
+        $(".jiang3").click(function() {
+            $(".ping3").attr("src", "__TMPL__Public/images/71.png");
+            $(".ping3", this).attr("src", "__TMPL__Public/images/70.png");
+            var zhi = $(".cheng3", this).val();
+            var shsd = $(".labour").val(zhi);
+
+        })
+        $(".jiang4").click(function() {
+            $(".ping4").attr("src", "__TMPL__Public/images/71.png");
+            $(".ping4", this).attr("src", "__TMPL__Public/images/70.png");
+            var zhi = $(".cheng4", this).val();
+            var shsd = $(".strain").val(zhi);
+
+        })
+
+        //点击提交的点击事件
+        $(".dianji").click(function() {
+            var learn = $(".learn").val();
+            var work = $(".work").val();
+            var sing = $(".sing").val();
+            var labour = $(".labour").val();
+            var strain = $(".strain").val();
+            var studentid = $(".studentid").val(); //学生id
+            var wenben = $(".neirong").val(); //多行文本框的值
+            var teacherid = $("#userid").val();
+            if (studentid == "") {
+                alert("学生ID为空点评失败")
+            } else if (wenben == "") {
+                alert("点评的内容不为空")
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: '__ROOT__/index.php/?g=apps&m=teacher&a=AddTeacherComment',
+                    async: true,
+                    data: {
+                        teacherid: teacherid,
+                        studentid: studentid,
+                        content: wenben,
+                        learn: learn,
+                        work: work,
+                        sing: sing,
+                        labour: labour,
+                        strain: strain
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        location.href = "{:U('index')}"
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+
+                });
+            }
+
+        })
+
+        $(".xuAnz").click(function() {
+            location.href = "{:U('xuAnz')}"
+        })
+        $(".fanhui").click(function() {
+            //location.href = "__ROOT__/index.php/weixin/Tindex";
+            location.href = "{:U('index')}";
+        })
+    </script>
+</body>
+
+</html>

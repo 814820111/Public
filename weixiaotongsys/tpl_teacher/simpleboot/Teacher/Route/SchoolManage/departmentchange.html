@@ -1,0 +1,42 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('schoolmanage')}">学校列表</a></li>
+        <li class="active"><a href='{:U("departmentmanage",array("schoolid"=>$schoolid))}'>科室管理</a></li>
+        <li><a href='{:U("adddepartment",array("schoolid"=>$schoolid))}'>添加科室</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('departmentchange_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">学校id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_id" value="{$schoolid}" readOnly="true">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">科室id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="id" value="{$departmentinfo['id']}" readOnly="true">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">科室名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="name" value="{$departmentinfo['name']}">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+                <a class="btn" href='{:U("departmentmanage",array("schoolid"=>$schoolid))}'>返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>家长首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/zuoye.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/top-box.css">
+    <script src="__TMPL__Public/js/new_file.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/Tchcss/commes.css" />
+    <link rel="stylesheet" href="__TMPL__Public/css/photoswipe.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/default-skin/default-skin.css">
+    <script src="__TMPL__Public/js/photoswipe.min.js"></script>
+    <script src="__TMPL__Public/js/photoswipe-ui-default.min.js"></script>
+</head>
+<style>
+    .pandect {
+        font-size: 15px;
+    }
+    html{
+        font-size: 15px;
+    }
+</style>
+
+<body style="background-color: whitesmoke;">
+    <input type="hidden" value={$userid} id="userid">
+    <div class="top_box">
+        <a href="__ROOT__/index.php/weixin/Tindex"><img src="__TMPL__Public/images/img674.png"></a>
+        我的作业
+        <div class="clearfix"></div>
+    </div>
+    <div class="container" style=" overflow:hidden;margin-top: 26px;">
+    </div>
+
+    <!--下面的内容不要管-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+            <div style="bakg" style=" width: 26px;line-height: 24px; border: 1px solid white; position:absolute;bottom:13px;color: white;text-align: center;border-radius: 50%;left: 50%;margin-left: -13px;">x</div>
+        </div>
+    </div>
+
+    <div style=" background-color: #06c18e;color: white;position: fixed;width: 70px;text-align: center;line-height: 70px;border-radius: 50%;bottom: 50px;right: 10px;">
+        <a href="{:U('add')}" style=" text-decoration: none;color: inherit;">
+				发布作业</a>
+    </div>
+    <script>
+        $("document").ready(function() {
+            var userid = $("#userid").val();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=gethomeworklist',
+                async: true,
+                data: {
+                    userid: userid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        var title = res[i].title; //作业标题
+                        var subject = res[i].subject //作业的科目
+                        var name = res[i].teacher_info.name //发布人的名字
+                        var content = res[i].content //内容
+                        var receiverlist = res[i].receiverlist.length; //发送给多少人
+                        var create_time = tmies(res[i].create_time); //发布的时间 
+                        h = 0;
+                        for (var k = 0; k < receiverlist; k++) {
+                            var read = res[i].receiverlist[k].read_time;
+                            if (read != null) {
+                                h++
+                            }
+                        }
+                        var Wei = receiverlist - h; //未读
+                        html += ' <div class="wednesday">'
+                        html += '<div class="two">'
+                        html += '<div >'
+                        html += '<span>标题&nbsp;：&nbsp;' + title + ' </span>'
+                        html += '</div>'
+                        html += '<div>'
+                        html += '<span>科目&nbsp;：&nbsp;' + subject + '</span>'
+                        html += '</div>'
+                        html += '<div>'
+                        html += '<span>内容&nbsp;：&nbsp;' + content + '</span>'
+                        html += '</div>'
+
+                        html += '<div class="demo">'
+                        html += '<div class="my-gallery">'
+                        for (var g = 0; g < res[i].pic.length; g++) {
+                            var cvbn = res[i].pic[g].picture_url;
+                            if (cvbn != "" && cvbn != null && cvbn != "null") {
+                                html += '<figure>'
+                                html += ' <a href="__ROOT__/uploads/microblog/' + cvbn + '" data-size="800x1142">'
+                                html += '<img src="__ROOT__/uploads/microblog/' + cvbn + '" />'
+
+                                html += '</a>'
+                                html += '</figure>'
+                            }
+                        }
+                        html += '</div>'
+                        html += '</div>'
+                        html += '</div>'
+                        html += '<hr class="divide">'
+                        html += '<div class="three">'
+                        html += '<div class="left">'
+                        html += ' <img style="width: 35px;" src="__TMPL__Public/images/feiji.png" alt="">'
+                        html += '<span style="font-size: 15px;">' + name + '</span>'
+                        html += '</div>'
+                        html += '<div class="right">'
+                        html += '<span style="font-size: 15px;">' + create_time + '</span>'
+                        html += '</div>'
+                        html += '<div class="clearfix"></div>'
+                        html += '</div>'
+                        html += '<div class="pandect">总发' + receiverlist + '，已读' + h + '，未读' + Wei + '</div>'
+                        html += '</div>'
+
+                    }
+                    $(".container").append(html)
+
+                    var img_width = $(".my-gallery img").width()
+                    $(".my-gallery img").height(img_width)
+
+                    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                        // parse slide data (url, title, size ...) from DOM elements 
+                        // (children of gallerySelector)
+                        var parseThumbnailElements = function(el) {
+                            var thumbElements = el.childNodes,
+                                numNodes = thumbElements.length,
+                                items = [],
+                                figureEl,
+                                linkEl,
+                                size,
+                                item;
+
+                            for (var i = 0; i < numNodes; i++) {
+
+                                figureEl = thumbElements[i]; // <figure> element
+
+                                // include only element nodes 
+                                if (figureEl.nodeType !== 1) {
+                                    continue;
+                                }
+
+                                linkEl = figureEl.children[0]; // <a> element
+
+                                size = linkEl.getAttribute('data-size').split('x');
+
+                                // create slide object
+                                item = {
+                                    src: linkEl.getAttribute('href'),
+                                    w: parseInt(size[0], 10),
+                                    h: parseInt(size[1], 10)
+                                };
+
+                                if (figureEl.children.length > 1) {
+                                    // <figcaption> content
+                                    item.title = figureEl.children[1].innerHTML;
+                                }
+
+                                if (linkEl.children.length > 0) {
+                                    // <img> thumbnail element, retrieving thumbnail url
+                                    item.msrc = linkEl.children[0].getAttribute('src');
+                                }
+
+                                item.el = figureEl; // save link to element for getThumbBoundsFn
+                                items.push(item);
+                            }
+
+                            return items;
+                        };
+
+                        // find nearest parent element
+                        var closest = function closest(el, fn) {
+                            return el && (fn(el) ? el : closest(el.parentNode, fn));
+                        };
+
+                        // triggers when user clicks on thumbnail
+                        var onThumbnailsClick = function(e) {
+                            e = e || window.event;
+                            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                            var eTarget = e.target || e.srcElement;
+
+                            // find root element of slide
+                            var clickedListItem = closest(eTarget, function(el) {
+                                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                            });
+
+                            if (!clickedListItem) {
+                                return;
+                            }
+
+                            // find index of clicked item by looping through all child nodes
+                            // alternatively, you may define index via data- attribute
+                            var clickedGallery = clickedListItem.parentNode,
+                                childNodes = clickedListItem.parentNode.childNodes,
+                                numChildNodes = childNodes.length,
+                                nodeIndex = 0,
+                                index;
+
+                            for (var i = 0; i < numChildNodes; i++) {
+                                if (childNodes[i].nodeType !== 1) {
+                                    continue;
+                                }
+
+                                if (childNodes[i] === clickedListItem) {
+                                    index = nodeIndex;
+                                    break;
+                                }
+                                nodeIndex++;
+                            }
+
+                            if (index >= 0) {
+                                // open PhotoSwipe if valid index found
+                                openPhotoSwipe(index, clickedGallery);
+                            }
+                            return false;
+                        };
+
+                        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                        var photoswipeParseHash = function() {
+                            var hash = window.location.hash.substring(1),
+                                params = {};
+
+                            if (hash.length < 5) {
+                                return params;
+                            }
+
+                            var vars = hash.split('&');
+                            for (var i = 0; i < vars.length; i++) {
+                                if (!vars[i]) {
+                                    continue;
+                                }
+                                var pair = vars[i].split('=');
+                                if (pair.length < 2) {
+                                    continue;
+                                }
+                                params[pair[0]] = pair[1];
+                            }
+
+                            if (params.gid) {
+                                params.gid = parseInt(params.gid, 10);
+                            }
+
+                            return params;
+                        };
+
+                        var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                            var pswpElement = document.querySelectorAll('.pswp')[0],
+                                gallery,
+                                options,
+                                items;
+
+                            items = parseThumbnailElements(galleryElement);
+
+                            // define options (if needed)
+                            options = {
+                                // define gallery index (for URL)
+                                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                                getThumbBoundsFn: function(index) {
+                                    // See Options -> getThumbBoundsFn section of documentation for more info
+                                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                        pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                        rect = thumbnail.getBoundingClientRect();
+
+                                    return {
+                                        x: rect.left,
+                                        y: rect.top + pageYScroll,
+                                        w: rect.width
+                                    };
+                                }
+
+                            };
+
+                            // PhotoSwipe opened from URL
+                            if (fromURL) {
+                                if (options.galleryPIDs) {
+                                    // parse real index when custom PIDs are used 
+                                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                                    for (var j = 0; j < items.length; j++) {
+                                        if (items[j].pid == index) {
+                                            options.index = j;
+                                            break;
+                                        }
+                                    }
+                                } else {
+                                    // in URL indexes start from 1
+                                    options.index = parseInt(index, 10) - 1;
+                                }
+                            } else {
+                                options.index = parseInt(index, 10);
+                            }
+
+                            // exit if index not found
+                            if (isNaN(options.index)) {
+                                return;
+                            }
+
+                            if (disableAnimation) {
+                                options.showAnimationDuration = 0;
+                            }
+
+                            // Pass data to PhotoSwipe and initialize it
+                            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                            gallery.init();
+                        };
+
+                        // loop through all gallery elements and bind events
+                        var galleryElements = document.querySelectorAll(gallerySelector);
+
+                        for (var i = 0, l = galleryElements.length; i < l; i++) {
+                            galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                            galleryElements[i].onclick = onThumbnailsClick;
+                        }
+
+                        // Parse URL and open gallery if it contains #&pid=3&gid=1
+                        var hashData = photoswipeParseHash();
+                        if (hashData.pid && hashData.gid) {
+                            openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                        }
+                    };
+
+                    // execute above function
+                    initPhotoSwipeFromDOM('.my-gallery');
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="">投诉管理</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">投诉ID</th>
+            <th>客户姓名</th>
+            <th>客户手机号</th>
+            <th>客户类型</th>
+            <th>投诉内容</th>
+            <th width="120">处理状态</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="complaint" item="vo">
+            <tr>
+                <td>{$vo.complaint_id}</td>
+                <td>{$vo.user_name}</td>
+                <td>{$vo.phone}</td>
+                <td>{$vo.user_typename}</td>
+                <td>{$vo.complaint_content}</td>
+                <td>
+                    <if condition="$vo.complaint_status eq 1">
+                        <a href='{:U("activecomplaint",array("id"=>$vo["complaint_id"]))}' class="J_ajax_dialog_btn" data-msg="您确定要开始处理此投诉吗？">待处理</a> |
+                        <elseif condition="$vo.complaint_status eq 2"/>
+                        <a href='{:U("overcomplaint",array("id"=>$vo["complaint_id"]))}' class="J_ajax_dialog_btn" data-msg="您确定要结束此投诉吗？">正在处理</a> |
+                        <else/>已处理 |
+                    </if>
+
+                    <a href='{:U("deletecomplaint",array("id"=>$vo["complaint_id"]))}' class="J_ajax_dialog_btn" data-msg="您确定要删除此投诉信息吗？">删除</a> |
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

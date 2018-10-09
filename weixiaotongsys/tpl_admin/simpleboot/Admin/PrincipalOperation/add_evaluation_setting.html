@@ -1,0 +1,110 @@
+<admintpl file="header"/>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('add_evaluation_setting')}">添加考评设置</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal add-validate" action="{:U('add')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">选择学校:</label>
+                    <div class="controls">
+                        <select name="" id="">
+                            <option value="">请选择学校:</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">选择班级:</label>
+                    <div class="controls">
+                        <select name="" id="">
+                            <option value="">请选择班级:</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">显示类型:</label>
+                    <div class="controls">
+                        <input style="vertical-align: -1px" type="radio" class="input" name="type" value="1"
+                               checked><span>期末考评项</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input style="vertical-align: -1px" type="radio" class="input" name="type"
+                               value="2"><span>成长记录考察项</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls" style="margin-left: 100px;margin-right: 100px">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                            <tr>
+                                <th>评分项目</th>
+                                <th>内容</th>
+                                <th>评分标准</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>社会</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit">确定</button>
+                <button class="btn" type="reset">清空</button>
+                <a class="btn" href="__ROOT__/index.php/Admin/PrincipalOperation/evaluation_setting">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript">
+    $('.add-validate').validate({
+        rules: {
+            name: {
+                required: true
+            },
+            appSecret: {
+                required: true
+            },
+            appKey: {
+                required: true
+            }
+        },
+        messages: {
+            name: {
+                required: '请输入账号名称'
+            },
+            appSecret: {
+                required: '请输入appSecret'
+            },
+            appKey: {
+                required: '请输入appKey'
+            }
+        }
+    });
+    function show(index) {
+        if (index == 2) {
+            $('#my-mobile').show();
+        } else {
+            $('#my-mobile').hide();
+        }
+    }
+</script>
+</body>
+</html>

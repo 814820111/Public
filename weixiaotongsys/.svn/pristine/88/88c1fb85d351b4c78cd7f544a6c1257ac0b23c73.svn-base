@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/class_check.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <link href="__TMPL__Public/css/mobiscroll.css" rel="stylesheet" type="text/css">
+    <script src="__TMPL__Public/js/new_file.js"></script>
+    <script src="__TMPL__Public/js/mobiscrolsddsl.js" type="text/javascript"></script>
+</head>
+<style>
+    .nav .left {
+        padding-bottom: 2.5%;
+        border-bottom: 2.5px solid rgb(6, 192, 143);
+        color: rgb(6, 192, 143);
+        margin-left: 10%;
+        width: 30%;
+        float: left;
+    }
+    
+    .nav .right {
+        width: 30%;
+        float: right;
+        margin-right: 10%;
+    }
+    a{
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+</style>
+
+<body>
+    <input type="hidden" value={$schoolid} id="schoolid">
+    <input type="hidden" value={$classid} id="classid">
+    <div class="top_box" style="z-index: 2;">
+        <div class="fanhui" style="cursor: pointer;"><img src="__TMPL__Public/images/img674.png"></div>
+        考勤
+        <div class="clearfix"></div>
+    </div>
+    <div class="container" style=" overflow:hidden;margin-top: 40px;">
+
+        <div class="nav" style="font-weight: normal">
+            <div class="left" style="font-weight: normal">签到</div>
+            <a href="{:U('SignOut')}" style=" text-decoration: none;color: inherit">
+                <div class="right" style="font-weight: normal">签退</div>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="content"  style="overflow-y: scroll;">
+            <div class="date">
+                <div class="result">
+                    <div class="left">
+                        <img class="left" src="__TMPL__Public/images/img09a.png">
+                        <div><input value="" class="" readonly name="appDate" id="appDate" type="text" style="border: none;color: #55ACEE;width:70px;"></div>
+                        <img class="right" id="hou" src="__TMPL__Public/images/img08a.png">
+                    </div>
+                    <div class="right hiuo"></div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <hr style="color: rgb(170,170,170);border-radius: 35px;">
+                <div class="people"  style="padding-bottom: 0%;">
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="left" style="position: relative;">
+                全选
+                <input type="checkbox" class="danxuan" style="vertical-align: -2px;margin-left: 10px">
+                <!--<div class="quanxuan" style="border: none;margin-top: 0;float: left">-->
+                    <!--<input type="checkbox" class="danxuan" style="">-->
+                <!--</div>-->
+            </div>
+            <div class="right qiandaoanniu">补签</div>
+            <div class="clearfix"></div>
+        </div>
+        <input type="hidden" value="" class="zhiu" />
+    </div>
+
+    <script>
+
+        $("document").ready(function() {
+
+            var classid = $("#classid").val();
+            var schoolid = $("#schoolid").val();
+            var myDate = new Date(); //实例一个时间对象；
+            var nian = myDate.getFullYear(); //获取当前的年
+            var yue = myDate.getMonth() + 1; //获取当前的月份
+            var dangqian = myDate.getDate(); //当前的日
+            if (yue < 9) {
+                var yue = "0" + yue;
+            }
+            if (dangqian < 9) {
+                var dangqian = "0" + dangqian;
+            }
+            var heji = nian + "/" + yue + "/" + dangqian;
+            var sign_date = new Date(heji).getTime() / 1000;
+            //alert(sign_date);
+            $("#appDate").val(heji);
+
+            $.ajax({
+                type: "post",
+                //url: '__ROOT__/index.php/?g=apps&m=teacher&a=GetStudentAttendanceList',
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=GetStudentAttendancesList',
+                async: true,
+                data: {
+                    classid: classid,
+                    type :1,
+                    schoolid :schoolid,
+                    sign_date: sign_date
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    var useridsD = "";
+                    var j = 0;
+                    var jia = 0;
+                    var meidao = 0;
+                    res = eval(res.data);
+                    console.log(res);
+                    for (var i = 0; i < res.length; i++) {
+                        j++
+                        //班级成员的名字
+                        var name = res[i].name;
+                        //班级成员的照片
+                        var photo = res[i].photo;
+                        //判断今日是否签到没；
+                        var sign_date = res[i].sign_date;
+                        //判断是否请假没
+                        var status = res[i].status;
+                        //学生的
+                       // var userids = res[i].userid;
+                        var userids = res[i].id;
+                       // 当天没有签到的学生的userid
+                        var type = res[i].type;
+                        //刷卡类型
+
+                        html += '<div class="headimg" >'
+                        html += '<div class="img">'
+                        html += '<img src="{$Think.const.SR}' + photo + '" style="width: 55px;height: 55px;border-radius: 35px;" />'
+//                        if (sign_date == "" || sign_date == "null" || sign_date == 0) {
+//                            if ((sign_date == "" && type==1) || (sign_date == "null" && type==1) || (sign_date == 0 && type==1)) {
+//
+//                            if (status == 1) {
+//                                html += '<div class="record2">假</div>'
+//                                jia++
+//
+//                            } else {
+//                                html += ' <div class="record1">✖</div>'
+//                                meidao++
+//                                useridsD += userids + ","
+//                            }
+//
+//                        } else {
+//                            html += ' <div class="record">✔</div>'
+//                        }
+                        if(sign_date && type==1){
+                            html += ' <div class="record">✔</div>'
+                        }else{
+                            if (status == 1) {
+                                html += '<div class="record2">假</div>'
+                                jia++
+
+                            } else {
+                                html += ' <div class="record1">✖</div>'
+                                meidao++
+                                useridsD += userids + ","
+                            }
+                        }
+                        html += '</div>'
+                        html += ' <input type="hidden" class="mni"value="' + userids + '" />'
+                        html += '<span>' + name + '</span>'
+                        html += '</div>'
+                    }
+                    $(".people").append(html);
+                    //头像的点击事件
+                    var xianshi = "总共" + i + ",未到" + meidao + ",请假" + jia;
+                    $(".hiuo").text(xianshi);
+                    $(".headimg").click(function() {
+                            var qiandao = $(".record1", this).text();
+                            if (qiandao == "✖") {
+                                $(".record1", this).text("✔");
+                                $(".record1", this).css("background-color", "rgb(50,209,167)");
+                                var zhi = $(".mni", this).val() + ",";
+                                var jiahe = $(".zhiu").val() + zhi;
+                                $(".zhiu").val(jiahe);
+
+                            } else {
+                                $(".record1", this).text("✖");
+                                $(".record1", this).css("background-color", "rgb(255,191,103)")
+                                var zhi = $(".mni", this).val() + ",";
+                                var zigu = $(".zhiu").val();
+                                var str = zigu.replace(zhi, "");
+                                $(".zhiu").val(str);
+                            }
+                        })
+                        //全选框的点击事件
+                    $(".danxuan").click(function() {
+                            var checkboxdanxuan = $("input[type='checkbox']").is(':checked');
+                            if (checkboxdanxuan == false) {
+                                $(".record1").text("✖");
+                                $(".record1").css("background-color", "rgb(255,191,103)");
+                                $(".zhiu").val("");
+
+                            } else {
+                                $(".record1").text("✔");
+                                $(".record1").css("background-color", "rgb(50,209,167)");
+                                $(".zhiu").val(useridsD);
+
+                            }
+                        })
+                        //补签按钮的点击事件
+
+
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+
+            });
+
+            //输入框改变时候的事件
+            $("#appDate").change(function() {
+                $(".people").text("");
+                $(".zhiu").val("");
+                var shijinn = $("#appDate").val();
+                var jis = shijinn.substring(0, 4);
+                var id = shijinn.substring(5, 8);
+                var rou = shijinn.substring(8, 10);
+                var pingjie = jis + "/" + id + "/" + rou;
+                var dangqianshijian = shijianzhuan();
+                var sign_date = new Date(pingjie).getTime() / 1000;
+                if (sign_date > dangqianshijian) {
+                    sign_date = dangqianshijian;
+                    alert("选择的日期不等大于今日");
+                    var myDate = new Date(); //实例一个时间对象；
+                    var nian = myDate.getFullYear(); //获取当前的年
+                    var yue = myDate.getMonth() + 1; //获取当前的月份
+                    var dangqian = myDate.getDate(); //当前的日
+                    var heji = nian + "/" + yue + "/" + dangqian;
+                    $("#appDate").val(heji);
+                }
+                //alert(sign_date);
+                $.ajax({
+                    type: "post",
+                    //url: '__ROOT__/index.php/?g=apps&m=teacher&a=GetStudentAttendanceList',
+                    url: '__ROOT__/index.php/?g=apps&m=teacher&a=GetStudentAttendancesList',
+                    async: true,
+                    data: {
+                        classid: classid,
+                        type :1,
+                        schoolid :schoolid,
+                        sign_date: sign_date
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        var html = "";
+                        var useridsD = "";
+                        res = eval(res.data);
+                        var k = 0; //总人数
+                        var wei = 0; //未到人数
+                        var qingjia = 0;
+                        for (var i = 0; i < res.length; i++) {
+                            k++;
+                            //班级成员的名字
+                            var name = res[i].name;
+                            //班级成员的照片
+                            var photo = res[i].photo;
+                            //判断今日是否签到没；
+                            var sign_date = res[i].sign_date;
+                            //判断是否请假没
+                            var status = res[i].status;
+                            //学生的
+                            //var userids = res[i].userid;
+                            var userids = res[i].id;
+                            //当天没有签到的学生的userid
+                            var type = res[i].type;//刷卡类型
+                            html += '<div class="headimg" >'
+                            html += '<div class="img">'
+                            html += '<img src="{$Think.const.SR}' + photo + '" style="width: 55px;height: 55px;border-radius: 35px;" />'
+//                            if (sign_date == "" || sign_date == "null") {
+//                                useridsD += userids + ","
+//                                if (status == 1) {
+//                                    qingjia++;
+//                                    html += '<div class="record2">假</div>'
+//                                } else {
+//                                    wei++;
+//                                    html += ' <div class="record1">✖</div>'
+//                                }
+//
+//                            } else {
+//                                html += ' <div class="record">✔</div>'
+//                            }
+                            if(sign_date && type==1){
+                                html += ' <div class="record">✔</div>'
+                            }else{
+                                useridsD += userids + ","
+                                if (status == 1) {
+                                    html += '<div class="record2">假</div>'
+                                    qingjia++;
+
+                                } else {
+                                    html += ' <div class="record1">✖</div>'
+                                    wei++;
+
+                                }
+
+                            }
+                            html += '</div>'
+                            html += ' <input type="hidden" class="mni"value="' + userids + '" />'
+                            html += '<span>' + name + '</span>'
+                            html += '</div>'
+                        }
+                        $(".people").append(html);
+                        var zhaoshi = "总人数" + k + ",未到" + wei + ",请假" + qingjia;
+                        $(".hiuo").text(zhaoshi);
+                        $(".headimg").click(function() {
+                            var qiandao = $(".record1", this).text();
+                            if (qiandao == "✖") {
+                                $(".record1", this).text("✔");
+                                $(".record1", this).css("background-color", "rgb(50,209,167)");
+                                var zhi = $(".mni", this).val() + ",";
+
+                                var jiahe = $(".zhiu").val() + zhi;
+                                $(".zhiu").val(jiahe);
+
+                            } else {
+                                $(".record1", this).text("✖");
+                                $(".record1", this).css("background-color", "rgb(255,191,103)")
+                                var zhi = $(".mni", this).val() + ",";
+                                var zigu = $(".zhiu").val();
+                                var str = zigu.replace(zhi, "");
+                                $(".zhiu").val(str);
+                            }
+                        })
+
+                        $(".danxuan").click(function() {
+                            var checkboxdanxuan = $("input[type='checkbox']").is(':checked');
+                            if (checkboxdanxuan == false) {
+                                $(".record1").text("✖");
+                                $(".record1").css("background-color", "rgb(255,191,103)");
+                                $(".zhiu").val("");
+
+                            } else {
+                                $(".record1").text("✔");
+                                $(".record1").css("background-color", "rgb(50,209,167)");
+                                $(".zhiu").val(useridsD);
+
+                            }
+
+                        })
+
+                    },
+                    error: function() {
+                        console.log('系统错误,请稍后重试');
+                    }
+
+                });
+
+
+            })
+
+
+
+            $(".qiandaoanniu").click(function() {
+                var shijinn = $("#appDate").val();
+                shijinn = Date.parse(new Date(shijinn));
+                sign_date = shijinn/1000;
+//                alert(shijinn);
+//                var jis = shijinn.substring(0, 4);
+//                var id = shijinn.substring(5, 8);
+//                var rou = shijinn.substring(8, 10);
+//                var pingjie = jis + "/" + id + "/" + rou;
+//                alert(pingjie);
+//                var sign_date = new Date(pingjie).getTime() / 1000;
+                var uis = $(".zhiu").val();
+//                alert(sign_date);
+//                return;
+                if (uis != "") {
+                    $.ajax({
+                        type: "post",
+                        url: '__ROOT__/index.php/?g=apps&m=index&a=resign',
+                        async: true,
+                        data: {
+                            schoolid: schoolid,
+                            classid: classid,
+                            userid: uis,
+                            sign_date: sign_date
+                        },
+                        dataType: "json",
+                        success: function(res) {
+                            console.log(res);
+                            $(".zhiu").val("");
+                            alert("补签成功");
+
+                        },
+                        error: function() {
+                            console.log('系统错误,请稍后重试');
+                        }
+
+                    });
+                } else {
+                    alert("请选择你要补签的人")
+                }
+            })
+
+
+        })
+        $(".dian").eq(0).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: 0
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+        $(".dian").eq(1).click(
+            function() {
+                $(".lun").animate({
+                    marginLeft: -g
+                })
+                $(this).addClass("lei").siblings().removeClass("lei")
+            }
+        )
+
+        y = $(".container").width()
+        $(".huitiao2").width(y)
+        $(".footer").width(y)
+        b = $(".tubiao li").width()
+        $(".tubiao li img").width(b * 1.5)
+        $(".tubiao li img").height(b * 1.5)
+        $(".tubiao2 li img").width(b * 1.5)
+        $(".tubiao2 li img").height(b * 1.5)
+        c = $(".dian").width()
+        $(".dian").height(c)
+        d = $(".tixing img").width()
+        $(".tixing img").height(d)
+        e = $(".top .you").width()
+        $(".top .you").height(e)
+        f = $(".biaoti li img").width()
+        $(".biaoti li img").height(f)
+        g = $(".container").width()
+        $(".lun").width(g * 2)
+        k = $(".one ul li img").width()
+        $(".one ul li img").height(k)
+
+
+        window.onload = function() {
+            var w;
+            w = $(".headimg").width();
+            $('.headimg').height(w * 1.3);
+            var w1;
+            w1 = $(".img").width();
+            $('.img').height(w1);
+            var w2;
+            w2 = $(".record").width();
+
+            var w3;
+            w3 = $(".quanxuan").width();
+            $('.quanxuan').height(w3);
+        }
+
+        $(function() {
+            var currYear = (new Date()).getFullYear();
+            var opt = {};
+            opt.date = {
+                preset: 'date'
+            };
+            opt.datetime = {
+                preset: 'datetime'
+            };
+            opt.time = {
+                preset: 'time'
+            };
+            opt.default = {
+                theme: 'android-ics light', //皮肤样式 
+                display: 'modal', //显示方式 
+                mode: 'scroller', //日期选择模式
+                dateFormat: 'yyyy-mm-dd',
+                lang: 'zh',
+                showNow: true,
+                nowText: "今天",
+                startYear: currYear, //开始年份
+                endYear: currYear + 5 //结束年份
+            };
+
+            $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+
+            var optDateTime = $.extend(opt['datetime'], opt['default']);
+            var optTime = $.extend(opt['time'], opt['default']);
+            $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+            $("#appTime").mobiscroll(optTime).time(optTime);
+        });
+
+        $(".fanhui").click(function() {
+            location.href = "__ROOT__/index.php/weixin/Tindex";
+        })
+    </script>
+    <script type="text/javascript">
+//        var h = $('.footer .left').css('height');
+//        $('.danxuan').css({width: h, height: h});
+    </script>
+</body>
+
+</html>

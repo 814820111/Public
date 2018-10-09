@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{$school_name}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__Public/css/bootstrap-wode.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/wode.css">
+    <!--<script src="__ROOT__/statics/js/jquery.js"></script>-->
+    <!--<script src="__ROOT__/statics/js/jquery-3.1.0.min (1).js"></script>-->
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+
+    <script>
+        function cui() {
+            $('.conversation').css('display', 'block');
+        }
+
+        function hidd() {
+            $('.conversation').css('display', 'none');
+        }
+        function Uncui() {
+            $('.Unbind').css('display', 'block');
+        }
+        function Unhidd() {
+            $('.Unbind').css('display', 'none');
+        }
+        function Unhidden() {
+
+            $('.Unbind').css('display', 'none');
+            $.ajax({
+                url: "{:U('ChangeSession/Unbind')}",
+                type: "post",
+                dataType: "json",
+                data: {
+                    state:1
+                },
+                success: function(res) {
+                    if(res.status=="success"){
+                        alert("取消成功");
+                        WeixinJSBridge.call('closeWindow');
+                    }
+
+                    if(res.status=="error"){
+                        alert("取消失败");
+                    }
+
+
+                },
+                error: function(res) {
+                    alert("取消失败");
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+<!--<input type="hidden" value={$photo} id="headimg">-->
+<div class="container" style=" overflow:hidden;">
+    <div class="conversation" style="display: none;
+                                  width: 100%;
+                                  height: 100%;
+                                  z-index: 1;
+                                  position:fixed;
+                                  top: 0;
+                                  left: 0;
+                                  background-color: rgba(123,123,123,0.2);">
+        <div class="white" style="box-shadow:1px 1px 1px 1px rgba(123,123,123,0.5);
+                                text-align: center;
+                                border-radius: 5px;
+                                background-color: white;
+                                width: 72%;
+                                padding: 25px 6px 20px 9px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                font-size: 15px;
+                                margin-top: 180px;">
+            <div class="word" style="margin-bottom: 20px;">
+                <span style="font-size: 17px;color: rgb(123,123,123);display: block;margin-bottom: 12px;">拨打客服电话</span> 即将拨打客服电话，是否确认？
+            </div>
+            <div class="cancel" onclick="hidd()" style="padding-top: 2px;
+                                    padding-bottom: 2.5px;
+                                    float: left;
+                                    border-radius: 5px;
+                                    width: 75px;
+                                    margin-left: 6%;
+                                    color: white;
+                                    background-color: rgb(123,123,123);cursor: pointer;">取 消</div>
+            <div class="tongzhi" onclick="hidd()" style="padding-top: 2px;
+                                      padding-bottom: 2.5px;
+                                      float: right;
+                                      border-radius: 5px;
+                                      width: 75px;
+                                      color: white;
+                                      background-color: #06c08e;
+                                      margin-right: 6%;cursor: pointer;">
+                <!--<a href="tel:13958971593">确 定</a>-->
+                <a href="tel:{$servicephone}" style="color:white;">确 定</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="Unbind" style="display: none;
+                                  width: 100%;
+                                  height: 100%;
+                                  z-index: 1;
+                                  position:fixed;
+                                  top: 0;
+                                  left: 0;
+                                  background-color: rgba(123,123,123,0.2);">
+        <div class="white" style="box-shadow:1px 1px 1px 1px rgba(123,123,123,0.5);
+                                text-align: center;
+                                border-radius: 5px;
+                                background-color: white;
+                                width: 72%;
+                                padding: 25px 6px 20px 9px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                font-size: 15px;
+                                margin-top: 180px;">
+            <div class="word" style="margin-bottom: 20px;">
+                <span style="font-size: 17px;color: rgb(123,123,123);display: block;margin-bottom: 12px;">取消绑定</span> 即将取消绑定，是否确认？
+            </div>
+            <div class="cancel" onclick="Unhidd()" style="padding-top: 2px;
+                                    padding-bottom: 2.5px;
+                                    float: left;
+                                    border-radius: 5px;
+                                    width: 75px;
+                                    margin-left: 6%;
+                                    color: white;
+                                    background-color: rgb(123,123,123);cursor: pointer;">取 消</div>
+            <div class="tongzhi" onclick="Unhidden()" style="padding-top: 2px;
+                                      padding-bottom: 2.5px;
+                                      float: right;
+                                      border-radius: 5px;
+                                      width: 75px;
+                                      color: white;
+                                      background-color: #06c08e;
+                                      margin-right: 6%;cursor: pointer;">确 定</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="banner">
+
+        <div class="touxiang">
+            <a href="__URL__/Userinfo" style=" text-decoration:none; color: inherit;">
+
+                    <img class="tu" src="{$headimg}" style="overflow: hidden;border:2px solid #a1a1a1;width:80px;height:80px;">
+                <!--<img class="tu" style="overflow: hidden;border:2px solid #a1a1a1;width:85px;height:85px;margin-top: 10px">-->
+                <div class="right touzi">
+                    <p style=" color:black;font-family: '微软雅黑 Light'
+                ">{$name}老师&nbsp;您好</p>
+                    <p style=" color:#565656;font-size:14.5px;font-family: '微软雅黑 Light'">智校园，一起链接成长瞬间！</p>
+                </div>
+                <img src="__ROOT__/statics/img/img19a.png" alt="" class="jiantou">
+                <div class="clearfix"></div>
+            </a>
+        </div>
+
+    </div>
+    <div class="huitiao"></div>
+    <div class="one">
+        <ul style=" border-right:1px solid #e2e2e2;">
+            <li style=" margin:0;  width:100%; position:relative;">
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__ROOT__/statics/img/img56.png">
+                    <p>账户明细</p>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+        </ul>
+        <ul style=" border-right:1px solid #e2e2e2;">
+            <li style=" margin:0;  width:100%; position:relative;">
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__ROOT__/statics/img/img57.png">
+                    <p>支付费用</p>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+        </ul>
+        <ul style=" border-right:1px solid #e2e2e2;">
+            <li style=" margin:0;  width:100%; position:relative;">
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__ROOT__/statics/img/img58.png">
+                    <p>积分商城</p>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="huitiao"></div>
+    <ul class="biaoti">
+        <!--<li>-->
+        <!--<a href="#" style=" text-decoration:none;">-->
+        <!--<img src="__ROOT__/statics/img/img59.png">-->
+        <!--<span>服务</span>-->
+        <!--<span style=" margin-left:20px; color:#707070;">服务中</span>-->
+
+        <!--<div class="youlianjie2">截止日期2016-09-09</div>-->
+        <!--<div class="clearfix"></div>-->
+        <!--</a>-->
+        <!--</li>-->
+        <if condition="in_array('扫一扫打卡',$top_menu)">
+        <li>
+            <a href="#" style=" text-decoration:none;" id="click">
+                <img src="__ROOT__/statics/img/img59.png">
+                <span>扫一扫打卡</span>
+                <div class="youlianjie"></div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+        </if>
+        <!--<li>-->
+        <!--<a href="shuakaShezhi.html" style=" text-decoration:none;">-->
+        <!--<img src="__ROOT__/statics/img/img62.png">-->
+        <!--<span>刷卡设置</span>-->
+        <!--<div class="youlianjie"></div>-->
+        <!--<div class="clearfix"></div>-->
+        <!--</a>-->
+        <!--</li>-->
+
+    </ul>
+    <div class="huitiao"></div>
+
+
+
+    <ul class="biaoti">
+                                
+        
+<if condition="in_array('客服热线',$middle_menu)">  
+            <li onclick="cui()">
+                <a href="#" style=" text-decoration:none;">
+                    <img src="__ROOT__/statics/img/img63.png">
+                    <span>客服热线</span>
+                    <span style=" margin-left:20px; color:#707070;"> {$servicephone}</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+      </if>
+   
+      <if condition="in_array('系统通知',$middle_menu)">  
+        <li>
+            <a href="__ROOT__/index.php/weixin/Usercenter/SystermMessage" style=" text-decoration:none;">
+                <img src="__ROOT__/statics/img/img65.png">
+                <span>系统通知</span>
+                <div class="youlianjie"></div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+       </if>
+       <if condition="in_array('切换身份',$middle_menu)">   
+        <li>
+            <a href="__ROOT__/index.php/weixin/ChangeSession/index" style=" text-decoration:none;">
+                <img src="__ROOT__/statics/img/img64.png">
+                <span>切换身份</span>
+                <div class="youlianjie"></div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+        </if>
+        <if condition="in_array('取消绑定',$middle_menu)">
+            <li onclick="Uncui()">
+
+                    <img src="__ROOT__/statics/img/img100.png">
+                    <span>取消绑定</span>
+                    <div class="youlianjie"></div>
+                    <div class="clearfix"></div>
+
+            </li>
+        </if>
+        <!--<li>-->
+        <!--<a href="__ROOT__/index.php/weixin/StuCode" style=" text-decoration:none;">-->
+        <!--<img src="__ROOT__/statics/img/img66.png">-->
+        <!--<span>客户端二维码名片</span>-->
+        <!--<div class="youlianjie"></div>-->
+        <!--<div class="clearfix"></div>-->
+        <!--</a>-->
+        <!--</li>-->
+
+    </ul>
+    <div class="huitiao"></div>
+    <ul class="biaoti">
+        <if condition="in_array('使用帮助',$bottom_menu)">   
+        <li>
+            <a href="__ROOT__/index.php?g=portal&m=help&a=index">
+                <img src="__ROOT__/statics/img/img72.png">
+                <span>使用帮助</span>
+                <div class="youlianjie"></div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+       </if> 
+       <if condition="in_array('关于我们',$bottom_menu)">  
+        <li>
+            <a href="__ROOT__/index.php?g=portal&m=OurParent&a=index">
+                <img src="__ROOT__/statics/img/img73.png">
+                <span>关于我们</span>
+                <div class="youlianjie"></div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+       </if>
+       <if condition="in_array('在线留言',$bottom_menu)">  
+        <li>
+            <a href="__ROOT__/index.php/weixin/Tusercenter/MessageBoard" style=" text-decoration:none;">
+                <img src="__ROOT__/statics/img/img64.png">
+                <span>在线留言</span>
+                <div class="youlianjie"></div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+       </if> 
+
+    </ul>
+    <div class="huitiao" style=" margin-bottom:50px;"></div>
+    <div class="huitiao2"></div>
+    <!--footer-start-->
+    <div class="footer" style=" margin-bottom:20px;">
+        <div class="f1">
+            <a href="__ROOT__/index.php/weixin/Tindex" style=" text-decoration:none; color:black;">
+                <div class="icon1">
+                    <img src="__ROOT__/statics/img/img37.png">
+                </div>
+                <span>校园</span>
+            </a>
+        </div>
+        <div class="f2">
+            <a href="__ROOT__/index.php/weixin/Tchmobilephone" style=" text-decoration:none; color:black;">
+                <div class="icon1">
+                    <img src="__TMPL__Tpublic/img/img74.png">
+                </div>
+                <span>通讯录</span>
+            </a>
+        </div>
+        <div class="f3">
+            <a href="__ROOT__/index.php/weixin/Tindex/tishi" style=" text-decoration:none; color:black;">
+                <div class="icon2">
+                    <div class="heng"></div>
+                    <div class="shu"></div>
+                </div>
+            </a>
+        </div>
+        <div class="f4">
+            <a href="__ROOT__/index.php/Weixin/TchMicroBlog/index" style=" text-decoration:none; color:black;">
+                <div class="icon1">
+                    <img src="__ROOT__/statics/img/img33.png">
+                </div>
+                <span>动态</span>
+            </a>
+        </div>
+        <div class="f5">
+            <a href="__ROOT__/index.php/Weixin/Tusercenter" style=" text-decoration:none; color:black;">
+                <div class="icon1">
+                    <img src="__TMPL__Tpublic/img/img36.png">
+                </div>
+                <span>我的</span>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--footer-end-->
+</div>
+<style>
+    ul{
+        font-weight: normal;
+    }
+</style>
+<!--<input type="hidden" value={$headimg} id="headimg">-->
+<script>
+//    $("document").ready(function() {
+//        var headimg = $("#headimg").val();
+//        var headimg = "__ROOT__/uploads/microblog/"+headimg;
+//        $(".tu").attr("src", headimg);
+//    });
+    $(".dian").eq(0).click(
+        function() {
+            $(".lun").animate({
+                marginLeft: 0
+            })
+            $(this).addClass("lei").siblings().removeClass("lei")
+        }
+    )
+    $(".dian").eq(1).click(
+        function() {
+            $(".lun").animate({
+                marginLeft: -g
+            })
+            $(this).addClass("lei").siblings().removeClass("lei")
+        }
+    )
+
+    y = $(".container").width()
+    $(".huitiao2").width(y)
+    $(".footer").width(y)
+    b = $(".tubiao li").width()
+    $(".tubiao li img").width(b * 1.5)
+    $(".tubiao li img").height(b * 1.5)
+    $(".tubiao2 li img").width(b * 1.5)
+    $(".tubiao2 li img").height(b * 1.5)
+    c = $(".dian").width()
+    $(".dian").height(c)
+    d = $(".tixing img").width()
+    $(".tixing img").height(d)
+    e = $(".top .you").width()
+    $(".top .you").height(e)
+    f = $(".biaoti li img").width()
+    $(".biaoti li img").height(f)
+    g = $(".container").width()
+    $(".lun").width(g * 2)
+    k = $(".one ul li img").width()
+    $(".one ul li img").height(k)
+    l = $(".banner").width()
+    $(".banner").height(l * 0.3)
+    $("#click").click(function () {
+        alert("更新中");
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('parentsuser')}">家长列表</a></li>
+        <li><a href="{:U('addparentsuser')}">新增用户</a></li>
+        <li class="active"><a href="{:U('bindingstu',array('id'=>$userid))}">绑定管理</a></li>
+        <li><a href="{:U('addbindingstu',array('id'=>$userid))}">添加绑定</a></li>
+    </ul>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="50">学生ID</th>
+            <th>称谓</th>
+            <th>姓名</th>
+            <th>学校</th>
+            <th>班级</th>
+            <th>头像</th>
+            <th>创建时间</th>
+            <th width="120">管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>$user_status=array("0"=>"待激活","1"=>"已激活");</php>
+        <foreach name="bindstu" item="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.appellation|default="未填写"}</td>
+                <td>{$vo.name|default="未填写"}</td>
+                <td>{$vo.schoolname|default="未填写"}</td>
+                <td>{$vo.classname|default="未填写"}</td>
+                <td><img width="30" height="30" src="__ROOT__uploads/avatar/{$vo.photo}" /></td>
+                <td><php>echo date('Y-m-d',$vo['time']);</php></td>
+                <td>
+                    <a href="{:U('delete_bindingstu',array('bindid'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要解绑此用户吗？">解绑</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

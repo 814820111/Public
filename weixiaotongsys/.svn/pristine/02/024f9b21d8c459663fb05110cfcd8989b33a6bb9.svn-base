@@ -1,0 +1,50 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('index')}">评语内容</a></li>
+        <li class="active"><a href="{:U('remarks_list')}">栏目内容</a></li>
+        <li><a href="{:U('remarks_add',array('cid'=>$navcid))}">添加栏目</a></li>
+    </ul>
+
+    <form class="well form-search" id="mainform"
+          action="{:U('remarks_list')}" method="post">
+
+    </form>
+    <form class="J_ajaxForm" action="{:U('nav/listorders')}" method="post">
+        <div class="table-actions">
+            <button type="submit" class="btn btn-primary btn-small btn_submit J_ajax_submit_btn">排序</button>
+        </div>
+        <table class="table table-hover table-bordered table-list" id="menus-table">
+            <thead>
+            <tr>
+
+                <th width="50">ID</th>
+
+                <th>栏目名称</th>
+                <th width="80">状态</th>
+                <th width="150">管理操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {$categorys}
+            </tbody>
+
+        </table>
+        <div class="table-actions">
+            <button type="submit" class="btn btn-primary btn-small btn_submit J_ajax_submit_btn">排序</button>
+        </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    $(function() {
+
+        $("#navcid_select").change(function() {
+            $("#mainform").submit();
+        });
+
+    });
+</script>
+</body>
+</html>

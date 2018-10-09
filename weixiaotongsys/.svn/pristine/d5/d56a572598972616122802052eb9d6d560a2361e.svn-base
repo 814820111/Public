@@ -1,0 +1,213 @@
+<admintpl file="header" />
+<style type="text/css">
+	  img{
+    margin-right: 10px;
+        margin-bottom: 5px;
+  }
+
+</style>
+<body class="J_scroll_fixed">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('AppMenu/index')}">前台菜单</a></li>
+			<li class="active"><a href="{:U('AppMenu/add')}">添加菜单</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal J_ajaxForm" action="{:U('AppMenu/add_post')}">
+				<fieldset>
+					<div class="control-group">
+						<label class="control-label">菜单分类:</label>
+						<div class="controls">
+							<select name="cid" id="navcid_select" class="normal_select">
+							<foreach name="navcats" item="vo">
+								<php>$navcid_selected=$navcid==$vo['id']?"selected":"";</php>
+								<option value="{$vo.id}" {$navcid_selected}>{$vo.name}</option>
+							</foreach>
+							</select>
+						</div>
+					</div>
+                    <div class="control-group">
+						<label class="control-label">菜单主题:</label>
+						<div class="controls">
+							<select name="type" class="normal_select" id="sel_menu">
+								<option value="1">校园</option>
+								<option value="2">通讯录</option>
+								<option value="3">扩展</option>
+								<option value="4">动态</option>
+								<option value="5">我的</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label">上级:</label>
+						<div class="controls">
+							<select name="parentid" class="normal_select">
+								<option value="0">/</option>
+								{$nav_trees}
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">名称:</label>
+						<div class="controls">
+							<input type="text" class="input" name="name" value="">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">应用:</label>
+						<div class="controls">
+							<input type="text" class="input" name="app" value="Weixin">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">模块:</label>
+						<div class="controls">
+							<input type="text" class="input" name="model" value="">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">方法:</label>
+						<div class="controls">
+							<input type="text" class="input" name="action" value="">
+						</div>
+					</div>
+			
+					<div class="control-group">
+						<label class="control-label">菜单位置:</label>
+						<div class="controls">
+							<select name="location" class="normal_select" id="sel_place">
+							    <option value="0">一级主题</option>
+								<option value="1">顶部</option>
+								<option value="2">中间</option>
+								<option value="3">底部</option>
+							</select>
+						</div>
+					</div>
+
+					
+					<div class="control-group">
+						<label class="control-label">图标:</label>
+						<div class="controls">
+						  <div  style=" width: 543px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+	                       <div style=" width: 300px;">
+	                        <a id="pic" style="  " href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','&max_count=1','');return false;">
+
+	                            <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb2_preview' width='80' height='60' style='cursor:hand' />
+	                            </a>
+	                        <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+	                          <input type="button" class="btn" onclick="$('#thumb2_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#pic').find('img').remove(); $('#pic').append('<img src=__ROOT__/statics/images/icon/upload-pic.png id=thumb2_preview width=80 height=60 style=cursor:hand />'); $('#thumb2').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+	                         </div>
+	                       
+	                      </div>
+
+             
+                        <div style="width: 340px;display: none;" class="icon2" ><input type='hidden' name='smeta3[thumb]' id='thumb3' value=''>
+                            <a href='javascript:void(0);' onclick="flashupload_self('thumb_images', '附件上传','thumb3',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','','');return false;">
+                                <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb3_preview' width='80' height='60' style='cursor:hand' /></a>
+                            <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                            <input type="button" class="btn" onclick="$('#thumb3_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb3').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                        </div>
+                        <span class="wenzi" style="display: none;">注意：中间菜单需要按顺序从上到下依次添加两张图片,否则图片将有空缺,其他模块只需要添加一张即可。</span>
+                 
+
+					 </div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">显示:</label>
+						<div class="controls">
+							<select name="status"><option value="1">显示</option>
+								<option value="0">隐藏</option></select>
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label">类型:</label>
+						<div class="controls">
+							<select name="role_type" class="normal_select">
+								<option value="1" selected>权限认证+菜单</option>
+								<option value="0">只作为菜单</option>
+							</select>
+							注意：“权限认证+菜单”表示加入后台权限管理，纯碎是菜单项请不要选择此项。
+						</div>
+					</div>
+				</fieldset>
+				<div class="form-actions">
+					<button type="submit"
+						class="btn btn-primary btn_submit J_ajax_submit_btn">添加</button>
+					<a class="btn" href="__URL__">返回</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+	   <script type="text/javascript" src="__ROOT__/statics/js/content_addtop_self.js"></script>
+	<script>
+
+ $("#sel_place").change(function(){
+ 
+	  var menu = $(this).val();
+      var sel_menu= $("#sel_menu option:selected").val();
+
+	  if(menu==2 && sel_menu==1)
+	  {
+	  	$(".icon2").show();
+	  	$(".wenzi").show();
+	  }else{
+	  	$(".icon2").hide();
+	  	$(".wenzi").hide();
+	  }
+   
+ })
+   
+
+
+
+		$(function() {
+
+			
+			$("#navcid_select").change(function() {
+				if(location.search.indexOf("?")>=0){
+					location.href = location.href + "&cid=" + $(this).val();
+				}else{
+					location.href = location.href + "?cid=" + $(this).val();
+				}
+				
+				
+			});
+
+			$("#selecthref").click(function() {
+				$('#outlink_input').removeAttr('name');
+				$('#selecturl').attr({
+					'checked' : 'checked',
+					'name' : 'href'
+				});
+			});
+			$("input[name='href']").click(function() {
+				$('#selecthref').removeAttr('name');
+				$('#outlink').attr({
+					'checked' : 'checked',
+					'name' : 'href'
+				});
+			});
+			/*
+			Wind.use('ajaxForm','artDialog','iframeTools', function () {
+			 	$("#href_input").click(function(){
+			 		art.dialog.open("{:u('nav/select')}", {
+			            title: "选择链接地址",
+			            close: function () {
+			    			var checked_v = art.dialog.data('checked_v');
+			    			if (checked_v !== undefined) $('#href_input').val(checked_v);
+			    			var checked_u = art.dialog.data('checked_u');
+			    			if (checked_u !== undefined) $('#u_input').val(checked_u);
+			    		}
+			        },false);
+				});
+			});
+			 */
+		});
+	</script>
+
+</body>
+</html>

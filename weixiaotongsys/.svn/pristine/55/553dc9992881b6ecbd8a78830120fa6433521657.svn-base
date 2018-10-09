@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>家长首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/littleweb/css/bootstrap-chengzhang.css">
+    <link rel="stylesheet" href="__TMPL__public/littleweb/css/chengzhang.css">
+    <script src="__TMPL__public/littleweb/js/jquery-3.1.0.min (1).js"></script>
+
+</head>
+
+<body>
+    <div class="container" style="">
+        <div class="banner">
+
+
+            <!--小二start-->
+            <div style="width:60%; margin-left:auto; margin-right:auto; margin-bottom:4%; margin-top:5%;">
+                <div class="tou">
+                    <img src="__TMPL__public/littleweb/img/img51.png" style="width:100%; border-radius:50%;">
+                </div>
+                <div style="float:left; margin-left:8%; color:#06c08e; margin-top:10%; font-size:5vw;"> 彭小二</div>
+                <div style="float:left; margin-left:8%; color:#06c08e; margin-top:10%; font-size:5vw;"> 大一班</div>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <!--小二end-->
+            <!--按钮start-->
+            <div class="anniu">
+                <div style=" background-color:#06c08e; color:white; float:left; padding:3px 18px 2px 18px; border-radius:10px; font-size:4.5vw;">
+                    <a href="#" style=" text-decoration:none; color:inherit;">云相册</a>
+                </div>
+                <div style="background-color:#06c08e; color:white; float:right; padding:3px 13px 2px 13px; border-radius:10px;font-size:4.5vw;">
+                    <a href="#" style=" text-decoration:none; color:inherit;">照片成书</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <!--按钮end-->
+        </div>
+
+
+        <!--框一start-->
+        <div style=" margin-bottom:15px;">
+            <div class="kuang">
+                <div class="kuang-left">
+                    <img src="__TMPL__public/littleweb/img/img51.png">
+                </div>
+                <div class="kuang-right">
+                    <div class="name">妞妞妈妈</div>
+                    <div>
+                        <div class="date">2016-08-08</div>
+                        <div class="time">18:30</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="neirong">啦啦啦啦啦啦啦啦啦</div>
+                    <div>
+                        <div class="photo">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="photo" style=" margin-left:3.5%; margin-right:3.5%;">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="photo">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <div class="photo">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="photo" style=" margin-left:3.5%; margin-right:3.5%;">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="photo">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <!--<div class="icon01">30分钟前</div>-->
+                        <div class="icon06"></div>
+                        <div class="icon02"></div>
+                        <div class="icon03"></div>
+                        <div class="icon04"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!--框一end-->
+
+        <!--框二start-->
+        <div class="huitiao3"></div>
+        <div style=" margin-bottom:15px;">
+            <div class="kuang">
+                <div class="kuang-left">
+                    <img src="__TMPL__public/littleweb/img/img51.png">
+                </div>
+                <div class="kuang-right">
+                    <div class="name">妞妞妈妈</div>
+                    <div>
+                        <div class="date">2016-08-08</div>
+                        <div class="time">18:30</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="neirong">啦啦啦啦啦啦啦啦啦</div>
+                    <div class="video">
+                        <video src="Adobe.mp4" controls></video>
+                    </div>
+                    <div>
+                        <!--<div class="icon01">1小时前</div>-->
+                        <div class="icon06"></div>
+                        <div class="icon02"></div>
+                        <div class="icon03"></div>
+                        <div class="icon04"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!--框二end-->
+        <!--框三start-->
+        <div class="huitiao3"></div>
+        <div style=" margin-bottom:15px;">
+            <div class="kuang">
+                <div class="kuang-left">
+                    <img src="__TMPL__public/littleweb/img/img51.png">
+                </div>
+                <div class="kuang-right">
+                    <div class="name">妞妞妈妈</div>
+                    <div>
+                        <div class="date">2016-08-08</div>
+                        <div class="time">18:30</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="all-box">
+                        <div class="all">
+                            啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+                        </div>
+                    </div>
+                    <div class="btn-all01">全文</div>
+                    <div class="btn-all02">收起</div>
+                    <div>
+                        <div class="photo">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="photo" style=" margin-left:3.5%; margin-right:3.5%;">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="photo">
+                            <img src="__TMPL__public/littleweb/img/img51.png">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div>
+                        <!--<div class="icon01">30分钟前</div>-->
+                        <div class="icon06"></div>
+                        <div class="icon02"></div>
+                        <div class="icon03"></div>
+                        <div class="icon04"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="zan-box">
+                        <div class="dianzan">
+                            <div class="zan-tu"></div>
+                            <div class="zan-shu">(5)</div>
+                            <span class="zan-ren">爸爸、奶奶、姑姑、妈妈、姨妈、姑姑、姑姑</span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="pinglun">
+                            <div class="ping-up">
+                                <div class="ping-tu"></div>
+                                <div class="ping-shu">(2)</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="ping-ren">
+                                <div class="ming">妞妞妈妈：</div>
+                                <span class="nei">妞妞真可爱！</span>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="ping-ren">
+                                <div class="ming">李大壮奶奶：</div>
+                                <span class="nei">妞妞真可爱可爱可爱可爱可爱可爱可爱可爱可爱可爱可爱！</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!--框三end-->
+        <!--footer-start-->
+        <div style=" margin-bottom:80px;"></div>
+        <div class="huitiao2"></div>
+        <div class="footer" style=" margin-bottom:20px;">
+            <div class="f1">
+                <a href="index.html" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img37.png">
+                    </div>
+                    <span>校园</span>
+                </a>
+            </div>
+            <div class="f2">
+                <a href="#" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img32.png">
+                    </div>
+                    <span class="lei2">成长日记</span>
+                </a>
+            </div>
+            <div class="f3">
+                <a href="#" style=" text-decoration:none; color:black;">
+                    <div class="icon2">
+                        <div class="heng"></div>
+                        <div class="shu"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="f4">
+                <a href="dongtai.html" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img33.png">
+                    </div>
+                    <span>动态</span>
+                </a>
+            </div>
+            <div class="f5">
+                <a href="wode.html" style=" text-decoration:none; color:black;">
+                    <div class="icon1">
+                        <img src="__TMPL__public/littleweb/img/img35.png">
+                    </div>
+                    <span>我的</span>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--footer-end-->
+    </div>
+    <script>
+        $(".btn-all01").click(
+            function() {
+                $(".all-box").toggleClass("lei3")
+            }
+        )
+        $(".btn-all02").click(
+            function() {
+                $(".all-box").toggleClass("lei3")
+            }
+        )
+    </script>
+    <script>
+        y = $(".container").width()
+        $(".huitiao2").width(y)
+        $(".footer").width(y)
+        $(".banner").width(y)
+        $(".banner").height(y * 0.43)
+
+        a = $(".photo").width()
+        $(".photo").height(a)
+        $(".photo img").width(a)
+        $(".photo img").height(a)
+        a = $(".kuang-left").width()
+        $(".kuang-left").height(a)
+        $(".kuang-left img").height(a)
+        $(".kuang-left img").width(a)
+        b = $(".new-box").width()
+        $(".new-box").height(b * 0.22)
+        c = $(".new1").width()
+        $(".new1").height(c)
+        $(".new1 img").width(c)
+        $(".new1 img").height(c)
+        d = $(".tou").width()
+        $(".tou").height(d)
+        document.title = $("body").width()
+    </script>
+    <script>
+        $(".icon03").click(
+            function() {
+                $(this).toggleClass("icon05")
+            }
+        )
+    </script>
+    <script>
+        $(".btn-all02").hide()
+        $(".btn-all01").click(
+            function() {
+                $(".btn-all01").hide()
+                $(".btn-all02").show()
+            }
+        )
+        $(".btn-all02").click(
+            function() {
+                $(".btn-all02").hide()
+                $(".btn-all01").show()
+            }
+        )
+    </script>
+</body>
+
+</html>

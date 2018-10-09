@@ -1,0 +1,75 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="#">修改摄像头名称</a></li>
+        <!-- <li class="active"><a href="{:U('add')}">新增监控</a></li> -->
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('edit')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">摄像头名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="nname" name="nname" value="<?php echo $monitorChannel['nname']?>">
+
+                        <input type="hidden" name="id" value="<?php echo $id?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">摄像头介绍:</label>
+                    <div class="controls">
+
+                        &nbsp;<textarea  class="content" name="content" rows="4" style="margin-top: 10px;" value=""><?php echo $monitorChannel['content']?></textarea>
+
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="">修改</button>
+                <a class="btn" href="{:U('index')}">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+        $(function() {
+        $("#school").change(function() {
+            $("#class").empty();
+            $.getJSON("__ROOT__/index.php?g=apps&m=school&a=getclasslist&schoolid="+$("#school").val(),{},function(data){
+                if(data.status=="success"){
+                for(var key in data.data){
+                    $("#class").append("<option value="+data.data[key]["id"]+">"+data.data[key]["name"]+"</option>");
+                }
+                }
+                if(data.status=="error"){
+                    $("#class").append("<option value='0'>没有班级</option>");
+                }
+            }); 
+            });
+        });
+
+        //获取appsecret
+            function get_appSecret(id) {
+                if(id == '') {
+                    $('#appsecret').val('');
+                    return false;
+                }
+                //发送ajax获取appsecret
+                $.ajax({
+                    type: 'post',
+                    data: {id: id},
+                    url: "__ROOT__/index.php/Admin/Monitor/getAppSecret",
+                    success: function(msg) {
+                        $('#appsecret').val(msg);
+                    },
+                    error: function() {
+                        alert('网络出错')
+                    }
+                });              
+            }
+</script>
+</body>
+</html>

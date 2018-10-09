@@ -1,0 +1,111 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('index')}">老师点评列表</a></li>
+        <!-- <li><a href="{:U('diyweather')}">个人发布天气列表</a></li>
+        <li><a href="{:U('add')}">新增天气情况</a></li> -->
+    </ul>
+    <form class="well form-search" method="post" action="{:U('SchoolPlan/index')}">
+            <div class="search_type cc mb10">
+                <div class="mb10">
+                    <!-- <span class="mr20">学校： 
+                        <select class="select_2" name="school">
+                            <option value='0'>全部</option>{$taxonomys}
+                        </select> &nbsp;&nbsp; -->
+                        关键字： 
+                        <input type="text" name="keyword" style="width: 200px;" value="{$formget.keyword}" placeholder="请输入关键字...">
+                        <input type="submit" class="btn btn-primary" value="搜索" />
+                    </span>
+                </div>
+            </div>
+        </form>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>老师姓名</th>
+            <th>学生姓名</th>
+            <th>学习</th>
+            <th>动手能力</th>
+            <th>唱歌</th>
+            <th>劳动能力</th>
+            <th>应变能力</th>
+            <th>点评内容</th>
+            <th>创建时间</th>
+            <th>管理操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>
+        $status=array("1"=>"优秀","2"=>"良好","3"=>"一般");
+        </php>
+        <foreach name="posts" item="vo">
+            <tr>
+                <td>{$vo.teacher_name}</td>
+                <td>{$vo.student_name}</td>
+                <td>{$status[$vo['learn']]}</td>
+                <td>{$status[$vo['work']]}</td>
+                <td>{$status[$vo['sing']]}</td>
+                <td>{$status[$vo['labour']]}</td>
+                <td>{$status[$vo['strain']]}</td>
+                <td>{$vo.comment_content}</td>
+                <td>{$vo.create_time|date="Y-m-d H:i:s",###}</td>
+                <td>
+                    <a href="{:U('TeacherComment/edit',array('id'=>$vo['comment_id']))}" >修改</a> | 
+                    <a href="{:U('TeacherComment/delete',array('id'=>$vo['comment_id']))}" class="J_ajax_del">删除</a></td>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+        function refersh_window() {
+            var refersh_time = getCookie('refersh_time');
+            if (refersh_time == 1) {
+                window.location = "{:U('TeacherComment/index',$formget)}";
+            }
+        }
+        setInterval(function() {
+            refersh_window();
+        }, 2000);
+        $(function() {
+            setCookie("refersh_time", 0);
+            Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+                //批量移动
+                $('.J_articles_move').click(
+                        function(e) {
+                            var str = 0;
+                            var id = tag = '';
+                            $("input[name='ids[]']").each(function() {
+                                if ($(this).attr('checked')) {
+                                    str = 1;
+                                    id += tag + $(this).val();
+                                    tag = ',';
+                                }
+                            });
+                            if (str == 0) {
+                                art.dialog.through({
+                                    id : 'error',
+                                    icon : 'error',
+                                    content : '您没有勾选信息，无法进行操作！',
+                                    cancelVal : '关闭',
+                                    cancel : true
+                                });
+                                return false;
+                            }
+                            var $this = $(this);
+                            art.dialog.open(
+                                    "__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="
+                                            + id, {
+                                        title : "批量移动",
+                                        width : "80%"
+                                    });
+                        });
+            });
+        });
+    </script>
+</body>
+</html>

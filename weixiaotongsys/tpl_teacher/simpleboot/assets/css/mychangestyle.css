@@ -1,0 +1,42 @@
+/*学校管理页面样式*/
+.controls .content{
+    height: 30px;
+    line-height: 30px;
+}
+.controls .check_pic{
+    height: 100px;
+    width: 150px;
+    border: 1px solid #ccc;
+}
+.controls .massagetext{
+    height: 100px;
+    width: 206px;
+    border: 1px solid #ccc;
+}
+/* 学生调班  页面样式*/
+.stu-change-class .stu-select{
+    width: 100%;
+}
+.stu-change-class .stu-select .stu-select-list{
+    height: 40px;
+    width: 310px;
+    line-height: 40px;
+    float: left;
+}
+.stu-change-class .stu-select .stu-select-list .stu-select-label{
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    width: 60px;
+    float: left;
+}
+.stu-change-class .stu-select .stu-select-list .stu-select-inputlist{
+    height: 30px;
+    width: 220px;
+    margin-left: 20px;
+    float: left;
+}
+.change_class_iframe{
+    width: 100%;
+    border: 0 solid #fff;
+}

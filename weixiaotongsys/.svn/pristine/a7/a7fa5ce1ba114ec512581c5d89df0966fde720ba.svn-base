@@ -1,0 +1,85 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+ 
+
+  
+
+
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">学校列表</a></li>
+        <li class="active"><a href="{:U('switch_index')}">学校开关设置</a></li>
+
+
+    </ul>
+      <form action="{:U('subject')}">
+
+    </form>
+    <table class="table table-hover table-bordered" style="width: 500px;">
+        <thead>
+
+            <th style="text-align: center;">开关名称</th>
+            <th style="text-align: center;">开关状态</th>
+            <th style="text-align: center;">操作</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="switch" item="vo">
+           <tr>
+               <td style="text-align:center;">{$vo.name}</td>
+               <php>$Y="Y"==$vo['status']?"checked":"";</php>
+               <php>$N="N"==$vo['status']?"checked":"";</php>
+               <td style="text-align:center;"> <input type="radio" id="{$vo.identifier}_0" name="{$vo.identifier}" style="vertical-align: -3px;" value="Y"  {$Y}> <label for="{$vo.identifier}_0" style="display: inline-block;">开</label> <input type="radio" id="{$vo.identifier}_1"  name="{$vo.identifier}" style="vertical-align: -3px;" value="N" {$N}><label for="{$vo.identifier}_1" style="display: inline-block;">关</label></td>
+               <td style="text-align:center;"><a  data-id="{$vo.id}" style="cursor: pointer;" onclick="save_switch(this,{$vo.id})" >更新开关</a></td>
+           </tr>
+        </foreach>
+        </tbody>
+    </table>
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
+<script>
+
+    //更新开关
+    function save_switch(obj,id)
+    {
+
+       var parent_td  =  $(obj).parent().prev();
+
+
+        var val = $(parent_td).find('input[type="radio"]:checked').val();
+
+
+
+        $.ajax({
+            type: "get",
+            async: false,
+            dataType:'json',
+            url: "{:U('Admin/SchoolManage/save_switch')}",
+            data: {
+                id:id,
+                status:val
+            },
+            success: function(res) {
+
+               if(res.status)
+               {
+                   alert(res.msg)
+               }else{
+                   alert(res.msg)
+               }
+
+
+
+            },
+            //请求失败
+            error:function(){
+                alert('请求失败');
+            }
+        });
+    }
+
+</script>

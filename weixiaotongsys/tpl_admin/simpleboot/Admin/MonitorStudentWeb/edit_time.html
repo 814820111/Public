@@ -1,0 +1,139 @@
+<admintpl file="header" />
+<style type="text/css">
+
+    .form-horizontal .imgWrapPart{
+        float: left;
+        width: 50%;
+        height: 60px;
+    }
+
+    .imgWrapPart p{
+        margin-top: 10px;
+    }
+
+    .imgWrapPart > input{
+        vertical-align: -1px;
+        margin-right: 20px;
+    }
+    input.isMyChecked{
+        vertical-align: -1px;
+    }
+
+</style>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('editTime', array('id'=>$monitor_id))}">修改开放时间</a></li>
+        <!--<li class="active"><a href="{:U('add')}">新增授权</a></li>-->
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('editTime_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">开放时间:</label>
+                    <div class="controls">
+                        <div class="control-group imgWrapPart">
+                            <input type="time" name="start_time" value="<?php echo $timeInfo['start_time']?>" placeholder="开始时间，例如：00:12"><input type="time" value="<?php echo $timeInfo['end_time']?>" name="end_time" placeholder="结束时间,例如：00:42">
+                            <p style="width: 100%">
+                                <?php $i = 0; foreach($timeInfo['days'] as $v){
+                                    ++$i;
+                                    if($i == 1) $o = '一';
+                                    if($i == 2) $o = '二';
+                                    if($i == 3) $o = '三';
+                                    if($i == 4) $o = '四';
+                                    if($i == 5) $o = '五';
+                                    if($i == 6) $o = '六';
+                                    if($i == 7) $o = '天';
+                                 ?>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input <?php if($v != 0){echo "checked";}?> style="margin-left: 0" type="checkbox" class="isMyChecked"  name="days[]" value="<?php echo $i?>">星期<?php echo $o;?></input>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                </label>
+                                <!--<input type="checkbox" class="isMyChecked"  name="days[]" value="2">星期二</input>-->
+                                <!--<input type="checkbox" class="isMyChecked"  name="days[]" value="3">星期三</input>-->
+                                <!--<input type="checkbox" class="isMyChecked"  name="days[]" value="4">星期四</input>-->
+                                <!--<input type="checkbox" class="isMyChecked"  name="days[]" value="5">星期五</input>-->
+                                <!--<input type="checkbox" class="isMyChecked"  name="days[]" value="6">星期六</input>-->
+                                <!--<input type="checkbox" class="isMyChecked"  name="days[]" value="7">星期天</input>-->
+                                <?php }?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" name="monitor_id" value="<?php echo $monitor_id;?>">
+                <button type="submit" class="">确定</button>
+                <!--<button class="btn" type="reset">清空</button>-->
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+        $(function() {
+        $("#school").change(function() {
+            $("#class").empty();
+            $.getJSON("__ROOT__/index.php?g=apps&m=school&a=getclasslist&schoolid="+$("#school").val(),{},function(data){
+                if(data.status=="success"){
+                for(var key in data.data){
+                    $("#class").append("<option value="+data.data[key]["id"]+">"+data.data[key]["name"]+"</option>");
+                }
+                }
+                if(data.status=="error"){
+                    $("#class").append("<option value='0'>没有班级</option>");
+                }
+            }); 
+            });
+        });
+
+        //获取appsecret
+            function get_appSecret(id) {
+                if(id == '') {
+                    $('#appsecret').val('');
+                    return false;
+                }
+                //发送ajax获取appsecret
+                $.ajax({
+                    type: 'post',
+                    data: {id: id},
+                    url: "__ROOT__/index.php/Admin/Monitor/getAppSecret",
+                    success: function(msg) {
+                        $('#appsecret').val(msg);
+                    },
+                    error: function() {
+                        alert('网络出错')
+                    }
+                });              
+            }
+
+        //获取appkey
+        function getAppKeys(type) {
+            if(type == '') {
+                $('#appKey').val('');
+                return false;
+            }
+            $.ajax({
+                    type: 'post',
+                    data: {type: type},
+                    dataType: 'json',
+                    url: "__ROOT__/index.php/Admin/Monitor/getAppKey",
+                    success: function(msg) {
+                        console.log(msg);
+                        //$('#appKey').val(msg);
+                        var str = '<option value="">请选择设备appKey</option>';
+                        for(var i = 0; i < msg.length; i++) {
+                            str += "<option value="+msg[i]['id']+">"+msg[i]['appkey']+"("+msg[i]['name']+")</option>";
+                        }
+                        $('#appKey').html(str);
+                        $('#appsecret').val('');
+                    },
+                    error: function() {
+                        alert('网络出错')
+                    }
+            });      
+        }
+</script>
+</body>
+</html>

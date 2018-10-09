@@ -1,0 +1,89 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="#">修改视频信息</a></li>
+        <!-- <li class="active"><a href="{:U('add')}">新增监控</a></li> -->
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('editChannel')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">设备名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="nname" name="nname" value="<?php echo $monitorChannel['nname']?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">通道名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="name" name="name" value="<?php echo $monitorChannel['channelname']?>" disabled>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">设备序列号:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="deviceSerial" name="deviceSerial" value="<?php echo $monitorChannel['deviceserial']?>" disabled>
+                    </div>
+                </div>
+        
+                <div class="control-group">
+                    <label class="control-label">通道号</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="" name="no" value="<?php echo $monitorChannel['channelno']?>" disabled>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" name = "deviceSerial" value="<?php echo $monitorChannel['deviceserial'];?>">
+                <input type="hidden" name = "no" value="<?php echo $monitorChannel['channelno'];?>">
+                
+                <input type="hidden" name = "monitor_id" value="<?php echo $monitorChannel['monitor_id'];?>">
+                <input type="hidden" name = "monitor_channel_id" value="<?php echo $monitor_channel_id;?>">
+                <button type="submit" class="">修改</button>
+                <a class="btn" href="__ROOT__/index.php/Admin/Monitor/look/id/<?php echo $monitorChannel['monitor_id']?>">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+        $(function() {
+        $("#school").change(function() {
+            $("#class").empty();
+            $.getJSON("__ROOT__/index.php?g=apps&m=school&a=getclasslist&schoolid="+$("#school").val(),{},function(data){
+                if(data.status=="success"){
+                for(var key in data.data){
+                    $("#class").append("<option value="+data.data[key]["id"]+">"+data.data[key]["name"]+"</option>");
+                }
+                }
+                if(data.status=="error"){
+                    $("#class").append("<option value='0'>没有班级</option>");
+                }
+            }); 
+            });
+        });
+
+        //获取appsecret
+            function get_appSecret(id) {
+                if(id == '') {
+                    $('#appsecret').val('');
+                    return false;
+                }
+                //发送ajax获取appsecret
+                $.ajax({
+                    type: 'post',
+                    data: {id: id},
+                    url: "__ROOT__/index.php/Admin/Monitor/getAppSecret",
+                    success: function(msg) {
+                        $('#appsecret').val(msg);
+                    },
+                    error: function() {
+                        alert('网络出错')
+                    }
+                });              
+            }
+</script>
+</body>
+</html>

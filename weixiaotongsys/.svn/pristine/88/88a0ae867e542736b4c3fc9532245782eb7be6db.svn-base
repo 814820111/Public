@@ -1,0 +1,56 @@
+<admintpl file="header" />
+<style type="text/css">
+    
+  
+
+
+</style>
+
+
+
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">学生信息管理</a></li>
+        <li class="active"><a href="{:U('changestudent')}">修改学生信息</a></li>
+        <li><a href="{:U('Student/add',array('school'=>empty($term['schoolid'])?'':$term['schoolid']))}" target="_self">添加学生</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('edit_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">姓名:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="name" value="{$student['name']}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">性别:</label>
+                    <div class="controls" >
+                        <input type="radio" class="input" name="sex" value="0" checked><span>女</span>
+                        <input type="radio" class="input" name="sex" value="1"><span>男</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">头像:</label>
+                    <div class="controls">
+                        <div style="text-align: center; width: 340px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+                            <a href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','','');return false;">
+                                <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb2_preview' width='80' height='60' style='cursor:hand' /></a>
+                            <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                            <input type="button" class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <input type="hidden" class="input" name="student_id" value="{$student['id']}"  readOnly="true">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

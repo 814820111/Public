@@ -1,0 +1,211 @@
+<admintpl file="header"/>
+<style type="text/css">
+
+    .form-horizontal .imgWrapPart {
+        float: left;
+        width: 50%;
+        height: 60px;
+    }
+
+    .imgWrapPart p {
+        margin-top: 10px;
+    }
+
+    .imgWrapPart > input {
+        vertical-align: -1px;
+        margin-right: 20px;
+    }
+
+    input.isMyChecked {
+        margin-left: 20px;
+        vertical-align: -1px;
+    }
+
+</style>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">授权管理</a></li>
+        <li class="active"><a href="{:U('add')}">新增授权</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm add-validate" action="{:U('camarolist')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">所属学校:</label>
+                    <div class="controls">
+                        <select id="school" name="school" class="normal_select">
+                            <OPTION value="">请选择学校</OPTION>
+                            <volist name="schools" id="school">
+                                <OPTION value="{$school.schoolid}">{$school.school_name}</OPTION>
+                            </volist>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所属班级:</label>
+                    <div class="controls">
+                        <SELECT id="class" name="class">
+                        </SELECT>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">授权名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" id="name" name="name" value="">
+                    </div>
+                </div>
+
+                <!--<div class="control-group">-->
+                <!--<label class="control-label">所属账号:</label>-->
+                <!--<div class="controls">-->
+                <!--<select id="usermanage" name="usermanage_id" class="normal_select">-->
+                <!--<OPTION value="0">请选择账号</OPTION>-->
+                <!--<volist name="usermanage" id="usermanage">-->
+                <!--<OPTION value="{$usermanage.id}">{$usermanage.name}-->
+                <!--<if condition="$usermanage.type == 1">-->
+                <!--(海康)-->
+                <!--<else/>-->
+                <!--(大华)-->
+                <!--</if>-->
+                <!--</OPTION>-->
+                <!--</volist>-->
+                <!--</select>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="control-group">
+                    <label class="control-label">开放时间:</label>
+                    <!--<div class="controls">-->
+                    <!--&lt;!&ndash;<input type="text" class="input" id="name" name="name" value="">&ndash;&gt;-->
+                    <!--</div>-->
+                    <div class="controls">
+                        <div class="control-group imgWrapPart">
+                            <input type="time" style="width: 100px" name="start_time"><input style="width: 100px" type="time"name="end_time">
+                            <p style="width: 100%">
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input style="margin-left: 0" type="checkbox" class="isMyChecked" name="days[]"
+                                       value="1">星期一</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="checkbox" class="isMyChecked" name="days[]" value="2">星期二</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="checkbox" class="isMyChecked" name="days[]" value="3">星期三</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="checkbox" class="isMyChecked" name="days[]" value="4">星期四</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="checkbox" class="isMyChecked" name="days[]" value="5">星期五</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="checkbox" class="isMyChecked" name="days[]" value="6">星期六</input>
+                                </label>
+                                <label style="float: left;margin: 5px 15px 0 0;">
+                                <input type="checkbox" class="isMyChecked" name="days[]" value="7">星期天</input>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="">下一步</button>
+                <button class="btn" type="reset">清空</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+    $('.add-validate').validate({
+        rules: {
+            school: {
+                required: true
+            },
+            name: {
+                required: true
+            },
+            class: {
+                required: true
+            },
+        },
+        messages: {
+            school: {
+                required: '请输入账号名称'
+            },
+            name: {
+                required: '请输入授权名称'
+            },
+            class: {
+                required: '请选择班级'
+            },
+        }
+    });
+    $(function () {
+        $("#school").change(function () {
+            $("#class").empty();
+            $.getJSON("__ROOT__/index.php?g=apps&m=school&a=getclasslist&schoolid=" + $("#school").val(), {}, function (data) {
+                if (data.status == "success") {
+                    for (var key in data.data) {
+                        $("#class").append("<option value=" + data.data[key]["id"] + ">" + data.data[key]["name"] + "</option>");
+                    }
+                }
+                if (data.status == "error") {
+                    $("#class").append("<option value=''>没有班级</option>");
+                }
+            });
+        });
+    });
+
+    //获取appsecret
+    function get_appSecret(id) {
+        if (id == '') {
+            $('#appsecret').val('');
+            return false;
+        }
+        //发送ajax获取appsecret
+        $.ajax({
+            type: 'post',
+            data: {id: id},
+            url: "__ROOT__/index.php/Admin/Monitor/getAppSecret",
+            success: function (msg) {
+                $('#appsecret').val(msg);
+            },
+            error: function () {
+                alert('网络出错')
+            }
+        });
+    }
+
+    //获取appkey
+    function getAppKeys(type) {
+        if (type == '') {
+            $('#appKey').val('');
+            return false;
+        }
+        $.ajax({
+            type: 'post',
+            data: {type: type},
+            dataType: 'json',
+            url: "__ROOT__/index.php/Admin/Monitor/getAppKey",
+            success: function (msg) {
+                console.log(msg);
+                //$('#appKey').val(msg);
+                var str = '<option value="">请选择设备appKey</option>';
+                for (var i = 0; i < msg.length; i++) {
+                    str += "<option value=" + msg[i]['id'] + ">" + msg[i]['appkey'] + "(" + msg[i]['name'] + ")</option>";
+                }
+                $('#appKey').html(str);
+                $('#appsecret').val('');
+            },
+            error: function () {
+                alert('网络出错')
+            }
+        });
+    }
+</script>
+</body>
+</html>

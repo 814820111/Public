@@ -1,0 +1,42 @@
+<div id="left-list" class="left-list">
+			<div id="nav-zone"  id="zone-list" class="text-first">
+			<span class="glyphicon glyphicon-plus-sign"></span>
+				空间
+			</div>
+			<div id="massage-list-content" class="text-second" style="display: block;">
+				<ul>
+					<a href="spatial_dynamics"><li id="nav-spatial_dynamics">动态</li></a>
+					<a href="photo_album"><li id="nav-photo_album">班级相册</li></a>
+					<a href="record"><li id="nav-record">成长档案</li></a>
+				</ul>
+			</div>
+			
+</div>
+<script>
+	$('.text-first').click(function(){
+		// if($(this).next().css("display")=="none"){
+			// $('#massage-list-content').show;
+		// }else{
+			// $('#massage-list-content').hide;
+		// }
+			$(this).next().toggle("slow",
+				function(){
+					if($(this).css('display')=='block'){
+				$(this).prev().css('background','#31d057');
+				$(this).prev().css('color','#fff');
+				$(this).prev().children('span').attr('class','glyphicon glyphicon-minus-sign');
+				$(this).prev().children('span').css('color','#fff');
+			}else{
+				$(this).prev().css('background','#cfeed7');
+				$(this).prev().css('color','#434343');
+				$(this).prev().children('span').attr('class','glyphicon glyphicon-plus-sign');
+				$(this).prev().children('span').css('color','#434343');
+			}
+				}
+				);
+			
+			
+			
+	});
+
+</script>

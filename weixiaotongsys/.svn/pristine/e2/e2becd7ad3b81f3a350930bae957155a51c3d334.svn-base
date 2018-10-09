@@ -1,0 +1,328 @@
+<admintpl file="header"/>
+<style type="text/css">
+.col-auto { overflow: auto; _zoom: 1;_float: left;}
+.col-right { float: right; width: 210px; overflow: hidden; margin-left: 6px; }
+.table th, .table td {vertical-align: middle;}
+.picList li{margin-bottom: 5px;}
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav-tabs" style=" margin-top:30px; height:28px; list-style:none; margin-left: 0;">
+     <li><a href="{:U('index')}">栏目列表</a></li>
+     <li class="active"><a href="{:U('add')}"  target="_self">新增栏目</a></li>
+  </ul>
+    <form name="myform" id="myform" action="{:u('add_post')}" method="post" class="form-horizontal J_ajaxForms"
+          enctype="multipart/form-data">
+
+
+        <div class="col-auto">
+            <div class="table_full">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">选择学校</th>
+                        <td>
+                            省份选择：
+                            <select  class="province"  name="province" id="province" style="width: auto;">
+                                <option value="">省级选择</option>
+                                <foreach name="Province" item="vo">
+                                    <php>$pro=$province==$vo['term_id']?"selected":"";</php>
+                                    <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+                                </foreach>
+                            </select>
+                            <input type="hidden" class="new_citys" value="{$new_citys}">
+                            市级:
+                            <select class="select_1" name="citys" id="citys" style="width: auto;">
+
+                                <option value="">请先选择省份</option>
+
+                            </select> &nbsp;&nbsp;
+                            <input type="hidden" class="new_message_type" value="{$new_message_type}">
+                            区级
+                            <select class="select_3" name="message_type" id="message_type" style="width: auto;">
+                                <option value="0">请选择你的区域</option>
+                            </select> &nbsp;&nbsp;
+                            学校：
+                            <input type="hidden" class="type_school" value="{$schoolid}">
+                            <select data-placeholder="输入关键字。。。" required name="schoolid" id="viewOLanguage" class="chzn-select"  tabindex="2" >
+                                <option value="">请选择学校</option>
+                            </select>
+                            <span class="must_red" style="color: red">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">栏目名称</th>
+                        <td>
+                            <!--<input type="hidden" name="notice_id" value="">-->
+                            <input type="text" style="width:200px;" name="name" id="title" required
+                                   value="" class="input input_hd J_title_color" placeholder="请输入名称"
+                                   onkeyup="strlen_verify(this, 'title_len', 160)"/>
+                            <span class="must_red" style="color: red">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">排序</th>
+                        <td>
+                            <input type="text" style="width:200px;" name="sortid" required
+                                   value="" class="input input_hd J_title_color" placeholder="排序号"
+                                   onkeyup="strlen_verify(this, 'title_len', 160)"/>
+                            <span class="must_red" style="font-size: 10px">数字越大越靠前</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th width="100">图标</th>
+                        <td>
+                            <div  style=""><input type='hidden' name='smeta[thumb]' id='thumb' value=''>
+
+                                <a href='javascript:void(0);' onclick="flashupload_self('thumb_images', '附件上传','thumb',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','','');return false;">
+
+                                    <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb_preview' width='80' height='80' style='cursor:hand' /></a>
+
+
+                                <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                                <input type="button"  class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">列表形式</th>
+                        <td>
+                            <select name="type" class="normal_select">
+                                <OPTION value="1" selected>列表</OPTION>
+                                <OPTION value="2">直接展示</OPTION>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">显示在微网站</th>
+                        <td>
+                            <select name="is_micro" class="normal_select">
+                                <OPTION value="1" selected>显示</OPTION>
+                                <OPTION value="0">不显示</OPTION>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th width="100">显示在菜单模块</th>
+                        <td>
+                            <select name="is_menu" class="normal_select">
+                                <OPTION value="1" selected>显示</OPTION>
+                                <OPTION value="0">不显示</OPTION>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100">显示在公告区</th>
+                        <td>
+                            <select name="is_notice" class="normal_select">
+                                <OPTION value="1" selected>显示</OPTION>
+                                <OPTION value="0">不显示</OPTION>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>状态</th>
+                        <td>
+                            <span>
+                            <label class="radio"><input type="radio" name="status" value="1" checked><span>公开</span></label>
+                            <label class="radio"><input type="radio" name="status" value="0" ><span>不公开</span></label>
+                            </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary btn_submit J_ajax_submit_btn" type="submit">提交</button>
+            <a class="btn" href="{:U('index')}">返回</a>
+        </div>
+        <div style="height: 100px"></div>
+    </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop_self.js"></script>
+<script type="text/javascript">
+    if($("#province").val())
+    {
+        var new_citys = $('body').find(".new_citys").val();
+
+        var new_message_type = $('body').find('.new_message_type').val();
+
+
+        // console.log(type);
+
+        var type_school = $('body').find(".type_school").val();
+
+        if(new_citys)
+        {
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+                    $("#citys").empty();
+                    $("#citys").append("<option value=>"+"请选择市级"+"</option>");
+                    for(var key in data.data){
+
+                        if(new_citys==data.data[key]["term_id"]){
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+ " selected >"+data.data[key]["name"]+"</option>");
+
+                        }else{
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                        }
+                    }
+                    $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                        // console.log(data);
+                        if(data.status=="success"){
+                            $("#message_type").empty();
+
+                            for(var key in data.data){
+                                if(new_message_type == data.data[key]["term_id"]){
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" selected >"+data.data[key]["name"]+"</option>");
+                                }else{
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" >"+data.data[key]["name"]+"</option>");
+                                }
+
+                            }
+                            var type = $(".select_3  option:selected").val();
+
+                            $.ajax({
+                                type: "post",
+                                url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+                                async: true,
+                                data: {
+                                    type: type
+                                },
+                                dataType: 'json',
+                                success: function(res) {
+                                    // $(".Sio").text("")
+                                    $("#viewOLanguage").empty();
+                                    var html = "";
+                                    res = eval(res.data);
+
+                                    console.log(res);
+                                    for(var i = 0; i < res.length; i++) {
+                                        var school_name = res[i].school_name; //学校的名字
+                                        var schoolid = res[i].schoolid; //学校的ID
+
+                                        // alert('aa');
+                                        // alert(type_school);
+                                        if(schoolid == type_school){
+                                            // html += '<option class="Sio" value="' + schoolid + ' " selected>' + school_name + ' </option> '
+                                            $("#viewOLanguage").append("<option value="+schoolid+" selected >"+school_name+"</option>");
+                                        }else{
+                                            $("#viewOLanguage").append("<option value="+schoolid+" >"+school_name+"</option>");
+                                        }
+                                    }
+                                    $(".chzn-select").append(html)
+                                    $("#viewOLanguage").chosen();
+                                    $("#viewOLanguage").trigger("liszt:updated");
+                                },
+                                error: function() {
+                                    console.log('系统错误,请稍后重试');
+                                }
+                            });
+
+
+
+                        }
+                        if(data.status=="error"){
+                            $("#message_type").append("<option value='0'>没有区域</option>");
+                        }
+                    });
+
+
+
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+        }
+
+
+    }
+    //选择市级的下拉的ajax
+    $(function() {
+        $("#province").change(function(){
+
+
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                $("#citys").empty()
+                $("#message_type").html("<option value=0>"+"请选择区域"+"</option>");
+                $(".chzn-select").html("<option value=0>"+"请选择学校"+"</option>");
+                if(data.status=="success"){
+
+                    $("#citys").append("<option value=0>"+"请选择市级"+"</option>");
+                    for(var key in data.data){
+                        $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+
+        })
+    });
+
+    $(function() {
+        $("#citys").change(function() {
+            console.log($("#citys").val())
+            $("#message_type").empty();
+            // $("#student").empty();
+
+            $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+
+                    // $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                    for(var key in data.data){
+                        $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#message_type").append("<option value='0'>暂无区域</option>");
+                }
+            });
+        });
+    });
+    $(".select_3").change(function() {
+        var type = $(".select_3  option:selected").val();
+
+        $.ajax({
+            type: "post",
+            url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+            async: true,
+            data: {
+                type: type
+            },
+            dataType: 'json',
+            success: function(res) {
+                $(".chzn-select").html("")
+                var html = "";
+                html += '<option  value="">请选择学校</option> '
+                res = eval(res.data);
+                for(var i = 0; i < res.length; i++) {
+                    var school_name = res[i].school_name; //学校的名字
+                    var schoolid = res[i].schoolid; //学校的ID
+                    html += '<option class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+                }
+                $(".chzn-select").html(html)
+                $("#viewOLanguage").chosen();
+                $("#viewOLanguage").trigger("liszt:updated");
+            },
+            error: function() {
+                console.log('系统错误,请稍后重试');
+            }
+        });
+    })
+</script>
+</body>
+</html>

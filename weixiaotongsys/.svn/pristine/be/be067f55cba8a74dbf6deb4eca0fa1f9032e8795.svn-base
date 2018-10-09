@@ -1,0 +1,8 @@
+[ 2018-09-15T13:35:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = 'root' LIMIT 1   [ RunTime:0.0200s ]
+

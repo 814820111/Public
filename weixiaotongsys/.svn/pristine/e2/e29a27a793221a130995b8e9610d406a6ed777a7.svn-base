@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>添加成员</title>
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/css/chat.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/css/base.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__TMPL__Public/css/chat_css/assets/css/app.css">
+</head>
+
+<body>
+    <div class="chat-wrapper">
+        <!-- header -->
+        <div class="header-bar">
+            <a href="create.html" class="back">
+                <img src="img/back.png" alt="">
+            </a>
+            <p>所有成员列表</p>
+            <a href="#" class="create-next">完成</a>
+        </div>
+        <!-- 所有成员 -->
+
+        <div class="all-person-list all">
+            <form id="form1">
+            <div class="form-group panel">
+                <span>所有老师 <i class="arrowLeft-icon"></i> </span>
+                <label class="am-checkbox am-success">
+                    <input type="checkbox" name="allteacher" value="1" data-am-ucheck class="allchecked">
+                </label>
+            </div>
+            <div class="form-group-list">
+                <foreach name="teacher" item="vo">
+                    <div class="form-group">
+                        <label class="am-checkbox am-success">
+                            <span>{$vo.name}</span>
+                            <input type="checkbox" name="teacherid[]" value="{$vo.teacherid}" data-am-ucheck>
+                        </label>
+                    </div>
+                </foreach>
+
+            </div>
+            <foreach name="class" item="vo">
+            <div class="form-group panel">
+                <span>{$vo.classname} <i class="arrowLeft-icon"></i> </span>
+                <label class="am-checkbox am-success">
+                    <input type="checkbox" name="classid[]" value="{$vo.id}" data-am-ucheck class="allchecked">
+                </label>
+            </div>
+
+                <div class="form-group-list">
+                    <div class="form-group">
+                        <foreach name="vo['student']" item="cl">
+                        <label class="am-checkbox am-success">
+                            <span>{$cl.stu_name}</span>
+                            <input type="checkbox"  name="student[]" value="{$cl.userid}" data-am-ucheck>
+                        </label>
+                        </foreach>
+                    </div>
+                </div>
+
+            </foreach>
+                <input type="hidden" name="groupid"  value="{$groupid}">
+
+        </form>
+    </div>
+    <script src="__TMPL__Public/css/chat_css/js/jquery.min.js"></script>
+    <script src="__TMPL__Public/css/chat_css/assets/js/amazeui.min.js"></script>
+    <script>
+        $(function() {
+            // 下拉
+            $('.panel>span').click(function(){
+                $(this).parent().next().slideToggle()
+            })
+            // 实现全选反选
+            $(".allchecked").on('click', function() {
+                $(this).parent().parent().next().find("input:checkbox").prop("checked", $(this).prop('checked'));
+                // $(".form-group-list input:checkbox").prop("checked", $(this).prop('checked'));
+            })
+            $(".form-group-list").on('click', 'input:checkbox', function() {
+                // 当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+                var allcheckbox = $(this).parent().parent().parent().prev().find(".allchecked");
+                var childcheckboxlength = $(this).parent().parent().parent().find("input:checkbox").length;
+                var childcheckedboxlength = $(this).parent().parent().parent().find("input:checked").length;
+                if(childcheckboxlength === childcheckedboxlength) {
+                    allcheckbox.prop("checked", true);
+                } else {
+                    allcheckbox.prop("checked", false);
+                }
+            })
+        })
+
+        $(".create-next").click(function(){
+            $.ajax({
+                type: "get",
+                url: "{:U('add_parent_person')}",
+                async: true,
+                dataType: 'json',
+                data: $("#form1").serialize(),
+                success: function(res) {
+
+                    if(res.status == "success")
+                    {
+                       alert(res.data);
+                        window.location.href = "__ROOT__/index.php?g=weixin&m=Chat&a=index";
+                    }else{
+                        alert(res.data);
+                    }
+                },
+                error: function() {
+                    alert('系统错误,请稍后重试');
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

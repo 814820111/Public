@@ -1,0 +1,736 @@
+<teachertpl file="header" />
+<html>
+
+    <head>
+        <style>
+
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>信息</title>
+        <link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet" />
+        <script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+        <script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+        <script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+        <script src="__ROOT__/statics/js/wind.js"></script>
+        <style type="text/css">
+            .col-auto {
+                overflow: auto;
+                _zoom: 1;
+                _float: left;
+            }
+            
+            .col-right {
+                float: right;
+                width: 30%;
+                overflow: hidden;
+                margin-left: 6px;
+            }
+            
+            .table th,
+            .table td {
+                vertical-align: middle;
+            }
+            
+            .picList li {
+                margin-bottom: 5px;
+            }
+            
+            .touchlei {
+                background-color: #eeeeee;
+            }
+            
+            tr .pai,
+            tr .pai2 {
+                text-align: center;
+                font-size: 14px;
+            }
+            
+            tr .pai {
+                background-color: #e2e2e2;
+            }
+            
+            tr .pai2 {}
+            
+            .clearfix {
+                clear: both;
+            }
+            
+            .name {
+                margin-right: 10px;
+            }
+            
+            .dbzr {
+                background-color: #61c881;
+                color: white;
+                text-align: center;
+                padding: 0px 15px;
+                float: left;
+                border-radius: 8px;
+            }
+            
+            .sic {
+                width: 15px;
+                margin-left: 5px;
+                margin-top: -15px;
+                cursor: pointer;
+            }
+            
+            .daiban {
+                border-bottom: 1px solid #dddddd;
+            }
+            
+            .daike {
+                width: 100px;
+                text-align: center;
+                line-height: 30px;
+                float: left;
+                border-bottom: 1px solid #dddddd;
+            }
+            
+            .dailei {
+                border: 1px solid #dddddd;
+                border-bottom: none;
+                font-weight: bold;
+            }
+            
+            .banji {
+                float: left;
+                width: 20%;
+                margin-bottom: 10px;
+            }
+            
+            .banji input {
+                margin-top: -2px;
+                margin-right: 5px;
+            }
+            
+            .subject {
+                float: left;
+                color: #03a9f4;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+            
+            .peizhi {
+                color: #03a9f4;
+            }
+            
+            .kecheng {
+                color: #03a9f4;
+                float: left;
+                display: none;
+                border: 1px solid #03a9f4;
+                padding-left: 3px;
+                padding-right: 3px;
+                cursor: pointer;
+            }
+            
+            .subinput {
+                display: none;
+            }
+            select{
+                color: black;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                var sb = document.getElementById("tans");
+                sb.onclick = function() {
+                    var tanboder = document.getElementById("tansboder");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+
+    <!-- 模态框（Modal） -->
+ 
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background: white">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel" style="color: black; font-weight:bold;">设置档案</h5>
+                    <hr>
+                </div>
+                <!--<div class="modal-body1" style="height:100px;">-->
+                    <!--<input name="text" type="hidden" id="archivesid" value="" />-->
+                    <!--<span style="margin-left:3%">以启用班级</span>-->
+                    <!--<div class="yes">-->
+                        <!--&lt;!&ndash;<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />苹果 </label>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />桃子 </label>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />香蕉 </label>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />梨 </label>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="modal-body2" style="height:100px;">
+                    <input name="text" type="hidden" id="archivesid" value="" />
+                    <span style="margin-left:3%">未启用班级</span>
+                    <div class="no">
+                        <!--<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />苹果 </label>-->
+                        <!--<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />桃子 </label>-->
+                        <!--<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />香蕉 </label>-->
+                        <!--<label style="float:left;padding:15px;"><input name="Fruit" type="checkbox" value="" />梨 </label>-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="background: white; color:black; font-weight:bold;">关闭</button>
+                    <button  id="sub" style="font-weight:bold;" >提交</button>
+                    <!--//class="btn btn-info pwdtj"-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <div class="wrap jj">
+            <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+                <li >
+                    <a href="{:U('index')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">档案管理</a>
+                </li>
+
+                <li class="active">
+                    <a href="{:U('add')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">档案进展</a>
+                </li>
+            </ul>
+           
+
+          <input type="hidden"  class="new_class" value="{$classid_int}">
+            <div id="myTabContent" class="tab-content" style=" padding-left:30px; padding-right:30px;">
+                <div class="tab-pane fade in active" id="home">
+                    <br/>
+                    <form class="form-horizontal J_ajaxForm" action="{:u('show')}" method="get">
+                    <input type="hidden" name="id" value="{$archivesid}">
+                    <input type="hidden" name="gradeid" value="{$gradeid}">
+                        <div class="search_type cc mb10">
+                            <div class="mb10">
+                                <span class="mr20">
+                     学生姓名:
+                      <input type="text" class="select_2" name="studentname" placeholder="-请输入-" style="width:8%; height: 17px;border-width:1px; color: black;" value="{$school_name}"> &nbsp;&nbsp;
+                             年级：
+                             <select class="select_2" name="gradeid" id="school_grade">
+                                 <option value=''>请选择年级</option>
+                                 <foreach name="categorys" item="vo">
+                                   <php>$grade=$gradeid==$vo['gradeid']?"selected":"";</php>
+                                     <OPTION value="{$vo['gradeid']}" {$grade}>{$vo["name"]}</OPTION>
+                                 </foreach>
+                             </select> &nbsp;&nbsp;
+                             班级：
+                             <select class="select_2" name="classid" id="school_class">
+                                 <option value=''>请选择班级</option>
+                                 <foreach name="class" item="vo">
+                                 <php>$cs=$classid_int==$vo['id']?"selected":"";</php>
+                                     <option value="{$vo.id}" {$cs}>{$vo.classname}</option>
+                                 </foreach>
+                             </select> &nbsp;&nbsp;
+
+
+                      <input type="submit" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;" value="搜索" />
+                  </span>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="J_ajaxForm" action="" method="post">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered table-list">
+                                <thead>
+                                    <tr style="background-color:#CCC;">
+                                    
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">所在年级</th>
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">所在班级</th>
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">学生姓名</th>
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">老师进展</th>
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">家长进展</th>
+                                        <!--<th class="pai" style=" border-left: none;border-width: 0.5px;">IC卡号</th>-->
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">家长姓名</th>
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;">家长电话</th>
+                                        <th class="pai" style=" border-left: none;border-width: 0.5px;border-right: none">打印</th>
+                                    </tr>
+                                </thead>
+                                <foreach name="list" item="vo">
+
+                                    <tr>
+                                        <td class="pai2">{$vo.grade_name}</td>
+                                        <td class="pai2">{$vo.classname}</td>
+                                        <td class="pai2">{$vo.stu_name}</td>
+                                        <td class="pai2">{$vo.tea_sum}</td>
+                                        <td class="pai2 stuname">{$vo.par_sum}</td>
+                                        <td class="pai2 stuid" name="card">{$vo.parent}</td>
+                                    
+                                        <td class="pai2">
+                                          {$vo.phone}
+                                            </td>
+                                            <td class="pai2">
+                                            <a href="{:U('Growing',array('id'=>$vo['id']))}" style=" color:#00c1dd;">
+                                                 查看
+                                            </a>
+
+
+                                        </td>
+                                    </tr>
+                                </foreach>
+                            </table>
+
+                            
+                        </div>
+                    </form>
+
+
+                        <input class="uisid" type="hidden" />
+                
+                </div>
+            </div>
+            <div class="tab-pane fade" id="ios">
+
+            </div>
+            <div class="pager">{$Page}</div>
+            
+        </div>
+        <script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+        <script src="__ROOT__/statics/js/common.js"></script>
+        <script type="text/javascript">
+            //全局变量
+            var GV = {
+                DIMAUB: "/",
+                JS_ROOT: "statics/js/",
+                TOKEN: ""
+            };
+        </script>
+        <script>
+
+
+
+
+// var ee = $("#school_grade").val();
+
+// if(!empty(ee))
+// {
+//     alert("sdsad");
+// }
+console.log($('body').find('.new_class').val());
+
+
+
+ // console.log($("#school_grade").val());
+
+ if($("#school_grade").val())
+ {    
+
+
+     var new_class =  $('body').find('.new_class').val();
+  
+        $("#school_class").empty();
+              $.getJSON("__ROOT__/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=" + $("#school_grade").val(), {}, function (data) {
+                  if (data.status == "success") {
+                      $("#school_class").append("<option value=0>" + "请选择班级" + "</option>");
+                      for (var key in data.data) {
+                         if(new_class==data.data[key]["id"])
+                         {
+                          $("#school_class").append("<option value=" + data.data[key]["id"] + " selected>" + data.data[key]["classname"] + "</option>");
+                         }else{
+                             $("#school_class").append("<option value=" + data.data[key]["id"] + " >" + data.data[key]["classname"] + "</option>");
+                         }
+                      }
+                  }
+                  if (data.status == "error") {
+                      $("#school_class").append("<option value='0'>没有班级</option>");
+                  }
+              });
+ }
+ 
+
+      $(function () {
+          
+          $("#school_grade").change(function () {
+
+           // console.log($("#school_grade").val());
+              $("#school_class").empty();
+              $.getJSON("__ROOT__/index.php?g=teacher&m=TeacherUtils&a=get_class&grade=" + $("#school_grade").val(), {}, function (data) {
+                  if (data.status == "success") {
+                      $("#school_class").append("<option value=0>" + "请选择班级" + "</option>");
+                      for (var key in data.data) {
+                          $("#school_class").append("<option value=" + data.data[key]["id"] + ">" + data.data[key]["classname"] + "</option>");
+                      }
+                  }
+                  if (data.status == "error") {
+                      $("#school_class").append("<option value='0'>没有班级</option>");
+                  }
+              });
+          });
+      });
+
+
+            $("#myModal").hide();
+
+            $("#aniu").click(function() {
+                $(".jiaz").hide();
+                $(".si").show();
+                $(".xuesheng").show();
+                $("#huoqu").attr("class", "");
+                $("#aniu").attr("class", "active");
+                $(".ci").css("display", "none")
+            })
+            //启用
+            $(".btn").click(function(){
+                var schoolid = $("#schoolid").val();//学校ID
+                var id = $(this).attr('id');
+                if(id){
+                    $('#archivesid').val(id);
+                }
+                $.ajax({
+                    type: "post",
+                    url: "{:U('Teacher/GrowthArchives/classList')}",
+                    async: true,
+                    dataType: 'json',
+                    data: {
+                        schoolid: schoolid,
+                        archivesid:id
+                    },
+                    success: function(res) {
+//                        var htmls = "";
+                        var html = "";
+//                        arr = eval(res.data.selected);
+//                        for (var i = 0; i < arr.length; i++) {
+//                            var classname = res[i].classname; //班级名称
+//                            var clasid = res[i].id; //班级ID
+//                            htmls+=' <label style="float:left;padding:15px;"><input name="test" type="checkbox" value="'+clasid+'" />'+ classname+'</label>';
+//                        }
+
+                        res = eval(res.data.notselected);
+                        //console.log(res);
+                        for (var i = 0; i < res.length; i++) {
+                                var classname = res[i].classname; //班级名称
+                                var clasid = res[i].id; //班级ID
+                                html+=' <label style="float:left;padding:15px;"><input name="test" type="checkbox" value="'+clasid+'" />'+ classname+'</label>';
+                         }
+                            $(".modal-body2 no").append(html);
+
+                    },
+                    error: function() {
+                        alert('系统错误,请稍后重试');
+                    }
+                });
+            });
+            //启用提交
+            $("#sub").click(function(){
+                var archivesid=$("#archivesid").val();
+                var obj=document.getElementsByName('test');
+                var sid="";
+                for(var i=0; i<obj.length; i++){
+                    if(obj[i].checked) sid+=obj[i].value+',';  //如果选中，将value添加到变量s中
+                }
+               console.log(sid);
+                $.ajax({
+                    type: "post",
+                    url: "{:U('Teacher/GrowthArchives/archives_class')}",
+                    async: true,
+                    dataType: 'json',
+                    data: {
+                        classid:sid,
+                        archivesid:archivesid,
+                    },
+                    success: function(res) {
+                        console.log(res);
+                        alert("成功");
+                    },
+                    error: function() {
+                        alert('系统错误,请稍后重试');
+                    }
+                });
+            });
+            $("#huoqu").click(function() {
+                var userid = $(".uisid").val();
+                $.ajax({
+                    type: "post",
+                    url: "{:U('Teacher/StudentInfo/chaxuan')}",
+                    async: true,
+                    dataType: 'json',
+                    data: {
+                        userid: userid
+                    },
+                    success: function(res) {
+                        res = eval(res.data);
+                        for(var i = 0; i < res.length; i++) {
+                            var cardno = res[i].cardno; //id卡号；
+                            var j = "a" + i;
+
+                            var test = document.getElementsByClassName(j);
+                            $(test).val(cardno);
+                        }
+                    },
+                    error: function() {
+                        alert('系统错误,请稍后重试');
+                    }
+                });
+            })
+        </script>
+        <script>
+            $('#myTab a:first').tab('show');
+        </script>
+        <script>
+            $("#file-3").fileinput({
+                showUpload: false,
+                showCaption: false,
+                browseClass: "btn btn-default",
+                fileType: "any",
+                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+            });
+            $(document).ready(function() {
+                $("#test-upload").fileinput({
+                    'showPreview': false,
+                    'allowedFileExtensions': ['jpg', 'png', 'gif'],
+                    'elErrorContainer': '#errorBlock'
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('#myTab li:eq(0) a').tab('show');
+            });
+        </script>
+        <script>
+            $("#file-3").fileinput({
+                showUpload: false,
+                showCaption: false,
+                browseClass: "btn btn-default",
+                fileType: "any",
+                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+            });
+            $(document).ready(function() {
+                $("#test-upload").fileinput({
+                    'showPreview': false,
+                    'allowedFileExtensions': ['jpg', 'png', 'gif'],
+                    'elErrorContainer': '#errorBlock'
+                });
+            });
+        </script>
+        <script>
+            $(".touch").mouseenter(
+                function() {
+                    $(".touch").addClass("touchlei")
+                }
+            )
+            $(".touch").mouseleave(
+                function() {
+                    $(".touch").removeClass("touchlei")
+                }
+            )
+        </script>
+        <script>
+            $(".banzhuren").click(
+                function() {
+                    $(".bantan").show()
+                }
+            )
+            $(".banzhuren").click(
+                function() {
+                    aaa = $(this).text()
+                    $(".bzr").text(aaa)
+                }
+            )
+            $(".xuan").click(
+                function() {
+                    k = $(this).parent().text()
+                    $(".bzr").text(k)
+                }
+            )
+        </script>
+        <script>
+            $(".guan").click(
+                function() {
+                    $(".bantan").hide()
+                }
+
+            )
+        </script>
+
+        <script>
+            $(".xiala").click(
+                function() {
+                    $(".shou01").slideToggle()
+                    $(".xshang").toggle()
+                    $(".bianzi").toggle()
+                }
+
+            )
+        </script>
+        <script>
+            $(".daibanzhuren").click(
+                function() {
+                    w = $(this).children().val()
+                    $(".chuanzhi").val(w)
+                    $(".uisid").val(w);
+
+                }
+            )
+
+            function sub_qrcj() {
+                var userid = w;
+                var cardNo = $("input[name='newICcard']").val();
+                var lengthzhi = cardNo.length;
+                if(lengthzhi < 10) {
+                    var ui = 10 - lengthzhi;
+                    var us = "";
+                    for(var i = 0; i < ui; i++) {
+                        var j = "0";
+                        us += j;
+                    }
+                    var cardNo = us + cardNo;
+                }
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "{:U('Teacher/StudentInfo/updateICcard')}",
+                    data: {
+                        'userid': userid,
+                        'cardNo': cardNo
+                    },
+                    success: function(msg) {
+                        history.go(0);
+                    }
+                });
+            }
+        </script>
+        <script>
+            $(".daitan").hide()
+            $(".daibanzhuren").click(
+                function(ID) {
+                    $(".daitan").show()
+                    l = $(this).text()
+                    $(".dbzr").text(l)
+                }
+            )
+        </script>
+
+        <script>
+            $(".guan").click(
+                function() {
+                    $(".daitan").hide()
+                }
+
+            )
+        </script>
+        <script>
+            $(".name").hide()
+            $(".xuan2").click(
+                function() {
+                    o = $(this).parent().index()
+                    $(".name").eq(o).toggle()
+                    $(".dbzr").hide()
+                }
+            )
+        </script>
+        <script type="text/javascript">
+            $(".sic").click(
+                function() {
+                    $(".numberic").empty()
+                }
+            )
+        </script>
+        <script>
+            $(".subinput").click(
+                function() {
+                    var y = $(this).parents(".subbox").index()
+                    $(".add_box").eq(y - 1).children(".peizhi").hide()
+                    if($(this).prop("checked")) {
+                        $(this).parents(".subject").hide()
+                        var x = $(this).parent().index()
+                        $(".add_box").eq(y - 1).children(".kecheng").eq(x).show()
+                    }
+                }
+            )
+        </script>
+        <script>
+            $(".kecheng").click(
+                function() {
+                    var x = $(this).parents("tr").index()
+                    var y = $(this).index()
+                    $(this).hide()
+                    $(".subbox").eq(x - 1).find(".subject").eq(y - 1).show()
+                    $(".subbox").eq(x - 1).find(".subject").eq(y - 1).click()
+                }
+            )
+        </script>
+        <script>
+            $(".daiban").addClass("dailei")
+            $(".daike").click(
+                function() {
+                    $(this).addClass("dailei")
+                    $(this).siblings(".daiban").removeClass("dailei")
+                    $(".daike_box").show()
+                    $(".daiban_box").hide()
+                }
+            )
+            $(".daiban").click(
+                function() {
+                    $(this).addClass("dailei")
+                    $(this).siblings(".daike").removeClass("dailei")
+                    $(".daiban_box").show()
+                    $(".daike_box").hide()
+                }
+            )
+        </script>
+        <script>
+            $(".daibanzhuren1").click(
+                function() {
+                    stud = $(this).children().val()
+                    $(".chuanzhi").val(stud)
+                    var stuname = $(this).parent().siblings(".stuname").text()
+                    $(".stuhuan").text(stuname)
+                    var stuid = $(this).parent().siblings(".stuid").text();
+                    $(".stuhua").text(stuid);
+                }
+            )
+
+            function sub_qinshu() {
+
+                var studentid = stud;
+                var arr1 = new Array();
+                arr1[0] = $("input[name='qinshuxingming1']").val();
+                arr1[1] = $("input[name='qinshuhaoma1']").val();
+                arr1[2] = $("select[name='qinshuguanxi1']").val();
+                var arr2 = new Array();
+                arr2[0] = $("input[name='qinshuxingming2']");
+                arr2[1] = $("input[name='qinshuhaoma2']");
+                arr2[2] = $("select[name='qinshuguanxi2']").val();
+                var arr3 = new Array();
+                arr3[0] = $("input[name='qinshuxingming3']");
+                arr3[1] = $("input[name='qinshuhaoma3']");
+                arr3[2] = $("select[name='qinshuguanxi3']").val();
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "{:U('Teacher/StudentInfo/qinshu')}",
+                    data: {
+                        'qinshu1[]': arr1,
+                        'qinshu2[]': arr2,
+                        'qinshu3[]': arr3,
+                        'studentid': studentid
+                    },
+                    success: function(msg) {
+                        history.go(0);
+                    }
+                });
+            }
+        </script>
+        <script>
+            $(".qinshu").hide()
+            $(".daibanzhuren1").click(
+                function(ID) {
+                    $(".qinshu").show()
+                }
+            )
+        </script>
+        <script>
+            $(".guan1").click(
+                function() {
+                    $(".qinshu").hide()
+                }
+            )
+        </script>
+    </body>
+
+</html>

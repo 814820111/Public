@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix{
+		clear: both;
+}
+
+.search{
+    padding: 5px;    
+    background-color: rgb(230,242,243);
+}
+.search .context{
+    border: 1px solid rgb(222,222,222);
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    background-color: white;
+}
+.search .context img{
+    margin-top: -3px;
+}
+.search .context span{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(162,163,162);
+}
+.one{
+    margin-bottom: -23px;
+}
+.classify{
+    margin-top: 8px;
+    text-align: center;
+    margin-bottom: -20px;
+    color: rgb(149,149,149);
+}
+.classify .yuanzhang{
+    width: 33%;
+    float: left;
+}
+.classify .teacher{
+    width: 34%;
+    float: left;
+    padding-bottom: 7px;
+    border-bottom: 4px solid rgb(6,193,143);
+    color: rgb(6,193,143);
+}
+.classify .parent{
+    width: 33%;
+    float: left;
+}
+
+.left{
+    width: 17%;
+    float: left;
+}
+.left img{
+    margin-top: 3px;
+    margin-left: 15%;
+    width: 79%;
+}
+.peng .right{
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 2.5%;
+    width: 81%;
+    float:right;
+    border-bottom: 1px solid rgb(230,230,230);
+    padding-bottom: 3%;
+}
+
+.right .pengxiao{
+    margin-top: 3%;
+    width: 68%; 
+    font-size: 3vw; 
+    float: left;
+}
+.right .phone{
+    color: rgb(172,173,172);
+    margin-left: -1%;
+}
+.right img{
+    margin-right: 2%;
+    float: right;
+    width: 11.5%;
+}
+.right .message{
+    margin-right: 6%;
+}
+.peng{   
+   margin-top: 2%;
+}
+
+.footer {
+    height: 75px;
+}
+
+.footer .fone {
+    float: left;
+    width: 37.5%;
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.footer .ftwo {
+    float: right;
+    width: 37.5%;
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.footer img {
+    width: 32px;
+}
+
+.footer .f1, .f2, .f4, .f5 {
+    width: 50%;
+    margin-top: 4px;
+}
+
+.footer .f3 {
+    margin-left: 6px;
+    border-radius: 40px;
+    border-top: 2px solid rgb(226, 226, 226);
+    margin-top: -29px;
+    width: 22.5%;
+}
+
+.footer .f3 .circle {
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 65px;
+    background-color: #06c08e;
+    border-radius: 50px;
+    position: relative;
+
+}
+.footer .f3 .circle .hor{
+	width: 69.5%;
+	height: 6%;
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+	top: 47.5%;
+	left: 15%;
+
+}
+.footer .f3 .circle .ver{
+	height: 69.5%;
+	width: 4px;
+	position: absolute;
+	top: 15%;
+	left: 47.5%;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.f2 .tongxun {
+    font-size: 13px;
+    font-family: "微软雅黑" ;
+    color : #06c08e;
+}
+
+.fword {
+    font-size: 13px;
+    font-family: "微软雅黑" ;
+    color : rgb(81, 81, 81);
+}

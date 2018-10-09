@@ -1,0 +1,58 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('messageManage')}">信息列表</a></li>
+        <li class="active" ><a href="{:U('newaddmessage')}">新增信息</a></li>
+
+
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('newaddmessage_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">信息id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="message_id" value="{$message_id}" readOnly="true">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">发送人id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="send_user_id" value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">接收人id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="receive_user_id" value="">
+                    </div>
+                </div>
+                 <div class="control-group">
+                     <label class="control-label">信息内容:</label>
+                     <div class="controls">
+                         <input type="text" class="input" name="message_content" value="">
+                     </div>
+                 </div>
+                <div class="control-group">
+                    <label class="control-label">信息类型:</label>
+                    <div class="controls">
+      <select class="input" name="message_type"><option value="1">普通信息</option>
+    <option value="2">请假</option>
+    <option value="3">叮嘱</option></select>
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">添加</button>
+                <a class="btn" href='{:U("messageManage",array("message_id"=>$message_id))}'>返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

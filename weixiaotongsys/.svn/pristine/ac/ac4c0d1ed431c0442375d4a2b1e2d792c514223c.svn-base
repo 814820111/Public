@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <tc_include file="public:head" />
+
+</head>
+
+<body class="body-white">
+    <tc_include file="public:center-nav" />
+    <div class="center_index_box">
+        <div class="center_index_left">
+            <div class="teacher_login_photo">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <img alt="100x100" src="__ROOT__/uploads/avatar/{$userinfo.photo}" class="img-circle" />
+                        </div>
+                    </div>
+                </div>
+                <div class="teacher_login_modify_1">
+                    <p>{$userinfo.name}老师</p>
+
+                </div>
+                <div class="teacher_login_modify_2">
+
+                    <p>{$userinfo.phone}</p>
+                </div>
+                <div class="teacher_login_modify_3">
+                    <p>头像设置</p>
+
+                </div>
+                <div class="teacher_login_modify_4">
+
+                    <p>密码修改</p>
+                </div>
+            </div>
+            <div class="teacher_login_notice_5">
+                <div class="teacher_login_contact"><img src="__TMPL__public/images/teacher_index_53.png">
+                    <p>客服在线</p>
+                </div>
+                <div class="teacher_login_contact_1">
+                    <p><img src="__TMPL__public/images/teacher_index_57.png" class="img-circle"><span>联系我</span></p>
+                </div>
+                <div class="teacher_login_contact_1">
+                    <p><img src="__TMPL__public/images/teacher_index_57.png" class="img-circle"><span>联系我</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="center_center">
+            <div class="teacher_login_info_pro">
+                <div class="teacher_login_info_1">
+                    <img src="__TMPL__public/images/teacher_index_28.png">
+                    <p>产品列表</p>
+                </div>
+                <div class="teacher_login_info_2">
+                    <div class="teacher_login_info_pro1">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_32.png" width="104px" height="94px">
+                                    <p align="center">家校互联</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_34.png" width="104px" height="94px">
+                                    <p align="center">教务管理</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"> <img src="__TMPL__public/images/teacher_index_36.png" width="104px" height="94px">
+                                    <p align="center">成长档案</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_38.png" width="104px" height="94px">
+                                    <p align="center">成长轨迹</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_40.png" width="104px" height="94px">
+                                    <p align="center">视频监控</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="teacher_login_info_pro2">
+                        <ul>
+                            <li>
+                                <a href="#"> <img src="__TMPL__public/images/teacher_index_47.png" width="104px" height="94px">
+                                    <p align="center">智能定位</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"> <img src="__TMPL__public/images/teacher_index_49.png" width="104px" height="94px">
+                                    <p align="center">网站管理</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_50.png" width="104px" height="94px">
+                                    <p align="center">公众号管理</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_51.png" width="104px" height="94px">
+                                    <p align="center">微网站管理</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="__TMPL__public/images/teacher_index_52.png" width="104px" height="94px">
+                                    <p align="center">app管理</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="center_two">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="tabbable" id="tabs-134953">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#my_integral" data-toggle="tab">我的积分</a>
+                                    </li>
+                                    <li>
+                                        <a href="#change_integral" data-toggle="tab">积分兑换</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="my_integral">
+                                        <div class="content1">
+                                            <span class="leiji">累计积分：42.0</span>
+                                            <span class="change">
+							可兑换积分：42.0
+						</span>
+                                        </div>
+                                        <div class="content2">
+                                            <span class="shouru" style="font-size: 16px;" onclick="chen()">积分收入明细</span>
+                                            <span class="zhichu" style="font-size: 16px;" onclick="cheny()">积分支出明细</span>
+                                        </div>
+                                        <div class="read5" id="dzy">
+                                            <div class="serch_shouru">查询您最近的积分收入记录</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <td width="120px">
+                                                            月份
+                                                        </td>
+                                                        <td width="200px">日期</td>
+
+                                                        <td width="240px">获得积分</td>
+
+                                                    </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td>6月</td>
+                                                    <td>2016-6-6</td>
+                                                    <td>100积分</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="read5" id="dz" style="display: none;">
+                                            <div class="serch_shouru">查询您最近的积分支出记录</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <td width="120px">
+                                                            月份
+                                                        </td>
+                                                        <td width="200px">日期</td>
+
+                                                        <td width="240px">获得积分</td>
+
+                                                    </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td>5月</td>
+                                                    <td>2016-5-6</td>
+                                                    <td>120积分</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="tab-pane" id="change_integral">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td width="84px">
+                                                        编号
+                                                    </td>
+                                                    <td width="105px">奖品</td>
+
+                                                    <td width="80px">兑换积分</td>
+                                                    <td width="190px">备注</td>
+                                                    <td width="100px">操作</td>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td>0524</td>
+                                                <td>一个月VIP</td>
+                                                <td>3000</td>
+                                                <td>备注备注备注备注</td>
+                                                <td><a href="#">我要兑换</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>0524</td>
+                                                <td>一个月VIP</td>
+                                                <td>3000</td>
+                                                <td>备注备注备注备注</td>
+                                                <td><a href="#">我要兑换</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="center_right" align="right">
+            <div class="teacher_login_pic">
+                <div class="carousel_boot">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active" style="height: 200px">
+                                <img src="__TMPL__public/images/teacher_index_03.png" alt="First slide">
+
+                            </div>
+                            <div class="item" style="height: 200px">
+                                <img src="__TMPL__public/images/lunbo2.jpeg" alt="Second slide">
+
+                            </div>
+                            <div class="item" style="height: 200px">
+                                <img src="__TMPL__public/images/picthree.png" alt="Third slide">
+
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                    </div>
+                </div>
+                <div class="teacher_login_info_notice">
+                    <div class="notice_top">
+                        <p>园所公告</p>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                1、园所公告园所公告园所公告
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2、园所公告园所公告园所公告
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3、园所公告园所公告园所公告
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="teacher_login_info_notice">
+                    <div class="notice_top">
+                        <p>系统公告</p>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                1、系统公告系统公告系统公告
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2、系统公告系统公告系统公告
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3、系统公告系统公告系统公告
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('#center-index').attr("class", "active");
+        });
+
+        function chen() {
+            document.getElementById("dzy").style.display = "block";
+            document.getElementById("dz").style.display = "none";
+        }
+
+        function cheny() {
+            document.getElementById("dzy").style.display = "none";
+            document.getElementById("dz").style.display = "block";
+        }
+    </script>
+    <tc_include file="public:footer" />
+</body>
+
+</html>

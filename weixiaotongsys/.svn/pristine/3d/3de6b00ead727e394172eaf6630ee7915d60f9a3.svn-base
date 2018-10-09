@@ -1,0 +1,249 @@
+﻿  /** baseurl */
+    public static final String BASE_URL = "http://wxt.xiaocool.net";
+    
+    /** baseurl school */
+    public static final String BASE_SCHOOL = BASE_URL + "/index.php?g=apps&m=school";
+    /** baseurl index */
+    public static final String BASE_INDEX= BASE_URL + "/index.php?g=apps&m=index";
+    
+
+    /********************************************全局多用***************************************************************/
+    /** 版本检测 */
+    public static final String CHECK_VERSION = BASE_URL + "/index.php?g=apps&m=index&a=CheckVersion";
+    /** 获取班级列表 */
+    public static final String GET_CLASS_LIST = BASE_URL + "/index.php?g=apps&m=teacher&a=getteacherclasslist";
+    /** 获取老师对应的班级以及学生*/
+    public static final String GET_CLASS_STUDENT = BASE_URL + "/index.php?g=apps&m=teacher&a=getteacherclasslistandstudentlist";
+
+    public static final String IMG_URL = BASE_URL + "/uploads/microblog/";
+    
+    
+
+    /******************************************** 登陆 注册 ***************************************************************/
+  
+    /** 登陆 */
+    public static final String APP_LOGIN = BASE_URL + "/index.php?g=apps&m=index&a=applogin";
+    /** 发送验证码 */
+    public static final String SEND_TEL_CODE = BASE_URL + "/index.php?g=apps&m=index&a=SendMobileCode";
+    /** 验证验证码 */
+    public static final String TEST_TEL_CODE = BASE_URL + "/index.php?g=apps&m=index&a=forgetPass_Verify";
+    /** 设置密码 */
+    public static final String RESET_PASSWORD = BASE_URL + "/index.php?g=apps&m=index&a=forgetPass_Activate";
+
+
+
+
+    /********************************************  聊天   ***************************************************************/
+    
+    /** 获取聊天列表 */
+    public static final String GET_CHAT_LIST = BASE_URL + "/index.php?g=apps&m=message&a=xcGetChatListData";
+    /** 获取聊天群组列表 */
+    public static final String GET_CHAT_GROUP_LIST = BASE_URL + "/index.php?g=apps&m=message&a=xcGetChatListData";
+    /** 添加群成员*/
+    public static final String ADD_CHAT_LINKMAN = BASE_URL + "/index.php?g=apps&m=message&a=xcAddChatLinkMan";
+    /** 创建群聊*/
+    public static final String CREAT_GROUP_CHAT = BASE_URL + "/index.php?g=apps&m=message&a=CreateGroupChat";
+    /** 获取聊天信息 */
+    public static final String GET_CHAT_DATA = BASE_URL + "/index.php?g=apps&m=message&a=xcGetChatData";
+    /** 发送聊天信息 */
+    public static final String SEND_CHAT_DATA = BASE_URL + "/index.php?g=apps&m=message&a=SendChatData";
+    /** 更改群名称 */
+    public static final String UPDATE_GROUP_NAME = BASE_URL + "/index.php?g=apps&m=message&a=UpdateGroupTitle";
+    /**获取群成员*/
+    public static final String GET_CHAT_MENBERS = BASE_URL + "/index.php?g=apps&m=message&a=xcGetChatLinkManList";
+    
+    /******************************************** 动态  相册 ***************************************************************/
+    
+    /** 获取动态／相册列表 type：1／2 */
+    public static final String GET_TREND_LIST = BASE_URL + "/index.php?g=apps&m=index&a=GetMicroblog";
+    /** 点赞动态/相册 type：1／2*/
+    public static final String TREND_PRAISE = BASE_URL + "/index.php?g=apps&m=school&a=SetLike";
+    /** 取消点赞动态/相册 type：1／2*/
+    public static final String TREND_DEL_PRAISE = BASE_URL + "/index.php?g=apps&m=school&a=ResetLike";
+    /**
+     * 评论动态/相册 type：1／2
+     */
+    public static final String TREND_SEND_REMARK = BASE_URL + "/index.php?g=apps&m=school&a=SetComment";
+    /** 获取在线客服电话*/
+    public static final String GET_ONLINE_TEL = BASE_URL + "/index.php?g=apps&m=index&a=service_phone";
+    /** 上传图片*/
+    public static final String UPLOAD_IMG = BASE_URL + "/index.php?g=apps&m=index&a=WriteMicroblog_upload";
+    /** 发布动态／相册 type：1／2*/
+    public static final String SEND_BLOG = BASE_URL + "/index.php?g=apps&m=index&a=WriteMicroblog";
+
+
+    /******************************************** 消息页面  ***************************************************************/
+
+    /** 获取接受到到信息群发*/
+    public static final String GET_RECIVE_NEWSGROUP = BASE_URL + "/index.php?g=apps&m=index&m=Message&a=user_reception_message";
+    /** 获取发布的信息群发*/
+    public static final String GET_SEND_NEWSGROUP = BASE_URL + "/index.php?g=Apps&m=Message&a=user_send_message";
+    /** 读取信息群发 */
+    public static final String READ_NEWSGROUP = BASE_URL + "/index.php?g=Apps&m=Message&a=read_message";
+    /** 发布信息群发 */
+    public static final String SEND_NEWSGROUP = BASE_URL + "/index.php?g=apps&m=message&a=send_message";
+
+    /** 获取家长叮嘱 */
+    public static final String GET_PARENT_WARN = BASE_URL + "/index.php?g=apps&m=teacher&a=getentrustlist";
+
+    /** 获取已收到的通知公告 */
+    public static final String GET_RECIVE_NOTICE = BASE_URL + "/index.php?g=apps&m=index&m=school&a=get_receive_notice";
+    /** 获取已发送的通知公告 */
+    public static final String GET_SEND_NOTICE = BASE_URL + "/index.php?g=apps&m=school&a=getnoticelist";
+    /** 发布通知公告 */
+    public static final String SEND_ANNOUNCE = BASE_URL + "/index.php?g=apps&m=school&a=publishnotice";
+    /**读取通知公告*/
+    public static final String READ_NOTICE = BASE_URL + "/index.php?g=apps&m=school&a=read_notice";
+
+
+    /** 获取已收到的待办事项 */
+    public static final String GET_RECIVE_BACKLOG = BASE_URL + "/index.php?g=apps&m=school&a=GetMyReciveSchedulelist";
+    /** 获取已发布的待办事项 */
+    public static final String GET_SEND_BACKLOG = BASE_URL + "/index.php?g=apps&m=school&a=GetMySendSchedulelist";
+    /** 发布待办事项 */
+    public static final String SEND_BACKLOG = BASE_URL + "/index.php?g=apps&m=school&a=addschedule";
+    /** 处理待办事项 */
+    public static final String DO_BACKLOG = BASE_URL + "/index.php?g=apps&m=school&a=DoSchedul";
+
+    /** 获取家庭作业列表 */
+    public static final String GET_HOMEWORK = BASE_URL + "/index.php?g=apps&m=teacher&a=gethomeworklist";
+    /** 发布家庭作业 */
+    public static final String SEND_HOMEWORK = BASE_URL + "/index.php?g=apps&m=teacher&a=addhomework";
+    /** 获取家长通信录 */
+    public static final String GET_ADDRESS_PARENT = BASE_URL + "/index.php?g=apps&m=index&a=ParentContacts";
+    /** 获取老师通讯录 */
+    public static final String GET_ADDRESS_TEACHER = BASE_URL + "/index.php?g=apps&m=school&a=getteacherinfo";
+
+
+
+    /******************************************** 功能页面  ***************************************************************/
+
+
+
+    /** 获取班级课表 */
+    public static final String GET_CLASS_TIMEABLE = BASE_URL + "/index.php?g=apps&m=school&a=ClassSyllabus";
+    /** 获取待接确认 */
+    public static final String GET_COLLECTION = BASE_URL + "/index.php?g=apps&m=teacher&a=gettransportconfirmation";
+    /** 发布待接确认 */
+    public static final String SEND_CONFIM = BASE_URL + "/index.php?g=apps&m=teacher&a=addtransport";
+
+
+
+    /** 获取在线请假列表*/
+    public static final String GET_LEAVE_LIST = BASE_URL + "/index.php?g=apps&m=teacher&a=getleavelist";
+    /** 回复请假 */
+    public static final String REPLAY_LEAVE = BASE_URL + "/index.php?g=apps&m=teacher&a=replyleave";
+
+
+    /** 获取食谱 */
+    public static final String GET_RECIPES = BASE_URL + "/index.php?g=apps&m=school&a=getCookbookContent";
+    /** 获取班级活动 */
+    public static final String GET_CLASS_EVENT = BASE_URL + "/index.php?g=apps&m=teacher&a=getactivitylist";
+    /** 发布班级活动 */
+
+
+    public static final String SEND_CLASS_EVENT = BASE_URL + "/index.php?g=apps&m=teacher&a=addactivity";
+    /** 获取老师点评 */
+    public static final String GET_TEACHER_REVIEW = BASE_URL + "/index.php?g=apps&m=teacher&a=GetTeacherComment";
+    /** 发布老师点评 */
+    public static final String SEND_TEACHER_COMMENT = BASE_URL + "/index.php?g=apps&m=teacher&a=AddTeacherComment";
+    /** 获取点评信息模版 */
+    public static final String GET_TERCHER_COMMENT_MODEL = BASE_INDEX + "&a=getDictionaryList&type=1";
+
+    /** 获取个人考勤记录 */
+    public static final String GET_ATTENDANCE = BASE_URL + "/index.php?g=apps&m=teacher&a=GetTeacherAttendanceList";
+    /** 获取学生考勤列表*/
+    public static final String GET_STUDENT_ATTENDANCE_LIST = BASE_URL + "/index.php?g=apps&m=teacher&a=GetStudentAttendanceList";
+    /** 发送签退 */
+    public static final String SEND_LEAVETIME = BASE_URL + "/index.php?g=apps&m=index&a=LeaveTime";
+    /** 考勤发送补签 */
+    public static final String SEND_RESIGN  = BASE_URL + "/index.php?g=apps&m=index&a=resign";
+    /** 获取班级内学生考勤 */
+    public static final String GET_STUDENT_ATTENDANCE_DAYS = BASE_URL + "/index.php?g=apps&m=teacher&a=GetStudentAttendanceDays";
+
+
+    /** 获取班级课件列表 */
+    public static final String GET_CLASS_COURSEWARE = BASE_URL + "/index.php?g=apps&m=index&a=SchoolCourseware";
+    /** 发布课件 */
+    public static final String SEND_COURSE_WARE = BASE_URL + "/index.php?g=apps&m=index&a=AddSchoolCourseware";
+
+
+    /** 获取周计划*/
+    public static final String GET_WEEKPLAN = BASE_URL + "/index.php?g=apps&m=school&a=getschoolplan";
+    /**发布周计划*/
+    public static final String PUBLISH_PLAN = BASE_URL + "/index.php?g=apps&m=school&a=publishschoolplan";
+    /** 编辑周计划 */
+    public static final String UPDATE_PLAN = BASE_URL + "/index.php?g=apps&m=school&a=updataschoolplan";
+
+
+    /**获取个人信息*/
+    public static final String GET_USERS = BASE_URL + "/index.php?g=apps&m=index&a=GetUsers";
+    /** 更新头像*/
+    public static final String UPDATE_HEAD = BASE_URL + "/index.php?g=apps&m=index&a=UpdateUserAvatar";
+    /** 更新名字*/
+    public static final String UPDATE_NAME = BASE_URL + "/index.php?g=apps&m=index&a=UpdateUserName";
+    /** 更新性别*/
+    public static final String UPDATE_SEX = BASE_URL + "/index.php?g=apps&m=index&a=UpdateUserSex";
+
+
+    /**班级相册发布信息*/
+    public static final String CLASS_PIC_INFO = BASE_URL + "/index.php?g=apps&m=school&a=ClassPicInfo";
+
+    /** 校网获取列表信息 */
+    public static final String GET_SCHOOL_WEB_LIST = BASE_URL + "/index.php?g=apps&m=school";
+    /** 园长信箱*/
+    public static final String WEB_XINXIANG = BASE_URL + "/index.php?g=portal&m=web&a=xinxiang";
+    /** 入学报名*/
+    public static final String WEB_RUXUE = BASE_URL + "/index.php?g=portal&m=web&a=ruxue";
+    /** 校网文章详情*/
+    public static final String WEB_URL = BASE_URL + "/index.php?g=portal&m=article";
+    /** 系统通知详情*/
+    public static final String WEB_SYSTEM = BASE_URL + "/index.php?g=portal&m=article&a=system&id=";
+    /** 获取校网URL */
+    public static final String GET_WEB_URL = BASE_URL + "/index.php?g=apps&m=index&a=FairylandUrl";
+
+    /** 发布在线留言 */
+    public static final String SEND_SUGGEST = BASE_INDEX + "&a=LeaveMessage";
+
+    /** 获取家长通讯录 */
+    public static final String GET_PARENT_CONTACT = BASE_INDEX + "&a=ParentContacts";
+    /**获取在线留言列表*/
+    public static final String GET_SUGGEST_LIST = BASE_INDEX + "&a=GetLeaveMessageBySelf";
+
+
+
+    /** 获取科目 */
+    public static final String GET_SUBJECT = BASE_URL + "/index.php?g=apps&m=teacher&a=getSubject";
+    /** 获取萤石云的token*/
+    public static final String GET_EZTOKEN = BASE_URL + "/index.php?g=apps&m=index&a=yingshiyun";
+    /** 获取乐橙的token*/
+    public static final String GET_LCTOKEN = BASE_URL + "/index.php?g=apps&m=index&a=lecheng";
+    /** 获取班级监控视频列表*/
+    public static final String GET_VIEDIO_LIST = BASE_URL + "/index.php?g=apps&m=index&a=GetClassVideoList";
+
+
+
+校网：
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getSchoolNotices&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getSchoolNews&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getParentsThings&schoolid=1
+http://wxt.xiaocool.net/index.php?g=portal&m=web&a=xinxiang
+-------对应的页面：tpl/zhixiaoyuanweb/Portal
+
+http://wxt.xiaocool.net/index.php?g=portal&m=web&a=ruxue
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getteacherinfos&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getbabyinfos&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getjobs&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getInterestclass&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=school&a=getWebSchoolInfos&schoolid=1
+http://wxt.xiaocool.net/index.php?g=apps&m=index&a=getSystemMessages&term_id=3
+
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=teacher&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=baby&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=job&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=Interest&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=school&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=notice&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=news&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=parentsthings&id=
+http://wxt.xiaocool.net/index.php?g=portal&m=article&a=system&id=

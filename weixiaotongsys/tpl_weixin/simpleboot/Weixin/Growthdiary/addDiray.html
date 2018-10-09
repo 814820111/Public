@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .neirong {
+            padding: 0;
+        }
+        
+        #previewImage {
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        #previewImage div {
+            float: left;
+            width: 20%;
+            margin-left: 4%;
+        }
+        
+        #previewImage div img {
+            width: 100%;
+            height: calc(height);
+            float: right;
+        }
+        
+        .a-upload {
+            height: 72px;
+            width: 72px;
+            float: left;
+            position: relative;
+            cursor: pointer;
+            background: url(__TMPL__public/img/z_add.png) no-repeat center center;
+            border: 1px solid #adadad;
+            margin-top: 20px;
+            margin-left: 17px;
+            margin-bottom: 10px;
+        }
+        
+        .a-upload input {
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        #chooseImage {
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .delss {
+            margin-top: 20px;
+            color: #babfc7;
+            background: rgba(0, 0, 0, 0.5);
+            height: 35px;
+            width: 20%;
+            position: absolute;
+            cursor :pointer;
+        }
+        .vx{
+            float: right;
+            font-size: 28px;
+            text-align: center;
+        }
+    </style>
+
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/tianjiadingzhu.css">
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+
+<body>
+<div id="zhezhao" style="z-index:99;width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.6);display: none;"></div>
+    <!--
+        @param 发布相册 
+        @param 2017年4月1日13:53:20
+    -->
+    <div class="top_box">
+       <img src="__TMPL__public/img/img67.png" class="fanhui">
+        成长日记
+        <div class="clearfix"></div>
+    </div>
+    <!--
+    @param 内容
+    @param desc 相册描述
+    @param 2017年4月1日13:54:19
+-->
+    <div class="bigbox" style="margin-top: 40px;">
+        <div class="neirong" style="padding: 10px;  background-color: white;margin-top: 10px">
+            <!--<input type="text" name="desc" value="" id="desc" placeholder="相册描述" style="width:100%;height:100px;border: none;margin-left: 10px">-->
+            <textarea id="desc" placeholder="动态描述" style="font-size: 14px;width:100%;height:100px;border: none;"></textarea>
+            <div class="clearfix"></div>
+        </div>
+        <div id="previewImage"></div>
+        <a href="javascript:;" class="a-upload">
+            <input type="button" id="chooseImage" value="上传">
+        </a>
+        <div class="clearfix"></div>
+    </div>
+    <div class="queren" id="submit">发&nbsp;&nbsp;布</div>
+</body>
+<input type="hidden" value={$studentid} id="studentid">
+<input type="hidden" value={$classid} id="classid">
+<input type="hidden" value={$userid} id="userid">
+<input type="hidden" value={$schoolid} id="schoolid">
+<input type="hidden" value={$send_name} id="send_name">
+<!--
+    @param 用到什么值就改动什么值
+    @param useri 用户id schoolid 学校id classid 班级id
+    @param 2017年4月1日11:36:06
+-->
+<script>
+    wx.config({
+        debug: false,
+        appId: '{$signPackage.appId}',
+        timestamp: '{$signPackage.timestamp}',
+        nonceStr: '{$signPackage.nonceStr}',
+        signature: '{$signPackage.signature}',
+        jsApiList: [
+            //这里要写调用的api列表
+            'checkJsApi', 'onMenuShareTimeline', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage','hideMenuItems','hideAllNonBaseMenuItem',
+        ]
+    });
+
+    wx.ready(function(){
+        //批量隐藏功能
+        wx.hideMenuItems({
+            menuList: ['menuItem:share:qq',
+                'menuItem:share:weiboApp',
+                'menuItem:favorite',
+                'menuItem:share:facebook',
+                'menuItem:share:QZone',
+                'menuItem:share:timeline',
+                'menuItem:share:appMessage',
+                'menuItem:copyUrl',
+                'menuItem:share:email',
+                'menuItem:openWithQQBrowser',
+                'menuItem:exposeArticle',
+                'menuItem:setFont'
+
+            ] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+        });
+        wx.hideAllNonBaseMenuItem();
+    });
+    var localId = [];
+    var serverId = [];
+    var newId=[];
+    $("#chooseImage").click(function() {
+        //这里是定义一个css的排序
+        var imgs = "";
+        var html = "";
+        wx.chooseImage({
+            count: 9,
+            // 默认9
+            sizeType: ['original', 'compressed'],
+            // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'],
+            // 可以指定来源是相册还是相机，默认二者都有
+            success: function(res) {
+                localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                for (var i = 0; i < localId.length; i++) {
+                    imgs = localId[i];
+                    html = "<div><img src='" + imgs + "' /><a class='delss' value="+imgs+"><p class='vx'>×</p></a></div>";
+                    $("#previewImage").append(html);
+                    setTimeout(function() {
+                            $('#previewImage div img').css('height', $('#previewImage div img').css('width'));
+                        },
+                        100);
+                }
+                for (var z = 0; z < localId.length; z++) {
+                    newId.push(localId[z]);
+                }
+            }
+
+        });
+
+    });
+
+    $(document).on('click','#previewImage',function(){
+        var imgObj = $('#previewImage div img');
+        var imgsurl = [];
+        var imgSrc = "";
+        for (var j = 0; j < imgObj.length; j++) {
+            imgsurl[j] = imgObj[j].src;
+            imgSrc += imgObj[j].src + ",";
+            (function(j) {
+                imgObj.eq(j).click(function() {
+                    wx.previewImage({
+                        current: imgObj[j].src,
+                        // 当前显示图片的http链接
+                        urls: imgsurl // 需要预览的图片http链接列表
+                    });
+                });
+            })(j)
+        }
+    });
+    $(function(){
+        var ua = navigator.userAgent.toLowerCase();
+        if (/iphone|ipad|ipod/.test(ua)) {
+            $(document).on('touchend','.delss',function(){
+                $(this).parent().remove();
+                var image = $(this).attr("value");
+                newId.splice($.inArray(image,newId),1);
+            });
+        } else {
+            $(document).on('click','.delss',function(){
+                $(this).parent().remove();
+                var image = $(this).attr("value");
+                newId.splice($.inArray(image,newId),1);
+            });
+        }
+    });
+
+    //苹果去掉alert 网址
+    window.alert = function(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    };
+
+    $('#submit').click(function() {
+        var userid = $("#userid").val();
+        var studentid = $("#studentid").val();
+        var schoolid = $("#schoolid").val();
+        var classid = $("#classid").val();
+        var title = $("#title").val();
+        var content = $("#desc").val();
+        var send_name = $("#send_name").val();
+        if (!content) {
+            alert('内容不能为空');
+            return;
+        }
+//        else if(content.length>100){
+//            alert('内容不能大于100个字数');
+//            return;
+//        }
+        localId = newId;
+        if (localId.length == 0) {
+            $.ajax({
+                url: "__ROOT__/index.php?g=apps&m=index&a=WriteMicroblog",
+                type: "post",
+                dataType: "json",
+                data: {
+                    picurl: "",
+                    classid: classid,
+                    schoolid: schoolid,
+                    userid: studentid,
+                    type: 7,
+                    content: content,
+                    send_name:send_name
+                },
+                success: function(res) {
+                    //console.log(res);
+                    $.ajax({
+                        url: "__ROOT__/index.php/Apps/SendTpl/school_notice",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            content: content,
+                            uisid:studentid,
+                            userid:userid,
+                            type:3,
+                            schoolid:schoolid
+                        },
+                        success: function(res) {
+                            //alert("发送成功");
+                            //location.href = "{:U('index')}";
+//
+                        },
+                        error: function(res) {
+                        }
+                    });
+                    alert("发布成功");
+                    location.href = "{:U('index')}";
+                },
+                error: function(res) {
+                    alert("发布失败 请稍后重试");
+                }
+            });
+            return;
+        }
+        $('#zhezhao').show();
+        var picurl = "";
+        var i = 0,
+        serverId = [];
+
+        length = localId.length;
+
+        function upload() {
+            wx.uploadImage({
+                localId: localId[i],
+                success: function(res1) {
+                    i++;
+                    serverId.push(res1.serverId);
+
+                    $.ajax({
+                        url: "__ROOT__/index.php/Apps/Index/download",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            serverId: res1.serverId,
+                        },
+                        success: function(res) {
+                            if(res.status=="error"){
+                                alert("图片上传失败");
+                                return;
+                            }
+//                            var randj = res.data;
+//                            randj += ".jpg,";
+//                            picurl += randj;
+                            var img = res.data.filename+":"+res.data.width+":"+res.data.height+",";
+                            picurl += img;
+                            if (i < length) {
+                                upload();
+                            } else {
+                                $.ajax({
+                                    url: "__ROOT__/index.php?g=apps&m=index&a=WriteMicroblog",
+                                    type: "post",
+                                    dataType: "json",
+                                    data: {
+                                        picurl: picurl,
+                                        userid: studentid,
+                                        classid: classid,
+                                        schoolid: schoolid,
+                                        type: 7,
+                                        content: content,
+                                        send_name:send_name
+                                    },
+                                    success: function(res) {
+                                        //alert("上传成功");
+                                        //location.href = "index";
+                                        $.ajax({
+                                            url: "__ROOT__/index.php/Apps/SendTpl/school_notice",
+                                            type: "post",
+                                            dataType: "json",
+                                            data: {
+                                                content: content,
+                                                uisid:studentid,
+                                                userid:userid,
+                                                type:3,
+                                                schoolid:schoolid
+                                            },
+                                            success: function(res) {
+                                            },
+                                            error: function(res) {
+                                                console.log(res);
+                                            }
+                                        });
+                                        $('#zhezhao').hide();
+                                        alert("发布成功");
+                                        location.href = "{:U('index')}";
+
+                                    },
+                                    error: function(res) {
+                                        alert("发布失败 请稍后重试");
+                                    }
+                                });
+                            }
+                        },
+                        error: function(res3) {
+                            //console.log(3);
+                        }
+                    });
+                },
+                fail: function(res4) {
+                    console.log(4);
+                    //alert(JSON.stringify(res4));
+                    alert("图片上传失败,请稍后再试");
+                }
+            });
+        }
+        upload();
+    });
+    $(".fanhui").click(function() {
+        //location.href = "{:U('index')}";
+        window.history.go(-1);
+    })
+</script>
+
+</html>

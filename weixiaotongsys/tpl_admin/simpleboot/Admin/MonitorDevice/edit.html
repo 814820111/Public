@@ -1,0 +1,42 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="#">设备管理</a></li>
+        <li class="active"><a href="#">修改摄像头名称</a></li>
+        <!-- <li class="active"><a href="{:U('add')}">新增监控</a></li> -->
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('edit_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">原设备名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input"  name="devicename" disabled="disabled" value="<?php echo $device['devicename']?>">
+                        <input type="hidden" name="id" value="<?php echo $id?>">
+                        <input type="hidden" name="olddevicename" value="<?php echo $device['devicename']?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">设备别名:</label>
+                    <div class="controls">
+                        <input type="text" class="input"  name="aliass" value="<?php echo $device['alias']?>">
+                        <input type="hidden" name="oldalias" value="<?php echo $device['alias']?>">
+                        <input type="hidden" name="deviceserial" value="<?php echo $device['deviceserial']?>">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="">修改</button>
+                <a class="btn" href="{:U('index')}">返回</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<SCRIPT type=text/javascript>
+
+
+</script>
+</body>
+</html>

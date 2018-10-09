@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+    <title>成长档案编辑页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/addressList2.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+
+
+</head>
+<style>
+    #personal_left{
+        width: 40%;
+        height: 100%;
+        overflow-y: auto;
+        font-size: 13px;
+        color: #7a7a7a;
+        box-sizing: border-box;
+        float: left;
+    }
+    .student_list{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #eeeeee;
+        padding: 0 10%;
+        box-sizing: border-box;
+        position: relative;
+        border-right: 2px solid #dbdbdb;
+    }
+    .student_list p{
+        width: 50%;
+        height: 100%;
+        float: left;
+        line-height: 40px;
+        margin: 0;
+    }
+    .student_list p:first-child{
+        text-align: left;
+    }
+    .student_list p:last-child{
+        text-align: right;
+    }
+    #personal_left .active{
+        color: rgb(6,193,143);
+        border-left: 3px solid rgb(6,193,143);
+        border-right: none;
+    }
+    #persional_right{
+        width:60%;
+        height: 100%;
+        /*padding-left: 128px;*/
+        box-sizing: border-box;
+        float: left;
+    }
+    #persional_right .student_photo{
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+    }
+    #persional_right .student_photo .photo_list{
+        width: 50%;
+        height: 100px;
+        float: left;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .photo_list img{
+        box-shadow:2px 2px 2px 2px #ccc;
+        border-radius: 5px;
+    }
+    .photo_list:nth-of-type(2n-1){
+        transform: rotate(0deg);
+    }
+    .photo_list:nth-of-type(2n){
+        transform: rotate(-7deg);
+    }
+    .photo_list:nth-of-type(2n+2){
+        transform: rotate(5deg);
+    }
+    .select_img{
+        width: 18px;
+        height: 18px;
+        background: url(__ROOT__/statics/img/select.png) no-repeat center center;
+        background-size: 100%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .oks{
+        width: 40px;
+        height: 40px;
+        background: rgb(6,193,143);
+        position: absolute;
+        bottom: 70px;
+        right: 20px;
+        z-index: 1;
+        border-radius: 50%;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+    }
+</style>
+<body>
+<div class="top_box" style="z-index: 1">
+  <a href="#" onclick="history.back();"><img src="/statics/img/img67.png"></a>
+  相册
+  <div class="clearfix"></div>
+</div>
+<div id="container" class="container" style=" overflow: hidden;padding-top: 40px;box-sizing: border-box">
+
+    <div class="">
+        <div class="classify">
+            <a href="classPhoto?cid={$cid}&aid={$aid}&sid={$sid}&gid={$gid}"><div class="parent">班级相册</div></a>
+            <div class="teacher">宝宝相册</div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="fenge" style="margin-bottom: 0"></div>
+    </div>
+    <div id="personal_left" style="padding-bottom: 40px;box-sizing: border-box">
+        <?php foreach($students as $k=>$v){?>
+        <div class="student_list <?php if($k==0){echo 'active';}?>" data-id="<?php echo $v['studentid']?>" onclick="getStudentPic('<?php echo $v[studentid]?>')">
+            <p><?php echo $v['stu_name']?></p>
+            <p><?php echo $v['count']?>张</p>
+        </div>
+        <?php }?>
+        <!--<div class="student_list" data-id="2">-->
+            <!--<p>杨佑宁</p>-->
+            <!--<p>99张</p>-->
+        <!--</div>-->
+    </div>
+    <div id="persional_right">
+        <div class="oks" onclick="selectOk()">
+            确定
+        </div>
+
+        <div id="content_box" style="height: 100%;padding-bottom: 40px;box-sizing: border-box">
+            <!--<div id="box1" class="student_photo">-->
+                <!--<div class="photo_list">-->
+                    <!--<div class=""></div>-->
+                    <!--<img src="/statics/img/img02.png" alt="" style="width: 100%;height: 100%">-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <input type="hidden" id="classid" name="sid" value="{$cid}">
+    <input type="hidden" id="studentid" name="sid" value="{$sid}">
+    <input type="hidden" id="gradeid" name="gid" value="{$gid}">
+    <input type="hidden" id="archivesid" name="aid" value="{$aid}">
+
+</div>
+<script>
+    var root = '<?php echo "__ROOT__";?>';
+    var imgRoot = '<?php echo SR;?>';
+    var bodyHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    var oDiv = document.getElementById("container");
+    oDiv.style.height = bodyHeight + 'px';
+
+    window.onload = function () {
+        var studentid = $('#personal_left .active').attr("data-id");
+        getStudentPic(studentid)
+        $('.student_list').click(function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            var id = $(this).attr("data-id");
+            $('.student_photo').each(function (k, v) {
+                $(this).hide();
+            });
+            $('#box'+id).show();
+        });
+    }
+
+    function getStudentPic(studentid) {
+        $.ajax({
+            type: 'post',
+            url: root+'/weixin/TchGrowtharchives/getNowBabyPic',
+            data: {sid: studentid},
+            dataType: 'json',
+            success: function (res) {
+                var html = '';
+                html += '<div id="box'+res['sid']+'" class="student_photo">';
+                for (var i = 0; i < res['img'].length; i++){
+                    html +='<div class="photo_list"><div class=""></div>';
+                    html +='<img src="'+imgRoot+res['img'][i]['pictureurl']+'" alt="" style="width: 100%;height: 100%"></div>';
+                    //html +='<img src="/statics/img/img02.png" alt="" style="width: 100%;height: 100%"></div>';
+                }
+                html += '</div>';
+                //alert(html); /statics/img/img02.png
+                $('#content_box').html(html);
+
+
+                $('.photo_list').click(function () {
+                    $(this).siblings().find('div').removeClass('select_img');
+                    $(this).find('div').addClass('select_img');
+                });
+            },
+            error: function () {
+                alert("错误");
+            }
+        });
+    }
+    function selectOk() {
+        var img = '';
+        $('.photo_list').each(function () {
+            var flag = $(this).find('div').hasClass('select_img');
+            if (flag){
+                img = $(this).find('img').attr('src');
+            }
+        });
+        if (img != ''){
+            setCookie('wxt_img', img);
+            window.location.href = '__ROOT__/weixin/TchGrowtharchives/studentPage?cid={$cid}&aid={$aid}&sid={$sid}&gid={$gid}';
+        }else{
+            alert("请选择一张图片");
+            return false;
+        }
+    }
+    function setCookie(name, value) {
+        var Days = 1;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ value + ";expires=" + exp.toGMTString() + ";path=/";
+    }
+</script>
+</body>
+</html>

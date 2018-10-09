@@ -1,0 +1,333 @@
+<admintpl file="header" />
+<script src="__ROOT__/statics/js/layer/layer.js" type="text/javascript"></script>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href='{:U("index",array("schoolid"=>$schoolid,"schoolname"=>$schoolname))}'>备卡管理</a></li>
+        <li><a href='{:U("addcard",array("schoolid"=>$schoolid,"schoolname"=>$schoolname))}'>添加备卡</a></li>
+
+    </ul>
+    <div class="common-form">
+        <form class="well form-search" method="get" action="{:U('SpareCard/index')}" style=" padding: 12px;">
+        <div class="controls">
+                    <span class="mr20">
+						<select  class="province"  name="province" id="province" style="width: 105px;">
+							<option value="">
+                        选择省份&nbsp;
+                        &nbsp;</option>
+							<foreach name="Province" item="vo">
+							   <php>$pro=$province==$vo['term_id']?"selected":"";</php>
+								<option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+							</foreach>
+						</select>
+						市级:
+						<select class="select_1" name="citys" id="citys" style="width: 105px;">
+                               <option value="">选择市级</option>
+						</select> <input type="hidden" class="new_citys" value="{$new_citys}">
+						区级<input type="hidden" class="new_message_type" value="{$new_message_type}">
+						<select class="select_3" name="message_type" id="message_type" style="width:105px;">
+							 <option value="0">选择区域</option>
+						</select>
+						学校：<input type="hidden" class="type_school" value="{$schoolid}">
+				  <select  name="school" id="viewOLanguage" class="chzn-select"  tabindex="2" >
+                    <option value="">选择学校</option>
+                  </select>
+                    <input type="submit" class=" btn btn-primary ss" style=""  value="搜索" />&nbsp;&nbsp;
+                    <a class=" btn btn-danger" href="{:U('card')}">导入</a>&nbsp;&nbsp;
+                    </span>
+        </div>
+        </form>
+ </div>
+
+
+
+<style>
+    .cards:hover
+    {
+        color:red;
+    }
+    .card:hover
+    {
+        color:green;
+    }
+    </style>
+
+    <table class="table table-hover table-bordered">
+
+        <thead>
+            <th colspan="5"  style="text-align:center">卡号</th>
+
+        </thead>
+        <tbody>
+        <tr>
+        <php>$count=count($list);$i=0;</php>
+        <foreach name="list" item="vo">
+
+            <php>if($i%5==0){echo '</tr><tr>';}</php>
+
+            <td class="<if condition = '$vo.status eq 1'>card<else/>delcard cards</if>" id="{$vo.id}" name="{$vo.cardno}">
+                {$vo.cardno}<span style="float:right">
+                <if condition = "$vo.status eq 1">
+                    已使用
+                    <else/>
+                    未使用
+                </if></span>
+            </td>
+
+            <php>$i++;</php>
+
+        </foreach>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+    <div class="pagination">{$Page}</div>
+
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    $(".delcard").click(function () {
+
+        var delcard = this.id;
+        var card = $(this).text();
+        var val = "确定要删除该卡号 "+card+" 吗?";
+        if(window.confirm(val)){
+        }else{
+            return false;
+        }
+        $.ajax({
+            url:"__ROOT__/index.php/Admin/SpareCard/del",
+            dataType:"json",
+            type:"get",
+            data:{
+                delcard:delcard,
+            },
+            success:function (res) {
+                document.getElementById(delcard).innerHTML = res.type;
+                document.getElementById(delcard).style.color = "red";
+            },
+            error:function (res) {
+                alert("失败");
+
+            }
+        })
+
+    });
+    //下拉框ajax
+
+    //选择市级的下拉的ajax
+    $(function() {
+        $("#province").change(function(){
+
+            $("#citys").empty();
+            $("#message_type").empty();
+            //  $(".Sio").text("")
+
+            $("#viewOLanguage").empty();
+            //   $("#viewOLanguage").chosen();
+            //   $("#viewOLanguage").trigger("liszt:updated");
+            $("#viewOLanguage").append("<option value=>"+"选择学校"+"</option>");
+
+            // $("#student").empty();
+
+            $("#message_type").append("<option value=>"+"选择区域"+"</option>");
+            $("#citys").append("<option value=0>"+"选择市级"+"</option>");
+
+            if( $("#province").val()==0)
+            {
+                return false;
+            }
+
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+
+
+                if(data.status=="success"){
+
+
+                    for(var key in data.data){
+                        $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+
+        })
+    });
+
+    $(function() {
+        $("#citys").change(function() {
+            $("#message_type").empty();
+            // $(".Sio").text("")
+            $("#viewOLanguage").empty();
+            //  $("#viewOLanguage").chosen();
+            //  $("#viewOLanguage").trigger("liszt:updated");
+            $("#message_type").append("<option value=>"+"选择区域"+"</option>");
+            $("#viewOLanguage").append("<option value=0>"+"选择学校"+"</option>");
+            if( $("#citys").val()==0)
+            {
+                return false;
+            }
+
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+
+
+                    for(var key in data.data){
+                        $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#message_type").append("<option value='0'>暂无区域</option>");
+                }
+            });
+        });
+    });
+
+    $(".select_3").change(function() {
+        $("#viewOLanguage").empty();
+        //$(".Sio").text("")
+        //   $("#viewOLanguage").chosen();
+        $("#viewOLanguage").trigger("liszt:updated");
+        $("#viewOLanguage").append("<option value=''>选择学校</option>");
+        var type = $(".select_3  option:selected").val();
+
+
+        $.ajax({
+            type: "post",
+            url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+            async: true,
+            data: {
+                type: type
+            },
+            dataType: 'json',
+            success: function(res) {
+
+                var html = "";
+                res = eval(res.data);
+
+                for(var i = 0; i < res.length; i++) {
+                    var school_name = res[i].school_name; //学校的名字
+                    var schoolid = res[i].schoolid; //学校的ID
+                    html += '<option name="school"  class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+                }
+                $(".chzn-select").append(html)
+                $("#viewOLanguage").chosen();
+                $("#viewOLanguage").trigger("liszt:updated");
+            },
+            error: function() {
+                console.log('系统错误,请稍后重试');
+            }
+        });
+    })
+
+
+    if($("#province").val())
+    {
+        var new_citys = $('body').find(".new_citys").val();
+
+        var new_message_type = $('body').find('.new_message_type').val();
+
+        // console.log(type);
+
+        var type_school = $('body').find(".type_school").val();
+
+
+
+        if(new_citys || $("#province").val())
+        {
+            $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                console.log(data);
+                if(data.status=="success"){
+                    $("#citys").empty();
+                    $("#citys").append("<option value=>"+"选择市级"+"</option>");
+                    for(var key in data.data){
+
+                        if(new_citys==data.data[key]["term_id"]){
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+ " selected >"+data.data[key]["name"]+"</option>");
+
+                        }else{
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                        }
+                    }
+                    $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                        // console.log(data);
+                        if(data.status=="success"){
+                            $("#message_type").empty();
+                            $("#message_type").append("<option value=>"+"选择区域"+"</option>");
+
+                            for(var key in data.data){
+                                if(new_message_type == data.data[key]["term_id"]){
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" selected >"+data.data[key]["name"]+"</option>");
+                                }else{
+                                    $("#message_type").append("<option value="+data.data[key]["term_id"]+" >"+data.data[key]["name"]+"</option>");
+                                }
+
+                            }
+                            var type = $(".select_3  option:selected").val();
+
+                            $.ajax({
+                                type: "post",
+                                url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+                                async: true,
+                                data: {
+                                    type: type
+                                },
+                                dataType: 'json',
+                                success: function(res) {
+                                    // $(".Sio").text("")
+                                    $(".chzn-select").empty();
+                                    var html = "";
+                                    res = eval(res.data);
+
+
+                                    for(var i = 0; i < res.length; i++) {
+                                        var school_name = res[i].school_name; //学校的名字
+                                        var schoolid = res[i].schoolid; //学校的ID
+
+                                        // alert('aa');
+                                        // alert(type_school);
+                                        if(schoolid == type_school){
+                                            // html += '<option class="Sio" value="' + schoolid + ' " selected>' + school_name + ' </option> '
+                                            $(".chzn-select").append("<option value="+schoolid+" selected >"+school_name+"</option>");
+                                            $("#add_student").attr("data-school",schoolid);
+
+                                        }else{
+                                            $(".chzn-select").append("<option value="+schoolid+" >"+school_name+"</option>");
+                                        }
+                                    }
+                                    $(".chzn-select").append(html)
+                                    $(".chzn-select").chosen();
+                                    $(".chzn-select").trigger("liszt:updated");
+                                },
+                                error: function() {
+                                    console.log('系统错误,请稍后重试');
+                                }
+                            });
+                        }
+                        if(data.status=="error"){
+                            $("#message_type").append("<option value='0'>没有区域</option>");
+                        }
+                    });
+
+
+
+                }
+                if(data.status=="error"){
+                    $("#citys").append("<option value='0'>没有市级</option>");
+                }
+            });
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

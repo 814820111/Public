@@ -1,0 +1,17 @@
+.top_box{ background-color:#06c18e; 
+	font-size:15px; 
+	font-family:"微软雅黑 Light"; 
+	font-weight: 600;
+	line-height:38px; color:white; 
+	text-align:center;
+	width: 100%;
+	position: fixed;top: 0px;
+}
+.top_box img{ width:10px; 
+	position:absolute;top:10px;left:10px;}
+
+a{
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}

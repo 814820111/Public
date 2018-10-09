@@ -1,0 +1,304 @@
+<admintpl file="header" />
+<style>
+	.wraps {
+		width: 120px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	
+	.chzn-container-single .chzn-single {
+		position: relative;
+		top: 12px;
+		height: 29px;
+	}
+	
+	.mohu {
+		width: 100px;
+		position: relative;
+		bottom: 30px;
+		left: 30px;
+		background-color: whitesmoke;
+	}
+</style>
+
+<body class="J_scroll_fixed">
+	<div class="wrap J_check_wrap">
+		<ul class="nav nav-tabs">
+			<li >
+				<a href="{:U('Student/index',get_condition_cache($only_code))}">学生信息管理</a>
+			</li>
+
+			<li class="active">
+				<a href="{:U('Student /excel_list')}" target="_self">查看导入数据</a>
+			</li>
+		</ul>
+		<form class="well form-search" method="get" action="{:U('excel_list')}">
+			<div class="search_type cc mb10">
+				<div class="mb10">
+					<span class="mr20">
+				         
+				          <label class="stu-select-label">日期:</label>
+                            <input type="date" name="begin" class="stu-select-inputlist" style="width: 206px;height: 30px;padding: 4px 6px;" id="time" >- <input type="date" name="end" class="stu-select-inputlist" style="width: 206px;height: 30px;padding: 4px 6px;" id="time" >
+                            
+						<!-- 时间：
+						<input type="text" name="start_time" class="J_date" value="{$formget.start_time|default=''}" style="width: 80px;" autocomplete="off">- -->
+						<!-- <input type="text" class="J_date" name="end_time" value="{$formget.end_time}" style="width: 80px;" autocomplete="off"> &nbsp; &nbsp; -->
+						<span style="position: relative;left: 40px;">
+                        <a class="btn btn-danger" href="{:U('Student/index')}">清空</a>
+						<input type="submit" class="btn btn-primary" value="搜索" />
+					
+						</span> 
+					</span>
+				</div>
+			</div>
+		</form>
+		<form class="J_ajaxForm" action="" method="post">
+			<div class="table-actions">
+				<!-- 				<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:U('Student/listorders')}">排序</button> -->
+				<!-- <button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:U('Stuent/check',array('check'=>1))}" data-subcheck="true">审核</button>
+				<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:U('Stuent/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button> -->
+			</div>
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th align='center'><input    type="checkbox" name="" id="checkall"  onclick="checkfk()" size="10">全选</th>
+						<th>文件名称</th>
+						<th>上传时间</th>
+						<th>导入状态</th>
+						<th>查看信息</th>
+						<th align='center'>操作</th>
+					</tr>
+				</thead>
+				<foreach name="excel" item="vo">
+					<tr>
+						<td><input type="checkbox" class="J_check" id='sel_all' name="ids[]" value="{$vo.id}" title="id:{$vo.id}"></td>
+						<td>{$vo.filename}</td>
+		
+						<td>{$vo.time|date="Y-m-d H:i:s",###}</td>
+						<!--<td>{$vo.classname}</td>-->
+						<td>
+						 <if condition="$vo['status'] eq 0">
+					     已全部导入
+                          <elseif condition="$vo['status'] eq 1" />
+                          待处理
+						 </if>
+						</td>
+						<td style="width: 120px; " >
+						<div style="width: 120px; 
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;" title="{$vo.pro}">{$vo.pro}</div>
+						</td>
+
+						<td>
+							
+							<a href="{:U('Student/student_delete',array('term'=>empty($term['term_id'])?'':$term['term_id'],'id'=>$vo['id']))}" class="J_ajax_del">删除</a>
+						</td>
+					</tr>
+				</foreach>
+				<!-- <tfoot>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>
+						<th width="50">排序</th>
+						<th>标题</th>
+						<th>栏目</th>
+						<th width="50">点击量</th>
+						<th width="50">评论量</th>
+						<th width="50">关键字</th>
+						<th width="50">来源</th>
+						<th width="50">摘要</th>
+						<th width="50">缩略图</th>
+						<th width="80">发布人</th>
+						<th width="70">发布时间</th>
+						<th width="50">状态</th>
+						<th width="60">操作</th>
+					</tr>
+				</tfoot> -->
+			</table>
+			<div class="pagination">{$Page}</div>
+
+		</form>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script src="__ROOT__/statics/chosen/chosen.jquery.js"></script>
+	<script>
+		$(function() {
+			$("[data-toggle='tooltip']").tooltip();
+		});
+
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if(refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.J_articles_move').click(
+					function(e) {
+						var str = 0;
+						var id = tag = '';
+						$("input[name='ids[]']").each(function() {
+							if($(this).attr('checked')) {
+								str = 1;
+								id += tag + $(this).val();
+								tag = ',';
+							}
+						});
+						if(str == 0) {
+							art.dialog.through({
+								id: 'error',
+								icon: 'error',
+								content: '您没有勾选信息，无法进行操作！',
+								cancelVal: '关闭',
+								cancel: true
+							});
+							return false;
+						}
+						var $this = $(this);
+						art.dialog.open(
+							"__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids=" +
+							id, {
+								title: "批量移动",
+								width: "80%"
+							});
+					});
+			});
+		});
+		$(".select_3").click(function() {
+			$(".jiu").hide();
+			$.ajax({
+				type: "post",
+				url: '__ROOT__/index.php/?g=Admin&m=Student&a=chadi',
+				async: true,
+				data: {
+					type: 3
+				},
+				dataType: 'json',
+				success: function(res) {
+					var html = "";
+					res = eval(res.data);
+					for(var i = 0; i < res.length; i++) {
+						var name = res[i].name; //地区的名字；
+						var term_id = res[i].term_id; //地区的ID
+						html += '<option class="jiu"value="' + term_id + '">' + name + ' </option> '
+					}
+					$(".select_3").append(html);
+				},
+				error: function() {
+					console.log('系统错误,请稍后重试');
+				}
+			});
+		})
+
+		$("#viewOLanguage").chosen();
+		$("#viewOLanguage").trigger("liszt:updated");
+		//学校的点击事件
+
+		$(".select_3").change(function() {
+			var type = $(".select_3  option:selected").val();
+			$.ajax({
+				type: "post",
+				url: '__ROOT__/index.php/?g=Admin&m=SchoolManage&a=lookup',
+				async: true,
+				data: {
+					type: type
+				},
+				dataType: 'json',
+				success: function(res) {
+					$(".Sio").text("")
+					var html = "";
+					res = eval(res.data);
+					for(var i = 0; i < res.length; i++) {
+						var school_name = res[i].school_name; //学校的名字
+						var schoolid = res[i].schoolid; //学校的ID
+						html += '<option class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+					}
+					$(".chzn-select").append(html)
+					$("#viewOLanguage").chosen();
+					$("#viewOLanguage").trigger("liszt:updated");
+				},
+				error: function() {
+					console.log('系统错误,请稍后重试');
+				}
+			});
+		})
+		$(".btn-primary").click(function() {
+
+			var xuan = $(".mohu option:selected").val();
+			var zhi = $(".zhi").val();
+			var type = $(".select_3  option:selected").val();
+			var typeschool = $(".chzn-select  option:selected").val();
+			var isSuccess = 1;
+			if(zhi == "") {
+				if(xuan != 0) {
+					var isSuccess = 0;
+					alert("在选好条件在输入框中输入你要找的数据类型");
+
+				}
+			}
+			if(xuan == 0) {
+				if(zhi != "") {
+					var isSuccess = 0;
+					alert("请选择你要搜索的查询类型")
+				}
+			}
+			if(zhi == "" && xuan == 0) {
+				if(type == 0) {
+					alert("请选择地区");
+					var isSuccess = 0;
+				}
+				if(typeschool == "") {
+					var isSuccess = 0;
+					alert("请选择学校");
+				}
+			}
+			if(isSuccess == 0) {
+				return false;
+			}
+		})
+		
+		$(".daochu").click(function(){
+			var xuan = $(".mohu option:selected").val();
+			var zhi = $(".zhi").val();
+			var type = $(".select_3  option:selected").val();
+			var typeschool = $(".chzn-select  option:selected").val();
+			var isSuccess = 1;
+			if(zhi == "") {
+				if(xuan != 0) {
+					var isSuccess = 0;
+					alert("在选好条件在输入框中输入你要找的数据类型");
+
+				}
+			}
+			if(xuan == 0) {
+				if(zhi != "") {
+					var isSuccess = 0;
+					alert("请选择你要搜索的查询类型")
+				}
+			}
+			if(zhi == "" && xuan == 0) {
+				if(type == 0) {
+					alert("请选择地区");
+					var isSuccess = 0;
+				}
+				if(typeschool == "") {
+					var isSuccess = 0;
+					alert("请选择学校");
+				}
+			}
+			if(isSuccess==1){
+               location.href="{:U('Student/Lexcel')}?schoold="+typeschool+"&tiaojian="+xuan+"&shuzhi="+zhi+"" ;
+			}
+			
+		})
+	</script>
+</body>
+
+</html>

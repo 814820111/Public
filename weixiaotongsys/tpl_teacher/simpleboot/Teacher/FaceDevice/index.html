@@ -1,0 +1,169 @@
+<teachertpl file="header"/>
+<title>设备分配管理</title>
+<style>
+    .pagination {
+        display: inline-block;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+</style>
+<body>
+<ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:28px; list-style:none;">
+    <li class="active"><a href="{:U('FaceDevice/index')}" style="color:#1f1f1f;text-decoration: none;">设备管理</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="home">
+        <br/>
+        <form class="form-horizontal J_ajaxForm" action="{:u('FaceDevice/index')}" method="get" style="margin: 0px 0px 5px;">
+            <div class="search_type cc mb10">
+                <div class="mb10">
+                  <span class="mr20">
+                      设备分组：
+                       <select  class="select_2" name="groupid" style="width: auto;">
+                      	<option value="" >不选择</option>
+                       <foreach name="group" item="vo">
+                                <option value="{$vo.id}" <php> if($groupid == $vo[id]){echo "selected";}</php>>{$vo.name}</option>
+                            </foreach>
+                          </select>
+                      楼栋名称：
+                    <input type="text" value="{$buildname}" class="select_2" name="buildname" placeholder="-楼栋名称-" style="width:8%; height: 15px;border-width:1px;">
+
+                    设备名称：
+                    <input type="text" value="{$roomno}" class="select_2" name="roomno" placeholder="-设备名称-" style="width:8%; height: 15px;border-width:1px;">
+
+                   &nbsp;&nbsp;&nbsp;
+                      <button type="submit" class="btn btn-default" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;"> 查 询 </button>
+                       <a  class="btn btn-default" onclick="addRoom();" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;"> 添加寝室</a>
+                  </span>
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="J_ajaxForm" action="" method="post">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered table-list">
+                    <thead>
+                    <tr style="background-color:#e2e2e2;">
+                        <th style=" text-align: center; border-width: 0.5px; border-left: none"></th>
+                        <th style=" text-align: center; border-width: 0.5px; border-left: none">设备名称</th>
+                        <th style=" text-align: center; border-width: 0.5px; border-left: none">设备分组</th>
+                        <th style=" text-align: center; border-width: 0.5px; border-left: none">楼栋名称</th>
+                        <th style=" text-align: center; border-width: 0.5px; border-left: none">操作</th>
+                    </tr>
+                    </thead>
+                    <php>$i=1;</php>
+                    <foreach name="device" item="vo">
+                    <tr>
+                        <td style="text-align: center; border-left: none;border-top: none;"><php>echo $i++;</php></td>
+                        <td style="text-align: center; border-left: none;border-top: none">{$vo.name}</td>
+                        <td style="text-align: center; border-left: none;border-top: none">{$vo.tagname}</td>
+                        <td style="text-align: center; border-left: none;border-top: none"><php>if(empty($vo[buildname])){echo '未绑定';}else{echo $vo[buildname];}</php></td>
+                        <td style="text-align: center; border-left: none;border-top: none">
+                            <if condition="$vo['buildid'] eq 0 ">
+                                <a  style=" color:#00c1dd;" onclick="builddevice({$vo.id});" >添加绑定</a>
+                                <else/>
+                                添加绑定
+                            </if>
+                            |
+                            <if condition="$vo['buildid'] eq 0 ">
+                                取消绑定
+                                <else/>
+                                <a style=" color:#00c1dd;" class="del_device_btn" data-deviceid="{$vo.id}">取消绑定</a>
+                            </if>
+
+                        </td>
+                    </tr>
+                    </foreach>
+                </table>
+                <div class="pagination" style="position: relative;bottom: 35px;">{$Page}</div>
+            </div>
+        </form>
+    </div>
+    <div class="tab-pane fade" id="ios">
+    </div>
+</div>
+
+
+<script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="__ROOT__/statics/js/js/layui/css/layui.css" media="all">
+<script src="__ROOT__/statics/js/js/layui/layui.js"></script>
+
+<script>
+    layui.use(['layer'], function(){
+        var layer = layui.layer;
+    });
+
+
+    //取消绑定楼栋
+    $('.del_device_btn').click(function () {
+        var deviceid = $(this).attr('data-deviceid');
+
+        if (confirm("你确定要取消绑定吗?")) {
+            $.ajax({
+                url: "{:u('FaceDevice/del_device')}",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    deviceid: deviceid
+                },
+                success: function (data) {
+                    if ("success" == data.status) {
+                        layer.msg("取消绑定成功", {
+                            icon: 1
+                            , shade: false,
+                        });
+                        window.location.reload();
+                    } else {
+                        layer.msg(data.data);
+                    }
+                },
+                //请求失败
+                error: function () {
+                    layer.msg(e.message, {
+                        icon: 2
+                        , shade: false,
+                    });
+                }
+            });
+        }
+    })
+
+    //设备绑定楼栋
+    function builddevice(deviceid) {
+        layui.use(['layer'], function() {
+            var $ = layui.jquery,
+                layer = layui.layer;
+
+            var index = layer.open({
+                type: 2,
+                id	: 1,
+                title: '分配设备给宿舍',
+                btn: ['提交', '关闭'],
+                area: ['600px', '500px'],
+                offset : ['20px', '200px'],
+                maxmin: true,
+                content: "{:U('FaceDevice/buildlist')}?deviceid="+deviceid,
+                yes: function(index, layero) {
+                    var ibody = layer.getChildFrame('body', index);//获取iframe页面body
+                    var iframeWin = window[layero.find('iframe')[0]['name']];//获得iframe页的窗口对象
+                    //提交
+                    iframeWin.jy();
+                    return;
+                },
+                shade: 0.8,
+                shadeClose: true,
+                maxmin :true,
+                success: function(layero, index){
+                }
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

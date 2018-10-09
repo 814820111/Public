@@ -1,0 +1,529 @@
+[ 2018-08-31T08:42:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0380s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = 'root' LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2018-08-31T08:42:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_detail?id=1
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T08:51:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type_parent
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T08:51:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login_pc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0230s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = '13022682231' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wxt_duty_teacher` WHERE ( teacher_id=2433 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `schoolid` FROM `wxt_duty_teacher` WHERE ( teacher_id=2433 ) GROUP BY schoolid  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0270s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 26 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-08-31T08:51:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type_parent
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T08:51:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type_parent
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T08:52:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type_parent
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:00:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:07:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:08:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:08:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:08:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:12:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:12:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:12:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:12:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:13:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:13:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:13:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:13:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:13:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:14:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:14:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:14:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:14:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:14:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:15:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:15:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:15:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:15:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:16:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:17:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:22:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:26:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:26:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:26:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:26:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:29:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:30:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:38:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:38:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:39:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_type
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:45:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:45:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc id' at line 1
+
+[ 2018-08-31T09:45:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:46:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:47:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:48:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:48:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T09:49:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T10:43:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/add_student
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T10:43:18+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T10:43:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T10:43:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T11:25:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T16:11:43+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = 'root' LIMIT 1   [ RunTime:0.0190s ]
+
+[ 2018-08-31T16:11:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login_pc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = '13022682231' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wxt_duty_teacher` WHERE ( teacher_id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `schoolid` FROM `wxt_duty_teacher` WHERE ( teacher_id=2433 ) GROUP BY schoolid  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 26 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-08-31T16:24:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T16:24:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/big_class
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T16:25:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T16:25:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_detail?id=1
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T16:36:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/Illegality_detail?id=1
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T16:42:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = 'root' LIMIT 1   [ RunTime:0.0050s ]
+
+[ 2018-08-31T16:42:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = '13022682231' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-08-31T16:42:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login_pc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = '13022682231' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-08-31T16:42:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php?g=apps&m=Teacher&a=teacher_login_pc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_wxtuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`password` FROM `wxt_wxtuser` WHERE `phone` = '13022682231' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wxt_duty_teacher` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wxt_duty_teacher` WHERE ( teacher_id=2433 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `schoolid` FROM `wxt_duty_teacher` WHERE ( teacher_id=2433 ) GROUP BY schoolid  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_school` [ RunTime:0.0060s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `school_name` FROM `wxt_school` WHERE ( schoolid = 26 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-08-31T19:14:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/big_class
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T19:23:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Dormitory/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM wxt_dormitory_room room INNER JOIN wxt_school_class class ON class.id=room.' at line 1
+
+[ 2018-08-31T19:24:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Dormitory/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM wxt_dormitory_room room INNER JOIN wxt_school_class class ON class.id=room.' at line 1
+
+[ 2018-08-31T19:25:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Dormitory/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e FROM wxt_dormitory_room room INNER JOIN wxt_school_class class ON class.id=roo' at line 1
+
+[ 2018-08-31T19:47:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T19:56:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+
+[ 2018-08-31T19:57:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Apps/Illegality/index
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityStudentModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeDetailModel
+NOTIC: D方法实例化没找到模型类Common\Model\IllegalityTypeModel
+NOTIC: D方法实例化没找到模型类Common\Model\EducationTypeModel
+

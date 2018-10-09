@@ -1,0 +1,47 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href='{:U("semester",array("schoolid"=>$school_id))}'>学期列表</a></li>
+        <li class="active"><a href="{:U('addsubject')}">新增学期</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('addsemester_post')}">
+            <fieldset>
+
+
+
+                <div class="control-group">
+                    <label class="control-label">学期名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="semester" >
+                    </div>
+                </div>
+
+                 <div class="control-group">
+                    <label class="control-label">学期时间:</label>
+                    <div class="controls">
+                         <input type="date" name="begin" class="stu-select-inputlist"  id="time">-<input type="date" name="end" class="stu-select-inputlist"  id="time">
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

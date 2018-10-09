@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__public/css/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__public/css/product presentation.css">
+    <title>智校园官网产品介绍</title>
+    <script src="__TMPL__public/js/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="__TMPL__public/img_page/img02.png">
+        <p><a href="">登录/注册</a></p>
+        <ul>
+            <li><a href="{:U('PageFirst/first')}">首页</a></li>
+            <li><a href="{:U('PageFirst/product_presentation')}" style=" color:#06c18e;">产品介绍</a></li>
+            <li><a href="{:U('PageFirst/down')}">下载中心</a></li>
+            <li><a href="">校园门户</a></li>
+            <li><a href="{:U('PageFirst/join_us')}">加盟合作</a></li>
+            <li><a href="{:U('PageFirst/about_us')}">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <img src="__TMPL__public/img_page/img10.jpg">
+    </div>
+    <div class="qianse">
+        <div class="one">
+            <div class="left" style=" width: 222px;">
+                <div style=" position: relative;">
+                    <img src="__TMPL__public/img_page/img24.png">
+                    <div style="position: absolute;top: 40px;left: 11px; width: 200px; height: 354px; overflow: hidden;">
+                        <div style=" width: 1400px;" class="tuzu01">
+                            <div style="background-image: url(__TMPL__public/img_page/chengzhangriji.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/chengzhangdangan.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/jiazhangdingzhu.png); " class="picture"></div>
+                            <div style=" background-image: url(__TMPL__public/img_page/baobaokongjian.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/baobaohaoyou.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/xiangce.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/leyuan.png);" class="picture"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right txt" style=" overflow: hidden;">
+                <p class="big">快乐成长</p>
+                <ul class="top01">
+                    <li>
+                        <img src="__TMPL__public/img_page/img25.png">
+                        <p class="title">成长日记</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img26.png">
+                        <p class="title">成长档案</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img27.png">
+                        <p class="title">家长叮嘱</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img28.png">
+                        <p class="title">晨检</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img29.png">
+                        <p class="title">关注好友</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img30.png">
+                        <p class="title">班级相册</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img31.png">
+                        <p class="title">乐园</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui">
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="content_box">
+                    <div style=" float: left;" class="content">家长可以用文字、照片、视频等丰富的形式记录孩子的在园在家的每一个成长瞬间，见证孩子的成长足迹。</div>
+                    <div style=" float: left;" class="content">为孩子建立专属的成长档案，老师和家长共同记录，通过照片+评语，全面展示孩子的成长旅程，完成后可以保存为电子相册。</div>
+                    <div style=" float: left;" class="content">孩子忘记吃药怎么办？孩子咳嗽需要老师特别关注下怎么办，可以通过家长叮嘱下，让老师实时掌握孩子的特殊情况，让家长放心，让老师知心。</div>
+                    <div style=" float: left;" class="content">孩子的健康至关重要。家长可查看幼儿每日晨检和手足口情况，了解孩子的健康情况。</div>
+                    <div style=" float: left;" class="content">在学校孩子慢慢的有自己的朋友了，通过这里可以深入了解朋友的精彩瞬间，深入了解朋友的成长。</div>
+                    <div style=" float: left;" class="content">展示孩子在班级的精彩瞬间，记录在班级生活的动态，记录校园生活点滴。</div>
+                    <div style=" float: left;" class="content">让孩子在闲暇之余更方便的学习娱乐，营养食谱、睡前故事、育儿百科、亲子乐园能更好的解决家长在教育孩子方面的困惑。</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="shense">
+        <div class="two">
+            <div class="left txt" style=" overflow: hidden;">
+                <p class="big">家校沟通</p>
+                <ul class="top03">
+                    <li>
+                        <img src="__TMPL__public/img_page/img33.png">
+                        <p class="title03">通知公告</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui03">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img34.png">
+                        <p class="title03">学生点评</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui03">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img35.png">
+                        <p class="title03">待办事宜</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui03">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img36.png">
+                        <p class="title03">在线聊天</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui03">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img37.png">
+                        <p class="title03">信息群发</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui03">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img38.png">
+                        <p class="title03">班级作业</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui03">
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="content_box03">
+                    <div style=" float: left;" class="content">通知公告随时发送，通过信息推送实时到达；智能检测通知已读情况，未读家长可电话通知，保证信息传达100%高效。</div>
+                    <div style=" float: left;" class="content">教师一键处理孩子在校表现，减轻工作负担，家长能第一时间了解孩子在校表现情况，园长可自定义评语模板，更有评语库支持。</div>
+                    <div style=" float: left;" class="content">校园的简易办公OA让老师处理工作更加得心应手</div>
+                    <div style=" float: left;" class="content">畅所欲言，让家长老师跟方便的面对面沟通，让家长老师更加走心</div>
+                    <div style=" float: left;" class="content">最新信息随时发送，通过信息推送实时到达；智能检测通知已读情况，未读家长可电话通知，保证信息传达100%高效。</div>
+                    <div style=" float: left;" class="content">在孩子的教育中更离不开家长的参与。老师可通过图片、录音、文字等形式布置亲子任务或作业，可布置当天和未来一段时间的作业。</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="right" style=" width: 222px;">
+                <div style=" position: relative;">
+                    <img src="__TMPL__public/img_page/img24.png">
+                    <div style="position: absolute;top: 40px;left: 11px; width: 200px; height: 354px; overflow: hidden;">
+                        <div style=" width: 1400px;" class="tuzu03">
+                            <div style="background-image: url(__TMPL__public/img_page/tongzhigonggao.png);" class="picture"></div>
+                            <div style=" background-image: url(__TMPL__public/img_page/dianping.png);" class="picture"></div>
+                            <div style="  background-image: url(__TMPL__public/img_page/daibanshixiang.png);" class="picture"></div>
+                            <div style=" background-image: url(__TMPL__public/img_page/liaotian.png);" class="picture"></div>
+                            <div style=" background-image: url(__TMPL__public/img_page/xinxiqunfa.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/zuoye.png)" class="picture"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="qianse">
+        <div class="one">
+            <div class="left" style=" width: 222px;">
+                <div style=" position: relative;">
+                    <img src="__TMPL__public/img_page/img24.png">
+                    <div style="position: absolute;top: 40px;left: 11px; width: 200px; height: 354px; overflow: hidden;">
+                        <div style=" width: 1400px;" class="tuzu02">
+                            <div style="background-image: url(__TMPL__public/img_page/zaixianqingjia.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/qiandao.png);" class="picture"></div>
+                            <div style="float:left;background-image: url(__TMPL__public/img_page/baobaoshipin.png);" class="picture"></div>
+                            <div style=" background-image: url(__TMPL__public/img_page/shuakashezhi.png);" class="picture"></div>
+                            <div style="float:left;background-image: url(__TMPL__public/img_page/daijiequeren.png);" class="picture"></div>
+                            <div style="float:left;background-image: url(__TMPL__public/img_page/wodejiaren.png);" class="picture"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right txt" style=" overflow: hidden;">
+                <p class="big">安全管理</p>
+                <ul class="top02">
+                    <li>
+                        <img src="__TMPL__public/img_page/img40.png">
+                        <p class="title02">在线请假</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui02">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img41.png">
+                        <p class="title02">考勤打卡</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui02">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img42.png">
+                        <p class="title02">视频监控</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui02">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img43.png">
+                        <p class="title02">刷卡设置</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui02">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img44.png">
+                        <p class="title02">代接确认</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui02">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img45.png">
+                        <p class="title02">我的家庭</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui02">
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="content_box02">
+                    <div style=" float: left;" class="content">家长可通过手机请假，请假信息第一时间发送到老师手机端，老师可及时回复批假情况，实现无纸化办公。</div>
+                    <div style=" float: left;" class="content">幼儿入园、离园刷卡时，智能设备抓拍接送人照片推送到家长和老师手机，确保幼儿安全。全园师生考勤情况智能统计，园长可设置教职工打卡时间。</div>
+                    <div style=" float: left;" class="content">视频可部署在校园门口、操场、教室和厨房，高清视频录制，可通过微信在线观看，可自定义分时段查看，“透明厨房”、“公开课”让家长更放心</div>
+                    <div style=" float: left;" class="content">可以上传经常接送孩子的家人的头像，让接送更安全</div>
+                    <div style=" float: left;" class="content">没时间去学校接孩子？又担心孩子被陌生人接走？通过代接确认非常方便了解决了这个后顾之忧，通过拍照+文字得到双方确认后，孩子才能安全的离校。</div>
+                    <div style=" float: left;" class="content">一个学生支持多位家属账号绑定，家长可在手机添加其他家属，共同关注孩子的安全、教育和成长情况，建立一个以孩子为中心的家庭圈。</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+
+    <div class="shense">
+        <div class="two">
+            <div class="left txt" style=" overflow: hidden;">
+                <p class="big">微网站</p>
+                <ul class="top04">
+                    <li>
+                        <img src="__TMPL__public/img_page/img47.png">
+                        <p class="title04">入学报名</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui04">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img48.png">
+                        <p class="title04">教师风采</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui04">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img49.png">
+                        <p class="title04">宝宝秀场</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui04">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img50.png">
+                        <p class="title04">校园招聘</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui04">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img51.png">
+                        <p class="title04">园长信箱</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui04">
+                    </li>
+                    <li>
+                        <img src="__TMPL__public/img_page/img52.png">
+                        <p class="title04">园所介绍</p>
+                        <img src="__TMPL__public/img_page/water.png" class="shui04">
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="content_box04">
+                    <div style=" float: left;" class="content">校园的招生计划宣传，可填写信息在线报名，信息采集收录更便利！</div>
+                    <div style=" float: left;" class="content">展示老师的精彩面貌，让更多的家长了解学校的师资力量。</div>
+                    <div style=" float: left;" class="content">展示孩子在学校的精彩瞬间。</div>
+                    <div style=" float: left;" class="content">口碑转发，可以让更多的人加盟</div>
+                    <div style=" float: left;" class="content">家长和游客可给园长发私信，支持公开信和匿名信。</div>
+                    <div style=" float: left;" class="content">校园的品牌宣传窗口，图文并茂，展示园所风采。</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="right" style=" width: 222px;">
+                <div style=" position: relative;">
+                    <img src="__TMPL__public/img_page/img24.png">
+                    <div style="position: absolute;top: 40px;left: 11px; width: 200px; height: 354px; overflow: hidden;">
+                        <div style=" width: 1400px;" class="tuzu04">
+                            <div style="background-image: url(__TMPL__public/img_page/ruxuebaoming.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/jiaoshifengcai.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/baobaoxiuchang.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/xiaoyuanzhaopin.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/yuanzhangxinxiang.png);" class="picture"></div>
+                            <div style="background-image: url(__TMPL__public/img_page/yuanqujieshao.png);" class="picture"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="three">
+        <img src="__TMPL__public/img_page/img11.jpg">
+        <p class="text-justify" style=" text-indent:2em;">42寸高清大屏互动智能机提供智能分区展示、视频监控、广告、拍照、签到、多媒体播放等一体化能力，刷卡同时拍照图像，有助园所理清接送责任， 存储刷卡数据，同时提供清晰响亮的读卡语音播报，多功能大屏机具备集成体温枪和身高体重测试等高智能设备的能力，自定义程度高，用户体验好， 在当前幼教产品中绝无仅有。
+        </p>
+    </div>
+    <div class="footer">
+        <p>|温州韵途科技有限公司|智校园官方网站|
+            <br>浙ICP备16026974号-1 Copyright©2016 yuntu Inc. All Rights Reserved .
+            <br>温州韵途科技有限公司版权所有
+            <br>加盟热线:000-000-0000</p>
+    </div>
+    <script>
+        $(".top01 li").mouseenter(
+            function() {
+                var tindex01 = $(this).index()
+                $(".tuzu01").stop().animate({
+                    marginLeft: -200 * tindex01
+                }, 800)
+                $(".content_box").stop().animate({
+                    marginLeft: -out_width * tindex01
+                }, 800)
+                $(this).children(".title").css("color", "#06c18e").parent().siblings().children(".title").css("color", "black")
+                $(this).children(".shui").show().parent().siblings().children(".shui").hide()
+            }
+        )
+    </script>
+    <script>
+        $(".top02 li").mouseenter(
+            function() {
+                var tindex01 = $(this).index()
+                $(".tuzu02").stop().animate({
+                    marginLeft: -200 * tindex01
+                }, 800)
+                $(".content_box02").stop().animate({
+                    marginLeft: -out_width * tindex01
+                }, 800)
+                $(this).children(".title02").css("color", "#06c18e").parent().siblings().children(".title02").css("color", "black")
+                $(this).children(".shui02").show().parent().siblings().children(".shui02").hide()
+            }
+        )
+    </script>
+    <script>
+        $(".top03 li").mouseenter(
+            function() {
+                var tindex01 = $(this).index()
+                $(".tuzu03").stop().animate({
+                    marginLeft: -200 * tindex01
+                }, 800)
+                $(".content_box03").stop().animate({
+                    marginLeft: -out_width * tindex01
+                }, 800)
+                $(this).children(".title03").css("color", "#06c18e").parent().siblings().children(".title03").css("color", "black")
+                $(this).children(".shui03").show().parent().siblings().children(".shui03").hide()
+            }
+        )
+    </script>
+    <script>
+        $(".top04 li").mouseenter(
+            function() {
+                var tindex01 = $(this).index()
+                $(".tuzu04").stop().animate({
+                    marginLeft: -200 * tindex01
+                }, 800)
+                $(".content_box04").stop().animate({
+                    marginLeft: -out_width * tindex01
+                }, 800)
+                $(this).children(".title04").css("color", "#06c18e").parent().siblings().children(".title04").css("color", "black")
+                $(this).children(".shui04").show().parent().siblings().children(".shui04").hide()
+            }
+        )
+    </script>
+    <script>
+        out_width = $(".txt").width()
+        $(".content_box").width(out_width * 7)
+        $(".content_box02").width(out_width * 6)
+        $(".content_box03").width(out_width * 6)
+        $(".content_box04").width(out_width * 6)
+        $(".content").width(out_width)
+    </script>
+
+</body>
+
+</html>

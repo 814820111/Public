@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑 Light";
+}
+.clearfix{
+	clear: both;
+}
+.woshi{
+  font-size: 16px;
+  text-align: center;
+}
+.woshi .laoshi{
+  color:gray;
+  padding:6px 0 6px 0;
+  width: 32%;
+  float: right;
+  margin-right: 9%;
+}
+.woshi .jiazhang{
+  padding:6px 0 6px 0;
+  margin-left: 9%;
+  width: 32%;
+  float: left;
+  color: #06c08e;
+  border-bottom: 2px solid #06c08e;
+}
+.fenge{
+  height: 6px;
+  width: 100%;
+  background-color: #eeeef2;
+  margin-bottom: -5px;
+}
+.touxiang{
+	position: relative;
+	font-size: 13px;
+	padding:15px 14%;
+	text-align: center;
+}
+.touxiang .left{
+	float: left;
+}
+.touxiang img{
+	display: block;
+	width: 70px;
+}
+.touxiang .center{
+	position: absolute;
+	top: 42px;
+	right: 42.5%;
+}
+.touxiang .center img{
+	width: 50px;
+}
+.touxiang .right{
+	float: right;
+}
+form{
+	text-align: center;
+	/*border: 1px solid red;*/
+	font-size: 14px;
+	margin: 0px 15% 0 8%;
+}
+form .word{
+	display: inline;
+	text-align: right;
+	width: 75px;
+}
+form input{
+	margin-top: 20px;
+	width: 150px;
+}
+form select{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-top: 20px;
+	width: 154px;
+}
+.lianxi{
+/*	width: 254px;
+	text-align: right;*/
+	font-size: 9px;
+}
+.lianxi img{
+	width: 11px;
+}

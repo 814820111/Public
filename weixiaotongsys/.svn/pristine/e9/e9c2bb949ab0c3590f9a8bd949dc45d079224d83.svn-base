@@ -1,0 +1,2459 @@
+  <!doctype html>
+  <html>
+  <head>
+  <style>
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>信息1</title>
+  <link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+  <link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="__ROOT__/statics/js/jquery-3.1.0.min (1).js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+  <script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+  <script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+  <link rel="stylesheet" href="__ROOT__/statics/bootstrap/css/bootstrap.css">
+  <link href="__ROOT__/statics//css/fileinput_message.css" media="all" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="__ROOT__/statics/js/jquery-3.1.0.min (1).js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/jquery.min.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/bootstrap.min.js"></script>
+   <script src="__ROOT__/statics/js/layer/layer.js" type="text/javascript"></script>
+  <script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+  <script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+      <script src="__ROOT__/statics/js/laydate.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="__ROOT__/statics/js/laydate.css">
+   <link rel="stylesheet" href="__ROOT__/statics/js/dahong/laydate.css">
+  <style type="text/css">
+  *{ font-size:14px;}
+  .col-auto { overflow: auto; _zoom: 1;_float: left;}
+  .col-right { float: right; width: 30%; overflow: hidden;}
+  .table th, .table td {vertical-align: middle;}
+  .picList li{margin-bottom: 5px;}
+  .clearfix{ clear:both;}
+
+  .xuan03,.xuan03a{ display:none;}
+  .quanlei{ display:block;}
+
+  </style>
+  <link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet" />
+    <link href="__ROOT__/statics/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/bootstrap_message.css">
+    <style>
+    .length_3{width: 180px;}
+    form .input-order{margin-bottom: 0px;padding:3px;width:40px;}
+    .table-actions{margin-top: 5px; margin-bottom: 5px;padding:0px;}
+    .table-list{margin-bottom: 0px;}
+          img{
+    margin-right: 10px;
+        margin-bottom: 5px;
+  }
+  </style>
+  <style type="text/css">
+  *{ font-size:14px;}
+  .col-auto { overflow: auto; _zoom: 1;_float: left;}
+  .col-right { float: right; width: 30%; overflow: hidden;}
+  .table th, .table td {vertical-align: middle;}
+  .picList li{margin-bottom: 5px;}
+  .clearfix{ clear:both;}
+  .xuan03,.xuan03a,.xuan03b{ display:none;}
+  .quanlei{ display:block;}
+  #home{width: 500px;}
+
+  </style>
+  </head>
+  <body >
+  <div>
+      <ul id="myTab" class="nav nav-tabs" style=" margin-left:30px; margin-top:20px;">
+          <li ><a href="{:U('index')}" style="color:#1f1f1f">通知公告</a></li>
+          <li><a href="{:U('lists')}" style="color:#1f1f1f">公告列表</a></li>
+          <li  class="active"><a href="{:U('list_info')}" style="color:#1f1f1f">个性公告</a></li>
+      </ul>
+      <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active zong" id="home" style="width:45%; margin-right:auto; ">
+              <br/>
+
+
+    <div>
+
+      <!--弹窗start-->
+      <div style="   width:100%; height:730px; z-index:2;" class="tan">
+                  <div id="myTabContent" class="tab-content" style=" background-color:white;width:1200px; margin-left:auto; margin-right:auto; margin-top:40px; margin-bottom:40px;">
+          <div class="tab-pane fade in active" id="home" style="width:1650px; margin-left:2%; margin-top:-4%;">
+          
+              <br/>
+              <form class="form-horizontal J_ajaxForm" action="{:u('Notice/message_self')}" method="post" name="else_form" onsubmit="return check_else()">
+                  <input type="hidden" name="button_level" value="1">
+                  <div class="form-group" style=" width:508px; float:left;">
+                  <label  style=" margin-top:3px; padding-left:4%;padding-right:0;"><div style="width: 41px; display: inline-block; margin-left: 5px;"><span >标题:</span></div><input type="text" class="bt" name="title"  style="    width: 419px;
+    margin-left: 20px;  "></label><br><br><br> 
+                      <div class="col-sm-6" style=" width:523px;  padding-left:30px;     margin-top: -28px;">
+                              <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                                   <li class="active"><a href="#messages" data-toggle="tab"  style="color:#1f1f1f; ">统一填写内容</a></li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade in active" id="messages" style=" border:1px solid #e8e8e8; bacground-color:#c9c9c9;">
+                                      <textarea name="message_content"  class="message_content" rows="3" cols="" placeholder="填写统一内容" style="width: 100%; height: auto;resize:none; border:none; padding:0;" class="muban2"></textarea>
+                                     
+                                  </div>
+                                  <div class="clearfix"></div>
+                              </div> 
+                              <div class="clearfix"></div>
+                      </div>
+                      <div class="clearfix"></div>
+                  <!--发送人start-->
+                  <!--发送对象-->
+                  <div style=" margin-top:10px; padding-left:30px; height:200px; overflow-y:scroll;">
+                     <div class="txt_main">
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center; line-height:20px; display:none;">是否发送</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:20px;background-color: #c9c9c9;">发送对象</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; line-height:20px;background-color: #c9c9c9;">发送内容</div>
+                          <div class="clearfix"></div>
+                     
+                     </div>
+                     <volist name="stu" id="vo">
+                     <div>
+                        
+                          <div style=" float:left; border:1px solid #d8dfea; width:100px; text-align:center;height:64px; padding-top:32; display:none;">
+                              <input type="checkbox" name="user[]" value="{$key}" checked>
+                          </div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:150px; text-align:center; line-height:62px;">{$vo}</div>
+                          <div style=" float:left; border:1px solid #d8dfea; width:450px; text-align:center; height: 64px;padding:5px;">
+                              <textarea name="self[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value="{$key}"></textarea>
+                          </div>
+                          <div class="clearfix"></div>
+                     </div>
+                     </volist>
+                      
+                  </div>
+                  <!--发送人end-->
+                  <div class="" id="failspass02" style=" margin-left: 30px; margin-top: 10px;"></div>
+                  <!--上传start-->
+                  <div class="form-group" style=" margin-bottom:10px; margin-top:20px; margin-left:0px;">
+                    <label class="col-sm-2" style=" margin-top:3px; padding-left:8%;padding-right:0; width:135px">上传图片：</label>
+                    <div  style=" width: 543px; margin-left: 141px;"><input type='hidden' name='smeta[thumb]' id='thumb2' value=''>
+                       <div style=" width: 300px;">
+                        <a id="pic" style="  " href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb2',thumb_images,'4,jpg|jpeg|gif|png|bmp,4,,,4','','&max_count=0','');return false;">
+
+                            <img src='__ROOT__/statics/images/icon/upload-pic.png' id='thumb2_preview' width='80' height='60' style='cursor:hand' />
+                            </a>
+                        <!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+                          <input type="button" class="btn" onclick="$('#thumb2_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#pic').find('img').remove(); $('#pic').append('<img src=__ROOT__/statics/images/icon/upload-pic.png id=thumb2_preview width=80 height=60 style=cursor:hand />'); $('#thumb2').val('');return false;" value="取消图片" style=" padding:5px 8px 5px 8px; font-size:14px;">
+                         </div>
+                       
+                    </div>
+                  </div>            
+                 <!--上传end-->
+                                  <!--发送模式start-->
+                      <div>
+                          <label class="col-sm-2" for="name" style="display:block; padding-left:2%;padding-right:0; width:160px; margin-left: 31px;">发送模式：</label>
+                          <div class="col-sm-10" style="width:580px; margin-bottom:20px;margin-left:140px;     margin-top: -39px;">
+                          <!--先将定时关闭-->
+                       <!--        <div class="row visible-on">
+                                  <label class="checkbox-inline">
+                                      <input type="checkbox" name="optionsRadiosinline" id="optionsRadios2">&nbsp;&nbsp;定时发送
+                                       <input type="text" class="laydate-icon" name="option_time" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" placeholder="-输入时间-" style="width:140px;">
+                                  </label>
+                              </div> -->
+                              <div class="row visible-on">
+                                  <label class="checkbox-inline">
+                                      <input type="checkbox" name="sned_self" value="1">&nbsp;&nbsp;同时发送给自己
+                                  </label>
+                                  <label class="checkbox-inline">
+                                      <input type="checkbox" name="" value="">&nbsp;&nbsp;消息前增加家长称呼
+                                  </label><br>
+                                  <label class="checkbox-inline">
+                                      <input type="checkbox" name="user_name">&nbsp;&nbsp;消息内容后加老师名
+                                      <input type="text" placeholder="-输入姓名-" style="width:74px;">
+                                  </label>
+                              </div>
+                              <div class="row visible-on">
+                                  <label class="checkbox-inline">
+                                      <input type="checkbox" name="wechat" value="2">&nbsp;&nbsp;微信推送<a href="https://hao.360.cn/" style="color:#ff9800;"> 如何绑定？ </a>
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="clearfix"></div>
+                      </div>
+                  <!--发送模式end-->
+                  <div class="form-group" style=" margin-top:-55px;">
+                      <div class="col-sm-offset-2 col-sm-10" >
+                           <input type=button name="submit1" value=" &nbsp;发&nbsp;&nbsp; 送&nbsp;" onclick="check_else(this.form)" style="border:none;color:#FFF; background-color:#26a69a; float:left; margin-right:70px; line-height: 30px; border-radius: 5px;"> 
+                          <button type="reset" class="btn btn-default rest" style="border:none;;color:#FFF; background-color:#adadad"> &nbsp;重 &nbsp;置&nbsp; </button>
+                      </div>
+                  </div>   
+              </div>
+                  
+          <div class="" style=" width:400px; float:right; margin-left:50px;">
+            <div class="table_full" style=" ">
+              <table class="table table-bordered" >
+                <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                     <li class="active"><a href="#teachers" data-toggle="tab"  style="color:#1f1f1f">信息模板啊</a></li>
+                     <!-- <li><a href="#class_id" data-toggle="tab"  style="color:#1f1f1f">保存为模板</a></li> -->
+                </ul>
+                  <tr>
+                    <td>
+                      <div class="tab-content" id="myTabContent">
+                      <!--个人-->
+                          <div class="tab-pane fade in active" id="teachers">
+                               <div class="clearfix"></div>
+                               <div style=" height:400px; overflow-y:scroll;">
+                                  <foreach name="note" item="no">
+                                      <div class="muban" style="  border:2px solid #d7ebfa; float:left; width:90%; padding-left:5px; margin-bottom:5px; margin-left:2%; cursor:pointer;">{$no.content}</div>
+                                  </foreach>
+                               </div>
+                               <div class="clearfix"></div>
+                          </div>                         
+                      </div>
+                     </td>
+                  </tr> 
+        </table>
+      </div>
+    </div>
+    <!--关闭按钮start-->
+  
+    <div class="clearfix"></div>
+      <!--关闭按钮end-->
+              </form>
+              <div class="clearfix"></div>
+          </div>
+          
+      <div class="tab-pane fade" id="ios">
+          <p>更换</p>
+      </div>
+     </div>
+  </div>
+       <!--弹窗end-->
+      
+       <!-- </form> -->
+          
+      <div class="tab-pane fade" id="ios">
+          <p>更换</p>
+      </div>
+      </div>
+  </div>
+  
+
+
+    <!--左边学生班级学生信息-->
+        <form  action="{:u('message_send')}" method="post" name="myform" style="    margin-bottom: 50px;
+    position: absolute;
+    top: 95px;
+    left: 577px;
+    botton: 50px;
+    /* left: 153px; */
+    right: 77px;
+    width: 376px;">
+          <div class="col-left">
+            <div class="table_full" style=" ">
+              <table class="table table-bordered" >
+                <ul id="myTab" class="nav nav-tabs" style=" border-bottom:none;">
+                     <li class="active"><a href="#teacherss" data-toggle="tab"  style="color:#1f1f1f">老师</a></li>
+                     <li><a href="#class_id" data-toggle="tab"  style="color:#1f1f1f">班级</a></li>
+                    <li><a href="#group" data-toggle="tab"  style="color:#1f1f1f">分组</a></li>
+                     <li><a href="#message" data-toggle="tab"  style="color:#1f1f1f">评语内容</a></li>
+                  </ul>
+                  </ul>
+                  <tr>
+                    <td>
+                      <div class="tab-content" id="myTabContent">
+                      <!--个人-->
+                         <div class="tab-pane fade in active geren" id="teacherss">
+                                 <div class="clearfix"></div>
+                           <div style=" overflow-y:scroll; height: 410px; " class="gekuang">
+                              <span    class="glyphicon glyphicon-triangle-right tea_dian" style="position: relative;  float:left;cursor:pointer; margin-top: 2px;"></span> 
+                                 <div class="xuan08a" style="  width:30%;margin-left: 13px; padding-left:5px; margin-bottom:5px;  cursor:pointer;" >
+                                      <input class="xuan08" type="hidden" class="J_check_all" data-direction="x" data-checklist="J_check_x" id="school_teacher" name="school_teacher" 
+                                       style=" margin-right:5px; display:none;">全校老师
+                                  </div>
+                           <div  class="stu_main" style="width: 139px; margin-left: 22px; display: none;">
+                              <foreach name="teacher" item="tl">
+                                  <!-- <div class="xuan01a" style="border:2px solid #d7ebfa; float:left; width:30%; padding-left:5px; margin-bottom:5px; margin-left:2%; cursor:pointer;" >
+                                          <input class="xuan05a" type="hidden" class="J_check_all" data-checklist="J_check_x" id="tl" name="tea[]" value="{$tl.id}" style=" margin-right:5px; display: none;">{$tl.name}
+                                  </div>  -->
+
+                                  <span class="xuan01a" teacher-id='0'style="cursor:pointer;"><input type="checkbox" class="tea_t" style=" vertical-align: -2px;><input type="hidden" class="stu_id" name="tea[]" value="{$tl.id}"><span style="font-size:12px;">{$tl.name}</span><br></span>
+                             </foreach>
+                             </div>
+                           </div> 
+                          <div class="clearfix"></div>
+                   <!--         <div class="quxiao01" style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan02a">
+                              <input name="checkall" type="checkbox" id="checkall" value="checkbox" onclick="change(document.getElementsByName('tea[]'), this.checked)" style=" margin-left:3px; display:none;"/>
+                              <span>取消全选</span>
+                           </div>
+                           <div  style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan01a">
+                              <span>全选</span>
+                           </div> -->
+                         </div>
+                          <!--班级-->
+                          <div class="tab-pane fade banji" id="class_id"> 
+                               <div class="clearfix"></div>
+                              
+                              <div style=" ">
+                               <div style=" float:left; overflow-y:scroll;width: 100%; height: 410px;" class="bankuang">
+                                   <foreach name="class" item="cl">
+                                   <span   data-id="{$cl.id}"  class="
+glyphicon glyphicon-triangle-right dian" style="position: relative;  float:left;cursor:pointer; margin-top: 2px;"></span> 
+<div class="xuan02a" style="  width:30%; padding-left:5px;   margin-left: 13px; cursor:pointer;" >
+                                          <input class="xuan06" type="hidden" data-checklist="J_check_x" id="tl" name="classid[]" value="{$cl.id}" style=" margin-right:5px; display: none;">{$cl.classname}
+                                  </div>
+                                  <div  class="stu_main" style="width: 220px; margin-left: 22px;display: none">
+                                    
+                               
+                                  </div>
+
+                                    
+                             </foreach>
+                               </div>
+                               <div class="clearfix"></div>
+                       <!--         <div class="quxiao02" style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan02">
+                                   <input name="checkall" type="checkbox" id="checkall" value="checkbox" onclick="change(document.getElementsByName('cla[]'), this.checked)" style=" margin-left:3px; display:none;"/>
+                                   <span>取消全选</span>
+                               </div>
+                               <div  style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan03">
+                                    <span>全选</span>
+                                </div> -->
+                            </div>  
+                          </div>
+                              <!--分組-->
+                          <div class="tab-pane fade xuexiao" id="group">
+                            <!--<label class="" for="name" style=" float:left; margin-top:8px;">班级：</label>-->
+                               <div class="clearfix"></div>
+                              <div style=" ">
+                               <div style=" float:left;overflow-y:scroll; width:100%; height: 410px;" class="xuekuang">
+                                   <span   data-id="{$cl.id}"  class="
+glyphicon glyphicon-triangle-right tea_group" style="position: relative;  float:left;cursor:pointer; margin-top: 2px;"></span> 
+                                  <div class="xuan09a" style="  width:30%; padding-left:5px; margin-bottom:5px; margin-left:3%; cursor:pointer;" >
+                                      <input class="xuan09" type="hidden" class="J_check_all" data-direction="x" data-checklist="J_check_x" value="0" id="school_student" name="teacher_group" value="student" style=" margin-right:5px; display:none;">教师组
+                                  </div>
+                                  <div  class="stu_main" style=" margin-left: 9px;  display: none;">
+                                    <foreach name="tea_group" item="vo">
+                                     <span   data-id="{$vo.id}"  class="
+glyphicon glyphicon-triangle-right tea_group_m" style="position: relative;  float:left;cursor:pointer; margin-top: 5px; font-size: 10px;"></span>
+                                    <span class="tea_set" tea-g-id='{$vo.id}' style="cursor:pointer;"><input type="checkbox" class="tea_g" style=" vertical-align: -2px;><input type="hidden" class="tea_g_id" name="tea_g[]" value="{$vo.id}"><span style="font-size:12px;">{$vo.name}</span><br></span>
+                                    <div  class="stu_main" style="margin-left: 22px;   display: none;"></div>
+                                    </foreach>
+                                  </div>
+                                    <span   data-id="{$cl.id}"  class="
+glyphicon glyphicon-triangle-right stu_group" style="position: relative;  float:left;cursor:pointer; margin-top: 2px;"></span> 
+                                  <div class="xuan10a" style="  width:30%; padding-left:5px; margin-bottom:5px; margin-left:3%; cursor:pointer;"  >
+                                      <input class="xuan10" type="hidden" class="J_check_all" data-direction="x" data-checklist="J_check_x" id="school_teacher" name="student_group" style=" margin-right:5px; display:none;">学生组
+                                  </div>
+                                  <div  class="stu_main" style=" margin-left: 9px;  display: none;">
+                                    <foreach name="stu_group" item="vo">
+                                     <span   data-id="{$vo.id}"  class="
+glyphicon glyphicon-triangle-right stu_group_m" style="position: relative;  float:left;cursor:pointer; margin-top: 5px; font-size: 10px;"></span>
+                                    <span class="stu_set" tea-g-id='{$vo.id}' style="cursor:pointer;"><input type="checkbox" class="stu_g" style=" vertical-align: -2px;><input type="hidden" class="tea_g_id" name="stu_g[]" value="{$vo.id}"><span style="font-size:12px;">{$vo.name}</span><br></span>
+                                    <div  class="stu_main" style="margin-left: 22px;   display: none;"></div>
+                                    </foreach>
+                                  </div>
+                              </div>
+                               <div class="clearfix"></div>
+                               
+                          <!--      <div onClick=this.children[0].click(); style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan02b">
+                                  <input name="checkall" type="checkbox" id="checkall" value="checkbox" onclick="change(document.getElementsByName('cla[]'), this.checked)" style=" margin-left:3px; display:none;"/>
+                                  <span>取消全选</span>
+                               </div>
+                               <div  style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan03b">
+                                   <span>全选</span>
+                                </div> -->
+                            </div>  
+                          </div>
+                         
+                             <!--信息模板-->
+
+                           <div class="tab-pane fade xuexiao" id="message">
+                            <!--<label class="" for="name" style=" float:left; margin-top:8px;">班级：</label>-->
+                               <div class="clearfix"></div>
+                              <div style=" ">
+                               <div style=" float:left;overflow-y:scroll; width:100%;" class="xuekuang">
+                         
+                                   <span   data-id="{$cl.id}"  class="
+glyphicon glyphicon-triangle-right tea_dian" style="position: relative;  float:left;cursor:pointer; margin-top: 2px;"></span> 
+                                  <div class="xuan08a" style="  border:2px solid #d7ebfa; float:left; width:30%; padding-left:5px; margin-bottom:5px;  cursor:pointer;" >
+                                      <input class="xuan08" type="hidden" class="J_check_all" data-direction="x" data-checklist="J_check_x" id="school_teacher" name="school_teacher" 
+                                       style=" margin-right:5px; display:none;">信息模板
+                                  </div>
+                              </div>
+                               <div class="clearfix"></div>
+                               
+                               <div onClick=this.children[0].click(); style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan02b">
+                                  <input name="checkall" type="checkbox" id="checkall" value="checkbox" onclick="change(document.getElementsByName('cla[]'), this.checked)" style=" margin-left:3px; display:none;"/>
+                                  <span>取消全选</span>
+                               </div>
+                               <div  style=" border:1px solid #ABA9A9; text-align:center; float:right;  padding:2px 5px 2px 5px; border-radius:5px; font-size:14px; width:70px; cursor:pointer; margin-top:5px; margin-right:20px;" class="quan03b">
+                                   <span>全选</span>
+                                </div>
+                            </div>  
+                          </div>
+                          <!--end-->
+
+
+
+                             <div class="clearfix"></div>
+                             <div style=" border:1px solid #dddddd; margin-bottom:10px; margin-top:5px;"></div>
+               
+                              <div class="clearfix"></div>
+                             </div>
+                    </td>
+                  </tr> 
+              </table>
+            </div>
+                      <div class="" id="failspass" style=" width:720px; padding:0;"></div>
+                      <div class="clearfix"></div>
+                      <div class="form-group" style=" float:right;">
+                          <div class="col-sm-offset-2 col-sm-10" style="">
+                              
+                          </div>
+                      </div> 
+                 <div class="clearfix"></div>
+                </div>
+          </form>
+          
+      <div class="tab-pane fade" id="ios">
+          <p>更换</p>
+      </div>
+  </div>
+  <div id="YWaitDialog"   
+    style="background-color: #e0e0e0;   
+    position: absolute;   
+    margin: auto;   
+    top: 150px;   
+    left: 300px;   
+    display: none;   
+    height: 60px;   
+    width: 300px;">  
+    <p style="text-align: center; vertical-align: central;">  
+        请等待，正在查询数据  <img src="~/Content/images/img_y/dialog_icon/YWaitDialogIcon2.gif" />  
+    </p>  
+</div> 
+
+
+  
+  </div>
+
+
+  
+  
+  <script type="text/javascript" src="js/datetime.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+  <script type="text/javascript">
+
+  $(function() {  
+        var userAgent = window.navigator.userAgent.toLowerCase();  
+        var version = $.browser.version;  
+        // alert(version);
+
+        if (version=='9.0' || version=='8.0' || version=='7.0' || version=='6.0') {
+          alert('您的浏览器版本过低，请升级浏览器或更换浏览器！否则将无法使用信息群发功能。');
+
+        }
+        // alert(userAgent);
+    });  
+  
+ 
+//老师分组
+$('.tea_group').click(function(){
+
+   var groupid = $(this).attr('data-id');
+   
+   var tea_set = $('body').find(".tea_set").find('.tea_g'); 
+   console.log(tea_set);
+
+   var teacher_group  = $('body').find('.teacher_group');
+
+  console.log(teacher_group.length);
+  
+  if(teacher_group.length > 0)
+  {
+    tea_set.attr('checked',true);
+  }
+
+  if($(this).next().next().css('display') == "none")
+  { 
+     
+    
+    
+    $(this).attr('class','glyphicon glyphicon-triangle-bottom');
+    $(this).next().next().show();
+
+  }else{
+
+          $(this).next().next().slideUp(1000);
+      $(this).attr('class','glyphicon glyphicon-triangle-right');
+          }
+})
+
+//学生分组展开
+$('.stu_group').click(function(){
+
+   var groupid = $(this).attr('data-id');
+   
+   var tea_set = $('body').find(".stu_set").find('.stu_g'); 
+
+
+   var teacher_group  = $('body').find('.student_group');
+
+  
+  if(teacher_group.length > 0)
+  {
+    tea_set.attr('checked',true);
+  }
+
+  if($(this).next().next().css('display') == "none")
+  { 
+     
+    
+    
+    $(this).attr('class','glyphicon glyphicon-triangle-bottom');
+    $(this).next().next().show();
+
+  }else{
+
+          $(this).next().next().slideUp(1000);
+      $(this).attr('class','glyphicon glyphicon-triangle-right');
+          }
+})
+
+
+
+
+//选择教师组
+$('.xuan09a').click(function(){
+      
+    $('body').find(".tea_set").find('.tea_g').attr('checked',true);
+
+    $('body').find('.txt_main').find('.tea_set').remove();
+
+    $('body').find('.xuan01a').find('.group_t').attr('checked',true);
+      var name =  $(this).text();
+         console.log(name);
+
+        var na = $("body").find(".txt_main").text();
+   
+        // console.log(na);
+         id =   $(this).find('.xuan09').val();
+         // console.log(name);
+       // console.log(id); 
+        obj = $("body").find(".txt_main");
+        console.log(obj);
+
+
+        var indesr = na.indexOf(name);
+
+   
+   if(indesr < 0){
+        // obj.prepend('<span class="teacher_group" style="border:2px solid #01AAED; margin-right:5px;"><input type="hidden" name="teacher_group" value="15">'+name+' <i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;bottom: 3px; cursor: pointer;"></i></span>');
+
+        obj.append('<div class="teacher_group" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="teacher_group" value=15>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="teacher_group_txt" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".teacher_group").fadeIn(200);
+      }else{
+        alert('xxxx');
+        return
+      }
+})
+
+
+
+//选择学生组
+$('.xuan10a').click(function(){
+      
+    $('body').find(".stu_set").find('.stu_g').attr('checked',true);
+
+    $('body').find('.txt_main').find('.stu_set').remove();
+
+    $('body').find('.xuan01a').find('.group_s').attr('checked',true);
+      var name =  $(this).text();
+         console.log(name);
+
+        var na = $("body").find(".txt_main").text();
+   
+        // console.log(na);
+         id =   $(this).find('.xuan10').val();
+         // console.log(name);
+       // console.log(id); 
+        obj = $("body").find(".txt_main");
+        console.log(obj);
+
+
+        var indesr = na.indexOf(name);
+
+   
+   if(indesr < 0){
+        // obj.prepend('<span class="teacher_group" style="border:2px solid #01AAED; margin-right:5px;"><input type="hidden" name="teacher_group" value="15">'+name+' <i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;bottom: 3px; cursor: pointer;"></i></span>');
+
+        obj.append('<div class="student_group" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="student_group" value=15>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="student_group_txt" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;  bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".student_group").fadeIn(200);
+      }else{
+        alert('已存在!');
+        return
+      }
+})
+
+
+
+
+//点击教师分组
+
+$('.tea_g').click(function(){
+  
+   var fx = $(this).attr("checked");
+
+   var name =  $(this).parent().text();
+   
+   var na = $("body").find(".txt_main").text();
+
+   id =   $(this).parent().find('.tea_g_id').val();
+   console.log(id);
+
+   var obj = $("body").find(".txt_main");
+
+   var indesr = na.indexOf(name);
+
+   tea_g_l = $(this).parent().parent().find('.tea_set');
+  
+
+   var tea_check  = $('body').find('.tea_g')
+   // console.log(tea_check);
+   
+   var group_t = $(this).find('.group_t');
+
+  var tea =$('body').find('.tea');
+
+   if (fx) {
+  
+         for (var j = 0; j < tea.length; j++) {
+            if(tea.eq(j).attr('group-id')==id)
+            {
+              tea.eq(j).remove();
+            }
+         }
+
+     
+
+     $(this).parent().next().find('.group_t').attr('checked',true)
+
+
+     if(indesr < 0){
+ 
+
+        obj.append('<div class="tea_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_s" name="tea_set[]" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".tea_set").fadeIn(200);
+
+      }else{
+
+        alert('xxxx');
+        return
+      }
+ 
+
+  n = 0;
+       for(i=0;i<tea_check.length;i++){
+         if(tea_check[i].checked)
+            n++;
+    }
+ 
+     if (tea_g_l.length==n)
+     { 
+
+       $('body').find('.txt_main').find('.tea_set').remove();
+      obj.append('<div class="teacher_group" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="teacher_group" value=15>教师组</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="teacher_group_txt" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".teacher_group").fadeIn(200);
+     }
+
+  }else{
+ 
+   $(this).parent().next().find('.group_t').removeAttr('checked')
+
+   $('body').find('.txt_main').find('.tea_set').remove();
+  
+   $('body').find('.teacher_group').remove();    
+ 
+  //获取框内的总数据
+  var tea_obj = $('body').find('.txt_main').find('.tea_set')    
+
+  console.log(tea_obj);
+
+
+  console.log(tea_obj.length);
+
+   for(var i = 0; i < tea_obj.length; i++)
+     {   
+
+         console.log(tea_obj.eq(i).find('.tea_s').val());
+         if(tea_obj.eq(i).find('.tea_s').val()==id)
+         {
+           tea_obj.eq(i).remove();
+         } 
+         
+       
+     }
+  
+
+   
+   
+    
+    for (var j = 0; j < tea_g_l.length; j++)
+    {
+        if(tea_g_l.eq(j).find('.tea_g').attr('checked'))
+      {   
+
+         obj.append('<div class="tea_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_s" name="tea_set[]" value='+tea_g_l.eq(j).find('.tea_g_id').val()+'>'+tea_g_l.eq(j).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".tea_set").fadeIn(200);
+
+
+      }       
+      
+    }
+
+      
+ }
+
+})
+
+//点击学生分组
+$('.stu_g').click(function(){
+  
+   var fx = $(this).attr("checked");
+
+   var name =  $(this).parent().text();
+   
+   var na = $("body").find(".txt_main").text();
+
+   id =   $(this).parent().find('.tea_g_id').val();
+   console.log(id);
+
+   var obj = $("body").find(".txt_main");
+
+   var indesr = na.indexOf(name);
+
+   tea_g_l = $(this).parent().parent().find('.stu_set');
+  
+
+   var tea_check  = $('body').find('.stu_g')
+   // console.log(tea_check);
+   
+   var group_t = $(this).find('.group_s');
+
+  var tea =$('body').find('.stu');
+
+   if (fx) {
+  
+         for (var j = 0; j < tea.length; j++) {
+            if(tea.eq(j).attr('group-id')==id)
+            {
+              tea.eq(j).remove();
+            }
+         }
+
+     
+
+     $(this).parent().next().find('.group_s').attr('checked',true)
+
+
+     if(indesr < 0){
+ 
+
+        obj.append('<div class="stu_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="stu_s" name="stu_set[]" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".stu_set").fadeIn(200);
+
+      }else{
+
+        alert('xxxx');
+        return
+      }
+ 
+
+  n = 0;
+       for(i=0;i<tea_check.length;i++){
+         if(tea_check[i].checked)
+            n++;
+    }
+ 
+     if (tea_g_l.length==n)
+     { 
+
+       $('body').find('.txt_main').find('.stu_set').remove();
+      obj.append('<div class="student_group" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="student_group" value=15>学生组</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="student_group_txt" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".student_group").fadeIn(200);
+     }
+
+  }else{
+ 
+   $(this).parent().next().find('.group_s').removeAttr('checked')
+
+   $('body').find('.txt_main').find('.stu_set').remove();
+  
+   $('body').find('.student_group').remove();    
+ 
+  //获取框内的总数据
+  var tea_obj = $('body').find('.txt_main').find('.stu_set')    
+
+  console.log(tea_obj);
+
+
+  console.log(tea_obj.length);
+
+   for(var i = 0; i < tea_obj.length; i++)
+     {   
+
+         console.log(tea_obj.eq(i).find('.stu_s').val());
+         if(tea_obj.eq(i).find('.stu_s').val()==id)
+         {
+           tea_obj.eq(i).remove();
+         } 
+         
+       
+     }
+  
+
+   
+   
+    
+    for (var j = 0; j < tea_g_l.length; j++)
+    {
+        if(tea_g_l.eq(j).find('.stu_g').attr('checked'))
+      {   
+
+         obj.append('<div class="stu_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="stu_s" name="stu_set[]" value='+tea_g_l.eq(j).find('.tea_g_id').val()+'>'+tea_g_l.eq(j).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".stu_set").fadeIn(200);
+
+
+      }       
+      
+    }
+
+      
+ }
+
+})
+//end
+
+
+
+
+
+
+
+
+
+$('.tea_group_m').click(function(){
+
+ var groupid = $(this).attr('data-id');
+
+ var re = $(this).next().next();
+ 
+ var show = $(this).next().next()
+
+ var check = $(this).next().find('.tea_g').attr('checked');
+ console.log(check);
+
+    if($(this).next().next().css('display') == "none")
+  {
+    $(this).attr('class','glyphicon glyphicon-triangle-bottom');
+  
+   var len = $(this).next().next().find('.xuan01a');
+      show.show();  //需要整改
+
+       if(len.length==0)
+     {
+       show_tea_group(groupid,re,show,check)
+     }else{
+      show.show();
+     }
+
+  }else{
+
+          $(this).next().next().slideUp(1000);
+      $(this).attr('class','glyphicon glyphicon-triangle-right');
+          }
+})
+
+
+  function show_tea_group(groupid,re,show,check)
+          {
+             layer.load();
+            $.ajax({
+                type:'get',
+                url: "{:U('Teacher/MessageInfo/tea_group')}",
+                dataType:'json',
+                data: {
+            'groupid': groupid
+          },
+                success:function(data){
+                     console.log(data);
+                    if(data.status){
+                       setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                   show.show();
+
+                   if(check){
+
+                       for (var i = 0; i < data.msg.length; i++) {
+                        re.append('<span class="xuan01a" style="cursor:pointer; "><input type="checkbox" class="group_t" checked style=" vertical-align: -2px;><input type="hidden" class="stu_id" name="tea[]" value='+data["msg"][i]["id"]+'><span style="font-size:12px; padding-right: 5px;">'+data["msg"][i]["name"]+'</span><span style="font-size:12px;">'+data['msg'][i]['phone']+'</span><br></span>');
+                       }
+                     }else{
+                       for (var i = 0; i < data.msg.length; i++) {
+                        re.append('<span class="xuan01a" style="cursor:pointer; "><input type="checkbox" class="group_t" style=" vertical-align: -2px;><input type="hidden" class="stu_id" name="tea[]" value='+data["msg"][i]["id"]+'><span style="font-size:12px; padding-right: 5px;">'+data["msg"][i]["name"]+'</span><span style="font-size:12px;">'+data['msg'][i]['phone']+'</span><br></span>');
+                       }
+                     }
+                        
+                    }else{
+                             setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                    }
+                },
+
+                //请求失败
+                error:function(){
+                   alert('请求失败')
+                }
+            })
+       }
+
+
+$('.stu_group_m').click(function(){
+  
+  console.log('asdas');
+ var groupid = $(this).attr('data-id');
+ console.log(groupid);
+
+ var re = $(this).next().next();
+ 
+ var show = $(this).next().next()
+
+ var check = $(this).next().find('.stu_g').attr('checked');
+ console.log(check);
+
+    if($(this).next().next().css('display') == "none")
+  {
+    $(this).attr('class','glyphicon glyphicon-triangle-bottom');
+  
+   var len = $(this).next().next().find('.xuan01a');
+
+       if(len.length==0)
+     {
+       show_stu_group(groupid,re,show,check)
+     }else{
+      show.show();
+     }
+
+  }else{
+
+          $(this).next().next().slideUp(1000);
+      $(this).attr('class','glyphicon glyphicon-triangle-right');
+          }
+})
+
+
+  function show_stu_group(groupid,re,show,check)
+          {
+             layer.load();
+            $.ajax({
+                type:'get',
+                url: "{:U('Teacher/MessageInfo/stu_group')}",
+                dataType:'json',
+                data: {
+            'groupid': groupid
+          },
+                success:function(data){
+                     console.log(data);
+                    if(data.status){
+                       setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                   show.show();
+
+                   if(check){
+
+                       for (var i = 0; i < data.msg.length; i++) {
+                        re.append('<span class="xuan01a" style="cursor:pointer; "><input type="checkbox" class="group_s" checked style=" vertical-align: -2px;><input type="hidden" class="stu_id" name="student[]" value='+data["msg"][i]["id"]+'><span style="font-size:12px; padding-right: 5px;">'+data["msg"][i]["name"]+'</span><span style="font-size:12px;">'+data['msg'][i]['phone']+'</span><br></span>');
+                       }
+                     }else{
+                       for (var i = 0; i < data.msg.length; i++) {
+                        re.append('<span class="xuan01a" style="cursor:pointer; "><input type="checkbox" class="group_s" style=" vertical-align: -2px;><input type="hidden" class="stu_id" name="student[]" value='+data["msg"][i]["id"]+'><span style="font-size:12px; padding-right: 5px;">'+data["msg"][i]["name"]+'</span><span style="font-size:12px;">'+data['msg'][i]['phone']+'</span><br></span>');
+                       }
+                     }
+                        
+                    }else{
+                              setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                    }
+                },
+
+                //请求失败
+                error:function(){
+                   alert('请求失败')
+                }
+            })
+       }
+
+
+
+
+//分組老師點擊
+
+ $(document).on('click', '.group_t', function(){
+   
+    var fx = $(this).attr("checked");
+
+   var name =  $(this).next().next().text();
+   console.log(name);
+   
+   var na = $("body").find(".txt_main").text();
+   console.log(na);
+
+   var id = $(this).val();
+
+    var obj = $("body").find(".txt_main");
+   
+    tea_l = $(this).parent().parent().find('.xuan01a');
+
+
+    var tea_set = $('body').find('.stu_main').find('.tea_set');
+
+    var tea_g = $('body').find('.stu_main').find('.tea_set').find('.tea_g');
+    console.log(tea_set);
+
+    var tea_check  = $(this).parent().parent().find('.xuan01a').find('.group_t')
+
+    var group_name = $(this).parent().parent().prev().text();
+    
+
+    groupid = $(this).parent().parent().prev().attr('tea-g-id');
+   
+
+    var indesr = na.indexOf(name);
+
+    if(fx)
+    {
+      if(indesr < 0){
+
+        // obj.prepend('<span class="tea" group-id='+groupid+' style="border:2px solid #01AAED; margin-right:5px;"><input type="hidden" name="teacherid[]" class="tea_1" value='+id+'>'+name+'<i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;bottom: 3px; cursor: pointer;"></i></span>');
+
+        obj.append('<div class="tea" group-id='+groupid+' style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_1" name="teacherid[]" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".tea").fadeIn(200);
+    
+
+      }else{
+      
+        alert('老师姓名已经存在!');
+         $(this).removeAttr('checked');
+    return;
+     }
+
+     n = 0;
+       for(i=0;i<tea_check.length;i++){
+         if(tea_check[i].checked)
+            n++;
+    }
+      
+    if(n==tea_l.length)
+    {
+      var tea = $('body').find('.tea');
+
+      
+        
+
+       obj.append('<div class="tea_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_s" name="tea_set[]" value='+groupid+'>'+group_name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".tea_set").fadeIn(200);
+        for (var j = 0; j < tea.length; j++) {
+           if(tea.attr('group-id')==groupid)
+           {
+
+            tea.remove();
+           }
+         }
+       $(this).parent().parent().prev().find('.tea_g').attr('checked',true);
+
+    }
+
+   j = 0;
+       for(k=0;k<tea_g.length;k++){
+         if(tea_g[k].checked)
+            j++;
+    }
+
+    if(j==tea_set.length)
+    {
+      obj.prepend('<span class="teacher_group" style="border:2px solid #01AAED; margin-right:5px;"><input type="hidden" name="teacher_group" value='+0+'>教师组<i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;bottom: 3px; cursor: pointer;"></i></span>');
+      $('body').find('.main').find('.tea_set').remove();
+    }
+
+    
+ console.log(j);
+
+      
+    }else{
+        
+
+         $(this).parent().parent().prev().find('.tea_g').removeAttr('checked')
+         $('body').find('.txt_main').find('.tea_set').remove();
+         $('body').find('.teacher_group').remove();
+        
+       var tea = $('body').find('.tea');
+
+
+       var tea_set = $('body').find('.tea_set');
+
+         var  tea_obj = $('body').find('.stu_main').find('.tea_set');
+         console.log(tea_obj);
+  
+
+       for(var i = 0; i < tea.length; i++)
+        {
+            console.log(tea.eq(i).find('.tea_1'));
+            if(tea.eq(i).find('.tea_1').val()==id)
+            {
+                tea.eq(i).remove();
+            }
+
+        }
+
+     
+     for (var j = 0; j < tea_l.length; j++) {
+        if(tea_l.eq(j).find('.group_t').attr('checked'))
+        {
+            
+          obj.append('<div class="tea" group-id='+groupid+' style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_1" name="teacherid[]" value='+tea_l.eq(j).find('.stu_id').val()+'>'+tea_l.eq(j).find('.stu_id').next().text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".tea").fadeIn(200);
+
+
+        }
+
+  
+
+     }
+       for (var k = 0; k < tea_set.length; k++) {
+            console.log(tea_set.eq(k).find('.tea_s').val());
+             if(tea_set.eq(k).find('.tea_s').val() == groupid)
+             {
+              tea_set.eq(k).remove();
+             }
+           }
+       
+
+    //将分组遍历到接收人中
+    for (var c = 0;  c < tea_obj.length; c++) {
+      if(tea_obj.eq(c).find('.tea_g').attr('checked'))
+      {
+       obj.append('<div class="tea_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_s" name="tea_set[]" value='+tea_obj.eq(c).find('.tea_g_id').val()+'>'+tea_obj.eq(c).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+        $(".tea_set").fadeIn(200);
+
+      }
+    }
+
+
+     //   tea_g_l.eq(j).find('.tea_g').attr('checked')
+
+    }
+
+
+ })
+
+
+
+//分组学生点击
+ $(document).on('click', '.group_s', function(){
+   
+    var fx = $(this).attr("checked");
+
+   var name =  $(this).next().text();
+   console.log(name);
+   
+   var na = $("body").find(".txt_main").text();
+   console.log(na);
+
+   var id = $(this).val();
+
+    var obj = $("body").find(".txt_main");
+   
+    tea_l = $(this).parent().parent().find('.xuan01a');
+
+
+    var tea_set = $('body').find('.stu_main').find('.stu_set');
+
+    var tea_g = $('body').find('.stu_main').find('.stu_set').find('.stu_g');
+ 
+
+    var tea_check  = $(this).parent().parent().find('.xuan01a').find('.group_s')
+
+    var group_name = $(this).parent().parent().prev().text();
+    
+
+    groupid = $(this).parent().parent().prev().attr('tea-g-id');
+   
+
+    var indesr = na.indexOf(name);
+
+    if(fx)
+    {
+      if(indesr < 0){
+
+        // obj.prepend('<span class="tea" group-id='+groupid+' style="border:2px solid #01AAED; margin-right:5px;"><input type="hidden" name="teacherid[]" class="tea_1" value='+id+'>'+name+'<i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;bottom: 3px; cursor: pointer;"></i></span>');
+
+        obj.append('<div class="stu" group-id='+groupid+' style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="stu_1" name="stu_id[]" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".stu").fadeIn(200);
+    
+
+      }else{
+      
+        alert('老师姓名已经存在!');
+         $(this).removeAttr('checked');
+    return;
+     }
+
+     n = 0;
+       for(i=0;i<tea_check.length;i++){
+         if(tea_check[i].checked)
+            n++;
+          console.log(n);
+    }
+      
+    if(n==tea_l.length)
+    {
+      var tea = $('body').find('.stu');
+
+      
+        
+
+       obj.append('<div class="stu_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="tea_s" name="stu_set[]" value='+groupid+'>'+group_name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+
+         $(".stu_set").fadeIn(200);
+
+        for (var j = 0; j < tea.length; j++) {
+           if(tea.attr('group-id')==groupid)
+           {
+
+            tea.remove();
+           }
+         }
+       $(this).parent().parent().prev().find('.stu_g').attr('checked',true);
+
+    }
+
+   j = 0;
+       for(k=0;k<tea_g.length;k++){
+         if(tea_g[k].checked)
+            j++;
+    }
+
+    if(j==tea_set.length)
+    {
+   
+        obj.append('<div class="student_group" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="teacher_group" value=15>学生组</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="teacher_group_txt" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+                 
+        $(".student_group").fadeIn(200);
+
+      $('body').find('.txt_main').find('.stu_set').remove();
+    }
+
+    
+
+
+      
+    }else{
+        
+
+         $(this).parent().parent().prev().find('.stu_g').removeAttr('checked')
+         $('body').find('.txt_main').find('.stu_set').remove();
+         $('body').find('.student_group').remove();
+        
+       var tea = $('body').find('.stu');
+
+
+       var tea_set = $('body').find('.stu_set');
+
+         var  tea_obj = $('body').find('.stu_main').find('.stu_set');
+         console.log(tea_obj);
+  
+
+       for(var i = 0; i < tea.length; i++)
+        {
+            console.log(tea.eq(i).find('.stu_1'));
+            if(tea.eq(i).find('.stu_1').val()==id)
+            {
+                tea.eq(i).remove();
+            }
+
+        }
+
+     
+     for (var j = 0; j < tea_l.length; j++) {
+        if(tea_l.eq(j).find('.group_s').attr('checked'))
+        {
+            
+          obj.append('<div class="stu" group-id='+groupid+' style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="stu_1" name="stu_id[]" value='+tea_l.eq(j).find('.stu_id').val()+'>'+tea_l.eq(j).find('.stu_id').next().text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         $(".stu").fadeIn(200);
+
+
+        }
+
+  
+
+     }
+       for (var k = 0; k < tea_set.length; k++) {
+            console.log(tea_set.eq(k).find('.stu_s').val());
+             if(tea_set.eq(k).find('.stu_s').val() == groupid)
+             {
+              tea_set.eq(k).remove();
+             }
+           }
+       
+
+    //将分组遍历到接收人中
+    for (var c = 0;  c < tea_obj.length; c++) {
+      if(tea_obj.eq(c).find('.stu_g').attr('checked'))
+      {
+       obj.append('<div class="stu_set" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="stu_s" name="stu_set[]" value='+tea_obj.eq(c).find('.tea_g_id').val()+'>'+tea_obj.eq(c).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_set_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+        $(".stu_set").fadeIn(200);
+
+      }
+    }
+
+
+     //   tea_g_l.eq(j).find('.tea_g').attr('checked')
+
+    }
+
+
+ })
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ //老师点击
+$('.tea_dian').click(function(){
+    
+    if($(this).next().next().css('display')== "none")
+    {
+            $(this).attr('class','glyphicon glyphicon-triangle-bottom');
+            $(this).next().next().show();
+    }else{
+      $(this).next().next().slideUp(1000);
+      $(this).attr('class','glyphicon glyphicon-triangle-right');
+    }
+  
+})
+
+
+
+
+
+
+  $('.test').click(function(){
+ 
+  var classid = $(this).val()
+
+  var fx = $(this).attr("checked");
+  // console.log(fx);
+
+ obj = $("body").find(".txt_main");
+
+   var name = $(this).siblings('.stu_name');
+   
+   var  stu = $('body').find('.studom');
+
+    console.log(name);
+    console.log(stu);
+    var class_obj =  $("body").find(".class");
+    // console.log(class_obj);
+  
+ if(fx){
+   
+
+
+for (var a = 0; a < stu.length; a++)
+   {
+     for(var b = 0; b < name.length; b++)
+     {   
+        // console.log(stu.eq(a));
+         if(stu.eq(a).find('.stu_id').val()==name.eq(b).find('.stu_id').val())
+         {
+          stu.eq(a).remove();
+         }
+     }
+   }
+
+
+
+
+
+
+   for(var i = 0; i < class_obj.length; i++)
+     {   
+         
+
+       for(var j = 0; j < name.length; j++){
+
+         console.log(class_obj.eq(i));
+         if(class_obj.eq(i).find('.class_id').val()==name.eq(j).attr('class-id'))
+         {
+           class_obj.eq(i).remove();
+         } 
+         
+       
+      }
+    
+    }
+
+  for(var c = 0; c < name.length; c++)
+     {
+     
+              
+              obj.append('<div class="studom"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="stu_id[]" value='+name.eq(c).find('.stu_id').val()+' class-id='+classid+' class="stu_id" >'+name.eq(c).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+
+       
+   
+      // '<div class="studom"  ><div style=" float:left; border:1px solid #d8dfea; width:150px; text-align:center; line-height:62px;"><input type="hidden" name="stu_id[]" value='+name.eq(c).find('.stu_id').val()+' class-id='+classid+' class="stu_id" >'+name.eq(c).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:450px; text-align:center; height: 64px;padding:5px;"><textarea  class="stu_txt" name="stu_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div></div>'
+       
+     }
+}else{
+   
+  for (var k = 0; k < stu.length; k++)
+  {
+
+      console.log(stu.eq(k).find('.stu_id').attr('class-id'));
+     if(stu.eq(k).find('.stu_id').attr('class-id')==classid)
+     {
+      stu.eq(k).remove();
+     }
+  }
+
+}
+
+  
+})
+
+
+
+
+$(document).on('click', '.dianji', function() {
+
+        $(this).parent().remove();
+      })
+
+
+
+
+
+
+ 
+  $('.dian').click(function(){
+ 
+   
+ var classid = $(this).attr('data-id');
+
+    var class_obj = $('body').find('.class');
+
+     
+
+     var re = $(this).next().next();
+     console.log(re);
+
+    if($(this).next().next().css('display')== "none")
+    {  
+        // $(this).next().next().find('.stu_name').remove();
+     
+       var len = $(this).next().next().find('.stu_name');
+       //console.log(len)
+
+
+        $(this).attr('class','glyphicon glyphicon-triangle-bottom');
+                                                                                  // glyphicon glyphicon-triangle-bottom
+      var show = $(this).next().next()
+        show.show();
+    if(len.length == 0)
+    {
+        showstu(classid,re,show)
+    }else{
+      show.show();
+    }
+    }else{
+      $(this).next().next().slideUp(1000);
+      $(this).attr('class','glyphicon glyphicon-triangle-right');
+  
+    }
+    
+    // showstu(classid)
+
+  })
+  function showstu(classid,re,show)
+          {
+            layer.load();
+            $.ajax({
+                type:'get',
+                url: "{:U('Teacher/MessageInfo/showstu')}",
+                dataType:'json',
+                // cache:true,
+                data: {
+            'classid': classid,
+          },
+                success:function(data){
+                     console.log(data);
+                    if(data.status){
+                   setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                  show.show();
+      var class_obj = $('body').find('.class');
+      console.log(class_obj.length);
+   if(class_obj.length > 0){
+    for(var k =0; k < class_obj.length; k++)
+    {  
+             console.log(class_obj.eq(k).find('.class_id'));
+       if(class_obj.eq(k).find('.class_id').val() == classid)
+       {
+        for(var i = 0; i < data.msg.length; i++)
+         {
+               
+            re.append('<span class="stu_name" class-id='+classid+' style="cursor:pointer;"><input type="checkbox" class="stu_u" style=" vertical-align: -2px;"  checked><input type="hidden" class="stu_id" name="student" value='+data["msg"][i]["userid"]+'><span style="font-size:12px; display: inline-block; width:60px">'+data["msg"][i]["name"]+'</span>&nbsp;&nbsp;<span>'+data['msg'][i]['phone']+'</span><br></span>');
+            
+               
+         }  
+         return;
+       }
+
+         
+      } 
+   }
+
+
+
+          for(var i = 0; i < data.msg.length; i++)
+         {
+               
+            re.append('<span class="stu_name" class-id='+classid+' style="cursor:pointer; "><input type="checkbox" class="stu_u" style=" vertical-align: -2px;"  ><input type="hidden" class="stu_id" name="student" value='+data["msg"][i]["userid"]+'><span style="font-size:12px; display: inline-block; width:60px">'+data["msg"][i]["name"]+'</span>&nbsp;&nbsp;<span>'+data['msg'][i]['phone']+'</span><br></span>');
+            
+               
+         }
+
+
+                      
+                    }else{
+                              setTimeout(function(){
+                      layer.closeAll('loading');
+                    });
+                    }
+                },
+                //请求失败
+                error:function(){
+                   alert('请求失败')
+                }
+            })
+              
+
+        }
+ 
+
+
+     $('.message_content').keyup(function(){
+         
+      var main = $(this).val();
+       console.log(main);
+      
+      var re_main = $("body").find('.txt_self');
+      console.log(re_main);
+
+            for(var i = 0; i < re_main.length; i++)
+           {
+            
+            
+                re_main.eq(i).val(main);
+        
+           
+           }
+
+     })
+   
+
+
+    function check(form) {
+        var ku01 = $(".kuang03").val()
+        if(ku01=='') {
+            $("#failspass01").html("<font color=red>*请填写发送内容</font>");
+            return false;
+        }
+        document.myform.submit();
+    }
+    function check_else(form) {
+        var tea = $("body").find('textarea[name="tea_txt[]"]');
+
+
+        var class_txt = $('body').find('textarea[name="class_txt[]"]');
+
+        var stu_txt = $('body').find('textarea[name="stu_txt[]"]');
+
+        var school_student = $('body').find('textarea[name="school_student"]');
+
+        var school_teacher = $('body').find('textarea[name="school_teacher"]');
+
+        var teacher_group = $('body').find('textarea[name="teacher_group_txt"]');
+        console.log(teacher_group);
+
+        var tea_set = $('body').find('textarea[name="tea_set_txt[]"]');
+
+        var student_group =  $('body').find('textarea[name="student_group_txt"]');
+
+        var stu_set = $('body').find('textarea[name="stu_set_txt[]"]');
+
+        var title = $('body').find('.bt').val();
+
+
+    
+        // var tea = $('.')
+       
+
+        if(tea.val()=='' || class_txt.val()=='' || school_student.val() == '' || school_teacher.val() == '' || stu_txt.val() == '' || teacher_group.val() == '' || tea_set.val() == '' || student_group.val() == '' || stu_set.val() == '') {
+            $("#failspass02").html("<font color=red>*请填写发送内容</font>");
+            return false;
+        }
+
+        if(tea.length == 0 && class_txt.length==0 && school_student.length == 0 && school_teacher.length == 0 && stu_txt.length == 0 && teacher_group.length == 0 && tea_set.length == 0 && student_group.length == 0 && stu_set.length == 0)
+        {
+          alert('发送列表不能为空!');
+          return false;
+        }
+        
+
+	    if(title == '')
+	   {
+	   	alert('标题不能为空!');
+	   	return false;
+	   }       
+     
+        document.else_form.submit();
+    }
+   
+    
+
+
+   //点击显示学生
+
+ $(document).on('click', '.stu_u', function() {
+      var name = $(this).next().next().text();
+      var fx = $(this).attr("checked");
+      
+
+      var classid = $(this).attr('class-id');
+
+
+      var stu_l = $(this).parent().parent().find('.stu_name');
+    
+      var checks  = $(this).parent().parent().find('.stu_name').find('.stu_u');
+
+     var classname = $(this).parent().parent().prev().text();
+
+     var classid = $(this).parent().parent().prev().find('.xuan06').val();   
+  
+      var id = $(this).next().val();
+
+       var na = $("body").find(".txt_main").text();
+
+
+      obj = $("body").find(".txt_main");
+
+var indesr = na.indexOf(name);
+
+      var class_obj =  $("body").find(".class");
+
+
+
+if(fx){
+
+    for(var i = 0; i < class_obj.length; i++)
+     {   
+
+         console.log(class_obj.eq(i));
+         if(class_obj.eq(i).find('.class_id').val()==classid)
+         {
+           class_obj.eq(i).remove();
+         } 
+         
+       
+     }
+
+   if(indesr < 0){
+
+      obj.append('<div class="studom"  ><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="stu_id[]" value='+id+' class-id='+classid+' class="stu_id" >'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+       }else{
+        alert('学生姓名已经存在!');
+        return;
+       } 
+  n = 0;
+    for(i=0;i<checks.length;i++){
+        if(checks[i].checked)
+            n++;
+    }
+
+  console.log(n);
+
+
+  if(n==stu_l.length)
+     { 
+         var stu = $('body').find('.studom');
+        
+         console.log(stu);
+         obj.append('<div class="class" style=" display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="classid[]" value='+classid+'>'+classname+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="class_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+       $(".class").fadeIn(200);
+
+        for( var j = 0; j < stu.length; j++)
+        {
+            if(stu.eq(j).find('.stu_id').attr('class-id') == classid)
+            {
+              stu.eq(j).remove();
+            }
+         
+          }
+
+          
+  }
+
+
+
+
+}else{
+   
+    var stu_obj = $('body').find('.studom');
+
+     for(var i = 0; i < class_obj.length; i++)
+     {   
+
+         //console.log(class_obj.eq(i));
+         if(class_obj.eq(i).find('.class_id').val()==classid)
+         {
+           class_obj.eq(i).remove();
+         } 
+         
+       
+     }
+   console.log(stu_obj);
+
+  
+  var stu_name = $('body').find('.stu_name');
+     console.log(stu_name);
+   for(var k = 0; k < stu_obj.length; k++)
+   {
+     console.log(stu_obj.eq(k).find('.stu_id').val());
+     if(stu_obj.eq(k).find('.stu_id').attr('class-id')==classid)
+     {
+        
+        stu_obj.eq(k).remove();
+     }
+     
+
+     if(stu_obj.eq(k).find('.stu_id').val()==id && stu_obj.eq(k).find('.stu_id').attr('class-id')==classid)
+     {
+        
+        stu_obj.eq(k).remove();
+     }
+   }
+   
+
+     for(var j = 0; j < stu_name.length; j++)
+     {  
+
+      if(stu_name.eq(j).attr('class-id')==classid && stu_name.eq(j).find('.stu_u').attr('checked'))
+      {   
+         obj.append('<div class="studom"  ><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="stu_id[]" value='+stu_name.eq(j).find('.stu_id').val()+' class-id='+classid+' class="stu_id" >'+stu_name.eq(j).find('.stu_id').next().text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="stu_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+      }
+    }
+
+
+
+
+}
+
+
+
+
+   })
+
+
+
+
+
+    //点击显示老師
+
+    $('.tea_t').click(function(){
+
+      var fx = $(this).attr("checked");
+      console.log(fx);
+         console.log('sdsd');
+        var name =  $(this).next().text();
+
+           tea_l = $(this).parent().parent().find('.xuan01a');
+       
+
+        var na = $("body").find(".txt_main").text();
+
+   var school_teacher = $(this).parent().parent().prev().text()
+        // console.log(na);
+         id =   $(this).val();
+         // console.log(name);
+
+          var checks_t  = $(this).parent().parent().find('.xuan01a').find('.tea_t');
+
+           var teacher = $('body').find('.school_teacher');
+       
+        obj = $("body").find(".txt_main");
+        // console.log(obj);
+
+   var indesr = na.indexOf(name);
+
+
+if(fx){
+
+
+
+   if(indesr < 0){
+
+        obj.append('<div class="selfdom"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="teacherid[]" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+      }else{
+        alert('老师姓名已经存在!');
+    return;
+      }
+
+    n = 0;
+    for(i=0;i<checks_t.length;i++){
+        if(checks_t[i].checked)
+            n++;
+         
+    }
+  
+  console.log(n);
+
+  if(n==tea_l.length)
+     {   
+  
+
+
+   var tea = $('body').find('.selfdom');
+   
+   tea.remove();
+
+        var teacher = $('body').find('.school_teacher');
+
+        // teacher.remove();
+
+
+         obj.append('<div class="school_teacher"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="school_teacherid" value='+0+'>'+school_teacher+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="school_teacher" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+
+         
+          
+    }
+
+
+  
+
+}else{
+   
+  var selfdom = $('body').find('.selfdom');
+
+for( var i = 0; i < selfdom.length; i++)
+       {
+         if(selfdom.eq(i).find('input').val()==id)
+         {
+          selfdom.eq(i).remove();
+         }
+       }
+
+
+}
+
+
+   for(var j = 0; j < tea_l.length; j++)
+        {  
+
+       if(tea_l.eq(j).find('.tea_t').attr('checked'))
+        {   
+          teacher.remove();
+             selfdom.remove();
+
+           obj.append('<div class="selfdom"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="teacherid[]" value='+tea_l.eq(j).find('.stu_id').val()+'>'+tea_l.eq(j).find('span').text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+         }
+
+         
+        }
+
+
+
+
+
+  })
+
+    $(document).on('click', '.dianji', function() {
+
+        $(this).parent().remove();
+      })
+
+
+    //点击个人全选
+
+    $('.quan01a').click(function(){
+      
+      se = $("body").find(".selfdom");
+
+     var na = $("body").find(".txt_main").text();
+
+     cbj = $("body").find(".xuan01a");
+      console.log(cbj);
+     se.remove();
+
+     obj = $("body").find(".txt_main");
+     // console.log(obj);
+ 
+      console.log(cbj.length)
+
+     for(var i = 0; i < cbj.length; i++)
+     {
+          
+       obj.append('<div class="selfdom"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="classid[]" value='+cbj.eq(i).find(".xuan05a").val()+'>'+cbj.eq(i).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="tea_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>')
+    
+       
+     }
+
+
+    })
+
+
+    //取消全选
+
+$('.quxiao01').click(function(){
+
+
+  $('body').find('.selfdom').remove();
+
+})
+
+
+//点击班级选中
+
+    $('.xuan02a').click(function(){
+        //console.log('sdsd');
+        
+
+       
+
+        var name =  $(this).text();
+    
+        var stu_obj = $("body").find('.studom');
+   
+        var na = $("body").find(".txt_main").text();
+
+
+      var stu_name = $(this).next().find('.stu_name');
+
+      for(var j = 0; j < stu_name.length; j++)
+        {
+          stu_name.eq(j).find('.stu_u').attr('checked',true);
+        }
+
+        console.log(na);
+         id =   $(this).find('.xuan06').val();
+         // console.log(name);
+       
+        obj = $("body").find(".txt_main");
+
+     var indesr = na.indexOf(name);
+
+    for(var i = 0; i < stu_obj.length; i++)
+     {   
+
+         console.log(stu_obj.eq(i));
+         if(stu_obj.eq(i).find('.stu_id').attr('class-id')==id)
+         {
+           stu_obj.eq(i).remove();
+         } 
+         
+       
+     }
+
+   if(indesr < 0){
+
+       obj.append('<div class="class" style="    display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" class="class_id" name="classid[]" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="class_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+       $(".class").fadeIn(200);
+      }else{
+        alert('班级已经存在!');
+    return;
+      }
+
+    })
+
+    $(document).on('click', '.dianji', function() {
+
+        $(this).parent().remove();
+      })
+
+   
+
+    //点击班级全选
+    $('.quan03').click(function(){
+      
+      se = $("body").find(".class");
+
+      var na = $("body").find(".main").text();
+
+     cbj = $("body").find(".xuan02a");
+     console.log(cbj);
+     se.remove();
+
+     obj = $("body").find(".txt_main");
+     console.log(obj);
+ 
+     
+
+     for(var i = 0; i < cbj.length; i++)
+     {
+     
+               obj.append('<div class="class" style="    display: none;"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="classid[]" value='+cbj.eq(i).find(".xuan06").val()+'>'+cbj.eq(i).text()+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="class_txt[]" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>')
+               $(".class").fadeIn(200);
+     }
+
+
+    });
+
+
+
+$('.quxiao02').click(function(){
+
+
+  $('body').find('.class').remove();
+
+})
+
+    //点击全校学生
+
+    $('.xuan07a').click(function(){
+         
+         $('body').find('.studom').remove();
+        
+         $('body').find('.class').remove();
+
+        var name =  $(this).text();
+        console.log(name);
+
+        var na = $("body").find(".txt_main").text();
+
+        console.log(na);
+         id =   $(this).find('.xuan07').val();
+         // console.log(name);
+       console.log(id); 
+        obj = $("body").find(".txt_main");
+
+
+        var indesr = na.indexOf(name);
+
+   if(indesr < 0){
+
+  
+
+
+obj.append('<div class="selfdom"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="school_studentid" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="school_student" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+
+
+
+      }else{
+        alert('全校学生已经存在!');
+    return;
+      }
+
+    })
+
+    //点击全校老师
+    $('.xuan08a').click(function(){
+
+       $('body').find('.selfdom').remove();
+
+       var name =  $(this).text();
+         // console.log(name);
+  
+   var tea_name = $(this).next().find('.xuan01a');
+        
+        for(var j = 0; j < tea_name.length; j++)
+        {
+          tea_name.eq(j).find('.tea_t').attr('checked',true);
+        }
+
+ 
+
+        var na = $("body").find(".txt_main").text();
+
+        console.log(na);
+         id =   $(this).find('.xuan08').val();
+         // console.log(name);
+       console.log(id); 
+        obj = $("body").find(".txt_main");
+
+
+        var indesr = na.indexOf(name);
+
+   if(indesr < 0){
+
+        obj.append('<div class="selfdom"><div style=" float:left; border:1px solid #d8dfea; width:21%; text-align:center; line-height:62px;"><input type="hidden" name="school_teacherid" value='+id+'>'+name+'</div><div style=" float:left; border:1px solid #d8dfea; width:79%; text-align:center; height: 64px;padding:5px;"><textarea  class="txt_self" name="school_teacher" style=" width:100%; resize:none; outline:none; height: 100%;" class="kuang kuang02" value=""></textarea></div><i class="fa fa-remove dianji" style="color: #00B7EE;position: relative;     bottom: 67px;  cursor: pointer;"></i></div>');
+      }else{
+        alert('全校老师已经存在!');
+    return;
+      }
+
+    })
+
+
+
+
+
+
+  </script>
+  <script>
+    function sub_qrcj() {
+    // var oid = $('#oid').val();
+    // var o_user = $("input[name='o_user']").val();
+    // var o_phone = $("input[name='o_phone']").val();
+    // var o_pstime = $("input[name='o_pstime']").val();
+    var hope = $("textarea[name='hope']").val();
+    // var payw = $("select[name='orderstatus']").val();
+    $.ajax({
+      type:"post",
+      async:false,
+      url:"{:U('Teacher/MessageInfo/model_message')}",
+      data:{'hope': hope},
+      success: function(msg){
+        // alert('成功');
+        history.go(0);
+      }
+      
+
+    });
+  // history.go(0);
+  }
+  </script>
+  <script type="text/javascript">
+    $(".rest").click(
+      function(){
+        $(".kuang").empty();
+      })
+  </script>
+     <script>
+         $(".shan").click(
+              function(){
+                  $(this).hide()
+                  }
+              )
+     </script>
+    <script>
+    $(".muban").click(
+          function(){
+              s=$(this).text()
+              $(".kuang").text(s)
+              }
+    )
+    $(".tianjia").click(
+          function(){
+              v=$(".muban2").val()
+              $(".kuang").text(v)
+              }
+    )
+    $(".cha").click(
+              function(){
+                  $(".tan").css("display","none")
+                  }
+    )
+    $(".gezi").click(
+              function(){
+                  $(".tan").show()
+                  }
+    )
+    </script>
+    
+  <script>
+  $('#myTab a:first').tab('show');
+  </script>
+  <script>
+          $("#file-3").fileinput({
+              showUpload: false,
+              showCaption: false,
+              browseClass: "btn btn-default",
+              fileType: "any",
+              previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+          });
+          $(document).ready(function() {
+              $("#test-upload").fileinput({
+                  'showPreview' : false,
+                  'allowedFileExtensions' : ['jpg', 'png','gif'],
+                  'elErrorContainer': '#errorBlock'
+              });
+  
+          });
+          </script>
+          <!--全选start-->                  
+  <script type="text/javascript">
+  var change = function (chkArray, val) 
+  {
+   for (var i = 0 ; i < chkArray.length ; i ++) 
+  //遍历指定组中的所有项
+       chkArray[i].checked = val;              
+  //设置项为指定的值-是否选中
+  }
+  </script>
+  <!--全选end-->
+  
+  <script>
+  $('#myTab a:first').tab('show');
+  </script>
+  <script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "__ROOT__/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+</script>
+<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="__ROOT__/statics/js/jquery.js"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <script src="__ROOT__/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+<if condition="APP_DEBUG">
+  <style>
+    #think_page_trace_open{
+      z-index:9999;
+    }
+  </style>
+
+</if>
+
+  </body>
+  </html>
+
+  <script type="text/javascript" src="js/datetime.js"></script>
+  <script src="js/fileinput.js" type="text/javascript"></script>
+  <script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function check(form) {
+        var obj = document.getElementsByName("tea[]");
+        console.log(obj);
+        check_val = [];
+        for(k in obj){
+          if(obj[k].checked)
+              check_val.push(obj[k].value);
+        }
+        var oej = document.getElementsByName("cla[]");
+        check_cla = [];
+        for(k in oej){
+          if(oej[k].checked)
+              check_val.push(oej[k].value);
+        }
+        var oaj = document.getElementById("school_student");
+        console.log(oaj);
+        var ocj = document.getElementById("school_teacher");
+
+        console.log(ocj);
+        if(check_val=='' && check_cla=='' && oaj.checked==false && ocj.checked==false) {
+            $("#failspass").html("<font color=red>*请选择接收对象</font>");
+            return false;
+        }
+        document.myform.submit();
+    }
+    
+</script>
+    <script>
+    
+    $
+  
+    </script>
+  <script>
+  $('#myTab a:first').tab('show');
+  </script>
+  <script>
+          $("#file-3").fileinput({
+              showUpload: false,
+              showCaption: false,
+              browseClass: "btn btn-default",
+              fileType: "any",
+              previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+          });
+          $(document).ready(function() {
+              $("#test-upload").fileinput({
+                  'showPreview' : false,
+                  'allowedFileExtensions' : ['jpg', 'png','gif'],
+                  'elErrorContainer': '#errorBlock'
+              });
+  
+          });
+          </script>
+          <!--全选start-->                  
+  <script type="text/javascript">
+  var change = function (chkArray, val) 
+  {
+   for (var i = 0 ; i < chkArray.length ; i ++) 
+  //遍历指定组中的所有项
+       chkArray[i].checked = val;              
+  //设置项为指定的值-是否选中
+  }
+  </script>
+  <!--全选end-->
+  
+  <script>
+  $('#myTab a:first').tab('show');
+  </script>
+  <script type="text/javascript"> 
+  $(function () {
+    //setInterval(function(){public_lock_renewal();}, 10000);
+    $(".J_ajax_close_btn").on('click', function (e) {
+        e.preventDefault();
+        Wind.use("artDialog", function () {
+            art.dialog({
+                id: "question",
+                icon: "question",
+                fixed: true,
+                lock: true,
+                background: "#CCCCCC",
+                opacity: 0,
+                content: "您确定需要关闭当前页面嘛？",
+                ok:function(){
+            setCookie("refersh_time",1);
+            window.close();
+            return true;
+          }
+            });
+        });
+    });
+    /////---------------------
+     Wind.use('validate', 'ajaxForm', 'artDialog', function () {
+        //javascript
+            
+                //编辑器
+                editorcontent = new baidu.editor.ui.Editor();
+                editorcontent.render( 'content' );
+                try{editorcontent.sync();}catch(err){};
+                //增加编辑器验证规则
+                jQuery.validator.addMethod('editorcontent',function(){
+                    try{editorcontent.sync();}catch(err){};
+                    return editorcontent.hasContents();
+                });
+                var form = $('form.J_ajaxForms');
+            //ie处理placeholder提交问题
+            if ($.browser.msie) {
+                form.find('[placeholder]').each(function () {
+                    var input = $(this);
+                    if (input.val() == input.attr('placeholder')) {
+                        input.val('');
+                    }
+                });
+            }
+            //表单验证开始
+            form.validate({
+          //是否在获取焦点时验证
+          onfocusout:false,
+          //是否在敲击键盘时验证
+          onkeyup:false,
+          //当鼠标掉级时验证
+          onclick: false,
+                //验证错误
+                showErrors: function (errorMap, errorArr) {
+            //errorMap {'name':'错误信息'}
+            //errorArr [{'message':'错误信息',element:({})}]
+            try{
+              $(errorArr[0].element).focus();
+              art.dialog({
+                id:'error',
+                icon: 'error',
+                lock: true,
+                fixed: true,
+                background:"#CCCCCC",
+                opacity:0,
+                content: errorArr[0].message,
+                cancelVal: '确定',
+                cancel: function(){
+                  $(errorArr[0].element).focus();
+                }
+              });
+            }catch(err){
+            }
+                },
+                //验证规则
+                rules: {'post[post_title]':{required:1},'post[post_content]':{editorcontent:true}},
+                //验证未通过提示消息
+                messages: {'post[post_title]':{required:'请输入标题'},'post[post_content]':{editorcontent:'内容不能为空'}},
+                //给未通过验证的元素加效果,闪烁等
+                highlight: false,
+                //是否在获取焦点时验证
+                onfocusout: false,
+                //验证通过，提交表单
+                submitHandler: function (forms) {
+                    $(forms).ajaxSubmit({
+                        url: form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+                        dataType: 'json',
+                        beforeSubmit: function (arr, $form, options) {
+                            
+                        },
+                        success: function (data, statusText, xhr, $form) {
+                            if(data.status){
+                  setCookie("refersh_time",1);
+                  //添加成功
+                  Wind.use("artDialog", function () {
+                      art.dialog({
+                          id: "succeed",
+                          icon: "succeed",
+                          fixed: true,
+                          lock: true,
+                          background: "#CCCCCC",
+                          opacity: 0,
+                          content: data.info,
+                      button:[
+                        {
+                          name: '继续添加？',
+                          callback:function(){
+                            reloadPage(window);
+                            return true;
+                          },
+                          focus: true
+                        },{
+                          name: '返回列表页',
+                          callback:function(){
+                            location='{:U('SchoolPlan/index')}';
+                            return true;
+                          }
+                        }
+                      ]
+                      });
+                  });
+                }else{
+                  isalert(data.info);
+                }
+                        }
+                    });
+                }
+            });
+        });
+    ////-------------------------
+   });
+   </script>
+   <script>
+
+  </script>
+  </body>
+  </html>

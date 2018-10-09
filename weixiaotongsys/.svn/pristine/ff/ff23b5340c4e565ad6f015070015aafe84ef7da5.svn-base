@@ -1,0 +1,58 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('indexadmin/patriarch')}">家长用户</a></li>
+        <li ><a href="{:U('indexadmin/addnewuser')}">添加用户</a></li>
+    </ul>
+    <form method="post" class="J_ajaxForm" action="#">
+        <div class="table_list">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th align='center'>ID</th>
+                    <th>用户名</th>
+                    <th>手机号</th>
+                    <th>学校id</th>
+                    <th>班级id</th>
+                    <th>头像</th>
+                    <th>创建时间</th>
+                    <th>激活状态</th>
+                    <th align='center'>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <php>
+                    $user_statuses=array("0"=>"未激活","1"=>"已激活");
+                function found_time($time){
+                    return date('Y-m-d H:i:s',$time);
+                    }
+                    $found_t='found_time';
+                </php>
+                <foreach name="lists" item="vo">
+                    <tr>
+                        <td align='center'>{$vo.id}</td>
+                        <td>{$vo.name|default='未填写'}</td>
+                        <td>{$vo.phone}</td>
+                        <td>{$vo.schoolid}</td>
+                        <td>{$vo.classid}</td>
+                        <td><img width="30" height="30" src="http://www.xiaocool.cn:8016/uploads/avatar/{$vo.photo}" /></td>
+                        <td>{$found_t($vo['time'])}</td>
+                        <!--
+                        因为直接用php函数不能被识别，此处用的是变量函数
+                        -->
+                        <td>{$user_statuses[$vo['status']]}</td>
+                        <td align='center'>
+                            <a href="{:U('indexadmin/passwordReset',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要将该用户密码重置为123456？">密码重置</a>
+                        </td>
+                    </tr>
+                </foreach>
+                </tbody>
+            </table>
+            <div class="pagination">{$page}</div>
+        </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑 Light";
+}
+.clearfix{
+	clear: both;
+}
+.container{
+	padding: 2.5% 2.5% 15%;
+	background-color: rgb(239,240,242);
+}
+
+.mom{
+	padding:3% 2.5%;
+	background-color: white;
+	border-radius: 5px;
+}
+.left{
+	width: 58%;
+	float: left;
+}
+.left img{
+	float: left;
+	margin-top: -1px;
+	width: 26px;
+}
+.left span{
+	display: block;
+	margin-top: 2px;
+	margin-left: 1.2%;
+	font-size: 15px;
+	font-weight: 600;
+}
+.right{
+	font-size: 13px;
+	float: right;
+}
+.one{
+	margin-bottom: 2px;
+}
+.mom .one .right{
+	text-align: center;
+	width: 56px;
+	background-color: rgb(255,184,73);
+	padding: 1px 0;
+	border-radius: 5px;
+	color: white;
+	font-weight: 600;
+}
+.two{
+	margin-bottom: 2%;
+}
+.two span{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: rgb(70,70,70);
+}
+.two img{
+	margin-top: 3%;
+	width: 100%;
+}
+.three .left span{	
+	float: left;
+	font-size: 13.5px;
+	color: rgb(151,153,150);
+	
+}
+.three .right{
+	font-size: 12.5px;
+	margin-top:4px;
+}
+.three .right span{
+	color: rgb(151,153,150);
+}
+
+.grandfather{
+	padding:2.6% 2%;
+	margin-top: 2.5%;
+	background-color: white;
+	border-radius: 5px;
+}
+.grandfather .one .right{
+	text-align: center;
+	width: 56px;
+	background-color: rgb(6,192,142);
+	padding: 1px 0;
+	border-radius: 5px;
+	color: white;
+	font-weight: 600;
+}
+.grandfather .context .three{
+	margin-bottom: 3%;
+}
+.split{
+	border: none;
+	border-top: 1px dashed rgb(210,210,210);
+}
+
+.teacherw{
+	margin-top: 3%;
+	padding: 2% 0.9%;
+	background-color: rgb(239,240,242);
+}
+.teacherw .left img{
+	float: left;
+	margin-top: 0.1%;
+	margin-right: 4%;
+	margin-left: 2%;
+	width: 21%;
+}
+.teacherw .right span{
+	color: rgb(151,153,150);
+	font-weight: 500;
+}
+.right div .span1{
+	font-size: 15px;
+	color: black;
+	font-weight: 600;
+}
+
+.teacherw .span2{
+	display: block;
+	margin-top: 0.7%;
+	font-weight: 500;
+	font-size: 13.5px;
+}
+
+.teacherw .right{
+	margin-top: 2px;
+}
+
+.new{
+	position: fixed;
+	right: 3%;
+	top: 80%;
+	border-radius: 50%;
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	background-color: rgb(6,192,142);
+	font-size: 16px;
+	float: right;
+}
+.new span{
+	display: block;
+	
+	font-weight: 600;
+	font-family:"微软雅黑 Light";
+	color: white;
+}

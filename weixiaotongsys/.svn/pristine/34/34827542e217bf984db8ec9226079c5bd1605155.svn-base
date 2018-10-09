@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__TMPL__public/css/zaixianLiuyan.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="__TMPL__public/css/top-box.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <title>{$schoolname}</title>
+
+</head>
+
+<body>
+    <div class="top_box">
+        <a href="l"><img src="__ROOT__/statics/img/img67.png" onclick="history.go(-1)"></a>
+        在线留言
+        <div class="clearfix"></div>
+    </div>
+    <div class="history">
+        <input type="hidden" value={$userid} id="userid">
+    </div>
+</body>
+<script>
+    var html = "";
+    var userid = $("#userid").val();
+    $("document").ready(
+        $.ajax({
+            url: "__ROOT__/index.php?g=apps&m=index&a=GetLeaveMessageBySelf",
+            dataType: "json",
+            type: "POST",
+            data: {
+                userid: userid,
+            },
+            success: function(res) {
+                res = eval(res.data);
+                console.log(res);
+
+                function getLocalTime(nS) {
+                    return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+                }
+                for (var i = 0; i < res.length; i++) {
+                    //                    var feed_back = res[i]["feed_back"];
+                    var feed_back = res[i]["feed_back"];
+                    var message = res[i]['message'];
+                    var time = res[i]["create_time"];
+                    var feed_time = res[i]["feed_time"];
+                    var photo = res[i]["photo"];
+                    console.log(message + time + i);
+                    if (feed_back == "" && photo == "") {
+                        html += '<div class="massage"> <div class="question"> <div class="left"><img src="__ROOT__/statics/img/1.png" alt=""></div> <p class="right">' + message + '</p> <div class="clearfix"></div> </div> <div class="time">' + getLocalTime(time) + '</div> <hr class="divide"> <div class="reply"> <div class="left"> <img src="__ROOT__/statics/img/2.png" alt=""> </div> <p class="right">暂无回复内容</p> <div class="time">' + getLocalTime(feed_time) + ' </div></div> </div>';
+                    } else if (feed_back !== "") {
+                        html += '<div class="massage"> <div class="question"> <div class="left"><img src="__ROOT__/statics/img/1.png" alt=""></div> <p class="right">' + message + '</p> <div class="clearfix"></div> </div> <div class="time">' + getLocalTime(time) + '</div> <hr class="divide"> <div class="reply"> <div class="left"> <img src="__ROOT__/statics/img/2.png" alt=""> </div> <p class="right">' + feed_back + '</p><div class="time">' + getLocalTime(feed_time) + ' </div> </div> </div>';
+                    } else if (photo !== "" && message !== "") {
+                        html += '<div class="massage"> <div class="question"> <div class="left"><img src="__ROOT__/statics/img/1.png" alt=""></div> <p class="right">' + message + '</p> <div class="clearfix"></div> </div> <div class="time">' + getLocalTime(time) + '</div> <hr class="divide"> <div class="reply"> <div class="left"> <img src="__ROOT__/statics/img/2.png" alt=""> </div> <p class="right">' + feed_back + '</p><div class="time">' + getLocalTime(feed_time) + ' </div> </div> </div>';
+                    }
+
+                }
+                $(".history").append(html);
+            },
+            error: function(res) {
+                console.log(res);
+            }
+        })
+    );
+</script>
+
+</html>

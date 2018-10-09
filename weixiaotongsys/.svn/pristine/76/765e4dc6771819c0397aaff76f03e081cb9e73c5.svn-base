@@ -1,0 +1,52 @@
+<admintpl file="header" />
+
+<body class="J_scroll_fixed">
+    <div class="wrap jj">
+        <ul class="nav nav-tabs">
+            <li><a href="{:U('index')}">学校列表</a></li>
+            <li class="active"><a href='{:U("interest",array("schoolid"=>$schoolid))}'>兴趣班级管理</a></li>
+            <li><a href='{:U("addclass",array("schoolid"=>$schoolid))}'>添加班级</a></li>
+        </ul>
+        <div class="common-form">
+            <form method="post" class="form-horizontal J_ajaxForm" action="{:U('classchange_post')}">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label">学校id:</label>
+                        <div class="controls">
+                            <input type="text" class="input" name="school_id" value="{$schoolid}" readOnly="true">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">年级:</label>
+                        <div class="controls">
+                            <select class="select_2" name="grade" style="  float:left;">
+                                 <option value='0'>--请选择--</option>
+                                    <foreach name="grade" item="vo">
+                           <php>$gradeinfo=$class['grade']==$vo['gradeid']?"selected":"";</php>
+                           <OPTION value="{$vo.gradeid}" {$gradeinfo}>{$vo.name}</OPTION> 
+                        </foreach>
+                      </select>
+                        </div>
+                        <input type="hidden" name="class_id" value="{$class['id']}">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">班级名称:</label>
+                        <div class="controls">
+                            <input type="text" class="input" name="class_name" value="{$classinfo['classname']}">
+                        </div>
+                    </div>
+
+                </fieldset>
+                <div class="form-actions">
+                    <!--<input type="hidden" name="id" value="{$id}" />-->
+                    <!--<button type="submit">更新</button>-->
+                    <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+                    <a class="btn" href='{:U("classmanage",array("schoolid"=>$schoolid))}'>返回</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="__ROOT__/statics/js/common.js"></script>
+</body>
+
+</html>

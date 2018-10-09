@@ -1,0 +1,616 @@
+<teachertpl file="header" />
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息1</title>
+    <link href="__ROOT__/statics/simpleboot/css/fileinput_message.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet" />
+    <script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+    <script src="__ROOT__/statics/js/fileinput.js" type="text/javascript"></script>
+    <script src="__ROOT__/statics/js/fileinput_locale_zh.js" type="text/javascript"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <style type="text/css">
+        .col-auto {
+            overflow: auto;
+            _zoom: 1;
+            _float: left;
+        }
+        
+        .col-right {
+            float: right;
+            width: 30%;
+            overflow: hidden;
+            margin-left: 6px;
+        }
+        
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+        
+        .picList li {
+            margin-bottom: 5px;
+        }
+        
+        .touchlei {
+            background-color: #eeeeee;
+        }
+        
+        tr .pai,
+        tr .pai2 {
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        tr .pai {
+            background-color: #e2e2e2;
+        }
+        
+        tr .pai2 {}
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .name {
+            margin-right: 10px;
+        }
+        
+        .dbzr {
+            background-color: #61c881;
+            color: white;
+            text-align: center;
+            padding: 0px 15px;
+            float: left;
+            border-radius: 8px;
+        }
+        
+        .sic {
+            width: 15px;
+            margin-left: 5px;
+            margin-top: -15px;
+            cursor: pointer;
+        }
+        
+        .daiban {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .daike {
+            width: 100px;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .dailei {
+            border: 1px solid #dddddd;
+            border-bottom: none;
+            font-weight: bold;
+        }
+        
+        .banji {
+            float: left;
+            width: 20%;
+            margin-bottom: 10px;
+        }
+        
+        .banji input {
+            margin-top: -2px;
+            margin-right: 5px;
+        }
+        
+        .subject {
+            float: left;
+            color: #03a9f4;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        
+        .peizhi {
+            color: #03a9f4;
+        }
+        
+        .kecheng {
+            color: #03a9f4;
+            float: left;
+            display: none;
+            border: 1px solid #03a9f4;
+            padding-left: 3px;
+            padding-right: 3px;
+            cursor: pointer;
+        }
+        
+        .subinput {
+            display: none;
+        }
+        div{
+        	color:black;
+        }
+        select{
+        	color:black;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var sb = document.getElementById("tans");
+            sb.onclick = function() {
+                var tanboder = document.getElementById("tansboder");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- 模态框（Modal） -->
+    <input type="hidden" value="{$schoolid}" id="schoolid" />
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModa4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: white;">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    <div style=" cursor: pointer;">
+                        <ul class=" nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+                            <li class="active " id="aniu">
+                                <a style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">添加书本</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <input name="text" type="hidden" id="pagearchives" value="" />
+                <input name="text" type="hidden" id="gradeid" value="" />
+                <input name="text" type="hidden" id="archives" value="" />
+                <div class="modal-body5" style="padding-bottom: 10px;">
+                    <div class="hideid">
+                        <div id="qqq">
+                            <span style="margin-left: 3%;">档案:</span>
+                        </div>
+                        <div id="gradelist" style="width: 100%;float: left">
+
+                        </div>
+                        <span style=" float:left;margin-left: 3%;">书页:</span><br>
+                        <div style="overflow-y:scroll; padding:10px;margin-top:10px;border: 1px solid gainsboro;" class="page_info">
+
+                            <!--<div class="banji" style=" float:left; width:20%; margin-bottom:10px;cursor:pointer;">-->
+                            <!--<input type="checkbox" name="class_else"  value="3">-->
+                            <!--<span class="manid">345</span>-->
+                            <!--</div>-->
+                            <!--<div id="noselect">-->
+
+                            <!--</div>-->
+                            <!--<div class="banji" style=" float:left; width:20%; margin-bottom:10px;cursor:pointer;">-->
+                            <!--<input type="checkbox" name="class_else"  value="3">-->
+                            <!--<span class="manid">345</span>-->
+                            <!--</div>-->
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="pagesubmit" style="width:80px;height:40px;background: white; color:black; font-weight:bold;">提交更新</button>
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModa3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: white;">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    <div style=" cursor: pointer;">
+                        <ul class=" nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+                            <li class="active ">
+                                <a style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">添加书页</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <input name="text" type="hidden" id="id1" value="" />
+                <!--档案年级ID-->
+                <input name="text" type="hidden" id="id2" value="" />
+                <!--档案ID-->
+                <input name="text" type="hidden" id="id3" value="" />
+                <!--年级ID-->
+                <div class="modal-body5" style="padding-bottom: 10px;">
+                    <div class="hideid">
+
+                        <span style=" float:left;margin-left: 3%;">书页:</span><br>
+                        <div style="overflow-y:scroll; padding:10px;margin-top:10px;border: 1px solid gainsboro;" class="info">
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="submit" style="width:80px;height:40px;background: white; color:black; font-weight:bold;">提交</button>
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="wrap jj">
+        <ul id="myTab" class="nav-tabs" style=" margin-top:30px; height:30px; list-style:none;">
+            <li class="active">
+                <a href="{:U('bookList')}" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;">书本列表</a>
+            </li>
+
+            <li>
+                <a class="addbook" data-toggle="modal" data-target="#myModa4" style="color:#1f1f1f; text-decoration:none; padding:10px 15px;" class="touch">添加书本</a>
+            </li>
+        </ul>
+
+
+        <div id="myTabContent" class="tab-content" style=" padding-left:30px; padding-right:30px;">
+            <div class="tab-pane fade in active" id="home">
+                <br/>
+                <form class="form-horizontal J_ajaxForm" action="{:u('bookList')}" method="get">
+                    <div class="search_type cc mb10">
+                        <div class="mb10">
+                            <span class="mr20">
+					 书本名称:
+                      <input type="text" class="select_2" name="bookname" placeholder="-请输入-" style="width:8%; height: 17px;border-width:1px;" value="{$bookname}"> &nbsp;&nbsp;
+					档案名称:
+                      <input type="text" class="select_2" name="filename" placeholder="-请输入-" style="width:8%; height: 17px;border-width:1px;" value="{$filename}"> &nbsp;&nbsp;
+                      学期:
+                      <select class="select_2" name="semester" style="width:9%; height: 30px">
+                        <option value='0'>请选择</option>
+                        <foreach name="semester" item="vo">
+                            <php>$semester=$semester==$vo['semester']?"selected":"";</php>
+                            <OPTION value="{$vo.semester}">{$vo.semester}</OPTION>
+                        </foreach>
+                      </select> &nbsp;&nbsp;
+                      <input type="submit" style=" border:none; background-color:#26a69a; color:white; border-radius:5px; padding:5px 10px 5px 10px;" value="搜索" />
+                  </span>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="J_ajaxForm" action="" method="post">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered table-list">
+                            <thead>
+                                <tr style="background-color:#CCC;">
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;">档案名称</th>
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;">书名</th>
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;">年级</th>
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;">学期</th>
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;">场景</th>
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;">风格</th>
+                                    <th class="pai" style=" border-left: none;border-width: 0.5px;border-right: none">操作</th>
+                                </tr>
+                            </thead>
+                            <foreach name="book" item="vo">
+
+                                <tr>
+                                    <td class="pai2">{$vo.archivesname}</td>
+                                    <td class="pai2">{$vo.bookname}</td>
+                                    <td class="pai2">{$vo.gradename}</td>
+                                    <td class="pai2 stuname">{$vo.semester}</td>
+                                    <td class="pai2 stuid" name="card">{$vo.sceneid}</td>
+                                    <td class="pai2">{$vo.styleid}</td>
+                                    <td class="pai2">
+                                       <a href="{:U('edit',array('id'=>$vo['gradeid'], 'archivesid'=>$vo['archivesid']))}" style=" color:#00c1dd;">编辑</a>
+                                        <a href="{:U('deleteBook',array('id'=>$vo['id'],))}" class="J_ajax_del" style=" color:#00c1dd;">删除</a>
+                                        <!--<a href="{:U('change',array('id'=>$vo['id']))}" style=" color:#00c1dd;">修改</a>-->
+
+                                        <!--<a href="" style=" color:#00c1dd;">-->
+                                        <!--启用-->
+                                        <!--<button class="btn" data-toggle="modal" id="{$vo['id']}" data-target="#myModal" style="background-color: transparent;color: #00c1dd;">启用</button>-->
+                                        <!--模板选择-->
+                                        <button class="update" data-toggle="modal" value="{$vo['id']},{$vo['archivesid']},{$vo['gradeid']}" data-target="#myModa3" style=" border:none;background-color: transparent;color: #00c1dd;">配置</button>
+                                        <!--模板选择-->
+                                        <!--<button class="www" data-toggle="modal" value="{$vo['id']}" data-target="#myModa2" style=" border:none;background-color: transparent;color: #00c1dd;">配置</button>-->
+
+
+                                    </td>
+                                </tr>
+                            </foreach>
+                        </table>
+
+
+                    </div>
+                </form>
+
+
+                <input class="uisid" type="hidden" />
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="ios">
+
+        </div>
+        <div class="pager">{$Page}</div>
+
+    </div>
+    <script type="text/javascript" src="__ROOT__/statics/js/datetime.js"></script>
+    <script src="__ROOT__/statics/js/common.js"></script>
+    <script type="text/javascript">
+        //全局变量
+        var GV = {
+            DIMAUB: "/",
+            JS_ROOT: "statics/js/",
+            TOKEN: ""
+        };
+    </script>
+    <script>
+        //添加新书本
+        $(".addbook").click(function() {
+            $('.page_info').html("");
+            $('.search_grade').remove();
+            $('#gradelist').html("");
+            $.ajax({
+                type: "post",
+                url: "{:U('Teacher/GrowthArchives/archivesList')}",
+                dataType: 'json',
+                data: {
+                    id: 1
+                },
+                success: function(res) {
+                    result = eval(res.data); //拉取档案
+                    var html = "";
+                    html += '<select class="search_grade" name="search_grade" >';
+                    html += '<option value="0">' + '--请选择--' + '</option>';
+                    for (var i = 0; i < result.length; i++) {
+                        var archivesname = result[i].name; //档案名称
+                        var archivesid = result[i].id; //档案ID
+                        html += '<option class="grade_info" value="' + archivesid + '">' + archivesname + '</option>'
+                    }
+                    html += '</select>';
+                    $("#qqq").append(html);
+
+                    arr = res.gradelist;
+                    var htmls = "";
+                    if (typeof(arr) !== "undefined") {
+                        htmls += '<span style=" float:left;margin-left: 3%;">' + '年级:' + '</span><br>'
+                        for (var i = 0; i < arr.length; i++) {
+                            var gradename = arr[i].name; //年级名称
+                            var gradeid = arr[i].gradeid; //年级ID
+                            htmls += '<div class="no">'
+                            htmls += ' <label style="float:left;padding:15px;"><input name="gradelist" style="margin:0 0 0;" type="checkbox" value="' + gradeid + '" />' + gradename + '</label>';
+                            htmls += '</div>'
+
+                        }
+                        $("#gradelist").append(htmls);
+                    }
+                },
+                error: function() {
+                    alert('系统错误,请稍后重试');
+                }
+            });
+        });
+
+        //书页列表
+        $(document).on('change', '.search_grade', function() {
+            var id = $(this).val(); //档案ID
+            if (id) {
+                $('#archives').val(id);
+            }
+            $('.page_info').html("");
+            $.ajax({
+                type: "get",
+                url: "{:U('Teacher/GrowthArchives/plist')}",
+                dataType: 'json',
+                data: {
+                    //archivesid:archivesid,
+                    gradeid: 1
+                },
+                success: function(result) {
+                    var html = "";
+                    var arr = result.data; //已选的页码
+                    if (typeof(arr) !== "undefined") {
+                        html += '<div style=" width: 100%;height:auto;float: left">'
+                        for (var i = 0; i < arr.length; i++) {
+                            var pagename = arr[i].name; //书页名称
+                            var pageid = arr[i].id; //书页ID
+                            var status = arr[i].default; //书页ID
+                            html += ' <div class="banji" style=" float:left; width:20%; margin-bottom:10px;cursor:pointer;">';
+                            if (status == 1) {
+                                html += ' <input type="checkbox" name="page_else"  value="' + pageid + '" disabled="disabled"   checked>';
+                            } else {
+                                html += ' <input type="checkbox" name="page_else"  value="' + pageid + '">';
+                            }
+                            html += ' <span class="manid">' + pagename + '</span>';
+                            html += '</div>';
+                        }
+                        html += '</div>';
+                    }
+                    $(".page_info").append(html);
+
+                },
+                error: function() {
+                    alert('系统错误,请稍后重试');
+                }
+
+            })
+        });
+        $(document).on('click', '#pagesubmit', function() {
+            var archivesid = $("#archives").val(); //档案ID
+            if (archivesid == "") {
+                alert("请选择档案");
+                return;
+            }
+            var obj = document.getElementsByName('gradelist');
+            var gradeid = "";
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    gradeid += obj[i].value + ',';
+                }
+            }
+            //年级ID
+            if (gradeid == "") {
+                alert("请勾选年级");
+                return;
+            }
+
+            var object = document.getElementsByName('page_else');
+            var pageid = "";
+            for (var i = 0; i < object.length; i++) {
+                if (object[i].checked) {
+                    pageid += object[i].value + ',';
+                }
+            }
+            if (pageid == "") {
+                alert("请勾选书页");
+                return;
+            }
+            $.ajax({
+                type: "get",
+                url: "{:U('Teacher/GrowthArchives/bookPost')}",
+                dataType: 'json',
+                data: {
+                    pageid: pageid, //书页ID
+                    archivesid: archivesid, //档案ID
+                    gradeid: gradeid //年级ID
+                },
+                success: function(res) {
+                    if (res.data == 0) {
+                        alert(res.message);
+                    } else {
+                        alert("添加成功");
+                        history.go(0);
+                    }
+                },
+                error: function() {
+                    alert('系统错误,请稍后重试');
+                }
+            });
+        });
+    </script>
+    <script>
+        //书页列表
+        $(".update").click(function() {
+            $('.info').html("");
+            var id = $(this).val(); //档案年级ID
+            arr = id.split(',');
+            id1 = arr[0];
+            id2 = arr[1];
+            id3 = arr[2];
+            //档案年级ID
+            if (id1) {
+                $('#id1').val(id1);
+            }
+            //档案ID
+            if (id2) {
+                $('#id2').val(id2);
+            }
+            //年级ID
+            if (id3) {
+                $('#id3').val(id3);
+            }
+            $.ajax({
+                type: "get",
+                url: "{:U('Teacher/GrowthArchives/showPage')}",
+                dataType: 'json',
+                data: {
+                    id: id1
+                },
+                success: function(result) {
+                    console.log(result);
+                    var html = "";
+                    var htmls = "";
+                    var arr = result.data.selected; //已选的页码
+                    if (typeof(arr) !== "undefined") {
+                        html += '<div style=" width: 100%;height:auto;float: left">'
+                        html += '<span style=" float:left;margin-left: 2%;">' + '已选书页:' + '</span><br>'
+                        for (var i = 0; i < arr.length; i++) {
+                            var pagename = arr[i].name; //书页名称
+                            var pageid = arr[i].id; //书页ID
+                            html += ' <div class="ook" style=" float:left; width:20%; margin-bottom:10px;cursor:pointer;">';
+                            html += ' <input type="checkbox" style="margin:0 0 0;" value="' + pageid + '" disabled="disabled"   checked>';
+                            html += ' <span class="man" >' + pagename + '</span>';
+                            html += '</div>';
+
+                        }
+                        html += '</div>';
+                        // html+='<br>';
+                    }
+                    $(".info").append(html);
+                    var res = result.data.notselected; //未选的页码
+                    if (typeof(res) !== "undefined") {
+                        htmls += '<div style="float: left;width: 100%">'
+                        htmls += '<span style=" float:left;margin-left: 2%;">' + '未选书页:' + '</span><br>'
+                        for (var i = 0; i < res.length; i++) {
+                            var pagename = res[i].name; //书页名称
+                            var pageid = res[i].id; //书页ID
+                            var status = res[i].default; //是否选中
+                            htmls += ' <div class="ook" style=" float:left; width:20%; margin-bottom:10px;cursor:pointer;">';
+                            if (status == 1) {
+                                htmls += ' <input type="checkbox" style="margin:0 0 0;" name="updatepage"  value="' + pageid + '" disabled="disabled"   checked>';
+                            } else {
+                                htmls += ' <input type="checkbox" style="margin:0 0 0;" name="updatepage"  value="' + pageid + '">';
+                            }
+                            htmls += ' <span class="man">' + pagename + '</span>';
+                            htmls += '</div>';
+
+                        }
+                        htmls += '</div>'
+                    }
+                    $(".info").append(htmls);
+                },
+                error: function() {
+                    alert('系统错误,请稍后重试');
+                }
+
+            })
+        });
+        //添加书页
+        $('#submit').click(function() {
+            var archivesid = $("#id2").val(); //档案ID
+            var gradeid = $("#id3").val(); //年级ID
+            var archivesgradeid = $("#id1").val(); //档案年级ID
+            var obj = document.getElementsByName('updatepage');
+            var pageid = "";
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    pageid += obj[i].value + ','; //如果选中，将value添加到变量s中
+                }
+            }
+            if (pageid == "") {
+                alert("请勾选书页");
+                return;
+            }
+            $.ajax({
+                type: "post",
+                url: "{:U('Teacher/GrowthArchives/addBook')}",
+                dataType: 'json',
+                data: {
+                    pageid: pageid, //书页ID
+                    archivesid: archivesid, //档案ID
+                    gradeid: gradeid, //年级ID
+                    archivesgradeid: archivesgradeid //档案年级ID
+                },
+                success: function(res) {
+                    if (res.data == 0) {
+                        alert(res.message);
+                    } else {
+                        alert("提交成功");
+                        history.go(0);
+                    }
+                    //alert("启用成功");
+                    // history.go(0);
+                },
+                error: function() {
+                    alert('系统错误,请稍后重试');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

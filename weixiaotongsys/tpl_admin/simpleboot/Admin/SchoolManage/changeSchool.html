@@ -1,0 +1,89 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">学校列表</a></li>
+        <li><a href="{:U('addschool')}">新增学校</a></li>
+        <li><a href="{:U('schoolcheck')}">学校审核</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('change_post')}">
+            <fieldset>
+                <!-- <div class="control-group">
+                    <label class="control-label">学校id:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_id" value="{$school['schoolid']}" readOnly="true">
+                    </div>
+                </div> -->
+                <div class="control-group">
+                    <label class="control-label">学校名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_name" value="{$school['school_name']}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">学校地址:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_address" value="{$school['school_address']}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系人:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="school_user" value="{$school['school_user']}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">联系电话:</label>
+                    <div class="controls">
+                        <input type="hidden" class="input" name="school_id" value="{$school['schoolid']}"  readOnly="true">
+                        <input type="text" class="input" name="school_phone" value="{$school['school_phone']}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">使用的状态:</label>
+                    <div class="controls">
+                    	<input name="school_status" class="input" />
+                        <!--<select name="school_status" class="input" id="status">
+                            <option value="0">停用</option>
+                            <option value="1">试用期</option>
+                            <option value="2">收费期</option>
+                        </select>-->
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">负责的代理商:</label>
+                    <div class="controls">
+                        <select name="agent_id" class="input" >
+                        	<foreach name="str" item="vo">
+                        		<if condition="$vo.id eq $school['agent_id']">
+                            <option value="{$vo.id}" selected="selected">{$vo.name}</option>
+                            </if>
+                             <if condition="$vo.id neq $school['agent_id']" >
+                             	<option value="{$vo.id}">{$vo.name}</option>
+                             </if>	
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <!--赋值区-->
+                <input type="hidden" class="uiy" value="{$school['school_status']}" />
+
+            </fieldset>
+            <div class="form-actions">
+                <!--<input type="hidden" name="id" value="{$id}" />-->
+                <!--<button type="submit">更新</button>-->
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+                <a class="btn" href="__URL__">返回</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+   
+</script>
+</body>
+</html>

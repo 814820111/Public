@@ -1,0 +1,80 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="">学生调班</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('chclass_post')}">
+            <fieldset>
+                <div class="stu-change-class">
+                    <div class="stu-select">
+                        <div class="stu-select-list">
+                            <label class="stu-select-label">学校:</label>
+                            <select class="stu-select-inputlist" name="schoolid">
+                                <option value="1">学校1</option>
+                                <option value="2">学校2</option>
+                                <option value="3">学校3</option>
+                            </select>
+                        </div>
+
+                        <div class="stu-select-list">
+                            <label class="stu-select-label">班级:</label>
+                            <select class="stu-select-inputlist" name="schoolid">
+                                <option value="1">班级1</option>
+                                <option value="2">班级2</option>
+                                <option value="3">班级3</option>
+                            </select>
+                        </div>
+
+                        <div class="stu-select-list">
+                            <label class="stu-select-label">姓名:</label>
+                            <select class="stu-select-inputlist" name="schoolid">
+                                <option value="1">学生1</option>
+                                <option value="2">学生2</option>
+                                <option value="3">学生3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">查询</button>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </fieldset>
+        </form>
+    </div>
+    <form method="post" class="form-horizontal J_ajaxForm" action="{:U('chclass_post')}">
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th width="35">选中</th>
+            <th width="50">学生ID</th>
+            <th>姓名</th>
+            <th>头像</th>
+            <th>创建时间</th>
+            <th>状态</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>$status=array("0"=>"待激活","1"=>"已激活");</php>
+        <foreach name="stuinfo" item="vo">
+            <tr>
+                <td><input type="checkbox" name="checkid" value="{$vo.id}" /></td>
+                <td>{$vo.id}</td>
+                <td>{$vo.name}</td>
+                <td><img width="30" height="30" src="__ROOT__uploads/avatar/{$vo.photo}" /></td>
+                <td>{$vo.time|date='Y-m-d',###}</td>
+                <td>{$status[$vo['status']]}</td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">调整班级</button>
+        </div>
+    </form>
+
+    <!--<iframe src="{:U('studentlist')}" class="change_class_iframe"></iframe>-->
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

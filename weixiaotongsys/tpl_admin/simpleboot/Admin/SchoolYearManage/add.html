@@ -1,0 +1,36 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li><a href="{:U('index')}">学校年段管理</a></li>
+        <li class="active"><a href="{:U('add')}">新增学校年段</a></li>
+    </ul>
+    <div class="common-form">
+        <style>
+            .update_know{
+                height: 30px;
+                margin-top: -20px;
+                line-height: 30px;
+                font-size: 11px;
+                color: red;
+            }
+        </style>
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('add_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">名称:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="name" value="">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">提交</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

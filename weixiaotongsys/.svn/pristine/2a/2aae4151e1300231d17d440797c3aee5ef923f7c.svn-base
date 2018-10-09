@@ -1,0 +1,2771 @@
+[ 2018-09-13T13:37:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+
+[ 2018-09-13T14:00:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `wxt_users` WHERE `user_login` = 'weixiaotong' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0320s ]
+SQL: SELECT `role_id` FROM wxt_role_user a INNER JOIN wxt_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0110s ]
+SQL: UPDATE `wxt_users` SET `user_login`='weixiaotong',`user_pass`='1106b40e836cb666950a9009d08e89c2e1a013751f3b2985',`user_nicename`='admin',`user_email`='zhu@xiaocool.cn',`user_url`='',`avatar`='570ca8a83c7ac.jpg',`sex`='0',`birthday`=NULL,`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2018-09-13 14:00:05',`create_time`='2015-12-31 09:08:44',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`phone`=NULL WHERE `id` = 1 [ RunTime:0.0000s ]
+
+[ 2018-09-13T14:03:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Menu/index/menuid/100
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2018-09-13T14:03:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/menu/add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2018-09-13T14:06:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Menu/add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_menu` [ RunTime:0.0150s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `wxt_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `wxt_menu` WHERE `app` = 'Admin' AND `model` = 'MonitorStudentWeb' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `parentid` FROM `wxt_menu` WHERE `id` = 307 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `parentid` FROM `wxt_menu` WHERE `id` = 180 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `wxt_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('307','直播学生权限','Admin','MonitorStudentWeb','index','','','','1','1') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wxt_auth_rule` WHERE `name` = 'admin/monitorstudentweb/index' LIMIT 1   [ RunTime:0.0280s ]
+SQL: INSERT INTO `wxt_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/monitorstudentweb/index','Admin','admin_url','直播学生权限') [ RunTime:0.0010s ]
+
+[ 2018-09-13T14:06:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/Menu/index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2018-09-13T14:28:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-09-13T15:19:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: 模板不存在:tpl_admin/simpleboot/Admin/MonitorStudentWeb/index.html
+
+[ 2018-09-13T15:34:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:34:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 9 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:34:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 12 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:34:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 12 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:34:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 4 )  [ RunTime:0.0520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:34:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:34:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:34:49+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 9 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T15:34:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 14 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:34:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=14
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 14 )  [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:35:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:35:24+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 9 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:35:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:35:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 4 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:35:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 13 )  [ RunTime:0.0240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:35:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 13 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:16+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:36:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T15:36:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 3 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 15 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 15 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=20
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 20 )  [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 20 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-09-13T15:36:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:36:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:50:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:50:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 9 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:50:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:50:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:52:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:52:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 5 )  [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:52:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:52:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:52:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 11 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:52:57+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 11 )  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:52:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 15 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:52:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 15 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T15:53:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T15:53:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0060s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 4 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T15:53:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:53:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:53:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:53:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 3 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:53:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T15:53:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:00:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 6 )  [ RunTime:0.0240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:00:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 6 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:00:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:00:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:07:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:07:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:07:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 8 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:07:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 8 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:07:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:07:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:07:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 8 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:07:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 8 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:07:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:07:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:08:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:08:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:08:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:08:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:08:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:08:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 9 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:08:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 13 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:08:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 13 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:09:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:09:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:09:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:09:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:09:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:09:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:09:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:09:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:09:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:09:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:09:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 8 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:09:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 8 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:09:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:09:50+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T16:09:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:09:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 9 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:09:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 19 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:09:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=19
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 19 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:10:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:10:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 3 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:10:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-09-13T16:10:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:10:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:10:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:10:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 8 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:10:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 8 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:10:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 8 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:10:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 8 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:10:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:10:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:10:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:10:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:10:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:10:53+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:10:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:10:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:11:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 9 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:11:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 9 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:13:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:13:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:13:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:13:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:13:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 6 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:13:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 6 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:14:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:14:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:14:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=38
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0100s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:16:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=38
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2018-09-13T16:16:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=38
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2018-09-13T16:17:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:17:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:17:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:17:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:17:20+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=42
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:17:21+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:17:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=37
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:17:23+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:17:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:17:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:17:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:17:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:17:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T16:18:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7&classid=42
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0100s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:19:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:19:04+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:19:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:19:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:19:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getTeacher?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:19:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:19:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:19:52+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 41 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-09-13T16:19:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:20:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-13T16:20:09+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:20:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=33
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 33 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:20:11+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=32
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 32 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:20:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=36
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 36 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:20:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:20:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=33
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 33 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:22:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:03+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 41 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:22:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 12 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 12 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:07+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:22:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 10 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 10 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:22:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:22:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 11 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 11 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:22:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:22:29+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:22:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=4&classid=21
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 4 and classid = 21 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:22:33+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 3 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:22:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 6 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:22:34+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 6 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:40:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=6&classid=44
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 6 and classid = 44 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:40:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:40:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:40:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 11 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:40:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 11 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:40:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=11&classid=68
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 11 and classid = 68 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:40:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/index/menuid/389
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:40:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/index/menuid/389
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:40:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/add
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:40:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:41:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/add
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:41:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/index
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:41:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/add
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:42:22+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorWeb/add
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolModel
+NOTIC: D方法实例化没找到模型类Common\Model\SchoolClassModel
+NOTIC: D方法实例化没找到模型类Common\Model\WxtuserModel
+NOTIC: D方法实例化没找到模型类Common\Model\AgentModel
+NOTIC: D方法实例化没找到模型类Common\Model\MonitorModel
+
+[ 2018-09-13T16:42:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:27+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T16:42:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:42:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:37+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:42:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:42:56+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:42:58+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:43:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 7 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:43:12+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T16:43:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:43:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T16:43:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0090s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:43:19+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacher/getTeacher?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_teacher_info` [ RunTime:0.0080s ]
+SQL: SELECT w.id,w.name FROM wxt_teacher_info i INNER JOIN wxt_wxtuser as w on i.teacherid=w.id  WHERE ( i.schoolid = 7 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T16:59:08+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T16:59:13+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T16:59:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T16:59:44+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T17:00:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/look/id/__TMPL__assets/css/mychangestyle.css
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '__TMPL__assets' in 'where clause'
+
+[ 2018-09-13T17:04:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.id' in 'on clause'
+
+[ 2018-09-13T17:06:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.id' in 'on clause'
+
+[ 2018-09-13T17:06:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'field list'
+
+[ 2018-09-13T17:07:00+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'field list'
+
+[ 2018-09-13T17:07:06+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.phone' in 'field list'
+
+[ 2018-09-13T17:07:14+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.class' in 'on clause'
+
+[ 2018-09-13T17:07:28+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.class' in 'on clause'
+
+[ 2018-09-13T17:07:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.classid' in 'on clause'
+
+[ 2018-09-13T17:09:32+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index/menuid/3637
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.start_time' in 'field list'
+
+[ 2018-09-13T17:34:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 4 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T17:34:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T17:34:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=4&classid=18
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 4 and classid = 18 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T17:34:51+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=4&classid=18
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 4 and classid = 18 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T17:34:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T17:34:54+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 5 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T17:34:55+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=33
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 33 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T17:35:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorTeacherWeb/getVideoBySchoolId
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_monitor_live` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_monitor_live` WHERE ( school_id = 6 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T17:35:01+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 6 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T17:35:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 4 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T17:35:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=4&classid=18
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 4 and classid = 18 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T17:35:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T17:35:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=34
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 34 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T18:32:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T18:32:42+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T18:34:10+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wxt_users` WHERE `user_login` = 'weixiaotong' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_role_user` [ RunTime:0.0120s ]
+SQL: SELECT `role_id` FROM wxt_role_user a INNER JOIN wxt_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0020s ]
+SQL: UPDATE `wxt_users` SET `user_login`='weixiaotong',`user_pass`='1106b40e836cb666950a9009d08e89c2e1a013751f3b2985',`user_nicename`='admin',`user_email`='zhu@xiaocool.cn',`user_url`='',`avatar`='570ca8a83c7ac.jpg',`sex`='0',`birthday`=NULL,`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2018-09-13 18:34:10',`create_time`='2015-12-31 09:08:44',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`phone`=NULL WHERE `id` = 1 [ RunTime:0.0010s ]
+
+[ 2018-09-13T18:34:39+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T18:34:41+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T19:54:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T19:56:47+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T19:57:25+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.name' in 'field list'
+
+[ 2018-09-13T20:01:02+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%%' )' at line 1
+
+[ 2018-09-13T20:02:26+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%%' )' at line 1
+
+[ 2018-09-13T20:04:05+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rel.phone = 13 )' at line 1
+
+[ 2018-09-13T20:04:59+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rel.phone = 13 )' at line 1
+
+[ 2018-09-13T20:05:48+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/index
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%%' )' at line 1
+
+[ 2018-09-13T20:15:30+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 10 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T20:15:31+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=10&classid=61
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 10 and classid = 61 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T20:36:35+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 6 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T20:36:36+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T20:36:38+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=41
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 41 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T20:36:40+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0100s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-13T20:38:45+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 5 )  [ RunTime:0.0010s ]
+
+[ 2018-09-13T20:38:46+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=5&classid=32
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0090s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 5 and classid = 32 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-13T20:58:15+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/AdminUtils/schoolclass?schoolid=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_school_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wxt_school_class` WHERE ( schoolid = 7 )  [ RunTime:0.0000s ]
+
+[ 2018-09-13T20:58:17+08:00 ] 127.0.0.1 /weixiaotong2016/index.php/Admin/MonitorStudentWeb/getStudent?schoolid=7&classid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `wxt_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wxt_student_info` [ RunTime:0.0080s ]
+SQL: SELECT userid as id,stu_name as name FROM `wxt_student_info` WHERE ( schoollid = 7 and classid = 39 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

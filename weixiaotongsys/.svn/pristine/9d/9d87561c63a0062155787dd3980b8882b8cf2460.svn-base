@@ -1,0 +1,256 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="">学生请假</a></li>
+    </ul>
+    <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('addbinding_post')}">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">省份选择:</label>
+                    <div class="controls">
+                        <select  class="province"  name="province" id="province" >
+                            <option value="">省级选择</option>
+                            <foreach name="Province" item="vo">
+                                <php>$pro=$province==$vo['term_id']?"selected":"";</php>
+                                <option value="{$vo.term_id}"{$pro}>{$vo.name}</option>
+                            </foreach>
+                        </select>&nbsp;
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">市级选择:</label>
+                    <div class="controls">
+                        <select class="select_1" name="citys" id="citys" >
+
+                            <option value="0" selected>请先选择省份</option>
+
+                        </select> &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">区域选择:</label>
+                    <div class="controls">
+                        <select class="select_3" name="message_type" id="message_type" >
+                            <option value="0">请选择你的区域</option>
+                        </select> &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所在学校:</label>
+                    <div class="controls">
+                        <select class="stu-select-inputlist" name="schoolid" id="school">
+                                <!--<option value="1">学校1</option>-->
+                                <!--<option value="2">学校2</option>-->
+                                <!--<option value="3">学校3</option>-->
+
+                            <option>请选择学校</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">所在班级:</label>
+                    <div class="controls">
+                        <select class="input" name="classid" id="classname">
+                            <option value="1">请选择学校</option>
+                           
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">学生姓名:</label>
+                    <div class="controls">
+                        <select class="input" name="student" id="student">
+                            <option value=>请选择学生</option>
+
+                        </select>
+                    </div>
+                </div>
+                  <div class="control-group">
+                    <label class="control-label">请假时间:</label>
+                    <div class="controls">
+                        <input type="date" name="begin" class="stu-select-inputlist"  id="time">-<input type="date" name="end" class="stu-select-inputlist"  id="time">
+                    </div>
+                </div>
+               <div class="control-group">
+                    <label class="control-label">请假类型:</label>
+                    <div class="controls">
+                        <select name="leavetype">
+                            <option>请选择</option>
+                            <option value="事假">事假</option>
+                            <option value="病假">病假</option>
+                        </select>
+                     </div>   
+                </div>   
+               
+
+                <div class="control-group">
+                    <label class="control-label">请假事由:</label>
+                    <div class="controls">
+                        <input type="text" class="input" name="content" value="">
+                    </div>
+                </div>
+                  
+
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">请假</button>
+                <button class="btn" type="reset">清空</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+    <script language="javascript" type="text/javascript">
+
+        //选择市级的下拉的ajax
+        $(function() {
+            $("#province").change(function(){
+
+
+                $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=role_type&Province="+$("#province").val(),{},function(data){
+                    $("#citys").empty()
+
+                    if(data.status=="success"){
+
+                        $("#citys").append("<option value=>"+"请选择市级"+"</option>");
+                        for(var key in data.data){
+                            $("#citys").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                        }
+                    }
+                    if(data.status=="error"){
+                        $("#citys").append("<option value=''>没有市级</option>");
+                    }
+                });
+
+
+            })
+        });
+
+
+        $(function() {
+            $("#citys").change(function() {
+                console.log($("#citys").val())
+                $("#message_type").empty();
+                // $("#student").empty();
+
+                $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                $.getJSON("__ROOT__/index.php?g=Admin&m=AdminUtils&a=Provinces&Province="+$("#citys").val(),{},function(data){
+                    console.log(data);
+                    if(data.status=="success"){
+
+                        // $("#message_type").append("<option value=>"+"请选择区域"+"</option>");
+                        for(var key in data.data){
+                            $("#message_type").append("<option value="+data.data[key]["term_id"]+">"+data.data[key]["name"]+"</option>");
+                        }
+                    }
+                    if(data.status=="error"){
+                        $("#message_type").append("<option value='0'>暂无区域</option>");
+                    }
+                });
+            });
+        });
+
+
+
+
+        $(".select_3").change(function() {
+
+            var type = $(".select_3  option:selected").val();
+            $("#school").empty();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=Admin&m=AdminUtils&a=lookup',
+                async: true,
+                data: {
+                    type: type
+                },
+                dataType: 'json',
+                success: function(res) {
+                    $(".Sio").text("")
+                    var html = "";
+                    res = eval(res.data);
+                    for(var i = 0; i < res.length; i++) {
+                        var school_name = res[i].school_name; //学校的名字
+                        var schoolid = res[i].schoolid; //学校的ID
+                        html += '<option class="Sio" value="' + schoolid + '">' + school_name + ' </option> '
+                    }
+                    $("#school").append("<option value=''>请选择学校</option>");
+                    $("#school").append(html)
+                    $("#viewOLanguage").chosen();
+                    $("#viewOLanguage").trigger("liszt:updated");
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+        })
+
+        $("#school").change(function(){
+            $("#classname").empty();
+
+
+            $.getJSON("__ROOT__/index.php?g=admin&m=AdminUtils&a=schoolclass&schoolid="+$("#school").val(),{},function(data){
+                if(data.status=="success"){
+                    $("#classname").append("<option value=''>请选择班级</option>");
+                    for(var key in data.data){
+                        $("#classname").append("<option value="+data.data[key]["id"]+">"+data.data[key]["classname"]+"</option>");
+                    }
+                }
+                if(data.status=="error"){
+                    $("#classname").append("<option value='0'>没有班级</option>");
+                }
+            });
+
+
+
+        })
+
+
+
+ 
+//          $(function() {
+//              $("#school").change(function() {
+//                console.log($("#school").val())
+//                 $("#school_class").empty();
+//                 $("#student").empty();
+//                  $.getJSON("__ROOT__/index.php?g=admin&m=Attendance&a=school_class&schoolid="+$("#school").val(),{},function(data){
+//                    console.log(data);
+//                      if(data.status=="success"){
+//                        console.log('aaa');
+//                          $("#school_class").append("<option value=0>"+"请选择班级"+"</option>");
+//                          for(var key in data.data){
+//                              $("#school_class").append("<option value="+data.data[key]["id"]+">"+data.data[key]["classname"]+"</option>");
+//                          }
+//                      }
+//                      if(data.status=="error"){
+//                          $("#school_class").append("<option value='0'>没有班级</option>");
+//                      }
+//                  });
+//              });
+//          });
+//
+//
+//
+          $(function() {
+              $("#classname").change(function() {
+
+                 $("#student").empty();
+                  $.getJSON("__ROOT__/index.php?g=admin&m=AdminUtils&a=schoolstudent&class="+$("#classname").val()+"&schoolid="+$("#school").val(),{},function(data){
+                      if(data.status=="success"){
+                          $("#student").append("<option value=0>"+"请选择学生"+"</option>");
+                          for(var key in data.data){
+                              $("#student").append("<option value="+data.data[key]["userid"]+">"+data.data[key]["stu_name"]+"</option>");
+                          }
+                      }
+                      if(data.status=="error"){
+                          $("#student").append("<option value='0'>没有学生</option>");
+                      }
+                  });
+              });
+          });
+      </script>
+</body>
+</html>

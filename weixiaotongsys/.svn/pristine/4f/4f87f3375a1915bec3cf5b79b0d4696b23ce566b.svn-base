@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{$site_name},{$site_seo_title} </title>
+	<tc_include file="Public:head" />
+
+</head>
+<body class="body-white">
+<tc_include file="Public:nav" />
+<div class="long_pic_box">
+	<div class="long_pic_login">
+		<div class="long_pic_login_input">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#parent-login" data-toggle="tab">家长</a>
+								</li>
+								<li>
+									<a href="#teacher-login" data-toggle="tab">教师</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="parent-login">
+									<div class="login_from">
+										<form class="">
+											<div class="input_box">
+												<div class="user_icon"></div>
+												<input type="text" name="user" placeholder="账号">
+											</div>
+											<div class="input_box">
+												<div class="pass_icon"></div>
+												<input type="text" name="pass" placeholder="密码">
+											</div>
+											<div class="login_checkbox">
+												<input class="in1" type="checkbox" value=""><p class="p1">记住密码</p>
+												<input class="in2" type="checkbox" value=""><p class="p2">自动登录</p>
+												<button type="button" value="登录">登录</button>
+											</div>
+
+										</form>
+									</div>
+
+								</div>
+								<div class="tab-pane" id="teacher-login">
+									<div class="login_from">
+										<form class="">
+											<div class="input_box">
+												<div class="user_icon"></div>
+												<input type="text" name="user" placeholder="账号">
+											</div>
+											<div class="input_box">
+												<div class="pass_icon"></div>
+												<input type="text" name="pass" placeholder="密码">
+											</div>
+											<div class="login_checkbox">
+												<input class="in1" type="checkbox" value=""><p class="p1">记住密码</p>
+												<input class="in2" type="checkbox" value=""><p class="p2">自动登录</p>
+												<button type="button" value="登录">登录</button>
+											</div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<div class="long_pic_logo"><img src="__TMPL__Public/images/pic_logo.png"></div>
+<div class="long_pic_p"><p class="p_1"><strong>智校园</strong></p><p class="p_2">微校通微校通微校通微校通微校通微校通微校通微校通微校通</p></div>
+	</div>
+	<div class="long_pic_bott"></div>
+</div>
+
+<div class="home_box">
+	<div class="main">
+		<div class="carousel_news">
+			<div class="carousel_boot">
+				<div id="myCarousel" class="carousel slide">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner">
+						<div class="item active" style="height: 260px">
+							<img src="__TMPL__Public/images/lunbo1.jpeg" width="400px" alt="First slide">
+							<div class="carousel-caption">标题 1</div>
+						</div>
+						<div class="item" style="height: 260px">
+							<img src="__TMPL__Public/images/lunbo2.jpeg" width="400px" alt="Second slide">
+							<div class="carousel-caption">标题 2</div>
+						</div>
+						<div class="item" style="height: 260px">
+							<img src="__TMPL__Public/images/lunbo3.jpeg" width="400px" alt="Third slide">
+							<div class="carousel-caption">标题 3</div>
+						</div>
+					</div>
+					<!-- 轮播（Carousel）导航 -->
+					<a class="carousel-control left" href="#myCarousel"
+					   data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right" href="#myCarousel"
+					   data-slide="next">&rsaquo;</a>
+				</div>
+			</div>
+			<div class="news">
+				<div class="new_list">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										<li class="active">
+											<a href="#synthesize-home" data-toggle="tab">综合</a>
+										</li>
+										<li>
+											<a href="#activity-home" data-toggle="tab">活动</a>
+										</li>
+										<li>
+											<a href="#news-home" data-toggle="tab">新闻</a>
+										</li>
+										<li>
+											<a href="#notice-home" data-toggle="tab">公告</a>
+										</li>
+										<span> 〉〉 </span>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane active" id="synthesize-home">
+											<ul>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+											</ul>
+										</div>
+										<div class="tab-pane" id="activity-home">
+											<ul>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航2</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+											</ul>
+										</div>
+										<div class="tab-pane" id="news-home">
+											<ul>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航3</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+											</ul>
+										</div>
+										<div class="tab-pane" id="notice-home">
+											<ul>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航4</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+												<li>
+													<p style="height: 10px"></p>
+													<a href="#"><p>[活动]智校园全新活动起航</p></a>
+													<span>2016年4月5日</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+
+		<div class="news_pic_list">
+			<img src="__TMPL__Public/images/news1.png">
+			<img src="__TMPL__Public/images/news2.png">
+			<img src="__TMPL__Public/images/news3.png">
+			<img src="__TMPL__Public/images/news4.png">
+		</div>
+		<!-- 底部链接模块-->
+		<div class="bottem_img_link">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#school-online" data-toggle="tab">名校在线</a>
+								</li>
+								<li>
+									<a href="#education-shop" data-toggle="tab">教育商城</a>
+								</li>
+								<li>
+									<a href="#parenting-knowledge" data-toggle="tab">育儿知识</a>
+								</li>
+								<li>
+									<a href="#education-principle" data-toggle="tab">教育之道</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="school-online">
+									<a href="#">
+										<img src="__TMPL__Public/images/picone.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/pictwo.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picthree.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfour.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfive.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picsix.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picseven.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/piceight.png">
+									</a>
+
+								</div>
+								<div class="tab-pane" id="education-shop">
+									<a href="#">
+										<img src="__TMPL__Public/images/picone.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/pictwo.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picthree.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfour.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfive.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picsix.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picseven.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/piceight.png">
+									</a>
+								</div>
+								<div class="tab-pane" id="parenting-knowledge">
+									<a href="#">
+										<img src="__TMPL__Public/images/picone.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/pictwo.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picthree.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfour.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfive.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picsix.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picseven.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/piceight.png">
+									</a>
+								</div>
+								<div class="tab-pane" id="education-principle">
+									<a href="#">
+										<img src="__TMPL__Public/images/picone.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/pictwo.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picthree.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfour.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picfive.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picsix.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/picseven.png">
+									</a>
+									<a href="#">
+										<img src="__TMPL__Public/images/piceight.png">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<tc_include file="Public:footer"/>
+</body>
+</html>

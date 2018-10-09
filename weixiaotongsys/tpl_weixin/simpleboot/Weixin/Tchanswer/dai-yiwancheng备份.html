@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>{$schoolname}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/dai-yiwancheng.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+    <script src="__TMPL__Public/js/new_file.js"></script>
+</head>
+<style>
+    .tab {
+        background-color: #FFF;
+        font-family: "微软雅黑 Light";
+        font-weight: 600;
+        height: 40px;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+        position: fixed;
+        top: 38px;
+    }
+    
+    .big .tab .one {
+        color: #676767;
+        width: 50%;
+        font-size: 14.5px;
+        line-height: 32px;
+        float: left;
+        text-align: center;
+    }
+    
+    .big .tab .two {
+        color: #06c18e;
+        width: 50%;
+        font-size: 14.5px;
+        line-height: 32px;
+        float: right;
+        text-align: center;
+    }
+    
+    .big .tab .two div {
+        border-bottom: 2px #06c18e solid;
+        width: 56%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .but span {
+        margin-right: 20px;
+    }
+</style>
+
+<body>
+    <input type="hidden" value={$userid} id="userid">
+    <div class="top_box">
+        <img src="__TMPL__Public/images/img674.png" class="fanhui"> 代接确认
+        <div class="clearfix"></div>
+    </div>
+    <div class="big">
+        <div class="tab">
+            <a href="{:U('index')}"><span class="one">待处理 </span></a>
+
+
+            <a href="">
+                <span class="two">已完成
+					<div></div>
+					</span>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+        <div style="width: 100%;height: 78px;"></div>
+        <!--<div class="bigbox">
+				<div class="teacher">
+					<img src="__TMPL__Public/images/img03a.png">
+					<div class="left">
+						<p class="top">张艳艳</p>
+						<p class="bot">班主任</p>
+					</div>
+					<p class="right">2016-08-01&nbsp;&nbsp;17:30</p>
+					<div class="clearfix"></div>
+				</div>
+				<p class="wenzi">妞妞妈妈这是您的同事吗？妞妞让他接走吗？</p>
+				<div class="photo">
+					<img src="__TMPL__Public/images/img04a.png">
+				</div>
+				<div class="but">
+				    <span style="color:#f47520; float: right;">未同意</span>
+					<div class="clearfix"></div>
+				</div>
+			</div>-->
+    </div>
+    <div style="  background-color: #06c18e;color: white;position: fixed;width: 60px;text-align: center;line-height: 60px;border-radius: 50%;font-size: 14px;bottom: 50px;right: 10px;">
+        <a href="{:U('Submit')}" style=" text-decoration: none;color: inherit;font-size:14px;">发布代接</a>
+    </div>
+    <script>
+        function trimSpace(array) {
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == "" || typeof(array[i]) == "undefined") {
+                    array.splice(i, 1);
+                    i = i - 1;
+
+                }
+            }
+            return array;
+        }
+        $("document").ready(function() {
+            var teacherid = $("#userid").val();
+            $.ajax({
+                type: "post",
+                url: '__ROOT__/index.php/?g=apps&m=teacher&a=gettransportconfirmation',
+                async: true,
+                data: {
+                    teacherid: teacherid
+                },
+                dataType: 'json',
+                success: function(res) {
+                    var html = "";
+                    res = eval(res.data);
+                    for (var i = 0; i < res.length; i++) {
+                        var studentname = res[i].studentname;
+                        //代学生的名字
+                        var classname = res[i].classname;
+                        //代接学生的班级
+                        var content = res[i].content;
+                        //代接的内容
+                        var delivery_time = tmies(res[i].delivery_time);
+                        //代接的时间
+                        var studentavatar = res[i].studentavatar;
+                        //学生的照片
+                        var photo = res[i].photo;
+                        //内容图片
+                        var parentphone = res[i].parentphone;
+                        //家长的号码
+                        var delivery_status = res[i].delivery_status;
+                        //是否处理的状态
+                        if (delivery_status > 0) {
+
+                            html += '<div class="bigbox" style="height: auto">'
+                            html += '<div class="teacher">'
+                            html += '<img src="{$Think.const.SR}' + studentavatar + '" style="width: 45px;height: 45px;border-radius: 30px;">'
+                            html += '<div class="left">'
+                            html += '<p class="top">' + studentname + '</p>'
+                            html += '<p class="bot">' + classname + '</p>'
+                            html += '</div>'
+                            html += '<p class="right">' + delivery_time + '</p>'
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '<p class="wenzi" style="margin-top: 10px">' + content + '</p>'+'<br>'
+
+                            photos = photo.split(",");
+                            photos = trimSpace(photos);
+                            html += '<div class="photo" style="height: auto;">'
+
+                            for (var j = 0; j < photos.length; j++) {
+                                html += '<img src="{$Think.const.SR}' + photos[j] + '" style="height: 106.875px;width:30%;margin-left:5px;">'
+                            }
+                            html += '</div>'
+                            html += '<div class="but">'
+                            if (delivery_status == 2) {
+                                html += '<span style="color:#f47520; float: right;">未同意</span>';
+                            } else {
+                                html += '<span style="color:#06c18e; float: right;">已同意</span>';
+                            }
+
+                            html += '<div class="clearfix"></div>'
+                            html += '</div>'
+                            html += '</div>'
+                        }
+
+                    }
+                    $(".big").append(html);
+                },
+                error: function() {
+                    console.log('系统错误,请稍后重试');
+                }
+            });
+
+        });
+        $(".fanhui").click(function() {
+            location.href = "__ROOT__/index.php/weixin/Tindex";
+        })
+    </script>
+</body>
+
+</html>

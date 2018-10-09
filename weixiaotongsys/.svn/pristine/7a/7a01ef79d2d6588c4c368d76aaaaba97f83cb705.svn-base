@@ -1,0 +1,81 @@
+<!doctype html>
+<html style="height: 100%;background: #eff0f2;">
+<head>
+    <title>成长档案编辑页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/addressList2.css">
+    <link rel="stylesheet" href="__TMPL__Public/Tchcss/top-box.css">
+    <script src="__ROOT__/statics/wjs/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+<div class="top_box">
+  <a href="studentPage?cid={$cid}&aid={$aid}&sid={$sid}&gid={$gid}"><img src="/statics/img/img67.png"></a>
+    相册
+  <div class="clearfix"></div>
+</div>
+<div class="container" style=" overflow:hidden;margin-top: 40px">
+
+    <div class="one" style="margin-bottom: -33px;">
+        <div class="classify">
+            <div class="teacher">班级相册</div>
+            <a href="personalPhoto?cid={$cid}&aid={$aid}&sid={$sid}&gid={$gid}"><div class="parent">宝宝相册</div></a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="fenge"></div>
+    </div>
+    
+    <?php foreach($class as $k=>$v){?>
+    <div class="peng" style="margin-top: 0;margin-bottom:2px;padding: 3px 0" onclick="goTo('<?php echo $v[cid]?>','<?php echo $v[name]?>')">
+        <div class="left">
+            <img src="/statics/img/img02.png" alt="">
+        </div>
+        <div class="right" style="border-bottom: 0">
+                <div class="pengxiao" >
+                    <!--<p style="margin: 0;padding: 0"><?php echo $v['name']?></p>-->
+                    <!--<p style="margin: 0;padding: 0"><?php echo $v['count']?></p>-->
+                    <?php echo $v['name']?>
+                    <span class="phone"><?php echo $v['count']?>张</span>
+                </div>
+                <img src="/tpl_weixin/simpleboot/public/images/58.png" alt="" style="width: 4%;margin-top: 3%">
+                <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="fenge" style="height: 4px;margin-bottom: 0"></div>
+    <?php }?>
+    <script>
+        function goTo(cid, param) {
+            var gradeid = $('#gradeid').val();                 //年级id
+            var archivesid = $('#archivesid').val();           //档案id
+            var studentId = $('#studentid').val();  //学生id
+            var classid = $("#classid").val();
+            var selectid = $("#selectid").val();
+            window.location.href = '__ROOT__/weixin/TchGrowtharchives/classPhotoList?gid='+gradeid+'&aid='+archivesid+'&sid='+studentId+'&cid='+classid+'&classname='+param+'&classid='+cid;
+        }
+    </script>
+    <!--<div class="peng" style="margin-top: 0;margin-bottom:2px">-->
+        <!--<div class="left">-->
+            <!--<img src="/statics/img/img02.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="right" style="border-bottom: 0">-->
+            <!--<div class="pengxiao" >彭小二-->
+                <!--<span class="phone">13573519005</span>-->
+            <!--</div>-->
+            <!--<img src="/statics/img/dianhua.png" alt="">-->
+            <!--<div class="clearfix"></div>-->
+        <!--</div>-->
+        <!--<div class="clearfix"></div>-->
+    <!--</div>-->
+    <!--<div class="fenge" style="height: 4px;margin-bottom: 0"></div>-->
+
+    <input type="hidden" id="classid" name="sid" value="{$cid}">
+    <input type="hidden" id="studentid" name="sid" value="{$sid}">
+    <input type="hidden" id="gradeid" name="gid" value="{$gid}">
+    <input type="hidden" id="archivesid" name="aid" value="{$aid}">
+    <input type="hidden" id="selectid" name="selectid" value="{$selectId}">
+</div>
+</body>
+</html>
