@@ -1,0 +1,3 @@
+先去 https://github.com/814820111/Public.git  用git clone下来
+
+每次提交代码前必须要更新一下  提交的远程分支为test 
