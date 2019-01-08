@@ -1,6 +1,0 @@
-application 下的teacher admin
-根目录的tpl_admin、tpl_teacher
-statics/chosen文件夹
-/uploads/microblog/weixiaotong.png图片
-D:\wamp\www\weixiaotong2016\application\User\Controller\IndexadminController.class.php
-D:\wamp\www\weixiaotong2016\application\User\Controller\PublicController.class.php

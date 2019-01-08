@@ -1,5 +1,0 @@
-body,div,dl,dt,dd,ul,li,a,form,p,textarea,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
-ol,ul,li{list-style:none;}
-a{text-decoration:none;display:block;}
-img{display:block;border:none;color:#fff;}
-.clearfix{clear:both;}

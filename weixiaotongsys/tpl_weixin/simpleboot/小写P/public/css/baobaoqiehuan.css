@@ -1,9 +1,0 @@
-*{margin: 0;padding: 0;}
-.clearfix{clear: both;}
-body{ font-family:"微软雅黑";background-color:#eff0f2;}
-
-/*内容*/
-.box{ background-color:#FFF;padding:0 15px; border-bottom:#d2d2d2 1px solid;}
-.box .left{ float:left; display:block; width:50px; padding:10px 15px 10px 0;}
-.box span{ float:left;font-size:14.5px; line-height:72px;}
-.box .right{ float:right; display:block; width:8px; padding-top:29px;}
